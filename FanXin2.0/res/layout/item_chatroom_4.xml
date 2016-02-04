@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+           android:id="@+id/re_item"
+         android:clickable="true"
+       android:background="@drawable/btn_list_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="52dp" >
+
+        <RelativeLayout
+            android:id="@+id/re_avatar"
+            android:layout_width="72dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="#DBDFE0"
+                android:padding="1dp" >
+
+                <ImageView
+                    android:id="@+id/iv_avatar1"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/default_useravatar" />
+
+                <ImageView
+                    android:id="@+id/iv_avatar2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/iv_avatar1"
+                    android:src="@drawable/default_useravatar" />
+
+                <ImageView
+                    android:id="@+id/iv_avatar3"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/iv_avatar1"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/default_useravatar" />
+
+                <ImageView
+                    android:id="@+id/iv_avatar4"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/iv_avatar2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/iv_avatar3"
+                    android:src="@drawable/default_useravatar" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/re_avatar"
+            android:text="微信客服"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#DADADA" />
+    </RelativeLayout>
+
+</LinearLayout>

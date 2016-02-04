@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_gid"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="#ffffff"
+        android:hint="输入血糖宝ID"
+        android:padding="5dp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="确认" />
+    
+    <Button
+        android:id="@+id/btn_loginout"
+        android:layout_marginTop="20dp"
+        android:text="退出换测试账号"
+             android:layout_width="match_parent"
+        android:layout_height="40dp" 
+        android:textColor="#ffffff" 
+        android:background="#000000"
+        />
+    
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="此页为了获取一个glufineid,从二维码扫描获得，现在直接输入" />
+    
+
+</LinearLayout>

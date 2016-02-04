@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="libs/fastjson-1.2.5.jar"/>
+	<classpathentry kind="lib" path="libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar"/>
+	<classpathentry kind="lib" path="libs/easemobchat_2.2.5.jar"/>
+	<classpathentry kind="lib" path="libs/alipaySDK-20150818.jar"/>
+	<classpathentry kind="lib" path="libs/baidumapapi_v3_2_0.jar"/>
+	<classpathentry kind="lib" path="libs/locSDK_5.3.jar"/>
+	<classpathentry kind="lib" path="libs/bugly_1.2.9_release.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

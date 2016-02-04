@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_search"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#F0F0F0"
+    android:padding="5dp" >
+
+    <ImageButton
+        android:layout_marginLeft="5dp"
+        android:id="@+id/iv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#F0F0F0"
+        android:scaleType="centerInside"
+        android:src="@drawable/ty_ss_btn" />
+
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+         android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/iv_search"
+        android:background="#f4f4f4" />
+
+    <EditText
+        
+        android:id="@+id/et_search"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/view_temp"
+        android:background="@drawable/search_bg"
+        android:gravity="fill_vertical"
+        android:hint="搜索"
+        android:paddingLeft="10dp"
+        android:textSize="16sp" />
+
+</RelativeLayout>
