@@ -83,7 +83,7 @@ public class CreatChatRoomActivity extends BaseActivity {
         setContentView(R.layout.activity_chatroom);
         hxid = LocalUserInfo.getInstance(CreatChatRoomActivity.this)
                 .getUserInfo("hxid");
-
+        context=this;
         progressDialog = new ProgressDialog(this);
         groupId = getIntent().getStringExtra("groupId");
         userId = getIntent().getStringExtra("userId");
@@ -417,6 +417,8 @@ public class CreatChatRoomActivity extends BaseActivity {
 
     }
 
+  
+
     private void creatNewGroup(final String groupName, final String groupJSON,
             final String myDesc, final List<String> members) {
         new Thread(new Runnable() {
@@ -463,10 +465,10 @@ public class CreatChatRoomActivity extends BaseActivity {
                             if (progressDialog != null
                                     && progressDialog.isShowing()) {
                                 progressDialog.dismiss();
-                                
-                               
+
                             }
-                            Toast.makeText(getApplicationContext(), "建群失败", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "建群失败",
+                                    Toast.LENGTH_SHORT).show();
 
                         }
 
