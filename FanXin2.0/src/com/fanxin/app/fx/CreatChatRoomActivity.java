@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -49,7 +50,6 @@ import com.fanxin.app.fx.others.LoadDataFromServer.DataCallBack;
 import com.fanxin.app.fx.others.LoadUserAvatar.ImageDownloadedCallBack;
 import com.easemob.exceptions.EaseMobException;
 
- 
 @SuppressLint({ "InflateParams", "SdCardPath" })
 public class CreatChatRoomActivity extends BaseActivity {
     private ImageView iv_search;
@@ -75,6 +75,7 @@ public class CreatChatRoomActivity extends BaseActivity {
     private List<String> addList = new ArrayList<String>();
     private String hxid;
     private EMGroup group;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,8 +112,7 @@ public class CreatChatRoomActivity extends BaseActivity {
 
         // 获取好友列表
         final List<User> alluserList = new ArrayList<User>();
-        for (User user : MYApplication.getInstance().getContactList()
-                .values()) {
+        for (User user : MYApplication.getInstance().getContactList().values()) {
             if (!user.getUsername().equals(Constant.NEW_FRIENDS_USERNAME)
                     & !user.getUsername().equals(Constant.GROUP_USERNAME))
                 alluserList.add(user);
@@ -357,28 +357,9 @@ public class CreatChatRoomActivity extends BaseActivity {
 
             String groupJSON = finalJson.toJSONString();
             Log.e("groupName----->>>>>", groupName);
-            try {
-                EMGroup group_temp = EMGroupManager.getInstance()
-                        .createPrivateGroup(groupJSON, myDesc,
-                                members.toArray(new String[0]), true);
-                if (group_temp != null) {
-                    String group_temp_id = group_temp.getGroupId();
-                    String group_temp_name = group_temp.getGroupName();
-                    String group_temp_desc = group_temp.getDescription();
-                    Log.e("group_temp_id----->>>>>", group_temp_id);
-                    Log.e("group_temp_name----->>>>>", group_temp_name);
-                    Log.e("group_temp_desc----->>>>>", group_temp_desc);
-                    progressDialog.dismiss();
-                    startActivity(new Intent(getApplicationContext(),
-                            ChatActivity.class)
-                            .putExtra("groupId", group_temp_id)
-                            .putExtra("chatType", ChatActivity.CHATTYPE_GROUP)
-                            .putExtra("groupName", groupName));
-                }
 
-            } catch (EaseMobException e) {
-                e.printStackTrace();
-            }
+            creatNewGroup(groupName, groupJSON, myDesc, members);
+
         } else {
 
             // 群主加人调用此方法
@@ -414,9 +395,9 @@ public class CreatChatRoomActivity extends BaseActivity {
                 finalJson.put("groupname", groupName);
                 String groupJSON = finalJson.toJSONString();
                 if (hxid.equals(group.getOwner())) {
-                EMGroupManager.getInstance()
-                        .changeGroupName(groupId, groupJSON);//
-                }else{
+                    EMGroupManager.getInstance().changeGroupName(groupId,
+                            groupJSON);//
+                } else {
                     updateGroupName(groupId, groupJSON);
                 }
                 startActivity(new Intent(getApplicationContext(),
@@ -435,15 +416,75 @@ public class CreatChatRoomActivity extends BaseActivity {
         }
 
     }
-    
+
+    private void creatNewGroup(final String groupName, final String groupJSON,
+            final String myDesc, final List<String> members) {
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try {
+                    EMGroup group_temp = EMGroupManager.getInstance()
+                            .createPrivateGroup(groupJSON, myDesc,
+                                    members.toArray(new String[0]), true);
+                    if (group_temp != null) {
+                        String group_temp_id = group_temp.getGroupId();
+                        String group_temp_name = group_temp.getGroupName();
+                        String group_temp_desc = group_temp.getDescription();
+                        Log.e("group_temp_id----->>>>>", group_temp_id);
+                        Log.e("group_temp_name----->>>>>", group_temp_name);
+                        Log.e("group_temp_desc----->>>>>", group_temp_desc);
+                        ((Activity) context).runOnUiThread(new Runnable() {
+
+                            @Override
+                            public void run() {
+                                if (progressDialog != null
+                                        && progressDialog.isShowing()) {
+                                    progressDialog.dismiss();
+                                }
+
+                            }
+
+                        });
+
+                        startActivity(new Intent(getApplicationContext(),
+                                ChatActivity.class)
+                                .putExtra("groupId", group_temp_id)
+                                .putExtra("chatType",
+                                        ChatActivity.CHATTYPE_GROUP)
+                                .putExtra("groupName", groupName));
+                    }
+
+                } catch (EaseMobException e) {
+                    ((Activity) context).runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            if (progressDialog != null
+                                    && progressDialog.isShowing()) {
+                                progressDialog.dismiss();
+                                
+                               
+                            }
+                            Toast.makeText(getApplicationContext(), "建群失败", Toast.LENGTH_SHORT).show();
+
+                        }
+
+                    });
+                }
+            }
+
+        }).start();
+
+    }
+
     private void updateGroupName(String groupId, String updateStr) {
 
         Map<String, String> map = new HashMap<String, String>();
         map.put("groupId", groupId);
         map.put("groupName", updateStr);
         LoadDataFromServer task = new LoadDataFromServer(
-                CreatChatRoomActivity.this, Constant.URL_UPDATE_Groupnanme,
-                map);
+                CreatChatRoomActivity.this, Constant.URL_UPDATE_Groupnanme, map);
 
         task.getData(new DataCallBack() {
 
@@ -462,7 +503,6 @@ public class CreatChatRoomActivity extends BaseActivity {
         });
 
     }
-
 
     /**
      * adapter
