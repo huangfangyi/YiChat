@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BaiduLBS_Android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/easeui/libs/BaiduLBS_Android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

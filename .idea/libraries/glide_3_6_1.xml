@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="glide-3.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/easeui/libs/glide-3.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

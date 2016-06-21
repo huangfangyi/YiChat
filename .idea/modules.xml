@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FanXin3.0.iml" filepath="$PROJECT_DIR$/FanXin3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easeui/easeui.iml" filepath="$PROJECT_DIR$/easeui/easeui.iml" />
       <module fileurl="file://$PROJECT_DIR$/fanxin/fanxin.iml" filepath="$PROJECT_DIR$/fanxin/fanxin.iml" />
     </modules>
   </component>
