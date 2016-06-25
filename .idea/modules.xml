@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FanXin25.iml" filepath="$PROJECT_DIR$/FanXin25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FanXin3.0.iml" filepath="$PROJECT_DIR$/FanXin3.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/easeuilibrary/easeuilibrary.iml" filepath="$PROJECT_DIR$/easeuilibrary/easeuilibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/redpacketlibrary/redpacketlibrary.iml" filepath="$PROJECT_DIR$/redpacketlibrary/redpacketlibrary.iml" />
     </modules>
