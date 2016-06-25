@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\em_empty_photo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-nodpi\\em_empty_photo.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\em_empty_photo.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-nodpi\\em_empty_photo.png"
     }

@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_blacklist.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_group_blacklist.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_image_grid_fragment.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_image_grid_fragment.xml"
     },
@@ -12,24 +8,28 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_public_groups_search.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_user_profile.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_user_profile.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_main.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_details.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_group_details.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_new_group.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_new_group.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_search_bar_with_padding.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_search_bar_with_padding.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_chat_neterror_item.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_chat_neterror_item.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_splash.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_splash.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_voice.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_context_menu_for_voice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_list.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_choosevideoactivity.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_choosevideoactivity.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_layout_loading_data.xml",
@@ -40,16 +40,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_contact_list.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_list.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_conversation_list.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\tb_munion_aditem.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\tb_munion_aditem.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_text.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_context_menu_for_text.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_diagnose.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_diagnose.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_search_message.xml",
@@ -60,16 +56,24 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_widget_contact_item.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chat.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_chat.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_black_list.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_black_list.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_choosevideoactivity.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_choosevideoactivity.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_group.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_row_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_login.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_details.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_group_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_video.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_context_menu_for_video.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_pick_contact_no_checkbox.xml",
@@ -80,16 +84,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_context_menu_for_location.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_voice_call.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_voice_call.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pick_at_user.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\activity_pick_at_user.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_voice_call.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_voice_call.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_splash.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_user_profile.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_user_profile.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_main.xml",
@@ -104,20 +108,24 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_group_pick_contacts.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_listview_footer_view.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_listview_footer_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_contacts_header.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_contacts_header.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_add_group.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_add_group.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_simle_details.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_group_simle_details.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_search_message.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_search_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_add_contact.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_add_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_update_dialog.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\umeng_update_dialog.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_public_groups.xml",
@@ -128,8 +136,8 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_offline_push.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_logout_actionsheet.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_logout_actionsheet.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_public_groups_search.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_public_groups_search.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chatroom.xml",
@@ -140,20 +148,28 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_group_simle_details.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_invite_msg.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_invite_msg.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_contacts_header.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_contacts_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_chat.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_chat.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_main_botton_tab.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_main_botton_tab.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_recorder_activity.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_recorder_activity.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_contact_list.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_contact_list.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_settings.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_conversation_settings.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_image_grid_fragment.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_image_grid_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_robots.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_row_robots.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_groups.xml",
@@ -172,10 +188,6 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_choose_griditem.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_robots.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_robots.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_show_file.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_show_file.xml"
     },
@@ -184,20 +196,20 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_edit.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_new_group.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_new_group.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_layout_loading_data.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_layout_loading_data.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_contact_with_checkbox.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_contact_with_checkbox.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_location.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_context_menu_for_location.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_image.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_context_menu_for_image.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_video_call.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_video_call.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\tb_munion_adview.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\tb_munion_adview.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_pick_contacts.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_group_pick_contacts.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_update_dialog.xml",
@@ -208,24 +220,36 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_new_friends_msg.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_group.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_group.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_edit.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_edit.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_robots.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_robots.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chat.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_pick_contact_no_checkbox.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_pick_contact_no_checkbox.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_video.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_context_menu_for_video.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_register.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_register.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_grid.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_grid.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_add_contact.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_add_contact.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_robots.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_robots.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_new_friends_msg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_new_friends_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chatroom.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_chatroom.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_grid.xml",
@@ -238,5 +262,221 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\tb_munion_aditem.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\tb_munion_aditem.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_blacklist.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_group_blacklist.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_recorder_activity.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_recorder_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_details.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_group_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_user_profile.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_user_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_chat_neterror_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_chat_neterror_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_search_bar_with_padding.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_choose_griditem.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_choose_griditem.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_list.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_diagnose.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_diagnose.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chat.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_choosevideoactivity.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_choosevideoactivity.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_offline_push.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_offline_push.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_logout_actionsheet.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_logout_actionsheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_voice_call.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_voice_call.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_voice.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_context_menu_for_voice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pick_at_user.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\activity_pick_at_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_add_group.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_row_add_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_listview_footer_view.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_listview_footer_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_contacts_header.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_contacts_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_text.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_context_menu_for_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_invite_msg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_row_invite_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_register.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_logout_actionsheet.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_logout_actionsheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_show_file.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_show_file.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_invite_msg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_invite_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_settings.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_conversation_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_recorder_activity.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_recorder_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_black_list.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_black_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pick_at_user.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\activity_pick_at_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_settings.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_conversation_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_search_message.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_group_search_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_diagnose.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_diagnose.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_robots.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_fragment_robots.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_contact_with_checkbox.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_row_contact_with_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_search_bar_with_padding.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_blacklist.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_group_blacklist.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\tb_munion_adview.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\tb_munion_adview.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_main_botton_tab.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_main_botton_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_new_group.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_new_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_contact_with_checkbox.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_contact_with_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_public_groups.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_activity_public_groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_main_init_view.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_main_init_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_image.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_context_menu_for_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\tb_munion_adview.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\tb_munion_adview.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_search_message.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_row_search_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_chat_neterror_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_chat_neterror_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_image.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_context_menu_for_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_group.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_robots.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_row_robots.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_groups.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_fragment_groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_widget_contact_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_widget_contact_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_register.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_add_contact.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\layout\\em_activity_add_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\layout\\em_listview_footer_view.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\layout\\em_listview_footer_view.xml"
     }
 ]

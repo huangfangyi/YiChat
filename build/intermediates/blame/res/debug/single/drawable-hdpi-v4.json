@@ -1,87 +1,87 @@
 [
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_remove.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_title_remove.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_007.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_007.gif"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_app_panel_video_icon.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_app_panel_video_icon.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_login_error_icon.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_login_error_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_image.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_default_image.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_on.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_dx_checkbox_on.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_groups_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_groups_icon.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_voice_unread.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_voice_unread.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_close_bg_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_close_bg_normal.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_avatar.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_default_avatar.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_013_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_013_cover.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_input_bar_bg_normal.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_input_bar_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_msg_state_fail_resend.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_msg_state_fail_resend.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_minus_btn_nor.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_smiley_minus_btn_nor.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_010.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_010.gif"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_face.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_default_face.9.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_021_cover.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_021_cover.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_profile_headphoto_update_icon.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_profile_headphoto_update_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_type_select_btn_nor.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_type_select_btn_nor.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_holo_light.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_on_holo_light.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_appitem_del_btn_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_appitem_del_btn_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_040.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_040.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_024.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_024.gif"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_on_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_type_select_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_type_select_btn_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_profile_headphoto_update_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_profile_headphoto_update_icon.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_007_cover.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_007_cover.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_holo_light.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_off_holo_light.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_seabar_input.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_seabar_input.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_add_public_group.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_add_public_group.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_type_select_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_type_select_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_019_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_019_cover.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_face.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_default_face.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_029_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_029_cover.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_027_cover.png",
@@ -92,14 +92,6 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_dx_checkbox_gray_on.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_btn_style_alert_dialog_background.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_btn_style_alert_dialog_background.9.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_pressed_holo_light.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_off_pressed_holo_light.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_act_btn_pressed.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_title_act_btn_pressed.9.png"
     },
@@ -108,28 +100,36 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_on_focused_holo_light.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_roominfo_add_btn_pressed.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_roominfo_add_btn_pressed.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_remove.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_title_remove.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_welcom_logo.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_welcom_logo.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_app_pref_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_app_pref_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_conversation_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_conversation_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_018.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_018.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_to_group_details_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_to_group_details_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_slidetab_bg_press.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_slidetab_bg_press.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_selected.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_contact_list_selected.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_add.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_add.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_012.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_012.gif"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_030.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_030.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_msg_state_fail_resend_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_msg_state_fail_resend_pressed.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_confirm_dialog_top_bg.9.png",
@@ -140,8 +140,8 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_013.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_019.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_019.gif"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_btn_check_on_holo_light.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_add_btn_pressed.png",
@@ -164,12 +164,452 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_035.gif"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_marka.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_icon_marka.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_back.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_back.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_new_friends_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_new_friends_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_welcom_logo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_welcom_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_msg_state_fail_resend.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_msg_state_fail_resend.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_pwd.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_icon_pwd.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_type_select_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_type_select_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_simple.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_listitem_simple.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_021.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_021.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_ic_launcher.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_profile_headphoto_update_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_profile_headphoto_update_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_minus_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_smiley_minus_btn_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_download_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_video_download_btn_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_040.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_040.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_act_btn_normal.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_title_act_btn_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_027.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_027.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_add_public_group.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_add_public_group.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_pressed_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_btn_check_on_pressed_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_conversation_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_conversation_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_confirm_dialog_top_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_confirm_dialog_top_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_appitem_del_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_appitem_del_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_create_group.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_create_group.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_focused_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_btn_check_off_focused_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_grey_normal.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_listitem_grey_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_ic_right_arrow.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_ic_right_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_018_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_018_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_018.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_018.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_voice_unread.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_voice_unread.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_029_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_029_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_login_error_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_login_error_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_tab_unread_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_tab_unread_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_020_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_020_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_021_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_021_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_app_pref_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_app_pref_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_040_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_040_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_minus_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_smiley_minus_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_simple.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_listitem_simple.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_roominfo_add_btn_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_roominfo_add_btn_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_input_bar_bg_active.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_input_bar_bg_active.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_confirm_dialog_bottom_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_confirm_dialog_bottom_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_bar_icon_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_search_bar_icon_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_pressed_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_btn_check_off_pressed_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_029.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_029.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_logo_uidemo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_logo_uidemo.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_012_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_012_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_roominfo_add_btn_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_roominfo_add_btn_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_avatar.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_default_avatar.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_back.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_title_back.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_account.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_icon_account.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_027_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_027_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_018_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_018_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_022.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_022.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_bar_icon_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_search_bar_icon_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_007_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_007_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_location_msg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_location_msg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_delete_expression.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_delete_expression.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_seabar_input.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_seabar_input.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_contact_list_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_off.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_dx_checkbox_off.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_focused_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_off_focused_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_play_btn_small_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_video_play_btn_small_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_029.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_029.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_pressed_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_on_pressed_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_roominfo_add_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_roominfo_add_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_back.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_title_back.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_app_panel_video_icon.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_app_panel_video_icon.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_unread_count_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_unread_count_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_confirm_dialog_bg2.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_confirm_dialog_bg2.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_logo_uidemo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_logo_uidemo.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_settings_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_019.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_019.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_download_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_video_download_btn_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_013.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_013.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_selected.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_contact_list_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_remove.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_title_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_007.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_007.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_login_error_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_login_error_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_image.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_default_image.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_recorder_start_btn.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_video_recorder_start_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_on.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_dx_checkbox_on.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_040_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_040_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_selected.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_settings_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_create_group.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_create_group.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_msg_state_fail_resend.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_msg_state_fail_resend.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_012.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_012.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_minus_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_smiley_minus_btn_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_010.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_010.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_contact_list_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_030_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_030_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_010_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_010_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_020_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_020_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_024.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_024.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_confirm_dialog_bg2.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_confirm_dialog_bg2.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_to_group_details_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_to_group_details_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_add_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_smiley_add_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_add_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_smiley_add_btn_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_off_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_pressed_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_off_pressed_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_btn_style_alert_dialog_background.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_btn_style_alert_dialog_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_roominfo_add_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_roominfo_add_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_welcom_logo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_welcom_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_act_btn_pressed.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_title_act_btn_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_btn_check_off_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_camera_switch_normal.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_camera_switch_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_clear_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_search_clear_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_to_group_details_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_to_group_details_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_selected.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_contact_list_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_012.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_012.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_appitem_del_btn_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_appitem_del_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_019.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_019.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_delete_expression.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_delete_expression.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_focused_holo_light.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_btn_check_on_focused_holo_light.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_035_cover.png",
@@ -184,12 +624,8 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_smiley_add_btn_nor.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_simple.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_listitem_simple.9.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_type_select_btn_pressed.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_type_select_btn_pressed.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_default_image.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_default_image.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_013_cover.png",
@@ -200,8 +636,8 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_022.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_download_btn_nor.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_video_download_btn_nor.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_024.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_024.gif"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_groups_icon.png",
@@ -212,8 +648,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_close_bg_tap.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_unread_count_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_unread_count_bg.9.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_024_cover.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_024_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_002.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_002.gif"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_input_bar_bg_active.9.png",
@@ -232,16 +676,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_video_play_btn_small_nor.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_add_public_group.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_add_public_group.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_smiley_minus_btn_pressed.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_smiley_minus_btn_pressed.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_conversation_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_conversation_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_recorder_stop_btn.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_video_recorder_stop_btn.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_show_head_toast_bg.9.png",
@@ -256,16 +696,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_slidetab_bg_press.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_appitem_del_btn_pressed.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_appitem_del_btn_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_clear_normal.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_search_clear_normal.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_create_group.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_create_group.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_020.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_020.gif"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_019_cover.png",
@@ -284,32 +720,24 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_confirm_dialog_bottom_bg.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_029_cover.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_029_cover.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_location_msg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_location_msg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_off.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_dx_checkbox_off.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_010_cover.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_010_cover.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_020_cover.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_020_cover.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_settings_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_030_cover.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_030_cover.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_app_pref_bg.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_app_pref_bg.9.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_040_cover.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_040_cover.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_roominfo_add_btn_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_roominfo_add_btn_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_clear_pressed.png",
@@ -320,20 +748,24 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_msg_state_fail_resend_pressed.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_029.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_029.gif"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_camera_switch_pressed.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_camera_switch_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_conversation_selected.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_conversation_selected.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_disable.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_listitem_disable.9.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_002_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_002_cover.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_logo_uidemo.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_logo_uidemo.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_022_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_022_cover.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_disable.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_listitem_disable.9.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_pressed.9.png",
@@ -344,64 +776,48 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_ic_right_arrow.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_018_cover.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_018_cover.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_bar_icon_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_search_bar_icon_normal.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_ic_launcher.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_account.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_icon_account.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_020.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_020.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_location_msg.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_location_msg.9.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_account.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_icon_account.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_delete_expression.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_delete_expression.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_024_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_024_cover.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_seabar_input.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_seabar_input.9.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_type_select_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_type_select_btn_nor.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_027.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_027.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_contact_list_normal.png"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_off.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_dx_checkbox_off.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_back.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_back.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_marka.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_icon_marka.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_focused_holo_light.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_off_focused_holo_light.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_input_bar_bg_normal.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_input_bar_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_on_pressed_holo_light.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\umeng_update_btn_check_on_pressed_holo_light.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_btn_style_alert_dialog_background.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_btn_style_alert_dialog_background.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_title_back.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_mm_title_back.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_actionbar_camera_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_actionbar_camera_icon.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_grey_normal.9.png",
@@ -412,16 +828,20 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_021.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_unread_count_bg.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_unread_count_bg.9.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_007.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_007.gif"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_tab_unread_bg.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_tab_unread_bg.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_confirm_dialog_bg2.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_confirm_dialog_bg2.9.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_icon_pwd.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_icon_pwd.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_035_cover.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_035_cover.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_camera_switch_normal.9.png",
@@ -432,20 +852,56 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\icon_030.gif"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_settings_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_conversation_selected.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_conversation_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_close_bg_tap.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\umeng_update_close_bg_tap.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_selected.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_settings_selected.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_appitem_del_btn_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_appitem_del_btn_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_035.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_035.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_show_head_toast_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_show_head_toast_bg.9.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_new_friends_icon.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_new_friends_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_appitem_del_btn_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\drawable-hdpi\\em_appitem_del_btn_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_pressed.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_listitem_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_on.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_dx_checkbox_on.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_disable.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_mm_listitem_disable.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_010.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\icon_010.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_gray_on.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_dx_checkbox_gray_on.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_search_clear_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\drawable-hdpi\\em_search_clear_pressed.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_camera_switch_pressed.9.png",
