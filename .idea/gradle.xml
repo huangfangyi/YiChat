@@ -8,11 +8,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/easeuilibrary" />
+            <option value="$PROJECT_DIR$/redpaketlibrary" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/easeuilibrary" />
+            <option value="$PROJECT_DIR$/redpaketlibrary" />
           </set>
         </option>
       </GradleProjectSettings>

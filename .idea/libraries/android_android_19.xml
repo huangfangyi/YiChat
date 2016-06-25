@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android-android-19">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-19/android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

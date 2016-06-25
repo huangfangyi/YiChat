@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FanXin25.iml" filepath="$PROJECT_DIR$/FanXin25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easeuilibrary/easeuilibrary.iml" filepath="$PROJECT_DIR$/easeuilibrary/easeuilibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redpaketlibrary/redpaketlibrary.iml" filepath="$PROJECT_DIR$/redpaketlibrary/redpaketlibrary.iml" />
     </modules>
   </component>
 </project>
