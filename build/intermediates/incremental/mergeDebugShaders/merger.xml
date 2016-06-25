@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\ustc\Desktop\Android Studio\FanXin25\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\ustc\Desktop\Android Studio\FanXin25\build-types\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\ustc\Desktop\Android Studio\FanXin3.0\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\ustc\Desktop\Android Studio\FanXin3.0\build-types\debug\shaders"/></dataSet></merger>

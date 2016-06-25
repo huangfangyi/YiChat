@@ -62,6 +62,7 @@
     <string name="dismiss_group">Распустить чат</string>
     <string name="dissolution_group_hint">Распускать чат при выходе из приложения</string>
     <string name="downwaiting">Документ загружается, пожалуйста подождите...</string>
+    <string name="ease_user_remove">Данный пользователь был удален</string>
     <string name="em_user_remove">Данный пользователь был удален</string>
     <string name="exit_group">Выйти</string>
     <string name="exit_group_hint">Не получать сообщения при выходе из приложения</string>

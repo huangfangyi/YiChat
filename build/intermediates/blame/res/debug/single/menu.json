@@ -1,42 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\menu\\em_remove_from_blacklist.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\menu\\em_remove_from_blacklist.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_message.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\menu\\em_delete_message.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_tab_contact.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\menu\\em_context_tab_contact.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_contact_list.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\menu\\em_context_contact_list.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_contact_list.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\menu\\em_context_contact_list.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_tab_contact.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\menu\\em_context_tab_contact.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_contact.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\menu\\em_delete_contact.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_contact.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\menu\\em_delete_contact.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\menu\\em_remove_from_blacklist.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\menu\\em_remove_from_blacklist.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_contact_list.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\menu\\em_context_contact_list.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_tab_contact.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\menu\\em_context_tab_contact.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_contact.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\menu\\em_delete_contact.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_message.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin888\\res\\menu\\em_delete_message.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_message.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin25\\res\\menu\\em_delete_message.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\menu\\em_remove_from_blacklist.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\menu\\em_remove_from_blacklist.xml"
     }
 ]
