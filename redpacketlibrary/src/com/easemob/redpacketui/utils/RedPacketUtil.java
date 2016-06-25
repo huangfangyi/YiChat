@@ -18,10 +18,10 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMCmdMessageBody;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.easeui.EaseConstant;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.utils.EaseUserUtils;
-import com.hyphenate.easeui.widget.EaseChatMessageList;
+import com.fanxin.easeui.EaseConstant;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.utils.EaseUserUtils;
+import com.fanxin.easeui.widget.EaseChatMessageList;
 import com.hyphenate.exceptions.HyphenateException;
 
 import java.util.UUID;

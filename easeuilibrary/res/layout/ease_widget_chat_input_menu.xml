@@ -7,7 +7,7 @@
     android:layout_alignParentBottom="true"
     android:orientation="vertical" >
 
-    <!-- <com.hyphenate.easeui.widget.EaseChatPrimaryMenu
+    <!-- <EaseChatPrimaryMenu
         android:id="@+id/primary_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" /> -->
@@ -26,7 +26,7 @@
         android:background="#fff"
         android:visibility="gone" >
 
-        <com.hyphenate.easeui.widget.EaseChatExtendMenu
+        <com.fanxin.easeui.widget.EaseChatExtendMenu
             android:id="@+id/extend_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

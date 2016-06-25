@@ -11,11 +11,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.domain;
+package com.fanxin.app.domain;
 
-import com.hyphenate.easeui.domain.EaseUser;
+import com.fanxin.easeui.domain.EaseUser;
 
-public class RobotUser extends EaseUser{
+public class RobotUser extends EaseUser {
 	public RobotUser(String username) {
         super(username.toLowerCase());
     }

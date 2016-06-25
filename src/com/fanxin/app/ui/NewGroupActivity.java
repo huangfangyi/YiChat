@@ -11,15 +11,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
+import com.fanxin.easeui.widget.EaseAlertDialog;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroupManager.EMGroupOptions;
 import com.hyphenate.chat.EMGroupManager.EMGroupStyle;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.widget.EaseAlertDialog;
+import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,7 +30,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -82,7 +82,7 @@ public class NewGroupActivity extends BaseActivity {
 		super.onActivityResult(requestCode, resultCode, data);
 		String st1 = getResources().getString(R.string.Is_to_create_a_group_chat);
 		final String st2 = getResources().getString(R.string.Failed_to_create_groups);
-		if (resultCode == RESULT_OK) {
+		if (resultCode == Activity.RESULT_OK) {
 			//new group
 			progressDialog = new ProgressDialog(this);
 			progressDialog.setMessage(st1);
@@ -111,7 +111,7 @@ public class NewGroupActivity extends BaseActivity {
 						runOnUiThread(new Runnable() {
 							public void run() {
 								progressDialog.dismiss();
-								setResult(RESULT_OK);
+								setResult(Activity.RESULT_OK);
 								finish();
 							}
 						});

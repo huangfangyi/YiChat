@@ -244,16 +244,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_app_pref_bg.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_mm_title_back.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_mm_title_back.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_contact_list_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_contact_list_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f3.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f3.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_contact_list_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_contact_list_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_mm_title_back.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_mm_title_back.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chat_face_pressed.png",

@@ -6,7 +6,7 @@
     android:background="@color/common_bg"
     android:orientation="vertical">
 
-	<com.hyphenate.easeui.widget.EaseTitleBar 
+	<com.fanxin.easeui.widget.EaseTitleBar
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    hyphenate:titleBarTitle="@string/session"
@@ -19,7 +19,7 @@
         layout="@layout/em_chat_neterror_item"
         android:visibility="gone" />
 
-    <com.hyphenate.easeui.widget.EaseConversationList
+    <com.fanxin.easeui.widget.EaseConversationList
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

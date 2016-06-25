@@ -11,20 +11,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.Hashtable;
 import java.util.Map;
 
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.db.UserDao;
+import com.fanxin.app.widget.ContactItemView;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.ui.EaseContactListFragment;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.DemoHelper.DataSyncListener;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.db.InviteMessgeDao;
-import com.hyphenate.chatuidemo.db.UserDao;
-import com.hyphenate.chatuidemo.widget.ContactItemView;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.ui.EaseContactListFragment;
+import com.fanxin.app.R;
+import com.fanxin.app.db.InviteMessgeDao;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.NetUtils;
 
@@ -268,7 +267,7 @@ public class ContactListFragment extends EaseContactListFragment {
 
 	}
 	
-	class ContactSyncListener implements DataSyncListener{
+	class ContactSyncListener implements DemoHelper.DataSyncListener {
         @Override
         public void onSyncComplete(final boolean success) {
             EMLog.d(TAG, "on contact list sync success:" + success);
@@ -294,7 +293,7 @@ public class ContactListFragment extends EaseContactListFragment {
         }
     }
     
-    class BlackListSyncListener implements DataSyncListener{
+    class BlackListSyncListener implements DemoHelper.DataSyncListener {
 
         @Override
         public void onSyncComplete(boolean success) {
@@ -309,7 +308,7 @@ public class ContactListFragment extends EaseContactListFragment {
         
     };
     
-    class ContactInfoSyncListener implements DataSyncListener{
+    class ContactInfoSyncListener implements DemoHelper.DataSyncListener {
 
         @Override
         public void onSyncComplete(final boolean success) {

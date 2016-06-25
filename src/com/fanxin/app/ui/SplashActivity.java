@@ -1,9 +1,6 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.widget.RelativeLayout;
@@ -11,11 +8,9 @@ import android.widget.TextView;
 
 import com.easemob.redpacketsdk.RPCallback;
 import com.easemob.redpacketsdk.RedPacket;
-import com.hyphenate.chat.EMChatManager;
+import com.fanxin.app.DemoHelper;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMGroupManager;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 
 /**
  * 开屏页

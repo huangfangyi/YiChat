@@ -11,16 +11,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
 import com.easemob.redpacketui.RedPacketConstant;
+import com.fanxin.app.Constant;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 
 public class ContextMenuActivity extends BaseActivity {
     public static final int RESULT_CODE_COPY = 1;

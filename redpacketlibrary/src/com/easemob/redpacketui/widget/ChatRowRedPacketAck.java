@@ -8,7 +8,7 @@ import com.easemob.redpacketui.R;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.easeui.widget.chatrow.EaseChatRow;
+import com.fanxin.easeui.widget.chatrow.EaseChatRow;
 import com.hyphenate.exceptions.HyphenateException;
 
 public class ChatRowRedPacketAck extends EaseChatRow {

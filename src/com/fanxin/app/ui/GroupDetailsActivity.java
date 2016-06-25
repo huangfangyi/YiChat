@@ -11,22 +11,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fanxin.easeui.utils.EaseUserUtils;
+import com.fanxin.easeui.widget.EaseSwitchButton;
 import com.hyphenate.EMGroupChangeListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.utils.EaseUserUtils;
-import com.hyphenate.easeui.widget.EaseAlertDialog;
-import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
-import com.hyphenate.easeui.widget.EaseExpandGridView;
-import com.hyphenate.easeui.widget.EaseSwitchButton;
+import com.fanxin.app.R;
+import com.fanxin.easeui.widget.EaseAlertDialog;
+import com.fanxin.easeui.widget.EaseAlertDialog.AlertDialogUser;
+import com.fanxin.easeui.widget.EaseExpandGridView;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.NetUtils;

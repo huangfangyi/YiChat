@@ -1,4 +1,4 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import android.content.Intent;
 import android.view.ContextMenu;
@@ -13,19 +13,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.redpacketui.RedPacketConstant;
+import com.fanxin.app.Constant;
+import com.fanxin.app.db.InviteMessgeDao;
+import com.fanxin.easeui.ui.EaseConversationListFragment;
+import com.fanxin.easeui.widget.EaseConversationList;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.db.InviteMessgeDao;
-import com.hyphenate.easeui.ui.EaseConversationListFragment;
-import com.hyphenate.easeui.widget.EaseConversationList.EaseConversationListHelper;
+import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.NetUtils;
 
-public class ConversationListFragment extends EaseConversationListFragment{
+public class ConversationListFragment extends EaseConversationListFragment {
 
     private TextView errorText;
 
@@ -68,7 +68,7 @@ public class ConversationListFragment extends EaseConversationListFragment{
                 }
             }
         });
-        conversationListView.setConversationListHelper(new EaseConversationListHelper() {
+        conversationListView.setConversationListHelper(new EaseConversationList.EaseConversationListHelper() {
             @Override
             public String onSetItemSecondaryText(EMMessage lastMessage) {
                 if (lastMessage.getBooleanAttribute(RedPacketConstant.MESSAGE_ATTR_IS_RED_PACKET_ACK_MESSAGE, false)) {

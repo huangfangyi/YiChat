@@ -1,13 +1,11 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 import com.hyphenate.util.EMLog;
 
 import android.app.ProgressDialog;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;

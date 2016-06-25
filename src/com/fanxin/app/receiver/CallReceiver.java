@@ -12,15 +12,15 @@
  * limitations under the License.
  */
 
-package com.hyphenate.chatuidemo.receiver;
+package com.fanxin.app.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.ui.VideoCallActivity;
-import com.hyphenate.chatuidemo.ui.VoiceCallActivity;
+import com.fanxin.app.ui.VoiceCallActivity;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.ui.VideoCallActivity;
 import com.hyphenate.util.EMLog;
 
 public class CallReceiver extends BroadcastReceiver{

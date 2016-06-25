@@ -1,10 +1,11 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,12 +14,12 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.utils.EaseUserUtils;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.adapter.EaseContactAdapter;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.utils.EaseUserUtils;
+import com.fanxin.app.R;
+import com.fanxin.easeui.adapter.EaseContactAdapter;
 
 public class PickAtUserActivity extends BaseActivity{
     @Override
@@ -60,7 +61,7 @@ public class PickAtUserActivity extends BaseActivity{
                 EaseUser user = (EaseUser) listView.getItemAtPosition(position);
                 if(EMClient.getInstance().getCurrentUser().equals(user.getUsername()))
                     return;
-                setResult(RESULT_OK, new Intent().putExtra("username", user.getUsername()));
+                setResult(Activity.RESULT_OK, new Intent().putExtra("username", user.getUsername()));
                 finish();
             }
         });

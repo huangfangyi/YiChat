@@ -1,11 +1,11 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.runtimepermissions.PermissionsManager;
-import com.hyphenate.easeui.ui.EaseChatFragment;
+import com.fanxin.app.R;
+import com.fanxin.app.runtimepermissions.PermissionsManager;
+import com.fanxin.easeui.ui.EaseChatFragment;
 import com.hyphenate.util.EasyUtils;
 
 /**

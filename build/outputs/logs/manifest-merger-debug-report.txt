@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:2:1-497:12
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:2:1-490:12
 	package
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:4:11-35
 		INJECTED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml
@@ -116,28 +116,28 @@ uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:37:5-82
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:37:22-79
-permission#com.hyphenate.chatuidemo.permission.C2D_MESSAGE
+permission#com.fanxin.app.permission.C2D_MESSAGE
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:38:5-41:11
 	android:protectionLevel
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:40:9-44
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:39:9-71
-uses-permission#com.hyphenate.chatuidemo.permission.C2D_MESSAGE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:42:5-87
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:39:9-61
+uses-permission#com.fanxin.app.permission.C2D_MESSAGE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:42:5-77
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:42:22-84
-permission#com.hyphenate.chatuidemo.permission.MIPUSH_RECEIVE
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:42:22-74
+permission#com.fanxin.app.permission.MIPUSH_RECEIVE
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:44:5-46:47
 	android:protectionLevel
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:46:9-44
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:45:9-74
-uses-permission#com.hyphenate.chatuidemo.permission.MIPUSH_RECEIVE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:48:6-91
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:45:9-64
+uses-permission#com.fanxin.app.permission.MIPUSH_RECEIVE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:48:6-81
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:48:23-88
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:48:23-78
 application
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:50:5-495:25
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:50:5-488:25
 	android:label
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:54:9-41
 	android:allowBackup
@@ -146,7 +146,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:50
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:53:9-48
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:51:9-39
-activity#com.hyphenate.chatuidemo.ui.MainActivity
+activity#com.fanxin.app.ui.MainActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:55:9-61:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:58:13-49
@@ -157,15 +157,15 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:55
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:59:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:56:13-68
-activity#com.hyphenate.chatuidemo.ui.SplashActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:56:13-44
+activity#com.fanxin.app.ui.SplashActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:64:9-73:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:66:13-49
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:67:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:65:13-70
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:65:13-46
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:68:13-72:29
 action#android.intent.action.MAIN
@@ -176,7 +176,7 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:71:17-77
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:71:27-74
-activity#com.hyphenate.chatuidemo.ui.LoginActivity
+activity#com.fanxin.app.ui.LoginActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:76:9-81:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:78:13-49
@@ -185,8 +185,8 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:76
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:79:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:77:13-69
-activity#com.hyphenate.chatuidemo.ui.RegisterActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:77:13-45
+activity#com.fanxin.app.ui.RegisterActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:84:9-89:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:86:13-49
@@ -195,8 +195,8 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:84
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:87:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:85:13-72
-activity#com.hyphenate.chatuidemo.ui.ChatActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:85:13-48
+activity#com.fanxin.app.ui.ChatActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:91:9-97:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:94:13-49
@@ -207,150 +207,148 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:91
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:95:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:92:13-68
-activity#com.hyphenate.applib.ui.ChatActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:99:9-105:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:92:13-44
+activity#com.fanxin.app.ui.AddContactActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:100:9-105:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:102:13-49
-	android:launchMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:101:13-43
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:104:13-55
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:103:13-55
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:103:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:104:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:100:13-64
-activity#com.hyphenate.chatuidemo.ui.AddContactActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:107:9-112:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:101:13-50
+activity#com.fanxin.app.ui.GroupDetailsActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:107:9-111:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:109:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:110:13-55
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:111:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:110:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:108:13-74
-activity#com.hyphenate.chatuidemo.ui.GroupDetailsActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:114:9-118:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:108:13-52
+activity#com.fanxin.app.ui.GroupsActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:113:9-118:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:116:13-49
-	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:115:13-49
+	android:windowSoftInputMode
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:117:13-52
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:115:13-76
-activity#com.hyphenate.chatuidemo.ui.GroupsActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:120:9-125:20
-	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:122:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:124:13-52
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:123:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:116:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:121:13-70
-activity#com.hyphenate.chatuidemo.ui.ChatRoomDetailsActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:128:9-132:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:114:13-46
+activity#com.fanxin.app.ui.ChatRoomDetailsActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:121:9-125:20
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:123:13-49
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:124:13-52
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:122:13-55
+activity#com.fanxin.app.ui.NewGroupActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:128:9-133:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:130:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:132:13-52
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:131:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:129:13-79
-activity#com.hyphenate.chatuidemo.ui.NewGroupActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:135:9-140:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:129:13-48
+activity#com.fanxin.app.ui.ExitGroupDialog
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:135:9-139:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:137:13-49
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:138:13-55
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:136:13-47
+activity#com.fanxin.app.ui.GroupPickContactsActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:141:9-146:20
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:143:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:139:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:145:13-52
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:138:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:144:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:136:13-72
-activity#com.hyphenate.chatuidemo.ui.ExitGroupDialog
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:142:9-146:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:142:13-57
+activity#com.fanxin.app.ui.PickAtUserActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:148:9-151:25
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:144:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:149:13-49
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:145:13-55
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:150:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:143:13-71
-activity#com.hyphenate.chatuidemo.ui.GroupPickContactsActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:148:9-153:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:148:19-56
+activity#com.fanxin.easeui.ui.EaseBaiduMapActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:153:9-157:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:150:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:152:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:155:13-49
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:151:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:156:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:149:13-81
-activity#com.hyphenate.chatuidemo.ui.PickAtUserActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:155:9-158:25
-	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:156:13-49
-	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:157:13-52
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:155:19-80
-activity#com.hyphenate.easeui.ui.EaseBaiduMapActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:154:13-69
+activity#com.fanxin.app.ui.NewFriendsMsgActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:160:9-164:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:162:13-49
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:163:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:161:13-72
-activity#com.hyphenate.chatuidemo.ui.NewFriendsMsgActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:167:9-171:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:161:13-53
+activity#com.fanxin.app.ui.ForwardMessageActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:166:9-171:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:169:13-49
-	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:168:13-49
+	android:windowSoftInputMode
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:170:13-52
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:169:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:168:13-77
-activity#com.hyphenate.chatuidemo.ui.ForwardMessageActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:173:9-178:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:167:13-54
+activity#com.fanxin.app.ui.ContextMenuActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:173:9-177:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:175:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:177:13-52
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:176:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:176:13-49
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:174:13-78
-activity#com.hyphenate.chatuidemo.ui.ContextMenuActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:180:9-184:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:174:13-51
+activity#com.fanxin.easeui.ui.EaseShowBigImageActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:179:9-183:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:182:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:181:13-49
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:183:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:182:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:181:13-75
-activity#com.hyphenate.easeui.ui.EaseShowBigImageActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:186:9-190:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:180:13-73
+activity#com.fanxin.easeui.ui.EaseShowNormalFileActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:185:9-189:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:188:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:187:13-49
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:189:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:188:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:187:13-76
-activity#com.hyphenate.easeui.ui.EaseShowNormalFileActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:192:9-196:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:186:13-75
+activity#com.fanxin.app.ui.BlacklistActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:191:9-195:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:194:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:193:13-49
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:195:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:194:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:193:13-78
-activity#com.hyphenate.chatuidemo.ui.BlacklistActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:198:9-202:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:192:13-49
+activity#com.fanxin.app.ui.PublicGroupsActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:198:9-203:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:200:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:202:13-52
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:201:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:199:13-73
-activity#com.hyphenate.chatuidemo.ui.PublicGroupsActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:199:13-52
+activity#com.fanxin.app.ui.PublicChatRoomsActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:205:9-210:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:207:13-49
@@ -359,84 +357,84 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:20
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:208:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:206:13-76
-activity#com.hyphenate.chatuidemo.ui.PublicChatRoomsActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:212:9-217:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:206:13-55
+activity#com.fanxin.app.ui.VoiceCallActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:213:9-218:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:214:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:216:13-52
-	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:215:13-52
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:213:13-79
-activity#com.hyphenate.chatuidemo.ui.VoiceCallActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:220:9-225:20
-	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:222:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:215:13-49
 	android:launchMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:223:13-44
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:216:13-44
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:224:13-48
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:217:13-48
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:221:13-73
-activity#com.hyphenate.chatuidemo.ui.VideoCallActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:227:9-233:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:214:13-49
+activity#com.fanxin.app.ui.VideoCallActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:220:9-226:20
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:223:13-49
+	android:launchMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:224:13-44
+	android:configChanges
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:222:13-74
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:225:13-52
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:221:13-49
+activity#com.fanxin.app.ui.GroupSimpleDetailActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:228:9-232:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:230:13-49
-	android:launchMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:231:13-44
-	android:configChanges
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:229:13-74
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:232:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:231:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:228:13-73
-activity#com.hyphenate.chatuidemo.ui.GroupSimpleDetailActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:235:9-239:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:229:13-57
+activity#com.fanxin.app.ui.GroupBlacklistActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:234:9-238:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:237:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:236:13-49
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:238:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:237:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:236:13-81
-activity#com.hyphenate.chatuidemo.ui.GroupBlacklistActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:241:9-245:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:235:13-54
+activity#com.fanxin.app.ui.GroupSearchMessageActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:239:9-244:25
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:243:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:241:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:243:13-55
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:244:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:242:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:242:13-78
-activity#com.hyphenate.chatuidemo.ui.GroupSearchMessageActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:246:9-251:25
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:240:13-58
+activity#com.fanxin.app.ui.PublicGroupsSeachActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:246:9-250:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:248:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:250:13-55
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:249:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:247:13-82
-activity#com.hyphenate.chatuidemo.ui.PublicGroupsSeachActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:253:9-257:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:247:13-57
+activity#com.fanxin.app.ui.EditActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:251:9-256:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:255:13-49
-	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:256:13-52
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:254:13-81
-activity#com.hyphenate.chatuidemo.ui.EditActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:258:9-263:20
-	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:260:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:253:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:262:13-55
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:255:13-55
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:261:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:254:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:259:13-68
-activity#com.hyphenate.easeui.ui.EaseShowVideoActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:252:13-44
+activity#com.fanxin.easeui.ui.EaseShowVideoActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:257:9-262:20
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:259:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:261:13-60
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:260:13-52
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:258:13-70
+activity#com.fanxin.app.ui.ImageGridActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:264:9-269:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:266:13-49
@@ -445,18 +443,18 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:26
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:267:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:265:13-73
-activity#com.hyphenate.chatuidemo.ui.ImageGridActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:271:9-276:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:265:13-49
+activity#com.fanxin.app.ui.RecorderVideoActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:270:9-275:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:273:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:272:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:275:13-60
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:274:13-60
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:274:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:273:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:272:13-73
-activity#com.hyphenate.chatuidemo.ui.RecorderVideoActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:271:13-53
+activity#com.fanxin.app.ui.DiagnoseActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:277:9-282:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:279:13-49
@@ -465,19 +463,19 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:27
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:280:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:278:13-77
-activity#com.hyphenate.chatuidemo.ui.DiagnoseActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:284:9-289:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:278:13-48
+activity#com.fanxin.app.ui.OfflinePushNickActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:285:9-290:20
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:286:13-49
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:287:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:288:13-60
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:289:13-60
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:287:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:288:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:285:13-72
-activity#com.hyphenate.chatuidemo.ui.OfflinePushNickActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:292:9-297:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:286:13-55
+activity#com.fanxin.app.ui.RobotsActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:292:9-297:25
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:294:13-49
 	android:windowSoftInputMode
@@ -485,36 +483,36 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:29
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:295:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:293:13-79
-activity#com.hyphenate.chatuidemo.ui.RobotsActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:299:9-304:25
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:293:13-46
+activity#com.fanxin.app.ui.UserProfileActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:299:3-303:19
 	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:301:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:303:13-60
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:301:7-43
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:302:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:302:7-46
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:300:13-70
-activity#com.hyphenate.chatuidemo.ui.UserProfileActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:306:3-310:19
-	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:308:7-43
-	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:309:7-46
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:307:7-69
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:300:7-45
 activity#com.easemob.redpacketui.ui.activity.RPRedPacketActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:307:9-312:15
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:309:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:311:13-65
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:310:13-52
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:308:13-83
+activity#com.easemob.redpacketui.ui.activity.RPDetailActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:314:9-319:15
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:316:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:318:13-65
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:318:13-52
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:317:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:315:13-83
-activity#com.easemob.redpacketui.ui.activity.RPDetailActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:315:13-80
+activity#com.easemob.redpacketui.ui.activity.RPRecordActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:321:9-326:15
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:323:13-49
@@ -524,17 +522,17 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:32
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:324:13-52
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:322:13-80
-activity#com.easemob.redpacketui.ui.activity.RPRecordActivity
+activity#com.easemob.redpacketui.ui.activity.RPWebViewActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:328:9-333:15
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:330:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:332:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:332:13-67
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:331:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:329:13-80
-activity#com.easemob.redpacketui.ui.activity.RPWebViewActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:329:13-81
+activity#com.easemob.redpacketui.ui.activity.RPChangeActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:335:9-340:15
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:337:13-49
@@ -543,184 +541,174 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:33
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:338:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:336:13-81
-activity#com.easemob.redpacketui.ui.activity.RPChangeActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:336:13-80
+activity#com.easemob.redpacketui.ui.activity.RPBankCardActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:342:9-347:15
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:344:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:346:13-67
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:346:13-64
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:345:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:343:13-80
-activity#com.easemob.redpacketui.ui.activity.RPBankCardActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:349:9-354:15
-	android:screenOrientation
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:351:13-49
-	android:windowSoftInputMode
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:353:13-64
-	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:352:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:343:13-82
+receiver#com.fanxin.app.receiver.StartServiceReceiver
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:352:9-359:20
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:350:13-82
-receiver#com.hyphenate.chatuidemo.receiver.StartServiceReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:359:9-366:20
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:359:19-88
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:352:19-64
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON+android.intent.category.LAUNCHER
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:360:13-365:29
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:353:13-358:29
 	android:priority
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:360:28-51
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:353:28-51
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:361:17-79
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:354:17-79
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:361:25-76
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:354:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:362:17-82
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:355:17-82
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:362:25-79
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:355:25-79
 receiver#com.hyphenate.chat.EMGCMBroadcastReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:369:9-377:20
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:362:9-370:20
 	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:371:13-36
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:364:13-36
 	android:permission
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:372:13-73
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:365:13-73
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:370:13-69
-intent-filter#com.google.android.c2dm.intent.RECEIVE+com.hyphenate.chatuidemo
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:373:13-376:29
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:363:13-69
+intent-filter#com.fanxin.app+com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:366:13-369:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:374:17-81
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:367:17-81
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:374:25-78
-category#com.hyphenate.chatuidemo
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:375:17-69
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:367:25-78
+category#com.fanxin.app
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:368:17-59
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:375:27-66
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:368:27-56
 service#com.hyphenate.chat.EMGCMListenerService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:379:9-381:19
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:372:9-374:19
 	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:380:13-37
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:373:13-37
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:379:18-72
-receiver#com.hyphenate.chatuidemo.receiver.GCMPushBroadCast
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:383:9-390:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:372:18-72
+receiver#com.fanxin.app.receiver.GCMPushBroadCast
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:376:9-383:20
 	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:385:13-37
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:378:13-37
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:384:13-78
-intent-filter#com.hyphenate.chatuidemo+com.hyphenate.sdk.push
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:386:13-389:29
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:377:13-54
+intent-filter#com.fanxin.app+com.hyphenate.sdk.push
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:379:13-382:29
 action#com.hyphenate.sdk.push
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:387:17-64
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:380:17-64
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:387:25-62
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:380:25-62
 service#com.xiaomi.mipush.sdk.PushMessageHandler
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:394:9-397:39
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:387:9-390:39
 	android:enabled
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:396:13-35
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:389:13-35
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:390:13-36
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:388:13-68
+service#com.xiaomi.mipush.sdk.MessageHandleService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:391:9-393:38
+	android:enabled
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:393:13-35
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:392:13-70
+receiver#com.hyphenate.chat.EMMipushReceiver
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:395:9-407:20
 	android:exported
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:397:13-36
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:395:13-68
-service#com.xiaomi.mipush.sdk.MessageHandleService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:398:9-400:38
-	android:enabled
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:400:13-35
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:399:13-70
-receiver#com.hyphenate.chat.EMMipushReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:402:9-414:20
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:404:13-36
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:403:13-63
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:396:13-63
 intent-filter#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:405:13-407:29
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:398:13-400:29
 action#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:406:17-76
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:399:17-76
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:406:25-73
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:399:25-73
 intent-filter#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:408:13-410:29
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:401:13-403:29
 action#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:409:17-76
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:402:17-76
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:409:25-73
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:402:25-73
 intent-filter#com.xiaomi.mipush.ERROR
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:411:13-413:29
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:404:13-406:29
 action#com.xiaomi.mipush.ERROR
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:412:17-66
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:405:17-66
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:412:25-63
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:405:25-63
 service#com.umeng.update.net.DownloadingService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:450:9-453:13
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:443:9-446:13
 	android:process
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:452:8-45
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:445:8-45
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:451:8-62
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:444:8-62
 activity#com.umeng.update.UpdateDialogActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:454:3-457:14
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:447:3-450:14
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:456:7-66
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:449:7-66
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:455:7-59
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:448:7-59
 meta-data#EASEMOB_APPKEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:460:9-462:55
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:453:9-455:55
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:462:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:455:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:461:13-42
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:454:13-42
 service#com.hyphenate.chat.EMChatService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:464:9-466:15
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:457:9-459:15
 	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:465:13-36
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:458:13-36
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:464:18-65
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:457:18-65
 receiver#com.hyphenate.chat.EMMonitorReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:468:9-478:20
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:461:9-471:20
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:468:19-70
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:461:19-70
 intent-filter#android.intent.action.PACKAGE_REMOVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:469:13-472:29
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:462:13-465:29
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:470:17-79
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:463:17-79
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:470:25-77
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:463:25-77
 data
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:471:17-49
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:464:17-49
 	android:scheme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:471:23-47
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:464:23-47
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:474:13-477:29
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:467:13-470:29
 action#android.intent.action.USER_PRESENT
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:476:17-77
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:469:17-77
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:476:25-74
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:469:25-74
 service#com.baidu.location.f
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:481:9-484:41
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:474:9-477:41
 	android:enabled
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:483:13-35
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:476:13-35
 	android:process
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:484:13-38
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:477:13-38
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:482:13-48
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:475:13-48
 meta-data#UMENG_APPKEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:486:9-489:21
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:479:9-482:21
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:488:13-53
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:481:13-53
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:487:13-40
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:480:13-40
 meta-data#UMENG_CHANNEL
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:490:9-76
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:483:9-76
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:490:20-45
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:483:20-45
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:490:46-74
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:483:46-74
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:491:9-493:64
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:484:9-486:64
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:493:13-61
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:486:13-61
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:492:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:485:13-52

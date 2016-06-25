@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,12 +28,12 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.adapter.EaseContactAdapter;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.widget.EaseSidebar;
+import com.fanxin.app.Constant;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.easeui.widget.EaseSidebar;
+import com.fanxin.app.R;
+import com.fanxin.easeui.adapter.EaseContactAdapter;
+import com.fanxin.easeui.domain.EaseUser;
 
 public class PickContactNoCheckboxActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.Date;
 import java.util.List;
@@ -22,13 +22,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
+import com.fanxin.easeui.utils.EaseUserUtils;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMSearchDirection;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.utils.EaseUserUtils;
+import com.fanxin.app.R;
 import com.hyphenate.util.DateUtils;
 
 public class GroupSearchMessageActivity extends BaseActivity implements OnClickListener{

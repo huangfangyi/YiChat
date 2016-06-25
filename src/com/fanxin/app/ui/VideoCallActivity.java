@@ -11,19 +11,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.UUID;
 
+import com.fanxin.app.DemoHelper;
 import com.hyphenate.chat.EMCallManager.EMCameraDataProcessor;
 import com.hyphenate.chat.EMCallManager.EMVideoCallHelper;
 import com.hyphenate.chat.EMCallStateChangeListener;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 import com.hyphenate.media.EMLocalSurfaceView;
 import com.hyphenate.media.EMOppositeSurfaceView;
-import com.hyphenate.util.EMLog;
 import com.hyphenate.util.PathUtil;
 
 import android.hardware.Camera;

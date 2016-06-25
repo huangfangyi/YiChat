@@ -11,12 +11,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.adapter;
+package com.fanxin.app.adapter;
 
 import java.util.List;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -30,7 +29,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 
 public class GroupAdapter extends ArrayAdapter<EMGroup> {
 

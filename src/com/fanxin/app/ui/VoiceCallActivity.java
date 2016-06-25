@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.UUID;
 
@@ -37,8 +37,8 @@ import android.widget.Toast;
 
 import com.hyphenate.chat.EMCallStateChangeListener;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.R;
 import com.hyphenate.util.EMLog;
 
 /**

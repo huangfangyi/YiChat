@@ -1,11 +1,10 @@
-package com.hyphenate.chatuidemo.domain;
+package com.fanxin.app.domain;
 
 import java.util.Arrays;
 
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.domain.EaseEmojicon;
-import com.hyphenate.easeui.domain.EaseEmojicon.Type;
-import com.hyphenate.easeui.domain.EaseEmojiconGroupEntity;
+import com.fanxin.easeui.domain.EaseEmojicon;
+import com.fanxin.app.R;
+import com.fanxin.easeui.domain.EaseEmojiconGroupEntity;
 
 public class EmojiconExampleGroupData {
     
@@ -54,14 +53,14 @@ public class EmojiconExampleGroupData {
         EaseEmojiconGroupEntity emojiconGroupEntity = new EaseEmojiconGroupEntity();
         EaseEmojicon[] datas = new EaseEmojicon[icons.length];
         for(int i = 0; i < icons.length; i++){
-            datas[i] = new EaseEmojicon(icons[i], null, Type.BIG_EXPRESSION);
+            datas[i] = new EaseEmojicon(icons[i], null, EaseEmojicon.Type.BIG_EXPRESSION);
             datas[i].setBigIcon(bigIcons[i]);
             datas[i].setName("Icon"+ (i+1));
             datas[i].setIdentityCode("em"+ (1000+i+1));
         }
         emojiconGroupEntity.setEmojiconList(Arrays.asList(datas));
         emojiconGroupEntity.setIcon(R.drawable.ee_2);
-        emojiconGroupEntity.setType(Type.BIG_EXPRESSION);
+        emojiconGroupEntity.setType(EaseEmojicon.Type.BIG_EXPRESSION);
         return emojiconGroupEntity;
     }
     

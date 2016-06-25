@@ -136,12 +136,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_question_white.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\em_red_packet_chatto_bg_focused.9.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\em_red_packet_chatto_bg_focused.9.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_packet_group_detail_bg.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_packet_group_detail_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\em_red_packet_chatto_bg_focused.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\em_red_packet_chatto_bg_focused.9.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_titlebar_bg.9.png",

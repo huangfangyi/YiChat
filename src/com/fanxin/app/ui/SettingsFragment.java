@@ -11,17 +11,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.DemoModel;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.widget.EaseSwitchButton;
+import com.fanxin.app.Constant;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.DemoModel;
+import com.fanxin.app.R;
+import com.fanxin.easeui.widget.EaseSwitchButton;
 import com.hyphenate.util.EMLog;
 
 import android.app.ProgressDialog;

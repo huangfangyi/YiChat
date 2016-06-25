@@ -28,7 +28,7 @@
             android:paddingRight="12dp"
             android:visibility="visible" />
 
-        <com.hyphenate.chatuidemo.widget.MyChronometer
+        <com.fanxin.app.widget.MyChronometer
             android:visibility="invisible"
             android:id="@+id/chronometer"
             android:layout_width="wrap_content"

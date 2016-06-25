@@ -11,15 +11,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.adapter;
+package com.fanxin.app.adapter;
 
 import java.util.List;
 
+import com.fanxin.app.domain.InviteMessage;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.db.InviteMessgeDao;
-import com.hyphenate.chatuidemo.domain.InviteMessage;
-import com.hyphenate.chatuidemo.domain.InviteMessage.InviteMesageStatus;
+import com.fanxin.app.R;
+import com.fanxin.app.db.InviteMessgeDao;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -95,11 +94,11 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 			holder.name.setText(msg.getFrom());
 			// holder.time.setText(DateUtils.getTimestampString(new
 			// Date(msg.getTime())));
-			if (msg.getStatus() == InviteMesageStatus.BEAGREED) {
+			if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEAGREED) {
 				holder.status.setVisibility(View.INVISIBLE);
 				holder.reason.setText(str1);
-			} else if (msg.getStatus() == InviteMesageStatus.BEINVITEED || msg.getStatus() == InviteMesageStatus.BEAPPLYED ||
-			        msg.getStatus() == InviteMesageStatus.GROUPINVITATION) {
+			} else if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEINVITEED || msg.getStatus() == InviteMessage.InviteMesageStatus.BEAPPLYED ||
+			        msg.getStatus() == InviteMessage.InviteMesageStatus.GROUPINVITATION) {
 			    holder.agree.setVisibility(View.VISIBLE);
                 holder.agree.setEnabled(true);
                 holder.agree.setBackgroundResource(android.R.drawable.btn_default);
@@ -109,16 +108,16 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 				holder.status.setEnabled(true);
 				holder.status.setBackgroundResource(android.R.drawable.btn_default);
 				holder.status.setText(str7);
-				if(msg.getStatus() == InviteMesageStatus.BEINVITEED){
+				if(msg.getStatus() == InviteMessage.InviteMesageStatus.BEINVITEED){
 					if (msg.getReason() == null) {
 						// use default text
 						holder.reason.setText(str3);
 					}
-				}else if (msg.getStatus() == InviteMesageStatus.BEAPPLYED) { //application to join group
+				}else if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEAPPLYED) { //application to join group
 					if (TextUtils.isEmpty(msg.getReason())) {
 						holder.reason.setText(str4 + msg.getGroupName());
 					}
-				} else if (msg.getStatus() == InviteMesageStatus.GROUPINVITATION) {
+				} else if (msg.getStatus() == InviteMessage.InviteMesageStatus.GROUPINVITATION) {
 				    if (TextUtils.isEmpty(msg.getReason())) {
                         holder.reason.setText(str8 + msg.getGroupName());
                     }
@@ -139,20 +138,20 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 					    refuseInvitation(holder.agree, holder.status, msg);
 					}
 				});
-			} else if (msg.getStatus() == InviteMesageStatus.AGREED) {
+			} else if (msg.getStatus() == InviteMessage.InviteMesageStatus.AGREED) {
 				holder.status.setText(str5);
 				holder.status.setBackgroundDrawable(null);
 				holder.status.setEnabled(false);
-			} else if(msg.getStatus() == InviteMesageStatus.REFUSED){
+			} else if(msg.getStatus() == InviteMessage.InviteMesageStatus.REFUSED){
 				holder.status.setText(str6);
 				holder.status.setBackgroundDrawable(null);
 				holder.status.setEnabled(false);
-			} else if(msg.getStatus() == InviteMesageStatus.GROUPINVITATION_ACCEPTED){
+			} else if(msg.getStatus() == InviteMessage.InviteMesageStatus.GROUPINVITATION_ACCEPTED){
 			    String str = msg.getGroupInviter() + str9 + msg.getGroupName();
                 holder.status.setText(str);
                 holder.status.setBackgroundDrawable(null);
                 holder.status.setEnabled(false);
-            } else if(msg.getStatus() == InviteMesageStatus.GROUPINVITATION_DECLINED){
+            } else if(msg.getStatus() == InviteMessage.InviteMesageStatus.GROUPINVITATION_DECLINED){
                 String str = msg.getGroupInviter() + str10 + msg.getGroupName();
                 holder.status.setText(str);
                 holder.status.setBackgroundDrawable(null);
@@ -182,14 +181,14 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 			public void run() {
 				// call api
 				try {
-					if (msg.getStatus() == InviteMesageStatus.BEINVITEED) {//accept be friends
+					if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEINVITEED) {//accept be friends
 						EMClient.getInstance().contactManager().acceptInvitation(msg.getFrom());
-					} else if (msg.getStatus() == InviteMesageStatus.BEAPPLYED) { //accept application to join group
+					} else if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEAPPLYED) { //accept application to join group
 						EMClient.getInstance().groupManager().acceptApplication(msg.getFrom(), msg.getGroupId());
-					} else if (msg.getStatus() == InviteMesageStatus.GROUPINVITATION) {
+					} else if (msg.getStatus() == InviteMessage.InviteMesageStatus.GROUPINVITATION) {
 					    EMClient.getInstance().groupManager().acceptInvitation(msg.getGroupId(), msg.getGroupInviter());
 					}
-                    msg.setStatus(InviteMesageStatus.AGREED);
+                    msg.setStatus(InviteMessage.InviteMesageStatus.AGREED);
                     // update database
                     ContentValues values = new ContentValues();
                     values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());
@@ -240,14 +239,14 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
             public void run() {
                 // call api
                 try {
-                    if (msg.getStatus() == InviteMesageStatus.BEINVITEED) {//decline the invitation
+                    if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEINVITEED) {//decline the invitation
                         EMClient.getInstance().contactManager().declineInvitation(msg.getFrom());
-                    } else if (msg.getStatus() == InviteMesageStatus.BEAPPLYED) { //decline application to join group
+                    } else if (msg.getStatus() == InviteMessage.InviteMesageStatus.BEAPPLYED) { //decline application to join group
                         EMClient.getInstance().groupManager().declineApplication(msg.getFrom(), msg.getGroupId(), "");
-                    } else if (msg.getStatus() == InviteMesageStatus.GROUPINVITATION) {
+                    } else if (msg.getStatus() == InviteMessage.InviteMesageStatus.GROUPINVITATION) {
                         EMClient.getInstance().groupManager().declineInvitation(msg.getGroupId(), msg.getGroupInviter(), "");
                     }
-                    msg.setStatus(InviteMesageStatus.REFUSED);
+                    msg.setStatus(InviteMessage.InviteMesageStatus.REFUSED);
                     // update database
                     ContentValues values = new ContentValues();
                     values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());

@@ -11,9 +11,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo;
+package com.fanxin.app;
 
-import com.hyphenate.easeui.EaseConstant;
+import com.fanxin.easeui.EaseConstant;
 
 public class Constant extends EaseConstant{
 	public static final String NEW_FRIENDS_USERNAME = "item_new_friends";

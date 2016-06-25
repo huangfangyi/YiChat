@@ -1,10 +1,10 @@
-package com.hyphenate.chatuidemo.widget;
+package com.fanxin.app.widget;
 
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.easeui.R;
-import com.hyphenate.easeui.widget.chatrow.EaseChatRow;
+import com.fanxin.app.Constant;
+import com.fanxin.app.R;
+import com.fanxin.easeui.widget.chatrow.EaseChatRow;
 
 import android.content.Context;
 import android.widget.BaseAdapter;

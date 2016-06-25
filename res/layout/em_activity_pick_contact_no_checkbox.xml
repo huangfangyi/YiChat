@@ -39,7 +39,7 @@
             android:divider="#E2E2E2"
             android:dividerHeight="1dp" />
 
-        <com.hyphenate.easeui.widget.EaseSidebar
+        <com.fanxin.easeui.widget.EaseSidebar
             android:id="@+id/sidebar"
             android:layout_width="25dp"
             android:layout_height="match_parent"

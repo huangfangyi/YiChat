@@ -11,14 +11,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.db;
+package com.fanxin.app.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.hyphenate.chat.EMChatManager;
-import com.hyphenate.chatuidemo.DemoHelper;
+import com.fanxin.app.DemoHelper;
 
 public class DbOpenHelper extends SQLiteOpenHelper{
 

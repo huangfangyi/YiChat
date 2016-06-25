@@ -1,4 +1,4 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +30,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hyphenate.chatuidemo.BuildConfig;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.domain.VideoEntity;
-import com.hyphenate.chatuidemo.video.util.ImageCache;
-import com.hyphenate.chatuidemo.video.util.ImageResizer;
-import com.hyphenate.chatuidemo.video.util.Utils;
-import com.hyphenate.chatuidemo.widget.RecyclingImageView;
+import com.fanxin.app.video.util.Utils;
+import com.fanxin.app.BuildConfig;
+import com.fanxin.app.R;
+import com.fanxin.app.domain.VideoEntity;
+import com.fanxin.app.video.util.ImageCache;
+import com.fanxin.app.video.util.ImageResizer;
+import com.fanxin.app.widget.RecyclingImageView;
 import com.hyphenate.util.DateUtils;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.TextFormater;

@@ -11,16 +11,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.List;
 
-import com.hyphenate.EMValueCallBack;
+import com.fanxin.app.Constant;
+import com.fanxin.app.adapter.GroupAdapter;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.adapter.GroupAdapter;
+import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 
 import android.content.Context;

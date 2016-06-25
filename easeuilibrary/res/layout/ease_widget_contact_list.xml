@@ -14,7 +14,7 @@
         android:dividerHeight="1px"
         android:fastScrollEnabled="false" />
 
-    <com.hyphenate.easeui.widget.EaseSidebar
+    <com.fanxin.easeui.widget.EaseSidebar
         android:id="@+id/sidebar"
         android:layout_width="30dp"
         android:layout_height="match_parent"

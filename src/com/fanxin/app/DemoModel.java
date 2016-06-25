@@ -1,19 +1,17 @@
-package com.hyphenate.chatuidemo;
+package com.fanxin.app;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import android.content.Context;
 
-import com.hyphenate.chatuidemo.db.UserDao;
-import com.hyphenate.chatuidemo.domain.RobotUser;
-import com.hyphenate.chatuidemo.utils.PreferenceManager;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.model.EaseAtMessageHelper;
+import com.fanxin.app.db.UserDao;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.model.EaseAtMessageHelper;
+import com.fanxin.app.domain.RobotUser;
+import com.fanxin.app.utils.PreferenceManager;
 
 public class DemoModel {
     UserDao dao = null;

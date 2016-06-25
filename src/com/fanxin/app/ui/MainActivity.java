@@ -11,13 +11,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
-import java.util.List;
 import java.util.List;
 
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
+import com.fanxin.app.Constant;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.db.UserDao;
+import com.fanxin.app.runtimepermissions.PermissionsResultAction;
+import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.EMContactListener;
 import com.hyphenate.EMMessageListener;
@@ -26,15 +30,9 @@ import com.hyphenate.chat.EMCmdMessageBody;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.db.InviteMessgeDao;
-import com.hyphenate.chatuidemo.db.UserDao;
-import com.hyphenate.chatuidemo.domain.InviteMessage;
-import com.hyphenate.chatuidemo.runtimepermissions.PermissionsManager;
-import com.hyphenate.chatuidemo.runtimepermissions.PermissionsResultAction;
-import com.hyphenate.easeui.utils.EaseCommonUtils;
+import com.fanxin.app.R;
+import com.fanxin.app.db.InviteMessgeDao;
+import com.fanxin.app.runtimepermissions.PermissionsManager;
 import com.hyphenate.util.EMLog;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
@@ -53,8 +51,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;

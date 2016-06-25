@@ -11,21 +11,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.fanxin.easeui.widget.EaseSidebar;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.adapter.EaseContactAdapter;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.widget.EaseSidebar;
+import com.fanxin.app.Constant;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.R;
+import com.fanxin.easeui.adapter.EaseContactAdapter;
+import com.fanxin.easeui.domain.EaseUser;
 
 import android.content.Context;
 import android.content.Intent;

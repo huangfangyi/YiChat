@@ -11,10 +11,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.List;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -35,16 +36,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hyphenate.chat.EMChatManager;
+import com.fanxin.easeui.utils.EaseUserUtils;
+import com.fanxin.easeui.widget.EaseAlertDialog;
+import com.fanxin.easeui.widget.EaseExpandGridView;
 import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.utils.EaseUserUtils;
-import com.hyphenate.easeui.widget.EaseAlertDialog;
-import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
-import com.hyphenate.easeui.widget.EaseExpandGridView;
+import com.fanxin.app.R;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.NetUtils;
 
@@ -185,7 +184,7 @@ public class ChatRoomDetailsActivity extends BaseActivity implements OnClickList
 		final String st9 = getResources().getString(R.string.failed_to_move_into);
 		
 		final String stsuccess = getResources().getString(R.string.Move_into_blacklist_success);
-		if (resultCode == RESULT_OK) {
+		if (resultCode == Activity.RESULT_OK) {
 			if (progressDialog == null) {
 				progressDialog = new ProgressDialog(ChatRoomDetailsActivity.this);
 				progressDialog.setMessage(st1);
@@ -241,7 +240,7 @@ public class ChatRoomDetailsActivity extends BaseActivity implements OnClickList
 					runOnUiThread(new Runnable() {
 						public void run() {
 							progressDialog.dismiss();
-							setResult(RESULT_OK);
+							setResult(Activity.RESULT_OK);
 							finish();
 							if(ChatActivity.activityInstance != null)
 							    ChatActivity.activityInstance.finish();
@@ -300,7 +299,7 @@ public class ChatRoomDetailsActivity extends BaseActivity implements OnClickList
 		switch (v.getId()) {
 		case R.id.clear_all_history: // clear conversation history
 			String st9 = getResources().getString(R.string.sure_to_empty_this);
-			new EaseAlertDialog(ChatRoomDetailsActivity.this, null, st9, null, new AlertDialogUser() {
+			new EaseAlertDialog(ChatRoomDetailsActivity.this, null, st9, null, new EaseAlertDialog.AlertDialogUser() {
                 
                 @Override
                 public void onResult(boolean confirmed, Bundle bundle) {
@@ -441,13 +440,13 @@ public class ChatRoomDetailsActivity extends BaseActivity implements OnClickList
 
 
 	public void back(View view) {
-		setResult(RESULT_OK);
+		setResult(Activity.RESULT_OK);
 		finish();
 	}
 
 	@Override
 	public void onBackPressed() {
-		setResult(RESULT_OK);
+		setResult(Activity.RESULT_OK);
 		finish();
 	}
 

@@ -1,14 +1,14 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.io.ByteArrayOutputStream;
 
 import com.bumptech.glide.Glide;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.utils.EaseUserUtils;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.utils.EaseUserUtils;
+import com.fanxin.app.R;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;

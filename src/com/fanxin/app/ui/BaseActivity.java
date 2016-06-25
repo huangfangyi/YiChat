@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import android.os.Bundle;
-import com.hyphenate.easeui.ui.EaseBaseActivity;
+import com.fanxin.easeui.ui.EaseBaseActivity;
 import com.umeng.analytics.MobclickAgent;
 
 public class BaseActivity extends EaseBaseActivity {

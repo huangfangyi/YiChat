@@ -9,7 +9,7 @@
         android:layout_height="fill_parent"
         android:background="#fff"
         >
-         <com.hyphenate.chatuidemo.widget.RecyclingImageView
+         <com.fanxin.app.widget.RecyclingImageView
         android:id="@+id/imageView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

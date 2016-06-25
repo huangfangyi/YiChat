@@ -11,12 +11,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 
 import android.app.ProgressDialog;

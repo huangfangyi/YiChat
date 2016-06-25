@@ -11,15 +11,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.widget.EaseAlertDialog;
-import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
+import com.fanxin.app.R;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.widget.EaseAlertDialog;
+import com.fanxin.easeui.widget.EaseAlertDialog.AlertDialogUser;
 
 public class ForwardMessageActivity extends PickContactNoCheckboxActivity {
 	private EaseUser selectUser;

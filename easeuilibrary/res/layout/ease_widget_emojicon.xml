@@ -6,13 +6,13 @@
     android:orientation="vertical"
     >
 
-    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconPagerView 
+    <com.fanxin.easeui.widget.emojicon.EaseEmojiconPagerView
         android:layout_width="match_parent"
         android:layout_height="142dp"
         android:id="@+id/pager_view"
         />
     
-    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconIndicatorView 
+    <com.fanxin.easeui.widget.emojicon.EaseEmojiconIndicatorView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/indicator_view"
@@ -25,7 +25,7 @@
         android:background="#CFCFCF"
         />
     
-    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconScrollTabBar
+    <com.fanxin.easeui.widget.emojicon.EaseEmojiconScrollTabBar
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:id="@+id/tab_bar"

@@ -1,13 +1,12 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
+import com.fanxin.app.Constant;
 import com.hyphenate.chat.EMCallStateChangeListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chat.EMCallManager.EMVideoCallHelper.CallType;
 import com.hyphenate.chat.EMMessage.Status;
 import com.hyphenate.chat.EMTextMessageBody;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 import com.hyphenate.exceptions.EMServiceNotReadyException;
 import com.hyphenate.media.EMLocalSurfaceView;
 import com.hyphenate.media.EMOppositeSurfaceView;

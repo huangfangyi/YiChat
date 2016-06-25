@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMCursorResult;
 import com.hyphenate.chat.EMGroupInfo;
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 
 import android.content.Context;

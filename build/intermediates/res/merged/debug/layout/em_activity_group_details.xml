@@ -53,7 +53,7 @@
             android:background="@android:color/transparent"
             android:orientation="vertical" >
 
-            <com.hyphenate.easeui.widget.EaseExpandGridView
+            <com.fanxin.easeui.widget.EaseExpandGridView
                 android:id="@+id/gridview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -276,7 +276,7 @@
                     android:textSize="18sp"
                     android:typeface="serif" />
 
-                <com.hyphenate.easeui.widget.EaseSwitchButton
+                <com.fanxin.easeui.widget.EaseSwitchButton
                     android:id="@+id/switch_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

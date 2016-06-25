@@ -6,7 +6,7 @@
     android:background="@color/common_bg"
     android:orientation="vertical">
 
-    <com.hyphenate.easeui.widget.EaseTitleBar
+    <com.fanxin.easeui.widget.EaseTitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <com.hyphenate.easeui.widget.EaseContactList
+        <com.fanxin.easeui.widget.EaseContactList
             android:id="@+id/contact_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

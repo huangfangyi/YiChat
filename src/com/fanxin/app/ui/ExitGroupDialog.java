@@ -11,16 +11,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.hyphenate.chatuidemo.R;
-
+import com.fanxin.app.R;
 public class ExitGroupDialog extends BaseActivity{
     private TextView text;
     private Button exitBtn;
@@ -41,7 +41,7 @@ public class ExitGroupDialog extends BaseActivity{
     }
     
     public void logout(View view){
-    	setResult(RESULT_OK);
+    	setResult(Activity.RESULT_OK);
         finish();
         
     }

@@ -11,15 +11,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.db;
+package com.fanxin.app.db;
 
 import java.util.List;
 import java.util.Map;
 
 import android.content.Context;
 
-import com.hyphenate.chatuidemo.domain.RobotUser;
-import com.hyphenate.easeui.domain.EaseUser;
+import com.fanxin.app.domain.RobotUser;
+import com.fanxin.easeui.domain.EaseUser;
 
 public class UserDao {
 	public static final String TABLE_NAME = "uers";

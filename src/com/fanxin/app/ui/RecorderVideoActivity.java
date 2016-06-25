@@ -9,7 +9,7 @@
  * is strictly forbidden unless prior written permission is obtained
  * from EaseMob Technologies.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -51,9 +51,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.chatuidemo.video.util.Utils;
-import com.hyphenate.easeui.utils.EaseCommonUtils;
+import com.fanxin.app.video.util.Utils;
+import com.fanxin.easeui.utils.EaseCommonUtils;
+import com.fanxin.app.R;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.PathUtil;
 

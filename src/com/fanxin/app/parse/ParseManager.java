@@ -1,15 +1,15 @@
-package com.hyphenate.chatuidemo.parse;
+package com.fanxin.app.parse;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
 
+import com.fanxin.app.DemoHelper;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.util.EMLog;
 import com.parse.FindCallback;
 import com.parse.GetCallback;

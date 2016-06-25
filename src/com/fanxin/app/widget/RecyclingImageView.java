@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hyphenate.chatuidemo.widget;
+package com.fanxin.app.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -22,7 +22,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.hyphenate.chatuidemo.video.util.RecyclingBitmapDrawable;
+import com.fanxin.app.video.util.RecyclingBitmapDrawable;
 
 /**
  * Sub-class of ImageView which automatically notifies the drawable when it is

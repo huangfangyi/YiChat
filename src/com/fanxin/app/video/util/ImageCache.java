@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hyphenate.chatuidemo.video.util;
+package com.fanxin.app.video.util;
 
 import java.io.File;
 import java.lang.ref.SoftReference;
@@ -39,7 +39,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.util.LruCache;
 import android.util.Log;
 
-import com.hyphenate.chatuidemo.BuildConfig;
+import com.fanxin.app.BuildConfig;
 
 /**
  * This class memory caching of bitmaps in conjunction with the

@@ -11,13 +11,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
+import com.fanxin.app.DemoHelper;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMContactManager;
-import com.hyphenate.chatuidemo.DemoHelper;
-import com.hyphenate.chatuidemo.R;
-import com.hyphenate.easeui.widget.EaseAlertDialog;
+import com.fanxin.app.R;
+import com.fanxin.easeui.widget.EaseAlertDialog;
 
 import android.app.ProgressDialog;
 import android.content.Context;

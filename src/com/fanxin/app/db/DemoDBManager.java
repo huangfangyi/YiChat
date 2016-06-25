@@ -1,18 +1,17 @@
-package com.hyphenate.chatuidemo.db;
+package com.fanxin.app.db;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.DemoApplication;
-import com.hyphenate.chatuidemo.domain.InviteMessage;
-import com.hyphenate.chatuidemo.domain.InviteMessage.InviteMesageStatus;
-import com.hyphenate.chatuidemo.domain.RobotUser;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.utils.EaseCommonUtils;
+import com.fanxin.app.Constant;
+import com.fanxin.app.DemoApplication;
+import com.fanxin.app.domain.InviteMessage;
+import com.fanxin.app.domain.InviteMessage.InviteMesageStatus;
+import com.fanxin.app.domain.RobotUser;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.util.HanziToPinyin;
 
 import android.content.ContentValues;

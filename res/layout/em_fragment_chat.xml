@@ -6,7 +6,7 @@
     android:animateLayoutChanges="true"
     android:background="#f2f0eb" >
 
-    <com.hyphenate.easeui.widget.EaseTitleBar
+    <com.fanxin.easeui.widget.EaseTitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,12 +18,12 @@
         android:layout_above="@+id/input_menu"
         android:layout_below="@id/title_bar" >
 
-        <com.hyphenate.easeui.widget.EaseChatMessageList
+        <com.fanxin.easeui.widget.EaseChatMessageList
             android:id="@+id/message_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.hyphenate.easeui.widget.EaseVoiceRecorderView
+        <com.fanxin.easeui.widget.EaseVoiceRecorderView
             android:id="@+id/voice_recorder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:visibility="invisible" />
     </RelativeLayout>
 
-    <com.hyphenate.easeui.widget.EaseChatInputMenu
+    <com.fanxin.easeui.widget.EaseChatInputMenu
         android:id="@+id/input_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

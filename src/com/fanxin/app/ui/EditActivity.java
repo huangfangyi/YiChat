@@ -1,6 +1,6 @@
-package com.hyphenate.chatuidemo.ui;
+package com.fanxin.app.ui;
 
-import com.hyphenate.chatuidemo.R;
+import com.fanxin.app.R;
 
 import android.content.Intent;
 import android.os.Bundle;

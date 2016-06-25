@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hyphenate.chatuidemo.adapter;
+package com.fanxin.app.adapter;
 
 import java.util.List;
 
@@ -28,8 +28,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fanxin.app.R;
 import com.hyphenate.chat.EMChatRoom;
-import com.hyphenate.chatuidemo.R;
+
 
 public class ChatRoomAdapter extends ArrayAdapter<EMChatRoom> {
 
