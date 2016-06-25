@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_centerHorizontal="true"
+            android:padding="2dp"
+            android:src="@drawable/em_conversation_normal" >
+        </ImageView>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/unread_msg_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/em_unread_count_bg"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/session"
+        android:paddingBottom="2dp"
+        android:textColor="@color/em_main_botton_text_color"
+        android:textSize="12sp" >
+    </TextView>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="parse-android-1.13.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/parse-android-1.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

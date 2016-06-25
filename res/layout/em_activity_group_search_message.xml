@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="7dp"
+            android:paddingLeft="@dimen/padding_search_bar"
+            android:paddingRight="7dp"
+            android:paddingTop="7dp" >
+
+            <EditText
+                android:id="@+id/query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/ease_seabar_input"
+                android:drawableLeft="@drawable/ease_search_bar_icon_normal"
+                android:hint="@string/search"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textSize="16sp"/>
+
+            <ImageButton
+                android:id="@+id/search_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:background="@android:color/transparent"
+                android:padding="6dp"
+                android:src="@drawable/ease_search_clear"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingRight="8dp"
+            android:text="@string/cancel"
+            android:textColor="@color/holo_green_light"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ease_common_tab_bg"
+            android:paddingLeft="7dp"
+            android:visibility="invisible"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/btn_blue_normal" />
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+             />
+        
+        <TextView
+        android:id="@+id/tv_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"
+        android:text="No result" />
+    </FrameLayout>
+
+
+</LinearLayout>
