@@ -2,11 +2,11 @@
 manifest
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:2:1-497:12
 	package
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:4:11-45
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:4:11-35
 		INJECTED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml
 		INJECTED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:5:11-38
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:5:11-36
 		INJECTED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml
 		INJECTED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml
 	xmlns:tools
