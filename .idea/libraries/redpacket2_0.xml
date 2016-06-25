@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="redpacket2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/redpacketlibrary/libs/redpacket2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

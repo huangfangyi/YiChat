@@ -61,7 +61,7 @@ android {
 }
 
 dependencies {
-//    compile project(':redpacketlibrary')
+     compile project(':redpacketlibrary')
 //    compile project(':EaseUI')
 	  compile fileTree(dir: 'libs', include: '*.jar', exclude: 'android-support-multidex.jar')
     //考虑到在eclipse中,直接使用源码

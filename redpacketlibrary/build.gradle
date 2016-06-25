@@ -45,6 +45,6 @@ android {
 }
 
 dependencies {
-    compile project(':easeui')
+    compile project(':easeuilibrary')
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
