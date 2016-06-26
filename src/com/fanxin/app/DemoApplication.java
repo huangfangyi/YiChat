@@ -17,7 +17,14 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RedPacket;
+import com.fanxin.app.main.utils.LocalUserUtil;
+
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+
 
 public class DemoApplication extends Application {
 
@@ -25,22 +32,29 @@ public class DemoApplication extends Application {
 	private static DemoApplication instance;
 	// login user name
 	public final String PREF_USERNAME = "username";
-	
+	public OkHttpClient okHttpClient;
 	/**
 	 * nickname for current user, the nickname instead of ID be shown when user receive notification from APNs
 	 */
 	public static String currentUserNick = "";
-
+	private JSONObject userJson;
 	@Override
 	public void onCreate() {
 		MultiDex.install(this);
 		super.onCreate();
         applicationContext = this;
         instance = this;
-        
         //init demo helper
+		LocalUserUtil.init(instance);
         DemoHelper.getInstance().init(applicationContext);
 		RedPacket.getInstance().initContext(applicationContext);
+
+		okHttpClient= new OkHttpClient.Builder()
+ 				.connectTimeout(10000L, TimeUnit.MILLISECONDS)
+				.readTimeout(10000L, TimeUnit.MILLISECONDS)
+				//其他配置
+				.build();
+
 	}
 
 	public static DemoApplication getInstance() {
@@ -51,5 +65,18 @@ public class DemoApplication extends Application {
 	protected void attachBaseContext(Context base) {
 		super.attachBaseContext(base);
 		MultiDex.install(this);
+	}
+
+	public  void setUserJson( JSONObject userJson){
+
+		this.userJson=userJson;
+		LocalUserUtil.getInstance().setUserJson(userJson);
+
+	}
+	public  JSONObject getUserJson(){
+		if(userJson==null){
+			userJson=LocalUserUtil.getInstance().getUserJson();
+		}
+		return  userJson;
 	}
 }

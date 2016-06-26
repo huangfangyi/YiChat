@@ -21,7 +21,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.fanxin.app.R;
-public class ExitGroupDialog extends BaseActivity{
+
+public class ExitGroupDialog extends BaseActivity {
     private TextView text;
     private Button exitBtn;
 

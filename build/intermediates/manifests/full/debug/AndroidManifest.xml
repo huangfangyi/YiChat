@@ -50,7 +50,7 @@
         android:icon="@drawable/em_logo_uidemo"
         android:label="@string/app_name" >
         <activity
-            android:name="com.fanxin.app.ui.MainActivity"
+            android:name="com.fanxin.app.main.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -59,7 +59,7 @@
 
         <!-- 开屏页 -->
         <activity
-            android:name="com.fanxin.app.ui.SplashActivity"
+            android:name="com.fanxin.app.main.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
             <intent-filter>
@@ -446,7 +446,7 @@
         <!-- 设置环信应用的appkey -->
         <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="easemob-demo#chatdemoui" />
+            android:value="fanxin888#fanxin" />
         <!-- 声明sdk所需的service -->
         <service
             android:name="com.hyphenate.chat.EMChatService"

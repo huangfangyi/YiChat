@@ -12,16 +12,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_chatfrom_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_settings_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatto_voice_playing_f2.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_chatto_voice_playing_f2.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ee_9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatto_voice_playing_f2.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_chatto_voice_playing_f2.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_settings_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_contact_list_normal.png",
@@ -184,12 +184,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_input_bar_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_download_btn_nor.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_video_download_btn_nor.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_mm_listitem_disable.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_mm_listitem_disable.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_video_download_btn_nor.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_video_download_btn_nor.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_btn_style_alert_dialog_background.9.png",
@@ -208,12 +208,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_dx_checkbox_gray_on.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_027.gif",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\icon_027.gif"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_024.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\icon_024.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_027.gif",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\icon_027.gif"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_22.png",
@@ -244,16 +244,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_app_pref_bg.9.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_contact_list_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_contact_list_normal.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_mm_title_back.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_mm_title_back.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f3.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f3.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_mm_title_back.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_mm_title_back.png"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_contact_list_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_contact_list_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chat_face_pressed.png",
@@ -300,12 +300,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\em_dx_checkbox_on.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_2.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ee_2.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_update_btn_check_off_pressed_holo_light.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-hdpi\\umeng_update_btn_check_off_pressed_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_2.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ee_2.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_conversation_selected.png",

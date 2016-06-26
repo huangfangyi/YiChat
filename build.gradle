@@ -62,6 +62,7 @@ android {
 
 dependencies {
      compile project(':redpacketlibrary')
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
 //    compile project(':EaseUI')
 	  compile fileTree(dir: 'libs', include: '*.jar', exclude: 'android-support-multidex.jar')
     //考虑到在eclipse中,直接使用源码

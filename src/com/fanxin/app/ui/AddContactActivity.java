@@ -31,7 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AddContactActivity extends BaseActivity{
+public class AddContactActivity extends BaseActivity {
 	private EditText editText;
 	private LinearLayout searchedUserLayout;
 	private TextView nameText,mTextView;

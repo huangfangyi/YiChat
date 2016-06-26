@@ -43,6 +43,7 @@
     <color name="emojicon_tab_nomal">#ffffff</color>
     <color name="emojicon_tab_selected">#D9D9D9</color>
     <color name="error_item_color">#F6EBE6</color>
+    <color name="fx_common_top_bar_blue">#22292c</color>
     <color name="gray_normal">#666667</color>
     <color name="gray_pressed">#b5b5b6</color>
     <color name="grid_state_focused">#80000000</color>

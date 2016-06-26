@@ -21,7 +21,7 @@ import com.hyphenate.chat.EMGroup;
 import com.fanxin.app.R;
 import com.fanxin.easeui.adapter.EaseContactAdapter;
 
-public class PickAtUserActivity extends BaseActivity{
+public class PickAtUserActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);

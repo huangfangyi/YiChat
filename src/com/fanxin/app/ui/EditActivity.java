@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class EditActivity extends BaseActivity{
+public class EditActivity extends BaseActivity {
 	private EditText editText;
 
 

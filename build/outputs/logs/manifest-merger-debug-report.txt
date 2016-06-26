@@ -146,7 +146,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:50
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:53:9-48
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:51:9-39
-activity#com.fanxin.app.ui.MainActivity
+activity#com.fanxin.app.main.MainActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:55:9-61:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:58:13-49
@@ -157,15 +157,15 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:55
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:59:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:56:13-44
-activity#com.fanxin.app.ui.SplashActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:56:13-46
+activity#com.fanxin.app.main.SplashActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:64:9-73:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:66:13-49
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:67:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:65:13-46
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:65:13-48
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:68:13-72:29
 action#android.intent.action.MAIN
@@ -655,9 +655,9 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:44
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:448:7-59
 meta-data#EASEMOB_APPKEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:453:9-455:55
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:453:9-455:48
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:455:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:455:13-45
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:454:13-42
 service#com.hyphenate.chat.EMChatService

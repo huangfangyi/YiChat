@@ -4,18 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import com.fanxin.app.R;
+import com.fanxin.app.main.MainActivity;
 import com.fanxin.app.runtimepermissions.PermissionsManager;
 import com.fanxin.easeui.ui.EaseChatFragment;
 import com.hyphenate.util.EasyUtils;
 
 /**
- * chat activity，EaseChatFragment was used {@link #EaseChatFragment}
- *
+  *
  */
-public class ChatActivity extends BaseActivity{
+public class ChatActivity extends BaseActivity {
     public static ChatActivity activityInstance;
     private EaseChatFragment chatFragment;
-    String toChatUsername;
+    public   String toChatUsername;
 
     @Override
     protected void onCreate(Bundle arg0) {

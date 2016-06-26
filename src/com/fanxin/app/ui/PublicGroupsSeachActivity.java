@@ -16,7 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class PublicGroupsSeachActivity extends BaseActivity{
+public class PublicGroupsSeachActivity extends BaseActivity {
     private RelativeLayout containerLayout;
     private EditText idET;
     private TextView nameText;

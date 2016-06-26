@@ -12,12 +12,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_activity_chat.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chatroom.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_fragment_chatroom.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\rp_fragment_change.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\layout\\rp_fragment_change.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_chatroom.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_fragment_chatroom.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\ease_chat_message_list.xml",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\activity_pick_at_user.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_listview_footer_view.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_listview_footer_view.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\rp_pay_tips_dialog.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\layout\\rp_pay_tips_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_listview_footer_view.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_listview_footer_view.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\rp_popup_layout.xml",
@@ -296,6 +296,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\layout\\rp_fragment_group_chat_packet.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_splash.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\fx_activity_splash.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_grid.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_grid.xml"
     },
@@ -354,10 +358,6 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\ease_commom_back_btn.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\layout\\ease_commom_back_btn.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_splash.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_activity_splash.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\em_context_menu_for_location.xml",
@@ -488,6 +488,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\layout\\ease_showvideo_activity.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_login.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\fx_activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\rp_fragment_red_packet_detail.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\redpacketlibrary\\unspecified\\res\\layout\\rp_fragment_red_packet_detail.xml"
     },
@@ -516,12 +520,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\layout\\em_fragment_chat.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_big_expression.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\layout\\ease_row_big_expression.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_sent_location.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\layout\\ease_row_sent_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_big_expression.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\layout\\ease_row_big_expression.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\layout\\rp_record_list_footer.xml",
