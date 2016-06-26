@@ -36,7 +36,7 @@ public class BaseActivity extends EaseBaseActivity {
     protected void onStart() {
         super.onStart();
         // umeng
-        MobclickAgent.onPause(this);
+        MobclickAgent.onPause(this);//test
     }
 
 }
