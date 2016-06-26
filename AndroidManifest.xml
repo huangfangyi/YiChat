@@ -74,7 +74,7 @@
 
         <!-- 登陆 -->
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".main.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" 
             android:windowSoftInputMode="adjustResize|stateVisible">
@@ -82,7 +82,7 @@
 
         <!-- 注册 -->
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".main.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" 
             android:windowSoftInputMode="adjustResize|stateVisible">

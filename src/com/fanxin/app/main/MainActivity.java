@@ -26,7 +26,6 @@ import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.app.ui.ContactListFragment;
 import com.fanxin.app.ui.ConversationListFragment;
 import com.fanxin.app.ui.GroupsActivity;
-import com.fanxin.app.ui.LoginActivity;
 import com.fanxin.app.ui.SettingsFragment;
 import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.EMCallBack;

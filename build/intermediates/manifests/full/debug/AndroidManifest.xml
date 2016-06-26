@@ -71,7 +71,7 @@
 
         <!-- 登陆 -->
         <activity
-            android:name="com.fanxin.app.ui.LoginActivity"
+            android:name="com.fanxin.app.main.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize|stateVisible" >
@@ -79,7 +79,7 @@
 
         <!-- 注册 -->
         <activity
-            android:name="com.fanxin.app.ui.RegisterActivity"
+            android:name="com.fanxin.app.main.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize|stateVisible" >

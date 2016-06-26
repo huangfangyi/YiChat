@@ -176,7 +176,7 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:71:17-77
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:71:27-74
-activity#com.fanxin.app.ui.LoginActivity
+activity#com.fanxin.app.main.LoginActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:76:9-81:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:78:13-49
@@ -185,8 +185,8 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:76
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:79:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:77:13-45
-activity#com.fanxin.app.ui.RegisterActivity
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:77:13-47
+activity#com.fanxin.app.main.RegisterActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:84:9-89:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:86:13-49
@@ -195,7 +195,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:84
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:87:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:85:13-48
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:85:13-50
 activity#com.fanxin.app.ui.ChatActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin3.0\AndroidManifest.xml:91:9-97:20
 	android:screenOrientation
