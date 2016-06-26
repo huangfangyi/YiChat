@@ -11,7 +11,7 @@ public class FXConstant {
     public static final String HOST = "http://120.24.211.126/fanxin/";
     public static final String URL_Register = HOST + "register.php";
     public static final String URL_Register_Tel = HOST + "register_tel.php";
-    public static final String URL_Login = HOST + "login_post.php";
+    public static final String URL_LOGIN = HOST + "login_post.php";
     //  public static final String URL_Friends = HOST+"get_allfriends.php";
     public static final String URL_FriendList = HOST + "getMyFriends.php";
     public static final String URL_Avatar = HOST + "upload/";

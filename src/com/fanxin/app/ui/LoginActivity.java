@@ -57,7 +57,6 @@ public class LoginActivity extends BaseActivity {
             return;
         }
         setContentView(R.layout.fx_activity_login);
-
         et_usertel = (EditText) findViewById(R.id.et_usertel);
         et_password = (EditText) findViewById(R.id.et_password);
         btn_login = (Button) findViewById(R.id.btn_login);
@@ -92,7 +91,14 @@ public class LoginActivity extends BaseActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginInSever(et_usertel.getText().toString(),et_password.getText().toString());
+                loginInSever(et_usertel.getText().toString(), et_password.getText().toString());
+            }
+        });
+
+        btn_qtlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
     }
@@ -100,38 +106,33 @@ public class LoginActivity extends BaseActivity {
     private void loginInSever(String tel, String password) {
         final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
         pd.setCanceledOnTouchOutside(false);
-
         pd.setMessage(getString(R.string.Is_landing));
         pd.show();
 
         RequestBody formBody = new FormBody.Builder()
-                .add("usertel",tel)
-                .add("password",password)
+                .add("usertel", tel)
+                .add("password", password)
                 .build();
 
         Request request = new Request.Builder()
-                .url(FXConstant.URL_Login)
+                .url(FXConstant.URL_LOGIN)
                 .post(formBody)
                 .build();
-
         DemoApplication.getInstance().okHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-
+                Toast.makeText(getApplicationContext(), "访问服务器失败...", Toast.LENGTH_SHORT).show();
             }
+
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String result = null;
-                try {
-                    result =((Response) response).body().string();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+
+                String result = response.body().string();
+                System.out.println("result-------->" + result);
                 try {
                     JSONObject jsonObject = JSONObject.parseObject(result);
                     int code = jsonObject.getInteger("code");
                     if (code == 1) {
-
                         JSONObject json = jsonObject.getJSONObject("user");
                         loginHuanXin(json, pd);
                     } else if (code == 2) {
@@ -142,7 +143,7 @@ public class LoginActivity extends BaseActivity {
                     } else if (code == 3) {
                         pd.dismiss();
                         Toast.makeText(LoginActivity.this,
-                                "服务器端注册失败...", Toast.LENGTH_SHORT)
+                                "服务器端登录失败...", Toast.LENGTH_SHORT)
                                 .show();
                     } else {
                         pd.dismiss();
@@ -152,33 +153,29 @@ public class LoginActivity extends BaseActivity {
                     }
 
                 } catch (JSONException e) {
-
-
+                    pd.dismiss();
+                    Toast.makeText(LoginActivity.this,
+                            "数据返回错误...", Toast.LENGTH_SHORT)
+                            .show();
                 }
             }
         });
 
     }
-
-    private void loginHuanXin(JSONObject jsonObject, final ProgressDialog progressDialog){
+    private void loginHuanXin(final JSONObject jsonObject, final ProgressDialog progressDialog) {
         final String nick = jsonObject.getString("nick");
         final String hxid = jsonObject.getString("hxid");
         final String password = jsonObject.getString("password");
-
         DemoDBManager.getInstance().closeDB();
-
         // reset current user name before login
         DemoHelper.getInstance().setCurrentUserName(hxid);
-
-        final long start = System.currentTimeMillis();
-        // call login method
+         // call login method
         Log.d(TAG, "EMClient.getInstance().login");
         EMClient.getInstance().login(hxid, password, new EMCallBack() {
 
             @Override
             public void onSuccess() {
                 Log.d(TAG, "login: onSuccess");
-
                 if (!LoginActivity.this.isFinishing() && progressDialog.isShowing()) {
                     progressDialog.dismiss();
                 }
@@ -196,12 +193,13 @@ public class LoginActivity extends BaseActivity {
 
                 // get user's info (this should be get from App's server or 3rd party service)
                 DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
-
+                DemoApplication.getInstance().setUserJson(jsonObject);
                 RedPacket.getInstance().initRPToken(hxid, hxid, EMClient.getInstance().getChatConfig().getAccessToken(), new RPCallback() {
                     @Override
                     public void onSuccess() {
 
                     }
+
                     @Override
                     public void onError(String s, String s1) {
 
@@ -237,7 +235,6 @@ public class LoginActivity extends BaseActivity {
     }
 
 
-
     // EditText监听器
     class TextChange implements TextWatcher {
 
@@ -269,10 +266,6 @@ public class LoginActivity extends BaseActivity {
         }
 
     }
-
-
-
-
 
 
     @Override
