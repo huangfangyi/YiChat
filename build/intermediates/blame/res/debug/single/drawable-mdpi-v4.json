@@ -1,7 +1,23 @@
 [
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\em_unread_count_bg.9.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\drawable-mdpi\\em_unread_count_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\em_ic_launcher.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\drawable-mdpi\\em_ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\em_logo_uidemo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\drawable-mdpi\\em_logo_uidemo.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\em_logo_uidemo.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\drawable-mdpi\\em_logo_uidemo.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\exploded-aar\\FanXin0629\\easeuilibrary\\unspecified\\res\\drawable-mdpi-v4\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\em_unread_count_bg.9.png",
