@@ -20,6 +20,7 @@ import android.support.multidex.MultiDex;
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RedPacket;
 import com.fanxin.app.main.utils.LocalUserUtil;
+import com.fanxin.app.main.utils.ServerTask;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,8 +33,7 @@ public class DemoApplication extends Application {
 	private static DemoApplication instance;
 	// login user name
 	public final String PREF_USERNAME = "username";
-	public OkHttpClient okHttpClient;
-	/**
+ 	/**
 	 * nickname for current user, the nickname instead of ID be shown when user receive notification from APNs
 	 */
 	public static String currentUserNick = "";
@@ -48,13 +48,7 @@ public class DemoApplication extends Application {
 		LocalUserUtil.init(instance);
         DemoHelper.getInstance().init(applicationContext);
 		RedPacket.getInstance().initContext(applicationContext);
-
-		okHttpClient= new OkHttpClient.Builder()
- 				.connectTimeout(10000L, TimeUnit.MILLISECONDS)
-				.readTimeout(10000L, TimeUnit.MILLISECONDS)
-				//其他配置
-				.build();
-
+		ServerTask.init(instance);
 	}
 
 	public static DemoApplication getInstance() {

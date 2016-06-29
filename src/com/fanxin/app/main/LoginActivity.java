@@ -19,11 +19,16 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.DemoDBManager;
+import com.fanxin.app.main.utils.Param;
+import com.fanxin.app.main.utils.ServerTask;
+
 import com.fanxin.app.ui.BaseActivity;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -107,58 +112,41 @@ public class LoginActivity extends BaseActivity {
         pd.setCanceledOnTouchOutside(false);
         pd.setMessage(getString(R.string.Is_landing));
         pd.show();
-
-        RequestBody formBody = new FormBody.Builder()
-                .add("usertel", tel)
-                .add("password", password)
-                .build();
-
-        Request request = new Request.Builder()
-                .url(FXConstant.URL_LOGIN)
-                .post(formBody)
-                .build();
-        DemoApplication.getInstance().okHttpClient.newCall(request).enqueue(new Callback() {
+        List<Param> params = new ArrayList<Param>();
+        params.add(new Param("usertel", tel));
+        params.add(new Param("password", password));
+        ServerTask.getInstance().post(params, FXConstant.URL_LOGIN, new ServerTask.HttpCallBack() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                Toast.makeText(getApplicationContext(), "访问服务器失败...", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                String result = response.body().string();
-                System.out.println("result-------->" + result);
-                try {
-                    JSONObject jsonObject = JSONObject.parseObject(result);
-                    int code = jsonObject.getInteger("code");
-                    if (code == 1) {
-                        JSONObject json = jsonObject.getJSONObject("user");
-                        loginHuanXin(json, pd);
-                    } else if (code == 2) {
-                        pd.dismiss();
-                        Toast.makeText(LoginActivity.this,
-                                "账号或密码错误...", Toast.LENGTH_SHORT)
-                                .show();
-                    } else if (code == 3) {
-                        pd.dismiss();
-                        Toast.makeText(LoginActivity.this,
-                                "服务器端登录失败...", Toast.LENGTH_SHORT)
-                                .show();
-                    } else {
-                        pd.dismiss();
-                        Toast.makeText(LoginActivity.this,
-                                "服务器繁忙请重试...", Toast.LENGTH_SHORT)
-                                .show();
-                    }
-
-                } catch (JSONException e) {
+            public void onResponse(JSONObject jsonObject) {
+                int code = jsonObject.getInteger("code");
+                if (code == 1) {
+                    JSONObject json = jsonObject.getJSONObject("user");
+                    loginHuanXin(json, pd);
+                } else if (code == 2) {
                     pd.dismiss();
                     Toast.makeText(LoginActivity.this,
-                            "数据返回错误...", Toast.LENGTH_SHORT)
+                            "账号或密码错误...", Toast.LENGTH_SHORT)
+                            .show();
+                } else if (code == 3) {
+                    pd.dismiss();
+                    Toast.makeText(LoginActivity.this,
+                            "服务器端登录失败...", Toast.LENGTH_SHORT)
+                            .show();
+                } else {
+                    pd.dismiss();
+                    Toast.makeText(LoginActivity.this,
+                            "服务器繁忙请重试...", Toast.LENGTH_SHORT)
                             .show();
                 }
             }
-        });
+            @Override
+            public void onFailure(String errorMsg) {
 
+            }
+        });
     }
+
+
     private void loginHuanXin(final JSONObject jsonObject, final ProgressDialog progressDialog) {
         final String nick = jsonObject.getString("nick");
         final String hxid = jsonObject.getString("hxid");
