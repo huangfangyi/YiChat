@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\values-xlarge-v4\\values-xlarge-v4.xml",
+        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\values-xlarge-v4\\values-xlarge-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 103
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-xlarge\\em_dimens.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-xlarge\\em_dimens.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -30,50 +30,7 @@
                     "endOffset": 157
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-xlarge\\em_dimens.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 736,
-                        "endColumn": 53,
-                        "endOffset": 785
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\res\\merged\\debug\\values-xlarge-v4\\values-xlarge-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 52,
-                    "endOffset": 103
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-xlarge\\em_dimens.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 682,
-                        "endColumn": 52,
-                        "endOffset": 730
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 108,
-                    "endColumn": 53,
-                    "endOffset": 157
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-xlarge\\em_dimens.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-xlarge\\em_dimens.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\res\\merged\\debug\\values-ru-rRU\\values-ru-rRU.xml",
+        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\values-ru-rRU\\values-ru-rRU.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 122
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 73,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 79,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 256
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 89,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 318
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 114,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 362
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 110,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 431
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 93,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 492
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 84,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 548
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 94,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 612
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 104,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 662
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 95,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 719
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 80,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 777
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 87,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 868
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 86,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 957
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 112,
                         "startColumn": 1,
@@ -277,7 +277,7 @@
                     "endOffset": 1028
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 92,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 1108
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 90,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 1167
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 82,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1240
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 96,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 1297
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 81,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 1367
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 85,
                         "startColumn": 4,
@@ -391,7 +391,7 @@
                     "endOffset": 1424
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 75,
                         "startColumn": 4,
@@ -410,7 +410,7 @@
                     "endOffset": 1474
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 70,
                         "startColumn": 4,
@@ -429,7 +429,7 @@
                     "endOffset": 1517
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 109,
                         "startColumn": 4,
@@ -448,7 +448,7 @@
                     "endOffset": 1561
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 106,
                         "startColumn": 4,
@@ -467,7 +467,7 @@
                     "endOffset": 1622
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -486,7 +486,7 @@
                     "endOffset": 1671
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -505,7 +505,7 @@
                     "endOffset": 1730
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -524,7 +524,7 @@
                     "endOffset": 1785
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -543,7 +543,7 @@
                     "endOffset": 1833
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -562,7 +562,7 @@
                     "endOffset": 1890
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -581,7 +581,7 @@
                     "endOffset": 1952
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -600,7 +600,7 @@
                     "endOffset": 1991
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -619,7 +619,7 @@
                     "endOffset": 2044
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 77,
                         "startColumn": 4,
@@ -638,7 +638,7 @@
                     "endOffset": 2096
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 88,
                         "startColumn": 4,
@@ -657,7 +657,7 @@
                     "endOffset": 2149
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 68,
                         "startColumn": 4,
@@ -676,7 +676,7 @@
                     "endOffset": 2197
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 48,
                         "startColumn": 4,
@@ -695,7 +695,7 @@
                     "endOffset": 2249
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 45,
                         "startColumn": 4,
@@ -714,7 +714,7 @@
                     "endOffset": 2297
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -733,7 +733,7 @@
                     "endOffset": 2355
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -752,7 +752,7 @@
                     "endOffset": 2405
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 46,
                         "startColumn": 4,
@@ -771,7 +771,7 @@
                     "endOffset": 2453
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 47,
                         "startColumn": 4,
@@ -790,7 +790,7 @@
                     "endOffset": 2501
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -809,7 +809,7 @@
                     "endOffset": 2580
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -828,7 +828,7 @@
                     "endOffset": 2622
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 33,
                         "startColumn": 4,
@@ -847,7 +847,7 @@
                     "endOffset": 2676
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 66,
                         "startColumn": 4,
@@ -866,7 +866,7 @@
                     "endOffset": 2766
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -885,7 +885,7 @@
                     "endOffset": 2824
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 4,
@@ -904,7 +904,7 @@
                     "endOffset": 2914
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 53,
                         "startColumn": 4,
@@ -923,7 +923,7 @@
                     "endOffset": 3009
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -942,7 +942,7 @@
                     "endOffset": 3072
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 101,
                         "startColumn": 4,
@@ -961,7 +961,7 @@
                     "endOffset": 3179
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 59,
                         "startColumn": 4,
@@ -980,7 +980,7 @@
                     "endOffset": 3305
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -999,7 +999,7 @@
                     "endOffset": 3349
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -1018,7 +1018,7 @@
                     "endOffset": 3411
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1037,7 +1037,7 @@
                     "endOffset": 3454
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -1056,7 +1056,7 @@
                     "endOffset": 3515
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1075,7 +1075,7 @@
                     "endOffset": 3570
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -1094,7 +1094,7 @@
                     "endOffset": 3639
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -1113,7 +1113,7 @@
                     "endOffset": 3693
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 78,
                         "startColumn": 4,
@@ -1132,7 +1132,7 @@
                     "endOffset": 3750
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 91,
                         "startColumn": 4,
@@ -1151,7 +1151,7 @@
                     "endOffset": 3841
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 57,
                         "startColumn": 4,
@@ -1170,7 +1170,7 @@
                     "endOffset": 3927
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 102,
                         "startColumn": 4,
@@ -1189,7 +1189,7 @@
                     "endOffset": 4003
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\build\\intermediates\\exploded-aar\\FanXin3.0\\easeuilibrary\\unspecified\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\values-ru-rRU\\values-ru-rRU.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 4,
@@ -1208,7 +1208,7 @@
                     "endOffset": 4077
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 60,
                         "startColumn": 4,
@@ -1227,7 +1227,7 @@
                     "endOffset": 4122
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 58,
                         "startColumn": 4,
@@ -1246,7 +1246,7 @@
                     "endOffset": 4213
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -1265,7 +1265,7 @@
                     "endOffset": 4257
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 43,
                         "startColumn": 4,
@@ -1284,7 +1284,7 @@
                     "endOffset": 4303
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -1303,7 +1303,7 @@
                     "endOffset": 4346
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 74,
                         "startColumn": 4,
@@ -1322,7 +1322,7 @@
                     "endOffset": 4394
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 83,
                         "startColumn": 4,
@@ -1341,7 +1341,7 @@
                     "endOffset": 4440
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 105,
                         "startColumn": 4,
@@ -1360,7 +1360,7 @@
                     "endOffset": 4531
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 113,
                         "startColumn": 4,
@@ -1379,7 +1379,7 @@
                     "endOffset": 4604
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 4,
@@ -1398,7 +1398,7 @@
                     "endOffset": 4669
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,
@@ -1417,7 +1417,7 @@
                     "endOffset": 4731
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 4,
@@ -1436,7 +1436,7 @@
                     "endOffset": 4771
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 97,
                         "startColumn": 4,
@@ -1455,7 +1455,7 @@
                     "endOffset": 4812
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 54,
                         "startColumn": 4,
@@ -1474,7 +1474,7 @@
                     "endOffset": 4940
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 55,
                         "startColumn": 4,
@@ -1493,7 +1493,7 @@
                     "endOffset": 5021
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1512,7 +1512,7 @@
                     "endOffset": 5064
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 103,
                         "startColumn": 4,
@@ -1531,7 +1531,7 @@
                     "endOffset": 5132
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 50,
                         "startColumn": 4,
@@ -1550,7 +1550,7 @@
                     "endOffset": 5251
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -1569,7 +1569,7 @@
                     "endOffset": 5299
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 108,
                         "startColumn": 4,
@@ -1588,7 +1588,7 @@
                     "endOffset": 5382
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 4,
@@ -1607,7 +1607,7 @@
                     "endOffset": 5435
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 111,
                         "startColumn": 4,
@@ -1626,7 +1626,7 @@
                     "endOffset": 5500
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 62,
                         "startColumn": 4,
@@ -1645,7 +1645,7 @@
                     "endOffset": 5571
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 72,
                         "startColumn": 4,
@@ -1664,7 +1664,7 @@
                     "endOffset": 5615
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 99,
                         "startColumn": 4,
@@ -1683,7 +1683,7 @@
                     "endOffset": 5665
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 41,
                         "startColumn": 4,
@@ -1702,7 +1702,7 @@
                     "endOffset": 5711
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -1721,7 +1721,7 @@
                     "endOffset": 5812
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 51,
                         "startColumn": 4,
@@ -1740,7 +1740,7 @@
                     "endOffset": 5870
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -1759,7 +1759,7 @@
                     "endOffset": 5919
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 100,
                         "startColumn": 4,
@@ -1778,7 +1778,7 @@
                     "endOffset": 6001
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -1797,7 +1797,7 @@
                     "endOffset": 6055
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -1816,7 +1816,7 @@
                     "endOffset": 6098
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1835,7 +1835,7 @@
                     "endOffset": 6139
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 76,
                         "startColumn": 4,
@@ -1854,7 +1854,7 @@
                     "endOffset": 6187
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 49,
                         "startColumn": 4,
@@ -1873,7 +1873,7 @@
                     "endOffset": 6255
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 52,
                         "startColumn": 4,
@@ -1892,7 +1892,7 @@
                     "endOffset": 6324
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1911,7 +1911,7 @@
                     "endOffset": 6367
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 69,
                         "startColumn": 4,
@@ -1930,7 +1930,7 @@
                     "endOffset": 6409
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 61,
                         "startColumn": 4,
@@ -1949,7 +1949,7 @@
                     "endOffset": 6455
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 71,
                         "startColumn": 4,
@@ -1968,7 +1968,7 @@
                     "endOffset": 6498
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 65,
                         "startColumn": 4,
@@ -1987,7 +1987,7 @@
                     "endOffset": 6551
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -2006,7 +2006,7 @@
                     "endOffset": 6609
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -2025,7 +2025,7 @@
                     "endOffset": 6684
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 107,
                         "startColumn": 4,
@@ -2044,7 +2044,7 @@
                     "endOffset": 6740
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -2063,7 +2063,7 @@
                     "endOffset": 6795
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 98,
                         "startColumn": 4,
@@ -2082,7 +2082,7 @@
                     "endOffset": 6837
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
@@ -2101,7 +2101,7 @@
                     "endOffset": 6881
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 64,
                         "startColumn": 4,
@@ -2120,7 +2120,7 @@
                     "endOffset": 6938
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 44,
                         "startColumn": 4,
@@ -2139,2159 +2139,7 @@
                     "endOffset": 7029
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin3.0\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 67,
-                        "startColumn": 4,
-                        "startOffset": 4170,
-                        "endColumn": 90,
-                        "endOffset": 4256
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\res\\merged\\debug\\values-ru-rRU\\values-ru-rRU.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 71,
-                    "endOffset": 122
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 73,
-                        "startColumn": 4,
-                        "startOffset": 4530,
-                        "endColumn": 71,
-                        "endOffset": 4597
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 127,
-                    "endColumn": 61,
-                    "endOffset": 184
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 79,
-                        "startColumn": 4,
-                        "startOffset": 4856,
-                        "endColumn": 61,
-                        "endOffset": 4913
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 189,
-                    "endColumn": 71,
-                    "endOffset": 256
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 89,
-                        "startColumn": 4,
-                        "startOffset": 5481,
-                        "endColumn": 71,
-                        "endOffset": 5548
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 261,
-                    "endColumn": 61,
-                    "endOffset": 318
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 114,
-                        "startColumn": 4,
-                        "startOffset": 7008,
-                        "endColumn": 61,
-                        "endOffset": 7065
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 323,
-                    "endColumn": 43,
-                    "endOffset": 362
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 110,
-                        "startColumn": 4,
-                        "startOffset": 6730,
-                        "endColumn": 43,
-                        "endOffset": 6769
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 367,
-                    "endColumn": 68,
-                    "endOffset": 431
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 93,
-                        "startColumn": 4,
-                        "startOffset": 5765,
-                        "endColumn": 68,
-                        "endOffset": 5829
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 436,
-                    "endColumn": 60,
-                    "endOffset": 492
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 84,
-                        "startColumn": 4,
-                        "startOffset": 5144,
-                        "endColumn": 60,
-                        "endOffset": 5200
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 497,
-                    "endColumn": 55,
-                    "endOffset": 548
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 94,
-                        "startColumn": 4,
-                        "startOffset": 5835,
-                        "endColumn": 55,
-                        "endOffset": 5886
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 553,
-                    "endColumn": 63,
-                    "endOffset": 612
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 104,
-                        "startColumn": 4,
-                        "startOffset": 6404,
-                        "endColumn": 63,
-                        "endOffset": 6463
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 617,
-                    "endColumn": 49,
-                    "endOffset": 662
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 95,
-                        "startColumn": 4,
-                        "startOffset": 5892,
-                        "endColumn": 49,
-                        "endOffset": 5937
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 667,
-                    "endColumn": 56,
-                    "endOffset": 719
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 80,
-                        "startColumn": 4,
-                        "startOffset": 4919,
-                        "endColumn": 56,
-                        "endOffset": 4971
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 724,
-                    "endColumn": 57,
-                    "endOffset": 777
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 87,
-                        "startColumn": 4,
-                        "startOffset": 5369,
-                        "endColumn": 57,
-                        "endOffset": 5422
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 782,
-                    "endColumn": 90,
-                    "endOffset": 868
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 86,
-                        "startColumn": 4,
-                        "startOffset": 5277,
-                        "endColumn": 90,
-                        "endOffset": 5363
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 873,
-                    "endColumn": 88,
-                    "endOffset": 957
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 112,
-                        "startColumn": 1,
-                        "startOffset": 6826,
-                        "endColumn": 85,
-                        "endOffset": 6910
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 962,
-                    "endColumn": 70,
-                    "endOffset": 1028
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 92,
-                        "startColumn": 4,
-                        "startOffset": 5693,
-                        "endColumn": 70,
-                        "endOffset": 5759
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1033,
-                    "endColumn": 79,
-                    "endOffset": 1108
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 90,
-                        "startColumn": 4,
-                        "startOffset": 5554,
-                        "endColumn": 79,
-                        "endOffset": 5629
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1113,
-                    "endColumn": 58,
-                    "endOffset": 1167
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 82,
-                        "startColumn": 4,
-                        "startOffset": 5035,
-                        "endColumn": 58,
-                        "endOffset": 5089
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1172,
-                    "endColumn": 72,
-                    "endOffset": 1240
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 96,
-                        "startColumn": 4,
-                        "startOffset": 5943,
-                        "endColumn": 72,
-                        "endOffset": 6011
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 1245,
-                    "endColumn": 56,
-                    "endOffset": 1297
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 81,
-                        "startColumn": 4,
-                        "startOffset": 4977,
-                        "endColumn": 56,
-                        "endOffset": 5029
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 21,
-                    "startColumn": 4,
-                    "startOffset": 1302,
-                    "endColumn": 69,
-                    "endOffset": 1367
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 85,
-                        "startColumn": 4,
-                        "startOffset": 5206,
-                        "endColumn": 69,
-                        "endOffset": 5271
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 22,
-                    "startColumn": 4,
-                    "startOffset": 1372,
-                    "endColumn": 56,
-                    "endOffset": 1424
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 75,
-                        "startColumn": 4,
-                        "startOffset": 4647,
-                        "endColumn": 56,
-                        "endOffset": 4699
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 1429,
-                    "endColumn": 49,
-                    "endOffset": 1474
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 70,
-                        "startColumn": 4,
-                        "startOffset": 4360,
-                        "endColumn": 49,
-                        "endOffset": 4405
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 1479,
-                    "endColumn": 42,
-                    "endOffset": 1517
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 109,
-                        "startColumn": 4,
-                        "startOffset": 6686,
-                        "endColumn": 42,
-                        "endOffset": 6724
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 1522,
-                    "endColumn": 43,
-                    "endOffset": 1561
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 106,
-                        "startColumn": 4,
-                        "startOffset": 6516,
-                        "endColumn": 43,
-                        "endOffset": 6555
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 1566,
-                    "endColumn": 60,
-                    "endOffset": 1622
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 59,
-                        "endColumn": 60,
-                        "endOffset": 115
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 27,
-                    "startColumn": 4,
-                    "startOffset": 1627,
-                    "endColumn": 48,
-                    "endOffset": 1671
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 649,
-                        "endColumn": 48,
-                        "endOffset": 693
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 28,
-                    "startColumn": 4,
-                    "startOffset": 1676,
-                    "endColumn": 58,
-                    "endOffset": 1730
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 589,
-                        "endColumn": 58,
-                        "endOffset": 643
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 29,
-                    "startColumn": 4,
-                    "startOffset": 1735,
-                    "endColumn": 54,
-                    "endOffset": 1785
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 475,
-                        "endColumn": 54,
-                        "endOffset": 525
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 30,
-                    "startColumn": 4,
-                    "startOffset": 1790,
-                    "endColumn": 47,
-                    "endOffset": 1833
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 426,
-                        "endColumn": 47,
-                        "endOffset": 469
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 31,
-                    "startColumn": 4,
-                    "startOffset": 1838,
-                    "endColumn": 56,
-                    "endOffset": 1890
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 531,
-                        "endColumn": 56,
-                        "endOffset": 583
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 32,
-                    "startColumn": 4,
-                    "startOffset": 1895,
-                    "endColumn": 61,
-                    "endOffset": 1952
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 699,
-                        "endColumn": 61,
-                        "endOffset": 756
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 33,
-                    "startColumn": 4,
-                    "startOffset": 1957,
-                    "endColumn": 38,
-                    "endOffset": 1991
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 234,
-                        "endColumn": 38,
-                        "endOffset": 268
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 34,
-                    "startColumn": 4,
-                    "startOffset": 1996,
-                    "endColumn": 52,
-                    "endOffset": 2044
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 77,
-                        "startColumn": 4,
-                        "startOffset": 4747,
-                        "endColumn": 52,
-                        "endOffset": 4795
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 35,
-                    "startColumn": 4,
-                    "startOffset": 2049,
-                    "endColumn": 51,
-                    "endOffset": 2096
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 88,
-                        "startColumn": 4,
-                        "startOffset": 5428,
-                        "endColumn": 51,
-                        "endOffset": 5475
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 36,
-                    "startColumn": 4,
-                    "startOffset": 2101,
-                    "endColumn": 52,
-                    "endOffset": 2149
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 68,
-                        "startColumn": 4,
-                        "startOffset": 4262,
-                        "endColumn": 52,
-                        "endOffset": 4310
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 37,
-                    "startColumn": 4,
-                    "startOffset": 2154,
-                    "endColumn": 47,
-                    "endOffset": 2197
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 48,
-                        "startColumn": 4,
-                        "startOffset": 2820,
-                        "endColumn": 47,
-                        "endOffset": 2863
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 38,
-                    "startColumn": 4,
-                    "startOffset": 2202,
-                    "endColumn": 51,
-                    "endOffset": 2249
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 45,
-                        "startColumn": 4,
-                        "startOffset": 2667,
-                        "endColumn": 51,
-                        "endOffset": 2714
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 39,
-                    "startColumn": 4,
-                    "startOffset": 2254,
-                    "endColumn": 47,
-                    "endOffset": 2297
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 4,
-                        "startOffset": 1839,
-                        "endColumn": 47,
-                        "endOffset": 1882
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 40,
-                    "startColumn": 4,
-                    "startOffset": 2302,
-                    "endColumn": 57,
-                    "endOffset": 2355
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 318,
-                        "endColumn": 57,
-                        "endOffset": 371
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 41,
-                    "startColumn": 4,
-                    "startOffset": 2360,
-                    "endColumn": 49,
-                    "endOffset": 2405
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 46,
-                        "startColumn": 4,
-                        "startOffset": 2720,
-                        "endColumn": 49,
-                        "endOffset": 2765
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 42,
-                    "startColumn": 4,
-                    "startOffset": 2410,
-                    "endColumn": 47,
-                    "endOffset": 2453
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 47,
-                        "startColumn": 4,
-                        "startOffset": 2771,
-                        "endColumn": 47,
-                        "endOffset": 2814
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 43,
-                    "startColumn": 4,
-                    "startOffset": 2458,
-                    "endColumn": 47,
-                    "endOffset": 2501
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 377,
-                        "endColumn": 47,
-                        "endOffset": 420
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 44,
-                    "startColumn": 4,
-                    "startOffset": 2506,
-                    "endColumn": 78,
-                    "endOffset": 2580
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 78,
-                        "endOffset": 1962
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 45,
-                    "startColumn": 4,
-                    "startOffset": 2585,
-                    "endColumn": 41,
-                    "endOffset": 2622
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 4,
-                        "startOffset": 1968,
-                        "endColumn": 41,
-                        "endOffset": 2005
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 46,
-                    "startColumn": 4,
-                    "startOffset": 2627,
-                    "endColumn": 53,
-                    "endOffset": 2676
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 66,
-                        "startColumn": 4,
-                        "startOffset": 4115,
-                        "endColumn": 53,
-                        "endOffset": 4164
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 47,
-                    "startColumn": 4,
-                    "startOffset": 2681,
-                    "endColumn": 89,
-                    "endOffset": 2766
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 36,
-                        "startColumn": 4,
-                        "startOffset": 2117,
-                        "endColumn": 89,
-                        "endOffset": 2202
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 48,
-                    "startColumn": 4,
-                    "startOffset": 2771,
-                    "endColumn": 57,
-                    "endOffset": 2824
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 35,
-                        "startColumn": 4,
-                        "startOffset": 2058,
-                        "endColumn": 57,
-                        "endOffset": 2111
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 49,
-                    "startColumn": 4,
-                    "startOffset": 2829,
-                    "endColumn": 89,
-                    "endOffset": 2914
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 53,
-                        "startColumn": 4,
-                        "startOffset": 3158,
-                        "endColumn": 89,
-                        "endOffset": 3243
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 50,
-                    "startColumn": 4,
-                    "startOffset": 2919,
-                    "endColumn": 94,
-                    "endOffset": 3009
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 4,
-                        "startOffset": 1404,
-                        "endColumn": 94,
-                        "endOffset": 1494
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 51,
-                    "startColumn": 4,
-                    "startOffset": 3014,
-                    "endColumn": 62,
-                    "endOffset": 3072
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 101,
-                        "startColumn": 4,
-                        "startOffset": 6209,
-                        "endColumn": 62,
-                        "endOffset": 6267
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 52,
-                    "startColumn": 4,
-                    "startOffset": 3077,
-                    "endColumn": 106,
-                    "endOffset": 3179
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 59,
-                        "startColumn": 4,
-                        "startOffset": 3650,
-                        "endColumn": 106,
-                        "endOffset": 3752
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 53,
-                    "startColumn": 4,
-                    "startOffset": 3184,
-                    "endColumn": 125,
-                    "endOffset": 3305
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 1500,
-                        "endColumn": 125,
-                        "endOffset": 1621
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 54,
-                    "startColumn": 4,
-                    "startOffset": 3310,
-                    "endColumn": 43,
-                    "endOffset": 3349
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 4,
-                        "startOffset": 1747,
-                        "endColumn": 43,
-                        "endOffset": 1786
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 55,
-                    "startColumn": 4,
-                    "startOffset": 3354,
-                    "endColumn": 61,
-                    "endOffset": 3411
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1116,
-                        "endColumn": 61,
-                        "endOffset": 1173
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 56,
-                    "startColumn": 4,
-                    "startOffset": 3416,
-                    "endColumn": 42,
-                    "endOffset": 3454
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 1305,
-                        "endColumn": 42,
-                        "endOffset": 1343
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 57,
-                    "startColumn": 4,
-                    "startOffset": 3459,
-                    "endColumn": 60,
-                    "endOffset": 3515
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1054,
-                        "endColumn": 60,
-                        "endOffset": 1110
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 58,
-                    "startColumn": 4,
-                    "startOffset": 3520,
-                    "endColumn": 54,
-                    "endOffset": 3570
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 1249,
-                        "endColumn": 54,
-                        "endOffset": 1299
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 59,
-                    "startColumn": 4,
-                    "startOffset": 3575,
-                    "endColumn": 68,
-                    "endOffset": 3639
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 1179,
-                        "endColumn": 68,
-                        "endOffset": 1243
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 60,
-                    "startColumn": 4,
-                    "startOffset": 3644,
-                    "endColumn": 53,
-                    "endOffset": 3693
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 78,
-                        "startColumn": 4,
-                        "startOffset": 4801,
-                        "endColumn": 53,
-                        "endOffset": 4850
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 61,
-                    "startColumn": 4,
-                    "startOffset": 3698,
-                    "endColumn": 56,
-                    "endOffset": 3750
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 91,
-                        "startColumn": 4,
-                        "startOffset": 5635,
-                        "endColumn": 56,
-                        "endOffset": 5687
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 62,
-                    "startColumn": 4,
-                    "startOffset": 3755,
-                    "endColumn": 90,
-                    "endOffset": 3841
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 57,
-                        "startColumn": 4,
-                        "startOffset": 3512,
-                        "endColumn": 90,
-                        "endOffset": 3598
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 63,
-                    "startColumn": 4,
-                    "startOffset": 3846,
-                    "endColumn": 85,
-                    "endOffset": 3927
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 102,
-                        "startColumn": 4,
-                        "startOffset": 6273,
-                        "endColumn": 85,
-                        "endOffset": 6354
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 64,
-                    "startColumn": 4,
-                    "startOffset": 3932,
-                    "endColumn": 75,
-                    "endOffset": 4003
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\build\\intermediates\\exploded-aar\\FanXin0629\\easeuilibrary\\unspecified\\res\\values-ru-rRU\\values-ru-rRU.xml",
-                    "position": {
-                        "startLine": 63,
-                        "startColumn": 4,
-                        "startOffset": 3871,
-                        "endColumn": 75,
-                        "endOffset": 3942
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 65,
-                    "startColumn": 4,
-                    "startOffset": 4008,
-                    "endColumn": 73,
-                    "endOffset": 4077
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 60,
-                        "startColumn": 4,
-                        "startOffset": 3758,
-                        "endColumn": 73,
-                        "endOffset": 3827
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 66,
-                    "startColumn": 4,
-                    "startOffset": 4082,
-                    "endColumn": 44,
-                    "endOffset": 4122
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 58,
-                        "startColumn": 4,
-                        "startOffset": 3604,
-                        "endColumn": 44,
-                        "endOffset": 3644
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 67,
-                    "startColumn": 4,
-                    "startOffset": 4127,
-                    "endColumn": 90,
-                    "endOffset": 4213
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 56,
-                        "startColumn": 4,
-                        "startOffset": 3420,
-                        "endColumn": 90,
-                        "endOffset": 3506
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 68,
-                    "startColumn": 4,
-                    "startOffset": 4218,
-                    "endColumn": 43,
-                    "endOffset": 4257
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 43,
-                        "startColumn": 4,
-                        "startOffset": 2564,
-                        "endColumn": 43,
-                        "endOffset": 2603
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 69,
-                    "startColumn": 4,
-                    "startOffset": 4262,
-                    "endColumn": 45,
-                    "endOffset": 4303
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 4,
-                        "startOffset": 1792,
-                        "endColumn": 45,
-                        "endOffset": 1833
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 70,
-                    "startColumn": 4,
-                    "startOffset": 4308,
-                    "endColumn": 42,
-                    "endOffset": 4346
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 74,
-                        "startColumn": 4,
-                        "startOffset": 4603,
-                        "endColumn": 42,
-                        "endOffset": 4641
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 71,
-                    "startColumn": 4,
-                    "startOffset": 4351,
-                    "endColumn": 47,
-                    "endOffset": 4394
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 83,
-                        "startColumn": 4,
-                        "startOffset": 5095,
-                        "endColumn": 47,
-                        "endOffset": 5138
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 72,
-                    "startColumn": 4,
-                    "startOffset": 4399,
-                    "endColumn": 45,
-                    "endOffset": 4440
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 105,
-                        "startColumn": 4,
-                        "startOffset": 6469,
-                        "endColumn": 45,
-                        "endOffset": 6510
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 73,
-                    "startColumn": 4,
-                    "startOffset": 4445,
-                    "endColumn": 90,
-                    "endOffset": 4531
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 113,
-                        "startColumn": 4,
-                        "startOffset": 6916,
-                        "endColumn": 90,
-                        "endOffset": 7002
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 74,
-                    "startColumn": 4,
-                    "startOffset": 4536,
-                    "endColumn": 72,
-                    "endOffset": 4604
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 38,
-                        "startColumn": 4,
-                        "startOffset": 2271,
-                        "endColumn": 72,
-                        "endOffset": 2339
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 75,
-                    "startColumn": 4,
-                    "startOffset": 4609,
-                    "endColumn": 64,
-                    "endOffset": 4669
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 2404,
-                        "endColumn": 64,
-                        "endOffset": 2464
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 76,
-                    "startColumn": 4,
-                    "startOffset": 4674,
-                    "endColumn": 61,
-                    "endOffset": 4731
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 37,
-                        "startColumn": 4,
-                        "startOffset": 2208,
-                        "endColumn": 61,
-                        "endOffset": 2265
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 77,
-                    "startColumn": 4,
-                    "startOffset": 4736,
-                    "endColumn": 39,
-                    "endOffset": 4771
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 97,
-                        "startColumn": 4,
-                        "startOffset": 6017,
-                        "endColumn": 39,
-                        "endOffset": 6052
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 78,
-                    "startColumn": 4,
-                    "startOffset": 4776,
-                    "endColumn": 40,
-                    "endOffset": 4812
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 54,
-                        "startColumn": 4,
-                        "startOffset": 3249,
-                        "endColumn": 40,
-                        "endOffset": 3285
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 79,
-                    "startColumn": 4,
-                    "startOffset": 4817,
-                    "endColumn": 127,
-                    "endOffset": 4940
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 55,
-                        "startColumn": 4,
-                        "startOffset": 3291,
-                        "endColumn": 127,
-                        "endOffset": 3414
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 80,
-                    "startColumn": 4,
-                    "startOffset": 4945,
-                    "endColumn": 80,
-                    "endOffset": 5021
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 819,
-                        "endColumn": 80,
-                        "endOffset": 895
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 81,
-                    "startColumn": 4,
-                    "startOffset": 5026,
-                    "endColumn": 42,
-                    "endOffset": 5064
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 103,
-                        "startColumn": 4,
-                        "startOffset": 6360,
-                        "endColumn": 42,
-                        "endOffset": 6398
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 82,
-                    "startColumn": 4,
-                    "startOffset": 5069,
-                    "endColumn": 67,
-                    "endOffset": 5132
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 50,
-                        "startColumn": 4,
-                        "startOffset": 2918,
-                        "endColumn": 67,
-                        "endOffset": 2981
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 83,
-                    "startColumn": 4,
-                    "startOffset": 5137,
-                    "endColumn": 118,
-                    "endOffset": 5251
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 1627,
-                        "endColumn": 118,
-                        "endOffset": 1741
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 84,
-                    "startColumn": 4,
-                    "startOffset": 5256,
-                    "endColumn": 47,
-                    "endOffset": 5299
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 108,
-                        "startColumn": 4,
-                        "startOffset": 6637,
-                        "endColumn": 47,
-                        "endOffset": 6680
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 85,
-                    "startColumn": 4,
-                    "startOffset": 5304,
-                    "endColumn": 82,
-                    "endOffset": 5382
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 63,
-                        "startColumn": 4,
-                        "startOffset": 3942,
-                        "endColumn": 82,
-                        "endOffset": 4020
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 86,
-                    "startColumn": 4,
-                    "startOffset": 5387,
-                    "endColumn": 52,
-                    "endOffset": 5435
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 111,
-                        "startColumn": 4,
-                        "startOffset": 6775,
-                        "endColumn": 52,
-                        "endOffset": 6823
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 87,
-                    "startColumn": 4,
-                    "startOffset": 5440,
-                    "endColumn": 64,
-                    "endOffset": 5500
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 62,
-                        "startColumn": 4,
-                        "startOffset": 3876,
-                        "endColumn": 64,
-                        "endOffset": 3936
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 88,
-                    "startColumn": 4,
-                    "startOffset": 5505,
-                    "endColumn": 70,
-                    "endOffset": 5571
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 72,
-                        "startColumn": 4,
-                        "startOffset": 4458,
-                        "endColumn": 70,
-                        "endOffset": 4524
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 89,
-                    "startColumn": 4,
-                    "startOffset": 5576,
-                    "endColumn": 43,
-                    "endOffset": 5615
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 99,
-                        "startColumn": 4,
-                        "startOffset": 6114,
-                        "endColumn": 43,
-                        "endOffset": 6153
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 90,
-                    "startColumn": 4,
-                    "startOffset": 5620,
-                    "endColumn": 49,
-                    "endOffset": 5665
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 41,
-                        "startColumn": 4,
-                        "startOffset": 2470,
-                        "endColumn": 49,
-                        "endOffset": 2515
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 91,
-                    "startColumn": 4,
-                    "startOffset": 5670,
-                    "endColumn": 45,
-                    "endOffset": 5711
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 4,
-                        "startOffset": 2011,
-                        "endColumn": 45,
-                        "endOffset": 2052
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 92,
-                    "startColumn": 4,
-                    "startOffset": 5716,
-                    "endColumn": 100,
-                    "endOffset": 5812
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 51,
-                        "startColumn": 4,
-                        "startOffset": 2987,
-                        "endColumn": 100,
-                        "endOffset": 3083
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 93,
-                    "startColumn": 4,
-                    "startOffset": 5817,
-                    "endColumn": 57,
-                    "endOffset": 5870
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 2345,
-                        "endColumn": 57,
-                        "endOffset": 2398
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 94,
-                    "startColumn": 4,
-                    "startOffset": 5875,
-                    "endColumn": 48,
-                    "endOffset": 5919
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 100,
-                        "startColumn": 4,
-                        "startOffset": 6159,
-                        "endColumn": 48,
-                        "endOffset": 6203
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 95,
-                    "startColumn": 4,
-                    "startOffset": 5924,
-                    "endColumn": 81,
-                    "endOffset": 6001
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 901,
-                        "endColumn": 81,
-                        "endOffset": 978
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 96,
-                    "startColumn": 4,
-                    "startOffset": 6006,
-                    "endColumn": 53,
-                    "endOffset": 6055
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 1349,
-                        "endColumn": 53,
-                        "endOffset": 1398
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 97,
-                    "startColumn": 4,
-                    "startOffset": 6060,
-                    "endColumn": 42,
-                    "endOffset": 6098
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 274,
-                        "endColumn": 42,
-                        "endOffset": 312
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 98,
-                    "startColumn": 4,
-                    "startOffset": 6103,
-                    "endColumn": 40,
-                    "endOffset": 6139
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 76,
-                        "startColumn": 4,
-                        "startOffset": 4705,
-                        "endColumn": 40,
-                        "endOffset": 4741
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 99,
-                    "startColumn": 4,
-                    "startOffset": 6144,
-                    "endColumn": 47,
-                    "endOffset": 6187
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 49,
-                        "startColumn": 4,
-                        "startOffset": 2869,
-                        "endColumn": 47,
-                        "endOffset": 2912
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 100,
-                    "startColumn": 4,
-                    "startOffset": 6192,
-                    "endColumn": 67,
-                    "endOffset": 6255
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 52,
-                        "startColumn": 4,
-                        "startOffset": 3089,
-                        "endColumn": 67,
-                        "endOffset": 3152
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 101,
-                    "startColumn": 4,
-                    "startOffset": 6260,
-                    "endColumn": 68,
-                    "endOffset": 6324
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 984,
-                        "endColumn": 68,
-                        "endOffset": 1048
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 102,
-                    "startColumn": 4,
-                    "startOffset": 6329,
-                    "endColumn": 42,
-                    "endOffset": 6367
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 69,
-                        "startColumn": 4,
-                        "startOffset": 4316,
-                        "endColumn": 42,
-                        "endOffset": 4354
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 103,
-                    "startColumn": 4,
-                    "startOffset": 6372,
-                    "endColumn": 41,
-                    "endOffset": 6409
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 61,
-                        "startColumn": 4,
-                        "startOffset": 3833,
-                        "endColumn": 41,
-                        "endOffset": 3870
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 104,
-                    "startColumn": 4,
-                    "startOffset": 6414,
-                    "endColumn": 45,
-                    "endOffset": 6455
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 71,
-                        "startColumn": 4,
-                        "startOffset": 4411,
-                        "endColumn": 45,
-                        "endOffset": 4452
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 105,
-                    "startColumn": 4,
-                    "startOffset": 6460,
-                    "endColumn": 42,
-                    "endOffset": 6498
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 65,
-                        "startColumn": 4,
-                        "startOffset": 4071,
-                        "endColumn": 42,
-                        "endOffset": 4109
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 106,
-                    "startColumn": 4,
-                    "startOffset": 6503,
-                    "endColumn": 52,
-                    "endOffset": 6551
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 121,
-                        "endColumn": 52,
-                        "endOffset": 169
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 107,
-                    "startColumn": 4,
-                    "startOffset": 6556,
-                    "endColumn": 57,
-                    "endOffset": 6609
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 175,
-                        "endColumn": 57,
-                        "endOffset": 228
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 108,
-                    "startColumn": 4,
-                    "startOffset": 6614,
-                    "endColumn": 74,
-                    "endOffset": 6684
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 107,
-                        "startColumn": 4,
-                        "startOffset": 6561,
-                        "endColumn": 74,
-                        "endOffset": 6631
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 109,
-                    "startColumn": 4,
-                    "startOffset": 6689,
-                    "endColumn": 55,
-                    "endOffset": 6740
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 762,
-                        "endColumn": 55,
-                        "endOffset": 813
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 110,
-                    "startColumn": 4,
-                    "startOffset": 6745,
-                    "endColumn": 54,
-                    "endOffset": 6795
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 98,
-                        "startColumn": 4,
-                        "startOffset": 6058,
-                        "endColumn": 54,
-                        "endOffset": 6108
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 111,
-                    "startColumn": 4,
-                    "startOffset": 6800,
-                    "endColumn": 41,
-                    "endOffset": 6837
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 42,
-                        "startColumn": 4,
-                        "startOffset": 2521,
-                        "endColumn": 41,
-                        "endOffset": 2558
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 112,
-                    "startColumn": 4,
-                    "startOffset": 6842,
-                    "endColumn": 43,
-                    "endOffset": 6881
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 64,
-                        "startColumn": 4,
-                        "startOffset": 4026,
-                        "endColumn": 43,
-                        "endOffset": 4065
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 113,
-                    "startColumn": 4,
-                    "startOffset": 6886,
-                    "endColumn": 56,
-                    "endOffset": 6938
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
-                    "position": {
-                        "startLine": 44,
-                        "startColumn": 4,
-                        "startOffset": 2609,
-                        "endColumn": 56,
-                        "endOffset": 2661
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 114,
-                    "startColumn": 4,
-                    "startOffset": 6943,
-                    "endColumn": 90,
-                    "endOffset": 7029
-                },
-                "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0629\\res\\values-ru-rRU\\em_strings.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\values-ru-rRU\\em_strings.xml",
                     "position": {
                         "startLine": 67,
                         "startColumn": 4,
