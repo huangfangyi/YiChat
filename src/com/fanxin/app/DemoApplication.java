@@ -20,11 +20,7 @@ import android.support.multidex.MultiDex;
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RedPacket;
 import com.fanxin.app.main.utils.LocalUserUtil;
-import com.fanxin.app.main.utils.ServerTask;
-
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.OkHttpClient;
+import com.fanxin.app.main.utils.OkHttpManager;
 
 
 public class DemoApplication extends Application {
@@ -48,7 +44,7 @@ public class DemoApplication extends Application {
 		LocalUserUtil.init(instance);
         DemoHelper.getInstance().init(applicationContext);
 		RedPacket.getInstance().initContext(applicationContext);
-		ServerTask.init(instance);
+		OkHttpManager.init(instance);
 	}
 
 	public static DemoApplication getInstance() {

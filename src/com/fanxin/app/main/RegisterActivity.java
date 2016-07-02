@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2013-2014 EaseMob Technologies. All rights reserved.
- * <p/>
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -14,11 +14,10 @@
 package com.fanxin.app.main;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 
 import android.annotation.SuppressLint;
@@ -29,14 +28,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.Html;
 import android.text.Selection;
 import android.text.Spannable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -49,21 +45,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
+import com.fanxin.app.main.utils.Param;
+import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.ui.BaseActivity;
-
-import internal.org.apache.http.entity.mime.content.FileBody;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import okio.BufferedSink;
 
 
 /**
@@ -157,10 +143,8 @@ public class RegisterActivity extends BaseActivity {
 
         btn_register.setOnClickListener(new OnClickListener() {
 
-             @Override
+            @Override
             public void onClick(View v) {
-
-
                 String usernick = et_usernick.getText().toString().trim();
                 String password = et_password.getText().toString().trim();
                 String usertel = et_usertel.getText().toString().trim();
@@ -177,78 +161,55 @@ public class RegisterActivity extends BaseActivity {
         pd.setCanceledOnTouchOutside(false);
         pd.setMessage("正在注册...");
         pd.show();
-        RequestBody mbody;
-
-        File file = new File("/sdcard/fanxin/" + imageName);
-        if (file.exists()) {
-            mbody = new MultipartBody.Builder().addFormDataPart("usernick", usernick)
-                    .addFormDataPart("usertel", usertel)
-                    .addFormDataPart("password", password)
-                    .addFormDataPart("image", imageName)
-                    .addFormDataPart("file", imageName, RequestBody.create(MediaType.parse("image/*"), file))
-                    .build();
-            System.out.println("password------------->"+1);
-        } else {
-            imageName = "false";
-            mbody = new MultipartBody.Builder().addFormDataPart("usernick", usernick)
-                    .addFormDataPart("usertel", usertel)
-                    .addFormDataPart("password", password)
-                    .addFormDataPart("image", imageName)
-                    .build();
-            System.out.println("password------------->"+2);
+        if(imageName==null){
+            imageName="fasle";
         }
-        Request request = new Request.Builder()
-                .url(FXConstant.URL_REGISTER)
-                .post(mbody)
-                .build();
-        System.out.println("password------------->"+password);
-        System.out.println("image------------->"+imageName);
-        System.out.println("usertel------------->"+usertel);
-        System.out.println("mbody------------->"+mbody.toString());
-        DemoApplication.getInstance().okHttpClient.newCall(request).enqueue(new Callback() {
+        File file = new File("/sdcard/fanxin/" + imageName);
+
+        List<Param> params = new ArrayList<Param>();
+        params.add(new Param("usertel", usertel));
+        params.add(new Param("password", password));
+        params.add(new Param("usernick", usernick));
+        params.add(new Param("image", imageName));
+        List<File> files = new ArrayList<File>();
+        files.add(file);
+        OkHttpManager.getInstance().post(params, files, FXConstant.URL_REGISTER, new OkHttpManager.HttpCallBack() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onResponse(JSONObject jsonObject) {
                 pd.dismiss();
-                Toast.makeText(getApplicationContext(), "服务器无响应...", Toast.LENGTH_SHORT).show();
+                int code = jsonObject.getInteger("code");
+                if (code == 1000) {
+                    Toast.makeText(RegisterActivity.this,
+                            "注册成功！", Toast.LENGTH_SHORT)
+                            .show();
+
+                } else if (code == 2000) {
+                    pd.dismiss();
+                    Toast.makeText(RegisterActivity.this,
+                            "该手机号码已被注册...", Toast.LENGTH_SHORT)
+                            .show();
+                } else {
+                    pd.dismiss();
+                    Toast.makeText(RegisterActivity.this,
+                            "服务器繁忙请重试...", Toast.LENGTH_SHORT)
+                            .show();
+                }
+
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                String result = response.body().string();
-                System.out.println("result-------->" + result);
+            public void onFailure(String errorMsg) {
                 pd.dismiss();
-                try {
-                    JSONObject jsonObject = JSONObject.parseObject(result);
-                    int code = jsonObject.getInteger("code");
-                    if (code == 1000) {
-                        Toast.makeText(RegisterActivity.this,
-                                "注册成功！", Toast.LENGTH_SHORT)
-                                .show();
-
-                    } else if (code == 2000) {
-                        pd.dismiss();
-                        Toast.makeText(RegisterActivity.this,
-                                "该手机号码已被注册...", Toast.LENGTH_SHORT)
-                                .show();
-                    } else {
-                        pd.dismiss();
-                        Toast.makeText(RegisterActivity.this,
-                                "服务器繁忙请重试...", Toast.LENGTH_SHORT)
-                                .show();
-                    }
-
-
-                } catch (JSONException e) {
-
-                    Toast.makeText(RegisterActivity.this,
-                            "数据返回错误...", Toast.LENGTH_SHORT)
-                            .show();
-                }
             }
         });
 
 
+
+
+
+
     }
+
 
 
     // 拍照部分
@@ -362,40 +323,40 @@ public class RegisterActivity extends BaseActivity {
         return dateFormat.format(date);
     }
 
-    // EditText监听器
-    class TextChange implements TextWatcher {
+// EditText监听器
+class TextChange implements TextWatcher {
 
-        @Override
-        public void afterTextChanged(Editable arg0) {
-
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                      int arg3) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence cs, int start, int before,
-                                  int count) {
-
-            boolean Sign1 = et_usernick.getText().length() > 0;
-            boolean Sign2 = et_usertel.getText().length() > 0;
-            boolean Sign3 = et_password.getText().length() > 0;
-
-            if (Sign1 & Sign2 & Sign3) {
-
-                btn_register.setEnabled(true);
-            }
-            // 在layout文件中，对Button的text属性应预先设置默认值，否则刚打开程序的时候Button是无显示的
-            else {
-
-                btn_register.setEnabled(false);
-            }
-        }
+    @Override
+    public void afterTextChanged(Editable arg0) {
 
     }
+
+    @Override
+    public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+                                  int arg3) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence cs, int start, int before,
+                              int count) {
+
+        boolean Sign1 = et_usernick.getText().length() > 0;
+        boolean Sign2 = et_usertel.getText().length() > 0;
+        boolean Sign3 = et_password.getText().length() > 0;
+
+        if (Sign1 & Sign2 & Sign3) {
+
+            btn_register.setEnabled(true);
+        }
+        // 在layout文件中，对Button的text属性应预先设置默认值，否则刚打开程序的时候Button是无显示的
+        else {
+
+            btn_register.setEnabled(false);
+        }
+    }
+
+}
 
 
     public void back(View view) {

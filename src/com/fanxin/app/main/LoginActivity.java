@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RPCallback;
 import com.easemob.redpacketsdk.RedPacket;
@@ -20,22 +19,14 @@ import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.DemoDBManager;
 import com.fanxin.app.main.utils.Param;
-import com.fanxin.app.main.utils.ServerTask;
+import com.fanxin.app.main.utils.OkHttpManager;
 
 import com.fanxin.app.ui.BaseActivity;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 /**
  * Login screen
@@ -115,7 +106,7 @@ public class LoginActivity extends BaseActivity {
         List<Param> params = new ArrayList<Param>();
         params.add(new Param("usertel", tel));
         params.add(new Param("password", password));
-        ServerTask.getInstance().post(params, FXConstant.URL_LOGIN, new ServerTask.HttpCallBack() {
+        OkHttpManager.getInstance().post(params, FXConstant.URL_LOGIN, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 int code = jsonObject.getInteger("code");
