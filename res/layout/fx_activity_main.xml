@@ -4,13 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/common_bg" >
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_top_bar_blue" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="凡信"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:src="@drawable/fx_main_activity_add" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_add"
+            android:clickable="true"
+            android:src="@drawable/fx_main_activity_search" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:text="最近在线"
+            android:textColor="#353535" />
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/main_bottom"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/bottom_bar_normal_bg"
+
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
@@ -24,11 +68,11 @@
                 android:id="@+id/btn_conversation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
+                android:background="@color/bottom_bar_normal_bg"
                 android:drawableTop="@drawable/fx_tab_chat_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="2dip"
-                android:paddingTop="7dip"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
                 android:scaleType="matrix"
                 android:text="凡信"
                 android:textColor="@color/em_main_botton_text_color"
@@ -59,11 +103,11 @@
                 android:id="@+id/btn_address_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
+                android:background="@color/bottom_bar_normal_bg"
                 android:drawableTop="@drawable/fx_tab_contact_list_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="2dip"
-                android:paddingTop="7dip"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
                 android:scaleType="matrix"
                 android:text="通讯录"
                 android:textColor="@color/em_main_botton_text_color"
@@ -89,11 +133,11 @@
                 android:id="@+id/btn_find"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
+                android:background="@color/bottom_bar_normal_bg"
                 android:drawableTop="@drawable/fx_tab_find_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="2dip"
-                android:paddingTop="7dip"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
                 android:scaleType="matrix"
                 android:text="发现"
                 android:textColor="@color/em_main_botton_text_color"
@@ -109,22 +153,29 @@
                 android:id="@+id/btn_profile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
-                android:drawableTop="@drawable/fx_tab_find_bg"
+                android:background="@color/bottom_bar_normal_bg"
+                android:drawableTop="@drawable/fx_tab_profile_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="2dip"
-                android:paddingTop="7dip"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
                 android:scaleType="matrix"
                 android:text="我"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp" />
         </RelativeLayout>
     </LinearLayout>
-
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#D6D6D6"
+        android:layout_above="@id/main_bottom"
+        />
     <RelativeLayout
+        android:layout_below="@+id/title"
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/main_bottom" />
+        android:layout_above="@id/view_temp" />
 
 </RelativeLayout>

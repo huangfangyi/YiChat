@@ -68,12 +68,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_row_invite_msg.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_choosevideoactivity.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_choosevideoactivity.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_robots.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_fragment_robots.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_choosevideoactivity.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_choosevideoactivity.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_edit.xml",
@@ -158,6 +158,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_offline_push.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_offline_push.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\fragment_profile.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\rp_activity_change.xml",

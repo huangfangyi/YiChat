@@ -66,10 +66,8 @@ public class EaseContactListFragment extends EaseBaseFragment {
     protected EaseContactList contactListLayout;
     protected boolean isConflict;
     protected FrameLayout contentContainer;
-    
     private Map<String, EaseUser> contactsMap;
 
-    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.ease_fragment_contact_list, container, false);

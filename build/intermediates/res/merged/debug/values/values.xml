@@ -11,7 +11,7 @@
     <color name="best_luck_yellow">#fabf40</color>
     <color name="bg_light_grey">#f9f9f9</color>
     <color name="black_deep">#FF000000</color>
-    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_bar_normal_bg">#fcfcfc</color>
     <color name="bottom_text_color_normal">#ffffff</color>
     <color name="btn_answer_normal">#2dafa3</color>
     <color name="btn_answer_pressed">#4ebcd3</color>
@@ -36,8 +36,8 @@
     <color name="common_bg">#fcfcfc</color>
     <color name="common_bottom_bar_normal_bg">#2d2f31</color>
     <color name="common_bottom_bar_selected_bg">#161718</color>
-    <color name="common_botton_bar_blue">#2ea7e0</color>
-    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="common_botton_bar_blue">#46c01b</color>
+    <color name="common_top_bar_blue">#22292c</color>
     <color name="divider_color">#c7c7c7</color>
     <color name="divider_list">#d4d4d4</color>
     <color name="emojicon_tab_nomal">#ffffff</color>
@@ -112,7 +112,7 @@
     <dimen name="font69px">23sp</dimen>
     <dimen name="font90px">30dp</dimen>
     <dimen name="height_row_weixin">59dp</dimen>
-    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="height_top_bar">48dp</dimen>
     <dimen name="image_thumbnail_size">100dp</dimen>
     <dimen name="image_thumbnail_spacing">1dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>

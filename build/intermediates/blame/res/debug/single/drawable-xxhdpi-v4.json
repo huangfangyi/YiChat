@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_female.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_female.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_find_pressed.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_find_pressed.png"
     },
@@ -12,8 +16,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\em_red_packet_icon.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_default_useravatar.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_default_useravatar.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_load_dark_3.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_load_dark_3.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_settings.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_settings.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_question_white.png",
@@ -24,12 +36,20 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_load_dark_12.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_qrcode.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_qrcode.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_load_dark_4.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_load_dark_4.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\em_red_packet_chatfrom_bg_focused.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\em_red_packet_chatfrom_bg_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_add_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_add_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\em_logo_uidemo.png",
@@ -40,6 +60,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\em_red_packet_ack_message_icon.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_search_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_search_normal.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_bg_et_f.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_bg_et_f.9.png"
     },
@@ -48,16 +72,20 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_camera.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_search_icon.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_search_icon.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\find_yaoyiyao.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\find_yaoyiyao.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_search_icon.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_search_icon.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_random_icon.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_random_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_search_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_search_pressed.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_search_bar_input.9.png",
@@ -76,6 +104,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_iv_my_agreement.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_add_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_add_pressed.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_pop_bg.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_pop_bg.9.png"
     },
@@ -90,6 +122,14 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_login_error_icon.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_login_error_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_wallet.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_wallet.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_album.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_album.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_conversation_normal.png",
@@ -144,6 +184,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_contact_list_normal.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_card.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_card.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_change_icon_grey.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_change_icon_grey.png"
     },
@@ -172,6 +216,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\find_piaoliuping.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_save.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_save.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_hide.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_hide.png"
     },
@@ -186,6 +234,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_load_dark_5.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_load_dark_5.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_male.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xxhdpi\\fx_icon_male.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_icon_back_n.png",

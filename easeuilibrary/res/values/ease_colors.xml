@@ -10,13 +10,13 @@
     <color name="btn_register_pressed">#00acff</color>
     <color name="common_bottom_bar_normal_bg">#2d2f31</color>
     <color name="common_bottom_bar_selected_bg">#161718</color>
-    <color name="common_botton_bar_blue">#2ea7e0</color>
+        <color name="common_botton_bar_blue">#46c01b</color>
     <color name="common_bg">#fcfcfc</color>
     <color name="btn_pressed_green_solid">#B6DA53</color>
-    <color name="divider_list">#d4d4d4</color>
+    <color name="divider_list">#22292c</color>
     <color name="top_bar_normal_bg">#00acff</color>
     <color name="error_item_color">#F6EBE6</color>
-    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_bar_normal_bg">#fcfcfc</color>
     <color name="bottom_text_color_normal">#ffffff</color>
     <color name="btn_white_normal">#f7f8f8</color>
     <color name="btn_white_pressed">#b5b5b6</color>

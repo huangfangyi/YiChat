@@ -1,6 +1,6 @@
 <resources>
 
-     <dimen name="height_top_bar">46dp</dimen>
+     <dimen name="height_top_bar">48dp</dimen>
     <dimen name="padding_search_bar">5dp</dimen>
     <dimen name="height_row_weixin">59dp</dimen>
     <dimen name="size_avatar">48dp</dimen>
