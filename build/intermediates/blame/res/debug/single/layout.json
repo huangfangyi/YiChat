@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_fragment_chat.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_fragment_chat.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_received_message.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_row_received_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_fragment_chat.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_fragment_chat.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_main_botton_tab.xml",
@@ -32,24 +32,24 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_show_file.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_layout_chat_primary_menu.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_layout_chat_primary_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_activity_baidumap.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_activity_baidumap.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\rp_record_fragment.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\layout\\rp_record_fragment.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_layout_chat_primary_menu.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_layout_chat_primary_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_grid.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_grid.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_widget_contact_list.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_widget_contact_list.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_grid.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_grid.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\rp_record_fragment.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\layout\\rp_record_fragment.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pick_at_user.xml",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_row_invite_msg.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_robots.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_fragment_robots.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_choosevideoactivity.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_choosevideoactivity.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_robots.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_fragment_robots.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_edit.xml",
@@ -86,6 +86,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\rp_activity_record.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\layout\\rp_activity_record.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\rp_fragment_single_packet_detail.xml",
@@ -106,6 +110,14 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\rp_hint_message_dialog.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\layout\\rp_hint_message_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_find.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\fragment_find.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fx_chat_neterror_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\fx_chat_neterror_item.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_search_bar_with_padding.xml",
@@ -440,20 +452,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\layout\\rp_received_record_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_main.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_search_bar.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_search_bar.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_sent_picture.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\layout\\ease_row_sent_picture.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\alertdialog.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\alertdialog.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_sent_red_packet.xml",
@@ -466,6 +470,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_conversation_settings.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_fragment_conversation_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fx_dialog_alert.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\fx_dialog_alert.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_login.xml",
@@ -602,6 +610,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_video_call.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\em_activity_video_call.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_main.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\layout\\fx_activity_main.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_sent_location.xml",

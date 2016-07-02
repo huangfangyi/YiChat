@@ -66,7 +66,7 @@ public class RegisterActivity extends BaseActivity {
     private ImageView iv_photo;
 
 
-    private String imageName;
+    private String imageName="false";
     private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
     private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
     private static final int PHOTO_REQUEST_CUT = 3;// 结果
@@ -161,11 +161,7 @@ public class RegisterActivity extends BaseActivity {
         pd.setCanceledOnTouchOutside(false);
         pd.setMessage("正在注册...");
         pd.show();
-        if(imageName==null){
-            imageName="fasle";
-        }
         File file = new File("/sdcard/fanxin/" + imageName);
-
         List<Param> params = new ArrayList<Param>();
         params.add(new Param("usertel", usertel));
         params.add(new Param("password", password));
@@ -220,7 +216,7 @@ public class RegisterActivity extends BaseActivity {
         Window window = dlg.getWindow();
         // *** 主要就是在这里实现这种效果的.
         // 设置窗口的内容页面,shrew_exit_dialog.xml文件中定义view内容
-        window.setContentView(R.layout.alertdialog);
+        window.setContentView(R.layout.fx_dialog_alert);
         // 为确认按钮添加事件,执行退出应用操作
         TextView tv_paizhao = (TextView) window.findViewById(R.id.tv_content1);
         tv_paizhao.setText("拍照");

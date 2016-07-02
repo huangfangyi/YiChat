@@ -25,12 +25,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/em_main_bottom_item_bg"
-                android:drawableTop="@drawable/em_tab_chat_bg"
+                android:drawableTop="@drawable/fx_tab_chat_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
                 android:paddingTop="7dip"
                 android:scaleType="matrix"
-                android:text="@string/session"
+                android:text="凡信"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp" />
 
@@ -60,12 +60,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/em_main_bottom_item_bg"
-                android:drawableTop="@drawable/em_tab_contact_list_bg"
+                android:drawableTop="@drawable/fx_tab_contact_list_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
                 android:paddingTop="7dip"
                 android:scaleType="matrix"
-                android:text="@string/address_book"
+                android:text="通讯录"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp" />
 
@@ -80,22 +80,42 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/btn_container_setting"
+            android:id="@+id/btn_container_find"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" >
 
             <Button
-                android:id="@+id/btn_setting"
+                android:id="@+id/btn_find"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/em_main_bottom_item_bg"
-                android:drawableTop="@drawable/em_tab_setting_bg"
+                android:drawableTop="@drawable/fx_tab_find_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
                 android:paddingTop="7dip"
                 android:scaleType="matrix"
-                android:text="@string/setting"
+                android:text="发现"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btn_container_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/em_main_bottom_item_bg"
+                android:drawableTop="@drawable/fx_tab_find_bg"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="我"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp" />
         </RelativeLayout>

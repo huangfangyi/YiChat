@@ -1,12 +1,15 @@
 package com.fanxin.app.main.utils;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.FileNameMap;
@@ -26,7 +29,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * Created by ustc on 2016/6/30.
+ * Created by huangfangyi/qq84543217 on 2016/6/30.
  */
 public class OkHttpManager {
     public static Context context;
@@ -44,17 +47,21 @@ public class OkHttpManager {
 
                 case RESULT_ERROR:
                     httpCallBack.onFailure((String) msg.obj);
+
                     Toast.makeText(context, "服务器端无响应", Toast.LENGTH_SHORT).show();
+                    Log.d("result", (String) msg.obj);
                     break;
                 case RESULT_SUCESS:
                     String result = (String) msg.obj;
+
                     try {
                         JSONObject jsonObject = JSONObject.parseObject(result);
                         httpCallBack.onResponse(jsonObject);
                     } catch (JSONException e) {
-
+                        httpCallBack.onFailure((String) msg.obj);
                         Toast.makeText(context, "响应数据解析错误", Toast.LENGTH_SHORT).show();
                     }
+                    Log.d("result", result);
                     break;
             }
 
@@ -101,21 +108,23 @@ public class OkHttpManager {
         startRequest(request);
 
     }
+
     //键值对+文件 post请求
-    public void post(List<Param> params,List<File> files, String url, HttpCallBack httpCallBack) {
+    public void post(List<Param> params, List<File> files, String url, HttpCallBack httpCallBack) {
+        Log.d("url", url);
         this.httpCallBack = httpCallBack;
-        MultipartBody.Builder builder=new MultipartBody.Builder();
+        MultipartBody.Builder builder = new MultipartBody.Builder();
         builder.setType(MultipartBody.FORM);
         for (Param param : params) {
 
             builder.addPart(Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\""), RequestBody.create(MediaType.parse(guessMimeType(param.getKey())), param.getValue()));
         }
-        for(File file:files){
-            if(file!=null&&file.exists()){
+        for (File file : files) {
+            if (file != null && file.exists()) {
 
                 //TODO 根据文件名设置contentType
                 builder.addPart(Headers.of("Content-Disposition",
-                        "form-data; name=\"" +file + "\"; filename=\"" + file.getName()+ "\""),
+                        "form-data; name=\"" + file + "\"; filename=\"" + file.getName() + "\""),
                         RequestBody.create(MediaType.parse(guessMimeType(file.getName())), file));
 
 
@@ -155,21 +164,16 @@ public class OkHttpManager {
     }
 
 
-
-
-
     public interface HttpCallBack {
         void onResponse(JSONObject jsonObject);
 
         void onFailure(String errorMsg);
     }
 
-    private String guessMimeType(String path)
-    {
+    private String guessMimeType(String path) {
         FileNameMap fileNameMap = URLConnection.getFileNameMap();
         String contentTypeFor = fileNameMap.getContentTypeFor(path);
-        if (contentTypeFor == null)
-        {
+        if (contentTypeFor == null) {
             contentTypeFor = "application/octet-stream";
         }
         return contentTypeFor;

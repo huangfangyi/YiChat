@@ -36,16 +36,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_call_answer_bg.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_selector.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_selector.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_button_check_selector.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\umeng_update_button_check_selector.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_green_normal_shape.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_btn_green_normal_shape.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_button_check_selector.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\umeng_update_button_check_selector.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_selector.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_selector.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_smiley_add_btn.xml",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_camera_switch_selector.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_style_alert_dialog_special.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_btn_style_alert_dialog_special.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_mm_listitem_grey.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable\\ease_mm_listitem_grey.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_style_alert_dialog_special.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_btn_style_alert_dialog_special.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_shape_corner.xml",
@@ -84,12 +84,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_blue_selector.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_default_shape.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_default_shape.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_chat_error_item_bg.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_chat_error_item_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_default_shape.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_default_shape.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_splash_gradient.xml",
@@ -122,10 +122,6 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_roominfo_add_btn.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_roominfo_add_btn.xml"
-    },
-    {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_tab_setting_bg.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_tab_setting_bg.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_photogrid_list_selector.xml",
@@ -196,6 +192,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_btn_gray_normal_shape.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_tab_profile_bg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\fx_tab_profile_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_chatting_setmode_keyboard_btn.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable\\ease_chatting_setmode_keyboard_btn.xml"
     },
@@ -244,8 +244,8 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\tb_munion_item_selector.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_tab_chat_bg.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_tab_chat_bg.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_tab_chat_bg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\fx_tab_chat_bg.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_mm_listitem.xml",
@@ -282,6 +282,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_button_selector_shape.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_button_selector_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_tab_find_bg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\fx_tab_find_bg.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_checkbox_bg_selector.xml",
@@ -364,6 +368,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_voice_call_hangup_bg.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_tab_contact_list_bg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\fx_tab_contact_list_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_chat_send_btn_selector.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable\\ease_chat_send_btn_selector.xml"
     },
@@ -408,10 +416,6 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable\\ease_edit_text_bg.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_tab_contact_list_bg.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_tab_contact_list_bg.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_button_ok_bg_selector.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\umeng_update_button_ok_bg_selector.xml"
     },
@@ -426,6 +430,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_timestampe_bg.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable\\ease_timestampe_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_chat_error_item_bg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\fx_chat_error_item_bg.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_blue_normal_shape.xml",
@@ -462,5 +470,9 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\em_chat_file_selector.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\em_chat_file_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_btn_list_item_bg.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable\\fx_btn_list_item_bg.xml"
     }
 ]
