@@ -127,7 +127,7 @@
             <EditText
                 android:id="@+id/et_usertel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:background="@drawable/fx_bg_et"
                 android:hint="你的手机号码"
@@ -155,7 +155,7 @@
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:background="@drawable/fx_bg_et"
                 android:hint="填写密码"

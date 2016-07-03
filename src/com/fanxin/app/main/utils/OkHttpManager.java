@@ -49,7 +49,7 @@ public class OkHttpManager {
                     httpCallBack.onFailure((String) msg.obj);
 
                     Toast.makeText(context, "服务器端无响应", Toast.LENGTH_SHORT).show();
-                    Log.d("result", (String) msg.obj);
+                    Log.d("result----->", (String) msg.obj);
                     break;
                 case RESULT_SUCESS:
                     String result = (String) msg.obj;
@@ -61,7 +61,7 @@ public class OkHttpManager {
                         httpCallBack.onFailure((String) msg.obj);
                         Toast.makeText(context, "响应数据解析错误", Toast.LENGTH_SHORT).show();
                     }
-                    Log.d("result", result);
+                    Log.d("result----->", result);
                     break;
             }
 
@@ -111,23 +111,25 @@ public class OkHttpManager {
 
     //键值对+文件 post请求
     public void post(List<Param> params, List<File> files, String url, HttpCallBack httpCallBack) {
-        Log.d("url", url);
+        Log.d("url----->>", url);
         this.httpCallBack = httpCallBack;
         MultipartBody.Builder builder = new MultipartBody.Builder();
         builder.setType(MultipartBody.FORM);
         for (Param param : params) {
 
             builder.addPart(Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\""), RequestBody.create(MediaType.parse(guessMimeType(param.getKey())), param.getValue()));
+            Log.d("param.getKey()----->>", param.getKey());
+            Log.d("param.getValue()----->>", param.getValue());
         }
         for (File file : files) {
             if (file != null && file.exists()) {
 
-                //TODO 根据文件名设置contentType
+                //TODO-本项目固化文件的键名为“file”
                 builder.addPart(Headers.of("Content-Disposition",
-                        "form-data; name=\"" + file + "\"; filename=\"" + file.getName() + "\""),
+                        "form-data; name=\"" + "file" + "\"; filename=\"" + file.getName() + "\""),
                         RequestBody.create(MediaType.parse(guessMimeType(file.getName())), file));
 
-
+                Log.d("file.getName()----->>", file.getName());
             }
 
         }

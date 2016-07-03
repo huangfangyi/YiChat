@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import com.fanxin.app.R;
-import com.fanxin.app.main.MainActivity;
+import com.fanxin.app.main.activity.MainActivity;
 import com.fanxin.app.runtimepermissions.PermissionsManager;
 import com.fanxin.easeui.ui.EaseChatFragment;
 import com.hyphenate.util.EasyUtils;

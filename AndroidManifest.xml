@@ -53,7 +53,7 @@
         android:icon="@drawable/em_logo_uidemo"
         android:label="@string/app_name" >
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -62,7 +62,7 @@
 
         <!-- 开屏页 -->
         <activity
-            android:name=".main.SplashActivity"
+            android:name=".main.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
             <intent-filter>
@@ -74,7 +74,7 @@
 
         <!-- 登陆 -->
         <activity
-            android:name=".main.LoginActivity"
+            android:name=".main.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" 
             android:windowSoftInputMode="adjustResize|stateVisible">
@@ -82,7 +82,7 @@
 
         <!-- 注册 -->
         <activity
-            android:name=".main.RegisterActivity"
+            android:name=".main.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" 
             android:windowSoftInputMode="adjustResize|stateVisible">
@@ -346,6 +346,22 @@
             android:windowSoftInputMode="adjustPan|stateHidden"
             />
         <!--红包相关Activity end-->
+
+        <!-- 用户信息页面 -->
+        <activity
+            android:name=".main.activity.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 用户信息更新页面 -->
+        <activity
+            android:name=".main.activity.ProfileUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 
 
         <!-- 开机自启动服务 -->

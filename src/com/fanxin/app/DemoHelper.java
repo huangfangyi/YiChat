@@ -38,7 +38,7 @@ import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.domain.EmojiconExampleGroupData;
 import com.fanxin.app.domain.RobotUser;
 import com.fanxin.app.ui.ChatActivity;
-import com.fanxin.app.main.MainActivity;
+import com.fanxin.app.main.activity.MainActivity;
 import com.fanxin.app.ui.VideoCallActivity;
 import com.fanxin.app.utils.PreferenceManager;
 import com.fanxin.easeui.controller.EaseUI;

@@ -14,8 +14,8 @@
 package com.fanxin.app.ui;
 
 import com.easemob.redpacketui.utils.RedPacketUtil;
-import com.fanxin.app.main.LoginActivity;
-import com.fanxin.app.main.MainActivity;
+import com.fanxin.app.main.activity.LoginActivity;
+import com.fanxin.app.main.activity.MainActivity;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;

@@ -50,7 +50,7 @@
         android:icon="@drawable/em_logo_uidemo"
         android:label="@string/app_name" >
         <activity
-            android:name="com.fanxin.app.main.MainActivity"
+            android:name="com.fanxin.app.main.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -59,7 +59,7 @@
 
         <!-- 开屏页 -->
         <activity
-            android:name="com.fanxin.app.main.SplashActivity"
+            android:name="com.fanxin.app.main.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
             <intent-filter>
@@ -71,7 +71,7 @@
 
         <!-- 登陆 -->
         <activity
-            android:name="com.fanxin.app.main.LoginActivity"
+            android:name="com.fanxin.app.main.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize|stateVisible" >
@@ -79,7 +79,7 @@
 
         <!-- 注册 -->
         <activity
-            android:name="com.fanxin.app.main.RegisterActivity"
+            android:name="com.fanxin.app.main.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize|stateVisible" >
@@ -332,6 +332,22 @@
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <!-- 红包相关Activity end -->
 
+
+        <!-- 用户信息页面 -->
+        <activity
+            android:name="com.fanxin.app.main.activity.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 用户信息更新页面 -->
+        <activity
+            android:name="com.fanxin.app.main.activity.ProfileUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name="com.fanxin.app.receiver.StartServiceReceiver" >

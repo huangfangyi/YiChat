@@ -27,7 +27,7 @@ import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.easemob.redpacketui.widget.ChatRowRedPacket;
 import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
-import com.fanxin.app.main.MainActivity;
+import com.fanxin.app.main.activity.MainActivity;
 import com.fanxin.app.widget.ChatRowVoiceCall;
 import com.fanxin.easeui.widget.chatrow.EaseChatRow;
 import com.hyphenate.chat.EMClient;

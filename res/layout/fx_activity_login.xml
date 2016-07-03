@@ -88,7 +88,7 @@
             <EditText
                 android:id="@+id/et_usertel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:background="@drawable/fx_bg_et"
                 android:hint="你的手机号码"
@@ -162,12 +162,14 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btn_qtlogin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_margin="33dp"
@@ -176,5 +178,8 @@
             android:text="注册"
             android:textColor="#353535"
             android:textSize="15sp" />
+
+
+    </RelativeLayout>
 
 </LinearLayout>
