@@ -162,7 +162,7 @@ public class RegisterActivity extends BaseActivity {
         pd.setCanceledOnTouchOutside(false);
         pd.setMessage("正在注册...");
         pd.show();
-        File file = new File("/sdcard/fanxin/" + imageName);
+        File file = new File(FXConstant.DIR_AVATAR + imageName);
         List<Param> params = new ArrayList<Param>();
         params.add(new Param("usertel", usertel));
         params.add(new Param("password", password));
@@ -243,7 +243,7 @@ public class RegisterActivity extends BaseActivity {
                 case PHOTO_REQUEST_TAKEPHOTO:
 
                     startPhotoZoom(
-                            Uri.fromFile(new File("/sdcard/fanxin/", imageName)),
+                            Uri.fromFile(new File(FXConstant.DIR_AVATAR, imageName)),
                             480);
                     break;
 
@@ -261,7 +261,7 @@ public class RegisterActivity extends BaseActivity {
 //                 * ，但此时调用options.outHeight时，已经包含了图片的高了
 //                 */
 //                options.inJustDecodeBounds = true;
-                    Bitmap bitmap = BitmapFactory.decodeFile("/sdcard/fanxin/"
+                    Bitmap bitmap = BitmapFactory.decodeFile(FXConstant.DIR_AVATAR
                             + imageName);
                     iv_photo.setImageBitmap(bitmap);
 
@@ -289,7 +289,7 @@ public class RegisterActivity extends BaseActivity {
         intent.putExtra("return-data", false);
 
         intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                Uri.fromFile(new File("/sdcard/fanxin/", imageName)));
+                Uri.fromFile(new File(FXConstant.DIR_AVATAR, imageName)));
         intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
         intent.putExtra("noFaceDetection", true); // no face detection
         startActivityForResult(intent, PHOTO_REQUEST_CUT);

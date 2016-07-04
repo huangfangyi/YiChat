@@ -32,12 +32,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xhdpi\\em_contact_list_togroup.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_to_group_details_normal.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xhdpi\\em_to_group_details_normal.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_settings_selected.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xhdpi\\em_settings_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_to_group_details_normal.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\res\\drawable-xhdpi\\em_to_group_details_normal.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_icon_speaker_normal.png",
@@ -294,5 +294,9 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_group_icon.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable-xhdpi-v4\\ease_group_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fx_default_useravatar.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0630\\build\\intermediates\\exploded-aar\\FanXin0630\\easeuilibrary\\unspecified\\res\\drawable-xhdpi-v4\\fx_default_useravatar.png"
     }
 ]

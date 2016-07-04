@@ -348,6 +348,13 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
         </activity>
+        <!-- 用户信息更新页面 -->
+        <activity
+            android:name="com.fanxin.app.main.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name="com.fanxin.app.receiver.StartServiceReceiver" >
@@ -462,7 +469,7 @@
         <!-- 设置环信应用的appkey -->
         <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="fanxin888#fanxin" />
+            android:value="tingyi123#fanxin" />
         <!-- 声明sdk所需的service -->
         <service
             android:name="com.hyphenate.chat.EMChatService"

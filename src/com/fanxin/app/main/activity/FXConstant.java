@@ -9,7 +9,7 @@ public class FXConstant {
     public static final String URL_REGISTER = HOST + "register.php";
     public static final String URL_LOGIN = HOST + "login_post.php";
     public static final String URL_FriendList = HOST + "getMyFriends.php";
-    public static final String URL_Avatar = HOST + "upload/";
+    public static final String URL_AVATAR= HOST + "upload/";
     public static final String URL_UPDATE_Avatar = HOST + "update_avatar.php";
     public static final String URL_UPDATE_Nick = HOST + "update_nick.php";
     public static final String URL_UPDATE_Fxid = HOST + "update_fxid.php";

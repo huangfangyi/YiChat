@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 
 import com.fanxin.app.R;
 import com.fanxin.app.main.activity.ProfileActivity;
+import com.fanxin.app.main.activity.SettingsActivity;
 
-public class FragmentProfile extends Fragment {
+public class FragmentProfile extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -21,13 +22,8 @@ public class FragmentProfile extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        getView().findViewById(R.id.re_myinfo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ProfileActivity.class));
-            }
-        });
-
+        getView().findViewById(R.id.re_myinfo).setOnClickListener(this);
+        getView().findViewById(R.id.re_setting).setOnClickListener(this);
     }
 
 
@@ -39,4 +35,17 @@ public class FragmentProfile extends Fragment {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.re_myinfo:
+                startActivity(new Intent(getActivity(), ProfileActivity.class));
+                break;
+
+            case R.id.re_setting:
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                break;
+
+        }
+    }
 }

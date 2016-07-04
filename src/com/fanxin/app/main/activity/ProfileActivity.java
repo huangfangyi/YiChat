@@ -1,21 +1,6 @@
 package com.fanxin.app.main.activity;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-
-import com.alibaba.fastjson.JSONObject;
-import com.fanxin.app.DemoApplication;
-import com.fanxin.app.R;
-import com.fanxin.app.main.utils.OkHttpManager;
-import com.fanxin.app.main.utils.Param;
-import com.fanxin.app.main.widget.FXAlertDialog;
-import com.fanxin.app.ui.BaseActivity;
-
-
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -28,67 +13,82 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.fanxin.app.DemoApplication;
+import com.fanxin.app.R;
+import com.fanxin.app.main.utils.OkHttpManager;
+import com.fanxin.app.main.utils.Param;
+import com.fanxin.app.main.widget.FXAlertDialog;
+import com.fanxin.app.ui.BaseActivity;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class ProfileActivity extends BaseActivity implements View.OnClickListener {
     private ImageView iv_avatar;
     private TextView tv_name;
     private TextView tv_fxid;
     private TextView tv_sex;
     private TextView tv_sign;
-
     private String imageName;
     private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
     private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
     private static final int PHOTO_REQUEST_CUT = 3;// 结果
-    private static final int UPDATE_FXID = 4;// 结果
-    private static final int UPDATE_NICK = 5;// 结果
-    private JSONObject jsonObject;
+    private static final int UPDATE_FXID = 4;
+    private static final int UPDATE_NICK = 5;
+    private static final int UPDATE_SIGN = 6;
+    private JSONObject userJson;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fx_activity_myinfo);
-        jsonObject = DemoApplication.getInstance().getUserJson();
+        userJson = DemoApplication.getInstance().getUserJson();
         initView();
     }
 
     private void initView() {
-        this.findViewById(R.id.re_avatar).setOnClickListener(this);
-        this.findViewById(R.id.re_name).setOnClickListener(this);
-        this.findViewById(R.id.re_fxid).setOnClickListener(this);
-        this.findViewById(R.id.re_sex).setOnClickListener(this);
-        this.findViewById(R.id.re_region).setOnClickListener(this);
-        // 头像
         iv_avatar = (ImageView) this.findViewById(R.id.iv_avatar);
         tv_name = (TextView) this.findViewById(R.id.tv_name);
         tv_fxid = (TextView) this.findViewById(R.id.tv_fxid);
         tv_sex = (TextView) this.findViewById(R.id.tv_sex);
         tv_sign = (TextView) this.findViewById(R.id.tv_sign);
-        String nick = jsonObject.getString(FXConstant.JSON_KEY_NICK);
-        String fxid = jsonObject.getString(FXConstant.JSON_KEY_FXID);
-        String sex = jsonObject.getString(FXConstant.JSON_KEY_SEX);
-        String sign = jsonObject.getString(FXConstant.JSON_KEY_SIGN);
+        String nick = userJson.getString(FXConstant.JSON_KEY_NICK);
+        String fxid = userJson.getString(FXConstant.JSON_KEY_FXID);
+        String sex = userJson.getString(FXConstant.JSON_KEY_SEX);
+        String sign = userJson.getString(FXConstant.JSON_KEY_SIGN);
+        String avatarUrl = FXConstant.URL_AVATAR + userJson.getString(FXConstant.JSON_KEY_AVATAR);
+        Glide.with(ProfileActivity.this).load(avatarUrl).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(iv_avatar);
         tv_name.setText(nick);
 
-        if ("0".equals(fxid)) {
+        if (TextUtils.isEmpty(fxid)) {
             tv_fxid.setText("未设置");
 
         } else {
             tv_fxid.setText(fxid);
         }
-        if (("1").equals(sex)) {
-            tv_sex.setText("男");
 
-        } else if (("2").equals(sex)) {
-            tv_sex.setText("女");
+        tv_sex.setText(sex);
 
-        } else {
-            tv_sex.setText("");
-        }
-        if ("0".equals(sign)) {
+        if (TextUtils.isEmpty(sign)) {
             tv_sign.setText("未填写");
         } else {
             tv_sign.setText(sign);
         }
+
+        //设置监听
+        this.findViewById(R.id.re_avatar).setOnClickListener(this);
+        this.findViewById(R.id.re_name).setOnClickListener(this);
+        this.findViewById(R.id.re_fxid).setOnClickListener(this);
+        this.findViewById(R.id.re_sex).setOnClickListener(this);
+        this.findViewById(R.id.re_region).setOnClickListener(this);
+        this.findViewById(R.id.re_sign).setOnClickListener(this);
 
     }
 
@@ -102,13 +102,13 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.re_name:
                 startActivityForResult(new Intent(ProfileActivity.this,
-                        ProfileUpdateActivity.class), UPDATE_NICK);
+                        ProfileUpdateActivity.class).putExtra("type", ProfileUpdateActivity.TYPE_NICK).putExtra("default", userJson.getString(FXConstant.JSON_KEY_NICK)), UPDATE_NICK);
                 break;
             case R.id.re_fxid:
-                if (jsonObject.getString(FXConstant.JSON_KEY_FXID)
-                        .equals("0")) {
+                if (TextUtils.isEmpty(userJson.getString(FXConstant.JSON_KEY_FXID))
+                        ) {
                     startActivityForResult(new Intent(ProfileActivity.this,
-                            ProfileUpdateActivity.class), UPDATE_FXID);
+                            ProfileUpdateActivity.class).putExtra("type", ProfileUpdateActivity.TYPE_FXID), UPDATE_FXID);
 
                 }
                 break;
@@ -116,7 +116,10 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                 showSexDialog();
                 break;
             case R.id.re_region:
-
+                break;
+            case R.id.re_sign:
+                startActivityForResult(new Intent(ProfileActivity.this,
+                        ProfileUpdateActivity.class).putExtra("type", ProfileUpdateActivity.TYPE_SIGN).putExtra("default", userJson.getString(FXConstant.JSON_KEY_SIGN)), UPDATE_SIGN);
                 break;
 
         }
@@ -164,15 +167,15 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
             public void onClick(int position) {
                 switch (position) {
                     case 0:
-                        if (!jsonObject.getString(FXConstant.JSON_KEY_SEX).equals("0")) {
+                        if (!userJson.getString(FXConstant.JSON_KEY_SEX).equals("男")) {
 
-                            updateInServer(FXConstant.JSON_KEY_SEX, "1");
+                            updateInServer(FXConstant.JSON_KEY_SEX, "男");
                         }
                         break;
                     case 1:
-                        if (!jsonObject.getString(FXConstant.JSON_KEY_SEX).equals("1")) {
+                        if (!userJson.getString(FXConstant.JSON_KEY_SEX).equals("女")) {
 
-                            updateInServer(FXConstant.JSON_KEY_SEX, "2");
+                            updateInServer(FXConstant.JSON_KEY_SEX, "女");
                         }
                         break;
                 }
@@ -200,7 +203,26 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                 case PHOTO_REQUEST_CUT:
                     updateInServer(FXConstant.JSON_KEY_AVATAR, imageName);
                     break;
+                case UPDATE_FXID:
+                    String fxid = data.getStringExtra("value");
+                    if (fxid != null) {
+                        tv_fxid.setText(fxid);
 
+                    }
+
+                    break;
+                case UPDATE_NICK:
+                    String nick = data.getStringExtra("value");
+                    if (nick != null) {
+                        tv_name.setText(nick);
+                    }
+                    break;
+                case UPDATE_SIGN:
+                    String sign = data.getStringExtra("value");
+                    if (sign != null) {
+                        tv_sign.setText(sign);
+                    }
+                    break;
             }
             super.onActivityResult(requestCode, resultCode, data);
 
@@ -239,10 +261,15 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         if (TextUtils.isEmpty(key) || TextUtils.isEmpty(value)) {
             return;
         }
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("正在更新...");
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.show();
         List<Param> params = new ArrayList<Param>();
         params.add(new Param("key", key));
         params.add(new Param("value", value));
-        params.add(new Param("hxid", jsonObject.getString(FXConstant.JSON_KEY_HXID)));
+        params.add(new Param("hxid", userJson.getString(FXConstant.JSON_KEY_HXID)));
         List<File> files = new ArrayList<File>();
         if (key == FXConstant.JSON_KEY_AVATAR) {
             File file = new File(FXConstant.DIR_AVATAR, value);
@@ -253,16 +280,24 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         OkHttpManager.getInstance().post(params, files, FXConstant.URL_UPDATE, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
+                progressDialog.dismiss();
                 int code = jsonObject.getIntValue("code");
                 if (code == 1000) {
                     //update ui
+                    if (key.equals(FXConstant.JSON_KEY_AVATAR)) {
 
-                    Bitmap bitmap = BitmapFactory.decodeFile(FXConstant.DIR_AVATAR
-                            + value);
-                    iv_avatar.setImageBitmap(bitmap);
+                        Bitmap bitmap = BitmapFactory.decodeFile(FXConstant.DIR_AVATAR
+                                + value);
+                        iv_avatar.setImageBitmap(bitmap);
+
+                    } else if (key.equals(FXConstant.JSON_KEY_SEX)) {
+
+                        tv_sex.setText(value);
+                    }
+
                     //
-                    jsonObject.put(key, value);
-                    DemoApplication.getInstance().setUserJson(jsonObject);
+                    userJson.put(key, value);
+                    DemoApplication.getInstance().setUserJson(userJson);
                 } else {
 
                     Toast.makeText(getApplicationContext(), "更新失败,code:" + code, Toast.LENGTH_SHORT).show();
@@ -273,7 +308,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
 
             @Override
             public void onFailure(String errorMsg) {
-
+                progressDialog.dismiss();
             }
         });
 
