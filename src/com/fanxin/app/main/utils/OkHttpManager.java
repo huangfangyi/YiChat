@@ -126,7 +126,7 @@ public class OkHttpManager {
 
                 //TODO-本项目固化文件的键名为“file”
                 builder.addPart(Headers.of("Content-Disposition",
-                        "form-data; name=\"" + "file" + "\"; filename=\"" + file.getName() + "\""),
+                        "form-data; name=\"" + "file" + "\"; filename=\"" + file.getName()+ "\""),
                         RequestBody.create(MediaType.parse(guessMimeType(file.getName())), file));
 
                 Log.d("file.getName()----->>", file.getName());

@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2013-2014 EaseMob Technologies. All rights reserved.
- * <p>
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -49,6 +49,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.R;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.utils.OkHttpManager;
+import com.fanxin.app.main.widget.FXAlertDialog;
 import com.fanxin.app.ui.BaseActivity;
 
 
@@ -66,7 +67,7 @@ public class RegisterActivity extends BaseActivity {
     private ImageView iv_photo;
 
 
-    private String imageName="false";
+    private String imageName = "false";
     private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
     private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
     private static final int PHOTO_REQUEST_CUT = 3;// 结果
@@ -200,52 +201,35 @@ public class RegisterActivity extends BaseActivity {
         });
 
 
-
-
-
-
     }
-
 
 
     // 拍照部分
     private void showCamera() {
 
-        final AlertDialog dlg = new AlertDialog.Builder(this).create();
-        dlg.show();
-        Window window = dlg.getWindow();
-        // *** 主要就是在这里实现这种效果的.
-        // 设置窗口的内容页面,shrew_exit_dialog.xml文件中定义view内容
-        window.setContentView(R.layout.fx_dialog_alert);
-        // 为确认按钮添加事件,执行退出应用操作
-        TextView tv_paizhao = (TextView) window.findViewById(R.id.tv_content1);
-        tv_paizhao.setText("拍照");
-        tv_paizhao.setOnClickListener(new OnClickListener() {
-            @SuppressLint("SdCardPath")
-            public void onClick(View v) {
-
-                imageName = getNowTime() + ".png";
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                // 指定调用相机拍照后照片的储存路径
-                intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(new File("/sdcard/fanxin/", imageName)));
-                startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
-                dlg.cancel();
-            }
-        });
-        TextView tv_xiangce = (TextView) window.findViewById(R.id.tv_content2);
-        tv_xiangce.setText("相册");
-        tv_xiangce.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-
-                getNowTime();
-                imageName = getNowTime() + ".png";
-                Intent intent = new Intent(Intent.ACTION_PICK, null);
-                intent.setDataAndType(
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-                startActivityForResult(intent, PHOTO_REQUEST_GALLERY);
-
-                dlg.cancel();
+        List<String> items = new ArrayList<String>();
+        items.add("拍照");
+        items.add("相册");
+        FXAlertDialog fxAlertDialog = new FXAlertDialog(RegisterActivity.this, null, items);
+        fxAlertDialog.init(new FXAlertDialog.OnItemClickListner() {
+            @Override
+            public void onClick(int position) {
+                switch (position) {
+                    case 0:
+                        imageName = getNowTime() + ".png";
+                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        // 指定调用相机拍照后照片的储存路径
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                                Uri.fromFile(new File(FXConstant.DIR_AVATAR, imageName)));
+                        startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
+                        break;
+                    case 1:
+                        imageName = getNowTime() + ".png";
+                        Intent intent2 = new Intent(Intent.ACTION_PICK, null);
+                        intent2.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                        startActivityForResult(intent2, PHOTO_REQUEST_GALLERY);
+                        break;
+                }
             }
         });
 
@@ -289,8 +273,7 @@ public class RegisterActivity extends BaseActivity {
         }
     }
 
-    @SuppressLint("SdCardPath")
-    private void startPhotoZoom(Uri uri1, int size) {
+     private void startPhotoZoom(Uri uri1, int size) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.setDataAndType(uri1, "image/*");
         // crop为true是设置在开启的intent中设置显示的view可以剪裁
@@ -312,47 +295,46 @@ public class RegisterActivity extends BaseActivity {
         startActivityForResult(intent, PHOTO_REQUEST_CUT);
     }
 
-    @SuppressLint("SimpleDateFormat")
-    private String getNowTime() {
+     private String getNowTime() {
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat dateFormat = new SimpleDateFormat("MMddHHmmssSS");
         return dateFormat.format(date);
     }
 
-// EditText监听器
-class TextChange implements TextWatcher {
+    // EditText监听器
+    class TextChange implements TextWatcher {
 
-    @Override
-    public void afterTextChanged(Editable arg0) {
+        @Override
+        public void afterTextChanged(Editable arg0) {
 
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                  int arg3) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence cs, int start, int before,
-                              int count) {
-
-        boolean Sign1 = et_usernick.getText().length() > 0;
-        boolean Sign2 = et_usertel.getText().length() > 0;
-        boolean Sign3 = et_password.getText().length() > 0;
-
-        if (Sign1 & Sign2 & Sign3) {
-
-            btn_register.setEnabled(true);
         }
-        // 在layout文件中，对Button的text属性应预先设置默认值，否则刚打开程序的时候Button是无显示的
-        else {
 
-            btn_register.setEnabled(false);
+        @Override
+        public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+                                      int arg3) {
+
         }
-    }
 
-}
+        @Override
+        public void onTextChanged(CharSequence cs, int start, int before,
+                                  int count) {
+
+            boolean Sign1 = et_usernick.getText().length() > 0;
+            boolean Sign2 = et_usertel.getText().length() > 0;
+            boolean Sign3 = et_password.getText().length() > 0;
+
+            if (Sign1 & Sign2 & Sign3) {
+
+                btn_register.setEnabled(true);
+            }
+            // 在layout文件中，对Button的text属性应预先设置默认值，否则刚打开程序的时候Button是无显示的
+            else {
+
+                btn_register.setEnabled(false);
+            }
+        }
+
+    }
 
 
     public void back(View view) {
