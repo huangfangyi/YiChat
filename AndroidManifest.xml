@@ -77,7 +77,7 @@
             android:name=".main.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" 
-            android:windowSoftInputMode="adjustResize|stateVisible">
+            android:windowSoftInputMode="adjustResize">
         </activity>
 
         <!-- 注册 -->
@@ -85,7 +85,7 @@
             android:name=".main.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" 
-            android:windowSoftInputMode="adjustResize|stateVisible">
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <!-- 聊天页面 -->
         <activity
@@ -308,7 +308,7 @@
             android:name="com.easemob.redpacketui.ui.activity.RPRedPacketActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustPan|stateVisible"
+            android:windowSoftInputMode="adjustPan"
             />
         <!--红包详情-->
         <activity
