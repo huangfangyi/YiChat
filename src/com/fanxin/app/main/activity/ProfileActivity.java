@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,7 +44,8 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     private static final int UPDATE_NICK = 5;
     private static final int UPDATE_SIGN = 6;
     private JSONObject userJson;
-
+    //头像，昵称，凡信号是否发生变化
+    private boolean hasChange=false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,22 +68,18 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         String avatarUrl = FXConstant.URL_AVATAR + userJson.getString(FXConstant.JSON_KEY_AVATAR);
         Glide.with(ProfileActivity.this).load(avatarUrl).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(iv_avatar);
         tv_name.setText(nick);
-
         if (TextUtils.isEmpty(fxid)) {
             tv_fxid.setText("未设置");
 
         } else {
             tv_fxid.setText(fxid);
         }
-
         tv_sex.setText(sex);
-
         if (TextUtils.isEmpty(sign)) {
             tv_sign.setText("未填写");
         } else {
             tv_sign.setText(sign);
         }
-
         //设置监听
         this.findViewById(R.id.re_avatar).setOnClickListener(this);
         this.findViewById(R.id.re_name).setOnClickListener(this);
@@ -89,16 +87,13 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         this.findViewById(R.id.re_sex).setOnClickListener(this);
         this.findViewById(R.id.re_region).setOnClickListener(this);
         this.findViewById(R.id.re_sign).setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.re_avatar:
-
                 showPhotoDialog();
-
                 break;
             case R.id.re_name:
                 startActivityForResult(new Intent(ProfileActivity.this,
@@ -109,7 +104,6 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                         ) {
                     startActivityForResult(new Intent(ProfileActivity.this,
                             ProfileUpdateActivity.class).putExtra("type", ProfileUpdateActivity.TYPE_FXID), UPDATE_FXID);
-
                 }
                 break;
             case R.id.re_sex:
@@ -207,7 +201,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                     String fxid = data.getStringExtra("value");
                     if (fxid != null) {
                         tv_fxid.setText(fxid);
-
+                        hasChange=true;
                     }
 
                     break;
@@ -215,12 +209,14 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                     String nick = data.getStringExtra("value");
                     if (nick != null) {
                         tv_name.setText(nick);
+                        hasChange=true;
                     }
                     break;
                 case UPDATE_SIGN:
                     String sign = data.getStringExtra("value");
                     if (sign != null) {
                         tv_sign.setText(sign);
+
                     }
                     break;
             }
@@ -289,7 +285,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                         Bitmap bitmap = BitmapFactory.decodeFile(FXConstant.DIR_AVATAR
                                 + value);
                         iv_avatar.setImageBitmap(bitmap);
-
+                        hasChange=true;
                     } else if (key.equals(FXConstant.JSON_KEY_SEX)) {
 
                         tv_sex.setText(value);
@@ -314,6 +310,28 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
 
 
     }
+    @Override
+    public  void back(View view){
+        ckeckChange();
+    }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
 
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            ckeckChange();
+
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private void ckeckChange(){
+
+        if( hasChange){
+            setResult(RESULT_OK);
+        }
+        finish();
+    }
 }

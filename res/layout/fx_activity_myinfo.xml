@@ -320,6 +320,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:gravity="right"
             android:layout_marginLeft="13dp"
             android:id="@+id/tv_sign"
             android:layout_width="match_parent"

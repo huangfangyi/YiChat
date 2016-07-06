@@ -37,16 +37,6 @@
             android:clickable="true"
             android:src="@drawable/fx_main_activity_search" />
 
-        <TextView
-            android:visibility="gone"
-            android:id="@+id/tv_online"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="#ffffff"
-            android:padding="3dp"
-            android:text="最近在线"
-            android:textColor="#353535" />
     </RelativeLayout>
 
     <LinearLayout

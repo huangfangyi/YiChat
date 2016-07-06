@@ -44,32 +44,34 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
+
  * contact list
  * 
  */
-public class ContactListFragment extends EaseContactListFragment {
+public class ContactListFragment extends EaseContactListFragment implements  View.OnClickListener {
 	
     private static final String TAG = ContactListFragment.class.getSimpleName();
     private ContactSyncListener contactSyncListener;
     private BlackListSyncListener blackListSyncListener;
     private ContactInfoSyncListener contactInfoSyncListener;
     private View loadingView;
-    private ContactItemView applicationItem;
+    private TextView tvUnread;
     private InviteMessgeDao inviteMessgeDao;
 
     @Override
     protected void initView() {
         super.initView();
-        View headerView = LayoutInflater.from(getActivity()).inflate(R.layout.em_contacts_header, null);
-        HeaderItemClickListener clickListener = new HeaderItemClickListener();
-        applicationItem = (ContactItemView) headerView.findViewById(R.id.application_item);
-        applicationItem.setOnClickListener(clickListener);
-        headerView.findViewById(R.id.group_item).setOnClickListener(clickListener);
-        headerView.findViewById(R.id.chat_room_item).setOnClickListener(clickListener);
-        headerView.findViewById(R.id.robot_item).setOnClickListener(clickListener);
+
+        View headerView = LayoutInflater.from(getActivity()).inflate(R.layout.fx_item_contact_list_header, null);
+        headerView.findViewById(R.id.re_newfriends).setOnClickListener(this);
+        headerView.findViewById(R.id.re_chatroom).setOnClickListener(this);
+        headerView.findViewById(R.id.re_tag).setOnClickListener(this);
+        headerView.findViewById(R.id.re_public).setOnClickListener(this);
+        tvUnread= (TextView) headerView.findViewById(R.id.tv_unread);
         listView.addHeaderView(headerView);
         //add loading view
         loadingView = LayoutInflater.from(getActivity()).inflate(R.layout.em_layout_loading_data, null);
@@ -91,9 +93,9 @@ public class ContactListFragment extends EaseContactListFragment {
             inviteMessgeDao = new InviteMessgeDao(getActivity());
         }
         if(inviteMessgeDao.getUnreadMessagesCount() > 0){
-            applicationItem.showUnreadMsgView();
+            tvUnread.setVisibility(View.VISIBLE);
         }else{
-            applicationItem.hideUnreadMsgView();
+            tvUnread.setVisibility(View.GONE);
         }
     }
     
@@ -170,36 +172,35 @@ public class ContactListFragment extends EaseContactListFragment {
             DemoHelper.getInstance().getUserProfileManager().removeSyncContactInfoListener(contactInfoSyncListener);
         }
     }
-    
-	
-	protected class HeaderItemClickListener implements OnClickListener{
 
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-            case R.id.application_item:
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.re_newfriends:
                 // 进入申请与通知页面
                 startActivity(new Intent(getActivity(), NewFriendsMsgActivity.class));
                 break;
-            case R.id.group_item:
+            case R.id.re_chatroom:
                 // 进入群聊列表页面
                 startActivity(new Intent(getActivity(), GroupsActivity.class));
                 break;
-            case R.id.chat_room_item:
+            case R.id.re_tag:
                 //进入聊天室列表页面
                 startActivity(new Intent(getActivity(), PublicChatRoomsActivity.class));
                 break;
-            case R.id.robot_item:
+            case R.id.re_public:
                 //进入Robot列表页面
-                startActivity(new Intent(getActivity(), RobotsActivity.class));
+              //  startActivity(new Intent(getActivity(), RobotsActivity.class));
                 break;
 
             default:
                 break;
-            }
         }
-	    
-	}
+
+    }
+
+
+
 	
 
 	@Override
@@ -234,7 +235,7 @@ public class ContactListFragment extends EaseContactListFragment {
 	/**
 	 * delete contact
 	 * 
-	 * @param toDeleteUser
+	 * @param
 	 */
 	public void deleteContact(final EaseUser tobeDeleteUser) {
 		String st1 = getResources().getString(R.string.deleting);

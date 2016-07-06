@@ -2,8 +2,6 @@ package com.fanxin.app.main.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -36,7 +34,7 @@ public class ProfileUpdateActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_info);
+        setContentView(R.layout.fx_activity_update_info);
         int type = getIntent().getIntExtra("type", 0);
         defaultStr = getIntent().getStringExtra("default");
         TextView titleTV = (TextView) findViewById(R.id.tv_title);

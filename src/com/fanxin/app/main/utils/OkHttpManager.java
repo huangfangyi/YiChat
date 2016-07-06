@@ -38,22 +38,20 @@ public class OkHttpManager {
     private static final int RESULT_ERROR = 1000;
     private static final int RESULT_SUCESS = 2000;
     private HttpCallBack httpCallBack;
+
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             int reusltCode = msg.what;
             switch (reusltCode) {
-
                 case RESULT_ERROR:
                     httpCallBack.onFailure((String) msg.obj);
-
                     Toast.makeText(context, "服务器端无响应", Toast.LENGTH_SHORT).show();
                     Log.d("result----->", (String) msg.obj);
                     break;
                 case RESULT_SUCESS:
                     String result = (String) msg.obj;
-
                     try {
                         JSONObject jsonObject = JSONObject.parseObject(result);
                         httpCallBack.onResponse(jsonObject);
@@ -93,11 +91,13 @@ public class OkHttpManager {
 
     //纯粹键值对post请求
     public void post(List<Param> params, String url, HttpCallBack httpCallBack) {
+        Log.d("url----->>", url);
         this.httpCallBack = httpCallBack;
         FormBody.Builder bodyBulder = new FormBody.Builder();
         for (Param param : params) {
             bodyBulder.add(param.getKey(), param.getValue());
-
+            Log.d("param.getKey()----->>", param.getKey());
+            Log.d("param.getValue()----->>", param.getValue());
         }
         RequestBody requestBody = bodyBulder.build();
         Request request = new Request.Builder()
@@ -165,8 +165,8 @@ public class OkHttpManager {
         });
     }
 
-
     public interface HttpCallBack {
+
         void onResponse(JSONObject jsonObject);
 
         void onFailure(String errorMsg);

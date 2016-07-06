@@ -43,5 +43,13 @@ public class FXConstant {
 
     public static final String DIR_AVATAR ="/sdcard/fanxin/";
 
+    //进入用户详情页传递json字符串
+    public static final String KEY_USER_INFO="userInfo";
+
+
+    //添加好友通知
+    public static final String CMD_ADD_FRIEND="ADD_FRIEND";
+    public static final String CMD_AGREE_FRIEND="AGREE_FRIEND";
+    public static final String CMD_ADD_REASON="ADD_REASON";
 
 }

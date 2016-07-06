@@ -17,15 +17,13 @@ public class InviteMessage {
 	private String from;
 	private long time;
 	private String reason;
-
-	private InviteMesageStatus status;
+ 	private InviteMesageStatus status;
 	private String groupId;
 	private String groupName;
 	private String groupInviter;
-	
 
 	private int id;
-	
+
 	public String getFrom() {
 		return from;
 	}

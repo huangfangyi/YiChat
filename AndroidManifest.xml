@@ -362,9 +362,33 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
         </activity>
-        <!-- 用户信息更新页面 -->
         <activity
             android:name=".main.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".main.activity.AddFriendsPreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".main.activity.AddFriendsNextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".main.activity.AddFriendsFinalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <activity
+            android:name=".main.activity.UserDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >

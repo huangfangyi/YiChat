@@ -18,6 +18,8 @@ public class FXPopWindow extends PopupWindow {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View conentView = inflater.inflate(resId, null);
+
+
         // 设置SelectPicPopupWindow的View
         this.setContentView(conentView);
         // 设置SelectPicPopupWindow弹出窗体的宽

@@ -22,7 +22,7 @@ import com.fanxin.app.main.db.TopUserDao;
 
 public class DbOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 8;
     private static DbOpenHelper instance;
 
     private static final String TOPUSER_TABLE_CREATE = "CREATE TABLE "
@@ -34,6 +34,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
             + UserDao.TABLE_NAME + " ("
             + UserDao.COLUMN_NAME_NICK + " TEXT, "
             + UserDao.COLUMN_NAME_AVATAR + " TEXT, "
+            + UserDao.COLUMN_NAME_INFO+ " TEXT, "
             + UserDao.COLUMN_NAME_ID + " TEXT PRIMARY KEY);";
 
     private static final String INIVTE_MESSAGE_TABLE_CREATE = "CREATE TABLE "
@@ -108,6 +109,10 @@ public class DbOpenHelper extends SQLiteOpenHelper {
         }
         if (oldVersion < 7) {
             db.execSQL(TOPUSER_TABLE_CREATE);
+        }
+        if (oldVersion < 8) {
+            db.execSQL("ALTER TABLE " + UserDao.TABLE_NAME + " ADD COLUMN " +
+                    UserDao.COLUMN_NAME_INFO + " TEXT;");
         }
     }
 

@@ -13,9 +13,12 @@
  */
 package com.fanxin.easeui.domain;
 
+import android.annotation.SuppressLint;
+
 import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.chat.EMContact;
 
+@SuppressLint("ParcelCreator")
 public class EaseUser extends EMContact {
     
     /**
@@ -26,7 +29,7 @@ public class EaseUser extends EMContact {
 	 * avatar of the user
 	 */
 	protected String avatar;
-	
+	protected String userInfo;
 	public EaseUser(String username){
 	    this.username = username;
 	}
@@ -50,6 +53,14 @@ public class EaseUser extends EMContact {
     public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
+	public String getUserInfo(){
+
+		return userInfo;
+
+	}
+	public void setUserInfo(String userInfo){
+		this.userInfo=userInfo;
+	}
 
     @Override
 	public int hashCode() {

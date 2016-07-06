@@ -22,6 +22,7 @@ import com.fanxin.app.DemoHelper;
 import com.fanxin.app.db.UserDao;
 import com.fanxin.app.main.fragment.FragmentFind;
 import com.fanxin.app.main.fragment.FragmentProfile;
+import com.fanxin.app.main.widget.FXPopWindow;
 import com.fanxin.app.runtimepermissions.PermissionsResultAction;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.app.ui.ChatActivity;
@@ -60,11 +61,11 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressLint("NewApi")
-public class MainActivity extends BaseActivity {
+ public class MainActivity extends BaseActivity {
 
     protected static final String TAG = "MainActivity";
     // textview for unread message count
@@ -206,6 +207,36 @@ public class MainActivity extends BaseActivity {
         mTabs[3] = (Button) findViewById(R.id.btn_profile);
         // select first tab
         mTabs[0].setSelected(true);
+
+        final ImageView ivAdd= (ImageView) findViewById(R.id.iv_add);
+        final FXPopWindow fxPopWindow=new FXPopWindow(this,R.layout.fx_popupwindow_add,new FXPopWindow.OnItemClickListener(){
+            @Override
+            public void onClick(int position) {
+                switch (position){
+                    //发起群聊
+                    case 0:
+
+                        break;
+                    //添加新的好友
+                    case 1:
+                         startActivity(new Intent(MainActivity.this,AddFriendsPreActivity.class));
+                        break;
+                    //扫一扫
+                    case 2:
+                        break;
+                    //帮助及反馈
+                    case 3:
+                        break;
+                }
+            }
+        });
+        ivAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fxPopWindow.showPopupWindow(ivAdd);
+            }
+        });
+
     }
 
     /**

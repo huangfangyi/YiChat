@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/common_top_bar_blue" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="back"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/fx_top_bar_back" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:background="@drawable/fx_bg_et"
+                android:gravity="bottom"
+                android:textColor="#fff"
+                android:hint="微信号/QQ号/手机号"
+                android:paddingBottom="10dp"
+                android:paddingLeft="46dp"
+                android:singleLine="true"
+                android:textColorHint="#484c4c"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignBottom="@id/et_search"
+                android:layout_alignLeft="@id/et_search"
+                android:layout_margin="8dp"
+                android:src="@drawable/fx_icon_search_white" />
+
+            <View
+                android:id="@+id/view_temp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:background="#14191A" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/re_search"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/fx_btn_list_item_bg"
+            android:clickable="true"
+            android:paddingBottom="14dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="14dp" >
+
+            <ImageView
+                android:id="@+id/iv_find"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fx_icon_search_green_2" />
+
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/iv_find"
+                android:text="搜索:"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_temp"
+                android:text=""
+                android:textColor="#3FB838"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#DBDBDB" />
+    </LinearLayout>
+
+</ScrollView>

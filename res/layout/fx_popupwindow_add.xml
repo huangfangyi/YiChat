@@ -10,7 +10,11 @@
         android:paddingRight="12dp"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#000"
+            />
         <RelativeLayout
             android:id="@+id/re_item1"
             android:layout_width="match_parent"
