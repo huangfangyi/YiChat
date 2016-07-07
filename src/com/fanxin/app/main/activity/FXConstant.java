@@ -28,7 +28,7 @@ public class FXConstant {
     public static final String URL_RECHARGE = HOST + "recharge.php";
     public static final String URL_WIRHDROW = HOST + "withdraw.php";
     public static final String URL_UPDATE = HOST + "update.php";
-
+    public static final String URL_ADD_FRIEND=HOST + "accept_friend.php";
     public static final String JSON_KEY_NICK ="nick";
     public static final String JSON_KEY_HXID ="hxid";
     public static final String JSON_KEY_FXID ="fxid";
@@ -38,8 +38,6 @@ public class FXConstant {
     public static final String JSON_KEY_PROVINCE ="province";
     public static final String JSON_KEY_TEL ="tel";
     public static final String JSON_KEY_SIGN ="sign";
-
-
 
     public static final String DIR_AVATAR ="/sdcard/fanxin/";
 

@@ -165,7 +165,7 @@ public class LoginActivity extends BaseActivity {
                 }
 
                 // get user's info (this should be get from App's server or 3rd party service)
-                DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
+                // DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
                 DemoApplication.getInstance().setUserJson(jsonObject);
                 RedPacket.getInstance().initRPToken(hxid, hxid, EMClient.getInstance().getChatConfig().getAccessToken(), new RPCallback() {
                     @Override

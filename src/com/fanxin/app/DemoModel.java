@@ -195,22 +195,11 @@ public class DemoModel {
         return PreferenceManager.getInstance().isGroupsSynced();
     }
     
-    public void setContactSynced(boolean synced){
-        PreferenceManager.getInstance().setContactSynced(synced);
-    }
+
     
-    public boolean isContactSynced(){
-        return PreferenceManager.getInstance().isContactSynced();
-    }
-    
-    public void setBlacklistSynced(boolean synced){
-        PreferenceManager.getInstance().setBlacklistSynced(synced);
-    }
-    
-    public boolean isBacklistSynced(){
-        return PreferenceManager.getInstance().isBacklistSynced();
-    }
-    
+
+
+
     public void allowChatroomOwnerLeave(boolean value){
         PreferenceManager.getInstance().setSettingAllowChatroomOwnerLeave(value);
     }

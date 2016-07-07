@@ -179,6 +179,7 @@ public class RegisterActivity extends BaseActivity {
                     Toast.makeText(RegisterActivity.this,
                             "注册成功！", Toast.LENGTH_SHORT)
                             .show();
+                    finish();
 
                 } else if (code == 2000) {
                     pd.dismiss();

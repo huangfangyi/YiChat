@@ -1,5 +1,6 @@
 package com.fanxin.app.main.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,12 +30,24 @@ import java.util.List;
  * QQ:84543217
  */
 public class UserDetailsActivity extends BaseActivity {
-
+    /**
+     *
+     * 用户详情页接收两种传值
+     * 1：用户完整资料的JSON字符串-userInfo-这种情况如果是好友进行刷新
+     * 2：只传用户的hxid，这种情况直接从网络取数据显示-如果是好友，刷新资料
+     *
+     */
 
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(R.layout.fx_activity_userinfo);
+        String hxid = this.getIntent().getStringExtra(FXConstant.JSON_KEY_HXID);
+        if (hxid != null) {
+            refresh(hxid, true);
+            return;
+        }
+
         String userInfo = this.getIntent().getStringExtra(FXConstant.KEY_USER_INFO);
         JSONObject userJson = null;
         try {
@@ -42,14 +55,16 @@ public class UserDetailsActivity extends BaseActivity {
         } catch (JSONException e) {
 
         }
-
         if (userJson == null) {
             finish();
             return;
         }
         initView(userJson);
         //如果是好友，刷新下资料
-        refresh(userJson.getString(FXConstant.JSON_KEY_HXID));
+        if (DemoHelper.getInstance().getContactList().containsKey(userJson.getString(FXConstant.JSON_KEY_HXID))) {
+            refresh(userJson.getString(FXConstant.JSON_KEY_HXID), false);
+        }
+
     }
 
     private void initView(final JSONObject jsonObject) {
@@ -95,16 +110,15 @@ public class UserDetailsActivity extends BaseActivity {
                 startActivity(new Intent(UserDetailsActivity.this, ChatActivity.class).putExtra(FXConstant.KEY_USER_INFO, jsonObject.toJSONString()));
             }
         });
-
-
     }
 
-
-    private void refresh(String hxid) {
-
-        if (!DemoHelper.getInstance().getContactList().containsKey(hxid)) {
-            return;
-
+    private void refresh(final String hxid, boolean backTask) {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("正在加载资料...");
+        progressDialog.setCanceledOnTouchOutside(false);
+        if (!backTask) {
+            progressDialog.show();
         }
         List<Param> parms = new ArrayList<>();
         parms.add(new Param("uid", hxid));
@@ -112,22 +126,29 @@ public class UserDetailsActivity extends BaseActivity {
         OkHttpManager.getInstance().post(parms, FXConstant.URL_Search_User, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
+                if (progressDialog != null && progressDialog.isShowing()) {
+                    progressDialog.dismiss();
+                }
                 int code = jsonObject.getInteger("code");
                 if (code == 1) {
                     JSONObject json = jsonObject.getJSONObject("user");
                     //刷新ui
                     initView(json);
-                    EaseUser user = JSONUtil.Json2User(json);
-                    UserDao dao = new UserDao(UserDetailsActivity.this);
-                    dao.saveContact(user);
-                    DemoHelper.getInstance().getContactList().put(user.getUsername(), user);
+                    if (DemoHelper.getInstance().getContactList().containsKey(hxid)) {
+                        EaseUser user = JSONUtil.Json2User(json);
+                        UserDao dao = new UserDao(UserDetailsActivity.this);
+                        dao.saveContact(user);
+                        DemoHelper.getInstance().getContactList().put(user.getUsername(), user);
+                    }
 
                 }
             }
 
             @Override
             public void onFailure(String errorMsg) {
-
+                if (progressDialog != null && progressDialog.isShowing()) {
+                    progressDialog.dismiss();
+                }
             }
         });
 

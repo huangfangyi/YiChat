@@ -12,14 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.redpacketui.utils.RedPacketUtil;
+import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.DemoModel;
 import com.fanxin.app.R;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.app.ui.BlacklistActivity;
 import com.fanxin.app.ui.DiagnoseActivity;
-import com.fanxin.app.ui.OfflinePushNickActivity;
-import com.fanxin.app.ui.UserProfileActivity;
 import com.fanxin.easeui.widget.EaseSwitchButton;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
@@ -305,11 +304,11 @@ public class SettingsActivity extends BaseActivity  implements View.OnClickListe
                 startActivity(new Intent(SettingsActivity.this, DiagnoseActivity.class));
                 break;
             case R.id.ll_set_push_nick:
-                startActivity(new Intent(SettingsActivity.this, OfflinePushNickActivity.class));
+             //   startActivity(new Intent(SettingsActivity.this, OfflinePushNickActivity.class));
                 break;
             case R.id.ll_user_profile:
-                startActivity(new Intent(SettingsActivity.this, UserProfileActivity.class).putExtra("setting", true)
-                        .putExtra("username", EMClient.getInstance().getCurrentUser()));
+//                startActivity(new Intent(SettingsActivity.this, UserProfileActivity.class).putExtra("setting", true)
+//                        .putExtra("username", EMClient.getInstance().getCurrentUser()));
                 break;
             default:
                 break;
@@ -331,9 +330,10 @@ public class SettingsActivity extends BaseActivity  implements View.OnClickListe
                     public void run() {
                         pd.dismiss();
                         // show login screen
-                         finish();
-                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
 
+                        DemoApplication.getInstance().setUserJson(null);
+                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+                        finish();
                     }
                 });
             }

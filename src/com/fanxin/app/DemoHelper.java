@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketui.RedPacketConstant;
@@ -19,7 +18,6 @@ import com.fanxin.app.main.activity.FXConstant;
 import com.fanxin.app.main.utils.JSONUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
-import com.fanxin.app.parse.UserProfileManager;
 import com.fanxin.app.receiver.CallReceiver;
 import com.fanxin.app.ui.VoiceCallActivity;
 import com.fanxin.easeui.domain.EaseEmojicon;
@@ -31,7 +29,6 @@ import com.hyphenate.EMContactListener;
 import com.hyphenate.EMError;
 import com.hyphenate.EMGroupChangeListener;
 import com.hyphenate.EMMessageListener;
-import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMCmdMessageBody;
 import com.hyphenate.chat.EMGroup;
@@ -93,7 +90,7 @@ public class DemoHelper {
 
     private Map<String, RobotUser> robotList;
 
-    private UserProfileManager userProManager;
+
 
     private static DemoHelper instance = null;
 
@@ -103,21 +100,10 @@ public class DemoHelper {
      * sync groups status listener
      */
     private List<DataSyncListener> syncGroupsListeners;
-    /**
-     * sync contacts status listener
-     */
-    private List<DataSyncListener> syncContactsListeners;
-    /**
-     * sync blacklist status listener
-     */
-    private List<DataSyncListener> syncBlackListListeners;
+
 
     private boolean isSyncingGroupsWithServer = false;
-    private boolean isSyncingContactsWithServer = false;
-    private boolean isSyncingBlackListWithServer = false;
-    private boolean isGroupsSyncedWithServer = false;
-    private boolean isContactsSyncedWithServer = false;
-    private boolean isBlackListSyncedWithServer = false;
+     private boolean isGroupsSyncedWithServer = false;
 
     public boolean isVoiceCalling;
     public boolean isVideoCalling;
@@ -167,8 +153,6 @@ public class DemoHelper {
             setEaseUIProviders();
             //initialize preference manager
             PreferenceManager.init(context);
-            //initialize profile manager
-            getUserProfileManager().init(context);
 
             EMClient.getInstance().callManager().getVideoCallHelper().setAdaptiveVideoFlag(getModel().isAdaptiveVideoEncode());
 
@@ -357,13 +341,7 @@ public class DemoHelper {
      */
     protected void setGlobalListeners() {
         syncGroupsListeners = new ArrayList<DataSyncListener>();
-        syncContactsListeners = new ArrayList<DataSyncListener>();
-        syncBlackListListeners = new ArrayList<DataSyncListener>();
-
         isGroupsSyncedWithServer = demoModel.isGroupsSynced();
-        isContactsSyncedWithServer = demoModel.isContactSynced();
-        isBlackListSyncedWithServer = demoModel.isBacklistSynced();
-
         // create the global connection listener
         connectionListener = new EMConnectionListener() {
             @Override
@@ -378,20 +356,13 @@ public class DemoHelper {
             @Override
             public void onConnected() {
                 // in case group and contact were already synced, we supposed to notify sdk we are ready to receive the events
-                if (isGroupsSyncedWithServer && isContactsSyncedWithServer) {
+                if (isGroupsSyncedWithServer) {
                     EMLog.d(TAG, "group and contact already synced with servre");
                 } else {
                     if (!isGroupsSyncedWithServer) {
                         asyncFetchGroupsFromServer(null);
                     }
 
-                    if (!isContactsSyncedWithServer) {
-                        asyncFetchContactsFromServer(null);
-                    }
-
-                    if (!isBlackListSyncedWithServer) {
-                        asyncFetchBlackListFromServer(null);
-                    }
                 }
             }
         };
@@ -706,7 +677,7 @@ public class DemoHelper {
         // You'd better cache it if you get it from your server
         EaseUser user = null;
         if (username.equals(EMClient.getInstance().getCurrentUser()))
-            return getUserProfileManager().getCurrentUserInfo();
+            return JSONUtil.Json2User(DemoApplication.getInstance().getUserJson());
         user = getContactList().get(username);
         if (user == null && getRobotList() != null) {
             user = getRobotList().get(username);
@@ -761,16 +732,16 @@ public class DemoHelper {
                             List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
 
                             for (InviteMessage inviteMessage : msgs) {
-                                if (inviteMessage.getGroupId() == null && inviteMessage.getFrom().equals(username)) {
-                                    inviteMessgeDao.deleteMessage(username);
+                                if (inviteMessage.getGroupId() == null && inviteMessage.getFrom().equals(message.getFrom())) {
+                                    inviteMessgeDao.deleteMessage(message.getFrom());
                                 }
                             }
                             // save invitation as message
                             InviteMessage msg = new InviteMessage();
-                            msg.setFrom(username);
+                            msg.setFrom(message.getFrom());
                             msg.setTime(System.currentTimeMillis());
                             msg.setReason(userInfo);
-                            Log.d(TAG, username + "apply to be your friend,reason: " + userInfo);
+                            Log.d(TAG, message.getFrom() + "apply to be your friend,reason: " + userInfo);
                             // set invitation status
                             msg.setStatus(InviteMessage.InviteMesageStatus.BEINVITEED);
                             notifyNewInviteMessage(msg);
@@ -785,16 +756,16 @@ public class DemoHelper {
                             String userInfo = message.getStringAttribute(FXConstant.KEY_USER_INFO);
                             List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
                             for (InviteMessage inviteMessage : msgs) {
-                                if (inviteMessage.getFrom().equals(username)) {
+                                if (inviteMessage.getFrom().equals(message.getFrom())) {
                                     return;
                                 }
                             }
                             // save invitation as message
                             InviteMessage msg = new InviteMessage();
-                            msg.setFrom(username);
+                            msg.setFrom(message.getFrom());
                             msg.setReason(userInfo);
                             msg.setTime(System.currentTimeMillis());
-                            Log.d(TAG, username + "accept your request");
+                            Log.d(TAG, message.getFrom() + "accept your request");
                             msg.setStatus(InviteMessage.InviteMesageStatus.BEAGREED);
                             notifyNewInviteMessage(msg);
                             broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
@@ -974,12 +945,7 @@ public class DemoHelper {
         demoModel.saveContactList(mList);
     }
 
-    public UserProfileManager getUserProfileManager() {
-        if (userProManager == null) {
-            userProManager = new UserProfileManager();
-        }
-        return userProManager;
-    }
+
 
     void endCall() {
         try {
@@ -1006,43 +972,6 @@ public class DemoHelper {
             syncGroupsListeners.remove(listener);
         }
     }
-
-    public void addSyncContactListener(DataSyncListener listener) {
-        if (listener == null) {
-            return;
-        }
-        if (!syncContactsListeners.contains(listener)) {
-            syncContactsListeners.add(listener);
-        }
-    }
-
-    public void removeSyncContactListener(DataSyncListener listener) {
-        if (listener == null) {
-            return;
-        }
-        if (syncContactsListeners.contains(listener)) {
-            syncContactsListeners.remove(listener);
-        }
-    }
-
-    public void addSyncBlackListListener(DataSyncListener listener) {
-        if (listener == null) {
-            return;
-        }
-        if (!syncBlackListListeners.contains(listener)) {
-            syncBlackListListeners.add(listener);
-        }
-    }
-
-    public void removeSyncBlackListListener(DataSyncListener listener) {
-        if (listener == null) {
-            return;
-        }
-        if (syncBlackListListeners.contains(listener)) {
-            syncBlackListListeners.remove(listener);
-        }
-    }
-
     /**
      * Get group list from server
      * This method will save the sync state
@@ -1101,117 +1030,31 @@ public class DemoHelper {
         }
     }
 
-    public void asyncFetchContactsFromServer(final EMValueCallBack<List<String>> callback) {
-        if (isSyncingContactsWithServer) {
-            return;
-        }
 
-        isSyncingContactsWithServer = true;
 
-        getContactsInServer();
-    }
 
-    public void notifyContactsSyncListener(boolean success) {
-        for (DataSyncListener listener : syncContactsListeners) {
-            listener.onSyncComplete(success);
-        }
-    }
 
-    public void asyncFetchBlackListFromServer(final EMValueCallBack<List<String>> callback) {
 
-        if (isSyncingBlackListWithServer) {
-            return;
-        }
-
-        isSyncingBlackListWithServer = true;
-
-        new Thread() {
-            @Override
-            public void run() {
-                try {
-                    List<String> usernames = EMClient.getInstance().contactManager().getBlackListFromServer();
-
-                    // in case that logout already before server returns, we should return immediately
-                    if (!isLoggedIn()) {
-                        isBlackListSyncedWithServer = false;
-                        isSyncingBlackListWithServer = false;
-                        notifyBlackListSyncListener(false);
-                        return;
-                    }
-
-                    demoModel.setBlacklistSynced(true);
-
-                    isBlackListSyncedWithServer = true;
-                    isSyncingBlackListWithServer = false;
-
-                    notifyBlackListSyncListener(true);
-                    if (callback != null) {
-                        callback.onSuccess(usernames);
-                    }
-                } catch (HyphenateException e) {
-                    demoModel.setBlacklistSynced(false);
-
-                    isBlackListSyncedWithServer = false;
-                    isSyncingBlackListWithServer = true;
-                    e.printStackTrace();
-
-                    if (callback != null) {
-                        callback.onError(e.getErrorCode(), e.toString());
-                    }
-                }
-
-            }
-        }.start();
-    }
-
-    public void notifyBlackListSyncListener(boolean success) {
-        for (DataSyncListener listener : syncBlackListListeners) {
-            listener.onSyncComplete(success);
-        }
-    }
 
     public boolean isSyncingGroupsWithServer() {
         return isSyncingGroupsWithServer;
     }
-
-    public boolean isSyncingContactsWithServer() {
-        return isSyncingContactsWithServer;
-    }
-
-    public boolean isSyncingBlackListWithServer() {
-        return isSyncingBlackListWithServer;
-    }
-
     public boolean isGroupsSyncedWithServer() {
         return isGroupsSyncedWithServer;
     }
 
-    public boolean isContactsSyncedWithServer() {
-        return isContactsSyncedWithServer;
-    }
 
-    public boolean isBlackListSyncedWithServer() {
-        return isBlackListSyncedWithServer;
-    }
 
     synchronized void reset() {
         isSyncingGroupsWithServer = false;
-        isSyncingContactsWithServer = false;
-        isSyncingBlackListWithServer = false;
-
         demoModel.setGroupsSynced(false);
-        demoModel.setContactSynced(false);
-        demoModel.setBlacklistSynced(false);
-
         isGroupsSyncedWithServer = false;
-        isContactsSyncedWithServer = false;
-        isBlackListSyncedWithServer = false;
 
         isGroupAndContactListenerRegisted = false;
 
         setContactList(null);
         setRobotList(null);
-        getUserProfileManager().reset();
+        DemoApplication.getInstance().setUserJson(null);
         DemoDBManager.getInstance().closeDB();
     }
 
@@ -1224,58 +1067,7 @@ public class DemoHelper {
     }
 
 
-    public void getContactsInServer() {
 
-        if (!isLoggedIn()) {
-            isContactsSyncedWithServer = false;
-            isSyncingContactsWithServer = false;
-            notifyContactsSyncListener(false);
-            return;
-        }
-        List<Param> params = new ArrayList<Param>();
-        params.add(new Param("hxid", DemoHelper.getInstance().getCurrentUsernName()));
-        OkHttpManager.getInstance().post(params, FXConstant.URL_FriendList, new OkHttpManager.HttpCallBack() {
-            @Override
-            public void onResponse(JSONObject jsonObject) {
-                int code = jsonObject.getInteger("code");
-                if (code == 1000) {
-                    JSONArray josnArray = jsonObject.getJSONArray("friends");
-                    Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
-                    if (josnArray != null) {
-                        for (int i = 0; i < josnArray.size(); i++) {
-                            JSONObject friend = josnArray.getJSONObject(i);
-                            EaseUser easeUser = JSONUtil.Json2User(friend);
-                            userlist.put(easeUser.getUsername(), easeUser);
-                        }
-                        // save the contact list to cache
-                        getContactList().clear();
-                        getContactList().putAll(userlist);
-                        // save the contact list to database
-                        UserDao dao = new UserDao(appContext);
-                        List<EaseUser> users = new ArrayList<EaseUser>(userlist.values());
-                        dao.saveContactList(users);
-                        demoModel.setContactSynced(true);
-                        EMLog.d(TAG, "set contact syn status to true");
-
-                        isContactsSyncedWithServer = true;
-                        isSyncingContactsWithServer = false;
-
-                        //notify sync success
-                        notifyContactsSyncListener(true);
-                    }
-
-                }
-
-            }
-
-            @Override
-            public void onFailure(String errorMsg) {
-
-            }
-        });
-
-
-    }
 
 
 }

@@ -13,26 +13,6 @@
  */
 package com.fanxin.app.main.activity;
 
-import java.util.Hashtable;
-import java.util.Map;
-
-import com.fanxin.app.DemoHelper;
-import com.fanxin.app.db.UserDao;
-import com.fanxin.app.ui.AddContactActivity;
-import com.fanxin.app.ui.ChatActivity;
-import com.fanxin.app.ui.GroupsActivity;
-import com.fanxin.app.ui.NewFriendsMsgActivity;
-import com.fanxin.app.ui.PublicChatRoomsActivity;
-import com.fanxin.app.ui.RobotsActivity;
-import com.fanxin.app.widget.ContactItemView;
-import com.fanxin.easeui.domain.EaseUser;
-import com.fanxin.easeui.ui.EaseContactListFragment;
-import com.hyphenate.chat.EMClient;
-import com.fanxin.app.R;
-import com.fanxin.app.db.InviteMessgeDao;
-import com.hyphenate.util.EMLog;
-import com.hyphenate.util.NetUtils;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.view.ContextMenu;
@@ -47,6 +27,22 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fanxin.app.DemoHelper;
+import com.fanxin.app.R;
+import com.fanxin.app.db.InviteMessgeDao;
+import com.fanxin.app.db.UserDao;
+import com.fanxin.app.ui.AddContactActivity;
+import com.fanxin.app.ui.ChatActivity;
+import com.fanxin.app.ui.GroupsActivity;
+import com.fanxin.app.ui.PublicChatRoomsActivity;
+import com.fanxin.easeui.domain.EaseUser;
+import com.fanxin.easeui.ui.EaseContactListFragment;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.util.NetUtils;
+
+import java.util.Hashtable;
+import java.util.Map;
+
 /**
 
  * contact list
@@ -55,10 +51,8 @@ import android.widget.Toast;
 public class ContactListFragment extends EaseContactListFragment implements  View.OnClickListener {
 	
     private static final String TAG = ContactListFragment.class.getSimpleName();
-    private ContactSyncListener contactSyncListener;
-    private BlackListSyncListener blackListSyncListener;
-    private ContactInfoSyncListener contactInfoSyncListener;
-    private View loadingView;
+
+  //  private View loadingView;
     private TextView tvUnread;
     private InviteMessgeDao inviteMessgeDao;
 
@@ -74,8 +68,8 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
         tvUnread= (TextView) headerView.findViewById(R.id.tv_unread);
         listView.addHeaderView(headerView);
         //add loading view
-        loadingView = LayoutInflater.from(getActivity()).inflate(R.layout.em_layout_loading_data, null);
-        contentContainer.addView(loadingView);
+//        loadingView = LayoutInflater.from(getActivity()).inflate(R.layout.em_layout_loading_data, null);
+//        contentContainer.addView(loadingView);
        this.titleBar.setVisibility(View.GONE);
         getView().findViewById(R.id.search_bar_view).setVisibility(View.GONE);
         registerForContextMenu(listView);
@@ -138,39 +132,12 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                 startActivity(new Intent(getActivity(), AddContactActivity.class));
             }
         });
-        
-        
-        contactSyncListener = new ContactSyncListener();
-        DemoHelper.getInstance().addSyncContactListener(contactSyncListener);
-        
-        blackListSyncListener = new BlackListSyncListener();
-        DemoHelper.getInstance().addSyncBlackListListener(blackListSyncListener);
-        
-        contactInfoSyncListener = new ContactInfoSyncListener();
-        DemoHelper.getInstance().getUserProfileManager().addSyncContactInfoListener(contactInfoSyncListener);
-        
-        if (DemoHelper.getInstance().isContactsSyncedWithServer()) {
-            loadingView.setVisibility(View.GONE);
-        } else if (DemoHelper.getInstance().isSyncingContactsWithServer()) {
-            loadingView.setVisibility(View.VISIBLE);
-        }
     }
     
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (contactSyncListener != null) {
-            DemoHelper.getInstance().removeSyncContactListener(contactSyncListener);
-            contactSyncListener = null;
-        }
-        
-        if(blackListSyncListener != null){
-            DemoHelper.getInstance().removeSyncBlackListListener(blackListSyncListener);
-        }
-        
-        if(contactInfoSyncListener != null){
-            DemoHelper.getInstance().getUserProfileManager().removeSyncContactInfoListener(contactInfoSyncListener);
-        }
+
     }
 
     @Override
@@ -178,7 +145,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
         switch (v.getId()) {
             case R.id.re_newfriends:
                 // 进入申请与通知页面
-                startActivity(new Intent(getActivity(), NewFriendsMsgActivity.class));
+                startActivity(new Intent(getActivity(), NewFriendsActivity.class));
                 break;
             case R.id.re_chatroom:
                 // 进入群聊列表页面
@@ -264,7 +231,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 					getActivity().runOnUiThread(new Runnable() {
 						public void run() {
 							pd.dismiss();
-							Toast.makeText(getActivity(), st2 + e.getMessage(), 1).show();
+							Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_SHORT).show();
 						}
 					});
 
@@ -275,64 +242,8 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 
 	}
 	
-	class ContactSyncListener implements DemoHelper.DataSyncListener {
-        @Override
-        public void onSyncComplete(final boolean success) {
-            EMLog.d(TAG, "on contact list sync success:" + success);
-            getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    getActivity().runOnUiThread(new Runnable(){
 
-                        @Override
-                        public void run() {
-                            if(success){
-                                loadingView.setVisibility(View.GONE);
-                                refresh();
-                            }else{
-                                String s1 = getResources().getString(R.string.get_failed_please_check);
-                                Toast.makeText(getActivity(), s1, 1).show();
-                                loadingView.setVisibility(View.GONE);
-                            }
-                        }
-                        
-                    });
-                }
-            });
-        }
-    }
-    
-    class BlackListSyncListener implements DemoHelper.DataSyncListener {
 
-        @Override
-        public void onSyncComplete(boolean success) {
-            getActivity().runOnUiThread(new Runnable(){
 
-                @Override
-                public void run() {
-                    refresh();
-                }
-            });
-        }
-        
-    };
-    
-    class ContactInfoSyncListener implements DemoHelper.DataSyncListener {
-
-        @Override
-        public void onSyncComplete(final boolean success) {
-            EMLog.d(TAG, "on contactinfo list sync success:" + success);
-            getActivity().runOnUiThread(new Runnable() {
-                
-                @Override
-                public void run() {
-                    loadingView.setVisibility(View.GONE);
-                    if(success){
-                        refresh();
-                    }
-                }
-            });
-        }
-        
-    }
 	
 }

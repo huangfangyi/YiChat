@@ -43,10 +43,11 @@ public class DemoApplication extends Application {
 		super.onCreate();
         applicationContext = this;
         instance = this;
+		OkHttpManager.init(instance);
 		LocalUserUtil.init(instance);
         DemoHelper.getInstance().init(applicationContext);
 		RedPacket.getInstance().initContext(applicationContext);
-		OkHttpManager.init(instance);
+
 	}
 
 	public static DemoApplication getInstance() {

@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2013-2014 EaseMob Technologies. All rights reserved.
- * <p>
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -16,6 +16,7 @@ package com.fanxin.app.main.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 
 public class LocalUserUtil {
@@ -56,10 +57,12 @@ public class LocalUserUtil {
 
 
     public void setUserJson(JSONObject userJson) {
-        String userInfo = userJson.toJSONString();
-        if (userJson == null) {
-
-            userInfo = "";
+        String userInfo = "";
+        if (userJson != null) {
+            try {
+                userInfo = userJson.toJSONString();
+            } catch (JSONException e) {
+            }
         }
         editor.putString(SHARED_KEY_USER_INFO, userInfo);
         editor.commit();

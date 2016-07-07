@@ -27,7 +27,9 @@ import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.easemob.redpacketui.widget.ChatRowRedPacket;
 import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
+import com.fanxin.app.main.activity.FXConstant;
 import com.fanxin.app.main.activity.MainActivity;
+import com.fanxin.app.main.activity.UserDetailsActivity;
 import com.fanxin.app.widget.ChatRowVoiceCall;
 import com.fanxin.easeui.widget.chatrow.EaseChatRow;
 import com.hyphenate.chat.EMClient;
@@ -265,8 +267,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     @Override
     public void onAvatarClick(String username) {
         //handling when user click avatar
-        Intent intent = new Intent(getActivity(), UserProfileActivity.class);
-        intent.putExtra("username", username);
+        Intent intent = new Intent(getActivity(), UserDetailsActivity.class);
+        intent.putExtra(FXConstant.JSON_KEY_HXID, username);
         startActivity(intent);
     }
     

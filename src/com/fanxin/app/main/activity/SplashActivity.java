@@ -9,7 +9,8 @@ import android.widget.TextView;
 import com.easemob.redpacketsdk.RPCallback;
 import com.easemob.redpacketsdk.RedPacket;
 import com.fanxin.app.DemoHelper;
- import com.fanxin.app.ui.*;
+import com.fanxin.app.main.service.ContactsService;
+import com.fanxin.app.ui.*;
 import com.hyphenate.chat.EMClient;
 import com.fanxin.app.R;
 
@@ -66,6 +67,7 @@ public class SplashActivity extends   BaseActivity {
 							e.printStackTrace();
 						}
 					}
+					startService(new Intent(SplashActivity.this, ContactsService.class));
 					//enter main screen
 					startActivity(new Intent(SplashActivity.this, MainActivity.class));
 					finish();

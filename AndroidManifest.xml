@@ -282,12 +282,6 @@
         </activity>
 
         <!-- iOS offline push nick -->
-        <activity
-            android:name=".ui.OfflinePushNickActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
         <!-- robots list -->
         <activity 
             android:name=".ui.RobotsActivity"
@@ -296,11 +290,6 @@
             android:windowSoftInputMode="stateAlwaysHidden"
             ></activity>
         <!-- user profile -->
-		<activity 
-		    android:name=".ui.UserProfileActivity"
-		    android:screenOrientation="portrait"
-		    android:theme="@style/horizontal_slide"
-		    ></activity>
 
         <!--红包相关Activity start-->
         <!--发红包-->
@@ -393,6 +382,12 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
         </activity>
+        <activity
+            android:name=".main.activity.NewFriendsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver" >
@@ -418,7 +413,12 @@
         <service android:name="com.hyphenate.chat.EMGCMListenerService"
             android:exported="false" >
         </service>
-        
+        <service android:name="com.fanxin.app.main.service.ContactsService"
+            android:exported="false" >
+        </service>
+
+
+
         <receiver 
             android:name=".receiver.GCMPushBroadCast"
             android:exported="false">
