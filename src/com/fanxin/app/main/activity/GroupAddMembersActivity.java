@@ -1,13 +1,7 @@
 package com.fanxin.app.main.activity;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -16,16 +10,12 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,12 +23,6 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
-
-import com.fanxin.app.Constant;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
@@ -53,6 +37,11 @@ import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMGroupManager;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.exceptions.HyphenateException;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 
 public class GroupAddMembersActivity extends BaseActivity {
@@ -111,7 +100,8 @@ public class GroupAddMembersActivity extends BaseActivity {
         // 获取好友列表
         friendList = new ArrayList<EaseUser>(DemoHelper.getInstance().getContactList().values());
         // 对list进行排序
-        Collections.sort(friendList, new PinyinComparator() {});
+        Collections.sort(friendList, new PinyinComparator() {
+        });
         refreshList(friendList);
 
 
@@ -204,7 +194,6 @@ public class GroupAddMembersActivity extends BaseActivity {
     }
 
     // 即时显示被选中用户的头像和昵称。
-
     private void showCheckImage(Bitmap bitmap, EaseUser user) {
 
         if (exitingMembers.contains(user.getUsername()) && groupId != null) {
@@ -359,7 +348,7 @@ public class GroupAddMembersActivity extends BaseActivity {
                 public void run() {
                     try {
                         EMClient.getInstance().groupManager().addUsersToGroup(groupId, members.toArray(new String[0]));//需异步处理
-                        updateGroupInfo(members,progressDialog);
+                        updateGroupInfo(members, progressDialog);
                     } catch (HyphenateException e) {
                         runOnUiThread(new Runnable() {
                             public void run() {
@@ -377,8 +366,8 @@ public class GroupAddMembersActivity extends BaseActivity {
                 @Override
                 public void run() {
                     try {
-                        EMClient.getInstance().groupManager().inviteUser(groupId,  members.toArray(new String[0]), null);//需异步处理
-                        updateGroupInfo(members,progressDialog);
+                        EMClient.getInstance().groupManager().inviteUser(groupId, members.toArray(new String[0]), null);//需异步处理
+                        updateGroupInfo(members, progressDialog);
                     } catch (HyphenateException e) {
                         runOnUiThread(new Runnable() {
                             public void run() {
@@ -394,56 +383,60 @@ public class GroupAddMembersActivity extends BaseActivity {
     }
 
     private void updateGroupInfo(List<String> members, final ProgressDialog progressDialog) throws HyphenateException {
-       try {
-           JSONObject oldjson = JSONObject.parseObject(groupname);
-           JSONArray oldjsonArray = oldjson.getJSONArray("jsonArray");
-           final String groupName = oldjson.getString("groupname");
-           for (int i = 0; i < members.size(); i++) {
-               EaseUser user = DemoHelper.getInstance().getContactList()
-                       .get(members.get(i));
-               if (user != null) {
-                   JSONObject json_member = new JSONObject();
-                   json_member.put("hxid", user.getUsername());
-                   json_member.put("nick", user.getNick());
-                   json_member.put("avatar", user.getAvatar());
-                   oldjsonArray.add(json_member);
-               }
-           }
-           JSONObject finalJson = new JSONObject();
-           finalJson.put("jsonArray", oldjsonArray);
-           finalJson.put("groupname", groupName);
-           final String groupJSON = finalJson.toJSONString();
-           if (DemoHelper.getInstance().getCurrentUsernName().equals(group.getOwner())) {
-               EMClient.getInstance().groupManager().changeGroupName(groupId,groupJSON);
-               startActivity(new Intent(getApplicationContext(),
-                       ChatActivity.class).putExtra("userId", groupId)
-                       .putExtra("chatType", EMMessage.ChatType.GroupChat)
-                       .putExtra("groupName", groupName));
-               finish();
-           } else {
-                //非群主只能通过后端rest api进行修改群资料
-               runOnUiThread(new Runnable() {
-                   @Override
-                   public void run() {
-                       updateGroupName(groupId, groupJSON,groupName,progressDialog);
-                   }
-               });
+        try {
+            JSONObject oldjson = JSONObject.parseObject(groupname);
+            JSONArray oldjsonArray = oldjson.getJSONArray("jsonArray");
+            final String groupName = oldjson.getString("groupname");
 
-           }
-       }catch (JSONException e){
-           runOnUiThread(new Runnable() {
-               @Override
-               public void run() {
-                   progressDialog.dismiss();
-                   Toast.makeText(getApplicationContext(),"群资料处理失败..",Toast.LENGTH_LONG).show();
-               }
-           });
-       }
+            for (int i = 0; i < members.size(); i++) {
+                EaseUser user = DemoHelper.getInstance().getContactList()
+                        .get(members.get(i));
+                if (user != null) {
+                    JSONObject json_member = new JSONObject();
+                    json_member.put("hxid", user.getUsername());
+                    json_member.put("nick", user.getNick());
+                    json_member.put("avatar", user.getAvatar());
+                    oldjsonArray.add(json_member);
+                }
+                if (oldjsonArray.size() + i > 8) {
+                    break;
+                }
+            }
+            JSONObject finalJson = new JSONObject();
+            finalJson.put("jsonArray", oldjsonArray);
+            finalJson.put("groupname", groupName);
+            final String groupJSON = finalJson.toJSONString();
+            if (DemoHelper.getInstance().getCurrentUsernName().equals(group.getOwner())) {
+                EMClient.getInstance().groupManager().changeGroupName(groupId, groupJSON);
+                startActivity(new Intent(getApplicationContext(),
+                        ChatActivity.class).putExtra("userId", groupId)
+                        .putExtra("chatType", EMMessage.ChatType.GroupChat)
+                );
+                finish();
+            } else {
+                //非群主只能通过后端rest api进行修改群资料
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        updateGroupName(groupId, groupJSON, groupName, progressDialog);
+                    }
+                });
+
+            }
+        } catch (JSONException e) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(), "群资料处理失败..", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
     }
 
 
-    private void updateGroupName(final String groupId, String groupJSON, final String groupName , final ProgressDialog progressDialog) {
-        List<Param> params=new ArrayList<>();
+    private void updateGroupName(final String groupId, String groupJSON, final String groupName, final ProgressDialog progressDialog) {
+        List<Param> params = new ArrayList<>();
         params.add(new Param("groupId", groupId));
         params.add(new Param("groupName", groupJSON));
         OkHttpManager.getInstance().post(params, FXConstant.URL_UPDATE_Groupnanme, new OkHttpManager.HttpCallBack() {
@@ -455,16 +448,17 @@ public class GroupAddMembersActivity extends BaseActivity {
                     startActivity(new Intent(getApplicationContext(),
                             ChatActivity.class).putExtra("userId", groupId)
                             .putExtra("chatType", EMMessage.ChatType.GroupChat)
-                            .putExtra("groupName", groupName));
+                    );
                     finish();
-                }else{
-                    Toast.makeText(getApplicationContext(),"群成员更新群资料失败,code:"+code,Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "群成员更新群资料失败,code:" + code, Toast.LENGTH_LONG).show();
                 }
             }
+
             @Override
             public void onFailure(String errorMsg) {
                 progressDialog.dismiss();
-                Toast.makeText(getApplicationContext(),"群成员更新群资料失败...",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "群成员更新群资料失败...", Toast.LENGTH_LONG).show();
             }
         });
     }

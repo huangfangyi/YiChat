@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -14,8 +15,10 @@ import android.widget.TextView;
 import com.fanxin.app.R;
 import com.fanxin.app.main.adapter.GroupsAdapter;
 import com.fanxin.app.ui.BaseActivity;
+import com.fanxin.app.ui.ChatActivity;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
+import com.hyphenate.chat.EMMessage;
 
 
 public class GroupListActivity extends BaseActivity {
@@ -43,7 +46,14 @@ public class GroupListActivity extends BaseActivity {
         groupListView.addHeaderView(headerView);
         groupListView.addFooterView(footerView);
         groupListView.setAdapter(groupAdapter);
-
+        groupListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position>0&&position<groupAdapter.getCount()+1){
+                    startActivity(new Intent(GroupListActivity.this, ChatActivity.class).putExtra("userId",groupAdapter.getItem(position-1).getGroupId()).putExtra("chatType", EMMessage.ChatType.GroupChat));
+                }
+            }
+        });
         this.findViewById(R.id.iv_add).setOnClickListener(new OnClickListener() {
 
             @Override

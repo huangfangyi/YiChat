@@ -117,8 +117,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
 
 		idText.setText(groupId);
-		if (group.getOwner() == null || "".equals(group.getOwner())
-				|| !group.getOwner().equals(EMClient.getInstance().getCurrentUser())) {
+		if (group.getOwner() == null || "".equals(group.getOwner()) || !group.getOwner().equals(EMClient.getInstance().getCurrentUser())) {
 			exitBtn.setVisibility(View.GONE);
 			deleteBtn.setVisibility(View.GONE);
 			blacklistLayout.setVisibility(View.GONE);

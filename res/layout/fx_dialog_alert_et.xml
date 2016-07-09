@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:text="请输入新的群组名称"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+
+            android:background="#EEEBEB"
+            android:text="取消"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="0.1dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/btn_cancel"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:background="#EEEBEB"
+            android:text="确定"
+            android:textColor="#FFC71F"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_name"
+
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:background="#fff"
+            android:padding="5dp"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_above="@id/btn_ok"
+            android:background="#000000" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

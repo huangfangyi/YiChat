@@ -8,7 +8,6 @@ import com.fanxin.app.main.activity.MainActivity;
 import com.fanxin.app.runtimepermissions.PermissionsManager;
 import com.fanxin.easeui.ui.EaseChatFragment;
 import com.hyphenate.util.EasyUtils;
-
 /**
   *
  */

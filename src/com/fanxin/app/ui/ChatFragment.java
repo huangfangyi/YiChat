@@ -86,7 +86,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return inflater.inflate( R.layout.fx_fragment_chat, container, false);
     }
 
     @Override
@@ -97,22 +97,29 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             if(robotMap!=null && robotMap.containsKey(toChatUsername)){
                 isRobot = true;
             }
+            getView().findViewById(R.id.iv_setting_single).setVisibility(View.VISIBLE);
+            getView().findViewById(R.id.iv_setting_single).setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                  //  startActivity(new Intent(getActivity(),C));
+
+                }
+            });
+            getView().findViewById(R.id.iv_setting_group).setVisibility(View.GONE);
         }
         super.setUpView();
-        // set click listener
-        titleBar.setLeftLayoutClickListener(new OnClickListener() {
+        hideTitleBar();
 
-            @Override
-            public void onClick(View v) {
-                if (EasyUtils.isSingleActivity(getActivity())) {
-                    Intent intent = new Intent(getActivity(), MainActivity.class);
-                    startActivity(intent);
-                }
-                getActivity().finish();
-            }
-        });
         ((EaseEmojiconMenu)inputMenu.getEmojiconMenu()).addEmojiconGroup(EmojiconExampleGroupData.getData());
         if(chatType == EaseConstant.CHATTYPE_GROUP){
+            getView().findViewById(R.id.iv_setting_group).setVisibility(View.VISIBLE);
+            getView().findViewById(R.id.iv_setting_group).setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+            getView().findViewById(R.id.iv_setting_single).setVisibility(View.GONE);
             inputMenu.getPrimaryMenu().getEditText().addTextChangedListener(new TextWatcher() {
                 
                 @Override
@@ -253,7 +260,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         if (chatType == Constant.CHATTYPE_GROUP) {
             EMGroup group = EMClient.getInstance().groupManager().getGroup(toChatUsername);
             if (group == null) {
-                Toast.makeText(getActivity(), R.string.gorup_not_found, 0).show();
+                Toast.makeText(getActivity(), R.string.gorup_not_found,Toast.LENGTH_SHORT).show();
                 return;
             }
             startActivityForResult(
@@ -356,7 +363,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
      */
     protected void startVoiceCall() {
         if (!EMClient.getInstance().isConnected()) {
-            Toast.makeText(getActivity(), R.string.not_connect_to_server, 0).show();
+            Toast.makeText(getActivity(), R.string.not_connect_to_server, Toast.LENGTH_SHORT).show();
         } else {
             startActivity(new Intent(getActivity(), VoiceCallActivity.class).putExtra("username", toChatUsername)
                     .putExtra("isComingCall", false));
@@ -370,7 +377,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
      */
     protected void startVideoCall() {
         if (!EMClient.getInstance().isConnected())
-            Toast.makeText(getActivity(), R.string.not_connect_to_server, 0).show();
+            Toast.makeText(getActivity(), R.string.not_connect_to_server, Toast.LENGTH_SHORT).show();
         else {
             startActivity(new Intent(getActivity(), VideoCallActivity.class).putExtra("username", toChatUsername)
                     .putExtra("isComingCall", false));
