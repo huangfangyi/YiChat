@@ -86,9 +86,8 @@ public class NewFriendsAdapter extends BaseAdapter {
         final InviteMessage msg = getItem(total - 1 - position);
         String reason = "请求加好友";
         String nick = msg.getFrom();
-
         try {
-            JSONObject jsonObject = JSONObject.parseObject( msg.getReason());
+            JSONObject jsonObject = JSONObject.parseObject(msg.getReason());
             if(jsonObject!=null){
                 nick=jsonObject.getString("nick");
                 String avatar=jsonObject.getString("avatar");
@@ -161,8 +160,6 @@ public class NewFriendsAdapter extends BaseAdapter {
                         dao.saveContact(user);
                         sendCmdAgreeMsg(button, msg, textview, pd);
                     }
-
-
                 }
 
             }

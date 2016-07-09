@@ -149,7 +149,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                 break;
             case R.id.re_chatroom:
                 // 进入群聊列表页面
-                startActivity(new Intent(getActivity(), GroupsActivity.class));
+                startActivity(new Intent(getActivity(), GroupListActivity.class));
                 break;
             case R.id.re_tag:
                 //进入聊天室列表页面

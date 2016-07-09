@@ -768,6 +768,9 @@ public class DemoHelper {
                             Log.d(TAG, message.getFrom() + "accept your request");
                             msg.setStatus(InviteMessage.InviteMesageStatus.BEAGREED);
                             notifyNewInviteMessage(msg);
+                            EaseUser user=JSONUtil.Json2User(JSONObject.parseObject(userInfo));
+                            getContactList().put(user.getUsername(),user);
+                            userDao.saveContact(user);
                             broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
                         } catch (HyphenateException e) {
                             e.printStackTrace();

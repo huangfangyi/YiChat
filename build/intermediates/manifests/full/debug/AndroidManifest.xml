@@ -74,7 +74,7 @@
             android:name="com.fanxin.app.main.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+            android:windowSoftInputMode="adjustResize" >
         </activity>
 
         <!-- 注册 -->
@@ -82,7 +82,7 @@
             android:name="com.fanxin.app.main.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <!-- 聊天页面 -->
         <activity
@@ -275,12 +275,6 @@
         </activity>
 
         <!-- iOS offline push nick -->
-        <activity
-            android:name="com.fanxin.app.ui.OfflinePushNickActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
         <!-- robots list -->
         <activity
             android:name="com.fanxin.app.ui.RobotsActivity"
@@ -288,10 +282,7 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <!-- user profile -->
-        <activity
-            android:name="com.fanxin.app.ui.UserProfileActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide" />
+
 
         <!-- 红包相关Activity start -->
         <!-- 发红包 -->
@@ -299,7 +290,7 @@
             android:name="com.easemob.redpacketui.ui.activity.RPRedPacketActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustPan|stateVisible" />
+            android:windowSoftInputMode="adjustPan" />
         <!-- 红包详情 -->
         <activity
             android:name="com.easemob.redpacketui.ui.activity.RPDetailActivity"
@@ -348,9 +339,50 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
         </activity>
-        <!-- 用户信息更新页面 -->
         <activity
             android:name="com.fanxin.app.main.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.AddFriendsPreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.AddFriendsNextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.AddFriendsFinalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.NewFriendsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.GroupListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.activity.GroupAddMembersActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
@@ -380,6 +412,14 @@
 
         <service
             android:name="com.hyphenate.chat.EMGCMListenerService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.fanxin.app.main.service.ContactsService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.fanxin.app.main.service.GroupService"
             android:exported="false" >
         </service>
 

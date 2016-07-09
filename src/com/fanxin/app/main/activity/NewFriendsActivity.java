@@ -2,8 +2,6 @@ package com.fanxin.app.main.activity;
 
 import java.util.List;
 
-import com.fanxin.app.Constant;
-
 import com.fanxin.app.R;
 
 import com.fanxin.app.db.InviteMessgeDao;
@@ -32,7 +30,7 @@ public class NewFriendsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newfriendsmsg);
+        setContentView(R.layout.fx_activity_new_friends);
         listView = (ListView) findViewById(R.id.listview);
         TextView et_search = (TextView) findViewById(R.id.et_search);
         TextView tv_add = (TextView) findViewById(R.id.tv_add);

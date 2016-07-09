@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/group_avatar"
+    android:layout_height="@dimen/group_avatar"
+    android:background="#DBDFE0"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/iv_avatar1"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/fx_default_useravatar" />
+
+    <ImageView
+        android:id="@+id/iv_avatar2"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+
+        android:layout_toRightOf="@id/iv_avatar1"
+        android:src="@drawable/fx_default_useravatar" />
+
+
+</LinearLayout>

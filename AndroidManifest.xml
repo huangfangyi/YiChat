@@ -388,6 +388,18 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
         </activity>
+        <activity
+        android:name=".main.activity.GroupListActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/horizontal_slide"
+        android:windowSoftInputMode="adjustResize" >
+    </activity>
+        <activity
+            android:name=".main.activity.GroupAddMembersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver" >
@@ -416,7 +428,9 @@
         <service android:name="com.fanxin.app.main.service.ContactsService"
             android:exported="false" >
         </service>
-
+        <service android:name="com.fanxin.app.main.service.GroupService"
+            android:exported="false" >
+        </service>
 
 
         <receiver 

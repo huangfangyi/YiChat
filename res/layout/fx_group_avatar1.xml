@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/group_avatar"
+    android:layout_height="@dimen/group_avatar"
+    android:background="#DBDFE0">
+
+    <ImageView
+        android:id="@+id/iv_avatar1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/fx_default_useravatar" />
+
+
+</RelativeLayout>
