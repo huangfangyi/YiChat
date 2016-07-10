@@ -359,6 +359,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".main.activity.ScanCaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".main.activity.MyQrActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver">
             <intent-filter android:priority="1000">

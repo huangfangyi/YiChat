@@ -1,4 +1,4 @@
-package com.fanxin.app.main.widget.scan;
+package com.fanxin.app.main.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,8 +25,8 @@ import android.widget.Toast;
 
 
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
-import com.fanxin.app.main.activity.UserDetailsActivity;
+import com.fanxin.app.main.widget.scan.CameraManager;
+import com.fanxin.app.main.widget.scan.CameraPreview;
 
 import net.sourceforge.zbar.Config;
 import net.sourceforge.zbar.Image;
@@ -37,7 +37,7 @@ import net.sourceforge.zbar.SymbolSet;
 import java.io.IOException;
 import java.lang.reflect.Field;
 
-public class ScanCaptureAct extends Activity {
+public class ScanCaptureActivity extends Activity {
 	private Camera mCamera;
 	private CameraPreview mPreview;
 	private Handler autoFocusHandler;
@@ -206,7 +206,7 @@ public class ScanCaptureAct extends Activity {
 					if (type.equals("userInfo")) {
 
 
-						startActivity(new Intent(ScanCaptureAct.this,
+						startActivity(new Intent(ScanCaptureActivity.this,
 								UserDetailsActivity.class).putExtra(
 								FXConstant.KEY_USER_INFO, value));
 

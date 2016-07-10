@@ -43,7 +43,6 @@ import com.hyphenate.util.EMLog;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -223,6 +222,7 @@ import android.widget.Toast;
                         break;
                     //扫一扫
                     case 2:
+                        startActivity(new Intent(MainActivity.this, ScanCaptureActivity.class));
                         break;
                     //帮助及反馈
                     case 3:

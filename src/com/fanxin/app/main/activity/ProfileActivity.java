@@ -87,6 +87,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         this.findViewById(R.id.re_sex).setOnClickListener(this);
         this.findViewById(R.id.re_region).setOnClickListener(this);
         this.findViewById(R.id.re_sign).setOnClickListener(this);
+        this.findViewById(R.id.re_qrcode).setOnClickListener(this);
     }
 
     @Override
@@ -114,6 +115,9 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
             case R.id.re_sign:
                 startActivityForResult(new Intent(ProfileActivity.this,
                         ProfileUpdateActivity.class).putExtra("type", ProfileUpdateActivity.TYPE_SIGN).putExtra("default", userJson.getString(FXConstant.JSON_KEY_SIGN)), UPDATE_SIGN);
+                break;
+            case R.id.re_qrcode:
+                startActivity(new Intent(ProfileActivity.this,MyQrActivity.class));
                 break;
 
         }

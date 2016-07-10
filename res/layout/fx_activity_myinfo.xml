@@ -164,7 +164,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/re_erweima"
+        android:id="@+id/re_qrcode"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/fx_btn_list_item_bg"

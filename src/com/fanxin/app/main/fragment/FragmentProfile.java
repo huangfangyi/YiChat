@@ -53,7 +53,7 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
 
         getView().findViewById(R.id.re_myinfo).setOnClickListener(this);
         getView().findViewById(R.id.re_setting).setOnClickListener(this);
-    }
+     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -79,6 +79,8 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
             case R.id.re_setting:
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
                 break;
+
+
 
         }
     }
