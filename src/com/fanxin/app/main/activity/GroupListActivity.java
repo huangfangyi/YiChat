@@ -16,6 +16,7 @@ import com.fanxin.app.R;
 import com.fanxin.app.main.adapter.GroupsAdapter;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.app.ui.ChatActivity;
+import com.fanxin.easeui.EaseConstant;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMMessage;
@@ -50,7 +51,7 @@ public class GroupListActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position>0&&position<groupAdapter.getCount()+1){
-                    startActivity(new Intent(GroupListActivity.this, ChatActivity.class).putExtra("userId",groupAdapter.getItem(position-1).getGroupId()).putExtra("chatType", EMMessage.ChatType.GroupChat));
+                    startActivity(new Intent(GroupListActivity.this, ChatActivity.class).putExtra("userId",groupAdapter.getItem(position-1).getGroupId()).putExtra("chatType", EaseConstant.CHATTYPE_GROUP));
                 }
             }
         });

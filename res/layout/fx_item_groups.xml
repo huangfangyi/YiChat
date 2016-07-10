@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="54dp"
     android:background="@drawable/fx_btn_list_item_bg"
-    android:clickable="true">
+     >
 
     <RelativeLayout
         android:background="#DBDFE0"

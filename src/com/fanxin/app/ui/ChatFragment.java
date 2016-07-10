@@ -27,6 +27,8 @@ import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.easemob.redpacketui.widget.ChatRowRedPacket;
 import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
+import com.fanxin.app.main.activity.ChatSettingGroupActivity;
+import com.fanxin.app.main.activity.ChatSettingSingleActivity;
 import com.fanxin.app.main.activity.FXConstant;
 import com.fanxin.app.main.activity.MainActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
@@ -101,7 +103,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             getView().findViewById(R.id.iv_setting_single).setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                  //  startActivity(new Intent(getActivity(),C));
+                   startActivity(new Intent(getActivity(), ChatSettingSingleActivity.class).putExtra("userId",toChatUsername));
 
                 }
             });
@@ -116,7 +118,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             getView().findViewById(R.id.iv_setting_group).setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    startActivity(new Intent(getActivity(), ChatSettingGroupActivity.class).putExtra("groupId",toChatUsername));
                 }
             });
             getView().findViewById(R.id.iv_setting_single).setVisibility(View.GONE);
