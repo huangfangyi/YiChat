@@ -51,8 +51,6 @@ import java.util.Map;
 public class ContactListFragment extends EaseContactListFragment implements  View.OnClickListener {
 	
     private static final String TAG = ContactListFragment.class.getSimpleName();
-
-  //  private View loadingView;
     private TextView tvUnread;
     private InviteMessgeDao inviteMessgeDao;
 
@@ -67,10 +65,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
         headerView.findViewById(R.id.re_public).setOnClickListener(this);
         tvUnread= (TextView) headerView.findViewById(R.id.tv_unread);
         listView.addHeaderView(headerView);
-        //add loading view
-//        loadingView = LayoutInflater.from(getActivity()).inflate(R.layout.em_layout_loading_data, null);
-//        contentContainer.addView(loadingView);
-       this.titleBar.setVisibility(View.GONE);
+        this.titleBar.setVisibility(View.GONE);
         getView().findViewById(R.id.search_bar_view).setVisibility(View.GONE);
         registerForContextMenu(listView);
     }
@@ -94,16 +89,14 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
     }
     
     
-    @SuppressWarnings("unchecked")
-    @Override
+     @Override
     protected void setUpView() {
         titleBar.setRightImageResource(R.drawable.em_add);
         titleBar.setRightLayoutClickListener(new OnClickListener() {
             
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(getActivity(), AddContactActivity.class));
-                NetUtils.hasDataConnection(getActivity());
+                 NetUtils.hasDataConnection(getActivity());
             }
         });
         //设置联系人数据
@@ -117,21 +110,12 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String username = ((EaseUser)listView.getItemAtPosition(position)).getUsername();
+                EaseUser user = ((EaseUser)listView.getItemAtPosition(position));
                 // demo中直接进入聊天页面，实际一般是进入用户详情页
-                startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("userId", username));
+                startActivity(new Intent(getActivity(), UserDetailsActivity.class).putExtra(FXConstant.KEY_USER_INFO, user.getUserInfo()));
             }
         });
 
-        
-        // 进入添加好友页
-        titleBar.getRightLayout().setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), AddContactActivity.class));
-            }
-        });
     }
     
     @Override
@@ -163,12 +147,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
             default:
                 break;
         }
-
     }
-
-
-
-	
 
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
@@ -197,8 +176,6 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 		}
 		return super.onContextItemSelected(item);
 	}
-
-
 	/**
 	 * delete contact
 	 * 
@@ -236,7 +213,6 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 					});
 
 				}
-
 			}
 		}).start();
 

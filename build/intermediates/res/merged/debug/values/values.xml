@@ -111,6 +111,7 @@
     <dimen name="font63px">21sp</dimen>
     <dimen name="font69px">23sp</dimen>
     <dimen name="font90px">30dp</dimen>
+    <dimen name="group_avatar">48dp</dimen>
     <dimen name="height_row_weixin">59dp</dimen>
     <dimen name="height_top_bar">48dp</dimen>
     <dimen name="image_thumbnail_size">100dp</dimen>
@@ -763,6 +764,10 @@
     </style>
     <style name="Anim_style2" parent="android:Theme.NoTitleBar">
         <item name="android:windowAnimationStyle">@style/AnimFade</item>
+    </style>
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
     <style name="AppTheme" parent="android:Theme.Light"/>
     <style name="AvatarIconStyle">
