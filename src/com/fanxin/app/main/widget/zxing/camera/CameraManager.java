@@ -26,7 +26,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
-import com.zxing.activity.DensityUtil;
+
+import com.fanxin.app.main.widget.zxing.activity.DensityUtil;
 
 import java.io.IOException;
 
@@ -247,7 +248,7 @@ public final class CameraManager {
       int leftOffset = (screenResolution.x - width) / 2;
       int topOffset=(screenResolution.y - height) / 2;
       if(is_top){
-    	  topOffset=DensityUtil.dip2px(getContext(),80);
+    	  topOffset= DensityUtil.dip2px(getContext(),80);
       }
        
       framingRect = new Rect(leftOffset, topOffset, leftOffset + width, topOffset + height);

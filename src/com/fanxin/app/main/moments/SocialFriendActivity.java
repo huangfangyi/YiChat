@@ -32,6 +32,7 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.activity.MomentsPublishActivity;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
@@ -242,7 +243,7 @@ public class SocialFriendActivity extends BaseActivity {
             intent.putExtra("imagePath", path);
 
             intent.setClass(SocialFriendActivity.this,
-                    SocialPublishActivity.class);
+                    MomentsPublishActivity.class);
             startActivity(intent);
             super.onActivityResult(requestCode, resultCode, data);
         }

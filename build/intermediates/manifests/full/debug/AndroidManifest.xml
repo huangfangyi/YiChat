@@ -377,7 +377,26 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" />
-
+        <activity
+            android:name="com.fanxin.app.main.moments.BigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.fanxin.app.main.moments.SocialFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.fanxin.app.main.moments.SocialDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.fanxin.app.main.moments.MyWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" />
         <!-- 开机自启动服务 -->
         <receiver android:name="com.fanxin.app.receiver.StartServiceReceiver" >
             <intent-filter android:priority="1000" >

@@ -56,14 +56,6 @@ public class AddPopWindow extends PopupWindow {
 
                 clickCallBack.clicked(1);
 
-
-//				// Intent(context,AddFriendsOneActivity.class));
-//				if (is_good) {
-//
-//					((SocialMainActivity) context).setGood(sID);
-//				} else {
-//					((SocialMainActivity) context).cancelGood(sID);
-//				}
                 AddPopWindow.this.dismiss();
 
             }
@@ -74,17 +66,9 @@ public class AddPopWindow extends PopupWindow {
             @Override
             public void onClick(View v) {
                 clickCallBack.clicked(2);
-//				((SocialMainActivity) context).showCommentEditText(sID);
 
-                // context.startActivity(new
-                // Intent(context,CaptureActivity.class));
                 AddPopWindow.this.dismiss();
-                // Intent openCameraIntent = new
-                // Intent(BarCodeTestActivity.this,CaptureActivity.class);
-                // startActivityForResult(openCameraIntent, 0);
-                // Intent openCameraIntent = new
-                // Intent(context,CaptureActivity.class);
-                // startActivityForResult(openCameraIntent, 0);
+
             }
 
         });

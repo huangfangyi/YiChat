@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:2:1-528:12
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:2:1-547:12
 	package
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:4:5-29
 		INJECTED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml
@@ -149,7 +149,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:4
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:45:22-77
 application
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:47:5-526:19
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:47:5-545:19
 MERGED from [FanXin0704:library:unspecified] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\FanXin0704\library\unspecified\AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
@@ -710,175 +710,215 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:3
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:380:13-52
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:378:13-65
-receiver#com.fanxin.app.receiver.StartServiceReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:384:9-391:20
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:384:19-64
-intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON+android.intent.category.LAUNCHER
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:385:13-390:29
-	android:priority
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:385:28-51
-action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:386:17-79
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:386:25-76
-action#android.intent.action.QUICKBOOT_POWERON
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:387:17-82
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:387:25-79
-receiver#com.hyphenate.chat.EMGCMBroadcastReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:394:9-402:20
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:396:13-36
-	android:permission
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:397:13-73
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:395:13-69
-intent-filter#com.fanxin.app+com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:398:13-401:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:399:17-81
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:399:25-78
-category#com.fanxin.app
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:400:17-59
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:400:27-56
-service#com.hyphenate.chat.EMGCMListenerService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:404:9-406:48
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:406:13-37
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:405:13-67
-service#com.fanxin.app.main.service.ContactsService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:407:9-409:48
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:409:13-37
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:408:13-71
-service#com.fanxin.app.main.service.GroupService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:410:9-412:48
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:412:13-37
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:411:13-68
-receiver#com.fanxin.app.receiver.GCMPushBroadCast
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:415:9-422:20
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:417:13-37
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:416:13-54
-intent-filter#com.fanxin.app+com.hyphenate.sdk.push
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:418:13-421:29
-action#com.hyphenate.sdk.push
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:419:17-65
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:419:25-62
-service#com.xiaomi.mipush.sdk.PushMessageHandler
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:426:9-429:39
-	android:enabled
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:428:13-35
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:429:13-36
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:427:13-68
-service#com.xiaomi.mipush.sdk.MessageHandleService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:430:9-432:38
-	android:enabled
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:432:13-35
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:431:13-70
-receiver#com.hyphenate.chat.EMMipushReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:434:9-446:20
-	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:436:13-36
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:435:13-63
-intent-filter#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:437:13-439:29
-action#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:438:17-76
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:438:25-73
-intent-filter#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:440:13-442:29
-action#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:441:17-76
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:441:25-73
-intent-filter#com.xiaomi.mipush.ERROR
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:443:13-445:29
-action#com.xiaomi.mipush.ERROR
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:444:17-66
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:444:25-63
-service#com.umeng.update.net.DownloadingService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:482:9-484:61
-	android:process
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:484:13-50
-	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:483:13-67
-activity#com.umeng.update.UpdateDialogActivity
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:485:9-487:84
+activity#com.fanxin.app.main.moments.BigImageActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:382:9-386:67
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:384:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:386:13-55
 	android:theme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:487:13-72
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:385:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:486:13-65
-meta-data#EASEMOB_APPKEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:490:9-492:48
-	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:492:13-45
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:383:13-58
+activity#com.fanxin.app.main.moments.SocialFriendActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:387:9-391:67
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:389:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:391:13-55
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:390:13-52
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:491:13-42
-service#com.hyphenate.chat.EMChatService
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:494:9-496:39
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:388:13-62
+activity#com.fanxin.app.main.moments.SocialDetailActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:392:9-396:67
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:394:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:396:13-55
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:395:13-52
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:393:13-62
+activity#com.fanxin.app.main.moments.MyWebViewActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:397:9-401:67
+	android:screenOrientation
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:399:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:401:13-55
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:400:13-52
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:398:13-59
+receiver#com.fanxin.app.receiver.StartServiceReceiver
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:403:9-410:20
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:403:19-64
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON+android.intent.category.LAUNCHER
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:404:13-409:29
+	android:priority
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:404:28-51
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:405:17-79
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:405:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:406:17-82
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:406:25-79
+receiver#com.hyphenate.chat.EMGCMBroadcastReceiver
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:413:9-421:20
 	android:exported
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:496:13-36
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:415:13-36
+	android:permission
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:416:13-73
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:495:13-60
-receiver#com.hyphenate.chat.EMMonitorReceiver
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:498:9-508:20
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:414:13-69
+intent-filter#com.fanxin.app+com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:417:13-420:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:418:17-81
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:498:19-70
-intent-filter#android.intent.action.PACKAGE_REMOVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:499:13-502:29
-action#android.intent.action.PACKAGE_REMOVED
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:500:17-80
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:418:25-78
+category#com.fanxin.app
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:419:17-59
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:500:25-77
-data
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:501:17-50
-	android:scheme
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:501:23-47
-intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:504:13-507:29
-action#android.intent.action.USER_PRESENT
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:506:17-77
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:419:27-56
+service#com.hyphenate.chat.EMGCMListenerService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:423:9-425:48
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:425:13-37
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:506:25-74
-service#com.baidu.location.f
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:511:9-514:41
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:424:13-67
+service#com.fanxin.app.main.service.ContactsService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:426:9-428:48
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:428:13-37
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:427:13-71
+service#com.fanxin.app.main.service.GroupService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:429:9-431:48
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:431:13-37
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:430:13-68
+receiver#com.fanxin.app.receiver.GCMPushBroadCast
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:434:9-441:20
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:436:13-37
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:435:13-54
+intent-filter#com.fanxin.app+com.hyphenate.sdk.push
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:437:13-440:29
+action#com.hyphenate.sdk.push
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:438:17-65
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:438:25-62
+service#com.xiaomi.mipush.sdk.PushMessageHandler
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:445:9-448:39
 	android:enabled
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:513:13-35
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:447:13-35
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:448:13-36
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:446:13-68
+service#com.xiaomi.mipush.sdk.MessageHandleService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:449:9-451:38
+	android:enabled
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:451:13-35
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:450:13-70
+receiver#com.hyphenate.chat.EMMipushReceiver
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:453:9-465:20
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:455:13-36
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:454:13-63
+intent-filter#com.xiaomi.mipush.RECEIVE_MESSAGE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:456:13-458:29
+action#com.xiaomi.mipush.RECEIVE_MESSAGE
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:457:17-76
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:457:25-73
+intent-filter#com.xiaomi.mipush.MESSAGE_ARRIVED
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:459:13-461:29
+action#com.xiaomi.mipush.MESSAGE_ARRIVED
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:460:17-76
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:460:25-73
+intent-filter#com.xiaomi.mipush.ERROR
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:462:13-464:29
+action#com.xiaomi.mipush.ERROR
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:463:17-66
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:463:25-63
+service#com.umeng.update.net.DownloadingService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:501:9-503:61
 	android:process
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:514:13-38
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:503:13-50
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:512:13-48
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:502:13-67
+activity#com.umeng.update.UpdateDialogActivity
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:504:9-506:84
+	android:theme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:506:13-72
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:505:13-65
+meta-data#EASEMOB_APPKEY
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:509:9-511:48
+	android:value
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:511:13-45
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:510:13-42
+service#com.hyphenate.chat.EMChatService
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:513:9-515:39
+	android:exported
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:515:13-36
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:514:13-60
+receiver#com.hyphenate.chat.EMMonitorReceiver
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:517:9-527:20
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:517:19-70
+intent-filter#android.intent.action.PACKAGE_REMOVED
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:518:13-521:29
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:519:17-80
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:519:25-77
+data
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:520:17-50
+	android:scheme
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:520:23-47
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:523:13-526:29
+action#android.intent.action.USER_PRESENT
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:525:17-77
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:525:25-74
+service#com.baidu.location.f
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:530:9-533:41
+	android:enabled
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:532:13-35
+	android:process
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:533:13-38
+	android:name
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:531:13-48
 meta-data#UMENG_APPKEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:516:9-518:66
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:535:9-537:66
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:518:13-53
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:537:13-53
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:517:13-40
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:536:13-40
 meta-data#UMENG_CHANNEL
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:519:9-521:41
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:538:9-540:41
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:521:13-38
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:540:13-38
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:520:13-41
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:539:13-41
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:522:9-524:64
+ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:541:9-543:64
 	android:value
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:524:13-61
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:543:13-61
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:523:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:542:13-52

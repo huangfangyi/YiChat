@@ -1,7 +1,6 @@
 package com.fanxin.app.main.moments;
 
-import com.yinglouquan.app.R;
-import com.yinglouquan.app.activity.BaseActivity;
+
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,9 +9,14 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.BaseAdapter;
 import android.widget.ProgressBar;
 
-public class MyWebViewActivity extends Activity {
+import com.fanxin.app.R;
+import com.fanxin.app.ui.BaseActivity;
+
+public class MyWebViewActivity extends BaseActivity {
+
     WebView webView;
     ProgressBar progressBar1;
 
