@@ -2,12 +2,6 @@ package com.fanxin.app.main.moments;
 
 import java.util.ArrayList;
 import java.util.List;
- 
-
-
-
-import com.yinglouquan.app.Constant;
-import com.yinglouquan.app.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -22,11 +16,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+
+import com.fanxin.app.R;
+import com.fanxin.app.main.activity.FXConstant;
+
 /**
  * 广告图片自动轮播控件</br>
  * 
  */
 public class ImageCycleView extends LinearLayout {
+
     /**
      * 上下文
      */
@@ -78,7 +77,7 @@ public class ImageCycleView extends LinearLayout {
         super(context, attrs);
         mContext = context;
         mScale = context.getResources().getDisplayMetrics().density;
-        LayoutInflater.from(context).inflate(R.layout.social_view_ad_cycle,
+        LayoutInflater.from(context).inflate(R.layout.fx_layout_imagecycle,
                 this);
         mAdvPager = (ViewPager) findViewById(R.id.adv_pager);
         mAdvPager.setOnPageChangeListener(new GuidePageChangeListener());
@@ -107,7 +106,7 @@ public class ImageCycleView extends LinearLayout {
     /**
      * 装填图片数据
      * 
-     * @param imageUrlList
+     * @param
      * @param imageCycleViewListener
      */
     public void setImageResources(String[] images, int page,
@@ -137,10 +136,10 @@ public class ImageCycleView extends LinearLayout {
             mImageViews[i] = mImageView;
             if (i == 0) {
                 mImageViews[i]
-                        .setBackgroundResource(R.drawable.banner_dian_focus);
+                        .setBackgroundResource(R.drawable.fx_banner_dian_focus);
             } else {
                 mImageViews[i]
-                        .setBackgroundResource(R.drawable.banner_dian_blur);
+                        .setBackgroundResource(R.drawable.fx_banner_dian_blur);
             }
             mGroup.addView(mImageViews[i]);
         }
@@ -223,14 +222,14 @@ public class ImageCycleView extends LinearLayout {
             index = index % mImageViews.length;
             // 设置图片滚动指示器背
             mImageViews[index]
-                    .setBackgroundResource(R.drawable.banner_dian_focus);
+                    .setBackgroundResource(R.drawable.fx_banner_dian_focus);
             // imageNameList.get(index)
 
         //    imageName.setText("打赏(" + rewardList.get(index) + ")");
             for (int i = 0; i < mImageViews.length; i++) {
                 if (index != i) {
                     mImageViews[i]
-                            .setBackgroundResource(R.drawable.banner_dian_blur);
+                            .setBackgroundResource(R.drawable.fx_banner_dian_blur);
                 }
             }
         }
@@ -280,7 +279,7 @@ public class ImageCycleView extends LinearLayout {
 
         @Override
         public Object instantiateItem(ViewGroup container, final int position) {
-            String imageUrl = Constant.URL_SOCIAL_PHOTO
+            String imageUrl = FXConstant.URL_SOCIAL_PHOTO
                     + "big_"
                     + imageArray[position % imageArray.length];
                              

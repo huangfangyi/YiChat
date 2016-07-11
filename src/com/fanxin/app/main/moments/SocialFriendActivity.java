@@ -28,16 +28,9 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.yinglouquan.app.Constant;
-import com.yinglouquan.app.MYApplication;
-import com.yinglouquan.app.R;
-import com.yinglouquan.app.activity.BaseActivity;
-import com.yinglouquan.app.comments.SocialApiTask.DataCallBack;
-import com.yinglouquan.app.domain.User;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
-import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.fanxin.app.R;
+import com.fanxin.app.ui.BaseActivity;
+import com.markupartist.android.widget.PullToRefreshListView;
 
 public class SocialFriendActivity extends BaseActivity {
 

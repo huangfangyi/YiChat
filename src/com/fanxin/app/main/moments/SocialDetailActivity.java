@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -404,10 +403,8 @@ public class SocialDetailActivity extends BaseActivity {
         Window window = dlg.getWindow();
         window.setContentView(R.layout.fx_dialog_social_delete);
         TextView tv_cancel = (TextView) window.findViewById(R.id.tv_cancel);
-
         tv_cancel.setOnClickListener(new OnClickListener() {
-            @SuppressLint("SdCardPath")
-            public void onClick(View v) {
+             public void onClick(View v) {
                 dlg.cancel();
             }
         });
@@ -694,9 +691,8 @@ public class SocialDetailActivity extends BaseActivity {
         TextView tv_paizhao = (TextView) window.findViewById(R.id.tv_content1);
         tv_paizhao.setText("复制");
         tv_paizhao.setOnClickListener(new OnClickListener() {
-            @SuppressWarnings("deprecation")
-            @SuppressLint("SdCardPath")
-            public void onClick(View v) {
+
+             public void onClick(View v) {
                 ClipboardManager cmb = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 cmb.setText(cjsons.getJSONObject(postion).getString("content")
                         .trim());

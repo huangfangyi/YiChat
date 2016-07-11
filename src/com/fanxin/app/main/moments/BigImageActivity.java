@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.alibaba.fastjson.JSONArray;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.fanxin.app.R;
 import com.fanxin.app.ui.BaseActivity;
 
@@ -17,7 +18,7 @@ public class BigImageActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.social_activity_bigimage);
+        setContentView(R.layout.fx_activity_bigimage);
       //  String jsonStr = getIntent().getStringExtra("jsonStr");
         
         String[] images=getIntent().getStringArrayExtra("images");
@@ -38,7 +39,7 @@ public class BigImageActivity extends BaseActivity {
        
      
 
-    private ImageCycleViewListener mAdCycleViewListener = new ImageCycleViewListener() {
+    private ImageCycleView.ImageCycleViewListener mAdCycleViewListener = new ImageCycleView.ImageCycleViewListener() {
         @Override
         public void onImageClick(int position, View imageView) {
 
@@ -47,7 +48,8 @@ public class BigImageActivity extends BaseActivity {
 
         @Override
         public void displayImage(String imageURL, ImageView imageView) {
-            ImageLoader.getInstance().displayImage(imageURL, imageView);
+            Glide.with(BigImageActivity.this).load(imageURL).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
+        //    ImageLoader.getInstance().displayImage(imageURL, imageView);
         }
     };
 

@@ -13,12 +13,8 @@ import java.util.Map;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.yinglouquan.app.Constant;
-import com.yinglouquan.app.MYApplication;
-import com.yinglouquan.app.R;
-import com.yinglouquan.app.comments.SocialApiTask.DataCallBack;
-import com.yinglouquan.app.domain.User;
-import com.yinglouquan.app.fx.others.LocalUserInfo;
+import com.fanxin.app.R;
+
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -48,6 +44,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SocialFriendAdapter extends BaseAdapter {
+
     private SocialFriendActivity context;
     private List<JSONObject> users;
     private LayoutInflater inflater;
