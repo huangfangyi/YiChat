@@ -2,6 +2,7 @@ package com.fanxin.app.main.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
+import com.fanxin.app.DemoApplication;
+import com.fanxin.app.DemoHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -132,6 +135,66 @@ public class OkHttpManager {
                 Log.d("file.getName()----->>", file.getName());
             }
 
+        }
+        RequestBody requestBody = builder.build();
+        Request request = new Request.Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+
+        startRequest(request);
+
+    }
+
+    //键值对+文件 post请求
+    public void postMoments(List<Param> params, List<Uri> images, String url, HttpCallBack httpCallBack) {
+        Log.d("url----->>", url);
+        this.httpCallBack = httpCallBack;
+        MultipartBody.Builder builder = new MultipartBody.Builder();
+        builder.setType(MultipartBody.FORM);
+
+        int num = images.size();
+        String imageStr="0";
+        for (int i = 0; i < num; i++) {
+            String imageUrl = images.get(i).getPath();
+            String filename = imageUrl.substring(imageUrl
+                    .lastIndexOf("/") + 1);
+
+            File file = new File("/sdcard/bizchat/" + filename);
+
+            File file_big = new File("/sdcard/bizchat/" + "big_" + filename);
+
+//            if (file.exists() && file_big.exists()) {
+//                Log.e("imageStr_ok---->>>>>>.", "ffffff");
+//            } else {
+//                Log.e("imageStr_ok---->>>>>>.", "ggggggg");
+//            }
+//            // 小图
+            builder.addPart(Headers.of("Content-Disposition",
+                    "form-data; name=\"" + "file_" + String.valueOf(i) + "\"; filename=\"" + file.getName() + "\""),
+                    RequestBody.create(MediaType.parse(guessMimeType(file.getName())), file));
+
+
+            // 大图
+            builder.addPart(Headers.of("Content-Disposition",
+                    "form-data; name=\"" + "file_" + String.valueOf(i) + "_big" + "\"; filename=\"" + file_big.getName() + "\""),
+                    RequestBody.create(MediaType.parse(guessMimeType(file_big.getName())), file_big));
+
+            if (i == 0) {
+                imageStr = filename;
+            } else {
+                imageStr = imageStr + "split" + filename;
+                Log.e("imageStr---->>>>>>.", imageStr);
+            }
+        }
+        params.add(new Param("num",String.valueOf(images.size())));
+        params.add(new Param("imageStr",imageStr));
+        params.add(new Param("userID", DemoHelper.getInstance().getCurrentUsernName()));
+        for (Param param : params) {
+
+            builder.addPart(Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\""), RequestBody.create(MediaType.parse(guessMimeType(param.getKey())), param.getValue()));
+            Log.d("param.getKey()----->>", param.getKey());
+            Log.d("param.getValue()----->>", param.getValue());
         }
         RequestBody requestBody = builder.build();
         Request request = new Request.Builder()

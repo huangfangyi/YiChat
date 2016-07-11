@@ -29,6 +29,20 @@ public class FXConstant {
     public static final String URL_WIRHDROW = HOST + "withdraw.php";
     public static final String URL_UPDATE = HOST + "update.php";
     public static final String URL_ADD_FRIEND=HOST + "accept_friend.php";
+
+    //朋友圈接口
+    // 服务器端
+    public static final String URL_PUBLISH = HOST + "publish.php";
+    public static final String URL_SOCIAL = HOST + "social.php";
+    public static final String URL_SOCIAL_PHOTO = HOST + "upload/";
+    public static final String URL_SOCIAL_COMMENT = HOST + "comment.php";
+    public static final String URL_SOCIAL_GOOD = HOST + "social_good.php";
+    public static final String URL_SOCIAL_GOOD_CANCEL = HOST + "social_good_cancel.php";
+    public static final String URL_SOCIAL_DELETE_COMMENT = HOST + "social_comment_delete.php";
+    public static final String URL_SOCIAL_DELETE = HOST + "social_delete.php";
+    public static final String URL_SOCIAL_FRIEND = HOST + "social_friend.php";
+
+
     public static final String JSON_KEY_NICK ="nick";
     public static final String JSON_KEY_HXID ="hxid";
     public static final String JSON_KEY_FXID ="fxid";
@@ -38,6 +52,7 @@ public class FXConstant {
     public static final String JSON_KEY_PROVINCE ="province";
     public static final String JSON_KEY_TEL ="tel";
     public static final String JSON_KEY_SIGN ="sign";
+
 
     public static final String DIR_AVATAR ="/sdcard/fanxin/";
 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        android:background="#f8f8f8" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="center"
+            android:src="@drawable/fx_bg_moments_header" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="12dp"
+            android:background="#fff"
+            android:padding="2dp"
+            android:src="@drawable/fx_default_useravatar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_msg"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:background="#575757"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal" >
+
+        <ImageView
+            android:layout_margin="8dp"
+            android:id="@+id/msg_avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fx_default_useravatar" />
+        
+        <TextView
+            android:gravity="center_horizontal"
+             android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/msg_avatar"
+            android:paddingRight="8dp"
+            android:id="@+id/msg_text"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1条新消息"
+            android:textColor="#fff"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
