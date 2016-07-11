@@ -184,6 +184,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable\\fx_main_activity_add.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable\\fx_main_activity_search.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable\\fx_main_activity_search.xml"
     },
@@ -410,6 +414,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_button_check_selector.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable\\umeng_update_button_check_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable\\em_red_packet_chatto_bg.xml",

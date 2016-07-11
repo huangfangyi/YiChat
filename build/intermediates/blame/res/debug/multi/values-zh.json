@@ -7854,8 +7854,65 @@
                     "startLine": 415,
                     "startColumn": 4,
                     "startOffset": 22882,
+                    "endColumn": 60,
+                    "endOffset": 22938
+                },
+                "from": {
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 60,
+                        "endOffset": 111
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 416,
+                    "startColumn": 4,
+                    "startOffset": 22943,
+                    "endColumn": 66,
+                    "endOffset": 23005
+                },
+                "from": {
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 116,
+                        "endColumn": 66,
+                        "endOffset": 178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 417,
+                    "startColumn": 4,
+                    "startOffset": 23010,
+                    "endColumn": 64,
+                    "endOffset": 23070
+                },
+                "from": {
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 183,
+                        "endColumn": 64,
+                        "endOffset": 243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 418,
+                    "startColumn": 4,
+                    "startOffset": 23075,
                     "endColumn": 47,
-                    "endOffset": 22925
+                    "endOffset": 23118
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -7870,11 +7927,11 @@
             },
             {
                 "to": {
-                    "startLine": 416,
+                    "startLine": 419,
                     "startColumn": 4,
-                    "startOffset": 22930,
+                    "startOffset": 23123,
                     "endColumn": 42,
-                    "endOffset": 22968
+                    "endOffset": 23161
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -7889,11 +7946,11 @@
             },
             {
                 "to": {
-                    "startLine": 417,
+                    "startLine": 420,
                     "startColumn": 4,
-                    "startOffset": 22973,
+                    "startOffset": 23166,
                     "endColumn": 64,
-                    "endOffset": 23033
+                    "endOffset": 23226
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -7908,11 +7965,11 @@
             },
             {
                 "to": {
-                    "startLine": 418,
+                    "startLine": 421,
                     "startColumn": 4,
-                    "startOffset": 23038,
+                    "startOffset": 23231,
                     "endColumn": 51,
-                    "endOffset": 23085
+                    "endOffset": 23278
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -7927,11 +7984,11 @@
             },
             {
                 "to": {
-                    "startLine": 419,
+                    "startLine": 422,
                     "startColumn": 4,
-                    "startOffset": 23090,
+                    "startOffset": 23283,
                     "endColumn": 60,
-                    "endOffset": 23146
+                    "endOffset": 23339
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -7946,11 +8003,11 @@
             },
             {
                 "to": {
-                    "startLine": 420,
+                    "startLine": 423,
                     "startColumn": 4,
-                    "startOffset": 23151,
+                    "startOffset": 23344,
                     "endColumn": 48,
-                    "endOffset": 23195
+                    "endOffset": 23388
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -7965,11 +8022,11 @@
             },
             {
                 "to": {
-                    "startLine": 421,
+                    "startLine": 424,
                     "startColumn": 4,
-                    "startOffset": 23200,
+                    "startOffset": 23393,
                     "endColumn": 40,
-                    "endOffset": 23236
+                    "endOffset": 23429
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -7984,11 +8041,11 @@
             },
             {
                 "to": {
-                    "startLine": 422,
+                    "startLine": 425,
                     "startColumn": 4,
-                    "startOffset": 23241,
+                    "startOffset": 23434,
                     "endColumn": 57,
-                    "endOffset": 23294
+                    "endOffset": 23487
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8003,11 +8060,11 @@
             },
             {
                 "to": {
-                    "startLine": 423,
+                    "startLine": 426,
                     "startColumn": 4,
-                    "startOffset": 23299,
+                    "startOffset": 23492,
                     "endColumn": 37,
-                    "endOffset": 23332
+                    "endOffset": 23525
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8022,11 +8079,11 @@
             },
             {
                 "to": {
-                    "startLine": 424,
+                    "startLine": 427,
                     "startColumn": 4,
-                    "startOffset": 23337,
+                    "startOffset": 23530,
                     "endColumn": 52,
-                    "endOffset": 23385
+                    "endOffset": 23578
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8041,11 +8098,11 @@
             },
             {
                 "to": {
-                    "startLine": 425,
+                    "startLine": 428,
                     "startColumn": 4,
-                    "startOffset": 23390,
+                    "startOffset": 23583,
                     "endColumn": 39,
-                    "endOffset": 23425
+                    "endOffset": 23618
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8060,11 +8117,11 @@
             },
             {
                 "to": {
-                    "startLine": 426,
+                    "startLine": 429,
                     "startColumn": 4,
-                    "startOffset": 23430,
+                    "startOffset": 23623,
                     "endColumn": 76,
-                    "endOffset": 23502
+                    "endOffset": 23695
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8079,11 +8136,11 @@
             },
             {
                 "to": {
-                    "startLine": 427,
+                    "startLine": 430,
                     "startColumn": 4,
-                    "startOffset": 23507,
+                    "startOffset": 23700,
                     "endColumn": 44,
-                    "endOffset": 23547
+                    "endOffset": 23740
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8098,11 +8155,11 @@
             },
             {
                 "to": {
-                    "startLine": 428,
+                    "startLine": 431,
                     "startColumn": 4,
-                    "startOffset": 23552,
+                    "startOffset": 23745,
                     "endColumn": 55,
-                    "endOffset": 23603
+                    "endOffset": 23796
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8117,11 +8174,11 @@
             },
             {
                 "to": {
-                    "startLine": 429,
+                    "startLine": 432,
                     "startColumn": 4,
-                    "startOffset": 23608,
+                    "startOffset": 23801,
                     "endColumn": 62,
-                    "endOffset": 23666
+                    "endOffset": 23859
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8136,11 +8193,11 @@
             },
             {
                 "to": {
-                    "startLine": 430,
+                    "startLine": 433,
                     "startColumn": 4,
-                    "startOffset": 23671,
+                    "startOffset": 23864,
                     "endColumn": 37,
-                    "endOffset": 23704
+                    "endOffset": 23897
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8155,11 +8212,11 @@
             },
             {
                 "to": {
-                    "startLine": 431,
+                    "startLine": 434,
                     "startColumn": 4,
-                    "startOffset": 23709,
+                    "startOffset": 23902,
                     "endColumn": 48,
-                    "endOffset": 23753
+                    "endOffset": 23946
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8174,11 +8231,11 @@
             },
             {
                 "to": {
-                    "startLine": 432,
+                    "startLine": 435,
                     "startColumn": 4,
-                    "startOffset": 23758,
+                    "startOffset": 23951,
                     "endColumn": 49,
-                    "endOffset": 23803
+                    "endOffset": 23996
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8193,11 +8250,11 @@
             },
             {
                 "to": {
-                    "startLine": 433,
+                    "startLine": 436,
                     "startColumn": 4,
-                    "startOffset": 23808,
+                    "startOffset": 24001,
                     "endColumn": 44,
-                    "endOffset": 23848
+                    "endOffset": 24041
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8212,11 +8269,11 @@
             },
             {
                 "to": {
-                    "startLine": 434,
+                    "startLine": 437,
                     "startColumn": 4,
-                    "startOffset": 23853,
+                    "startOffset": 24046,
                     "endColumn": 35,
-                    "endOffset": 23884
+                    "endOffset": 24077
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8231,11 +8288,11 @@
             },
             {
                 "to": {
-                    "startLine": 435,
+                    "startLine": 438,
                     "startColumn": 4,
-                    "startOffset": 23889,
+                    "startOffset": 24082,
                     "endColumn": 48,
-                    "endOffset": 23933
+                    "endOffset": 24126
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8250,11 +8307,11 @@
             },
             {
                 "to": {
-                    "startLine": 436,
+                    "startLine": 439,
                     "startColumn": 4,
-                    "startOffset": 23938,
+                    "startOffset": 24131,
                     "endColumn": 62,
-                    "endOffset": 23996
+                    "endOffset": 24189
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8269,11 +8326,11 @@
             },
             {
                 "to": {
-                    "startLine": 437,
+                    "startLine": 440,
                     "startColumn": 4,
-                    "startOffset": 24001,
+                    "startOffset": 24194,
                     "endColumn": 37,
-                    "endOffset": 24034
+                    "endOffset": 24227
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8288,11 +8345,11 @@
             },
             {
                 "to": {
-                    "startLine": 438,
+                    "startLine": 441,
                     "startColumn": 4,
-                    "startOffset": 24039,
+                    "startOffset": 24232,
                     "endColumn": 52,
-                    "endOffset": 24087
+                    "endOffset": 24280
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8307,11 +8364,11 @@
             },
             {
                 "to": {
-                    "startLine": 439,
+                    "startLine": 442,
                     "startColumn": 4,
-                    "startOffset": 24092,
+                    "startOffset": 24285,
                     "endColumn": 43,
-                    "endOffset": 24131
+                    "endOffset": 24324
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8326,11 +8383,11 @@
             },
             {
                 "to": {
-                    "startLine": 440,
+                    "startLine": 443,
                     "startColumn": 4,
-                    "startOffset": 24136,
+                    "startOffset": 24329,
                     "endColumn": 40,
-                    "endOffset": 24172
+                    "endOffset": 24365
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8345,11 +8402,11 @@
             },
             {
                 "to": {
-                    "startLine": 441,
+                    "startLine": 444,
                     "startColumn": 4,
-                    "startOffset": 24177,
+                    "startOffset": 24370,
                     "endColumn": 52,
-                    "endOffset": 24225
+                    "endOffset": 24418
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8364,11 +8421,11 @@
             },
             {
                 "to": {
-                    "startLine": 442,
+                    "startLine": 445,
                     "startColumn": 4,
-                    "startOffset": 24230,
+                    "startOffset": 24423,
                     "endColumn": 44,
-                    "endOffset": 24270
+                    "endOffset": 24463
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8383,11 +8440,11 @@
             },
             {
                 "to": {
-                    "startLine": 443,
+                    "startLine": 446,
                     "startColumn": 4,
-                    "startOffset": 24275,
+                    "startOffset": 24468,
                     "endColumn": 49,
-                    "endOffset": 24320
+                    "endOffset": 24513
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8402,11 +8459,11 @@
             },
             {
                 "to": {
-                    "startLine": 444,
+                    "startLine": 447,
                     "startColumn": 4,
-                    "startOffset": 24325,
+                    "startOffset": 24518,
                     "endColumn": 45,
-                    "endOffset": 24366
+                    "endOffset": 24559
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8421,11 +8478,11 @@
             },
             {
                 "to": {
-                    "startLine": 445,
+                    "startLine": 448,
                     "startColumn": 4,
-                    "startOffset": 24371,
+                    "startOffset": 24564,
                     "endColumn": 63,
-                    "endOffset": 24430
+                    "endOffset": 24623
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8440,11 +8497,11 @@
             },
             {
                 "to": {
-                    "startLine": 446,
+                    "startLine": 449,
                     "startColumn": 4,
-                    "startOffset": 24435,
+                    "startOffset": 24628,
                     "endColumn": 69,
-                    "endOffset": 24500
+                    "endOffset": 24693
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8459,11 +8516,11 @@
             },
             {
                 "to": {
-                    "startLine": 447,
+                    "startLine": 450,
                     "startColumn": 4,
-                    "startOffset": 24505,
+                    "startOffset": 24698,
                     "endColumn": 48,
-                    "endOffset": 24549
+                    "endOffset": 24742
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8478,11 +8535,11 @@
             },
             {
                 "to": {
-                    "startLine": 448,
+                    "startLine": 451,
                     "startColumn": 4,
-                    "startOffset": 24554,
+                    "startOffset": 24747,
                     "endColumn": 57,
-                    "endOffset": 24607
+                    "endOffset": 24800
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8497,11 +8554,11 @@
             },
             {
                 "to": {
-                    "startLine": 449,
+                    "startLine": 452,
                     "startColumn": 4,
-                    "startOffset": 24612,
+                    "startOffset": 24805,
                     "endColumn": 61,
-                    "endOffset": 24669
+                    "endOffset": 24862
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8516,11 +8573,11 @@
             },
             {
                 "to": {
-                    "startLine": 450,
+                    "startLine": 453,
                     "startColumn": 4,
-                    "startOffset": 24674,
+                    "startOffset": 24867,
                     "endColumn": 50,
-                    "endOffset": 24720
+                    "endOffset": 24913
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8535,11 +8592,11 @@
             },
             {
                 "to": {
-                    "startLine": 451,
+                    "startLine": 454,
                     "startColumn": 4,
-                    "startOffset": 24725,
+                    "startOffset": 24918,
                     "endColumn": 53,
-                    "endOffset": 24774
+                    "endOffset": 24967
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8554,11 +8611,11 @@
             },
             {
                 "to": {
-                    "startLine": 452,
+                    "startLine": 455,
                     "startColumn": 4,
-                    "startOffset": 24779,
+                    "startOffset": 24972,
                     "endColumn": 57,
-                    "endOffset": 24832
+                    "endOffset": 25025
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8573,11 +8630,11 @@
             },
             {
                 "to": {
-                    "startLine": 453,
+                    "startLine": 456,
                     "startColumn": 4,
-                    "startOffset": 24837,
+                    "startOffset": 25030,
                     "endColumn": 54,
-                    "endOffset": 24887
+                    "endOffset": 25080
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8592,11 +8649,11 @@
             },
             {
                 "to": {
-                    "startLine": 454,
+                    "startLine": 457,
                     "startColumn": 4,
-                    "startOffset": 24892,
+                    "startOffset": 25085,
                     "endColumn": 38,
-                    "endOffset": 24926
+                    "endOffset": 25119
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8611,11 +8668,11 @@
             },
             {
                 "to": {
-                    "startLine": 455,
+                    "startLine": 458,
                     "startColumn": 4,
-                    "startOffset": 24931,
+                    "startOffset": 25124,
                     "endColumn": 34,
-                    "endOffset": 24961
+                    "endOffset": 25154
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8630,11 +8687,11 @@
             },
             {
                 "to": {
-                    "startLine": 456,
+                    "startLine": 459,
                     "startColumn": 4,
-                    "startOffset": 24966,
+                    "startOffset": 25159,
                     "endColumn": 51,
-                    "endOffset": 25013
+                    "endOffset": 25206
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8649,11 +8706,11 @@
             },
             {
                 "to": {
-                    "startLine": 457,
+                    "startLine": 460,
                     "startColumn": 4,
-                    "startOffset": 25018,
+                    "startOffset": 25211,
                     "endColumn": 63,
-                    "endOffset": 25077
+                    "endOffset": 25270
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8668,11 +8725,11 @@
             },
             {
                 "to": {
-                    "startLine": 458,
+                    "startLine": 461,
                     "startColumn": 4,
-                    "startOffset": 25082,
+                    "startOffset": 25275,
                     "endColumn": 38,
-                    "endOffset": 25116
+                    "endOffset": 25309
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8687,11 +8744,11 @@
             },
             {
                 "to": {
-                    "startLine": 459,
+                    "startLine": 462,
                     "startColumn": 4,
-                    "startOffset": 25121,
+                    "startOffset": 25314,
                     "endColumn": 49,
-                    "endOffset": 25166
+                    "endOffset": 25359
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8706,11 +8763,11 @@
             },
             {
                 "to": {
-                    "startLine": 460,
+                    "startLine": 463,
                     "startColumn": 4,
-                    "startOffset": 25171,
+                    "startOffset": 25364,
                     "endColumn": 36,
-                    "endOffset": 25203
+                    "endOffset": 25396
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8725,11 +8782,11 @@
             },
             {
                 "to": {
-                    "startLine": 461,
+                    "startLine": 464,
                     "startColumn": 4,
-                    "startOffset": 25208,
+                    "startOffset": 25401,
                     "endColumn": 74,
-                    "endOffset": 25278
+                    "endOffset": 25471
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8744,11 +8801,11 @@
             },
             {
                 "to": {
-                    "startLine": 462,
+                    "startLine": 465,
                     "startColumn": 4,
-                    "startOffset": 25283,
+                    "startOffset": 25476,
                     "endColumn": 56,
-                    "endOffset": 25335
+                    "endOffset": 25528
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8763,11 +8820,11 @@
             },
             {
                 "to": {
-                    "startLine": 463,
+                    "startLine": 466,
                     "startColumn": 4,
-                    "startOffset": 25340,
+                    "startOffset": 25533,
                     "endColumn": 43,
-                    "endOffset": 25379
+                    "endOffset": 25572
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8782,11 +8839,11 @@
             },
             {
                 "to": {
-                    "startLine": 464,
+                    "startLine": 467,
                     "startColumn": 4,
-                    "startOffset": 25384,
+                    "startOffset": 25577,
                     "endColumn": 56,
-                    "endOffset": 25436
+                    "endOffset": 25629
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8801,11 +8858,11 @@
             },
             {
                 "to": {
-                    "startLine": 465,
+                    "startLine": 468,
                     "startColumn": 4,
-                    "startOffset": 25441,
+                    "startOffset": 25634,
                     "endColumn": 65,
-                    "endOffset": 25502
+                    "endOffset": 25695
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8820,11 +8877,11 @@
             },
             {
                 "to": {
-                    "startLine": 466,
+                    "startLine": 469,
                     "startColumn": 4,
-                    "startOffset": 25507,
+                    "startOffset": 25700,
                     "endColumn": 51,
-                    "endOffset": 25554
+                    "endOffset": 25747
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8839,11 +8896,11 @@
             },
             {
                 "to": {
-                    "startLine": 467,
+                    "startLine": 470,
                     "startColumn": 4,
-                    "startOffset": 25559,
+                    "startOffset": 25752,
                     "endColumn": 44,
-                    "endOffset": 25599
+                    "endOffset": 25792
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -8858,11 +8915,11 @@
             },
             {
                 "to": {
-                    "startLine": 468,
+                    "startLine": 471,
                     "startColumn": 4,
-                    "startOffset": 25604,
+                    "startOffset": 25797,
                     "endColumn": 63,
-                    "endOffset": 25663
+                    "endOffset": 25856
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8877,11 +8934,11 @@
             },
             {
                 "to": {
-                    "startLine": 469,
+                    "startLine": 472,
                     "startColumn": 4,
-                    "startOffset": 25668,
+                    "startOffset": 25861,
                     "endColumn": 54,
-                    "endOffset": 25718
+                    "endOffset": 25911
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8896,11 +8953,11 @@
             },
             {
                 "to": {
-                    "startLine": 470,
+                    "startLine": 473,
                     "startColumn": 4,
-                    "startOffset": 25723,
+                    "startOffset": 25916,
                     "endColumn": 62,
-                    "endOffset": 25781
+                    "endOffset": 25974
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8915,11 +8972,11 @@
             },
             {
                 "to": {
-                    "startLine": 471,
+                    "startLine": 474,
                     "startColumn": 4,
-                    "startOffset": 25786,
+                    "startOffset": 25979,
                     "endColumn": 55,
-                    "endOffset": 25837
+                    "endOffset": 26030
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8934,11 +8991,11 @@
             },
             {
                 "to": {
-                    "startLine": 472,
+                    "startLine": 475,
                     "startColumn": 4,
-                    "startOffset": 25842,
+                    "startOffset": 26035,
                     "endColumn": 48,
-                    "endOffset": 25886
+                    "endOffset": 26079
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8953,11 +9010,11 @@
             },
             {
                 "to": {
-                    "startLine": 473,
+                    "startLine": 476,
                     "startColumn": 4,
-                    "startOffset": 25891,
+                    "startOffset": 26084,
                     "endColumn": 46,
-                    "endOffset": 25933
+                    "endOffset": 26126
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8972,11 +9029,11 @@
             },
             {
                 "to": {
-                    "startLine": 474,
+                    "startLine": 477,
                     "startColumn": 4,
-                    "startOffset": 25938,
+                    "startOffset": 26131,
                     "endColumn": 52,
-                    "endOffset": 25986
+                    "endOffset": 26179
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8991,11 +9048,11 @@
             },
             {
                 "to": {
-                    "startLine": 475,
+                    "startLine": 478,
                     "startColumn": 4,
-                    "startOffset": 25991,
+                    "startOffset": 26184,
                     "endColumn": 47,
-                    "endOffset": 26034
+                    "endOffset": 26227
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9010,11 +9067,11 @@
             },
             {
                 "to": {
-                    "startLine": 476,
+                    "startLine": 479,
                     "startColumn": 4,
-                    "startOffset": 26039,
+                    "startOffset": 26232,
                     "endColumn": 51,
-                    "endOffset": 26086
+                    "endOffset": 26279
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9029,11 +9086,11 @@
             },
             {
                 "to": {
-                    "startLine": 477,
+                    "startLine": 480,
                     "startColumn": 4,
-                    "startOffset": 26091,
+                    "startOffset": 26284,
                     "endColumn": 52,
-                    "endOffset": 26139
+                    "endOffset": 26332
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9048,11 +9105,11 @@
             },
             {
                 "to": {
-                    "startLine": 478,
+                    "startLine": 481,
                     "startColumn": 4,
-                    "startOffset": 26144,
+                    "startOffset": 26337,
                     "endColumn": 54,
-                    "endOffset": 26194
+                    "endOffset": 26387
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9067,11 +9124,11 @@
             },
             {
                 "to": {
-                    "startLine": 479,
+                    "startLine": 482,
                     "startColumn": 4,
-                    "startOffset": 26199,
+                    "startOffset": 26392,
                     "endColumn": 43,
-                    "endOffset": 26238
+                    "endOffset": 26431
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9086,11 +9143,11 @@
             },
             {
                 "to": {
-                    "startLine": 480,
+                    "startLine": 483,
                     "startColumn": 4,
-                    "startOffset": 26243,
+                    "startOffset": 26436,
                     "endColumn": 65,
-                    "endOffset": 26304
+                    "endOffset": 26497
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9105,11 +9162,11 @@
             },
             {
                 "to": {
-                    "startLine": 481,
+                    "startLine": 484,
                     "startColumn": 4,
-                    "startOffset": 26309,
+                    "startOffset": 26502,
                     "endColumn": 60,
-                    "endOffset": 26365
+                    "endOffset": 26558
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9124,11 +9181,11 @@
             },
             {
                 "to": {
-                    "startLine": 482,
+                    "startLine": 485,
                     "startColumn": 4,
-                    "startOffset": 26370,
+                    "startOffset": 26563,
                     "endColumn": 47,
-                    "endOffset": 26413
+                    "endOffset": 26606
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9143,11 +9200,11 @@
             },
             {
                 "to": {
-                    "startLine": 483,
+                    "startLine": 486,
                     "startColumn": 4,
-                    "startOffset": 26418,
+                    "startOffset": 26611,
                     "endColumn": 60,
-                    "endOffset": 26474
+                    "endOffset": 26667
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9162,11 +9219,11 @@
             },
             {
                 "to": {
-                    "startLine": 484,
+                    "startLine": 487,
                     "startColumn": 4,
-                    "startOffset": 26479,
+                    "startOffset": 26672,
                     "endColumn": 43,
-                    "endOffset": 26518
+                    "endOffset": 26711
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9181,11 +9238,11 @@
             },
             {
                 "to": {
-                    "startLine": 485,
+                    "startLine": 488,
                     "startColumn": 4,
-                    "startOffset": 26523,
+                    "startOffset": 26716,
                     "endColumn": 49,
-                    "endOffset": 26568
+                    "endOffset": 26761
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9200,11 +9257,11 @@
             },
             {
                 "to": {
-                    "startLine": 486,
+                    "startLine": 489,
                     "startColumn": 4,
-                    "startOffset": 26573,
+                    "startOffset": 26766,
                     "endColumn": 58,
-                    "endOffset": 26627
+                    "endOffset": 26820
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9219,11 +9276,11 @@
             },
             {
                 "to": {
-                    "startLine": 487,
+                    "startLine": 490,
                     "startColumn": 4,
-                    "startOffset": 26632,
+                    "startOffset": 26825,
                     "endColumn": 63,
-                    "endOffset": 26691
+                    "endOffset": 26884
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9238,11 +9295,11 @@
             },
             {
                 "to": {
-                    "startLine": 488,
+                    "startLine": 491,
                     "startColumn": 4,
-                    "startOffset": 26696,
+                    "startOffset": 26889,
                     "endColumn": 61,
-                    "endOffset": 26753
+                    "endOffset": 26946
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9257,11 +9314,11 @@
             },
             {
                 "to": {
-                    "startLine": 489,
+                    "startLine": 492,
                     "startColumn": 4,
-                    "startOffset": 26758,
+                    "startOffset": 26951,
                     "endColumn": 56,
-                    "endOffset": 26810
+                    "endOffset": 27003
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9276,11 +9333,11 @@
             },
             {
                 "to": {
-                    "startLine": 490,
+                    "startLine": 493,
                     "startColumn": 4,
-                    "startOffset": 26815,
+                    "startOffset": 27008,
                     "endColumn": 52,
-                    "endOffset": 26863
+                    "endOffset": 27056
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9295,11 +9352,11 @@
             },
             {
                 "to": {
-                    "startLine": 491,
+                    "startLine": 494,
                     "startColumn": 4,
-                    "startOffset": 26868,
+                    "startOffset": 27061,
                     "endColumn": 61,
-                    "endOffset": 26925
+                    "endOffset": 27118
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9314,11 +9371,11 @@
             },
             {
                 "to": {
-                    "startLine": 492,
+                    "startLine": 495,
                     "startColumn": 4,
-                    "startOffset": 26930,
+                    "startOffset": 27123,
                     "endColumn": 54,
-                    "endOffset": 26980
+                    "endOffset": 27173
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9333,11 +9390,11 @@
             },
             {
                 "to": {
-                    "startLine": 493,
+                    "startLine": 496,
                     "startColumn": 4,
-                    "startOffset": 26985,
+                    "startOffset": 27178,
                     "endColumn": 42,
-                    "endOffset": 27023
+                    "endOffset": 27216
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9352,11 +9409,11 @@
             },
             {
                 "to": {
-                    "startLine": 494,
+                    "startLine": 497,
                     "startColumn": 4,
-                    "startOffset": 27028,
+                    "startOffset": 27221,
                     "endColumn": 53,
-                    "endOffset": 27077
+                    "endOffset": 27270
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9371,11 +9428,11 @@
             },
             {
                 "to": {
-                    "startLine": 495,
+                    "startLine": 498,
                     "startColumn": 4,
-                    "startOffset": 27082,
+                    "startOffset": 27275,
                     "endColumn": 56,
-                    "endOffset": 27134
+                    "endOffset": 27327
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9390,11 +9447,11 @@
             },
             {
                 "to": {
-                    "startLine": 496,
+                    "startLine": 499,
                     "startColumn": 4,
-                    "startOffset": 27139,
+                    "startOffset": 27332,
                     "endColumn": 55,
-                    "endOffset": 27190
+                    "endOffset": 27383
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9409,11 +9466,11 @@
             },
             {
                 "to": {
-                    "startLine": 497,
+                    "startLine": 500,
                     "startColumn": 4,
-                    "startOffset": 27195,
+                    "startOffset": 27388,
                     "endColumn": 54,
-                    "endOffset": 27245
+                    "endOffset": 27438
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9428,11 +9485,11 @@
             },
             {
                 "to": {
-                    "startLine": 498,
+                    "startLine": 501,
                     "startColumn": 4,
-                    "startOffset": 27250,
+                    "startOffset": 27443,
                     "endColumn": 58,
-                    "endOffset": 27304
+                    "endOffset": 27497
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9447,11 +9504,11 @@
             },
             {
                 "to": {
-                    "startLine": 499,
+                    "startLine": 502,
                     "startColumn": 4,
-                    "startOffset": 27309,
+                    "startOffset": 27502,
                     "endColumn": 52,
-                    "endOffset": 27357
+                    "endOffset": 27550
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9466,11 +9523,11 @@
             },
             {
                 "to": {
-                    "startLine": 500,
+                    "startLine": 503,
                     "startColumn": 4,
-                    "startOffset": 27362,
+                    "startOffset": 27555,
                     "endColumn": 49,
-                    "endOffset": 27407
+                    "endOffset": 27600
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9485,11 +9542,11 @@
             },
             {
                 "to": {
-                    "startLine": 501,
+                    "startLine": 504,
                     "startColumn": 4,
-                    "startOffset": 27412,
+                    "startOffset": 27605,
                     "endColumn": 51,
-                    "endOffset": 27459
+                    "endOffset": 27652
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9504,11 +9561,11 @@
             },
             {
                 "to": {
-                    "startLine": 502,
+                    "startLine": 505,
                     "startColumn": 4,
-                    "startOffset": 27464,
+                    "startOffset": 27657,
                     "endColumn": 57,
-                    "endOffset": 27517
+                    "endOffset": 27710
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9523,11 +9580,11 @@
             },
             {
                 "to": {
-                    "startLine": 503,
+                    "startLine": 506,
                     "startColumn": 4,
-                    "startOffset": 27522,
+                    "startOffset": 27715,
                     "endColumn": 50,
-                    "endOffset": 27568
+                    "endOffset": 27761
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9542,11 +9599,11 @@
             },
             {
                 "to": {
-                    "startLine": 504,
+                    "startLine": 507,
                     "startColumn": 4,
-                    "startOffset": 27573,
+                    "startOffset": 27766,
                     "endColumn": 57,
-                    "endOffset": 27626
+                    "endOffset": 27819
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9561,11 +9618,11 @@
             },
             {
                 "to": {
-                    "startLine": 505,
+                    "startLine": 508,
                     "startColumn": 4,
-                    "startOffset": 27631,
+                    "startOffset": 27824,
                     "endColumn": 60,
-                    "endOffset": 27687
+                    "endOffset": 27880
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9580,11 +9637,11 @@
             },
             {
                 "to": {
-                    "startLine": 506,
+                    "startLine": 509,
                     "startColumn": 4,
-                    "startOffset": 27692,
+                    "startOffset": 27885,
                     "endColumn": 58,
-                    "endOffset": 27746
+                    "endOffset": 27939
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9599,11 +9656,11 @@
             },
             {
                 "to": {
-                    "startLine": 507,
+                    "startLine": 510,
                     "startColumn": 4,
-                    "startOffset": 27751,
+                    "startOffset": 27944,
                     "endColumn": 61,
-                    "endOffset": 27808
+                    "endOffset": 28001
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9618,11 +9675,11 @@
             },
             {
                 "to": {
-                    "startLine": 508,
+                    "startLine": 511,
                     "startColumn": 4,
-                    "startOffset": 27813,
+                    "startOffset": 28006,
                     "endColumn": 60,
-                    "endOffset": 27869
+                    "endOffset": 28062
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9637,11 +9694,11 @@
             },
             {
                 "to": {
-                    "startLine": 509,
+                    "startLine": 512,
                     "startColumn": 4,
-                    "startOffset": 27874,
+                    "startOffset": 28067,
                     "endColumn": 65,
-                    "endOffset": 27935
+                    "endOffset": 28128
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9656,11 +9713,11 @@
             },
             {
                 "to": {
-                    "startLine": 510,
+                    "startLine": 513,
                     "startColumn": 4,
-                    "startOffset": 27940,
+                    "startOffset": 28133,
                     "endColumn": 67,
-                    "endOffset": 28003
+                    "endOffset": 28196
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9675,11 +9732,11 @@
             },
             {
                 "to": {
-                    "startLine": 511,
+                    "startLine": 514,
                     "startColumn": 4,
-                    "startOffset": 28008,
+                    "startOffset": 28201,
                     "endColumn": 60,
-                    "endOffset": 28064
+                    "endOffset": 28257
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9694,11 +9751,11 @@
             },
             {
                 "to": {
-                    "startLine": 512,
+                    "startLine": 515,
                     "startColumn": 4,
-                    "startOffset": 28069,
+                    "startOffset": 28262,
                     "endColumn": 57,
-                    "endOffset": 28122
+                    "endOffset": 28315
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9713,11 +9770,11 @@
             },
             {
                 "to": {
-                    "startLine": 513,
+                    "startLine": 516,
                     "startColumn": 4,
-                    "startOffset": 28127,
+                    "startOffset": 28320,
                     "endColumn": 59,
-                    "endOffset": 28182
+                    "endOffset": 28375
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9732,11 +9789,11 @@
             },
             {
                 "to": {
-                    "startLine": 514,
+                    "startLine": 517,
                     "startColumn": 4,
-                    "startOffset": 28187,
+                    "startOffset": 28380,
                     "endColumn": 65,
-                    "endOffset": 28248
+                    "endOffset": 28441
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9751,11 +9808,11 @@
             },
             {
                 "to": {
-                    "startLine": 515,
+                    "startLine": 518,
                     "startColumn": 4,
-                    "startOffset": 28253,
+                    "startOffset": 28446,
                     "endColumn": 56,
-                    "endOffset": 28305
+                    "endOffset": 28498
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9770,11 +9827,11 @@
             },
             {
                 "to": {
-                    "startLine": 516,
+                    "startLine": 519,
                     "startColumn": 4,
-                    "startOffset": 28310,
+                    "startOffset": 28503,
                     "endColumn": 61,
-                    "endOffset": 28367
+                    "endOffset": 28560
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9789,11 +9846,11 @@
             },
             {
                 "to": {
-                    "startLine": 517,
+                    "startLine": 520,
                     "startColumn": 4,
-                    "startOffset": 28372,
+                    "startOffset": 28565,
                     "endColumn": 67,
-                    "endOffset": 28435
+                    "endOffset": 28628
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9808,11 +9865,11 @@
             },
             {
                 "to": {
-                    "startLine": 518,
+                    "startLine": 521,
                     "startColumn": 4,
-                    "startOffset": 28440,
+                    "startOffset": 28633,
                     "endColumn": 76,
-                    "endOffset": 28512
+                    "endOffset": 28705
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9827,11 +9884,11 @@
             },
             {
                 "to": {
-                    "startLine": 519,
+                    "startLine": 522,
                     "startColumn": 4,
-                    "startOffset": 28517,
+                    "startOffset": 28710,
                     "endColumn": 71,
-                    "endOffset": 28584
+                    "endOffset": 28777
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9846,11 +9903,11 @@
             },
             {
                 "to": {
-                    "startLine": 520,
+                    "startLine": 523,
                     "startColumn": 4,
-                    "startOffset": 28589,
+                    "startOffset": 28782,
                     "endColumn": 71,
-                    "endOffset": 28656
+                    "endOffset": 28849
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9865,11 +9922,11 @@
             },
             {
                 "to": {
-                    "startLine": 521,
+                    "startLine": 524,
                     "startColumn": 4,
-                    "startOffset": 28661,
+                    "startOffset": 28854,
                     "endColumn": 64,
-                    "endOffset": 28721
+                    "endOffset": 28914
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9884,11 +9941,11 @@
             },
             {
                 "to": {
-                    "startLine": 522,
+                    "startLine": 525,
                     "startColumn": 4,
-                    "startOffset": 28726,
+                    "startOffset": 28919,
                     "endColumn": 71,
-                    "endOffset": 28793
+                    "endOffset": 28986
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9903,11 +9960,11 @@
             },
             {
                 "to": {
-                    "startLine": 523,
+                    "startLine": 526,
                     "startColumn": 4,
-                    "startOffset": 28798,
+                    "startOffset": 28991,
                     "endColumn": 78,
-                    "endOffset": 28872
+                    "endOffset": 29065
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9922,11 +9979,11 @@
             },
             {
                 "to": {
-                    "startLine": 524,
+                    "startLine": 527,
                     "startColumn": 4,
-                    "startOffset": 28877,
+                    "startOffset": 29070,
                     "endColumn": 75,
-                    "endOffset": 28948
+                    "endOffset": 29141
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9941,11 +9998,11 @@
             },
             {
                 "to": {
-                    "startLine": 525,
+                    "startLine": 528,
                     "startColumn": 4,
-                    "startOffset": 28953,
+                    "startOffset": 29146,
                     "endColumn": 73,
-                    "endOffset": 29022
+                    "endOffset": 29215
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\umeng_common_strings.xml",
@@ -9960,11 +10017,11 @@
             },
             {
                 "to": {
-                    "startLine": 526,
+                    "startLine": 529,
                     "startColumn": 4,
-                    "startOffset": 29027,
+                    "startOffset": 29220,
                     "endColumn": 54,
-                    "endOffset": 29077
+                    "endOffset": 29270
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9979,11 +10036,11 @@
             },
             {
                 "to": {
-                    "startLine": 527,
+                    "startLine": 530,
                     "startColumn": 4,
-                    "startOffset": 29082,
+                    "startOffset": 29275,
                     "endColumn": 63,
-                    "endOffset": 29141
+                    "endOffset": 29334
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -9998,11 +10055,11 @@
             },
             {
                 "to": {
-                    "startLine": 528,
+                    "startLine": 531,
                     "startColumn": 4,
-                    "startOffset": 29146,
+                    "startOffset": 29339,
                     "endColumn": 51,
-                    "endOffset": 29193
+                    "endOffset": 29386
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10017,11 +10074,11 @@
             },
             {
                 "to": {
-                    "startLine": 529,
+                    "startLine": 532,
                     "startColumn": 4,
-                    "startOffset": 29198,
+                    "startOffset": 29391,
                     "endColumn": 60,
-                    "endOffset": 29254
+                    "endOffset": 29447
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10036,11 +10093,11 @@
             },
             {
                 "to": {
-                    "startLine": 530,
+                    "startLine": 533,
                     "startColumn": 4,
-                    "startOffset": 29259,
+                    "startOffset": 29452,
                     "endColumn": 55,
-                    "endOffset": 29310
+                    "endOffset": 29503
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10055,11 +10112,11 @@
             },
             {
                 "to": {
-                    "startLine": 531,
+                    "startLine": 534,
                     "startColumn": 4,
-                    "startOffset": 29315,
+                    "startOffset": 29508,
                     "endColumn": 64,
-                    "endOffset": 29375
+                    "endOffset": 29568
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10074,11 +10131,11 @@
             },
             {
                 "to": {
-                    "startLine": 532,
+                    "startLine": 535,
                     "startColumn": 4,
-                    "startOffset": 29380,
+                    "startOffset": 29573,
                     "endColumn": 46,
-                    "endOffset": 29422
+                    "endOffset": 29615
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10093,11 +10150,11 @@
             },
             {
                 "to": {
-                    "startLine": 533,
+                    "startLine": 536,
                     "startColumn": 4,
-                    "startOffset": 29427,
+                    "startOffset": 29620,
                     "endColumn": 55,
-                    "endOffset": 29478
+                    "endOffset": 29671
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10112,11 +10169,11 @@
             },
             {
                 "to": {
-                    "startLine": 534,
+                    "startLine": 537,
                     "startColumn": 4,
-                    "startOffset": 29483,
+                    "startOffset": 29676,
                     "endColumn": 83,
-                    "endOffset": 29562
+                    "endOffset": 29755
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10131,11 +10188,11 @@
             },
             {
                 "to": {
-                    "startLine": 535,
+                    "startLine": 538,
                     "startColumn": 4,
-                    "startOffset": 29567,
+                    "startOffset": 29760,
                     "endColumn": 40,
-                    "endOffset": 29603
+                    "endOffset": 29796
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10150,11 +10207,11 @@
             },
             {
                 "to": {
-                    "startLine": 536,
+                    "startLine": 539,
                     "startColumn": 4,
-                    "startOffset": 29608,
+                    "startOffset": 29801,
                     "endColumn": 41,
-                    "endOffset": 29645
+                    "endOffset": 29838
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10169,11 +10226,11 @@
             },
             {
                 "to": {
-                    "startLine": 537,
+                    "startLine": 540,
                     "startColumn": 4,
-                    "startOffset": 29650,
+                    "startOffset": 29843,
                     "endColumn": 59,
-                    "endOffset": 29705
+                    "endOffset": 29898
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10188,11 +10245,11 @@
             },
             {
                 "to": {
-                    "startLine": 538,
+                    "startLine": 541,
                     "startColumn": 4,
-                    "startOffset": 29710,
+                    "startOffset": 29903,
                     "endColumn": 38,
-                    "endOffset": 29744
+                    "endOffset": 29937
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10207,11 +10264,11 @@
             },
             {
                 "to": {
-                    "startLine": 539,
+                    "startLine": 542,
                     "startColumn": 4,
-                    "startOffset": 29749,
+                    "startOffset": 29942,
                     "endColumn": 36,
-                    "endOffset": 29781
+                    "endOffset": 29974
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10226,11 +10283,11 @@
             },
             {
                 "to": {
-                    "startLine": 540,
+                    "startLine": 543,
                     "startColumn": 4,
-                    "startOffset": 29786,
+                    "startOffset": 29979,
                     "endColumn": 45,
-                    "endOffset": 29827
+                    "endOffset": 30020
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10245,11 +10302,11 @@
             },
             {
                 "to": {
-                    "startLine": 541,
+                    "startLine": 544,
                     "startColumn": 4,
-                    "startOffset": 29832,
+                    "startOffset": 30025,
                     "endColumn": 48,
-                    "endOffset": 29876
+                    "endOffset": 30069
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10264,11 +10321,11 @@
             },
             {
                 "to": {
-                    "startLine": 542,
+                    "startLine": 545,
                     "startColumn": 4,
-                    "startOffset": 29881,
+                    "startOffset": 30074,
                     "endColumn": 51,
-                    "endOffset": 29928
+                    "endOffset": 30121
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10283,11 +10340,11 @@
             },
             {
                 "to": {
-                    "startLine": 543,
+                    "startLine": 546,
                     "startColumn": 4,
-                    "startOffset": 29933,
+                    "startOffset": 30126,
                     "endColumn": 61,
-                    "endOffset": 29990
+                    "endOffset": 30183
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10302,11 +10359,11 @@
             },
             {
                 "to": {
-                    "startLine": 544,
+                    "startLine": 547,
                     "startColumn": 4,
-                    "startOffset": 29995,
+                    "startOffset": 30188,
                     "endColumn": 62,
-                    "endOffset": 30053
+                    "endOffset": 30246
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10321,11 +10378,11 @@
             },
             {
                 "to": {
-                    "startLine": 545,
+                    "startLine": 548,
                     "startColumn": 4,
-                    "startOffset": 30058,
+                    "startOffset": 30251,
                     "endColumn": 70,
-                    "endOffset": 30124
+                    "endOffset": 30317
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10340,11 +10397,11 @@
             },
             {
                 "to": {
-                    "startLine": 546,
+                    "startLine": 549,
                     "startColumn": 4,
-                    "startOffset": 30129,
+                    "startOffset": 30322,
                     "endColumn": 79,
-                    "endOffset": 30204
+                    "endOffset": 30397
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10359,11 +10416,11 @@
             },
             {
                 "to": {
-                    "startLine": 547,
+                    "startLine": 550,
                     "startColumn": 4,
-                    "startOffset": 30209,
+                    "startOffset": 30402,
                     "endColumn": 60,
-                    "endOffset": 30265
+                    "endOffset": 30458
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10378,11 +10435,11 @@
             },
             {
                 "to": {
-                    "startLine": 548,
+                    "startLine": 551,
                     "startColumn": 4,
-                    "startOffset": 30270,
+                    "startOffset": 30463,
                     "endColumn": 60,
-                    "endOffset": 30326
+                    "endOffset": 30519
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10397,11 +10454,11 @@
             },
             {
                 "to": {
-                    "startLine": 549,
+                    "startLine": 552,
                     "startColumn": 4,
-                    "startOffset": 30331,
+                    "startOffset": 30524,
                     "endColumn": 76,
-                    "endOffset": 30403
+                    "endOffset": 30596
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10416,11 +10473,11 @@
             },
             {
                 "to": {
-                    "startLine": 550,
+                    "startLine": 553,
                     "startColumn": 4,
-                    "startOffset": 30408,
+                    "startOffset": 30601,
                     "endColumn": 49,
-                    "endOffset": 30453
+                    "endOffset": 30646
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",
@@ -10435,11 +10492,11 @@
             },
             {
                 "to": {
-                    "startLine": 551,
+                    "startLine": 554,
                     "startColumn": 4,
-                    "startOffset": 30458,
+                    "startOffset": 30651,
                     "endColumn": 54,
-                    "endOffset": 30508
+                    "endOffset": 30701
                 },
                 "from": {
                     "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-zh\\em_strings.xml",

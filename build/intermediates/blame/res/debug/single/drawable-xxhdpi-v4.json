@@ -20,12 +20,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable-xxhdpi\\fx_popwindow_add_icon1.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_find_erweima.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable-xxhdpi\\fx_find_erweima.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_packet_detail_bg.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_packet_detail_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fx_find_erweima.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable-xxhdpi\\fx_find_erweima.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\find_youxi.png",

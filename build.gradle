@@ -53,7 +53,7 @@ android {
 
 dependencies {
     compile project(':redpacketlibrary')
-
+    compile project(':library')
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile 'com.facebook.fresco:fresco:0.11.0'
     compile fileTree(dir: 'libs', include: '*.jar', exclude: 'android-support-multidex.jar')

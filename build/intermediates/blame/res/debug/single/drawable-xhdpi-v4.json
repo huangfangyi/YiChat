@@ -164,6 +164,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\easeuilibrary\\unspecified\\res\\drawable-xhdpi-v4\\ease_groups_icon.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_to_group_details_normal.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable-xhdpi\\em_to_group_details_normal.png"
     },
@@ -232,6 +236,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\drawable-xhdpi\\em_contact_list_togroup.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_takepic_normal.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\easeuilibrary\\unspecified\\res\\drawable-xhdpi-v4\\ease_chat_takepic_normal.png"
     },
@@ -270,6 +278,10 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_open_icon.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\easeuilibrary\\unspecified\\res\\drawable-xhdpi-v4\\ease_open_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\exploded-aar\\FanXin0704\\library\\unspecified\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_chat_video_pressed.png",

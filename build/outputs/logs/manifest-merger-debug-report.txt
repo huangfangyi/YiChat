@@ -22,6 +22,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:8
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
 MERGED from [FanXin0704:redpacketlibrary:unspecified] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\FanXin0704\redpacketlibrary\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [FanXin0704:easeuilibrary:unspecified] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\FanXin0704\easeuilibrary\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [FanXin0704:library:unspecified] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\FanXin0704\library\unspecified\AndroidManifest.xml:7:5-9:40
 MERGED from [com.facebook.fresco:fresco:0.11.0] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.11.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:drawee:0.11.0] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.11.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
@@ -149,6 +150,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:4
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:45:22-77
 application
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0704\AndroidManifest.xml:47:5-526:19
+MERGED from [FanXin0704:library:unspecified] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\FanXin0704\library\unspecified\AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\ustc\Desktop\Android Studio\FanXin0704\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20

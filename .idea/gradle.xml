@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/easeuilibrary" />
+            <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/redpacketlibrary" />
           </set>
         </option>
@@ -16,6 +17,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/easeuilibrary" />
+            <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/redpacketlibrary" />
           </set>
         </option>

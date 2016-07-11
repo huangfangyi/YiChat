@@ -84,6 +84,7 @@
     <declare-styleable name="EaseSwitchButton"><attr format="reference" name="switchOpenImage"/><attr format="reference" name="switchCloseImage"/><attr name="switchStatus"><enum name="open" value="0"/><enum name="close" value="1"/></attr></declare-styleable>
     <declare-styleable name="EaseTitleBar"><attr format="string" name="titleBarTitle"/><attr format="reference" name="titleBarLeftImage"/><attr format="reference" name="titleBarRightImage"/><attr format="reference|color" name="titleBarBackground"/></declare-styleable>
     <declare-styleable name="GenericDraweeHierarchy"><attr format="integer" name="fadeDuration"/><attr format="float" name="viewAspectRatio"/><attr format="reference" name="placeholderImage"/><attr name="placeholderImageScaleType"><enum name="none" value="-1"/><enum name="fitXY" value="0"/><enum name="fitStart" value="1"/><enum name="fitCenter" value="2"/><enum name="fitEnd" value="3"/><enum name="center" value="4"/><enum name="centerInside" value="5"/><enum name="centerCrop" value="6"/><enum name="focusCrop" value="7"/></attr><attr format="reference" name="retryImage"/><attr name="retryImageScaleType"><enum name="none" value="-1"/><enum name="fitXY" value="0"/><enum name="fitStart" value="1"/><enum name="fitCenter" value="2"/><enum name="fitEnd" value="3"/><enum name="center" value="4"/><enum name="centerInside" value="5"/><enum name="centerCrop" value="6"/><enum name="focusCrop" value="7"/></attr><attr format="reference" name="failureImage"/><attr name="failureImageScaleType"><enum name="none" value="-1"/><enum name="fitXY" value="0"/><enum name="fitStart" value="1"/><enum name="fitCenter" value="2"/><enum name="fitEnd" value="3"/><enum name="center" value="4"/><enum name="centerInside" value="5"/><enum name="centerCrop" value="6"/><enum name="focusCrop" value="7"/></attr><attr format="reference" name="progressBarImage"/><attr name="progressBarImageScaleType"><enum name="none" value="-1"/><enum name="fitXY" value="0"/><enum name="fitStart" value="1"/><enum name="fitCenter" value="2"/><enum name="fitEnd" value="3"/><enum name="center" value="4"/><enum name="centerInside" value="5"/><enum name="centerCrop" value="6"/><enum name="focusCrop" value="7"/></attr><attr format="integer" name="progressBarAutoRotateInterval"/><attr name="actualImageScaleType"><enum name="none" value="-1"/><enum name="fitXY" value="0"/><enum name="fitStart" value="1"/><enum name="fitCenter" value="2"/><enum name="fitEnd" value="3"/><enum name="center" value="4"/><enum name="centerInside" value="5"/><enum name="centerCrop" value="6"/><enum name="focusCrop" value="7"/></attr><attr format="reference" name="backgroundImage"/><attr format="reference" name="overlayImage"/><attr format="reference" name="pressedStateOverlayImage"/><attr format="boolean" name="roundAsCircle"/><attr format="dimension" name="roundedCornerRadius"/><attr format="boolean" name="roundTopLeft"/><attr format="boolean" name="roundTopRight"/><attr format="boolean" name="roundBottomRight"/><attr format="boolean" name="roundBottomLeft"/><attr format="color" name="roundWithOverlayColor"/><attr format="dimension" name="roundingBorderWidth"/><attr format="color" name="roundingBorderColor"/><attr format="dimension" name="roundingBorderPadding"/></declare-styleable>
+    <declare-styleable name="PullToRefresh"><attr format="reference|color" name="ptrRefreshableViewBackground"/><attr format="reference|color" name="ptrHeaderBackground"/><attr format="reference|color" name="ptrHeaderTextColor"/><attr format="reference|color" name="ptrHeaderSubTextColor"/><attr name="ptrMode"><flag name="disabled" value="0x0"/><flag name="pullFromStart" value="0x1"/><flag name="pullFromEnd" value="0x2"/><flag name="both" value="0x3"/><flag name="manualOnly" value="0x4"/><flag name="pullDownFromTop" value="0x1"/><flag name="pullUpFromBottom" value="0x2"/></attr><attr format="reference|boolean" name="ptrShowIndicator"/><attr format="reference" name="ptrDrawable"/><attr format="reference" name="ptrDrawableStart"/><attr format="reference" name="ptrDrawableEnd"/><attr format="reference|boolean" name="ptrOverScroll"/><attr format="reference" name="ptrHeaderTextAppearance"/><attr format="reference" name="ptrSubHeaderTextAppearance"/><attr name="ptrAnimationStyle"><flag name="rotate" value="0x0"/><flag name="flip" value="0x1"/></attr><attr format="reference|boolean" name="ptrScrollingWhileRefreshingEnabled"/><attr format="reference|boolean" name="ptrListViewExtrasEnabled"/><attr format="reference|boolean" name="ptrRotateDrawableWhilePulling"/><attr format="reference|color" name="ptrAdapterViewBackground"/><attr format="reference" name="ptrDrawableTop"/><attr format="reference" name="ptrDrawableBottom"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
     <declare-styleable name="SimpleDraweeView"><attr format="string" name="actualImageUri"/></declare-styleable>
     <declare-styleable name="app"><attr format="string" name="RPmytitle"/><attr format="reference" name="RPleftImage"/><attr format="reference" name="RPrightImage"/><attr format="string" name="RPrightText"/><attr format="reference|color" name="RPrightTextColor"/><attr format="dimension" name="RPrightTextSize"/><attr format="reference|color" name="RPtitleTextColor"/><attr format="dimension" name="RPtitleTextSize"/><attr format="reference|color" name="RPtitleBackground"/></declare-styleable>
@@ -115,10 +116,15 @@
     <dimen name="font69px">23sp</dimen>
     <dimen name="font90px">30dp</dimen>
     <dimen name="group_avatar">48dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
     <dimen name="height_row_weixin">59dp</dimen>
     <dimen name="height_top_bar">48dp</dimen>
     <dimen name="image_thumbnail_size">100dp</dimen>
     <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="margin_chat_activity">5dp</dimen>
     <dimen name="padding_search_bar">5dp</dimen>
@@ -162,7 +168,10 @@
     <dimen name="size99px">33dp</dimen>
     <dimen name="size9px">3dp</dimen>
     <dimen name="size_avatar">48dp</dimen>
+    <item name="gridview" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
+    <item name="scrollview" type="id"/>
+    <item name="webview" type="id"/>
     <string name="Add_a_button_was_clicked">Add a button was clicked</string>
     <string name="Add_a_friend">Let me to be your friend!</string>
     <string name="Add_group_members_fail">Add group members fail:</string>
@@ -581,6 +590,12 @@
     <string name="please_check">key validation error!Please on AndroidManifest.xml file check the key set</string>
     <string name="please_set_the_current">"Please set the current user's nickname \ n to ios offline push not userid but Nick, see comments"</string>
     <string name="prompt">Prompt</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
+    <string name="pull_to_refresh_refreshing_label">Loading…</string>
+    <string name="pull_to_refresh_release_label">Release to refresh…</string>
     <string name="push_nick">nickname for Notification</string>
     <string name="real_name">真实姓名</string>
     <string name="receive_the_passthrough">Receive cmd message : action：</string>

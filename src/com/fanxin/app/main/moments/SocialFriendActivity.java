@@ -28,9 +28,16 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.fanxin.app.DemoApplication;
+import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
+import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.utils.OkHttpManager;
+import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
-import com.markupartist.android.widget.PullToRefreshListView;
+import com.fanxin.easeui.domain.EaseUser;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 public class SocialFriendActivity extends BaseActivity {
 
@@ -54,8 +61,8 @@ public class SocialFriendActivity extends BaseActivity {
     protected void onCreate(Bundle arg0) {
 
         super.onCreate(arg0);
-        setContentView(R.layout.activity_social_friend);
-        userID = MYApplication.getInstance().getUserName();
+        setContentView(R.layout.fx_activity_moments_me);
+        userID = DemoHelper.getInstance().getCurrentUsernName();
 
         System.out.println("上传数据------->>>>>>>>" + "userID" + ":" + userID);
 
@@ -73,24 +80,24 @@ public class SocialFriendActivity extends BaseActivity {
 
         } else {
 
-            User user = MYApplication.getInstance().getContactList()
+            EaseUser user = DemoHelper.getInstance().getContactList()
                     .get(friendID);
             if (user != null) {
                 nick_temp = user.getNick();
             }
         }
 
-        tv_title.setText(nick_temp+" 的个人相册");
+        tv_title.setText(nick_temp + " 的个人相册");
         initView();
     }
 
     private void initView() {
 
         pull_refresh_list = (PullToRefreshListView) findViewById(R.id.pull_refresh_list);
-        pull_refresh_list.setMode(Mode.BOTH);
+        pull_refresh_list.setMode(PullToRefreshBase.Mode.BOTH);
 
         pull_refresh_list
-                .setOnRefreshListener(new OnRefreshListener<ListView>() {
+                .setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
                     @Override
                     public void onRefresh(
                             PullToRefreshBase<ListView> refreshView) {
@@ -107,10 +114,10 @@ public class SocialFriendActivity extends BaseActivity {
 
                         // Do work to refresh the list here.
 
-                        if (pull_refresh_list.getCurrentMode() == Mode.PULL_FROM_START) {
+                        if (pull_refresh_list.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_START) {
                             page = 0;
 
-                        } else if (pull_refresh_list.getCurrentMode() == Mode.PULL_FROM_END) {
+                        } else if (pull_refresh_list.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_END) {
                             page++;
 
                         }
@@ -126,7 +133,7 @@ public class SocialFriendActivity extends BaseActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
+                                    int position, long id) {
                 if (position != 0) {
                     Log.e("position----->>", String.valueOf(position));
                     JSONObject json = adapter.getJSONs().get(position - 1);
@@ -150,13 +157,13 @@ public class SocialFriendActivity extends BaseActivity {
         });
 
     }
-    
+
 
     private void showPhotoDialog() {
         final AlertDialog dlg = new AlertDialog.Builder(this).create();
         dlg.show();
         Window window = dlg.getWindow();
-        window.setContentView(R.layout.dialog_social_main);
+        window.setContentView(R.layout.fx_dialog_social_main);
         TextView tv_paizhao = (TextView) window.findViewById(R.id.tv_content1);
         tv_paizhao.setText("拍照");
         tv_paizhao.setOnClickListener(new OnClickListener() {
@@ -206,28 +213,28 @@ public class SocialFriendActivity extends BaseActivity {
 
             switch (requestCode) {
 
-            case PHOTO_REQUEST_TAKEPHOTO:
-                path = "/sdcard/bizchat/" + imageName;
-                break;
+                case PHOTO_REQUEST_TAKEPHOTO:
+                    path = "/sdcard/bizchat/" + imageName;
+                    break;
 
-            case PHOTO_REQUEST_GALLERY:
+                case PHOTO_REQUEST_GALLERY:
 
-                if (data != null) {
-                    Uri imageFilePath = data.getData();
+                    if (data != null) {
+                        Uri imageFilePath = data.getData();
 
-                    String[] proj = { MediaStore.Images.Media.DATA };
-                    Cursor cursor = getContentResolver().query(imageFilePath,
-                            proj, null, null, null);
-                    int column_index = cursor
-                            .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-                    cursor.moveToFirst();
-                    // 获取图片真实地址
-                    path = cursor.getString(column_index);
-                    System.out.println(path);
+                        String[] proj = {MediaStore.Images.Media.DATA};
+                        Cursor cursor = getContentResolver().query(imageFilePath,
+                                proj, null, null, null);
+                        int column_index = cursor
+                                .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                        cursor.moveToFirst();
+                        // 获取图片真实地址
+                        path = cursor.getString(column_index);
+                        System.out.println(path);
 
-                }
+                    }
 
-                break;
+                    break;
 
             }
 
@@ -243,26 +250,18 @@ public class SocialFriendActivity extends BaseActivity {
 
 
     private void getData(final int page_num) {
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("userID", userID);
-        map.put("friendID", friendID);
-        map.put("num", String.valueOf(page_num));
-        SocialApiTask task = new SocialApiTask(SocialFriendActivity.this,
-                Constant.URL_SOCIAL_FRIEND, map);
-        task.getData(new DataCallBack() {
+        List<Param> params = new ArrayList<>();
+        params.add(new Param("userID", userID));
+        params.add(new Param("friendID", friendID));
+        params.add(new Param("num", page_num + ""));
+        OkHttpManager.getInstance().post(params, FXConstant.URL_SOCIAL_FRIEND, new OkHttpManager.HttpCallBack() {
             @Override
-            public void onDataCallBack(JSONObject data) {
-                pull_refresh_list.onRefreshComplete();
-                if (data == null) {
-
-                    return;
-
-                }
-                int code = data.getInteger("code");
+            public void onResponse(JSONObject jsonObject) {
+                int code = jsonObject.getInteger("code");
                 if (code == 1000) {
-                    JSONArray users_temp = data.getJSONArray("data");
-                    String time = data.getString("time");
-                    MYApplication.getInstance().setTime(time);
+                    JSONArray users_temp = jsonObject.getJSONArray("data");
+                    String time = jsonObject.getString("time");
+                    DemoApplication.getInstance().setTime(time);
                     if (page_num == 0) {
 
                         // datas = users_temp;
@@ -299,8 +298,13 @@ public class SocialFriendActivity extends BaseActivity {
                 } else {
                     // ToastUtil.showMessage("服务器出错...");
                 }
+
             }
 
+            @Override
+            public void onFailure(String errorMsg) {
+
+            }
         });
 
     }

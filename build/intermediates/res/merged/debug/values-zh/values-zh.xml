@@ -413,6 +413,9 @@
     <string name="please_check">key 验证出错! 请在 AndroidManifest.xml 文件中检查 key 设置</string>
     <string name="please_set_the_current">设置当前用户的昵称\n用于ios离线推送时显示用户昵称</string>
     <string name="prompt">提示</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">正在载入…</string>
+    <string name="pull_to_refresh_release_label">放开以刷新…</string>
     <string name="push_nick">iOS离线推送昵称</string>
     <string name="real_name">真实姓名</string>
     <string name="receive_the_passthrough">收到透传：action：</string>
