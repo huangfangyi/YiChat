@@ -299,7 +299,7 @@ public class ImageCycleView extends LinearLayout {
             } else {
                 imageView = mImageViewCacheList.remove(0);
             }
-            imageView.setTag(imageUrl);
+        //    imageView.setTag(imageUrl);
             container.addView(imageView);
             mImageCycleViewListener.displayImage(imageUrl, imageView);
             return imageView;

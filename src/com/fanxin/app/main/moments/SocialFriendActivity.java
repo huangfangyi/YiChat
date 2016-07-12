@@ -258,6 +258,7 @@ public class SocialFriendActivity extends BaseActivity {
         OkHttpManager.getInstance().post(params, FXConstant.URL_SOCIAL_FRIEND, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
+                pull_refresh_list.onRefreshComplete();
                 int code = jsonObject.getInteger("code");
                 if (code == 1000) {
                     JSONArray users_temp = jsonObject.getJSONArray("data");
