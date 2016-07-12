@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.fanxin.easeui.EaseConstant;
 import com.hyphenate.easeui.R;
 import com.fanxin.easeui.controller.EaseUI;
 import com.fanxin.easeui.controller.EaseUI.EaseUserProfileProvider;
@@ -38,12 +39,17 @@ public class EaseUserUtils {
     public static void setUserAvatar(Context context, String username, ImageView imageView){
     	EaseUser user = getUserInfo(username);
         if(user != null && user.getAvatar() != null){
+            String avatarUrl=user.getAvatar();
+            if(!avatarUrl.contains("http:")){
+                avatarUrl= EaseConstant.URL_AVATAR+avatarUrl;
+
+            }
             try {
-                int avatarResId = Integer.parseInt(user.getAvatar());
+                int avatarResId = Integer.parseInt(avatarUrl);
                 Glide.with(context).load(avatarResId).into(imageView);
             } catch (Exception e) {
                 //use default avatar
-                Glide.with(context).load(user.getAvatar()).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(imageView);
+                Glide.with(context).load(avatarUrl).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(imageView);
             }
         }else{
             Glide.with(context).load(R.drawable.fx_default_useravatar).into(imageView);

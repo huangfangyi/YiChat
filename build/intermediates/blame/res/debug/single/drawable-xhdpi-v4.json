@@ -228,6 +228,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\drawable-xhdpi-v4\\ease_chat_location_normal.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\app_logo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-xhdpi\\app_logo.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\em_unread_count_bg.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-xhdpi\\em_unread_count_bg.9.png"
     },

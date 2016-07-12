@@ -16,12 +16,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_context_menu_for_image.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_chat_neterror_item.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_chat_neterror_item.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\rp_activity_change.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\layout\\rp_activity_change.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_chat_neterror_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_chat_neterror_item.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_group_avatar8.xml",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_activity_public_groups_search.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_login.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_activity_login.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_chat.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_login.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_activity_login.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_activity_group_search_message.xml",
@@ -80,16 +80,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_activity_new_friends_msg.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_dialog_alert_et.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_dialog_alert_et.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_chat_history.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\layout\\ease_row_chat_history.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_image_grid_fragment.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_image_grid_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_chat_history.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\layout\\ease_row_chat_history.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_dialog_alert_et.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_dialog_alert_et.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\rp_textview.xml",
@@ -144,12 +144,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\layout\\rp_fragment_withdraw_money.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_chat_neterror_item.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_chat_neterror_item.xml"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_activity_moments.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_activity_moments.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_chat_neterror_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_chat_neterror_item.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_sent_video_call.xml",
@@ -456,6 +456,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_activity_show_file.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_item_conversation_group.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_item_conversation_group.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_fragment_groups.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\em_fragment_groups.xml"
     },
@@ -512,12 +516,16 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_activity_groups.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\rp_bank_city_list_item.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\layout\\rp_bank_city_list_item.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\ease_chat_menu_item.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\layout\\ease_chat_menu_item.xml"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\rp_bank_city_list_item.xml",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\layout\\rp_bank_city_list_item.xml"
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\fx_item_conversation_single.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\layout\\fx_item_conversation_single.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_group.xml",

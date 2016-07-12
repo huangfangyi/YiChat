@@ -20,6 +20,8 @@ import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.fanxin.app.Constant;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.db.UserDao;
+import com.fanxin.app.main.fragment.ContactListFragment;
+import com.fanxin.app.main.fragment.ConversationListFragment;
 import com.fanxin.app.main.fragment.FragmentFind;
 import com.fanxin.app.main.fragment.FragmentProfile;
 import com.fanxin.app.main.widget.FXPopWindow;
@@ -76,6 +78,7 @@ import android.widget.Toast;
     private ContactListFragment contactListFragment;
     private FragmentFind fragmentFind;
     private FragmentProfile fragmentProfile;
+     private ConversationListFragment conversationListFragment;
     private Fragment[] fragments;
     private int index;
     private int currentTabIndex;
@@ -163,10 +166,10 @@ import android.widget.Toast;
             manager.add(R.id.fragment_container, fragmentProfile, TAG_PROFILE).hide(fragmentProfile);
         }
         manager.commit();
-
-        contactListFragment = new ContactListFragment();
-        fragmentFind = new FragmentFind();
-        fragmentProfile = new FragmentProfile();
+//        conversationListFragment=new ConversationListFragment();
+//        contactListFragment = new ContactListFragment();
+//        fragmentFind = new FragmentFind();
+//        fragmentProfile = new FragmentProfile();
 
         fragments = new Fragment[]{conversationListFragment, contactListFragment, fragmentFind, fragmentProfile};
         //register broadcast receiver to receive the change of group from DemoHelper
@@ -528,7 +531,7 @@ import android.widget.Toast;
     private boolean isConflictDialogShow;
     private boolean isAccountRemovedDialogShow;
     private BroadcastReceiver internalDebugReceiver;
-    private ConversationListFragment conversationListFragment;
+
     private BroadcastReceiver broadcastReceiver;
     private LocalBroadcastManager broadcastManager;
 

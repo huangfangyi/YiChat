@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\em_logo_uidemo.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-ldpi\\em_logo_uidemo.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\app_logo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-ldpi\\app_logo.png"
     }
 ]

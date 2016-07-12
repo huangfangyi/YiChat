@@ -9,7 +9,7 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E0E0E0"
+        android:background="#EBEBEB"
         android:paddingBottom="2dp"
         android:paddingLeft="10dp"
         android:paddingTop="2dp"
@@ -19,16 +19,16 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="52dp"
         android:background="@drawable/ease_mm_listitem"
-        android:duplicateParentState="true" >
+        >
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="43dp"
-            android:layout_height="43dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="11dp"
+            android:layout_marginLeft="12dp"
             android:scaleType="fitXY"
             android:src="@drawable/ease_default_avatar" />
 
@@ -53,7 +53,7 @@
                     android:layout_marginRight="4dp"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:textColor="#8C8C8C"
+                    android:textColor="#353535"
                     android:textSize="16sp" />
             </LinearLayout>
 

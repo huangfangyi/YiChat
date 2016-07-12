@@ -18,25 +18,27 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Pair;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 public class EaseConversationList extends ListView {
     
-    protected int primaryColor;
-    protected int secondaryColor;
-    protected int timeColor;
-    protected int primarySize;
-    protected int secondarySize;
-    protected float timeSize;
+//    protected int primaryColor;
+//    protected int secondaryColor;
+//    protected int timeColor;
+//    protected int primarySize;
+//    protected int secondarySize;
+//    protected float timeSize;
     
 
     protected final int MSG_REFRESH_ADAPTER_DATA = 0;
     
     protected Context context;
-    protected EaseConversationAdapater adapter;
+  //  protected EaseConversationAdapater adapter;
     protected List<EMConversation> conversations = new ArrayList<EMConversation>();
     protected List<EMConversation> passedListRef = null;
-    
+    private  ArrayAdapter baseAdapter;
     
     public EaseConversationList(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -51,36 +53,37 @@ public class EaseConversationList extends ListView {
     
     private void init(Context context, AttributeSet attrs) {
         this.context = context;
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.EaseConversationList);
-        primaryColor = ta.getColor(R.styleable.EaseConversationList_cvsListPrimaryTextColor, R.color.list_itease_primary_color);
-        secondaryColor = ta.getColor(R.styleable.EaseConversationList_cvsListSecondaryTextColor, R.color.list_itease_secondary_color);
-        timeColor = ta.getColor(R.styleable.EaseConversationList_cvsListTimeTextColor, R.color.list_itease_secondary_color);
-        primarySize = ta.getDimensionPixelSize(R.styleable.EaseConversationList_cvsListPrimaryTextSize, 0);
-        secondarySize = ta.getDimensionPixelSize(R.styleable.EaseConversationList_cvsListSecondaryTextSize, 0);
-        timeSize = ta.getDimension(R.styleable.EaseConversationList_cvsListTimeTextSize, 0);
-
-        ta.recycle();
+//        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.EaseConversationList);
+//        primaryColor = ta.getColor(R.styleable.EaseConversationList_cvsListPrimaryTextColor, R.color.list_itease_primary_color);
+//        secondaryColor = ta.getColor(R.styleable.EaseConversationList_cvsListSecondaryTextColor, R.color.list_itease_secondary_color);
+//        timeColor = ta.getColor(R.styleable.EaseConversationList_cvsListTimeTextColor, R.color.list_itease_secondary_color);
+//        primarySize = ta.getDimensionPixelSize(R.styleable.EaseConversationList_cvsListPrimaryTextSize, 0);
+//        secondarySize = ta.getDimensionPixelSize(R.styleable.EaseConversationList_cvsListSecondaryTextSize, 0);
+//        timeSize = ta.getDimension(R.styleable.EaseConversationList_cvsListTimeTextSize, 0);
+//
+//        ta.recycle();
 
     }
 
-    public void init(List<EMConversation> conversationList){
-        this.init(conversationList, null);
+    public void init(List<EMConversation> conversationList,ArrayAdapter baseAdapter){
+        this.init(conversationList, null,baseAdapter);
     }
 
-    public void init(List<EMConversation> conversationList, EaseConversationListHelper helper){
+    public void init(List<EMConversation> conversationList, EaseConversationListHelper helper, ArrayAdapter baseAdapter){
         conversations = conversationList;
+        this.baseAdapter=baseAdapter;
         if(helper != null){
             this.conversationListHelper = helper;
         }
-        adapter = new EaseConversationAdapater(context, 0, conversationList);
-        adapter.setCvsListHelper(conversationListHelper);
-        adapter.setPrimaryColor(primaryColor);
-        adapter.setPrimarySize(primarySize);
-        adapter.setSecondaryColor(secondaryColor);
-        adapter.setSecondarySize(secondarySize);
-        adapter.setTimeColor(timeColor);
-        adapter.setTimeSize(timeSize);
-        setAdapter(adapter);
+//        adapter = new EaseConversationAdapater(context, 0, conversationList);
+//        adapter.setCvsListHelper(conversationListHelper);
+//        adapter.setPrimaryColor(primaryColor);
+//        adapter.setPrimarySize(primarySize);
+//        adapter.setSecondaryColor(secondaryColor);
+//        adapter.setSecondarySize(secondarySize);
+//        adapter.setTimeColor(timeColor);
+//        adapter.setTimeSize(timeSize);
+        setAdapter(baseAdapter);
     }
     
     Handler handler = new Handler() {
@@ -88,8 +91,8 @@ public class EaseConversationList extends ListView {
         public void handleMessage(Message message) {
             switch (message.what) {
             case MSG_REFRESH_ADAPTER_DATA:
-                if (adapter != null) {
-                    adapter.notifyDataSetChanged();
+                if (baseAdapter != null) {
+                    baseAdapter.notifyDataSetChanged();
                 }
                 break;
             default:
@@ -102,7 +105,7 @@ public class EaseConversationList extends ListView {
     /**
      * load conversations
      * 
-     * @param context
+     * @param
      * @return
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         +    */
     private List<EMConversation> loadConversationsWithRecentChat() {
@@ -135,7 +138,7 @@ public class EaseConversationList extends ListView {
     /**
      * sorting according timestamp of last message
      * 
-     * @param usernames
+     * @param
      */
     private void sortConversationByLastChatTime(List<Pair<Long, EMConversation>> conversationList) {
         Collections.sort(conversationList, new Comparator<Pair<Long, EMConversation>>() {
@@ -155,7 +158,7 @@ public class EaseConversationList extends ListView {
     }
     
     public EMConversation getItem(int position) {
-        return (EMConversation)adapter.getItem(position);
+        return (EMConversation)baseAdapter.getItem(position);
     }
     
     public void refresh() {
@@ -164,9 +167,9 @@ public class EaseConversationList extends ListView {
     	}
     }
     
-    public void filter(CharSequence str) {
-        adapter.getFilter().filter(str);
-    }
+   // public void filter(CharSequence str) {
+//        baseAdapter.getFilter().filter(str);
+//    }
 
 
     private EaseConversationListHelper conversationListHelper;

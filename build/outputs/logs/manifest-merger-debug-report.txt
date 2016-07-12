@@ -153,7 +153,7 @@ MERGED from [FanXin0712:library:unspecified] C:\Users\ustc\Desktop\Android Studi
 	android:allowBackup
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:49:9-35
 	android:icon
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:50:9-48
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:50:9-42
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:48:9-39
 activity#com.fanxin.app.main.activity.MainActivity

@@ -484,6 +484,10 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_smiley_minus_btn_pressed.png"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\app_logo.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\app_logo.png"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_020.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\icon_020.gif"
     },
@@ -508,12 +512,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_default_avatar.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_msg_state_fail_resend_pressed.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_msg_state_fail_resend_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_seabar_input.9.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_seabar_input.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_msg_state_fail_resend_pressed.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_msg_state_fail_resend_pressed.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_add.png",

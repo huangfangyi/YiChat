@@ -29,4 +29,7 @@ public class EaseConstant {
     
     public static final String EXTRA_CHAT_TYPE = "chatType";
     public static final String EXTRA_USER_ID = "userId";
+
+    public static final String HOST = "http://120.24.211.126/fanxin3/";
+    public static final String URL_AVATAR= HOST + "upload/";
 }

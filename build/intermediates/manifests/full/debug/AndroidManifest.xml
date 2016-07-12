@@ -47,7 +47,7 @@
     <application
         android:name="com.fanxin.app.DemoApplication"
         android:allowBackup="true"
-        android:icon="@drawable/em_logo_uidemo"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name" >
         <activity
             android:name="com.fanxin.app.main.activity.MainActivity"

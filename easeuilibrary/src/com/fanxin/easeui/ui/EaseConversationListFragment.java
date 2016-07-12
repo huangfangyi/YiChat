@@ -30,6 +30,8 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -44,9 +46,9 @@ public class EaseConversationListFragment extends EaseBaseFragment{
     protected ImageButton clearSearch;
     protected boolean hidden;
     protected List<EMConversation> conversationList = new ArrayList<EMConversation>();
-    protected EaseConversationList conversationListView;
+   protected EaseConversationList conversationListView;
     protected FrameLayout errorItemContainer;
-
+     private ArrayAdapter baseAdapter;
     protected boolean isConflict;
     
     protected EMConversationListener convListener = new EMConversationListener(){
@@ -83,8 +85,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
     @Override
     protected void setUpView() {
         conversationList.addAll(loadConversationList());
-        conversationListView.init(conversationList);
-        
+        conversationListView.init(conversationList,baseAdapter);
         if(listItemClickListener != null){
             conversationListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -98,30 +99,30 @@ public class EaseConversationListFragment extends EaseBaseFragment{
         
         EMClient.getInstance().addConnectionListener(connectionListener);
         
-        query.addTextChangedListener(new TextWatcher() {
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                conversationListView.filter(s);
-                if (s.length() > 0) {
-                    clearSearch.setVisibility(View.VISIBLE);
-                } else {
-                    clearSearch.setVisibility(View.INVISIBLE);
-                }
-            }
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            public void afterTextChanged(Editable s) {
-            }
-        });
-        clearSearch.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                query.getText().clear();
-                hideSoftKeyboard();
-            }
-        });
-        
+//        query.addTextChangedListener(new TextWatcher() {
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                conversationListView.filter(s);
+//                if (s.length() > 0) {
+//                    clearSearch.setVisibility(View.VISIBLE);
+//                } else {
+//                    clearSearch.setVisibility(View.INVISIBLE);
+//                }
+//            }
+//
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//            }
+//
+//            public void afterTextChanged(Editable s) {
+//            }
+//        });
+//        clearSearch.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                query.getText().clear();
+//                hideSoftKeyboard();
+//            }
+//        });
+//
         conversationListView.setOnTouchListener(new OnTouchListener() {
             
             @Override
@@ -130,9 +131,15 @@ public class EaseConversationListFragment extends EaseBaseFragment{
                 return false;
             }
         });
+
     }
-    
-    
+
+    public void  setArrayAdapter(ArrayAdapter baseAdapter) {
+        this.baseAdapter=baseAdapter;
+    }
+
+
+
     protected EMConnectionListener connectionListener = new EMConnectionListener() {
         
         @Override

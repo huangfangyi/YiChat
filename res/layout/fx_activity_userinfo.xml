@@ -146,12 +146,12 @@
             android:background="@drawable/fx_bg_btn_green"
             android:paddingBottom="7dp"
             android:paddingTop="7dp"
-            android:text="添加到通讯录"
+            android:text="发送消息"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
         <Button
-
+            android:visibility="gone"
             android:id="@+id/btn_add"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -161,7 +161,7 @@
             android:background="@drawable/fx_bg_btn_green"
             android:paddingBottom="7dp"
             android:paddingTop="7dp"
-            android:text="加为好友"
+            android:text="添加到通讯录"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
     </LinearLayout>

@@ -20,6 +20,7 @@ import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.app.ui.ChatActivity;
+import com.fanxin.easeui.EaseConstant;
 import com.fanxin.easeui.domain.EaseUser;
 
 import java.util.ArrayList;
@@ -107,7 +108,7 @@ public class UserDetailsActivity extends BaseActivity {
         btnMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserDetailsActivity.this, ChatActivity.class).putExtra(FXConstant.KEY_USER_INFO, jsonObject.toJSONString()));
+                startActivity(new Intent(UserDetailsActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID,jsonObject.getString(FXConstant.JSON_KEY_HXID)));
             }
         });
     }

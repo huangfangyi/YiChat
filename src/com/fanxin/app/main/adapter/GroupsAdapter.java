@@ -197,8 +197,7 @@ public class GroupsAdapter extends BaseAdapter {
             switch (type) {
                 case TYPE_1:
                     Glide.with(context).load(FXConstant.URL_AVATAR + avatars.get(0)).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(holder.iv_avatar1);
-                    holder.iv_avatar1 = (ImageView) convertView.findViewById(R.id.iv_avatar1);
-                    break;
+                     break;
                 case TYPE_2:
                     Glide.with(context).load(FXConstant.URL_AVATAR + avatars.get(0)).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(holder.iv_avatar1);
                     Glide.with(context).load(FXConstant.URL_AVATAR + avatars.get(1)).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(holder.iv_avatar2);
@@ -307,19 +306,19 @@ public class GroupsAdapter extends BaseAdapter {
                         false);
 
             case 6:
-                return inflater.inflate(R.layout.fx_group_avatar5, null,
+                return inflater.inflate(R.layout.fx_group_avatar6, null,
                         false);
             case 7:
-                return inflater.inflate(R.layout.fx_group_avatar5, null,
+                return inflater.inflate(R.layout.fx_group_avatar7, null,
                         false);
             case 8:
-                return inflater.inflate(R.layout.fx_group_avatar5, null,
+                return inflater.inflate(R.layout.fx_group_avatar8, null,
                         false);
             case 9:
-                return inflater.inflate(R.layout.fx_group_avatar5, null,
+                return inflater.inflate(R.layout.fx_group_avatar9, null,
                         false);
             default:
-                return inflater.inflate(R.layout.fx_group_avatar5, null,
+                return inflater.inflate(R.layout.fx_group_avatar1, null,
                         false);
         }
 

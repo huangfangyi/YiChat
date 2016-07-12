@@ -24,7 +24,7 @@
         <com.fanxin.easeui.widget.EaseContactList
             android:id="@+id/contact_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
             <!-- hyphenate:ctsListInitialLetterBg="#abc" -->
 
     </FrameLayout>
