@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\build\\intermediates\\res\\merged\\debug\\values-large-v4\\values-large-v4.xml",
+        "outputFile": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\values-large-v4\\values-large-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 103
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-large\\em_dimens.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\values-large\\em_dimens.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 157
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0704\\res\\values-large\\em_dimens.xml",
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\values-large\\em_dimens.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,

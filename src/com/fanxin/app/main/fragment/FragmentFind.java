@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.activity.MomentsActivity;
+import com.fanxin.app.main.moments.SocialMainActivity;
 
 public class FragmentFind  extends Fragment{
  
@@ -32,7 +33,7 @@ public class FragmentFind  extends Fragment{
                       String userID= DemoHelper.getInstance().getCurrentUsernName();
                       if(!TextUtils.isEmpty(userID)){
 
-                          startActivity(new Intent(getActivity(),MomentsActivity.class).putExtra("userID", userID));
+                          startActivity(new Intent(getActivity(),SocialMainActivity.class).putExtra("userID", userID));
 
                       }
             }

@@ -6,6 +6,7 @@ import android.support.multidex.MultiDex;
 
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RedPacket;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.fanxin.app.main.db.TopUser;
 import com.fanxin.app.main.db.TopUserDao;
 import com.fanxin.app.main.utils.LocalUserUtil;
@@ -35,7 +36,7 @@ public class DemoApplication extends Application {
 		LocalUserUtil.init(instance);
         DemoHelper.getInstance().init(applicationContext);
 		RedPacket.getInstance().initContext(applicationContext);
-
+		Fresco.initialize(this);
 	}
 
 	public static DemoApplication getInstance() {

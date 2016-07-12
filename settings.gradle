@@ -1,7 +1,7 @@
 
 
 //release时需要把下面的include相关的两行注释掉
-include ':redpacketlibrary'
+include ':redpacketlibrary', ':library'
 include ':easeuilibrary'
 //project(':hyphenatechatsdk').projectDir = new File('../emclient-android/hyphenatechatsdk')
-
+include ':library'

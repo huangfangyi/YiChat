@@ -90,13 +90,13 @@ public class MomentsActivity extends BaseActivity {
 //                }, 2000);
             }
         });
-        momentsView.setOnMoreListener(new MomentsView.OnMoreDataListener() {
-            @Override
-            public void onMoreData(ListView listView) {
-                page++;
-                getData(page);
-            }
-        });
+//        momentsView.setOnMoreListener(new MomentsView.OnMoreDataListener() {
+//            @Override
+//            public void onMoreData(ListView listView) {
+//                page++;
+//                getData(page);
+//            }
+//        });
         momentsView.startRefresh();
 
     }

@@ -60,7 +60,7 @@ public class MomentsView extends ViewGroup implements OnDetectScrollListener{
     //刷新接口listener
     private OnRefreshListener mRefreshLisenter;
     //更多接口listener
-   private  OnMoreDataListener onMoreDataListener;
+  // private  OnMoreDataListener onMoreDataListener;
     private AbsListView.OnScrollListener onScrollListener;
     private  OnDetectScrollListener onDetectScrollListener;
 
@@ -330,10 +330,10 @@ public class MomentsView extends ViewGroup implements OnDetectScrollListener{
                 }
 
 
-                 int lastItemid = mContentView.getLastVisiblePosition(); // 获取当前屏幕最后Item的ID
-                 if ((lastItemid + 1) == totalItemCount) { // 达到数据的最后一条记录
-                    onMoreDataListener.onMoreData(mContentView);
-                 }
+//                 int lastItemid = mContentView.getLastVisiblePosition(); // 获取当前屏幕最后Item的ID
+//                 if ((lastItemid + 1) == totalItemCount) { // 达到数据的最后一条记录
+//                    onMoreDataListener.onMoreData(mContentView);
+//                 }
 
 
 
@@ -553,17 +553,17 @@ public class MomentsView extends ViewGroup implements OnDetectScrollListener{
     public void setOnRefreshListener(OnRefreshListener listener) {
         this.mRefreshLisenter = listener;
     }
-
-    public void setOnMoreListener(OnMoreDataListener listener) {
-        this.onMoreDataListener = listener;
-    }
+//
+//    public void setOnMoreListener(OnMoreDataListener listener) {
+//        this.onMoreDataListener = listener;
+//    }
     public interface OnRefreshListener {
           void onRefresh();
     }
 
 
-    public interface OnMoreDataListener{
-
-           void onMoreData(ListView listView);
-    }
+//    public interface OnMoreDataListener{
+//
+//           void onMoreData(ListView listView);
+//    }
 }

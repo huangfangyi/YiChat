@@ -4,6 +4,7 @@ package com.fanxin.app.main.moments;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +19,9 @@ import com.fanxin.app.R;
 
 public class AddPopWindow extends PopupWindow {
     private View conentView;
-
+    private  Activity context;
     public AddPopWindow(final Activity context, ImageView iv_temp, final ClickCallBack clickCallBack) {
+        this.context=context;
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         conentView = inflater.inflate(R.layout.fx_popwindow_moments, null);
@@ -82,13 +84,22 @@ public class AddPopWindow extends PopupWindow {
      */
     public void showPopupWindow(View parent) {
         if (!this.isShowing()) {
+            int w = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
+            int h = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
+            conentView.measure(w, h);
+            int height =conentView.getMeasuredHeight();
+            int width =conentView.getMeasuredWidth();
             //
             // this.showAsDropDown(parent, 0, 0);
             // this.showAtLocation(parent, gravity, x, y);
+
+
             int[] location = new int[2];
             parent.getLocationOnScreen(location);
             this.showAtLocation(parent, Gravity.NO_GRAVITY,
-                    location[0] - this.getWidth(), location[1]);
+                    location[0]-width, location[1]);
+
+
         } else {
             this.dismiss();
         }
