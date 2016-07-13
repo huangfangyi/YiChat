@@ -5,7 +5,7 @@
         <item>demo2</item>
     </string-array>
     <string-array name="demoDirects">
-        <item>ucloud.intent.action.uvod.example.demo1</item>
-        <item>ucloud.intent.action.uvod.example.demo2</item>
+        <item>ucloud.intent.action.uvod.fanxin.demo1</item>
+        <item>ucloud.intent.action.uvod.fanxin.demo2</item>
     </string-array>
 </resources>

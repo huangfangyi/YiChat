@@ -25,7 +25,7 @@ import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.db.UserDao;
 import com.fanxin.app.domain.InviteMessage;
 import com.fanxin.app.domain.InviteMessage.InviteMesageStatus;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.utils.JSONUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;

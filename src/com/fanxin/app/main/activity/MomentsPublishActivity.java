@@ -48,6 +48,7 @@ import com.baidu.location.LocationClientOption.LocationMode;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.moments.PictureUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
@@ -180,7 +181,7 @@ public class MomentsPublishActivity extends BaseActivity {
 		List<Param> params=new ArrayList<>();
 		params.add(new Param("content",content));
 		params.add(new Param("location",mylocation));
-		OkHttpManager.getInstance().postMoments(params, lists,FXConstant.URL_PUBLISH, new OkHttpManager.HttpCallBack() {
+		OkHttpManager.getInstance().postMoments(params, lists, FXConstant.URL_PUBLISH, new OkHttpManager.HttpCallBack() {
 			@Override
 			public void onResponse(JSONObject jsonObject) {
 				int code = jsonObject.getInteger("code");

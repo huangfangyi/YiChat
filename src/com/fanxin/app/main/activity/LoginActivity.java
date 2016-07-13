@@ -18,6 +18,8 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.DemoDBManager;
+import com.fanxin.app.main.FXConstant;
+import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.utils.OkHttpManager;
 

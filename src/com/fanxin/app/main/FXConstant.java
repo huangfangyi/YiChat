@@ -69,4 +69,7 @@ public class FXConstant {
 
     public static final String FXLIVE_CHATROOM_ID="218352836658856384";
 
+    public static final String RTEM_URL="rtmp://live.hkstv.hk.lxdns.com/live/hks";
+    public static final String RTEM_URL_LIVE= "rtmp://publish3.cdn.ucloud.com.cn/ucloud/10231";
+
 }

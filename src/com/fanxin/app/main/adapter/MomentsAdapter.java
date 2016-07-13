@@ -31,7 +31,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.MomentsActivity;
 import com.fanxin.app.main.moments.AddPopWindow;
 import com.fanxin.app.main.moments.MyWebViewActivity;

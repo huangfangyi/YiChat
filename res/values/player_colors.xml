@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_white_alpha_half">#7fffffff</color>
+    <color name="color_white">#ffeeeeee</color>
+    <color name="color_white_charactor_color">#FFFFFFFF</color>
+    <color name="color_red_charactor_show">#FF0000</color>
+    <color name="color_white_alpha_alpha40">#66ffffff</color>
+    <color name="color_progress_bg">#26ffffff</color>
+    <color name="color_progress">#ff00a0e9</color>
+    <color name="color_secondprogress_gray">#ff9a9a9a</color>
+    <color name="color_video_view_bg">#00000000</color>
+	<color name="color_input_tips">#ffb3b3b3</color>
+	<color name="color_transparent">#000000</color>
+	<color name="transparent">#00000000</color>
+	<color name="color_setting_menu_bg">#A0000000</color>
+	<color name="color_setting_menu_content_bg">#B0000000</color>
+	<color name="color_setting_menu_item_selected">#B1000000</color>
+
+</resources>

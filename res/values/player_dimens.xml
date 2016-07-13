@@ -1,0 +1,24 @@
+<resources>
+    <!-- Volume Settings -->
+    <dimen name="volume_vertical_margin_right">90dp</dimen>
+    <dimen name="volume_vertical_margin_bottom">150dp</dimen>
+    <dimen name="volume_vertical_width">60dp</dimen>
+    <dimen name="volume_vertical_height">380dp</dimen>
+    <dimen name="volume_vertical_progress_width">5dp</dimen>
+    <dimen name="volume_vertical_margin">10dp</dimen>
+    <dimen name="volume_vertical_icon_width">42dp</dimen>
+    <dimen name="volume_vertical_icon_hight">29dp</dimen>
+
+
+    <!-- Volume Settings -->
+    <dimen name="vs_width">425dp</dimen>
+    <dimen name="vs_height">57dp</dimen>
+    <dimen name="vs_paddingleft">15dp</dimen>
+    <dimen name="vs_paddingtop">13dp</dimen>
+    <dimen name="vs_margintop">60dp</dimen>
+    <dimen name="vs_progressbar_height">10dp</dimen>
+    <dimen name="vs_progressbar_marginleft">10dp</dimen>
+    <dimen name="vs_progressbar_radius">15dp</dimen>
+    <dimen name="vs_icon_width">42dp</dimen>
+    <dimen name="vs_icon_height">19dp</dimen>
+</resources>

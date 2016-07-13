@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/easeuilibrary/easeuilibrary.iml" filepath="$PROJECT_DIR$/easeuilibrary/easeuilibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/redpacketlibrary/redpacketlibrary.iml" filepath="$PROJECT_DIR$/redpacketlibrary/redpacketlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ulive-android-sdk/ulive-android-sdk.iml" filepath="$PROJECT_DIR$/ulive-android-sdk/ulive-android-sdk.iml" />
     </modules>
   </component>
 </project>

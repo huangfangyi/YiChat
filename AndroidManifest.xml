@@ -425,7 +425,7 @@
             android:theme="@style/FullscreenTheme" >
 
             <intent-filter>
-                <action android:name="ucloud.intent.action.uvod.example.demo1" />
+                <action android:name="ucloud.intent.action.uvod.fanxin.demo1" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -449,13 +449,12 @@
             android:theme="@style/FullscreenTheme" >
 
             <intent-filter>
-                <action android:name="ucloud.intent.action.uvod.example.demo2" />
+                <action android:name="ucloud.intent.action.uvod.fanxin.demo2" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
 
-        <uses-library android:name="android.test.runner" />
 
         <activity
             android:name=".main.uvod.preference.SettingsActivity"

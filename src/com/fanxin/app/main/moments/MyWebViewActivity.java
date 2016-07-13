@@ -2,14 +2,12 @@ package com.fanxin.app.main.moments;
 
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.BaseAdapter;
 import android.widget.ProgressBar;
 
 import com.fanxin.app.R;
@@ -24,7 +22,7 @@ public class MyWebViewActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        setContentView(R.layout.activity_webview);
+        setContentView(R.layout.fx_activity_webview);
        
         initView();
     }

@@ -8,12 +8,20 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\menu\\em_remove_from_blacklist.xml"
     },
     {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\menu\\menu_app.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\menu\\menu_app.xml"
+    },
+    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\menu\\em_delete_message.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\menu\\em_delete_message.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_tab_contact.xml",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\menu\\em_context_tab_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\menu\\menu_player.xml",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\menu\\menu_player.xml"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\menu\\em_context_contact_list.xml",
