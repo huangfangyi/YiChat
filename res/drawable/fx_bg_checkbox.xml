@@ -3,5 +3,5 @@
     <item android:drawable="@drawable/fx_icon_cb_on" android:state_checked="true"></item>
     <item android:drawable="@drawable/fx_icon_cb_on" android:state_selected="true"></item>
     <item android:drawable="@drawable/fx_icon_cb_on" android:state_pressed="true"></item>
-    <item android:drawable="@drawable/fx_icon_cb_off"></item>
+    <item android:drawable="@drawable/fx_icon_cb_on"></item>
 </selector>  

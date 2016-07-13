@@ -12,37 +12,47 @@ import android.view.ViewGroup;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.activity.MomentsActivity;
+import com.fanxin.app.main.activity.ScanCaptureActivity;
 import com.fanxin.app.main.moments.SocialMainActivity;
 
-public class FragmentFind  extends Fragment{
- 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.fragment_find, container, false);
-	}
+public class FragmentFind extends Fragment {
 
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
-	 
-		getView().findViewById(R.id.re_friends).setOnClickListener(new OnClickListener(){
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_find, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        getView().findViewById(R.id.re_friends).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                      String userID= DemoHelper.getInstance().getCurrentUsernName();
-                      if(!TextUtils.isEmpty(userID)){
+                String userID = DemoHelper.getInstance().getCurrentUsernName();
+                if (!TextUtils.isEmpty(userID)) {
 
-                          startActivity(new Intent(getActivity(),SocialMainActivity.class).putExtra("userID", userID));
+                    startActivity(new Intent(getActivity(), SocialMainActivity.class).putExtra("userID", userID));
 
-                      }
+                }
             }
-            
-            
+
+
         });
-    
-		}
-	
-	
-	 
+        getView().findViewById(R.id.re_qrcode).setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getActivity(), ScanCaptureActivity.class));
+            }
+
+        });
+
+
+    }
+
+
 }

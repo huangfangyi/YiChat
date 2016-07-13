@@ -35,7 +35,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/re_erweima"
+        android:id="@+id/re_qrcode"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -44,7 +44,7 @@
         android:paddingLeft="12dp" >
 
         <ImageView
-            android:id="@+id/iv_erweima"
+            android:id="@+id/iv_qrcode"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentLeft="true"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_erweima"
+            android:layout_toRightOf="@id/iv_qrcode"
             android:text="扫一扫"
             android:textColor="#353535"
             android:textSize="16sp" />
