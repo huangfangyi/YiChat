@@ -23,6 +23,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.adapter.GridAdapter;
 import com.fanxin.app.main.db.TopUser;
 import com.fanxin.app.main.db.TopUserDao;

@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fanxin.app.R;
 import com.fanxin.app.main.adapter.GroupsAdapter;
@@ -20,15 +22,30 @@ import com.fanxin.easeui.EaseConstant;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMMessage;
+import com.hyphenate.exceptions.HyphenateException;
 
 
 public class GroupListActivity extends BaseActivity {
     private ListView groupListView;
     protected List<EMGroup> grouplist;
     private GroupsAdapter groupAdapter;
-    TextView tv_total;
+    private  TextView tv_total;
     public static GroupListActivity instance;
+    Handler handler = new Handler(){
+        public void handleMessage(android.os.Message msg) {
+             switch (msg.what) {
+                case 0:
+                    refresh();
+                    break;
+                case 1:
+                    Toast.makeText(GroupListActivity.this, R.string.Failed_to_get_group_chat_information, Toast.LENGTH_LONG).show();
+                    break;
 
+                default:
+                    break;
+            }
+        };
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +80,19 @@ public class GroupListActivity extends BaseActivity {
             }
 
         });
+
+        new Thread(){
+            @Override
+            public void run(){
+                try {
+                    EMClient.getInstance().groupManager().getJoinedGroupsFromServer();
+                    handler.sendEmptyMessage(0);
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                    handler.sendEmptyMessage(1);
+                }
+            }
+        }.start();
 
     }
 

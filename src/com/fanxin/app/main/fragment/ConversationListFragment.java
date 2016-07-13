@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.fanxin.app.Constant;
 import com.fanxin.app.db.InviteMessgeDao;
-import com.fanxin.app.main.activity.MainActivity;
 import com.fanxin.app.main.adapter.ConversationAdapter;
 import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.easeui.ui.EaseConversationListFragment;

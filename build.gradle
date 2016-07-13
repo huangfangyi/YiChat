@@ -60,5 +60,8 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile 'com.facebook.fresco:fresco:0.11.0'
     compile fileTree(dir: 'libs', include: '*.jar', exclude: 'android-support-multidex.jar')
+    //ucloud相关
+    compile project(':ulive-android-sdk')
+    compile 'com.jakewharton:butterknife:7.0.1'
 
 }

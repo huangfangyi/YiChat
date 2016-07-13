@@ -44,13 +44,18 @@
 
     <uses-permission android:name="com.fanxin.app.permission.MIPUSH_RECEIVE" />
 
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <application
         android:name="com.fanxin.app.DemoApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name" >
         <activity
-            android:name="com.fanxin.app.main.activity.MainActivity"
+            android:name="com.fanxin.app.main.fragment.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -402,6 +407,61 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- UCLOUD -->
+        <activity
+            android:name="com.fanxin.app.main.uvod.MainDemos"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.uvod.impl.Demo1"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensor"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="ucloud.intent.action.uvod.example.demo1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+                <data android:scheme="http" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.uvod.impl.Demo2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="ucloud.intent.action.uvod.example.demo2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.fanxin.app.main.uvod.preference.SettingsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name="com.fanxin.app.receiver.StartServiceReceiver" >

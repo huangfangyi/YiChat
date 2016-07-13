@@ -31,10 +31,12 @@ import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.db.UserDao;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.GroupListActivity;
 import com.fanxin.app.main.activity.NewFriendsActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
+import com.fanxin.app.main.uvod.MainDemos;
+import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.app.ui.PublicChatRoomsActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.ui.EaseContactListFragment;
@@ -137,8 +139,10 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                 startActivity(new Intent(getActivity(), GroupListActivity.class));
                 break;
             case R.id.re_tag:
-                //进入聊天室列表页面
-                startActivity(new Intent(getActivity(), PublicChatRoomsActivity.class));
+                //进入直播间
+//                startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("chatType", 3).
+//                        putExtra("userId",FXConstant.FXLIVE_CHATROOM_ID));
+                startActivity(new Intent(getActivity(), MainDemos.class));
                 break;
             case R.id.re_public:
                 //进入Robot列表页面

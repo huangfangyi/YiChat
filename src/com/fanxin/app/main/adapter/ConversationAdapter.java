@@ -7,7 +7,6 @@ package com.fanxin.app.main.adapter;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.model.EaseAtMessageHelper;
 import com.fanxin.easeui.utils.EaseCommonUtils;

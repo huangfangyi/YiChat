@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <include layout="@layout/player_layout_video_main_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_white"
+        android:layout_height="match_parent"></RelativeLayout>
+</LinearLayout>

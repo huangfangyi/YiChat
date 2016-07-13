@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/easeuilibrary" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/redpacketlibrary" />
+            <option value="$PROJECT_DIR$/ulive-android-sdk" />
           </set>
         </option>
         <option name="myModules">
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/easeuilibrary" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/redpacketlibrary" />
+            <option value="$PROJECT_DIR$/ulive-android-sdk" />
           </set>
         </option>
       </GradleProjectSettings>

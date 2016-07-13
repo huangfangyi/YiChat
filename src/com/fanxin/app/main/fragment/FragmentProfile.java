@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.ProfileActivity;
 import com.fanxin.app.main.activity.SettingsActivity;
 

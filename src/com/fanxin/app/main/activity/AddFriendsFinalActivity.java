@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.ui.BaseActivity;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;

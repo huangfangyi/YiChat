@@ -1,7 +1,6 @@
 package com.fanxin.app.main.adapter;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.hyphenate.chat.EMGroup;
 
 import java.util.ArrayList;

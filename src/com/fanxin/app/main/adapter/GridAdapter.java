@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.GroupAddMembersActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
 import com.fanxin.easeui.domain.EaseUser;

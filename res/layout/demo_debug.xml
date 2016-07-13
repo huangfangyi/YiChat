@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ucloud.umplayer.demo.DebugDemo" >
+
+    <include layout="@layout/widget_toolbar"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tx15"
+    />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/debug_radio_group"
+        android:layout_height="wrap_content" > 
+
+        <RadioButton
+            android:id="@+id/debug_log2file_radiobt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/tx13" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tx16" />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tx17" />
+
+    <TextView 
+        android:id="@+id/descrption"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/tx18"
+    />
+</LinearLayout>

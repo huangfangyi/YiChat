@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical"
+    >
+
+    <com.ucloud.player.widget.v2.UVideoView
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp_20"
+        android:id="@+id/videoview"
+        android:layout_width="320dip"
+        android:layout_height="240dip" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Toggle Ratio"
+        android:onClick="toggleRatio"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="toggle definition:"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/definition_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="@string/toggle_fhd_definition"
+            android:id="@+id/fhd_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="@string/toggle_shd_definition"
+            android:id="@+id/shd_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="@string/toggle_hd_definition"
+            android:id="@+id/hd_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:text="@string/toggle_sd_definition"
+            android:id="@+id/sd_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="toggle decoder:"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/decoder_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="@string/toggle_hw_decoder"
+            android:id="@+id/hw_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="@string/toggle_sw_decoder"
+            android:id="@+id/sw_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+</LinearLayout>

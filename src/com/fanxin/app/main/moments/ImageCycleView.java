@@ -18,7 +18,7 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 
 /**
  * 广告图片自动轮播控件</br>

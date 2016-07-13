@@ -4,7 +4,7 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import com.fanxin.app.main.activity.FXConstant;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.utils.EaseCommonUtils;
 

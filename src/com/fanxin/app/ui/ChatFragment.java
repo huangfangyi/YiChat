@@ -29,8 +29,7 @@ import com.easemob.redpacketui.widget.ChatRowRedPacket;
 import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
 import com.fanxin.app.main.activity.ChatSettingGroupActivity;
 import com.fanxin.app.main.activity.ChatSettingSingleActivity;
-import com.fanxin.app.main.activity.FXConstant;
-import com.fanxin.app.main.activity.MainActivity;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.UserDetailsActivity;
 import com.fanxin.app.widget.ChatRowVoiceCall;
 import com.fanxin.easeui.widget.chatrow.EaseChatRow;
@@ -50,7 +49,6 @@ import com.fanxin.easeui.ui.EaseChatFragment.EaseChatFragmentHelper;
 import com.fanxin.easeui.widget.chatrow.EaseCustomChatRowProvider;
 import com.fanxin.easeui.widget.emojicon.EaseEmojiconMenu;
 import com.hyphenate.exceptions.HyphenateException;
-import com.hyphenate.util.EasyUtils;
 import com.hyphenate.util.PathUtil;
 
 public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHelper{
