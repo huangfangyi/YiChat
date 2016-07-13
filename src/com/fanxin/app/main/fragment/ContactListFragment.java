@@ -35,6 +35,7 @@ import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.GroupListActivity;
 import com.fanxin.app.main.activity.NewFriendsActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
+import com.fanxin.app.main.ulive.LiveActivity;
 import com.fanxin.app.main.uvod.MainDemos;
 import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.app.ui.PublicChatRoomsActivity;
@@ -146,7 +147,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                 break;
             case R.id.re_public:
                 //进入Robot列表页面
-              //  startActivity(new Intent(getActivity(), RobotsActivity.class));
+               startActivity(new Intent(getActivity(), LiveActivity.class));
                 break;
 
             default:

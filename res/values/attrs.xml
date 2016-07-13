@@ -5,4 +5,6 @@
     <declare-styleable name="UListPreference">
         <attr name="entrySummaries" />
     </declare-styleable>
+
+
 </resources>

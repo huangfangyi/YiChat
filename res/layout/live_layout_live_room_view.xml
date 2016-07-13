@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.ucloud.live.widget.UAspectFrameLayout
+        android:id="@+id/container"
+        android:layout_gravity="center"
+        android:background="@color/live_color_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.ucloud.live.widget.UAspectFrameLayout>
+
+    <include layout="@layout/live_layout_live_room_countdown"></include>
+
+    <include layout="@layout/live_layout_live_room_bottom_bar"></include>
+
+    <include layout="@layout/live_layout_live_room_header_bar"></include>
+
+    <include layout="@layout/live_layout_live_room_record_finish"></include>
+
+    <View
+        android:id="@+id/focus_index"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:background="@drawable/live_style_camera_focus"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bitrate_txtv"
+        android:layout_width="wrap_content"
+        android:layout_gravity="top|left"
+        android:textColor="@color/live_color_progress"
+        android:visibility="invisible"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

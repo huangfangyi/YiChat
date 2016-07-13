@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_150"
+    android:layout_gravity="bottom"
+    android:padding="@dimen/dp_10">
+
+
+    <ImageButton
+        android:id="@+id/img_bt_close_record"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/live_selecter_room_close_button" />
+
+    <ImageButton
+        android:id="@+id/img_bt_lamp"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toLeftOf="@id/img_bt_close_record"
+        android:background="@drawable/live_selecter_room_lamp_button"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/img_bt_switch_camera"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toLeftOf="@id/img_bt_lamp"
+        android:background="@drawable/live_selecter_room_switch_camera_button"
+        android:visibility="visible" />
+
+
+    <ImageButton
+        android:id="@+id/img_bt_filter"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toLeftOf="@id/img_bt_switch_camera"
+        android:background="@drawable/live_selecter_room_filter_button"
+        android:visibility="visible" />
+</RelativeLayout>
+
+

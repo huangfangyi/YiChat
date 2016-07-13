@@ -12,7 +12,7 @@
     <color name="color_video_view_bg">#00000000</color>
 	<color name="color_input_tips">#ffb3b3b3</color>
 	<color name="color_transparent">#000000</color>
-	<color name="transparent">#00000000</color>
+
 	<color name="color_setting_menu_bg">#A0000000</color>
 	<color name="color_setting_menu_content_bg">#B0000000</color>
 	<color name="color_setting_menu_item_selected">#B1000000</color>

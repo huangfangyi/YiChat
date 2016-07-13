@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/live_finish_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ab000000"
+    android:visibility="gone"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60.0dip"
+        android:layout_marginTop="60.0dip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="30.0dip"
+        android:paddingRight="30.0dip">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直播结束"
+            android:textColor="@color/live_color_progress"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txt_users_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="0人观看"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/txt_my_gain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="收获0映票"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:id="@+id/txt_share_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dip"
+            android:text="分享到"
+            android:visibility="gone"
+            android:textColor="#ffaaaaaa"
+            android:textSize="15sp" />
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15.0dip"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_weibo"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_icon_live_room_endshare_weibo" />
+
+            <ImageView
+                android:id="@+id/img_wechat"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/live_icon_live_room_endshare_wechatx" />
+
+            <ImageView
+                android:id="@+id/img_friendcircle"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/live_icon_live_room_endshare_timeline" />
+        </LinearLayout>
+
+        <View  android:layout_width="fill_parent"
+        android:layout_height="20.0dip"/>
+
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_follow"
+            android:textSize="18.0sp"
+            android:textColor="@color/color_record_completed"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/live_selecter_startlive_button"
+            android:layout_width="250.0dip"
+            android:layout_height="45.0dip"
+            android:text="关注主播"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15.0dip"
+            />
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="fill_parent"
+            android:textSize="18.0sp"
+            android:textColor="@color/live_color_progress"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/live_selecter_startlive_button"
+            android:layout_height="45.0dip"
+            android:text="返回首页"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15.0dip"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/btn_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20.0dip">
+
+        <ImageView
+            android:id="@+id/img_replay"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/live_btn_chongbo" />
+
+        <TextView
+            android:id="@+id/txt_replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重播"
+            android:textColor="#ff80ccc3"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</RelativeLayout>

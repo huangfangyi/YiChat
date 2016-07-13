@@ -414,7 +414,7 @@
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/PlayAppTheme" >
         </activity>
         <activity
             android:name="com.fanxin.app.main.uvod.impl.Demo1"
@@ -453,11 +453,41 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.fanxin.app.main.ulive.preference.SettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SettingTheme" />
+        <activity
+            android:name="com.fanxin.app.main.ulive.LiveActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SettingTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.ulive.upload.PublishDemo4MediaCodec"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SettingTheme" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.ulive.upload.PublishDemo4X264"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/SettingTheme" >
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.ulive.play.VideoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
             android:name="com.fanxin.app.main.uvod.preference.SettingsActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/PlayAppTheme" >
         </activity>
 
         <!-- 开机自启动服务 -->

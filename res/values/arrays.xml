@@ -8,4 +8,12 @@
         <item>ucloud.intent.action.uvod.fanxin.demo1</item>
         <item>ucloud.intent.action.uvod.fanxin.demo2</item>
     </string-array>
+    <string-array name="live_demoNames">
+        <item>视频发布</item>
+        <item>DEBUG</item>
+    </string-array>
+    <string-array name="live_demoDirects">
+        <item>ucloud.intent.action.videopublish</item>
+        <item>ucloud.intent.action.debug</item>
+    </string-array>
 </resources>

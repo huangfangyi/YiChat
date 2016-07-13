@@ -411,7 +411,7 @@
             android:name=".main.uvod.MainDemos"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:theme="@style/AppTheme"
+            android:theme="@style/PlayAppTheme"
             android:screenOrientation="portrait" >
 
         </activity>
@@ -455,10 +455,45 @@
 
         </activity>
 
+        <activity
+            android:name=".main.ulive.preference.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SettingTheme"></activity>
+
+        <activity
+            android:name=".main.ulive.LiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/SettingTheme">
+        </activity>
+
+        <activity
+            android:name=".main.ulive.upload.PublishDemo4MediaCodec"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/SettingTheme" >
+        </activity>
+
+        <activity
+            android:name=".main.ulive.upload.PublishDemo4X264"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/SettingTheme" >
+        </activity>
+
+        <activity
+            android:name=".main.ulive.play.VideoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
 
         <activity
             android:name=".main.uvod.preference.SettingsActivity"
-            android:theme="@style/AppTheme"
+            android:theme="@style/PlayAppTheme"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >

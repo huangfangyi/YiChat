@@ -7,4 +7,5 @@
         android:id="@+id/action_settings"
         android:title="@string/pref_settings"
         app:showAsAction="ifRoom" />
+
 </menu>
