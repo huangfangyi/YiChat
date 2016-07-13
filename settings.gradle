@@ -5,3 +5,4 @@ include ':redpacketlibrary', ':library'
 include ':easeuilibrary'
 //project(':hyphenatechatsdk').projectDir = new File('../emclient-android/hyphenatechatsdk')
 include ':library'
+include 'ulive-android-sdk'

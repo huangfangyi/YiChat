@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -167,10 +168,13 @@ public class PublicChatRoomsActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 
                 final EMChatRoom room = adapter.getItem(position);
+
+				Log.d("room.getId()--->",room.getId());
                 startActivity(new Intent(PublicChatRoomsActivity.this, ChatActivity.class).putExtra("chatType", 3).
                 		putExtra("userId", room.getId()));
-                
-            }
+
+
+			}
         });
         listView.setOnScrollListener(new OnScrollListener() {
             

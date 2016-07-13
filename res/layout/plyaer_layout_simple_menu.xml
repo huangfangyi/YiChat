@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right|center_vertical"
+    android:layout_marginRight="@dimen/dp_20"
+    android:orientation="vertical"
+    android:id="@+id/ll_screen_and_comment_container"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/circle_screen_shot"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone"
+        android:src="@drawable/player_icon_screen_shot_action" />
+
+</LinearLayout>

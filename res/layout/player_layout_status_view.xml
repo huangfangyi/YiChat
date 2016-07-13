@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/circle_play_status"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="@dimen/dp_100"
+    android:layout_gravity="center"
+    android:contentDescription="@string/app_name"
+    android:src="@drawable/player_icon_play_status"
+    android:visibility="gone" />

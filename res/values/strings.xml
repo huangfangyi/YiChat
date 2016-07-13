@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+	<string name="play_on_my_video_activity">start</string>
+	<string name="tx11">开始</string>
+	<string name="tx12">结束</string>
+	<string name="tx13">log2file</string>
+	<string name="tx14">vod2sw</string>
+	<string name="tx15">请选择:</string>
+	<string name="tx16">start</string>
+	<string name="tx17">end</string>
+	<string name="tx18">说明: Debug String:\n1. 保存log到文件: log2file=true   (文件名及位置/mnt/sdcard/ucloud-当前日期时间.log)\n2. 停止log到文件: log2file=end (千万别忘了)\n</string>
+	<string name="tx19">vod2hw</string>
+</resources>

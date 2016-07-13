@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.widget.FXAlertDialog;

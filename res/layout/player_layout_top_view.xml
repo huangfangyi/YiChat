@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fanxin.app.main.uvod.ui.UTopView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topview"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_100"
+    android:visibility="gone"
+    android:layout_alignParentTop="true"
+    android:background="#B0000000" >
+
+    <ImageButton
+        android:id="@+id/topview_left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:background="@drawable/player_selecter_topview_left_button" />
+
+    <TextView
+        android:id="@+id/topview_title_txtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="UCloud"
+        android:textColor="@android:color/darker_gray" />
+
+    <ImageButton
+        android:id="@+id/topview_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/player_selecter_topview_right_button" />
+
+</com.fanxin.app.main.uvod.ui.UTopView>

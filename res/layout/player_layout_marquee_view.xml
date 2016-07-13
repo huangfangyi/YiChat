@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/marquee_txtv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right|bottom"
+    android:layout_margin="@dimen/dp_40"
+    android:clickable="false"
+    android:focusable="false"
+    android:singleLine="true"
+    android:text="UCloud Video"
+    android:textColor="@color/color_red_charactor_show"
+    android:textSize="@dimen/sp_40"
+    android:visibility="invisible" />

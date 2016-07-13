@@ -21,7 +21,6 @@ import java.util.List;
 
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -37,7 +36,6 @@ import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,6 +45,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.widget.FXAlertDialog;

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/mediacontroller_status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="0.0dip"
+        android:layout_marginLeft="0.0dip"
+        android:layout_marginRight="0.0dip"
+        android:background="@drawable/player_bg_umedia_controller"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mediacontroller_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/mediacontroller_time_current"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/app_name"
+            android:nextFocusDown="@+id/mediacontroller_seekbar" />
+
+        <SeekBar
+            android:id="@+id/mediacontroller_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mediacontroller_time_current"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="10dp"
+            android:max="1000"
+            android:maxHeight="9dip"
+            android:minHeight="9dip"
+            android:nextFocusDown="@+id/mediacontroller_play_pause"
+            android:progressDrawable="@drawable/player_style_default_mediacontrol_seekbar"
+            android:thumb="@drawable/player_style_default_mediacontrol_thumb"
+            android:thumbOffset="0dp" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mediacontroller_seekbar"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/mediacontroller_play_pause"
+            android:text="00:00:00"
+            android:textColor="@color/color_white_charactor_color" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mediacontroller_time_current"
+            android:layout_alignBottom="@+id/mediacontroller_time_current"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/mediacontroller_time_current"
+            android:text="00:00:00"
+            android:textColor="@color/color_white_charactor_color" />
+
+        <TextView
+            android:id="@+id/mediacontroller_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mediacontroller_time_current"
+            android:layout_alignRight="@+id/mediacontroller_seekbar"
+            android:layout_below="@+id/mediacontroller_seekbar"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="moive.mp4" />
+    </RelativeLayout>
+
+</FrameLayout>

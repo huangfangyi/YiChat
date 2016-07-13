@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.easemob.redpacketsdk.RPCallback;
 import com.easemob.redpacketsdk.RedPacket;
 import com.fanxin.app.DemoHelper;
+import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.service.ContactsService;
 import com.fanxin.app.ui.*;
 import com.hyphenate.chat.EMClient;

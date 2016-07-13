@@ -28,8 +28,7 @@ import com.alibaba.fastjson.JSONObject;
 
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.FXConstant;
-import com.fanxin.app.main.activity.MomentsActivity;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.MomentsPublishActivity;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
@@ -59,7 +58,7 @@ public class SocialMainActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle arg0) {
-		setContentView(R.layout.activity_social_main);
+		setContentView(R.layout.fx_activity_social_main);
 		super.onCreate(arg0);
 		userID = this.getIntent().getStringExtra("userID");
 		initFile();

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 不是焦点 -->
+    <item android:drawable="@drawable/player_icon_default_mobile_control_thumb" android:state_focused="false" android:state_pressed="false" android:state_selected="false"/>
+    <item android:drawable="@drawable/player_icon_default_mobile_control_thumb" android:state_focused="false" android:state_pressed="false" android:state_selected="true"/>
+    <!-- 焦点 -->
+    <item android:drawable="@drawable/player_icon_default_mobile_control_thumb" android:state_focused="true" android:state_pressed="false" android:state_selected="false"/>
+    <item android:drawable="@drawable/player_icon_default_mobile_control_thumb" android:state_focused="true" android:state_pressed="false" android:state_selected="true"/>
+    <!-- 按住 -->
+    <item android:drawable="@drawable/player_icon_default_mobile_control_thumb" android:state_pressed="true"/>
+
+</selector>

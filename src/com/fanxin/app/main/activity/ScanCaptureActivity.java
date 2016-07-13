@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.widget.scan.CameraManager;
 import com.fanxin.app.main.widget.scan.CameraPreview;
 

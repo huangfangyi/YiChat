@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="circle_comment_tips">评论</string>
+    <string name="send">send</string>
+    <string name= "menu_item_title_definition">清晰度</string>
+    <string name= "menu_item_title_ratio">画幅</string>
+    <string name= "menu_item_title_decoder">解码器</string>
+    <string name= "menu_main_title">菜单</string>
+    <string name="loading">玩命加载中....</string>
+    <string name="error_current_network_disconnected">当前网络不可用</string>
+    <string name="toogle_screen_style">切换屏幕方向</string>
+    <string name="toggle_render">Toggle Render</string>
+    <string name="toggle_ratio">Toggle Ratio</string>
+    <string name="toggle_fhd_definition">Toggle FHD</string>
+    <string name="toggle_shd_definition">Toggle SHD</string>
+    <string name="toggle_hd_definition">Toggle HD</string>
+    <string name="toggle_sd_definition">Toggle SD</string>
+    <string name="toggle_hw_decoder">Toggle HW Decoder</string>
+    <string name="toggle_sw_decoder">Toggle SW Decoder</string>
+
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback</string>
+    <string name="VideoView_error_text_unknown">Unknown</string>
+    <string name="VideoView_error_button">OK</string>
+
+
+    <string name="pref_default_screen_ratio">0</string>
+    <string name="pref_screen_ratio">画幅</string>
+    <string name="pref_default_decoder">1</string>
+    <string name="pref_decoder_type">解码类型</string>
+    <string name="pref_settings">设置</string>
+    <string name="pref_category_general">通用</string>
+    <string name="pref_category_debug">调试</string>
+    <string name="pref_open_log">日志输出</string>
+    <string name="pref_log_cache_dir">日志目录</string>
+    <string name="pref_default_log_cache_dir">/sdcard/ucloud/log</string>
+
+    <string-array name="pref_decoder_names">
+        <item>硬解</item>
+        <item>软解</item>
+    </string-array>
+
+    <string-array name="pref_decoder_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="pref_screen_ratio_names">
+        <item>自动</item>
+        <item>原始</item>
+        <item>全屏</item>
+    </string-array>
+
+    <string-array name="pref_screen_ratio_values">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_definition_names">
+        <item>蓝光</item>
+        <item>超清</item>
+        <item>高清</item>
+        <item>标清</item>
+    </string-array>
+
+    <string-array name="pref_definition_values">
+        <item>fhd</item>
+        <item>shd</item>
+        <item>hd</item>
+        <item>sd</item>
+    </string-array>
+</resources>
