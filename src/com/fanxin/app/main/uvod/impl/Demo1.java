@@ -13,6 +13,9 @@ import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.fanxin.app.R;
@@ -21,6 +24,11 @@ import com.fanxin.app.main.uvod.preference.Settings;
 import com.fanxin.app.main.uvod.ui.UPlayer;
 import com.fanxin.app.main.uvod.ui.USettingMenuView;
 import com.fanxin.app.main.uvod.ui.base.UMenuItem;
+import com.fanxin.easeui.domain.EaseEmojicon;
+import com.fanxin.easeui.model.EaseAtMessageHelper;
+import com.fanxin.easeui.widget.EaseChatInputMenu;
+import com.fanxin.easeui.widget.EaseVoiceRecorderView;
+import com.hyphenate.chat.EMMessage;
 import com.ucloud.player.widget.v2.UVideoView;
 
 public class Demo1 extends FragmentActivity implements USettingMenuView.Callback, UVideoView.Callback {
@@ -58,11 +66,39 @@ public class Demo1 extends FragmentActivity implements USettingMenuView.Callback
 		mPlayer.setVideoPath(mUri);
 		mPlayer.setScreenOriention(UPlayer.SCREEN_ORIENTATION_SENSOR);
 	}
-
+	protected EaseChatInputMenu inputMenu;
 	@Override
 	protected void onCreate(Bundle bundles) {
 		super.onCreate(bundles);
 		setContentView(R.layout.activity_video_demo1);
+		inputMenu = (EaseChatInputMenu)  findViewById(com.hyphenate.easeui.R.id.input_menu);
+		inputMenu.init(null);
+		inputMenu.setChatInputMenuListener(new EaseChatInputMenu.ChatInputMenuListener() {
+
+			@Override
+			public void onSendMessage(String content) {
+				sendTextMessage(content);
+			}
+
+			@Override
+			public boolean onPressToSpeakBtnTouch(View v, MotionEvent event) {
+//				return voiceRecorderView.onPressToSpeakBtnTouch(v, event, new EaseVoiceRecorderView.EaseVoiceRecorderCallback() {
+//
+//					@Override
+//					public void onVoiceRecordComplete(String voiceFilePath, int voiceTimeLength) {
+//						sendVoiceMessage(voiceFilePath, voiceTimeLength);
+//					}
+//				});
+				return false;
+			}
+
+			@Override
+			public void onBigExpressionClicked(EaseEmojicon emojicon) {
+				//sendBigExpressionMessage(emojicon.getName(), emojicon.getIdentityCode());
+			}
+		});
+
+
 		mSettings = new Settings(this);
 
 		if (mSettings.isOpenLogRecoder()) {
@@ -179,4 +215,14 @@ public class Demo1 extends FragmentActivity implements USettingMenuView.Callback
 			}
 		}
 	};
+
+	//send message
+	protected void sendTextMessage(String content) {
+//		if(EaseAtMessageHelper.get().containsAtUsername(content)){
+//			sendAtMessage(content);
+//		}else{
+//			EMMessage message = EMMessage.createTxtSendMessage(content, toChatUsername);
+//			sendMessage(message);
+//		}
+	}
 }

@@ -65,7 +65,13 @@ public class MainDemos extends AppCompatActivity implements OnItemClickListener{
 			Intent intent = new Intent();
 			intent.setAction(demoDirects[position]);
 			intent.putExtra("title", demoNames[position]);
-			intent.putExtra("videoPath", FXConstant.RTEM_URL);
+
+			if(position==0){
+
+				intent.putExtra("videoPath", FXConstant.RTEM_URL);
+			}else{
+				intent.putExtra("videoPath", FXConstant.RTEM_URL_LIVE);
+			}
 			startActivity(intent);
 		}
 	}

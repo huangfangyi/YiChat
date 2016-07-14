@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
+import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
-import com.fanxin.app.main.ulive.AppContext;
 import com.ucloud.live.UEasyStreaming;
 
 
@@ -134,7 +134,7 @@ public class Settings {
 
     public String getPusblishStreamId() {
         String key = "pref.video_publish_and_play_id";
-        return mSharedPreferences.getString(key, AppContext.getRandomStreamId() +"");
+        return mSharedPreferences.getString(key, DemoApplication.getRandomStreamId() +"");
     }
 
     @Override

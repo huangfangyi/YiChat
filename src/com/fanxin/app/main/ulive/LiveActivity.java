@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
 import com.fanxin.app.main.ulive.play.VideoActivity;
 import com.fanxin.app.main.ulive.preference.Settings;
@@ -41,7 +42,7 @@ public class LiveActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         initView();
         if (publishStreamEdtx != null && mSettings != null) {
-            String streamId = AppContext.getRandomStreamId() +""; //   mSettings.getPusblishStreamId()
+            String streamId = DemoApplication.getRandomStreamId() +""; //   mSettings.getPusblishStreamId()
             if (!TextUtils.isEmpty(streamId)) {
                 publishStreamEdtx.setText(streamId);
             }

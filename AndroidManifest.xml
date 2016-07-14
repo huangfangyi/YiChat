@@ -418,10 +418,10 @@
 
         <activity
             android:name=".main.uvod.impl.Demo1"
-            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="sensor"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
             android:theme="@style/FullscreenTheme" >
 
             <intent-filter>
@@ -454,6 +454,14 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".main.uvod.preference.SettingsActivity"
+            android:theme="@style/PlayAppTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>
+
 
         <activity
             android:name=".main.ulive.preference.SettingsActivity"
@@ -491,13 +499,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
 
 
-        <activity
-            android:name=".main.uvod.preference.SettingsActivity"
-            android:theme="@style/PlayAppTheme"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
-        </activity>
+
 
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver">

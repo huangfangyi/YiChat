@@ -43,6 +43,8 @@ public class URotateVideoView extends URotateLayout {
         addView(mVideoView);
     }
 
+
+
     /**video player method**/
 
     /**

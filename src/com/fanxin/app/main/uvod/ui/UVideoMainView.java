@@ -105,13 +105,13 @@ public class UVideoMainView extends FrameLayout implements UPlayer, UTopView.Cal
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_SHOW_TOP_AND_BOTTOM_VIEW:
-                    doShowNavigationBar();
+                 //   doShowNavigationBar();
                     break;
                 case MSG_HIDE_TOP_AND_BOTTOM_VIEW:
-                    doHideNavigationBar();
+                 //   doHideNavigationBar();
                     break;
                 case MSG_SHOW_SETTING_MENU_VIEW:
-                    doShowSettingMenuView();
+                  doShowSettingMenuView();
                     break;
                 case MSG_HIDE_SETTING_MENU_VIEW:
                     doHideSettingMenuView();

@@ -61,7 +61,8 @@ public class URotateLayout extends FrameLayout{
             mDefaultVideoContainerHeight = mScreenHeight;
         } else {
             mDefaultVideoContainerWidth = mScreenWidth;
-            mDefaultVideoContainerHeight = mScreenWidth * 9 / 16;
+         //   mDefaultVideoContainerHeight = mScreenWidth * 9 / 16;
+            mDefaultVideoContainerHeight=mScreenHeight;
         }
         setMeasuredDimension(mDefaultVideoContainerWidth, mDefaultVideoContainerHeight);
     }

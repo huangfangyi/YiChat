@@ -418,11 +418,11 @@
         </activity>
         <activity
             android:name="com.fanxin.app.main.uvod.impl.Demo1"
-            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="sensor"
-            android:theme="@style/FullscreenTheme" >
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
             <intent-filter>
                 <action android:name="ucloud.intent.action.uvod.fanxin.demo1" />
 
@@ -451,6 +451,13 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fanxin.app.main.uvod.preference.SettingsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayAppTheme" >
         </activity>
         <activity
             android:name="com.fanxin.app.main.ulive.preference.SettingsActivity"
@@ -482,13 +489,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity
-            android:name="com.fanxin.app.main.uvod.preference.SettingsActivity"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/PlayAppTheme" >
-        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name="com.fanxin.app.receiver.StartServiceReceiver" >

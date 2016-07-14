@@ -2,7 +2,9 @@ package com.fanxin.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Build;
 import android.support.multidex.MultiDex;
+import android.util.DisplayMetrics;
 
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RedPacket;
@@ -11,9 +13,11 @@ import com.fanxin.app.main.db.TopUser;
 import com.fanxin.app.main.db.TopUserDao;
 import com.fanxin.app.main.utils.LocalUserUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
+import com.ucloud.live.UEasyStreaming;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Random;
 
 
 public class DemoApplication extends Application {
@@ -26,6 +30,24 @@ public class DemoApplication extends Application {
 	private JSONObject userJson;
 	private  Map<String, TopUser> topUsers;
 	private String time="";
+
+	private DisplayMetrics displayMetrics = null;
+
+	public static DemoApplication getApp() {
+		if (instance != null && instance instanceof DemoApplication) {
+			return (DemoApplication) instance;
+		} else {
+			instance = new DemoApplication();
+			instance.onCreate();
+			return (DemoApplication) instance;
+		}
+	}
+
+	public static boolean sRunningOnIceCreamSandwich;
+
+	static {
+		sRunningOnIceCreamSandwich = Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
+	}
 	@Override
 	public void onCreate() {
 		MultiDex.install(this);
@@ -37,6 +59,8 @@ public class DemoApplication extends Application {
         DemoHelper.getInstance().init(applicationContext);
 		RedPacket.getInstance().initContext(applicationContext);
 		Fresco.initialize(this);
+		UEasyStreaming.initStreaming("publish3-key");
+		UEasyStreaming.syncMobileConfig(this, 3600 * 24);
 	}
 
 	public static DemoApplication getInstance() {
@@ -85,6 +109,57 @@ public class DemoApplication extends Application {
 		this.topUsers=topUsers;
  		TopUserDao dao = new TopUserDao(instance);
 		dao.saveTopUserList(new ArrayList<TopUser>(topUsers.values()));
+	}
+
+
+	public static int getRandomStreamId() {
+		Random random = new Random();
+		int randint =(int)Math.floor((random.nextDouble()*10000.0 + 10000.0));
+		return randint;
+	}
+
+	public float getScreenDensity() {
+		if (this.displayMetrics == null) {
+			setDisplayMetrics(getResources().getDisplayMetrics());
+		}
+		return this.displayMetrics.density;
+	}
+
+	public int getScreenHeight() {
+		if (this.displayMetrics == null) {
+			setDisplayMetrics(getResources().getDisplayMetrics());
+		}
+		return this.displayMetrics.heightPixels;
+	}
+
+	public int getScreenWidth() {
+		if (this.displayMetrics == null) {
+			setDisplayMetrics(getResources().getDisplayMetrics());
+		}
+		return this.displayMetrics.widthPixels;
+	}
+
+	public void setDisplayMetrics(DisplayMetrics DisplayMetrics) {
+		this.displayMetrics = DisplayMetrics;
+	}
+
+	public int dp2px(float f)
+	{
+		return (int)(0.5F + f * getScreenDensity());
+	}
+
+	public int px2dp(float pxValue) {
+		return (int) (pxValue / getScreenDensity() + 0.5f);
+	}
+
+	//获取应用的data/data/....File目录
+	public String getFilesDirPath() {
+		return getFilesDir().getAbsolutePath();
+	}
+
+	//获取应用的data/data/....Cache目录
+	public String getCacheDirPath() {
+		return getCacheDir().getAbsolutePath();
 	}
 
 }

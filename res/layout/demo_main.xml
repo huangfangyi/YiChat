@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ucloud.umplayer.demo.MainDemos" >
+    tools:context="com.fanxin.app.main.uvod.MainDemos" >
 
    <include layout="@layout/widget_toolbar"/>
 
