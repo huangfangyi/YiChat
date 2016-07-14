@@ -5,6 +5,9 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="#f2f0eb" >
+
+
+
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"

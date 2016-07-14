@@ -1,75 +1,123 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/root"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@android:color/holo_blue_light"
-    android:orientation="vertical"
-    >
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#f2f0eb">
 
-    <com.ucloud.player.widget.v2.UVideoView
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/dp_20"
-        android:id="@+id/videoview"
-        android:layout_width="320dip"
-        android:layout_height="240dip" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:text="Toggle Ratio"
-        android:onClick="toggleRatio"
-        android:layout_height="wrap_content" />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:text="toggle definition:"
-        android:layout_height="wrap_content" />
-    <RadioGroup
-        android:id="@+id/definition_radio_group"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+             >
+            <ImageView
+                android:id="@+id/iv_temp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fx_bg_welcome"/>
+
+            <com.ucloud.player.widget.v2.UVideoView
+                android:background="@drawable/fx_bg_welcome"
+                android:id="@+id/videoview"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                 />
+
+
+
+        </FrameLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:text="@string/toggle_fhd_definition"
-            android:id="@+id/fhd_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <RadioButton
-            android:text="@string/toggle_shd_definition"
-            android:id="@+id/shd_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <RadioButton
-            android:text="@string/toggle_hd_definition"
-            android:id="@+id/hd_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+          >
 
-        <RadioButton
-            android:text="@string/toggle_sd_definition"
-            android:id="@+id/sd_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RadioGroup>
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/fx_top_bar_back" />
 
 
-    <TextView
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/input_menu"
         android:layout_width="match_parent"
-        android:text="toggle decoder:"
-        android:layout_height="wrap_content" />
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true" >
 
-    <RadioGroup
-        android:id="@+id/decoder_radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:text="@string/toggle_hw_decoder"
-            android:id="@+id/hw_radio_button"
+        <Button
+            android:id="@+id/btn_send"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <RadioButton
-            android:text="@string/toggle_sw_decoder"
-            android:id="@+id/sw_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RadioGroup>
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#000"
+            android:padding="8dp"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/btn_send"
+            android:background="#f0f0f0"
+            android:hint="请输入内容"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+        <ListView
+
+            android:layout_above="@+id/input_menu"
+
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+
+            android:background="#000000"
+            android:dividerHeight="5dp"
+            android:listSelector="#00000000"
+            android:scrollbarStyle="outsideOverlay"
+            android:transcriptMode="normal" />
+
+
+
+
+
+
+</RelativeLayout>

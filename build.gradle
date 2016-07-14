@@ -60,7 +60,7 @@ dependencies {
 
     //ucloud相关
     compile project(':ulive-android-sdk')
-    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile fileTree(dir: 'libs', include: '*.jar', exclude: 'android-support-multidex.jar')
 

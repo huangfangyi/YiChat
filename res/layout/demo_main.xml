@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fanxin.app.main.uvod.MainDemos" >
+    tools:context=".main.activity.LivesActivity" >
 
    <include layout="@layout/widget_toolbar"/>
 

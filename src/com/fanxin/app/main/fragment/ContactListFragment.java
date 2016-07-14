@@ -36,9 +36,7 @@ import com.fanxin.app.main.activity.GroupListActivity;
 import com.fanxin.app.main.activity.NewFriendsActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
 import com.fanxin.app.main.ulive.LiveActivity;
-import com.fanxin.app.main.uvod.MainDemos;
-import com.fanxin.app.ui.ChatActivity;
-import com.fanxin.app.ui.PublicChatRoomsActivity;
+import com.fanxin.app.main.activity.LivesActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.ui.EaseContactListFragment;
 import com.hyphenate.chat.EMClient;
@@ -143,7 +141,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                 //进入直播间
 //                startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("chatType", 3).
 //                        putExtra("userId",FXConstant.FXLIVE_CHATROOM_ID));
-                startActivity(new Intent(getActivity(), MainDemos.class));
+                startActivity(new Intent(getActivity(), LivesActivity.class));
                 break;
             case R.id.re_public:
                 //进入Robot列表页面

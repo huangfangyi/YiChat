@@ -410,42 +410,18 @@
 
         <!-- UCLOUD -->
         <activity
-            android:name="com.fanxin.app.main.uvod.MainDemos"
+            android:name="com.fanxin.app.main.activity.LivesActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/PlayAppTheme" >
         </activity>
         <activity
-            android:name="com.fanxin.app.main.uvod.impl.Demo1"
-            android:label="@string/app_name"
+            android:name="com.fanxin.app.main.activity.WatchLiveActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme"
-            android:windowSoftInputMode="stateVisible|adjustResize" >
-            <intent-filter>
-                <action android:name="ucloud.intent.action.uvod.fanxin.demo1" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="video/*" />
-                <data android:mimeType="audio/*" />
-                <data android:scheme="http" />
-                <data android:scheme="file" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.fanxin.app.main.uvod.impl.Demo2"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme" >
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="ucloud.intent.action.uvod.fanxin.demo2" />
 

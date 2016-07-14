@@ -17,7 +17,7 @@
             android:divider="@null"
             android:dividerHeight="5dp"
             android:listSelector="#00000000"
-            android:scrollbarStyle="insideInset"
+            android:scrollbarStyle="outsideOverlay"
             android:transcriptMode="normal" />
     </android.support.v4.widget.SwipeRefreshLayout>
 

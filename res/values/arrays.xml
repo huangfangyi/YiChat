@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="demoNames">
-        <item>demo1</item>
-        <item>demo2</item>
+        <item>观看指定直播间</item>
+        <item>电台推流测试直播间</item>
     </string-array>
     <string-array name="demoDirects">
-        <item>ucloud.intent.action.uvod.fanxin.demo1</item>
+        <item>ucloud.intent.action.uvod.fanxin.demo2</item>
         <item>ucloud.intent.action.uvod.fanxin.demo2</item>
     </string-array>
     <string-array name="live_demoNames">
