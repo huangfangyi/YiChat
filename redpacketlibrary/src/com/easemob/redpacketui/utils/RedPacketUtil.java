@@ -46,7 +46,7 @@ public class RedPacketUtil {
         String fromNickname = "";
         EaseUser easeUser = EaseUserUtils.getUserInfo(EMClient.getInstance().getCurrentUser());
         if (easeUser != null) {
-            fromAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : easeUser.getAvatar();
+            fromAvatarUrl = TextUtils.isEmpty(EaseConstant.URL_AVATAR+easeUser.getAvatar()) ? "none" : EaseConstant.URL_AVATAR+easeUser.getAvatar();
             fromNickname = TextUtils.isEmpty(easeUser.getNick()) ? easeUser.getUsername() : easeUser.getNick();
         }
         RedPacketInfo redPacketInfo = new RedPacketInfo();
@@ -117,7 +117,7 @@ public class RedPacketUtil {
         }
         EaseUser easeUser = EaseUserUtils.getUserInfo(EMClient.getInstance().getCurrentUser());
         if (easeUser != null) {
-            toAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : easeUser.getAvatar();
+            toAvatarUrl = TextUtils.isEmpty(EaseConstant.URL_AVATAR+easeUser.getAvatar()) ? "none" : EaseConstant.URL_AVATAR+easeUser.getAvatar();
             toNickname = TextUtils.isEmpty(easeUser.getNick()) ? easeUser.getUsername() : easeUser.getNick();
         }
         RedPacketInfo redPacketInfo = new RedPacketInfo();
@@ -190,7 +190,7 @@ public class RedPacketUtil {
         String fromAvatarUrl = "";
         EaseUser easeUser = EaseUserUtils.getUserInfo(EMClient.getInstance().getCurrentUser());
         if (easeUser != null) {
-            fromAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : easeUser.getAvatar();
+            fromAvatarUrl = TextUtils.isEmpty(EaseConstant.URL_AVATAR+easeUser.getAvatar()) ? "none" : EaseConstant.URL_AVATAR+easeUser.getAvatar();
             fromNickname = TextUtils.isEmpty(easeUser.getNick()) ? easeUser.getUsername() : easeUser.getNick();
         }
         intent.putExtra(RPConstant.EXTRA_USER_NAME, fromNickname);

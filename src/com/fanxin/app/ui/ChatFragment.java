@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.redpacketui.RedPacketConstant;
@@ -84,7 +85,9 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
      * if it is chatBot 
      */
     private boolean isRobot;
-    
+
+
+    private TextView tvName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate( R.layout.fx_fragment_chat, container, false);
@@ -93,6 +96,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     @Override
     protected void setUpView() {
         setChatFragmentListener(this);
+        tvName= (TextView) getView().findViewById(R.id.name);
         if (chatType == Constant.CHATTYPE_SINGLE) { 
             Map<String,RobotUser> robotMap = DemoHelper.getInstance().getRobotList();
             if(robotMap!=null && robotMap.containsKey(toChatUsername)){
@@ -107,6 +111,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                 }
             });
             getView().findViewById(R.id.iv_setting_group).setVisibility(View.GONE);
+            tvName.setText(DemoHelper.getInstance().getContactList().get(toChatUsername).getNick());
         }
         super.setUpView();
         hideTitleBar();
@@ -152,6 +157,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                     }
                 }).start();
             }
+            tvName.setText("群聊("+group.getAffiliationsCount()+")");
         }
     }
     

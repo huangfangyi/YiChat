@@ -97,13 +97,17 @@ public class ConversationAdapter extends ArrayAdapter<EMConversation> {
     public int getItemViewType(int position) {
         if (getItem(position).getType() == EMConversation.EMConversationType.GroupChat) {
             EMGroup group = EMClient.getInstance().groupManager().getGroup(getItem(position).getUserName());
-            String groupName_temp = group.getGroupName();
             JSONArray jsonarray = new JSONArray();
-            try {
-                JSONObject jsonObject = JSONObject.parseObject(groupName_temp);
-                jsonarray = jsonObject.getJSONArray("jsonArray");
-            } catch (JSONException e) {
+            if(group!=null){
+                String groupName_temp = group.getGroupName();
+
+                try {
+                    JSONObject jsonObject = JSONObject.parseObject(groupName_temp);
+                    jsonarray = jsonObject.getJSONArray("jsonArray");
+                } catch (JSONException e) {
+                }
             }
+
             return jsonarray.size() == 0 ? 1 : jsonarray.size();
 
         } else {
@@ -504,7 +508,8 @@ public class ConversationAdapter extends ArrayAdapter<EMConversation> {
             JSONObject jsonObject = JSONObject.parseObject(group.getGroupName());
             jsonarray = jsonObject.getJSONArray("jsonArray");
             groupName = jsonObject.getString("groupname");
-        } catch (JSONException e) {
+        } catch (JSONException e ) {
+            return;
         }
 
         List<String> avatars = new ArrayList<>();
