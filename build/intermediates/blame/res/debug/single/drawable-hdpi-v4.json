@@ -4,12 +4,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\fx_icon_cb_on.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatting_setmode_voice_btn_pressed.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_chatting_setmode_voice_btn_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chat_video_mask_to.9.png",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\live_icon_live_room_endshare_weibo.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_record_animate_10.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_record_animate_10.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_018.gif",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\icon_018.gif"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_record_animate_10.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\easeuilibrary\\unspecified\\res\\drawable-hdpi-v4\\ease_record_animate_10.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\player_tab_shadow_left.png",
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_icon_account.png"
     },
     {
-        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_on.png",
-        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_dx_checkbox_on.png"
-    },
-    {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\player_icon_write_comment_button.png",
         "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\player_icon_write_comment_button.png"
+    },
+    {
+        "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_dx_checkbox_on.png",
+        "source": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\drawable-hdpi\\em_dx_checkbox_on.png"
     },
     {
         "merged": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\em_settings_normal.png",
