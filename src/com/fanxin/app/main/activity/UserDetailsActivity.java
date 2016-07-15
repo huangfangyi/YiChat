@@ -123,9 +123,9 @@ public class UserDetailsActivity extends BaseActivity {
             progressDialog.show();
         }
         List<Param> parms = new ArrayList<>();
-        parms.add(new Param("uid", hxid));
+        parms.add(new Param("hxid", hxid));
 
-        OkHttpManager.getInstance().post(parms, FXConstant.URL_Search_User, new OkHttpManager.HttpCallBack() {
+        OkHttpManager.getInstance().post(parms, FXConstant.URL_Get_UserInfo, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 if (progressDialog != null && progressDialog.isShowing()) {
