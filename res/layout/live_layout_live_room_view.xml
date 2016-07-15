@@ -1,38 +1,150 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:animateLayoutChanges="true"
+    android:background="#f2f0eb">
 
-    <com.ucloud.live.widget.UAspectFrameLayout
-        android:id="@+id/container"
-        android:layout_gravity="center"
-        android:background="@color/live_color_progress"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    </com.ucloud.live.widget.UAspectFrameLayout>
+        <FrameLayout
 
-    <include layout="@layout/live_layout_live_room_countdown"></include>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
 
-    <include layout="@layout/live_layout_live_room_bottom_bar"></include>
+            <ImageView
+                android:id="@+id/iv_temp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/fx_bg_welcome" />
 
-    <include layout="@layout/live_layout_live_room_header_bar"></include>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
 
-    <include layout="@layout/live_layout_live_room_record_finish"></include>
+                <com.ucloud.live.widget.UAspectFrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/live_color_progress">
 
-    <View
-        android:id="@+id/focus_index"
-        android:layout_width="@dimen/dp_40"
-        android:layout_height="@dimen/dp_40"
-        android:background="@drawable/live_style_camera_focus"
-        android:visibility="invisible" />
+                </com.ucloud.live.widget.UAspectFrameLayout>
 
-    <TextView
-        android:id="@+id/bitrate_txtv"
-        android:layout_width="wrap_content"
-        android:layout_gravity="top|left"
-        android:textColor="@color/live_color_progress"
-        android:visibility="invisible"
-        android:layout_height="wrap_content" />
+                <include layout="@layout/live_layout_live_room_countdown"></include>
 
-</FrameLayout>
+                <include layout="@layout/live_layout_live_room_bottom_bar"></include>
+
+                <include layout="@layout/live_layout_live_room_header_bar"></include>
+
+                <include layout="@layout/live_layout_live_room_record_finish"></include>
+
+                <View
+                    android:id="@+id/focus_index"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/live_style_camera_focus"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/bitrate_txtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:textColor="@color/live_color_progress"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            />
+
+
+        </FrameLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/fx_top_bar_back" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/input_menu"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#000"
+            android:padding="8dp"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/btn_send"
+            android:background="#f0f0f0"
+            android:hint="请输入内容"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+
+        android:layout_height="240dp"
+        android:layout_above="@+id/input_menu"
+        android:background="#000000"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+
+        android:dividerHeight="5dp"
+        android:listSelector="#00000000"
+        android:padding="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:transcriptMode="normal" />
+
+
+</RelativeLayout>
+
+

@@ -709,7 +709,7 @@ public class DemoHelper {
                 for (EMMessage message : messages) {
                     EMLog.d(TAG, "onMessageReceived id : " + message.getMsgId());
                     // in background, do not refresh UI, notify it in notification bar
-                    if (!easeUI.hasForegroundActivies()) {
+                    if (!easeUI.hasForegroundActivies()&&message.getChatType()!=ChatType.ChatRoom) {
                         getNotifier().onNewMsg(message);
                     }
                 }

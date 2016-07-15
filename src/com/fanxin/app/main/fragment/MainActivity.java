@@ -282,8 +282,12 @@ import android.widget.Toast;
         public void onMessageReceived(List<EMMessage> messages) {
             // notify new message
             for (EMMessage message : messages) {
-                DemoHelper.getInstance().getNotifier().onNewMsg(message);
+                if(message.getChatType()!= EMMessage.ChatType.ChatRoom){
+                    DemoHelper.getInstance().getNotifier().onNewMsg(message);
+                }
+
             }
+
             refreshUIWithMessage();
         }
 

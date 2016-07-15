@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,23 +14,39 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
+import com.fanxin.app.main.adapter.liveMessageAdapter;
 import com.fanxin.app.main.ulive.preference.Log2FileUtil;
 import com.fanxin.app.main.ulive.preference.Settings;
+import com.fanxin.app.ui.BaseActivity;
+import com.fanxin.easeui.EaseConstant;
+import com.fanxin.easeui.controller.EaseUI;
+import com.fanxin.easeui.utils.EaseCommonUtils;
+import com.hyphenate.EMMessageListener;
+import com.hyphenate.EMValueCallBack;
+import com.hyphenate.chat.EMChatRoom;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMConversation;
+import com.hyphenate.chat.EMMessage;
 import com.ucloud.common.util.DeviceUtils;
 import com.ucloud.common.util.StringUtil;
 import com.ucloud.live.UEasyStreaming;
 import com.ucloud.live.UStreamingProfile;
 import com.ucloud.live.widget.UAspectFrameLayout;
 
+import java.util.List;
 
 
-public abstract class BasePublishDemo extends AppCompatActivity implements UEasyStreaming.UStreamingStateListener {
+public abstract class BasePublishDemo extends BaseActivity implements UEasyStreaming.UStreamingStateListener {
     private static final String TAG = "BasePublishDemo";
 
     public static final int MSG_UPDATE_COUNTDOWN = 1;
@@ -70,6 +87,15 @@ public abstract class BasePublishDemo extends AppCompatActivity implements UEasy
 
     public abstract void initEnv();
 
+    private ListView listView;
+    private int chatType = EaseConstant.CHATTYPE_CHATROOM;
+    private String toChatUsername;
+    private Button btn_send;
+    private EditText et_content;
+    private List<EMMessage> msgList;
+    liveMessageAdapter adapter;
+    private EMConversation conversation;
+    protected int pagesize = 20;
     @Override
     public void onStateChanged(int type, Object event) {
        switch (type) {
@@ -167,6 +193,8 @@ public abstract class BasePublishDemo extends AppCompatActivity implements UEasy
                 }while(i >= COUNTDOWN_END_INDEX);
             }
         }.start();
+
+        initViewChat();
     }
 
     private void init() {
@@ -174,6 +202,39 @@ public abstract class BasePublishDemo extends AppCompatActivity implements UEasy
         initView();
         initEnv();
     }
+
+    private void initViewChat(){
+
+        toChatUsername = FXConstant.FXLIVE_CHATROOM_ID;
+        listView = (ListView) findViewById(R.id.list);
+        listView.getBackground().setAlpha(100);
+        btn_send = (Button) this.findViewById(R.id.btn_send);
+        et_content = (EditText) this.findViewById(R.id.et_content);
+
+        EMClient.getInstance().chatroomManager().joinChatRoom(toChatUsername, new EMValueCallBack<EMChatRoom>() {
+            @Override
+            public void onSuccess(EMChatRoom emChatRoom) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getAllMessage();
+                    }
+                });
+
+            }
+
+            @Override
+            public void onError(int i, String s) {
+
+            }
+        });
+
+
+
+
+
+    }
+
 
     private void initView() {
         mCameraToggleIv = (ImageView) findViewById(R.id.img_bt_switch_camera);
@@ -259,6 +320,7 @@ public abstract class BasePublishDemo extends AppCompatActivity implements UEasy
             Log2FileUtil.getInstance().stopLog();
         }
         mEasyStreaming.onDestory();
+        EMClient.getInstance().chatManager().removeMessageListener(msgListener);
     }
 
     public String bitrateMode(int value) {
@@ -321,4 +383,123 @@ public abstract class BasePublishDemo extends AppCompatActivity implements UEasy
             }
         }
     }
+
+
+    protected void getAllMessage() {
+
+
+        // 获取当前conversation对象
+
+        conversation = EMClient.getInstance().chatManager().getConversation(toChatUsername,
+                EaseCommonUtils.getConversationType(chatType), true);
+        // 把此会话的未读数置为0
+        conversation.markAllMessagesAsRead();
+        // 初始化db时，每个conversation加载数目是getChatOptions().getNumberOfMessagesLoaded
+        // 这个数目如果比用户期望进入会话界面时显示的个数不一样，就多加载一些
+        final List<EMMessage> msgs = conversation.getAllMessages();
+        int msgCount = msgs != null ? msgs.size() : 0;
+        if (msgCount < conversation.getAllMsgCount() && msgCount < pagesize) {
+            String msgId = null;
+            if (msgs != null && msgs.size() > 0) {
+                msgId = msgs.get(0).getMsgId();
+            }
+            conversation.loadMoreMsgFromDB(msgId, pagesize - msgCount);
+        }
+
+
+        msgList = conversation.getAllMessages();
+        adapter = new liveMessageAdapter(msgList, BasePublishDemo.this);
+        listView.setAdapter(adapter);
+        listView.setSelection(listView.getCount() - 1);
+        btn_send.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String content = et_content.getText().toString().trim();
+                if (TextUtils.isEmpty(content)) {
+
+                    return;
+                }
+                setMesaage(content);
+            }
+
+        });
+        EMClient.getInstance().chatManager().addMessageListener(msgListener);
+
+
+    }
+
+    private void setMesaage(String content) {
+
+        // 创建一条文本消息，content为消息文字内容，toChatUsername为对方用户或者群聊的id，后文皆是如此
+        EMMessage message = EMMessage.createTxtSendMessage(content, toChatUsername);
+        // 如果是群聊，设置chattype，默认是单聊
+        if (chatType == EaseConstant.CHATTYPE_CHATROOM)
+            message.setChatType(EMMessage.ChatType.ChatRoom);
+        message.setAttribute(FXConstant.KEY_USER_INFO, DemoApplication.getInstance().getUserJson().toJSONString());
+        // 发送消息
+        EMClient.getInstance().chatManager().sendMessage(message);
+
+        msgList.add(message);
+
+        adapter.notifyDataSetChanged();
+        if (msgList.size() > 0) {
+            listView.setSelection(listView.getCount() - 1);
+        }
+        et_content.setText("");
+
+    }
+
+    EMMessageListener msgListener = new EMMessageListener() {
+
+        @Override
+        public void onMessageReceived(List<EMMessage> messages) {
+
+            for (EMMessage message : messages) {
+                String username = null;
+                // 群组消息
+                if (message.getChatType() == EMMessage.ChatType.GroupChat || message.getChatType() == EMMessage.ChatType.ChatRoom) {
+                    username = message.getTo();
+                } else {
+                    // 单聊消息
+                    username = message.getFrom();
+                }
+                // 如果是当前会话的消息，刷新聊天页面
+                if (username.equals(toChatUsername)) {
+                    msgList.addAll(messages);
+                    adapter.notifyDataSetChanged();
+                    if (msgList.size() > 0) {
+                        et_content.setSelection(listView.getCount() - 1);
+
+                    }
+
+                }else {
+                    // 如果消息不是和当前聊天ID的消息
+                    EaseUI.getInstance().getNotifier().onNewMsg(message);
+                }
+            }
+
+            // 收到消息
+        }
+
+        @Override
+        public void onCmdMessageReceived(List<EMMessage> messages) {
+            // 收到透传消息
+        }
+
+        @Override
+        public void onMessageReadAckReceived(List<EMMessage> messages) {
+            // 收到已读回执
+        }
+
+        @Override
+        public void onMessageDeliveryAckReceived(List<EMMessage> message) {
+            // 收到已送达回执
+        }
+
+        @Override
+        public void onMessageChanged(EMMessage message, Object change) {
+            // 消息状态变动
+        }
+    };
 }

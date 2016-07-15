@@ -456,15 +456,16 @@
             android:name=".main.ulive.upload.PublishDemo4MediaCodec"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/SettingTheme" >
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
 
         <activity
             android:name=".main.ulive.upload.PublishDemo4X264"
             android:launchMode="singleTask"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/SettingTheme" >
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
 
         <activity

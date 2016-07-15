@@ -449,16 +449,17 @@
         </activity>
         <activity
             android:name="com.fanxin.app.main.ulive.upload.PublishDemo4MediaCodec"
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/SettingTheme" >
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name="com.fanxin.app.main.ulive.upload.PublishDemo4X264"
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
-            android:theme="@style/SettingTheme" >
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name="com.fanxin.app.main.ulive.play.VideoActivity"
