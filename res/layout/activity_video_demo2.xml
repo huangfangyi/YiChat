@@ -100,7 +100,7 @@
 
 
         <ListView
-
+            android:padding="10dp"
             android:layout_above="@+id/input_menu"
 
             android:id="@+id/list"

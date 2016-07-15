@@ -112,7 +112,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
             android:layout_toRightOf="@id/iv_avatar3"
-            android:text="标签"
+            android:text="看直播"
             android:textColor="#353535"
             android:textSize="16sp" />
     </RelativeLayout>
@@ -147,7 +147,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
             android:layout_toRightOf="@id/iv_avatar4"
-            android:text="公共号"
+            android:text="进行直播"
             android:textColor="#353535"
             android:textSize="16sp" />
     </RelativeLayout>

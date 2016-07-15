@@ -264,7 +264,7 @@
     <color name="text_light_grey">#9e9e9e</color>
     <color name="text_unselected">@color/divider_color</color>
     <color name="text_yellow">#FEE94E</color>
-    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="top_bar_normal_bg">#22292c</color>
     <color name="transparent">#00000000</color>
     <color name="txt_color_gray_3">#cbc4c6</color>
     <color name="voip_interface_text_color">#bababa</color>

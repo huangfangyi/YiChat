@@ -8,9 +8,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
+import com.hyphenate.exceptions.HyphenateException;
 
 import java.util.List;
 
@@ -19,12 +23,12 @@ import java.util.List;
  * QQ:84543217
  */
 public   @SuppressLint("InflateParams")
-class MessageAdapter extends BaseAdapter {
+class liveMessageAdapter extends BaseAdapter {
     private List<EMMessage> msgs;
     private Context context;
     private LayoutInflater inflater;
 
-    public MessageAdapter(List<EMMessage> msgs, Context context_) {
+    public liveMessageAdapter(List<EMMessage> msgs, Context context_) {
         this.msgs = msgs;
         this.context = context_;
         inflater = LayoutInflater.from(context);
@@ -52,7 +56,7 @@ class MessageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         EMMessage message = getItem(position);
-        int viewType = getItemViewType(position);
+
 
         if (convertView == null) {
 
@@ -67,7 +71,18 @@ class MessageAdapter extends BaseAdapter {
         }
         EMTextMessageBody txtBody = (EMTextMessageBody) message.getBody();
 
+        try {
+            String userInfo=message.getStringAttribute(FXConstant.KEY_USER_INFO);
+            JSONObject jsonObject=JSONObject.parseObject(userInfo);
+            holder.tvNick.setText(jsonObject.getString(FXConstant.JSON_KEY_NICK));
+        } catch (HyphenateException e) {
+            holder.tvNick.setText(message.getFrom());
+            e.printStackTrace();
+        }catch (JSONException e ){
 
+            holder.tvNick.setText(message.getFrom());
+            e.printStackTrace();
+        }
         holder.tvContent.setText(txtBody.getMessage());
 
 

@@ -14,7 +14,7 @@
     <color name="common_bg">#fcfcfc</color>
     <color name="btn_pressed_green_solid">#B6DA53</color>
     <color name="divider_list">#22292c</color>
-    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="top_bar_normal_bg">#22292c</color>
     <color name="error_item_color">#F6EBE6</color>
     <color name="bottom_bar_normal_bg">#fcfcfc</color>
     <color name="bottom_text_color_normal">#ffffff</color>

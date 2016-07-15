@@ -1,42 +1,29 @@
 package com.fanxin.app.main.activity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
-import com.fanxin.app.Constant;
+import com.fanxin.app.DemoApplication;
+import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.adapter.MessageAdapter;
+import com.fanxin.app.main.adapter.liveMessageAdapter;
 import com.fanxin.app.main.uvod.preference.Settings;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.easeui.EaseConstant;
 import com.fanxin.easeui.controller.EaseUI;
-import com.fanxin.easeui.domain.EaseEmojicon;
 import com.fanxin.easeui.utils.EaseCommonUtils;
-import com.fanxin.easeui.widget.EaseChatInputMenu;
-import com.fanxin.easeui.widget.EaseChatMessageList;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chat.EMTextMessageBody;
 import com.ucloud.player.widget.v2.UVideoView;
 
 
@@ -67,7 +54,7 @@ public class WatchLiveActivity extends BaseActivity implements UVideoView.Callba
     private Button btn_send;
     private EditText et_content;
     private List<EMMessage> msgList;
-    MessageAdapter adapter;
+    liveMessageAdapter adapter;
     private EMConversation conversation;
     protected int pagesize = 20;
     @Override
@@ -206,7 +193,7 @@ public class WatchLiveActivity extends BaseActivity implements UVideoView.Callba
 
 
         msgList = conversation.getAllMessages();
-        adapter = new MessageAdapter(msgList, WatchLiveActivity.this);
+        adapter = new liveMessageAdapter(msgList, WatchLiveActivity.this);
         listView.setAdapter(adapter);
         listView.setSelection(listView.getCount() - 1);
         btn_send.setOnClickListener(new View.OnClickListener() {
@@ -234,8 +221,10 @@ public class WatchLiveActivity extends BaseActivity implements UVideoView.Callba
         // 如果是群聊，设置chattype，默认是单聊
         if (chatType == EaseConstant.CHATTYPE_CHATROOM)
             message.setChatType(EMMessage.ChatType.ChatRoom);
+        message.setAttribute(FXConstant.KEY_USER_INFO, DemoApplication.getInstance().getUserJson().toJSONString());
         // 发送消息
         EMClient.getInstance().chatManager().sendMessage(message);
+
         msgList.add(message);
 
         adapter.notifyDataSetChanged();

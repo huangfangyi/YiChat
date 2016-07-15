@@ -95,50 +95,28 @@ public class SocialMainAdapter extends BaseAdapter {
         return position;
     }
 
-    @Override
-    public int getViewTypeCount() {
-        return 2;
-    }
 
-    @Override
-    public int getItemViewType(int position) {
-        if (position == 0) {
-            return 0;
-        } else {
-
-            return 1;
-        }
-
-    }
-
-
-    @SuppressLint("InflateParams")
     @Override
     public View getView(final int position, View convertView,
                         ViewGroup parent) {
+        if (position == 0) {
+            View  view = inflater.inflate(R.layout.fx_item_moments_header, null,
+                    false);
+            ImageView iv_avatar = (ImageView) view.findViewById(R.id.iv_avatar);
+            Glide.with(context).load(FXConstant.URL_AVATAR + myAvatar).diskCacheStrategy(DiskCacheStrategy.ALL).into(iv_avatar);
+            return view;
+        } else {
 
+            convertView = inflater.inflate(R.layout.item_social_main, parent,
+                    false);
 
-        if (convertView == null) {
-            if (getItemViewType(position) == 0) {
-                convertView = inflater.inflate(R.layout.fx_item_moments_header, parent,
-                        false);
-                ImageView iv_avatar= (ImageView) convertView.findViewById(R.id.iv_avatar);
-                Glide.with(context).load(FXConstant.URL_AVATAR+myAvatar).diskCacheStrategy(DiskCacheStrategy.ALL).into(iv_avatar);
-
-            } else {
-
-                convertView = inflater.inflate(R.layout.item_social_main, parent,
-                        false);
-            }
-
-        }
-
-        ViewHolder holder = (ViewHolder) convertView.getTag();
-        if (holder == null) {
-            holder = new ViewHolder();
-            if (getItemViewType(position) == 1) {
-                holder.tv_nick = (TextView) convertView.findViewById(R.id.tv_nick);
-                holder.tv_time = (TextView) convertView.findViewById(R.id.tv_time);
+            ViewHolder holder = (ViewHolder) convertView.getTag();
+            if (holder == null) {
+                holder = new ViewHolder();
+                holder.tv_nick = (TextView) convertView
+                        .findViewById(R.id.tv_nick);
+                holder.tv_time = (TextView) convertView
+                        .findViewById(R.id.tv_time);
 
                 holder.iv_avatar = (SimpleDraweeView) convertView
                         .findViewById(R.id.sdv_image);
@@ -171,7 +149,8 @@ public class SocialMainAdapter extends BaseAdapter {
                         .findViewById(R.id.tv_content);
                 holder.tv_location = (TextView) convertView
                         .findViewById(R.id.tv_location);
-                holder.iv_pop = (ImageView) convertView.findViewById(R.id.iv_pop);
+                holder.iv_pop = (ImageView) convertView
+                        .findViewById(R.id.iv_pop);
 
                 holder.tv_goodmembers = (TextView) convertView
                         .findViewById(R.id.tv_goodmembers);
@@ -179,193 +158,184 @@ public class SocialMainAdapter extends BaseAdapter {
                         .findViewById(R.id.ll_goodmembers);
                 holder.tv_commentmembers = (TextView) convertView
                         .findViewById(R.id.tv_commentmembers);
-                holder.view_pop = (View) convertView.findViewById(R.id.view_pop);
+                holder.view_pop = (View) convertView
+                        .findViewById(R.id.view_pop);
                 holder.tv_delete = (TextView) convertView
                         .findViewById(R.id.tv_delete);
+                convertView.setTag(holder);
+            }
+            final View view_pop = holder.view_pop;
+            JSONObject json = users.get(position - 1);
+            // 如果数据出错....
+
+            if (json == null || json.size() == 0) {
+                users.remove(position - 1);
+                this.notifyDataSetChanged();
+            }
+            final String userID = json.getString("userID");
+            String content = json.getString("content");
+            String imageStr = json.getString("imageStr");
+            String location = json.getString("location");
+            final String sID = json.getString("sID");
+            // String token = json.getString("token");
+            String rel_time = json.getString("time");
+            // 设置删除键
+            if (userID.equals(myuserID)) {
+
+                holder.tv_delete.setVisibility(View.VISIBLE);
+                holder.tv_delete.setOnClickListener(new OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+
+                        showPhotoDialog(position - 1, sID);
+                        // users.remove(position - 1);
+                        // this.notifyDataSetChanged();
+                    }
+
+                });
+            } else {
+                holder.tv_delete.setVisibility(View.GONE);
             }
 
-            convertView.setTag(holder);
-        }
-        if (position == 0) {
-            return convertView;
+            // 设置昵称。
 
-        }
-        final View view_pop = holder.view_pop;
-        JSONObject json = users.get(position - 1);
-        // 如果数据出错....
+            String nick = userID;
+            String avatar = "";
+            if (userID.equals(myuserID)) {
+                nick = myNick;
+                avatar = myAvatar;
 
-        if (json == null || json.size() == 0) {
-            users.remove(position - 1);
-            this.notifyDataSetChanged();
-        }
-        final String userID = json.getString("userID");
-        String content = json.getString("content");
-        String imageStr = json.getString("imageStr");
-        String location = json.getString("location");
-        final String sID = json.getString("sID");
-        // String token = json.getString("token");
-        String rel_time = json.getString("time");
-        // 设置删除键
-        if (userID.equals(myuserID)) {
+            } else {
 
-            holder.tv_delete.setVisibility(View.VISIBLE);
-            holder.tv_delete.setOnClickListener(new OnClickListener() {
+                EaseUser user = DemoHelper.getInstance().getContactList()
+                        .get(userID);
+                if (user != null) {
+
+                    nick = user.getNick();
+                    avatar = user.getAvatar();
+
+                }
+
+            }
+
+            holder.tv_nick.setText(nick);
+            holder.iv_avatar.setImageURI(Uri
+                    .parse(FXConstant.URL_AVATAR + avatar));
+            holder.tv_nick.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
-
-                    showPhotoDialog(position - 1, sID);
-                    // users.remove(position );
-                    // this.notifyDataSetChanged();
+                    context.startActivity(new Intent(context,
+                            SocialFriendActivity.class).putExtra("friendID",
+                            userID));
                 }
 
             });
-        } else {
-            holder.tv_delete.setVisibility(View.GONE);
-        }
 
-        // 设置昵称。
+            // 设置头像.....
 
-        String nick = userID;
-        String avatar = "";
-        if (userID.equals(myuserID)) {
-            nick = myNick;
-            avatar = myAvatar;
+            // 设置文章中的图片
+            System.out.print("imageStr--->>"+imageStr);
+            if (!imageStr.equals("0")) {
+                String[] images = imageStr.split("split");
+                int imNumb = images.length;
+                holder.image_1.setVisibility(View.VISIBLE);
+                holder.image_1.setImageURI(Uri.parse(FXConstant.URL_SOCIAL_PHOTO
+                        + images[0]));
+                holder.image_1.setOnClickListener(new ImageListener(images, 0));
 
-        } else {
-
-            EaseUser user = DemoHelper.getInstance().getContactList()
-                    .get(userID);
-            if (user != null) {
-
-                nick = user.getNick();
-                avatar = user.getAvatar();
-
-            }
-
-        }
-
-        holder.tv_nick.setText(nick);
-        holder.iv_avatar.setImageURI(Uri.parse(FXConstant.URL_AVATAR + avatar));
-        holder.tv_nick.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                context.startActivity(
-                        new Intent(context, SocialFriendActivity.class)
-                                .putExtra("friendID", userID));
-            }
-
-        });
-
-        holder.iv_avatar.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                EaseUser user = DemoHelper.getInstance().getContactList().get(userID);
-                if (user != null) {
-                    String userInfo = user.getUserInfo();
-                    if (!TextUtils.isEmpty(userInfo)) {
-                        context.startActivity(
-                                new Intent(context, UserDetailsActivity.class)
-                                        .putExtra("userInfo", userInfo));
-
-                    }
-
-                }
-
-            }
-
-        });
-
-        // 设置头像.....
-
-        // 设置文章中的图片
-        System.out.print("imageStr--->>" + imageStr);
-        if (!imageStr.equals("0")) {
-            String[] images = imageStr.split("split");
-            int imNumb = images.length;
-            holder.image_1.setVisibility(View.VISIBLE);
-            holder.image_1.setImageURI(
-                    Uri.parse(FXConstant.URL_SOCIAL_PHOTO + images[0]));
-            holder.image_1.setOnClickListener(new ImageListener(images, 0));
-
-            Log.e("imNumb--->>", String.valueOf(imNumb));
-            // 四张图的时间情况比较特殊
-            if (imNumb == 4) {
-                holder.image_2.setVisibility(View.VISIBLE);
-                holder.image_2.setImageURI(
-                        Uri.parse(FXConstant.URL_SOCIAL_PHOTO + images[1]));
-                holder.image_2.setOnClickListener(new ImageListener(images, 1));
-                holder.image_4.setVisibility(View.VISIBLE);
-                holder.image_4.setImageURI(
-                        Uri.parse(FXConstant.URL_SOCIAL_PHOTO + images[2]));
-                holder.image_4.setOnClickListener(new ImageListener(images, 2));
-                holder.image_5.setVisibility(View.VISIBLE);
-                holder.image_5.setImageURI(
-                        Uri.parse(FXConstant.URL_SOCIAL_PHOTO + images[3]));
-                holder.image_5.setOnClickListener(new ImageListener(images, 3));
-            } else {
-                if (imNumb > 1) {
+                Log.e("imNumb--->>", String.valueOf(imNumb));
+                // 四张图的时间情况比较特殊
+                if (imNumb == 4) {
                     holder.image_2.setVisibility(View.VISIBLE);
-                    holder.image_2.setImageURI(
-                            Uri.parse(FXConstant.URL_SOCIAL_PHOTO + images[1]));
-                    holder.image_2
-                            .setOnClickListener(new ImageListener(images, 1));
-                    if (imNumb > 2) {
-                        holder.image_3.setVisibility(View.VISIBLE);
-                        holder.image_3.setImageURI(Uri
-                                .parse(FXConstant.URL_SOCIAL_PHOTO + images[2]));
-                        holder.image_3.setOnClickListener(
-                                new ImageListener(images, 2));
-                        if (imNumb > 3) {
-                            holder.image_4.setVisibility(View.VISIBLE);
-                            holder.image_4.setImageURI(Uri.parse(
-                                    FXConstant.URL_SOCIAL_PHOTO + images[3]));
-                            holder.image_4.setOnClickListener(
-                                    new ImageListener(images, 3));
-                            if (imNumb > 4) {
-                                holder.image_5.setVisibility(View.VISIBLE);
-                                holder.image_5.setImageURI(Uri.parse(
-                                        FXConstant.URL_SOCIAL_PHOTO + images[4]));
-                                holder.image_5.setOnClickListener(
-                                        new ImageListener(images, 4));
-                                if (imNumb > 5) {
-                                    holder.image_6.setVisibility(View.VISIBLE);
-                                    holder.image_6.setImageURI(
-                                            Uri.parse(FXConstant.URL_SOCIAL_PHOTO
-                                                    + images[5]));
-                                    holder.image_6.setOnClickListener(
-                                            new ImageListener(images, 5));
-                                    if (imNumb > 6) {
-                                        holder.image_7
+                    holder.image_2.setImageURI(Uri
+                            .parse(FXConstant.URL_SOCIAL_PHOTO + images[1]));
+                    holder.image_2.setOnClickListener(new ImageListener(images,
+                            1));
+                    holder.image_4.setVisibility(View.VISIBLE);
+                    holder.image_4.setImageURI(Uri
+                            .parse(FXConstant.URL_SOCIAL_PHOTO + images[2]));
+                    holder.image_4.setOnClickListener(new ImageListener(images,
+                            2));
+                    holder.image_5.setVisibility(View.VISIBLE);
+                    holder.image_5.setImageURI(Uri
+                            .parse(FXConstant.URL_SOCIAL_PHOTO + images[3]));
+                    holder.image_5.setOnClickListener(new ImageListener(images,
+                            3));
+                } else {
+                    if (imNumb > 1) {
+                        holder.image_2.setVisibility(View.VISIBLE);
+                        holder.image_2.setImageURI(Uri
+                                .parse(FXConstant.URL_SOCIAL_PHOTO + images[1]));
+                        holder.image_2.setOnClickListener(new ImageListener(
+                                images, 1));
+                        if (imNumb > 2) {
+                            holder.image_3.setVisibility(View.VISIBLE);
+                            holder.image_3.setImageURI(Uri
+                                    .parse(FXConstant.URL_SOCIAL_PHOTO
+                                            + images[2]));
+                            holder.image_3
+                                    .setOnClickListener(new ImageListener(
+                                            images, 2));
+                            if (imNumb > 3) {
+                                holder.image_4.setVisibility(View.VISIBLE);
+                                holder.image_4.setImageURI(Uri
+                                        .parse(FXConstant.URL_SOCIAL_PHOTO
+                                                + images[3]));
+                                holder.image_4
+                                        .setOnClickListener(new ImageListener(
+                                                images, 3));
+                                if (imNumb > 4) {
+                                    holder.image_5.setVisibility(View.VISIBLE);
+                                    holder.image_5.setImageURI(Uri
+                                            .parse(FXConstant.URL_SOCIAL_PHOTO
+                                                    + images[4]));
+                                    holder.image_5
+                                            .setOnClickListener(new ImageListener(
+                                                    images, 4));
+                                    if (imNumb > 5) {
+                                        holder.image_6
                                                 .setVisibility(View.VISIBLE);
-                                        holder.image_7.setImageURI(Uri
-                                                .parse(FXConstant.URL_SOCIAL_PHOTO
-                                                        + images[6]));
-                                        holder.image_7.setOnClickListener(
-                                                new ImageListener(images, 6));
-                                        if (imNumb > 7) {
-                                            holder.image_8.setVisibility(
-                                                    View.VISIBLE);
-                                            holder.image_8.setImageURI(Uri
-                                                    .parse(FXConstant.URL_SOCIAL_PHOTO
-                                                            + images[7]));
-                                            holder.image_8.setOnClickListener(
-                                                    new ImageListener(images,
-                                                            7));
-                                            if (imNumb > 8) {
-                                                holder.image_9.setVisibility(
-                                                        View.VISIBLE);
-                                                holder.image_9.setImageURI(Uri
+                                        holder.image_6
+                                                .setImageURI(Uri
                                                         .parse(FXConstant.URL_SOCIAL_PHOTO
-                                                                + images[8]));
-                                                holder.image_9
-                                                        .setOnClickListener(
-                                                                new ImageListener(
-                                                                        images,
-                                                                        8));
+                                                                + images[5]));
+                                        holder.image_6
+                                                .setOnClickListener(new ImageListener(
+                                                        images, 5));
+                                        if (imNumb > 6) {
+                                            holder.image_7
+                                                    .setVisibility(View.VISIBLE);
+                                            holder.image_7
+                                                    .setImageURI(Uri
+                                                            .parse(FXConstant.URL_SOCIAL_PHOTO
+                                                                    + images[6]));
+                                            holder.image_7
+                                                    .setOnClickListener(new ImageListener(
+                                                            images, 6));
+                                            if (imNumb > 7) {
+                                                holder.image_8
+                                                        .setVisibility(View.VISIBLE);
+                                                holder.image_8
+                                                        .setImageURI(Uri
+                                                                .parse(FXConstant.URL_SOCIAL_PHOTO
+                                                                        + images[7]));
+                                                holder.image_8
+                                                        .setOnClickListener(new ImageListener(
+                                                                images, 7));
+                                                if (imNumb > 8) {
+                                                    holder.image_9
+                                                            .setVisibility(View.VISIBLE);
+                                                    holder.image_9
+                                                            .setImageURI(Uri
+                                                                    .parse(FXConstant.URL_SOCIAL_PHOTO
+                                                                            + images[8]));
+                                                    holder.image_9
+                                                            .setOnClickListener(new ImageListener(
+                                                                    images, 8));
 
+                                                }
                                             }
                                         }
                                     }
@@ -375,99 +345,110 @@ public class SocialMainAdapter extends BaseAdapter {
                     }
                 }
             }
-        }
-        // 显示位置
-        if (location != null && !location.equals("0")) {
-            holder.tv_location.setVisibility(View.VISIBLE);
-            holder.tv_location.setText(location);
-        }
-        // 显示文章内容
-        // .setText(content);
-        setUrlTextView(content, holder.tv_content);
-        final ImageView iv_temp = holder.iv_pop;
-        final LinearLayout ll_goodmembers_temp = holder.ll_goodmembers;
-
-        // 点赞评论的数据
-        final JSONArray goodArray = json.getJSONArray("good");
-        final JSONArray commentArray = json.getJSONArray("comment");
-
-        // 点赞
-
-        setGoodTextClick(holder.tv_goodmembers, goodArray, ll_goodmembers_temp,
-                view_pop, commentArray.size());
-
-        boolean is_good_temp = true;
-        for (int i = 0; i < goodArray.size(); i++) {
-            JSONObject json_good = goodArray.getJSONObject(i);
-            if (json_good.getString("userID").equals(myuserID)) {
-                is_good_temp = false;
+            // 显示位置
+            if (location != null && !location.equals("0")) {
+                holder.tv_location.setVisibility(View.VISIBLE);
+                holder.tv_location.setText(location);
             }
-        }
-        // 评论
+            // 显示文章内容
+            // .setText(content);
+            setUrlTextView(content, holder.tv_content);
+            final ImageView iv_temp = holder.iv_pop;
+            final LinearLayout ll_goodmembers_temp = holder.ll_goodmembers;
 
-        if (commentArray != null && commentArray.size() != 0) {
-            holder.tv_commentmembers.setVisibility(View.VISIBLE);
-            setCommentTextClick(holder.tv_commentmembers, commentArray,
-                    view_pop, goodArray.size());
+            // 点赞评论的数据
+            final JSONArray goodArray = json.getJSONArray("good");
+            final JSONArray commentArray = json.getJSONArray("comment");
 
-        }
+            // 点赞
 
-        final boolean is_good = is_good_temp;
-        String goodStr = "赞";
-        if (!is_good) {
-            goodStr = "取消";
+            setGoodTextClick(holder.tv_goodmembers, goodArray,
+                    ll_goodmembers_temp, view_pop, commentArray.size());
 
-        }
-        iv_temp.setTag(goodStr);
+            boolean is_good_temp = true;
+            for (int i = 0; i < goodArray.size(); i++) {
+                JSONObject json_good = goodArray.getJSONObject(i);
+                if (json_good.getString("userID").equals(myuserID)) {
+                    is_good_temp = false;
+                }
+            }
+            // 评论
 
-        final TextView tv_commentmembers_temp = holder.tv_commentmembers;
-        final TextView tv_good_temp = holder.tv_goodmembers;
-        iv_temp.setOnClickListener(new OnClickListener() {
+            if (commentArray != null && commentArray.size() != 0) {
+                holder.tv_commentmembers.setVisibility(View.VISIBLE);
+                setCommentTextClick(holder.tv_commentmembers, commentArray,
+                        view_pop, goodArray.size());
 
-            @Override
-            public void onClick(View v) {
-                AddPopWindow addPopWindow = new AddPopWindow(context, iv_temp,
-                        new AddPopWindow.ClickCallBack() {
+            }
 
-                            @Override
-                            public void clicked(int type) {
-                                // 点击取消
-                                if (type == 1) {
-                                    if (((String) iv_temp.getTag())
-                                            .equals("赞")) {
-                                        setGood(sID, tv_good_temp, goodArray,
-                                                ll_goodmembers_temp, view_pop,
-                                                commentArray.size());
-                                        iv_temp.setTag("取消");
+            final boolean is_good = is_good_temp;
+            String goodStr = "赞";
+            if (!is_good) {
+                goodStr = "取消";
+
+            }
+            iv_temp.setTag(goodStr);
+
+            final TextView tv_commentmembers_temp = holder.tv_commentmembers;
+            final TextView tv_good_temp = holder.tv_goodmembers;
+            iv_temp.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    AddPopWindow addPopWindow = new AddPopWindow(
+                            (SocialMainActivity) context, iv_temp,
+                            new AddPopWindow.ClickCallBack() {
+
+                                @Override
+                                public void clicked(int type) {
+                                    // 点击取消
+                                    if (type == 1) {
+                                        if (((String) iv_temp.getTag())
+                                                .equals("赞")) {
+                                            setGood(sID, tv_good_temp,
+                                                    goodArray,
+                                                    ll_goodmembers_temp,
+                                                    view_pop,
+                                                    commentArray.size());
+                                            iv_temp.setTag("取消");
+
+                                        } else {
+                                            cancelGood(sID, tv_good_temp,
+                                                    goodArray,
+                                                    ll_goodmembers_temp,
+                                                    view_pop,
+                                                    commentArray.size());
+                                            iv_temp.setTag("赞");
+                                        }
 
                                     } else {
-                                        cancelGood(sID, tv_good_temp, goodArray,
-                                                ll_goodmembers_temp, view_pop,
-                                                commentArray.size());
-                                        iv_temp.setTag("赞");
+                                        // 点击评论
+                                        showCommentEditText(sID,
+                                                tv_commentmembers_temp,
+                                                commentArray, view_pop,
+                                                goodArray.size());
                                     }
-
-                                } else {
-                                    // 点击评论
-                                    showCommentEditText(sID,
-                                            tv_commentmembers_temp,
-                                            commentArray, view_pop,
-                                            goodArray.size());
                                 }
-                            }
 
-                        });
-                addPopWindow.showPopupWindow(iv_temp);
+                            });
+                    addPopWindow.showPopupWindow(iv_temp);
 
-            }
-        });
+                }
+            });
 
-        // 显示时间
+            // 显示时间
 
-        holder.tv_time.setText(
-                getTime(rel_time, DemoApplication.getInstance().getTime()));
+            holder.tv_time.setText(getTime(rel_time, DemoApplication
+                    .getInstance().getTime()));
+            holder.iv_avatar.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context,UserDetailsActivity.class).putExtra(FXConstant.JSON_KEY_HXID,userID));
+                }
+            });
+            return convertView;
+        }
 
-        return convertView;
 
     }
 

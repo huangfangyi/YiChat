@@ -27,6 +27,7 @@ import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.easemob.redpacketui.widget.ChatRowRedPacket;
 import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
+import com.fanxin.app.DemoApplication;
 import com.fanxin.app.main.activity.ChatSettingGroupActivity;
 import com.fanxin.app.main.activity.ChatSettingSingleActivity;
 import com.fanxin.app.main.FXConstant;
@@ -247,6 +248,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             //set message extension
             message.setAttribute("em_robot_message", isRobot);
         }
+        message.setAttribute(FXConstant.KEY_USER_INFO, DemoApplication.getInstance().getUserJson().toJSONString());
+
     }
     
     @Override

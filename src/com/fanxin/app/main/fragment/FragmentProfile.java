@@ -14,11 +14,14 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.fanxin.app.DemoApplication;
+import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.ProfileActivity;
 import com.fanxin.app.main.activity.SettingsActivity;
+import com.fanxin.app.main.moments.SocialFriendActivity;
 
 public class FragmentProfile extends Fragment implements View.OnClickListener{
 
@@ -53,6 +56,9 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
 
         getView().findViewById(R.id.re_myinfo).setOnClickListener(this);
         getView().findViewById(R.id.re_setting).setOnClickListener(this);
+        getView().findViewById(R.id.re_wallet).setOnClickListener(this);
+        getView().findViewById(R.id.re_xiangce).setOnClickListener(this);
+
      }
 
     @Override
@@ -79,8 +85,13 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
             case R.id.re_setting:
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
                 break;
+            case R.id.re_wallet:
+                RedPacketUtil.startChangeActivity(getActivity());
+                break;
 
-
+            case R.id.re_xiangce:
+                startActivity(new Intent(getActivity(), SocialFriendActivity.class).putExtra("friendID", DemoHelper.getInstance().getCurrentUsernName()));
+                break;
 
         }
     }

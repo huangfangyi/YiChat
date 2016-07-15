@@ -21,6 +21,7 @@ import com.fanxin.app.Constant;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.db.UserDao;
 import com.fanxin.app.main.activity.AddFriendsPreActivity;
+import com.fanxin.app.main.activity.GroupAddMembersActivity;
 import com.fanxin.app.main.activity.LoginActivity;
 import com.fanxin.app.main.activity.ScanCaptureActivity;
 import com.fanxin.app.main.widget.FXPopWindow;
@@ -150,11 +151,11 @@ import android.widget.Toast;
         FragmentTransaction manager = getSupportFragmentManager().beginTransaction();
         if(conversationListFragment==null){
             conversationListFragment = new ConversationListFragment();
-            manager.add(R.id.fragment_container, conversationListFragment, TAG_COVERSATION).show(conversationListFragment);
+            manager.add(R.id.fragment_container, conversationListFragment, TAG_COVERSATION);
         }
         if(contactListFragment==null){
             contactListFragment = new ContactListFragment();
-            manager.add(R.id.fragment_container, contactListFragment, TAG_CONTACTS).hide(contactListFragment);
+            manager.add(R.id.fragment_container, contactListFragment, TAG_CONTACTS);
         }
         if(fragmentFind==null){
             fragmentFind = new FragmentFind();
@@ -164,7 +165,7 @@ import android.widget.Toast;
             fragmentProfile = new FragmentProfile();
             manager.add(R.id.fragment_container, fragmentProfile, TAG_PROFILE).hide(fragmentProfile);
         }
-        manager.commit();
+        manager.show(conversationListFragment).hide(contactListFragment).hide(fragmentFind).hide(fragmentProfile).commit();
 //        conversationListFragment=new ConversationListFragment();
 //        contactListFragment = new ContactListFragment();
 //        fragmentFind = new FragmentFind();
@@ -216,7 +217,7 @@ import android.widget.Toast;
                 switch (position){
                     //发起群聊
                     case 0:
-
+                        startActivity(new Intent(MainActivity.this,GroupAddMembersActivity.class));
                         break;
                     //添加新的好友
                     case 1:

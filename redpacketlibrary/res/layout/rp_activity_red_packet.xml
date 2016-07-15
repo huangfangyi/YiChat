@@ -10,6 +10,7 @@
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         yzh:RPleftImage="@drawable/rp_title_back"
         yzh:RPmytitle="@string/send_money_title"
         yzh:RPrightImage="@drawable/rp_question_white" />

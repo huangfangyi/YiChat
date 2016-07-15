@@ -164,18 +164,22 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.delete_contact) {
-			try {
-                // delete contact
-                deleteContact(toBeProcessUser);
-                // remove invitation message
-                InviteMessgeDao dao = new InviteMessgeDao(getActivity());
-                dao.deleteMessage(toBeProcessUser.getUsername());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            //TODO 此接口需要调用后端接口
+            Toast.makeText(getContext(),"此接口改调凡信后端接口，待更新...",Toast.LENGTH_LONG).show();
+//			try {
+//                // delete contact
+//                deleteContact(toBeProcessUser);
+//                // remove invitation message
+//                InviteMessgeDao dao = new InviteMessgeDao(getActivity());
+//                dao.deleteMessage(toBeProcessUser.getUsername());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
 			return true;
 		}else if(item.getItemId() == R.id.add_to_blacklist){
-			moveToBlacklist(toBeProcessUsername);
+            //TODO 此接口需要调用后端接口
+            Toast.makeText(getContext(),"此接口改调凡信后端接口，待更新...",Toast.LENGTH_LONG).show();
+			//moveToBlacklist(toBeProcessUsername);
 			return true;
 		}
 		return super.onContextItemSelected(item);

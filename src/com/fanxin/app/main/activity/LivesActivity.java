@@ -1,10 +1,12 @@
 package com.fanxin.app.main.activity;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -62,19 +65,46 @@ public class LivesActivity extends AppCompatActivity implements OnItemClickListe
 		}
 
 		if (demoDirects != null && demoDirects.length > position && !TextUtils.isEmpty(demoDirects[position].trim())) {
-			Intent intent = new Intent();
-			intent.setAction(demoDirects[position]);
-			intent.putExtra("title", demoNames[position]);
+
 
 			if(position==0){
+				final EditText inputServer = new EditText(this);
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setTitle("输入直播间ID(如:12345)").setIcon(android.R.drawable.ic_dialog_info).setView(inputServer)
+						.setNegativeButton("取消", null);
+				builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 
-				intent.putExtra("videoPath", FXConstant.RTEM_URL);
+					public void onClick(DialogInterface dialog, int which) {
+						setLiveId(inputServer.getText().toString());
+
+					}
+				});
+				builder.show();
+
 			}else{
+				Intent intent = new Intent();
+				intent.setAction(demoDirects[position]);
+				intent.putExtra("title", demoNames[position]);
 				intent.putExtra("videoPath", FXConstant.RTEM_URL);
+				startActivity(intent);
 			}
-			startActivity(intent);
+
 		}
 	}
+
+	private void setLiveId(String liveId){
+		if(TextUtils.isEmpty(liveId)){
+			return;
+		}
+		Intent intent = new Intent();
+		intent.setAction(demoDirects[0]);
+		intent.putExtra("title", demoNames[0]);
+		intent.putExtra("videoPath", FXConstant.RTEM_URL_LIVE+liveId);
+		startActivity(intent);
+	}
+
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

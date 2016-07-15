@@ -112,9 +112,9 @@ public class SettingsActivity extends BaseActivity  implements View.OnClickListe
         LinearLayout llChange = (LinearLayout) findViewById(R.id.ll_change);
         logoutBtn = (Button) findViewById(R.id.btn_logout);
         if(!TextUtils.isEmpty(EMClient.getInstance().getCurrentUser())){
-            logoutBtn.setText(getString(R.string.button_logout) + "(" + EMClient.getInstance().getCurrentUser() + ")");
+            logoutBtn.setText(getString(R.string.button_logout) );
         }
-
+        //"(" + EMClient.getInstance().getCurrentUser() + ")"
         textview1 = (TextView) findViewById(R.id.textview1);
         textview2 = (TextView) findViewById(R.id.textview2);
 

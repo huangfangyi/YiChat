@@ -4858,7 +4858,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int iv_jianqun=0x7f0e01b3;
         public static final int iv_leida=0x7f0e01b2;
         public static final int iv_lianxiren=0x7f0e01b5;
-        public static final int iv_money_bag=0x7f0e01a6;
         public static final int iv_money_icon=0x7f0e018d;
         public static final int iv_mute=0x7f0e014d;
         public static final int iv_neterror=0x7f0e0157;
@@ -4892,6 +4891,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int iv_userhead=0x7f0e00c2;
         public static final int iv_username=0x7f0e0122;
         public static final int iv_voice=0x7f0e00d3;
+        public static final int iv_wallet=0x7f0e01a6;
         public static final int iv_xiangce=0x7f0e01a2;
         public static final int iv_yaoyiyao=0x7f0e0196;
         public static final int iv_youxi=0x7f0e019e;
@@ -5059,7 +5059,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int re_item2=0x7f0e0251;
         public static final int re_item3=0x7f0e0252;
         public static final int re_item4=0x7f0e0253;
-        public static final int re_money_bag=0x7f0e01a5;
         public static final int re_myinfo=0x7f0e019f;
         public static final int re_name=0x7f0e01f7;
         public static final int re_newfriends=0x7f0e0234;
@@ -5075,6 +5074,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int re_sign=0x7f0e0203;
         public static final int re_tag=0x7f0e0239;
         public static final int re_time=0x7f0e0245;
+        public static final int re_wallet=0x7f0e01a5;
         public static final int re_xiangce=0x7f0e01a1;
         public static final int re_yaoyiyao=0x7f0e0195;
         public static final int re_youxi=0x7f0e019d;
