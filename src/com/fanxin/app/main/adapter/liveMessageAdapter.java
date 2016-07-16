@@ -23,12 +23,12 @@ import java.util.List;
  * QQ:84543217
  */
 public   @SuppressLint("InflateParams")
-class liveMessageAdapter extends BaseAdapter {
+class LiveMessageAdapter extends BaseAdapter {
     private List<EMMessage> msgs;
     private Context context;
     private LayoutInflater inflater;
 
-    public liveMessageAdapter(List<EMMessage> msgs, Context context_) {
+    public LiveMessageAdapter(List<EMMessage> msgs, Context context_) {
         this.msgs = msgs;
         this.context = context_;
         inflater = LayoutInflater.from(context);

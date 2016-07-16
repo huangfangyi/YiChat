@@ -19,7 +19,7 @@
         android:text="张三"
         android:textColor="#d77e17"
         android:textSize="14sp"
-        android:textStyle="bold"
+
         android:layout_marginLeft="5dp"
         />
     <TextView
