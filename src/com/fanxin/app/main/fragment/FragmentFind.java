@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
-import com.fanxin.app.main.activity.MomentsActivity;
 import com.fanxin.app.main.activity.ScanCaptureActivity;
 import com.fanxin.app.main.moments.SocialMainActivity;
 

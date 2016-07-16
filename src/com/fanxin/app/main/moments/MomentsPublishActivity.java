@@ -1,4 +1,4 @@
-package com.fanxin.app.main.activity;
+package com.fanxin.app.main.moments;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -49,7 +49,6 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.moments.PictureUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;

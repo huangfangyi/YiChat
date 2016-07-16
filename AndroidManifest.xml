@@ -370,12 +370,7 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.MomentsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".main.activity.MomentsPublishActivity"
+            android:name=".main.moments.MomentsPublishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>

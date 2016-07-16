@@ -32,7 +32,6 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.activity.MomentsActivity;
 import com.fanxin.app.main.moments.AddPopWindow;
 import com.fanxin.app.main.moments.MyWebViewActivity;
 import com.fanxin.app.main.moments.SocialFriendActivity;

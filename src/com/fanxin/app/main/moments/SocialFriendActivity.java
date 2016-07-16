@@ -32,7 +32,6 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.activity.MomentsPublishActivity;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
