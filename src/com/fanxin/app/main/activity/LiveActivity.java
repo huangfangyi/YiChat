@@ -1,4 +1,4 @@
-package com.fanxin.app.main.ulive;
+package com.fanxin.app.main.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

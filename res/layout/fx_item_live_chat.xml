@@ -7,7 +7,7 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
+        android:layout_height="20dp"
         android:src="@drawable/fx_live_level_3"
         android:layout_marginLeft="10dp"
         />
@@ -15,9 +15,9 @@
     <TextView
         android:id="@+id/tv_nick"
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
+        android:layout_height="20dp"
         android:text="张三"
-        android:textColor="#660000"
+        android:textColor="#d77e17"
         android:textSize="14sp"
         android:textStyle="bold"
         android:layout_marginLeft="5dp"
@@ -25,7 +25,7 @@
     <TextView
         android:id="@+id/tv_content"
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
+        android:layout_height="20dp"
         android:text="张三"
         android:layout_marginLeft="5dp"
         android:textColor="#ffffff"

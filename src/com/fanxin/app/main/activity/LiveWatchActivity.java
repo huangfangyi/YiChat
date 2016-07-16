@@ -9,10 +9,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.fanxin.app.DemoApplication;
-import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.adapter.liveMessageAdapter;
+import com.fanxin.app.main.adapter.LiveMessageAdapter;
 import com.fanxin.app.main.uvod.preference.Settings;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.easeui.EaseConstant;
@@ -33,8 +32,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class WatchLiveActivity extends BaseActivity implements UVideoView.Callback {
-    public static final String TAG = WatchLiveActivity.class.getSimpleName();
+public class LiveWatchActivity extends BaseActivity implements UVideoView.Callback {
+    public static final String TAG = LiveWatchActivity.class.getSimpleName();
 
     @Bind(R.id.videoview)
     UVideoView mVideoView;
@@ -54,7 +53,7 @@ public class WatchLiveActivity extends BaseActivity implements UVideoView.Callba
     private Button btn_send;
     private EditText et_content;
     private List<EMMessage> msgList;
-    liveMessageAdapter adapter;
+    LiveMessageAdapter adapter;
     private EMConversation conversation;
     protected int pagesize = 20;
     @Override
@@ -193,7 +192,7 @@ public class WatchLiveActivity extends BaseActivity implements UVideoView.Callba
 
 
         msgList = conversation.getAllMessages();
-        adapter = new liveMessageAdapter(msgList, WatchLiveActivity.this);
+        adapter = new LiveMessageAdapter(msgList, LiveWatchActivity.this);
         listView.setAdapter(adapter);
         listView.setSelection(listView.getCount() - 1);
         btn_send.setOnClickListener(new View.OnClickListener() {

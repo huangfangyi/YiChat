@@ -224,11 +224,8 @@
         android:background="@drawable/fx_btn_list_item_bg"
         android:clickable="true"
         android:paddingLeft="12dp">
-
-
         <TextView
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"

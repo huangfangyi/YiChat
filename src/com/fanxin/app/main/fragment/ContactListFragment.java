@@ -35,7 +35,7 @@ import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.GroupListActivity;
 import com.fanxin.app.main.activity.NewFriendsActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
-import com.fanxin.app.main.ulive.LiveActivity;
+import com.fanxin.app.main.activity.LiveActivity;
 import com.fanxin.app.main.activity.LivesActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.ui.EaseContactListFragment;

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +23,7 @@ import android.widget.Toast;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.adapter.liveMessageAdapter;
+import com.fanxin.app.main.adapter.LiveMessageAdapter;
 import com.fanxin.app.main.ulive.preference.Log2FileUtil;
 import com.fanxin.app.main.ulive.preference.Settings;
 import com.fanxin.app.ui.BaseActivity;
@@ -93,7 +92,7 @@ public abstract class BasePublishDemo extends BaseActivity implements UEasyStrea
     private Button btn_send;
     private EditText et_content;
     private List<EMMessage> msgList;
-    liveMessageAdapter adapter;
+    LiveMessageAdapter adapter;
     private EMConversation conversation;
     protected int pagesize = 20;
     @Override
@@ -408,7 +407,7 @@ public abstract class BasePublishDemo extends BaseActivity implements UEasyStrea
 
 
         msgList = conversation.getAllMessages();
-        adapter = new liveMessageAdapter(msgList, BasePublishDemo.this);
+        adapter = new LiveMessageAdapter(msgList, BasePublishDemo.this);
         listView.setAdapter(adapter);
         listView.setSelection(listView.getCount() - 1);
         btn_send.setOnClickListener(new View.OnClickListener() {
