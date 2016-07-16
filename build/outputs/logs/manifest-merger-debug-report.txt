@@ -838,7 +838,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:4
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:414:13-48
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:411:13-56
-activity#com.fanxin.app.main.activity.WatchLiveActivity
+activity#com.fanxin.app.main.activity.LiveWatchActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:419:9-431:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:422:13-49
@@ -882,7 +882,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:4
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:445:13-48
 	android:name
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:442:13-67
-activity#com.fanxin.app.main.ulive.LiveActivity
+activity#com.fanxin.app.main.activity.LiveActivity
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:447:9-453:20
 	android:screenOrientation
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:449:13-49
@@ -893,7 +893,7 @@ ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:4
 	android:theme
 		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:452:13-48
 	android:name
-		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:448:13-52
+		ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:448:13-55
 activity#com.fanxin.app.main.ulive.upload.PublishDemo4MediaCodec
 ADDED from C:\Users\ustc\Desktop\Android Studio\FanXin0712\AndroidManifest.xml:455:9-461:20
 	android:screenOrientation

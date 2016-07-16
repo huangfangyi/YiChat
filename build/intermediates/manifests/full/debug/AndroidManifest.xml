@@ -417,7 +417,7 @@
             android:theme="@style/PlayAppTheme" >
         </activity>
         <activity
-            android:name="com.fanxin.app.main.activity.WatchLiveActivity"
+            android:name="com.fanxin.app.main.activity.LiveWatchActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -441,7 +441,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/SettingTheme" />
         <activity
-            android:name="com.fanxin.app.main.ulive.LiveActivity"
+            android:name="com.fanxin.app.main.activity.LiveActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SettingTheme"

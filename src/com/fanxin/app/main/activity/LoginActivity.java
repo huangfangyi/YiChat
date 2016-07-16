@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.RPCallback;
 import com.easemob.redpacketsdk.RedPacket;
@@ -18,17 +19,22 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.DemoDBManager;
+import com.fanxin.app.db.UserDao;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.fragment.MainActivity;
+import com.fanxin.app.main.utils.JSONUtil;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.utils.OkHttpManager;
 
 import com.fanxin.app.ui.BaseActivity;
+import com.fanxin.easeui.domain.EaseUser;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Login screen
@@ -112,6 +118,24 @@ public class LoginActivity extends BaseActivity {
                 int code = jsonObject.getInteger("code");
                 if (code == 1) {
                     JSONObject json = jsonObject.getJSONObject("user");
+                    JSONArray friends=jsonObject.getJSONArray("friends");
+                    Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
+                    if (friends != null) {
+                        for (int i = 0; i < friends.size(); i++) {
+                            JSONObject friend = friends.getJSONObject(i);
+                            EaseUser easeUser = JSONUtil.Json2User(friend);
+                            userlist.put(easeUser.getUsername(), easeUser);
+                        }
+                        // save the contact list to cache
+                        DemoHelper.getInstance().getContactList().clear();
+                        DemoHelper.getInstance().getContactList().putAll(userlist);
+                        // save the contact list to database
+                        UserDao dao = new UserDao(getApplicationContext());
+                        List<EaseUser> users = new ArrayList<EaseUser>(userlist.values());
+                        dao.saveContactList(users);
+
+                    }
+
                     loginHuanXin(json, pd);
                 } else if (code == 2) {
                     pd.dismiss();
