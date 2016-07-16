@@ -1372,8 +1372,8 @@
     <string name="notify">New message notification</string>
     <string name="now_refresh_list">Loading data</string>
     <string name="ok">OK</string>
-    <string name="operation_tpy_agreement">我愿意免费投保太平洋保险《个人账户资金损失保险》，保险费用由环信承担</string>
-    <string name="operation_user_agreement">该操作代表我同意《环信用户服务协议》</string>
+    <string name="operation_tpy_agreement">我愿意免费投保太平洋保险《个人账户资金损失保险》，保险费用由凡信承担</string>
+    <string name="operation_user_agreement">该操作代表我同意《凡信用户服务协议》</string>
     <string name="password">Password</string>
     <string name="pay_bank_card">支付银行卡</string>
     <string name="pay_no_pwd">本次交易免密码</string>

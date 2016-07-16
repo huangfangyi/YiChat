@@ -2428,14 +2428,7 @@
                     "endOffset": 13538
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\values\\em_colors.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 775,
-                        "endColumn": 51,
-                        "endOffset": 822
-                    }
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\res\\values\\em_colors.xml"
                 }
             },
             {
@@ -14867,7 +14860,14 @@
                     "endOffset": 107044
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\values\\values.xml"
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 228,
+                        "startColumn": 4,
+                        "startOffset": 12997,
+                        "endColumn": 86,
+                        "endOffset": 13079
+                    }
                 }
             },
             {
@@ -14879,7 +14879,14 @@
                     "endOffset": 107116
                 },
                 "from": {
-                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\values\\values.xml"
+                    "file": "C:\\Users\\ustc\\Desktop\\Android Studio\\FanXin0712\\build\\intermediates\\exploded-aar\\FanXin0712\\redpacketlibrary\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 229,
+                        "startColumn": 4,
+                        "startOffset": 13084,
+                        "endColumn": 71,
+                        "endOffset": 13151
+                    }
                 }
             },
             {

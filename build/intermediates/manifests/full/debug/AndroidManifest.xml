@@ -373,12 +373,7 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.fanxin.app.main.activity.MomentsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name="com.fanxin.app.main.activity.MomentsPublishActivity"
+            android:name="com.fanxin.app.main.moments.MomentsPublishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" />
