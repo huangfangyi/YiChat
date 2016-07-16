@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:paddingBottom="40dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ebebeb"
@@ -214,10 +220,9 @@
             android:textColor="#353535"
             android:textSize="16sp" />
     </RelativeLayout>
-
     <RelativeLayout
-        android:visibility="gone"
-        android:id="@+id/re_rewards"
+
+        android:id="@+id/re_yunzhanghu"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -230,9 +235,32 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:text="打赏"
+            android:text="点击加入APP红包开发群"
             android:textColor="#353535"
             android:textSize="18sp"
-            android:textStyle="bold" />
+             />
     </RelativeLayout>
+    <RelativeLayout
+
+        android:id="@+id/re_fanxin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fx_btn_list_item_bg"
+        android:clickable="true"
+        android:paddingLeft="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="点击加入凡信讨论群"
+            android:textColor="#353535"
+            android:textSize="18sp"
+         />
+    </RelativeLayout>
+
+
 </LinearLayout>
+</ScrollView>

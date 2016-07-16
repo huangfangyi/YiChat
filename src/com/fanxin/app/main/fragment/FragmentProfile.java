@@ -2,6 +2,7 @@ package com.fanxin.app.main.fragment;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
@@ -58,7 +60,9 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
         getView().findViewById(R.id.re_setting).setOnClickListener(this);
         getView().findViewById(R.id.re_wallet).setOnClickListener(this);
         getView().findViewById(R.id.re_xiangce).setOnClickListener(this);
-
+        getView().findViewById(R.id.re_fanxin).setOnClickListener(this);
+        getView().findViewById(R.id.re_xiangce).setOnClickListener(this);
+        getView().findViewById(R.id.re_yunzhanghu).setOnClickListener(this);
      }
 
     @Override
@@ -92,7 +96,30 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
             case R.id.re_xiangce:
                 startActivity(new Intent(getActivity(), SocialFriendActivity.class).putExtra("friendID", DemoHelper.getInstance().getCurrentUsernName()));
                 break;
+            case R.id.re_yunzhanghu:
+                joinQQGroup("ycxd0w_eXmTbKIjyDdHb5Dy_-ZhY8E7t");
+                break;
+            case R.id.re_fanxin:
+                joinQQGroup("5QH7bwWtFt5dCwIlIp__y4nuVF1rggp1");
+                break;
 
         }
     }
+
+
+    public boolean joinQQGroup(String key) {
+        Intent intent = new Intent();
+        intent.setData(Uri.parse("mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26k%3D" + key));
+        // 此Flag可根据具体产品需要自定义，如设置，则在加群界面按返回，返回手Q主界面，不设置，按返回会返回到呼起产品界面    //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        try {
+            startActivity(intent);
+            return true;
+        } catch (Exception e) {
+            // 未安装手Q或安装的版本不支持
+            Toast.makeText(getContext(),"本设备未安装手机QQ",Toast.LENGTH_LONG).show();
+            return false;
+        }
+    }
+
+
 }

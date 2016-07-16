@@ -25,8 +25,8 @@
     <string name="real_name">真实姓名</string>
     <string name="id_card">身份证号</string>
     <string name="phone_number">手机号码</string>
-    <string name="operation_user_agreement">该操作代表我同意《环信用户服务协议》</string>
-    <string name="operation_tpy_agreement">我愿意免费投保太平洋保险《个人账户资金损失保险》，保险费用由环信承担</string>
+    <string name="operation_user_agreement">该操作代表我同意《凡信用户服务协议》</string>
+    <string name="operation_tpy_agreement">我愿意免费投保太平洋保险《个人账户资金损失保险》，保险费用由凡信承担</string>
     <string name="title_amount_agreement">个人账户资金损失保险</string>
     <string name="jd_pay_agreement_hint">银行卡付款业务由京东支付支持</string>
     <string name="insurance_agreement_hint">因账户被盗导致的资金损失由太平洋保险提供赔付保障</string>
