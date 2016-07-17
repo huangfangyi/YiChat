@@ -1,6 +1,7 @@
 package com.fanxin.app.main.fragment;
 
 import android.content.Intent;
+import android.util.Pair;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.easemob.redpacketui.RedPacketConstant;
 import com.fanxin.app.Constant;
+import com.fanxin.app.DemoHelper;
 import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.main.adapter.ConversationAdapter;
 import com.fanxin.app.ui.ChatActivity;
@@ -26,6 +28,10 @@ import com.hyphenate.chat.EMMessage;
 import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.NetUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class ConversationListFragment extends EaseConversationListFragment {
 
@@ -112,7 +118,36 @@ public class ConversationListFragment extends EaseConversationListFragment {
         }
     }
     
-    
+    @Override
+
+    protected List<EMConversation> loadConversationList(){
+        // get all conversations
+        Map<String, EMConversation> conversations = EMClient.getInstance().chatManager().getAllConversations();
+        List<Pair<Long, EMConversation>> sortList = new ArrayList<Pair<Long, EMConversation>>();
+        /**
+         * lastMsgTime will change if there is new message during sorting
+         * so use synchronized to make sure timestamp of last message won't change.
+         */
+        synchronized (conversations) {
+            for (EMConversation conversation : conversations.values()) {
+                if (conversation.getAllMessages().size() != 0&&conversation.getType()!= EMConversation.EMConversationType.ChatRoom||(conversation.getType()== EMConversation.EMConversationType.Chat&& DemoHelper.getInstance().getContactList().containsKey(conversation.getUserName()))) {
+                    sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
+                }
+            }
+        }
+        try {
+            // Internal is TimSort algorithm, has bug
+            sortConversationByLastChatTime(sortList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        List<EMConversation> list = new ArrayList<EMConversation>();
+        for (Pair<Long, EMConversation> sortItem : sortList) {
+            list.add(sortItem.second);
+        }
+        return list;
+    }
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
         getActivity().getMenuInflater().inflate(R.menu.em_delete_message, menu); 

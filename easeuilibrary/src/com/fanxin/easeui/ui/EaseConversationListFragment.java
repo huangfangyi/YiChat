@@ -243,7 +243,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
      * 
      * @param conversationList
      */
-    private void sortConversationByLastChatTime(List<Pair<Long, EMConversation>> conversationList) {
+    public void sortConversationByLastChatTime(List<Pair<Long, EMConversation>> conversationList) {
         Collections.sort(conversationList, new Comparator<Pair<Long, EMConversation>>() {
             @Override
             public int compare(final Pair<Long, EMConversation> con1, final Pair<Long, EMConversation> con2) {
