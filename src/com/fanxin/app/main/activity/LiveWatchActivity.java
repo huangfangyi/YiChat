@@ -1,5 +1,6 @@
 package com.fanxin.app.main.activity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.R;
@@ -56,12 +58,17 @@ public class LiveWatchActivity extends BaseActivity implements UVideoView.Callba
     LiveMessageAdapter adapter;
     private EMConversation conversation;
     protected int pagesize = 20;
+    private  ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle bundles) {
         super.onCreate(bundles);
         setContentView(R.layout.activity_video_demo2);
         ButterKnife.bind(this);
-
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("正在进入直播间...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
         mSettings = new Settings(this);
 
         mUri = getIntent().getStringExtra("videoPath");
@@ -130,7 +137,15 @@ public class LiveWatchActivity extends BaseActivity implements UVideoView.Callba
 
             @Override
             public void onError(int i, String s) {
-
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(progressDialog!=null&&progressDialog.isShowing()){
+                            progressDialog.dismiss();
+                            Toast.makeText(getApplicationContext(),"初始化互动模块失败...",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
 
@@ -209,7 +224,9 @@ public class LiveWatchActivity extends BaseActivity implements UVideoView.Callba
 
         });
         EMClient.getInstance().chatManager().addMessageListener(msgListener);
-
+        if(progressDialog!=null&&progressDialog.isShowing()){
+            progressDialog.dismiss();
+         }
 
     }
 

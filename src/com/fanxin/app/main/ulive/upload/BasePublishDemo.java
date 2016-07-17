@@ -1,5 +1,6 @@
 package com.fanxin.app.main.ulive.upload;
 
+import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -95,6 +96,7 @@ public abstract class BasePublishDemo extends BaseActivity implements UEasyStrea
     LiveMessageAdapter adapter;
     private EMConversation conversation;
     protected int pagesize = 20;
+    private ProgressDialog progressDialog;
     @Override
     public void onStateChanged(int type, Object event) {
        switch (type) {
@@ -166,6 +168,11 @@ public abstract class BasePublishDemo extends BaseActivity implements UEasyStrea
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("正在进入直播间...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
         mSettings = new Settings(this);
         setContentView(R.layout.live_layout_live_room_view);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -224,7 +231,15 @@ public abstract class BasePublishDemo extends BaseActivity implements UEasyStrea
 
             @Override
             public void onError(int i, String s) {
-
+                   runOnUiThread(new Runnable() {
+                       @Override
+                       public void run() {
+                           if(progressDialog!=null&&progressDialog.isShowing()){
+                               progressDialog.dismiss();
+                               Toast.makeText(getApplicationContext(),"初始化互动模块失败...",Toast.LENGTH_SHORT).show();
+                           }
+                       }
+                   });
             }
         });
 
@@ -424,7 +439,9 @@ public abstract class BasePublishDemo extends BaseActivity implements UEasyStrea
 
         });
         EMClient.getInstance().chatManager().addMessageListener(msgListener);
-
+        if(progressDialog!=null&&progressDialog.isShowing()){
+            progressDialog.dismiss();
+        }
 
     }
 
