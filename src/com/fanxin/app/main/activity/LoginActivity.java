@@ -116,9 +116,9 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 int code = jsonObject.getInteger("code");
-                if (code == 1) {
+                if (code == 1000) {
                     JSONObject json = jsonObject.getJSONObject("user");
-                    JSONArray friends=jsonObject.getJSONArray("friends");
+                    JSONArray friends=json.getJSONArray("friends");
                     Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
                     if (friends != null) {
                         for (int i = 0; i < friends.size(); i++) {
@@ -137,17 +137,12 @@ public class LoginActivity extends BaseActivity {
                     }
 
                     loginHuanXin(json, pd);
-                } else if (code == 2) {
+                } else if (code == 2001) {
                     pd.dismiss();
                     Toast.makeText(LoginActivity.this,
                             "账号或密码错误...", Toast.LENGTH_SHORT)
                             .show();
-                } else if (code == 3) {
-                    pd.dismiss();
-                    Toast.makeText(LoginActivity.this,
-                            "服务器端登录失败...", Toast.LENGTH_SHORT)
-                            .show();
-                } else {
+                }else {
                     pd.dismiss();
                     Toast.makeText(LoginActivity.this,
                             "服务器繁忙请重试...", Toast.LENGTH_SHORT)
