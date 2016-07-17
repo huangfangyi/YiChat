@@ -501,7 +501,9 @@ public class ConversationAdapter extends ArrayAdapter<EMConversation> {
 
 
     private void holdGroupAvatar(EMGroup group,ViewHolder holder,int type){
-
+        if(group==null||group.getGroupName()==null){
+            return;
+        }
         JSONArray jsonarray = new JSONArray();
         String groupName = "";
         try {

@@ -1,5 +1,7 @@
 package com.fanxin.easeui.ui;
 
+import android.content.Intent;
+
 import com.hyphenate.EMGroupChangeListener;
 
 /**
@@ -11,7 +13,6 @@ public abstract class EaseGroupRemoveListener implements EMGroupChangeListener{
     @Override
     public void onInvitationReceived(String groupId, String groupName, String inviter, String reason) {
         // TODO Auto-generated method stub
-        
     }
 
     @Override

@@ -144,33 +144,33 @@ import android.widget.Toast;
 
         inviteMessgeDao = new InviteMessgeDao(this);
         userDao = new UserDao(this);
-        conversationListFragment=(ConversationListFragment)getSupportFragmentManager().findFragmentByTag(TAG_COVERSATION);
-        contactListFragment=(ContactListFragment)getSupportFragmentManager().findFragmentByTag(TAG_CONTACTS);
-        fragmentFind=(FragmentFind)getSupportFragmentManager().findFragmentByTag(TAG_FIND);
-        fragmentProfile=(FragmentProfile)getSupportFragmentManager().findFragmentByTag(TAG_PROFILE);
-        FragmentTransaction manager = getSupportFragmentManager().beginTransaction();
-        if(conversationListFragment==null){
-            conversationListFragment = new ConversationListFragment();
-            manager.add(R.id.fragment_container, conversationListFragment, TAG_COVERSATION);
-        }
-        if(contactListFragment==null){
-            contactListFragment = new ContactListFragment();
-            manager.add(R.id.fragment_container, contactListFragment, TAG_CONTACTS);
-        }
-        if(fragmentFind==null){
-            fragmentFind = new FragmentFind();
-            manager.add(R.id.fragment_container, fragmentFind, TAG_FIND).hide(fragmentFind);
-        }
-        if(fragmentProfile==null){
-            fragmentProfile = new FragmentProfile();
-            manager.add(R.id.fragment_container, fragmentProfile, TAG_PROFILE).hide(fragmentProfile);
-        }
-        manager.show(conversationListFragment).hide(contactListFragment).hide(fragmentFind).hide(fragmentProfile).commit();
-//        conversationListFragment=new ConversationListFragment();
-//        contactListFragment = new ContactListFragment();
-//        fragmentFind = new FragmentFind();
-//        fragmentProfile = new FragmentProfile();
-
+//        conversationListFragment=(ConversationListFragment)getSupportFragmentManager().findFragmentByTag(TAG_COVERSATION);
+//        contactListFragment=(ContactListFragment)getSupportFragmentManager().findFragmentByTag(TAG_CONTACTS);
+//        fragmentFind=(FragmentFind)getSupportFragmentManager().findFragmentByTag(TAG_FIND);
+//        fragmentProfile=(FragmentProfile)getSupportFragmentManager().findFragmentByTag(TAG_PROFILE);
+//        FragmentTransaction manager = getSupportFragmentManager().beginTransaction();
+//        if(conversationListFragment==null){
+//            conversationListFragment = new ConversationListFragment();
+//            manager.add(R.id.fragment_container, conversationListFragment, TAG_COVERSATION);
+//        }
+//        if(contactListFragment==null){
+//            contactListFragment = new ContactListFragment();
+//            manager.add(R.id.fragment_container, contactListFragment, TAG_CONTACTS);
+//        }
+//        if(fragmentFind==null){
+//            fragmentFind = new FragmentFind();
+//            manager.add(R.id.fragment_container, fragmentFind, TAG_FIND).hide(fragmentFind);
+//        }
+//        if(fragmentProfile==null){
+//            fragmentProfile = new FragmentProfile();
+//            manager.add(R.id.fragment_container, fragmentProfile, TAG_PROFILE).hide(fragmentProfile);
+//        }
+//        manager.show(conversationListFragment).hide(contactListFragment).hide(fragmentFind).hide(fragmentProfile).commit();
+        conversationListFragment=new ConversationListFragment();
+        contactListFragment = new ContactListFragment();
+        fragmentFind = new FragmentFind();
+        fragmentProfile = new FragmentProfile();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,conversationListFragment).add(R.id.fragment_container,contactListFragment).hide(contactListFragment).show(conversationListFragment).commit();
         fragments = new Fragment[]{conversationListFragment, contactListFragment, fragmentFind, fragmentProfile};
         //register broadcast receiver to receive the change of group from DemoHelper
         registerBroadcastReceiver();

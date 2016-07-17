@@ -65,13 +65,13 @@ public class EaseConversationList extends ListView {
 
     }
 
-    public void init(List<EMConversation> conversationList,ArrayAdapter baseAdapter){
-        this.init(conversationList, null,baseAdapter);
+    public void init(List<EMConversation> conversationList,ArrayAdapter _baseAdapter){
+        this.init(conversationList, null,_baseAdapter);
     }
 
-    public void init(List<EMConversation> conversationList, EaseConversationListHelper helper, ArrayAdapter baseAdapter){
+    public void init(List<EMConversation> conversationList, EaseConversationListHelper helper, ArrayAdapter _baseAdapter){
         conversations = conversationList;
-        this.baseAdapter=baseAdapter;
+        this.baseAdapter=_baseAdapter;
         if(helper != null){
             this.conversationListHelper = helper;
         }
@@ -83,7 +83,7 @@ public class EaseConversationList extends ListView {
 //        adapter.setSecondarySize(secondarySize);
 //        adapter.setTimeColor(timeColor);
 //        adapter.setTimeSize(timeSize);
-        setAdapter(baseAdapter);
+        setAdapter(_baseAdapter);
     }
     
     Handler handler = new Handler() {

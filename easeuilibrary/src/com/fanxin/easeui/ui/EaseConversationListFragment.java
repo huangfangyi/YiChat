@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -173,6 +174,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
 	            	conversationList.clear();
 	                conversationList.addAll(loadConversationList());
 	                conversationListView.refresh();
+                    Log.d("coversation--->","refresh");
 	                break;
 	            }
             default:
@@ -210,7 +212,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
      * 
      * @return
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         +    */
-    protected List<EMConversation> loadConversationList(){
+    public List<EMConversation> loadConversationList(){
         // get all conversations
         Map<String, EMConversation> conversations = EMClient.getInstance().chatManager().getAllConversations();
         List<Pair<Long, EMConversation>> sortList = new ArrayList<Pair<Long, EMConversation>>();

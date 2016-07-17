@@ -1,57 +1,112 @@
 package com.fanxin.app.main.fragment;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.Pair;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.LinearLayout;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.redpacketui.RedPacketConstant;
 import com.fanxin.app.Constant;
 import com.fanxin.app.DemoHelper;
+import com.fanxin.app.R;
 import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.main.adapter.ConversationAdapter;
 import com.fanxin.app.ui.ChatActivity;
-import com.fanxin.easeui.ui.EaseConversationListFragment;
 import com.fanxin.easeui.widget.EaseConversationList;
+import com.hyphenate.EMConnectionListener;
+import com.hyphenate.EMConversationListener;
+import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMMessage;
-import com.fanxin.app.R;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.NetUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-public class ConversationListFragment extends EaseConversationListFragment {
+public class ConversationListFragment extends Fragment {
 
     private TextView errorText;
+    private final static int MSG_REFRESH = 2;
+    protected EditText query;
+    protected ImageButton clearSearch;
+    protected boolean hidden;
+    protected List<EMConversation> conversationList = new ArrayList<EMConversation>();
+    protected EaseConversationList conversationListView;
+    protected FrameLayout errorItemContainer;
+
+    protected boolean isConflict;
+
+    protected EMConversationListener convListener = new EMConversationListener() {
+
+        @Override
+        public void onCoversationUpdate() {
+            refresh();
+        }
+
+    };
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fx_fragment_conversation, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        if (savedInstanceState != null && savedInstanceState.getBoolean("isConflict", false))
+            return;
+        super.onActivityCreated(savedInstanceState);
+        initView();
+        setUpView();
+    }
+
     protected void initView() {
-        super.initView();
-        View errorView = (LinearLayout) View.inflate(getActivity(),R.layout.em_chat_neterror_item, null);
+        errorItemContainer = (FrameLayout) getView().findViewById(R.id.fl_error_item);
+        View errorView = View.inflate(getActivity(), R.layout.em_chat_neterror_item, null);
         errorItemContainer.addView(errorView);
         errorText = (TextView) errorView.findViewById(R.id.tv_connect_errormsg);
-        titleBar.setVisibility(View.GONE);
-        getView().findViewById(R.id.re_search).setVisibility(View.GONE);
-
+        conversationListView = (EaseConversationList) getView().findViewById(R.id.list);
     }
-    
-    @Override
+
+
     protected void setUpView() {
-        setArrayAdapter(new ConversationAdapter(getContext(),0,loadConversationList()));
-        super.setUpView();
+
+        conversationList.addAll(loadConversationList());
+        ConversationAdapter adapter = new ConversationAdapter(getContext(), 0, conversationList);
+        conversationListView.init(conversationList, adapter);
+        if (listItemClickListener != null) {
+            conversationListView.setOnItemClickListener(new OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    EMConversation conversation = conversationListView.getItem(position);
+                    listItemClickListener.onListItemClicked(conversation);
+                }
+            });
+        }
+
+        EMClient.getInstance().addConnectionListener(connectionListener);
         // register context menu
         registerForContextMenu(conversationListView);
         conversationListView.setOnItemClickListener(new OnItemClickListener() {
@@ -65,14 +120,14 @@ public class ConversationListFragment extends EaseConversationListFragment {
                 else {
                     // start chat acitivity
                     Intent intent = new Intent(getActivity(), ChatActivity.class);
-                    if(conversation.isGroup()){
-                        if(conversation.getType() == EMConversationType.ChatRoom){
+                    if (conversation.isGroup()) {
+                        if (conversation.getType() == EMConversationType.ChatRoom) {
                             // it's group chat
                             intent.putExtra(Constant.EXTRA_CHAT_TYPE, Constant.CHATTYPE_CHATROOM);
-                        }else{
+                        } else {
                             intent.putExtra(Constant.EXTRA_CHAT_TYPE, Constant.CHATTYPE_GROUP);
                         }
-                        
+
                     }
                     // it's single chat
                     intent.putExtra(Constant.EXTRA_USER_ID, username);
@@ -89,12 +144,12 @@ public class ConversationListFragment extends EaseConversationListFragment {
                         String receiveNick = lastMessage.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_NAME);
                         String msg;
                         if (lastMessage.direct() == EMMessage.Direct.RECEIVE) {
-                            msg = String.format(getResources().getString(R.string.money_msg_someone_take_money),receiveNick);
+                            msg = String.format(getResources().getString(R.string.money_msg_someone_take_money), receiveNick);
                         } else {
                             if (sendNick.equals(receiveNick)) {
                                 msg = getResources().getString(R.string.money_msg_take_money);
                             } else {
-                                msg = String.format(getResources().getString(R.string.money_msg_take_someone_money),sendNick);
+                                msg = String.format(getResources().getString(R.string.money_msg_take_someone_money), sendNick);
                             }
                         }
                         return msg;
@@ -105,22 +160,22 @@ public class ConversationListFragment extends EaseConversationListFragment {
                 return null;
             }
         });
-        super.setUpView();
+
+
     }
 
-    @Override
+
     protected void onConnectionDisconnected() {
-        super.onConnectionDisconnected();
-        if (NetUtils.hasNetwork(getActivity())){
-         errorText.setText(R.string.can_not_connect_chat_server_connection);
+        errorItemContainer.setVisibility(View.VISIBLE);
+        if (NetUtils.hasNetwork(getActivity())) {
+            errorText.setText(R.string.can_not_connect_chat_server_connection);
         } else {
-          errorText.setText(R.string.the_current_network);
+            errorText.setText(R.string.the_current_network);
         }
     }
-    
-    @Override
 
-    protected List<EMConversation> loadConversationList(){
+
+    public List<EMConversation> loadConversationList() {
         // get all conversations
         Map<String, EMConversation> conversations = EMClient.getInstance().chatManager().getAllConversations();
         List<Pair<Long, EMConversation>> sortList = new ArrayList<Pair<Long, EMConversation>>();
@@ -130,8 +185,14 @@ public class ConversationListFragment extends EaseConversationListFragment {
          */
         synchronized (conversations) {
             for (EMConversation conversation : conversations.values()) {
-                if (conversation.getAllMessages().size() != 0&&conversation.getType()!= EMConversation.EMConversationType.ChatRoom||(conversation.getType()== EMConversation.EMConversationType.Chat&& DemoHelper.getInstance().getContactList().containsKey(conversation.getUserName()))) {
-                    sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
+                if (conversation.getAllMessages().size() != 0 && conversation.getType() != EMConversation.EMConversationType.ChatRoom || (conversation.getType() == EMConversation.EMConversationType.Chat && DemoHelper.getInstance().getContactList().containsKey(conversation.getUserName()))) {
+                    try {
+                        sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
+                    } catch (NullPointerException e) {
+
+
+                    }
+
                 }
             }
         }
@@ -150,7 +211,7 @@ public class ConversationListFragment extends EaseConversationListFragment {
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
-        getActivity().getMenuInflater().inflate(R.menu.em_delete_message, menu); 
+        getActivity().getMenuInflater().inflate(R.menu.em_delete_message, menu);
     }
 
     @Override
@@ -161,10 +222,10 @@ public class ConversationListFragment extends EaseConversationListFragment {
         } else if (item.getItemId() == R.id.delete_conversation) {
             deleteMessage = false;
         }
-    	EMConversation tobeDeleteCons = conversationListView.getItem(((AdapterContextMenuInfo) item.getMenuInfo()).position);
-    	if (tobeDeleteCons == null) {
-    	    return true;
-    	}
+        EMConversation tobeDeleteCons = conversationListView.getItem(((AdapterContextMenuInfo) item.getMenuInfo()).position);
+        if (tobeDeleteCons == null) {
+            return true;
+        }
         try {
             // delete conversation
             EMClient.getInstance().chatManager().deleteConversation(tobeDeleteCons.getUserName(), deleteMessage);
@@ -179,5 +240,138 @@ public class ConversationListFragment extends EaseConversationListFragment {
         ((MainActivity) getActivity()).updateUnreadLabel();
         return true;
     }
+
+
+    protected EMConnectionListener connectionListener = new EMConnectionListener() {
+
+        @Override
+        public void onDisconnected(int error) {
+            if (error == EMError.USER_REMOVED || error == EMError.USER_LOGIN_ANOTHER_DEVICE) {
+                isConflict = true;
+            } else {
+                handler.sendEmptyMessage(0);
+            }
+        }
+
+        @Override
+        public void onConnected() {
+            handler.sendEmptyMessage(1);
+        }
+    };
+    private EaseConversationListItemClickListener listItemClickListener;
+
+    protected Handler handler = new Handler() {
+        public void handleMessage(android.os.Message msg) {
+            switch (msg.what) {
+                case 0:
+                    onConnectionDisconnected();
+                    break;
+                case 1:
+                    onConnectionConnected();
+                    break;
+
+                case MSG_REFRESH: {
+                    conversationList.clear();
+                    conversationList.addAll(loadConversationList());
+                    conversationListView.refresh();
+                    Log.d("coversation--->", "refresh");
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+    };
+
+    /**
+     * connected to server
+     */
+    protected void onConnectionConnected() {
+        errorItemContainer.setVisibility(View.GONE);
+    }
+
+
+    /**
+     * refresh ui
+     */
+    public void refresh() {
+        if (!handler.hasMessages(MSG_REFRESH)) {
+            handler.sendEmptyMessage(MSG_REFRESH);
+        }
+    }
+
+
+    /**
+     * sort conversations according time stamp of last message
+     *
+     * @param conversationList
+     */
+    public void sortConversationByLastChatTime(List<Pair<Long, EMConversation>> conversationList) {
+        Collections.sort(conversationList, new Comparator<Pair<Long, EMConversation>>() {
+            @Override
+            public int compare(final Pair<Long, EMConversation> con1, final Pair<Long, EMConversation> con2) {
+
+                if (con1.first == con2.first) {
+                    return 0;
+                } else if (con2.first > con1.first) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+
+        });
+    }
+
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        this.hidden = hidden;
+        if (!hidden && !isConflict) {
+            refresh();
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (!hidden) {
+            refresh();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EMClient.getInstance().removeConnectionListener(connectionListener);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (isConflict) {
+            outState.putBoolean("isConflict", true);
+        }
+    }
+
+    public interface EaseConversationListItemClickListener {
+        /**
+         * click event for conversation list
+         *
+         * @param conversation -- clicked item
+         */
+        void onListItemClicked(EMConversation conversation);
+    }
+
+    /**
+     * set conversation list item click listener
+     *
+     * @param listItemClickListener
+     */
+    public void setConversationListItemClickListener(EaseConversationListItemClickListener listItemClickListener) {
+        this.listItemClickListener = listItemClickListener;
+    }
+
 
 }
