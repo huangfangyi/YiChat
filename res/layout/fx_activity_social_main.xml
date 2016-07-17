@@ -40,7 +40,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/view_temp"
-            android:text="个人信息"
+            android:text="朋友圈"
             android:textColor="#ffffff"
             android:textSize="18sp" />
 
