@@ -1,6 +1,5 @@
 package com.fanxin.app.main.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,8 +21,7 @@ import java.util.List;
  * Created by huangfangyi on 2016/7/15.\
  * QQ:84543217
  */
-public   @SuppressLint("InflateParams")
-class LiveMessageAdapter extends BaseAdapter {
+public class LiveMessageAdapter extends BaseAdapter {
     private List<EMMessage> msgs;
     private Context context;
     private LayoutInflater inflater;
@@ -50,35 +48,32 @@ class LiveMessageAdapter extends BaseAdapter {
     }
 
 
-
-
-    @SuppressLint("InflateParams")
-    @Override
+     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         EMMessage message = getItem(position);
 
 
         if (convertView == null) {
 
-             convertView=inflater.inflate(R.layout.fx_item_live_chat, parent,false);
+            convertView = inflater.inflate(R.layout.fx_item_live_chat, parent, false);
         }
-        ViewHolder holder= (ViewHolder) convertView.getTag();
-        if(holder==null){
-            holder=new ViewHolder();
-            holder.tvNick= (TextView) convertView.findViewById(R.id.tv_nick);
-            holder.tvContent= (TextView) convertView.findViewById(R.id.tv_content);
+        ViewHolder holder = (ViewHolder) convertView.getTag();
+        if (holder == null) {
+            holder = new ViewHolder();
+            holder.tvNick = (TextView) convertView.findViewById(R.id.tv_nick);
+            holder.tvContent = (TextView) convertView.findViewById(R.id.tv_content);
             convertView.setTag(holder);
         }
         EMTextMessageBody txtBody = (EMTextMessageBody) message.getBody();
 
         try {
-            String userInfo=message.getStringAttribute(FXConstant.KEY_USER_INFO);
-            JSONObject jsonObject=JSONObject.parseObject(userInfo);
+            String userInfo = message.getStringAttribute(FXConstant.KEY_USER_INFO);
+            JSONObject jsonObject = JSONObject.parseObject(userInfo);
             holder.tvNick.setText(jsonObject.getString(FXConstant.JSON_KEY_NICK));
         } catch (HyphenateException e) {
             holder.tvNick.setText(message.getFrom());
             e.printStackTrace();
-        }catch (JSONException e ){
+        } catch (JSONException e) {
 
             holder.tvNick.setText(message.getFrom());
             e.printStackTrace();
@@ -90,9 +85,9 @@ class LiveMessageAdapter extends BaseAdapter {
     }
 
 
-    private static class ViewHolder{
+    private static class ViewHolder {
 
-        TextView  tvNick;
-        TextView  tvContent;
+        TextView tvNick;
+        TextView tvContent;
     }
 }
