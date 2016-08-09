@@ -57,7 +57,9 @@ public class DemoApplication extends Application {
 		OkHttpManager.init(instance);
 		LocalUserUtil.init(instance);
         DemoHelper.getInstance().init(applicationContext);
+		//red packet code : 初始化红包上下文，开启日志输出开关
 		RedPacket.getInstance().initContext(applicationContext);
+		RedPacket.getInstance().setDebugMode(true);
 		Fresco.initialize(this);
 		UEasyStreaming.initStreaming("publish3-key");
 		UEasyStreaming.syncMobileConfig(this, 3600 * 24);

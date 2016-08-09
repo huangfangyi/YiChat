@@ -48,17 +48,6 @@ public class SplashActivity extends   BaseActivity {
 					EMClient.getInstance().groupManager().loadAllGroups();
 					EMClient.getInstance().chatManager().loadAllConversations();
 
-					RedPacket.getInstance().initRPToken(DemoHelper.getInstance().getCurrentUsernName(), DemoHelper.getInstance().getCurrentUsernName(), EMClient.getInstance().getChatConfig().getAccessToken(), new RPCallback() {
-						@Override
-						public void onSuccess() {
-
-						}
-
-						@Override
-						public void onError(String s, String s1) {
-
-						}
-					});
 					long costTime = System.currentTimeMillis() - start;
 					//wait
 					if (sleepTime - costTime > 0) {
