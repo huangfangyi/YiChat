@@ -85,14 +85,16 @@ public class GroupService extends Service{
         OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
-                int code = jsonObject.getIntValue("code");
-                if (code == 1000) {
-                    if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
-                        JSONArray jsonArray = jsonObject.getJSONArray("data");
-                        ACache.get(getApplicationContext()).put(groupId,jsonArray);
+                if(jsonObject.containsKey("code")&&jsonObject.get("code") instanceof Integer){
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 1000) {
+                        if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            ACache.get(getApplicationContext()).put(groupId,jsonArray);
+                        }
                     }
-                }
 
+                }
             }
 
             @Override
