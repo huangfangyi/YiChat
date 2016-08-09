@@ -2,6 +2,7 @@ package com.fanxin.app.ui;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -24,6 +25,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.easemob.redpacketui.widget.ChatRowRedPacket;
@@ -33,6 +36,9 @@ import com.fanxin.app.main.activity.ChatSettingGroupActivity;
 import com.fanxin.app.main.activity.ChatSettingSingleActivity;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.activity.UserDetailsActivity;
+import com.fanxin.app.main.db.ACache;
+import com.fanxin.app.main.utils.OkHttpManager;
+import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.widget.ChatRowVoiceCall;
 import com.fanxin.easeui.widget.chatrow.EaseChatRow;
 import com.hyphenate.chat.EMClient;
@@ -160,8 +166,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                         }
                     }
                 }).start();
+                //获取群成员信息
+                getGroupMembersInServer(group.getGroupId());
             }
             tvName.setText("群聊("+group.getAffiliationsCount()+")");
+
         }
     }
     
@@ -448,5 +457,32 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         }
 
     }
+
+
+    private  void   getGroupMembersInServer(final String groupId){
+
+        List<Param> params = new ArrayList<>();
+        params.add(new Param("groupId", groupId));
+        OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                int code = jsonObject.getIntValue("code");
+                if (code == 1000) {
+                    if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        ACache.get(getActivity()).put(groupId,jsonArray);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(String errorMsg) {
+
+            }
+        });
+
+
+    }
+
 
 }
