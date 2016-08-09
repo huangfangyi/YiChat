@@ -111,7 +111,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                 }
             });
             getView().findViewById(R.id.iv_setting_group).setVisibility(View.GONE);
-            tvName.setText(DemoHelper.getInstance().getContactList().get(toChatUsername).getNick());
+            if(DemoHelper.getInstance().getContactList().containsKey(toChatUsername)){
+
+                tvName.setText(DemoHelper.getInstance().getContactList().get(toChatUsername).getNick());
+            }
+
         }
         super.setUpView();
         hideTitleBar();
