@@ -92,6 +92,7 @@ public class GroupService extends Service{
                         ACache.get(getApplicationContext()).put(groupId,jsonArray);
                     }
                 }
+
             }
 
             @Override
