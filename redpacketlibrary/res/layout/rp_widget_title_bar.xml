@@ -3,7 +3,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="@dimen/size144px"
-    android:background="@drawable/rp_titlebar_bg"
+    android:background="@color/top_red_color"
     android:gravity="center_vertical">
 
     <RelativeLayout
@@ -20,13 +20,27 @@
             android:scaleType="centerInside" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:textColor="#ffffff"
-        android:textSize="17sp" />
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/right_layout"

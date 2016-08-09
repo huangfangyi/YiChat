@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/money_bg_color"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/money_bg_color"
+              android:orientation="vertical"
+    >
 
     <RelativeLayout
         style="@style/BindBankCardRLayoutStyle"
-        android:layout_marginTop="@dimen/size45px">
+        android:layout_marginTop="@dimen/size45px"
+        >
 
         <TextView
             style="@style/SendMoneyLeftTextViewStyle"
-            android:text="@string/withdraw_bankcard" />
+            android:text="@string/withdraw_bankcard"
+            />
 
         <TextView
             android:id="@+id/tv_withdraw_bankcard_name"
@@ -22,17 +25,19 @@
             android:layout_marginRight="@dimen/size45px"
             android:text="@string/withdraw_bankcard_name"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/font45px" />
+            android:textSize="@dimen/font45px"
+            />
     </RelativeLayout>
 
-    <View style="@style/DividerStyleNoHead" />
+    <View style="@style/DividerStyleNoHead"/>
 
     <RelativeLayout style="@style/BindBankCardRLayoutStyle">
 
         <TextView
             android:id="@+id/tv_money_amount"
             style="@style/SendMoneyLeftTextViewStyle"
-            android:text="@string/withdraw_amount" />
+            android:text="@string/withdraw_amount"
+            />
 
         <TextView
             android:id="@+id/tv_money_unit"
@@ -43,7 +48,8 @@
             android:layout_marginRight="@dimen/size45px"
             android:text="@string/money_unit"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/font45px" />
+            android:textSize="@dimen/font45px"
+            />
 
         <EditText
             android:id="@+id/et_withdraw_amount"
@@ -52,7 +58,8 @@
             android:layout_toLeftOf="@id/tv_money_unit"
             android:layout_toRightOf="@id/tv_money_amount"
             android:gravity="center_vertical|right"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -60,7 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/size45px"
         android:layout_marginRight="@dimen/size45px"
-        android:layout_marginTop="@dimen/size45px">
+        android:layout_marginTop="@dimen/size45px"
+        >
 
         <TextView
             android:id="@+id/tv_withdraw_change_balance"
@@ -68,7 +76,8 @@
             android:layout_height="wrap_content"
             android:text="@string/withdraw_change_balance"
             android:textColor="@color/text_light_grey"
-            android:textSize="@dimen/font36px" />
+            android:textSize="@dimen/font36px"
+            />
 
         <TextView
             android:id="@+id/tv_withdraw_all"
@@ -77,7 +86,8 @@
             android:layout_toRightOf="@id/tv_withdraw_change_balance"
             android:text="@string/change_withdraw_all"
             android:textColor="@color/text_blue"
-            android:textSize="@dimen/font36px" />
+            android:textSize="@dimen/font36px"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +95,8 @@
             android:layout_alignParentRight="true"
             android:text="@string/before_tomorrow_24_hour_to_account"
             android:textColor="@color/text_light_grey"
-            android:textSize="@dimen/font36px" />
+            android:textSize="@dimen/font36px"
+            />
 
     </RelativeLayout>
 
@@ -94,5 +105,6 @@
         style="@style/SendMoneyButtonStyle"
         android:layout_marginTop="@dimen/size96px"
         android:background="@drawable/rp_btn_blue_selector"
-        android:text="@string/change_withdraw" />
+        android:text="@string/change_withdraw"
+        />
 </LinearLayout>

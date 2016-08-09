@@ -16,9 +16,9 @@
         android:layout_marginRight="@dimen/size75px"
         android:background="@color/money_bg_color"
         android:gravity="center"
+        android:text="@string/money_received_text"
         android:textColor="@color/text_black"
         android:textSize="@dimen/font45px"
-        android:text="@string/money_received_text"
         />
 
     <View style="@style/DividerStyle"/>
@@ -32,9 +32,9 @@
         android:layout_marginRight="@dimen/size75px"
         android:background="@color/money_bg_color"
         android:gravity="center"
+        android:text="@string/money_send_text"
         android:textColor="@color/text_black"
         android:textSize="@dimen/font45px"
-        android:text="@string/money_send_text"
         />
 
 </LinearLayout>

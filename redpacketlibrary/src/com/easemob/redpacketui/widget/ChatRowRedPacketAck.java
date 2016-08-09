@@ -6,10 +6,9 @@ import android.widget.TextView;
 
 import com.easemob.redpacketui.R;
 import com.easemob.redpacketui.RedPacketConstant;
+import com.fanxin.easeui.widget.chatrow.EaseChatRow;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
-import com.fanxin.easeui.widget.chatrow.EaseChatRow;
-import com.hyphenate.exceptions.HyphenateException;
 
 public class ChatRowRedPacketAck extends EaseChatRow {
 
@@ -34,27 +33,23 @@ public class ChatRowRedPacketAck extends EaseChatRow {
 
     @Override
     protected void onSetUpView() {
-        try {
-            String currentUser = EMClient.getInstance().getCurrentUser();
-            String fromUser = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_SENDER_NAME);//红包发送者
-            String toUser = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_NAME);//红包接收者
-            String senderId;
-            if (message.direct() == EMMessage.Direct.SEND) {
-                if (message.getChatType().equals(EMMessage.ChatType.GroupChat)) {
-                    senderId = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_SENDER_ID);
-                    if (senderId.equals(currentUser)) {
-                        mTvMessage.setText(R.string.money_msg_take_money);
-                    } else {
-                        mTvMessage.setText(String.format(getResources().getString(R.string.money_msg_take_someone_money), fromUser));
-                    }
+        String currentUser = EMClient.getInstance().getCurrentUser();
+        String fromUser = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_SENDER_NAME, "");//红包发送者
+        String toUser = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_NAME, "");//红包接收者
+        String senderId;
+        if (message.direct() == EMMessage.Direct.SEND) {
+            if (message.getChatType().equals(EMMessage.ChatType.GroupChat)) {
+                senderId = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_SENDER_ID, "");
+                if (senderId.equals(currentUser)) {
+                    mTvMessage.setText(R.string.msg_take_red_packet);
                 } else {
-                    mTvMessage.setText(String.format(getResources().getString(R.string.money_msg_take_someone_money), fromUser));
+                    mTvMessage.setText(String.format(getResources().getString(R.string.msg_take_someone_red_packet), fromUser));
                 }
             } else {
-                mTvMessage.setText(String.format(getResources().getString(R.string.money_msg_someone_take_money), toUser));
+                mTvMessage.setText(String.format(getResources().getString(R.string.msg_take_someone_red_packet), toUser));
             }
-        } catch (HyphenateException e) {
-            e.printStackTrace();
+        } else {
+            mTvMessage.setText(String.format(getResources().getString(R.string.msg_someone_take_red_packet), toUser));
         }
     }
 

@@ -50,7 +50,7 @@
         <item name="android:layout_height">62dp</item>
         <item name="android:background">@color/money_white</item>
         <item name="android:gravity">top</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:padding">14dp</item>
     </style>
 
@@ -67,7 +67,7 @@
         <item name="android:layout_marginLeft">15dp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:textColor">@color/money_red_light</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="BindBankCardRLayoutStyle">
@@ -121,6 +121,19 @@
         <item name="android:gravity">center_vertical|right</item>
         <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@color/background_white</item>
+        <item name="android:drawableRight">@drawable/rp_arrow_forward</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="ChangeLeftTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:background">@color/background_white</item>
         <item name="android:drawableRight">@drawable/rp_arrow_forward</item>
         <item name="android:drawablePadding">10dp</item>
@@ -230,8 +243,6 @@
     <style name="DialogPayTypeStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_centerInParent">true</item>
-        <item name="android:layout_marginLeft">@dimen/size24px</item>
         <item name="android:textColor">@color/text_black</item>
         <item name="android:textSize">@dimen/font45px</item>
     </style>
@@ -321,5 +332,27 @@
     <style name="ChooseRecordStyle" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/rp_top_in</item>
         <item name="android:windowExitAnimation">@anim/rp_top_out</item>
+    </style>
+
+    <!--CardView-->
+    <style name="RPBase.CardView" parent="android:Widget">
+        <item name="RPcardCornerRadius">@dimen/rp_cardview_default_radius</item>
+        <item name="RPcardElevation">@dimen/rp_cardview_default_elevation</item>
+        <item name="RPcardMaxElevation">@dimen/rp_cardview_default_elevation</item>
+        <item name="RPcardUseCompatPadding">false</item>
+        <item name="RPcardPreventCornerOverlap">true</item>
+    </style>
+
+    <!-- On older platforms we do not explicitly set a background color and let CardView compute
+         one based on the theme. -->
+    <style name="RPCardView" parent="RPBase.CardView">
+    </style>
+
+    <style name="RPCardView.Light">
+        <item name="RPcardBackgroundColor">@color/rp_cardview_light_background</item>
+    </style>
+
+    <style name="RPCardView.Dark">
+        <item name="RPcardBackgroundColor">@color/rp_cardview_dark_background</item>
     </style>
 </resources>

@@ -6,9 +6,6 @@
               android:orientation="vertical"
     >
 
-    <!--<View-->
-    <!--style="@style/DividerStyle"/>-->
-    <!---->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,6 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/size45px"
             android:layout_toRightOf="@id/iv_record_avatar_icon"
+            android:maxLength="18"
+            android:singleLine="true"
             android:textColor="@color/text_black"
             android:textSize="@dimen/font45px"
             />
@@ -43,7 +42,6 @@
             android:layout_marginLeft="@dimen/size18px"
             android:layout_marginTop="@dimen/size9px"
             android:layout_toRightOf="@id/tv_money_to_user"
-            android:src="@drawable/rp_random_icon"
             android:visibility="gone"
             />
 

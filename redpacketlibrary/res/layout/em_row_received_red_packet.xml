@@ -67,7 +67,17 @@
                     android:id="@+id/tv_sponsor_name"
                     style="@style/RedPacketSponsorStyle"
                     />
-
+                <TextView
+                    android:id="@+id/tv_packet_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="#D24F44"
+                    />
                 <ImageView
                     style="@style/RedPacketSponsorIconStyle"
                     />

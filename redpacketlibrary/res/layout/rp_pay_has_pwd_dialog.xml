@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/divider"
-        android:layout_marginTop="@dimen/size60px"
+        android:layout_marginTop="@dimen/size30px"
         android:gravity="center"
         android:text="@string/red_money"
         android:textColor="@color/text_light_grey"
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_subtitle"
-        android:layout_marginTop="@dimen/size21px"
+        android:layout_marginTop="@dimen/size9px"
         android:gravity="center"
         android:text="￥200"
         android:textColor="@color/text_black"
@@ -56,7 +56,7 @@
         android:id="@+id/divider2"
         style="@style/DividerStyleNoHead"
         android:layout_below="@id/tv_pay_money_amount"
-        android:layout_marginTop="@dimen/size60px"
+        android:layout_marginTop="@dimen/size30px"
         />
 
     <RelativeLayout
@@ -76,6 +76,8 @@
             android:id="@+id/tv_pay_type_text"
             style="@style/DialogPayTypeStyle"
             android:layout_toRightOf="@id/iv_pay_icon"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/size24px"
             android:text="@string/my_change"
             />
 
@@ -98,8 +100,8 @@
         android:layout_below="@id/divider3"
         android:layout_marginLeft="@dimen/size45px"
         android:layout_marginRight="@dimen/size45px"
-        android:layout_marginTop="@dimen/size42px"
-        android:text="@string/input_change_pwd"
+        android:layout_marginTop="@dimen/size27px"
+        android:text="@string/input_pay_pwd"
         android:textColor="@color/text_grey"
         android:textSize="@dimen/font36px"
 

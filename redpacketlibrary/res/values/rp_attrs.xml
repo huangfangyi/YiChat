@@ -2,39 +2,73 @@
 <resources>
 
     <declare-styleable name="app">
-        <attr name="RPmytitle" format="string" />
-        <attr name="RPleftImage" format="reference" />
-        <attr name="RPrightImage" format="reference" />
-        <attr name="RPrightText" format="string" />
-        <attr name="RPrightTextColor" format="reference|color" />
-        <attr name="RPrightTextSize" format="dimension" />
-        <attr name="RPtitleTextColor" format="reference|color" />
-        <attr name="RPtitleTextSize" format="dimension" />
-        <attr name="RPtitleBackground" format="reference|color" />
+        <attr name="RPmytitle" format="string"/>
+        <attr name="RPleftImage" format="reference"/>
+        <attr name="RPrightImage" format="reference"/>
+        <attr name="RPrightText" format="string"/>
+        <attr name="RPrightTextColor" format="reference|color"/>
+        <attr name="RPrightTextSize" format="dimension"/>
+        <attr name="RPsubTitleText" format="string"/>
+        <attr name="RPsubTitleTextColor" format="reference|color"/>
+        <attr name="RPsubTitleTextSize" format="dimension"/>
+        <attr name="RPtitleTextColor" format="reference|color"/>
+        <attr name="RPtitleTextSize" format="dimension"/>
+        <attr name="RPtitleBackground" format="reference|color"/>
     </declare-styleable>
 
     <declare-styleable name="gridPasswordView">
 
-        <attr name="gpvTextColor" format="color|reference" />
-        <attr name="gpvTextSize" format="dimension" />
+        <attr name="gpvTextColor" format="color|reference"/>
+        <attr name="gpvTextSize" format="dimension"/>
 
-        <attr name="gpvLineColor" format="color" />
-        <attr name="gpvGridColor" format="color" />
-        <attr name="gpvLineWidth" format="dimension" />
+        <attr name="gpvLineColor" format="color"/>
+        <attr name="gpvGridColor" format="color"/>
+        <attr name="gpvLineWidth" format="dimension"/>
 
-        <attr name="gpvPasswordLength" format="integer" />
-        <attr name="gpvPasswordTransformation" format="string" />
+        <attr name="gpvPasswordLength" format="integer"/>
+        <attr name="gpvPasswordTransformation" format="string"/>
 
         <attr name="gpvPasswordType" format="enum">
-            <enum name="numberPassword" value="0" />
-            <enum name="textPassword" value="1" />
-            <enum name="textVisiblePassword" value="2" />
-            <enum name="textWebPassword" value="3" />
+            <enum name="numberPassword" value="0"/>
+            <enum name="textPassword" value="1"/>
+            <enum name="textVisiblePassword" value="2"/>
+            <enum name="textWebPassword" value="3"/>
         </attr>
 
     </declare-styleable>
 
-    <declare-styleable name="RecyclerView">
+    <!--CardView-->
+    <declare-styleable name="RPCardView">
+        <!-- Background color for CardView. -->
+        <attr name="RPcardBackgroundColor" format="color" />
+        <!-- Corner radius for CardView. -->
+        <attr name="RPcardCornerRadius" format="dimension" />
+        <!-- Elevation for CardView. -->
+        <attr name="RPcardElevation" format="dimension" />
+        <!-- Maximum Elevation for CardView. -->
+        <attr name="RPcardMaxElevation" format="dimension" />
+        <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+        <attr name="RPcardUseCompatPadding" format="boolean" />
+        <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+        <attr name="RPcardPreventCornerOverlap" format="boolean" />
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr name="RPcontentPadding" format="dimension" />
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr name="RPcontentPaddingLeft" format="dimension" />
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr name="RPcontentPaddingRight" format="dimension" />
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr name="RPcontentPaddingTop" format="dimension" />
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr name="RPcontentPaddingBottom" format="dimension" />
+        <!-- Workaround to read user defined minimum width -->
+        <attr name="android:minWidth"/>
+        <!-- Workaround to read user defined minimum height -->
+        <attr name="android:minHeight"/>
+    </declare-styleable>
+
+    <!--RecyclerView-->
+    <declare-styleable name="RPRecyclerView">
         <!-- Class name of the Layout Manager to be used.
         <p/>
         The class must extend android.support.v7.widget.RecyclerView$LayoutManager
@@ -44,7 +78,7 @@
          If the name starts with a '.', application package is prefixed.
          Else, if the name contains a '.', the classname is assumed to be a full class name.
          Else, the recycler view package name (android.support.v7.widget) is prefixed. -->
-        <attr name="layoutManager" format="string" />
+        <attr name="RPlayoutManager" format="string" />
 
         <!-- ============================= -->
         <!-- Attributes for Layout Manager -->
@@ -52,9 +86,8 @@
         <eat-comment />
 
         <attr name="android:orientation" />
-        <attr name="spanCount" format="integer" />
-        <attr name="reverseLayout" format="boolean" />
-        <attr name="stackFromEnd" format="boolean" />
+        <attr name="RPspanCount" format="integer" />
+        <attr name="RPreverseLayout" format="boolean" />
+        <attr name="RPstackFromEnd" format="boolean" />
     </declare-styleable>
-
 </resources>

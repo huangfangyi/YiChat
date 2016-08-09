@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@color/money_white"
-              android:orientation="vertical"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/money_white"
+    android:orientation="vertical">
 
-    <!--<View-->
-    <!--style="@style/DividerStyle"/>-->
-    <!---->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/size30px"
-        android:layout_marginTop="@dimen/size30px"
-        >
+        android:layout_marginTop="@dimen/size30px">
 
 
         <TextView
             android:id="@+id/tv_money_type"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/size45px"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/font45px"
-            />
+            android:textSize="@dimen/font45px" />
 
         <TextView
             android:id="@+id/tv_time"
@@ -34,8 +28,7 @@
             android:layout_marginLeft="@dimen/size45px"
             android:layout_marginTop="@dimen/size9px"
             android:textColor="@color/text_light_grey"
-            android:textSize="@dimen/font36px"
-            />
+            android:textSize="@dimen/font36px" />
 
         <TextView
             android:id="@+id/tv_dealer_name"
@@ -46,8 +39,7 @@
             android:layout_marginTop="@dimen/size9px"
             android:layout_toRightOf="@id/tv_time"
             android:textColor="@color/text_light_grey"
-            android:textSize="@dimen/font36px"
-            />
+            android:textSize="@dimen/font36px" />
 
         <TextView
             android:id="@+id/tv_item_money_amount"
@@ -57,8 +49,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/size45px"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/font45px"
-            />
+            android:textSize="@dimen/font45px" />
 
         <TextView
             android:id="@+id/tv_item_status"
@@ -70,9 +61,8 @@
             android:layout_marginRight="@dimen/size45px"
             android:layout_marginTop="@dimen/size9px"
             android:textColor="@color/text_light_grey"
-            android:textSize="@dimen/font36px"
-            />
+            android:textSize="@dimen/font36px" />
     </RelativeLayout>
 
-    <View style="@style/DividerStyle"/>
+    <View style="@style/DividerStyle" />
 </LinearLayout>

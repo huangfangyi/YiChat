@@ -5,7 +5,7 @@
                 android:background="@color/money_bg_color"
     >
 
-    <com.easemob.redpacketui.android.support.v7.widget.RecyclerView
+    <com.easemob.redpacketui.recyclerview.widget.RecyclerView
         android:id="@+id/record_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

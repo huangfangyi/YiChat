@@ -1,57 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/money_bg_color">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/money_bg_color"
+    >
 
-    <TextView
-        android:id="@+id/tv_change_tip"
+    <LinearLayout
+        android:id="@+id/change_top_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_bar"
-        android:layout_marginTop="@dimen/size144px"
-        android:gravity="center"
-        android:text="@string/str_my_change"
-        android:textColor="@color/text_light_grey"
-        android:textSize="@dimen/font42px" />
+        android:background="@color/top_red_color"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_change_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:text="@string/str_my_change"
+            android:textColor="@color/money_white"
+            android:textSize="@dimen/font42px"
+            />
+
+        <TextView
+            android:id="@+id/tv_change_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_change_tip"
+            android:layout_marginTop="@dimen/size15px"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="@color/money_white"
+            android:textSize="@dimen/font129px"
+            />
+
+        <View
+            style="@style/DividerStyle"
+            android:layout_marginTop="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size144px"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_change_recharge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/change_recharge"
+                android:textColor="@color/money_white"
+                android:textSize="@dimen/font51px"
+                />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_change_withdraw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/change_withdraw"
+                android:textColor="@color/money_white"
+                android:textSize="@dimen/font51px"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
 
     <TextView
-        android:id="@+id/tv_change_balance"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_change_tip"
-        android:layout_marginTop="@dimen/size36px"
-        android:gravity="center"
-        android:textColor="@color/text_black"
-        android:textSize="@dimen/font129px" />
+        android:id="@+id/tv_change_details"
+        style="@style/ChangeLeftTextViewStyle"
+        android:layout_below="@id/change_top_ll"
+        android:layout_marginTop="@dimen/size48px"
+        android:drawableLeft="@drawable/rp_change_details"
+        android:text="@string/change_detail"
+        />
 
-    <Button
-        android:id="@+id/btn_change_withdraw"
-        style="@style/SendMoneyButtonStyle"
-        android:layout_below="@id/tv_change_balance"
-        android:layout_marginTop="@dimen/size144px"
-        android:background="@drawable/rp_btn_blue_selector"
-        android:text="@string/change_withdraw" />
+    <View
+        android:id="@+id/view_line_one"
+        style="@style/DividerStyleNoHead"
+        android:layout_below="@id/tv_change_details"
+        />
+
+    <TextView
+        android:id="@+id/tv_my_bankcard"
+        style="@style/ChangeLeftTextViewStyle"
+        android:layout_below="@id/view_line_one"
+        android:drawableLeft="@drawable/rp_my_bankcard"
+        android:text="@string/my_bank_card"
+        />
+
+    <View
+        android:id="@+id/view_line_two"
+        style="@style/DividerStyleNoHead"
+        android:layout_below="@id/tv_my_bankcard"
+        />
+
+    <TextView
+        android:id="@+id/tv_my_red_packet_records"
+        style="@style/ChangeLeftTextViewStyle"
+        android:layout_below="@id/view_line_two"
+        android:layout_marginBottom="@dimen/size48px"
+        android:drawableLeft="@drawable/rp_red_packet_records"
+        android:text="@string/my_money_records"
+        />
 
     <RelativeLayout
+        android:id="@+id/layout_verify_identity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_change_withdraw"
-        android:layout_marginLeft="@dimen/size45px"
-        android:layout_marginRight="@dimen/size45px">
+        android:layout_height="@dimen/size141px"
+        android:layout_below="@id/tv_my_red_packet_records"
+        android:background="@color/background_white"
+        android:visibility="gone"
+        >
 
-        <Button
-            android:id="@+id/btn_change_password"
-            style="@style/ChangeButtonStyle"
-            android:text="@string/title_forget_pay_pwd" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size45px"
+            android:drawableLeft="@drawable/rp_user"
+            android:drawablePadding="@dimen/size30px"
+            android:gravity="center_vertical"
+            android:text="@string/verify_identity"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font48px"
+            />
 
-        <Button
-            android:id="@+id/btn_my_money_records"
-            style="@style/ChangeButtonStyle"
+        <TextView
+            android:id="@+id/tv_verify_identity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:gravity="right|center"
-            android:text="@string/my_money_records" />
+            android:layout_marginRight="@dimen/size45px"
+            android:drawableLeft="@drawable/rp_no_verify_identity"
+            android:drawablePadding="@dimen/size30px"
+            android:drawableRight="@drawable/rp_arrow_forward"
+            android:gravity="center_vertical"
+            android:text="@string/no_verify"
+            android:textColor="@color/text_light_grey"
+            android:textSize="@dimen/font48px"
+            />
     </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line_three"
+        style="@style/DividerStyleNoHead"
+        android:layout_below="@id/layout_verify_identity"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_forget_pay_pwd"
+        style="@style/ChangeLeftTextViewStyle"
+        android:layout_below="@id/view_line_three"
+        android:drawableLeft="@drawable/rp_forget_pwd"
+        android:text="@string/str_forget_pay_pwd"
+        />
+
+    <View
+        android:id="@+id/view_line_four"
+        style="@style/DividerStyleNoHead"
+        android:layout_below="@id/tv_forget_pay_pwd"
+        />
+
+    <TextView
+        android:id="@+id/tv_common_problem"
+        style="@style/ChangeLeftTextViewStyle"
+        android:layout_below="@id/view_line_four"
+        android:drawableLeft="@drawable/rp_question_black"
+        android:text="@string/title_common_problem"
+        />
 
     <TextView
         android:id="@+id/tv_powered_by"
@@ -62,22 +193,15 @@
         android:gravity="center"
         android:text="@string/insurance_agreement_hint"
         android:textColor="@color/text_light_grey"
-        android:textSize="@dimen/font33px" />
+        android:textSize="@dimen/font33px"
+        android:visibility="visible"
+        />
 
-    <TextView
-        android:id="@+id/tv_check_apps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/tv_powered_by"
-        android:layout_marginBottom="@dimen/size36px"
-        android:gravity="center"
-        android:text="@string/title_common_problem"
-        android:textColor="@color/button_blue"
-        android:textSize="@dimen/font39px" />
     <LinearLayout
         android:id="@+id/target_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        />
 </RelativeLayout>

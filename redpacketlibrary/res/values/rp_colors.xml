@@ -20,4 +20,21 @@
     <color name="button_blue">#35B7F3</color>
     <color name="text_unselected">@color/divider_color</color>
     <color name="half_transparent">#e0000000</color>
+    <color name="title_color">#D3D97A</color>
+    <color name="title_transparent_color">#90D3D97A</color>
+    <color name="top_red_color">#D24F44</color>
+    <color name="text_red_color">#F44336</color>
+    <color name="text_all_black">#000000</color>
+    <color name="text_transparent_black">#90000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <!--CardView-->
+    <!-- Background color for light CardView. -->
+    <color name="rp_cardview_light_background">#FFFFFFFF</color>
+    <!-- Background color for dark CardView. -->
+    <color name="rp_cardview_dark_background">#FF424242</color>
+    <!-- Shadow color for the first pixels around CardView. -->
+    <color name="rp_cardview_shadow_start_color">#37000000</color>
+    <!-- Shadow color for the furthest pixels around CardView. -->
+    <color name="rp_cardview_shadow_end_color">#03000000</color>
 </resources>

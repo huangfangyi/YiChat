@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:yzh="http://schemas.android.com/apk/res-auto"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/money_bg_color"
@@ -10,10 +10,9 @@
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        yzh:RPleftImage="@drawable/rp_title_back"
-        yzh:RPmytitle="@string/money_record_title"
-        yzh:RPrightText="@string/my_money"
-        yzh:RPtitleBackground="@color/money_red_light"
+        app:RPleftImage="@drawable/rp_back_arrow_yellow"
+        app:RPmytitle="@string/money_record_title"
+        app:RPrightText="@string/my_money"
         />
 
     <FrameLayout
@@ -22,10 +21,12 @@
         android:layout_height="match_parent"
         android:layout_below="@id/title_bar"
         />
+
     <ProgressBar
         android:id="@+id/progressBar1"
         style="@style/LoadingProgressStyle"
+        android:layout_centerInParent="true"
         android:visibility="gone"
-        android:layout_centerInParent="true" />
+        />
 
 </RelativeLayout>
