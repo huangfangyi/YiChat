@@ -11,9 +11,12 @@ import com.easemob.redpacketsdk.RedPacket;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.service.ContactsService;
+import com.fanxin.app.main.service.GroupService;
 import com.fanxin.app.ui.*;
 import com.hyphenate.chat.EMClient;
 import com.fanxin.app.R;
+
+import java.security.acl.Group;
 
 /**
  * 开屏页
@@ -58,8 +61,11 @@ public class SplashActivity extends   BaseActivity {
 						}
 					}
 					startService(new Intent(SplashActivity.this, ContactsService.class));
+					startService(new Intent(SplashActivity.this, GroupService.class));
 					//enter main screen
 					startActivity(new Intent(SplashActivity.this, MainActivity.class));
+					//获取下群组信息
+ 					startService(new Intent(SplashActivity.this, GroupService.class));
 					finish();
 				}else {
 					try {

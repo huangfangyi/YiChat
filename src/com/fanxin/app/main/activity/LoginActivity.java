@@ -177,18 +177,15 @@ public class LoginActivity extends BaseActivity {
                 // ** manually load all local groups and conversation
                 EMClient.getInstance().groupManager().loadAllGroups();
                 EMClient.getInstance().chatManager().loadAllConversations();
-
                 // uprogressDialogate current user's display name for APNs
                 boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
                         nick);
                 if (!updatenick) {
                     Log.e("LoginActivity", "update current user nick fail");
                 }
-
                 // get user's info (this should be get from App's server or 3rd party service)
                 // DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
                 DemoApplication.getInstance().setUserJson(jsonObject);
-
                 // enter main activity
                 Intent intent = new Intent(LoginActivity.this,
                         MainActivity.class);
