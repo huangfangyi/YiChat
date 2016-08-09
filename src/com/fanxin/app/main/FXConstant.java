@@ -28,7 +28,7 @@ public class FXConstant {
     public static final String URL_SOCIAL_DELETE_COMMENT = HOST + "social_comment_delete.php";
     public static final String URL_SOCIAL_DELETE = HOST + "social_delete.php";
     public static final String URL_SOCIAL_FRIEND = HOST + "social_friend.php";
-
+    public static final String URL_GROUP_MEMBERS = HOST + "groupMembers.php";
 
     public static final String JSON_KEY_NICK ="nick";
     public static final String JSON_KEY_HXID ="hxid";
