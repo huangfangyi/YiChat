@@ -167,8 +167,9 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                     }
                 }).start();
                 //获取群成员信息
-                getGroupMembersInServer(group.getGroupId());
+
             }
+            getGroupMembersInServer(group.getGroupId());
             tvName.setText("群聊("+group.getAffiliationsCount()+")");
 
         }
