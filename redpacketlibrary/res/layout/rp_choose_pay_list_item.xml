@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/item_divider"
+        style="@style/DividerStyleNoHead"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_pay_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size144px"
+        >
+
+        <ImageView
+            android:id="@+id/iv_pay_icon"
+            style="@style/PayTypeIconStyle"
+            android:src="@drawable/rp_jd_icon"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/size24px"
+            android:layout_marginTop="@dimen/size36px"
+            android:layout_toRightOf="@id/iv_pay_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_pay_type"
+                style="@style/DialogPayTypeStyle"
+                android:text="@string/jd_pay"
+                />
+
+            <TextView
+                android:id="@+id/tv_pay_type_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="@string/choose_pay_no_limit"
+                android:textColor="@color/text_unselected"
+                android:textSize="@dimen/font33px"
+                />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_arrow_icon"
+            style="@style/DialogPayTypeRightArrow"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

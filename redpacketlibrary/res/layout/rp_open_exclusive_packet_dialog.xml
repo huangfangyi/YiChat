@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialogWidth"
+    android:layout_height="@dimen/dialogHeight"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_open_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/rp_open_packet_bg" />
+
+    <RelativeLayout
+        android:id="@+id/layout_exclusive_closed"
+        android:layout_width="@dimen/size114px"
+        android:layout_height="@dimen/size114px"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rp_closed_yellow_icon"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_exclusive_closed"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/size63px"
+        android:src="@drawable/rp_exclusive_avatar" />
+    <!--偷窥红包者用-->
+    <TextView
+        android:id="@+id/tv_exclusive_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_avatar"
+        android:layout_marginLeft="@dimen/size60px"
+        android:layout_marginRight="@dimen/size60px"
+        android:layout_marginTop="@dimen/size60px"
+        android:gravity="center"
+        android:maxLength="22"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/font69px"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/layout_exclusive_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_avatar"
+        android:layout_marginTop="@dimen/size75px"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size81px"
+            android:background="@drawable/rp_exclusive_sender_avatar_bg">
+
+            <ImageView
+                android:id="@+id/iv_receive_avatar"
+                android:layout_width="@dimen/size186px"
+                android:layout_height="@dimen/size186px"
+                android:layout_gravity="center"
+                android:src="@drawable/rp_avatar" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/size81px"
+            android:background="@drawable/rp_exclusive_sender_avatar_bg">
+
+            <ImageView
+                android:id="@+id/iv_send_avatar"
+                android:layout_width="@dimen/size186px"
+                android:layout_height="@dimen/size186px"
+                android:layout_gravity="center"
+                android:src="@drawable/rp_avatar" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_exclusive_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_exclusive_avatar"
+        android:layout_marginTop="@dimen/size30px"
+        android:layout_marginLeft="@dimen/size60px"
+        android:layout_marginRight="@dimen/size60px"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="野原美伢"
+        android:textColor="@color/money_white"
+        android:textSize="@dimen/font42px"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_exclusive_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_exclusive_username"
+        android:layout_marginLeft="@dimen/size60px"
+        android:layout_marginRight="@dimen/size60px"
+        android:layout_marginTop="@dimen/size9px"
+        android:gravity="center|top"
+        android:lines="2"
+        android:ellipsize="end"
+        android:text="@string/send_you_money"
+        android:textColor="@color/money_white"
+        android:textSize="@dimen/font45px"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_exclusive_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_exclusive_open_money"
+        android:layout_marginBottom="@dimen/size120px"
+        android:layout_marginLeft="@dimen/size81px"
+        android:layout_marginRight="@dimen/size81px"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="￥8.00"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/font129px"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_exclusive_open_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size129px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size84px"
+        android:layout_marginLeft="@dimen/size225px"
+        android:layout_marginRight="@dimen/size225px"
+        android:background="@drawable/rp_btn_open_selector_unsolid"
+        android:text="@string/btn_text_open_money"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/font54px" />
+
+
+    <LinearLayout
+        android:id="@+id/target_layout"
+        android:layout_width="@dimen/size180px"
+        android:layout_height="@dimen/size180px"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" />
+</RelativeLayout>

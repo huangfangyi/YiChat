@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/detail_loading_target"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/money_bg_color"
+                android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bankcard_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size48px"
+        android:scrollbars="vertical"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/money_bg_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size141px"
+            android:src="@drawable/rp_no_bankcard"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size36px"
+            android:text="@string/your_no_bankcard"
+            android:textColor="@color/text_light_grey"
+            android:textSize="@dimen/font48px"
+            />
+
+        <Button
+            android:id="@+id/btn_add_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size132px"
+            android:layout_marginLeft="@dimen/size45px"
+            android:layout_marginRight="@dimen/size45px"
+            android:layout_marginTop="@dimen/size141px"
+            android:background="@drawable/rp_btn_white_selector"
+            android:text="添加一张银行卡"
+            android:textColor="@color/text_black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/target_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        />
+</RelativeLayout>
