@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -85,12 +86,14 @@ public class GroupService extends Service{
         OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
-                if(jsonObject.containsKey("code")&&jsonObject.get("code") instanceof Integer){
-                    int code = jsonObject.getIntValue("code");
+
+                if(jsonObject.containsKey("code")){
+                    int code =Integer.parseInt(jsonObject.getString("code")) ;
                     if (code == 1000) {
                         if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
-                            JSONArray jsonArray = jsonObject.getJSONArray("data");
-                            ACache.get(getApplicationContext()).put(groupId,jsonArray);
+                             JSONArray jsonArray = jsonObject.getJSONArray("data");
+                              ACache.get(getApplicationContext()).put(groupId,jsonArray);
+
                         }
                     }
 

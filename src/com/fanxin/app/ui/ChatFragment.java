@@ -356,7 +356,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             startVideoCall();
             break;
         case ITEM_RED_PACKET:
-            RedPacketUtil.startRedPacketActivityForResult(this, chatType, toChatUsername, REQUEST_CODE_SEND_MONEY);
+            JSONArray jsonArray=null;
+            if(chatType==EaseConstant.CHATTYPE_GROUP){
+                jsonArray=ACache.get(getActivity()).getAsJSONArray(toChatUsername);
+            }
+            RedPacketUtil.startRedPacketActivityForResult(this, chatType, toChatUsername, REQUEST_CODE_SEND_MONEY,jsonArray);
             break;
         default:
             break;
@@ -467,12 +471,13 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
-                if(jsonObject.containsKey("code")&&jsonObject.get("code") instanceof Integer){
-                    int code = jsonObject.getIntValue("code");
+                if(jsonObject.containsKey("code")){
+                    int code =Integer.parseInt(jsonObject.getString("code")) ;
                     if (code == 1000) {
                         if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
                             JSONArray jsonArray = jsonObject.getJSONArray("data");
                             ACache.get(getActivity()).put(groupId,jsonArray);
+
                         }
                     }
 

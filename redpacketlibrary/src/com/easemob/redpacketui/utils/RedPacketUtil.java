@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketsdk.bean.RPUserBean;
 import com.easemob.redpacketsdk.bean.RedPacketInfo;
 import com.easemob.redpacketsdk.bean.TokenData;
@@ -48,7 +50,7 @@ public class RedPacketUtil {
      * @param toChatUsername
      * @param requestCode
      */
-    public static void startRedPacketActivityForResult(Fragment fragment, int chatType, final String toChatUsername, int requestCode) {
+    public static void startRedPacketActivityForResult(Fragment fragment, int chatType, final String toChatUsername, int requestCode, final JSONArray membersJA) {
         //发送者头像url
         String fromAvatarUrl = "none";
         //发送者昵称 设置了昵称就传昵称 否则传id
@@ -80,26 +82,51 @@ public class RedPacketUtil {
             RPGroupMemberUtil.getInstance().setGroupMemberListener(new NotifyGroupMemberCallback() {
                 @Override
                 public void getGroupMember(final String groupID, final GroupMemberCallback mCallBack) {
-                    EMGroup group = EMClient.getInstance().groupManager().getGroup(groupID);
-                    List<String> members = group.getMembers();
+
                     List<RPUserBean> userBeanList = new ArrayList<RPUserBean>();
-                    EaseUser user;
-                    for (int i = 0; i < members.size(); i++) {
-                        RPUserBean userBean = new RPUserBean();
-                        userBean.userId = members.get(i);
-                        if (userBean.userId.equals(EMClient.getInstance().getCurrentUser())) {
-                            continue;
+                    if (membersJA != null && membersJA.size() != 0) {
+
+                        for (int i = 0; i < membersJA.size(); i++) {
+                            JSONObject userJson = membersJA.getJSONObject(i);
+                            RPUserBean userBean = new RPUserBean();
+                            userBean.userId = userJson.getString("hxid");
+                            if (userBean.userId.equals(EMClient.getInstance().getCurrentUser())) {
+                                continue;
+                            }
+
+                            if (userJson != null) {
+                                userBean.userAvatar = TextUtils.isEmpty(userJson.getString("avatar")) ? "none" : EaseConstant.URL_AVATAR + userJson.getString("avatar");
+                                userBean.userNickname = TextUtils.isEmpty(userJson.getString("nick")) ? userBean.userId : userJson.getString("nick");
+                            } else {
+                                userBean.userNickname = userBean.userId;
+                                userBean.userAvatar = "none";
+                            }
+                            userBeanList.add(userBean);
                         }
-                        user = EaseUserUtils.getUserInfo(userBean.userId);
-                        if (user != null) {
-                            userBean.userAvatar = TextUtils.isEmpty(user.getAvatar()) ? "none" : user.getAvatar();
-                            userBean.userNickname = TextUtils.isEmpty(user.getNick()) ? user.getUsername() : user.getNick();
-                        } else {
-                            userBean.userNickname = userBean.userId;
-                            userBean.userAvatar = "none";
+                    } else {
+                        EMGroup group = EMClient.getInstance().groupManager().getGroup(groupID);
+                        List<String> members = group.getMembers();
+                        EaseUser user;
+                        for (int i = 0; i < members.size(); i++) {
+                            RPUserBean userBean = new RPUserBean();
+                            userBean.userId = members.get(i);
+                            if (userBean.userId.equals(EMClient.getInstance().getCurrentUser())) {
+                                continue;
+                            }
+                            user = EaseUserUtils.getUserInfo(userBean.userId);
+                            if (user != null) {
+                                userBean.userAvatar = TextUtils.isEmpty(user.getAvatar()) ? "none" : user.getAvatar();
+                                userBean.userNickname = TextUtils.isEmpty(user.getNick()) ? user.getUsername() : user.getNick();
+                            } else {
+                                userBean.userNickname = userBean.userId;
+                                userBean.userAvatar = "none";
+                            }
+                            userBeanList.add(userBean);
                         }
-                        userBeanList.add(userBean);
+
                     }
+
+
                     mCallBack.setGroupMember(userBeanList);
                 }
             });
