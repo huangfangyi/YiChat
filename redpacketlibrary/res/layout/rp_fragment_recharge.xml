@@ -38,7 +38,6 @@
             android:layout_toLeftOf="@id/tv_money_unit"
             android:layout_toRightOf="@id/tv_recharge_amount"
             android:gravity="center_vertical|right"
-            android:hint="@string/single_limit"
             android:inputType="numberDecimal"
             android:maxLength="6"
             />

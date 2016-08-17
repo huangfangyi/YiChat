@@ -5,13 +5,14 @@
                 android:layout_height="match_parent"
                 android:background="@color/money_bg_color"
                 android:orientation="vertical"
+                android:paddingTop="@dimen/size48px"
     >
 
     <com.easemob.redpacketui.recyclerview.widget.RecyclerView
         android:id="@+id/bankcard_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/size48px"
+        android:overScrollMode="never"
         android:scrollbars="vertical"
         />
 

@@ -32,7 +32,7 @@
             android:layout_below="@id/tv_change_tip"
             android:layout_marginTop="@dimen/size15px"
             android:gravity="center"
-            android:text="￥0.00"
+            android:text="￥-.--"
             android:textColor="@color/money_white"
             android:textSize="@dimen/font129px"
             />

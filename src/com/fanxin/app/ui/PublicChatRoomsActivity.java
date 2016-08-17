@@ -17,6 +17,7 @@ package com.fanxin.app.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fanxin.app.main.activity.ChatActivity;
 import com.hyphenate.EMChatRoomChangeListener;
 import com.hyphenate.chat.EMChatRoom;
 import com.hyphenate.chat.EMClient;

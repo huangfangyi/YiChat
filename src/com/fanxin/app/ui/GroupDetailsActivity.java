@@ -16,6 +16,7 @@ package com.fanxin.app.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fanxin.app.main.activity.ChatActivity;
 import com.fanxin.easeui.utils.EaseUserUtils;
 import com.fanxin.easeui.widget.EaseSwitchButton;
 import com.hyphenate.EMGroupChangeListener;

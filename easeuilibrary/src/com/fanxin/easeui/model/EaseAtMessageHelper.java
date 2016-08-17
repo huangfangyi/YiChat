@@ -1,16 +1,23 @@
 package com.fanxin.easeui.model;
 
 import android.text.TextUtils;
+
+import com.fanxin.easeui.controller.EaseUI;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMMessage.ChatType;
 import com.fanxin.easeui.EaseConstant;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.utils.EaseUserUtils;
+import com.hyphenate.easeui.R;
+
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 
 public class EaseAtMessageHelper {
     private List<String> toAtUserList = new ArrayList<String>();
@@ -22,15 +29,15 @@ public class EaseAtMessageHelper {
         }
         return instance;
     }
-    
-    
+
+
     private EaseAtMessageHelper(){
         atMeGroupList = EasePreferenceManager.getInstance().getAtMeGroups();
         if(atMeGroupList == null)
             atMeGroupList = new HashSet<String>();
-        
+
     }
-    
+
     /**
      * add user you want to @
      * @param username
@@ -41,9 +48,9 @@ public class EaseAtMessageHelper {
                 toAtUserList.add(username);
             }
         }
-        
+
     }
-    
+
     /**
      * check if be mentioned(@) in the content
      * @param content
@@ -66,13 +73,21 @@ public class EaseAtMessageHelper {
         }
         return false;
     }
-    
+
+    public boolean containsAtAll(String content){
+        String atAll = "@" + EaseUI.getInstance().getContext().getString(R.string.all_members);
+        if(content.contains(atAll)){
+            return true;
+        }
+        return false;
+    }
+
     /**
-     * get the users be mentioned(@) 
+     * get the users be mentioned(@)
      * @param content
      * @return
      */
-    public List<String> getAtMessageUsername(String content){
+    public List<String> getAtMessageUsernames(String content){
         if(TextUtils.isEmpty(content)){
             return null;
         }
@@ -93,7 +108,7 @@ public class EaseAtMessageHelper {
             return list;
         }
     }
-    
+
     /**
      * parse the message, get and save group id if I was mentioned(@)
      * @param messages
@@ -104,10 +119,10 @@ public class EaseAtMessageHelper {
         for(EMMessage msg : msgs){
             if(msg.getChatType() == ChatType.GroupChat){
                 String groupId = msg.getTo();
-                String usernameStr = msg.getStringAttribute(EaseConstant.MESSAGE_ATTR_AT_MSG, null);
-                if(usernameStr != null){
-                    String[] usernames = usernameStr.split(",");
-                    for(String username : usernames){
+                try {
+                    JSONArray jsonArray = msg.getJSONArrayAttribute(EaseConstant.MESSAGE_ATTR_AT_MSG);
+                    for(int i = 0; i < jsonArray.length(); i++){
+                        String username = jsonArray.getString(i);
                         if(EMClient.getInstance().getCurrentUser().equals(username)){
                             if(!atMeGroupList.contains(groupId)){
                                 atMeGroupList.add(groupId);
@@ -115,14 +130,25 @@ public class EaseAtMessageHelper {
                             }
                         }
                     }
-                    if(atMeGroupList.size() != size){
-                        EasePreferenceManager.getInstance().setAtMeGroups(atMeGroupList);
+                } catch (Exception e1) {
+                    //Determine whether is @ all message
+                    String usernameStr = msg.getStringAttribute(EaseConstant.MESSAGE_ATTR_AT_MSG, null);
+                    if(usernameStr != null){
+                        if(usernameStr.toUpperCase().equals(EaseConstant.MESSAGE_ATTR_VALUE_AT_MSG_ALL)){
+                            if(!atMeGroupList.contains(groupId)){
+                                atMeGroupList.add(groupId);
+                            }
+                        }
                     }
+                }
+
+                if(atMeGroupList.size() != size){
+                    EasePreferenceManager.getInstance().setAtMeGroups(atMeGroupList);
                 }
             }
         }
     }
-    
+
     /**
      * get groups which I was mentioned
      * @return
@@ -130,7 +156,7 @@ public class EaseAtMessageHelper {
     public Set<String> getAtMeGroups(){
         return atMeGroupList;
     }
-    
+
     /**
      * remove group from the list
      * @param groupId
@@ -141,7 +167,7 @@ public class EaseAtMessageHelper {
             EasePreferenceManager.getInstance().setAtMeGroups(atMeGroupList);
         }
     }
-    
+
     /**
      * check if the input groupId in atMeGroupList
      * @param groupId
@@ -150,34 +176,48 @@ public class EaseAtMessageHelper {
     public boolean hasAtMeMsg(String groupId){
         return atMeGroupList.contains(groupId);
     }
-    
+
     public boolean isAtMeMsg(EMMessage message){
         EaseUser user = EaseUserUtils.getUserInfo(message.getFrom());
         if(user != null){
-            String atUsername = message.getStringAttribute(EaseConstant.MESSAGE_ATTR_AT_MSG, null);
-            if(atUsername != null){
-                String[] atUsernames = atUsername.split(",");
-                for(String username : atUsernames){
+            try {
+                JSONArray jsonArray = message.getJSONArrayAttribute(EaseConstant.MESSAGE_ATTR_AT_MSG);
+
+                for(int i = 0; i < jsonArray.length(); i++){
+                    String username = jsonArray.getString(i);
                     if(username.equals(EMClient.getInstance().getCurrentUser())){
                         return true;
                     }
                 }
+            } catch (Exception e) {
+                //perhaps is a @ all message
+                String atUsername = message.getStringAttribute(EaseConstant.MESSAGE_ATTR_AT_MSG, null);
+                if(atUsername != null){
+                    if(atUsername.toUpperCase().equals(EaseConstant.MESSAGE_ATTR_VALUE_AT_MSG_ALL)){
+                        return true;
+                    }
+                }
+                return  false;
             }
-            
+
         }
         return false;
     }
-    
-    public String atListToString(List<String> atList){
-        StringBuffer sb = new StringBuffer();
+
+    public JSONArray atListToJsonArray(List<String> atList){
+        JSONArray jArray = new JSONArray();
         int size = atList.size();
         for(int i = 0; i < size; i++){
             String username = atList.get(i);
-            sb.append(username);
-            if(i != size-1){
-                sb.append(",");
-            }
+            jArray.put(username);
         }
-        return sb.toString();
+        return jArray;
+    }
+
+    public void cleanToAtUserList(){
+        synchronized (toAtUserList){
+            toAtUserList.clear();
+        }
     }
 }
+

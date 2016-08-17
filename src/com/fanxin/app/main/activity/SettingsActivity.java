@@ -329,9 +329,9 @@ public class SettingsActivity extends BaseActivity  implements View.OnClickListe
                   runOnUiThread(new Runnable() {
                     public void run() {
                         pd.dismiss();
-                        // show login screen
-
+                        // show login scree
                         DemoApplication.getInstance().setUserJson(null);
+                        DemoApplication.getInstance().finishActivities();
                         startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
                         finish();
                     }

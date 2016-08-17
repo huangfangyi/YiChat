@@ -6,8 +6,7 @@ import android.view.animation.AlphaAnimation;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.easemob.redpacketsdk.RPCallback;
-import com.easemob.redpacketsdk.RedPacket;
+
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.service.ContactsService;

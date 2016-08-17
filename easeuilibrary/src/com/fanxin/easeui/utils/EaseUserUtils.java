@@ -123,10 +123,6 @@ public class EaseUserUtils {
     public static void setUserNick(String username, TextView textView, EMMessage msg) {
         if (textView != null) {
             EaseUser user = getUserInfo(username);
-            if (user != null && user.getNick() != null) {
-                textView.setText(user.getNick());
-            } else {
-
                 try {
                     String userInfo = msg.getStringAttribute("userInfo");
                     JSONObject jsonObject = JSONObject.parseObject(userInfo);
@@ -134,14 +130,20 @@ public class EaseUserUtils {
                     textView.setText(nick);
                 } catch (HyphenateException e) {
                     textView.setText(username);
+                    if (user != null && user.getNick() != null) {
+                        textView.setText(user.getNick());
+                    }
                     e.printStackTrace();
                 } catch (JSONException e) {
 
                     textView.setText(username);
+                    if (user != null && user.getNick() != null) {
+                        textView.setText(user.getNick());
+                    }
                     e.printStackTrace();
                 }
 
-            }
+
         }
     }
 

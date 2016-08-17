@@ -17,6 +17,7 @@ import java.util.List;
 
 import com.fanxin.app.Constant;
 import com.fanxin.app.adapter.GroupAdapter;
+import com.fanxin.app.main.activity.ChatActivity;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.fanxin.app.R;

@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
@@ -50,14 +51,14 @@ public class RedPacketUtil {
      * @param toChatUsername
      * @param requestCode
      */
-    public static void startRedPacketActivityForResult(Fragment fragment, int chatType, final String toChatUsername, int requestCode, final JSONArray membersJA) {
+    public static void startRedPacketActivityForResult(FragmentActivity fragment, int chatType, final String toChatUsername, int requestCode, final JSONArray membersJA) {
         //发送者头像url
         String fromAvatarUrl = "none";
         //发送者昵称 设置了昵称就传昵称 否则传id
         String fromNickname = EMClient.getInstance().getCurrentUser();
         EaseUser easeUser = EaseUserUtils.getUserInfo(fromNickname);
         if (easeUser != null) {
-            fromAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : easeUser.getAvatar();
+            fromAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : EaseConstant.URL_AVATAR+easeUser.getAvatar();
             fromNickname = TextUtils.isEmpty(easeUser.getNick()) ? easeUser.getUsername() : easeUser.getNick();
         }
         RedPacketInfo redPacketInfo = new RedPacketInfo();
@@ -135,7 +136,7 @@ public class RedPacketUtil {
             redPacketInfo.groupMemberCount = group.getAffiliationsCount();
             redPacketInfo.chatType = RPConstant.CHATTYPE_GROUP;
         }
-        Intent intent = new Intent(fragment.getContext(), RPRedPacketActivity.class);
+        Intent intent = new Intent(fragment, RPRedPacketActivity.class);
         intent.putExtra(RPConstant.EXTRA_RED_PACKET_INFO, redPacketInfo);
         intent.putExtra(RPConstant.EXTRA_TOKEN_DATA, getTokenData());
         fragment.startActivityForResult(intent, requestCode);
@@ -171,6 +172,8 @@ public class RedPacketUtil {
         message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, moneyID);
         message.setAttribute(RedPacketConstant.MESSAGE_ATTR_RED_PACKET_TYPE, redPacketType);
         message.setAttribute(RedPacketConstant.MESSAGE_ATTR_SPECIAL_RECEIVER_ID, specialReceiveId);
+        message.setAttribute("cardData", data.getStringExtra("cardData"));
+
         return message;
     }
 
@@ -201,7 +204,7 @@ public class RedPacketUtil {
         }
         EaseUser easeUser = EaseUserUtils.getUserInfo(EMClient.getInstance().getCurrentUser());
         if (easeUser != null) {
-            toAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : easeUser.getAvatar();
+            toAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : EaseConstant.URL_AVATAR+easeUser.getAvatar();
             toNickname = TextUtils.isEmpty(easeUser.getNick()) ? easeUser.getUsername() : easeUser.getNick();
         }
         String specialAvatarUrl = "none";
@@ -219,7 +222,7 @@ public class RedPacketUtil {
             }
         }
         RedPacketInfo redPacketInfo = new RedPacketInfo();
-        redPacketInfo.moneyID = moneyId;
+        redPacketInfo.redPacketId = moneyId;
         redPacketInfo.toAvatarUrl = toAvatarUrl;
         redPacketInfo.toNickName = toNickname;
         redPacketInfo.moneyMsgDirect = messageDirect;
@@ -294,7 +297,7 @@ public class RedPacketUtil {
         String fromAvatarUrl = "none";
         EaseUser easeUser = EaseUserUtils.getUserInfo(fromNickname);
         if (easeUser != null) {
-            fromAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : easeUser.getAvatar();
+            fromAvatarUrl = TextUtils.isEmpty(easeUser.getAvatar()) ? "none" : EaseConstant.URL_AVATAR+easeUser.getAvatar();
             fromNickname = TextUtils.isEmpty(easeUser.getNick()) ? easeUser.getUsername() : easeUser.getNick();
         }
         RedPacketInfo redPacketInfo = new RedPacketInfo();
@@ -310,6 +313,13 @@ public class RedPacketUtil {
      * 使用cmd消息发送领到红包之后的回执消息
      */
     private static void sendRedPacketAckMessage(final EMMessage message, final String senderId, final String senderNickname, String receiverId, final String receiverNickname, final EMCallBack callBack) {
+        Log.d("ack_redpacket-->","44444");
+        Log.d("senderId-->",senderId);
+        Log.d("senderNickname-->",senderNickname);
+        Log.d("receiverId-->",senderId);
+        Log.d("senderId-->",senderId);
+
+
         //创建透传消息
         final EMMessage cmdMsg = EMMessage.createSendMessage(EMMessage.Type.CMD);
         cmdMsg.setChatType(EMMessage.ChatType.Chat);
@@ -360,6 +370,7 @@ public class RedPacketUtil {
      * 使用cmd消息收取领到红包之后的回执消息
      */
     public static void receiveRedPacketAckMessage(EMMessage message) {
+        Log.d("ack_redpacket-->","33333");
         String senderNickname = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_SENDER_NAME, "");
         String receiverNickname = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_NAME, "");
         String senderId = message.getStringAttribute(RedPacketConstant.EXTRA_RED_PACKET_SENDER_ID, "");

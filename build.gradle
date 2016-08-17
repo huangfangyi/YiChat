@@ -57,7 +57,7 @@ android {
 dependencies {
     compile project(':redpacketlibrary')
     compile project(':library')
-
+    compile 'com.tencent.bugly:crashreport:2.2.0' //其
     //ucloud相关
     compile project(':ulive-android-sdk')
     compile 'com.jakewharton:butterknife:7.0.1'

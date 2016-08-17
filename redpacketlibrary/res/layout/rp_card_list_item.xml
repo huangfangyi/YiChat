@@ -6,14 +6,14 @@
               android:orientation="vertical"
     >
 
-    <com.easemob.redpacketui.cardview.CardView
-        android:id="@+id/cardView"
+    <com.easemob.redpacketui.widget.RPRoundCard
+        android:id="@+id/roundCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/size36px"
         android:layout_marginLeft="@dimen/size30px"
         android:layout_marginRight="@dimen/size30px"
-        app:RPcardCornerRadius="@dimen/size15px"
+        app:RPCardRadius="@dimen/size15px"
         >
 
         <RelativeLayout
@@ -76,7 +76,7 @@
                 android:textSize="@dimen/font90px"
                 />
         </RelativeLayout>
-    </com.easemob.redpacketui.cardview.CardView>
+    </com.easemob.redpacketui.widget.RPRoundCard>
 
     <LinearLayout
         android:id="@+id/layout_remove_card"

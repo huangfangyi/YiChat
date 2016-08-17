@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,11 +16,9 @@ import android.widget.Toast;
 import com.fanxin.app.R;
 import com.fanxin.app.main.adapter.GroupsAdapter;
 import com.fanxin.app.ui.BaseActivity;
-import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.easeui.EaseConstant;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chat.EMMessage;
 import com.hyphenate.exceptions.HyphenateException;
 
 

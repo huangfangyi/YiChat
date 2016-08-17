@@ -15,6 +15,7 @@
         <RelativeLayout
             android:id="@+id/layout_members"
             style="@style/SendMoneyRLayoutStyle"
+            android:visibility="gone"
             >
 
             <TextView

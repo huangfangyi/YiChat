@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.easemob.redpacketsdk.RPCallback;
-import com.easemob.redpacketsdk.RedPacket;
+
+ 
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;

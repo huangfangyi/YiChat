@@ -21,6 +21,7 @@ import java.util.Map;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.db.UserDao;
 import com.fanxin.app.domain.RobotUser;
+import com.fanxin.app.main.activity.ChatActivity;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMContact;

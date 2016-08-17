@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/money_bg_color"
+                android:orientation="vertical"
+    >
 
     <com.easemob.redpacketui.widget.RPTitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:RPleftImage="@drawable/rp_back_arrow_yellow"
-        app:RPmytitle="@string/tv_who_can_receive" />
+        app:RPmytitle="@string/tv_who_can_receive"
+        />
 
     <RelativeLayout
         android:id="@+id/layout_group_member_head"
@@ -19,7 +22,8 @@
         android:layout_below="@id/title_bar"
         android:background="@color/background_white"
         android:paddingLeft="@dimen/size45px"
-        android:visibility="gone">
+        android:visibility="gone"
+        >
 
 
         <ImageView
@@ -27,7 +31,8 @@
             android:layout_width="@dimen/size96px"
             android:layout_height="@dimen/size96px"
             android:layout_centerVertical="true"
-            android:src="@drawable/rp_group_everyone" />
+            android:src="@drawable/rp_group_everyone"
+            />
 
         <TextView
             android:id="@+id/head_item_name"
@@ -38,7 +43,8 @@
             android:layout_toRightOf="@id/head_item_image"
             android:text="@string/tv_all_person"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/font48px" />
+            android:textSize="@dimen/font48px"
+            />
 
     </RelativeLayout>
 
@@ -46,13 +52,15 @@
         android:id="@+id/layout_group_member"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/title_bar">
+        android:layout_below="@id/title_bar"
+        >
 
         <com.easemob.redpacketui.recyclerview.widget.RecyclerView
             android:id="@+id/contact_member"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            />
 
         <TextView
             android:id="@+id/contact_dialog"
@@ -63,14 +71,16 @@
             android:gravity="center"
             android:textColor="@color/money_white"
             android:textSize="@dimen/font90px"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            />
 
         <com.easemob.redpacketui.widget.RPSideBar
             android:id="@+id/contact_sidebar"
             android:layout_width="@dimen/size45px"
             android:layout_height="match_parent"
             android:layout_gravity="right|center"
-            android:layout_marginRight="@dimen/size9px" />
+            android:layout_marginRight="@dimen/size9px"
+            />
     </FrameLayout>
 
     <LinearLayout
@@ -78,11 +88,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/layout_group_member_head"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        />
 
     <ProgressBar
         android:id="@+id/group_progressBar"
         style="@style/LoadingProgressStyle"
         android:layout_centerInParent="true"
-        android:visibility="gone" />
+        android:visibility="gone"
+        />
 </RelativeLayout>

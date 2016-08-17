@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketui.RedPacketConstant;
@@ -29,17 +28,14 @@ import com.hyphenate.EMGroupChangeListener;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMCmdMessageBody;
-import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMMessage.ChatType;
-import com.hyphenate.chat.EMMessage.Status;
 import com.hyphenate.chat.EMMessage.Type;
 import com.hyphenate.chat.EMOptions;
-import com.hyphenate.chat.EMTextMessageBody;
 import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.domain.EmojiconExampleGroupData;
 import com.fanxin.app.domain.RobotUser;
-import com.fanxin.app.ui.ChatActivity;
+import com.fanxin.app.main.activity.ChatActivity;
 import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.ui.VideoCallActivity;
 import com.fanxin.app.utils.PreferenceManager;
@@ -726,6 +722,7 @@ public class DemoHelper {
                         if (action.equals(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION)) {
                             RedPacketUtil.receiveRedPacketAckMessage(message);
                             broadcastManager.sendBroadcast(new Intent(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION));
+                            Log.d("ack_redpacket-->","11111");
                         }
                     }
                     if (action.equals(FXConstant.CMD_ADD_FRIEND)) {

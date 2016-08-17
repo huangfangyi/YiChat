@@ -1,5 +1,6 @@
 package com.fanxin.app;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.Build;
@@ -7,15 +8,19 @@ import android.support.multidex.MultiDex;
 import android.util.DisplayMetrics;
 
 import com.alibaba.fastjson.JSONObject;
+
 import com.easemob.redpacketsdk.RedPacket;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.fanxin.app.main.db.TopUser;
 import com.fanxin.app.main.db.TopUserDao;
 import com.fanxin.app.main.utils.LocalUserUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.ucloud.live.UEasyStreaming;
 
+
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -32,7 +37,7 @@ public class DemoApplication extends Application {
 	private String time="";
 
 	private DisplayMetrics displayMetrics = null;
-
+	private List<Activity> activities=new ArrayList<>();
 	public static DemoApplication getApp() {
 		if (instance != null && instance instanceof DemoApplication) {
 			return (DemoApplication) instance;
@@ -63,6 +68,8 @@ public class DemoApplication extends Application {
 		Fresco.initialize(this);
 		UEasyStreaming.initStreaming("publish3-key");
 		UEasyStreaming.syncMobileConfig(this, 3600 * 24);
+		CrashReport.initCrashReport(getApplicationContext(), "900047205", false);
+
 	}
 
 	public static DemoApplication getInstance() {
@@ -162,6 +169,22 @@ public class DemoApplication extends Application {
 	//获取应用的data/data/....Cache目录
 	public String getCacheDirPath() {
 		return getCacheDir().getAbsolutePath();
+	}
+
+	public  void saveActivity(Activity activity){
+		if(activity!=null){
+			activities.add(activity);
+		}
+
+	}
+
+	public  void finishActivities(){
+		for(Activity activity:activities){
+			if(activity!=null&&!activity.isFinishing()){
+				activity.finish();
+			}
+		}
+
 	}
 
 }

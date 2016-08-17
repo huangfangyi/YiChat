@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fanxin.app"
-    android:versionCode="35"
-    android:versionName="3.0">
+    android:versionCode="36"
+    android:versionName="3.1">
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -83,7 +83,7 @@
             android:windowSoftInputMode="adjustResize"></activity>
         <!-- 聊天页面 -->
         <activity
-            android:name=".ui.ChatActivity"
+            android:name=".main.activity.ChatActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -419,7 +419,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
-
+        <activity
+            android:name=".main.activity.AnswerCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".main.activity.QuestionCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
 
         <!--  UCLOUD-->
         <activity

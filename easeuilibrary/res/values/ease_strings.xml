@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+    <string name="all_members">All members</string>
     <string name="text_ack_msg">Read</string>
     <string name="text_delivered_msg">Delivered</string>
     <string name="back">Back</string>

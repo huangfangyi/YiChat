@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.fanxin.app.R;
+import com.fanxin.app.main.activity.ChatActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.widget.EaseAlertDialog;
 import com.fanxin.easeui.widget.EaseAlertDialog.AlertDialogUser;

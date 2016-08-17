@@ -1,13 +1,29 @@
-package com.fanxin.app.ui;
+package com.fanxin.app.main.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
+import com.fanxin.app.main.FXConstant;
+import com.fanxin.app.main.db.ACache;
+import com.fanxin.app.main.fragment.ChatFragment;
 import com.fanxin.app.main.fragment.MainActivity;
+import com.fanxin.app.main.utils.OkHttpManager;
+import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.runtimepermissions.PermissionsManager;
+import com.fanxin.app.ui.BaseActivity;
+import com.fanxin.easeui.EaseConstant;
 import com.fanxin.easeui.ui.EaseChatFragment;
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.util.EasyUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
   *
  */
@@ -28,7 +44,41 @@ public class ChatActivity extends BaseActivity {
         //pass parameters to chat fragment
         chatFragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction().add(R.id.container, chatFragment).commit();
-        
+       int  chatTypeTemp = getIntent().getIntExtra(EaseConstant.EXTRA_CHAT_TYPE, EaseConstant.CHATTYPE_SINGLE);
+        if(chatTypeTemp==EaseConstant.CHATTYPE_GROUP){
+            getGroupMembersInServer(toChatUsername);
+        }
+
+    }
+
+    private void getGroupMembersInServer(final String groupId) {
+
+        List<Param> params = new ArrayList<>();
+        params.add(new Param("groupId", groupId));
+        OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                if (jsonObject.containsKey("code")) {
+                    int code = Integer.parseInt(jsonObject.getString("code"));
+                    if (code == 1000) {
+                        if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            ACache.get(getApplicationContext()).put(groupId, jsonArray);
+
+                        }
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(String errorMsg) {
+
+            }
+        });
+
+
     }
     
     @Override
@@ -67,4 +117,6 @@ public class ChatActivity extends BaseActivity {
         @NonNull int[] grantResults) {
         PermissionsManager.getInstance().notifyPermissionsChange(permissions, grantResults);
     }
+
+
 }

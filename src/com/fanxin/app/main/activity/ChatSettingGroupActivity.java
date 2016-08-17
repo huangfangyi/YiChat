@@ -219,6 +219,12 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                 clearGroupHistory();
                 break;
             case R.id.re_change_groupname:
+                if(FXConstant.REDPACKET_GROUP_ID.equals(group.getGroupId())){
+
+                    Toast.makeText(getApplicationContext(),"活动群不允许改名",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 showNameAlert();
                 break;
             case R.id.rl_switch_chattotop:

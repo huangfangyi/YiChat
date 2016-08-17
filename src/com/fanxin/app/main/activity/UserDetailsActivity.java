@@ -20,7 +20,6 @@ import com.fanxin.app.main.utils.JSONUtil;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
-import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.easeui.EaseConstant;
 import com.fanxin.easeui.domain.EaseUser;
 

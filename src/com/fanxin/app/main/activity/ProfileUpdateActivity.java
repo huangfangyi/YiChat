@@ -16,6 +16,7 @@ import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
+import com.hyphenate.util.PathUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -103,7 +104,7 @@ public class ProfileUpdateActivity extends BaseActivity {
         params.add(new Param("hxid", userJson.getString(FXConstant.JSON_KEY_HXID)));
         List<File> files = new ArrayList<File>();
         if (key == FXConstant.JSON_KEY_AVATAR) {
-            File file = new File(FXConstant.DIR_AVATAR, value);
+            File file = new File(PathUtil.getInstance().getImagePath(), value);
             if (file.exists()) {
                 files.add(file);
             }

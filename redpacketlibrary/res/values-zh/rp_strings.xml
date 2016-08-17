@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">LuckyMoneyUI</string>
 
     <!--红包相关-->
     <string name="money_amount">金额</string>
@@ -16,6 +15,7 @@
     <string name="small_change">零钱</string>
     <string name="jd_pay">%1$s（尾号%2$s）</string>
     <string name="ali_pay">支付宝支付</string>
+    <string name="wx_pay">微信支付</string>
     <string name="input_pay_pwd">请输入支付密码</string>
     <string name="btn_ok">确定</string>
     <string name="btn_know">知道了</string>
@@ -27,8 +27,9 @@
     <string name="real_name">真实姓名</string>
     <string name="id_card">身份证号</string>
     <string name="phone_number">手机号码</string>
-    <string name="operation_user_agreement">该操作代表我同意《环信用户服务协议》</string>
-    <string name="operation_tpy_agreement">我愿意免费投保太平洋保险《个人账户资金损失保险》，保险费用由环信承担</string>
+    <string name="operation_user_agreement">该操作代表我同意《%1$s用户服务协议》</string>
+    <string name="operation_user_agreement_default">该操作代表我同意《用户服务协议》</string>
+    <string name="operation_tpy_agreement">我愿意免费投保太平洋保险《个人账户资金损失保险》</string>
     <string name="title_amount_agreement">个人账户资金损失保险</string>
     <string name="jd_pay_agreement_hint">银行卡付款业务由京东支付支持</string>
     <string name="insurance_agreement_hint">因账户被盗导致的资金损失由太平洋保险提供赔付保障</string>
@@ -60,7 +61,7 @@
     <string name="common_no_network_msg">暂未连接上网络!\n请连接后点击屏幕重试~</string>
     <string name="btn_str_send_sms_code">发送验证码</string>
     <string name="input_money_amount">请输入红包金额</string>
-    <string name="input_money_limited_minimum">单个红包金额不能少于0.01元</string>
+    <string name="input_money_limited_minimum">单个红包金额不能少于%1$s元</string>
     <string name="input_money_limited">单个红包金额不能超过%1$s元</string>
     <string name="small_change_balance">剩余%1$s元</string>
     <string name="choose_pay_type_title">选择支付方式</string>
@@ -111,7 +112,7 @@
     <string name="group_money_every">单个金额</string>
     <string name="group_member_count">本群共%1$s人</string>
     <string name="tip_money_count_zero">请输入红包个数</string>
-    <string name="tip_money_count_limit">一次最多发100个红包</string>
+    <string name="tip_money_count_limit">一次最多发%1$s个红包</string>
     <string name="group_rule_tips_random">当前为拼手气红包，</string>
     <string name="group_rule_tips_normal">当前为普通红包，</string>
     <string name="group_change_normal">改为普通红包</string>
@@ -151,6 +152,7 @@
     <!--提现-->
     <string name="str_withdraw">提现</string>
     <string name="str_forget_pay_pwd">忘记密码</string>
+    <string name="title_forget_pay_pwd">忘记支付密码</string>
     <string name="choose_province_title">选择省份</string>
     <string name="choose_city_title">选择城市</string>
     <string name="choose_bank_branch_title">选择支行</string>
@@ -165,8 +167,8 @@
     <string name="give_up_set_pay_pwd">放弃支付密码设置吗？</string>
     <string name="document_recover_pwd">请重新验证银行卡以找回密码</string>
     <string name="document_add_bankcard">添加一张银行储蓄卡</string>
-    <string name="document_add_bankcard_verify_identity">添加一张银行储蓄卡以验证身份</string>
-    <string name="document_add_pay_bankcard">添加一张可用于支付的银行储蓄卡</string>
+    <string name="document_add_bankcard_verify_identity">添加银行储蓄卡以验证身份</string>
+    <string name="document_add_pay_bankcard">添加可用于支付的银行储蓄卡</string>
     <string name="str_set_psd_success">设置密码成功</string>
     <string name="input_sms_captcha">输入短信验证码</string>
     <string name="title_change_withdraw">零钱提现</string>
@@ -176,7 +178,6 @@
     <string name="recharge_money_not_null">充值金额不能为空</string>
     <string name="recharge_money_not_zero">充值金额不能为零</string>
     <string name="recharge_money_limit">充值金额单笔不能超过%1$s元</string>
-    <string name="withdraw_money_not_max_five_thousand">提现金额单笔不能超过5000.00元</string>
     <string name="msg_withdraw_success">提现申请已受理</string>
     <string name="msg_captcha_has_sent">验证码已发送</string>
     <string name="money_received">收到红包</string>
@@ -234,17 +235,17 @@
     <string name="choose_pay_jd_limit">单笔限额%1$s元，当日剩余额度%2$s元</string>
     <string name="msg_review_going">审核中</string>
     <string name="msg_you_are_remove_bankcard">确定要解除这张银行卡吗？</string>
-    <string name="msg_remove_other_bankcard">这是一张提现卡。为了您的账户安全，请先移除其他支付卡后，再移除提现卡</string>
-    <string name="msg_change_you_balance">零钱还有余额，请先提现后再移除银行卡</string>
     <string name="msg_remove_bankcard_success">移除卡成功</string>
     <string name="error_sd_card">请挂载SD卡！</string>
     <string name="btn_silence_turn_off">默默关掉</string>
     <string name="btn_secretly_look">偷看一下</string>
-    <string name="subtitle_content">环信红包服务</string>
+    <string name="subtitle_content">%1$s红包服务</string>
     <string name="upload_success_review_going">"上传成功，审核中"</string>
     <string name="recharge_success">"充值成功"</string>
     <string name="str_upload">上传</string>
-    <string name="single_limit">单笔限额200</string>
+    <string name="single_limit">单笔限额%1$s</string>
+    <string name="single_withdraw_max_limit">单笔提现最多%1$s元</string>
+    <string name="single_withdraw_min_limit">单笔提现最少%1$s元</string>
     <string name="str_choose_camera">选择相机</string>
     <string name="str_choose_album">选择相册</string>
 

@@ -29,7 +29,7 @@
         android:id="@+id/layout_item"
         layout="@layout/rp_details_list_item"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/layout_top"
         />
 
@@ -41,7 +41,7 @@
         android:gravity="center"
         android:text="@string/check_money_records"
         android:textColor="@color/check_blue"
-        android:textSize="@dimen/size45px"
+        android:textSize="@dimen/font45px"
         />
 
 </RelativeLayout>

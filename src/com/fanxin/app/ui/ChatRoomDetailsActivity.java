@@ -36,6 +36,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fanxin.app.main.activity.ChatActivity;
 import com.fanxin.easeui.utils.EaseUserUtils;
 import com.fanxin.easeui.widget.EaseAlertDialog;
 import com.fanxin.easeui.widget.EaseExpandGridView;

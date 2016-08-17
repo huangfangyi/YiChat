@@ -19,8 +19,9 @@ public class EaseConstant {
     
     public static final String MESSAGE_ATTR_IS_BIG_EXPRESSION = "em_is_big_expression";
     public static final String MESSAGE_ATTR_EXPRESSION_ID = "em_expression_id";
-    
-    public static final String MESSAGE_ATTR_AT_MSG = "em_at_message";
+
+    public static final String MESSAGE_ATTR_AT_MSG = "em_at_list";
+    public static final String MESSAGE_ATTR_VALUE_AT_MSG_ALL = "ALL";
     
     
 	public static final int CHATTYPE_SINGLE = 1;

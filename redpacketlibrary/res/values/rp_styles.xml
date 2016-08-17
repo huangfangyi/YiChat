@@ -334,25 +334,4 @@
         <item name="android:windowExitAnimation">@anim/rp_top_out</item>
     </style>
 
-    <!--CardView-->
-    <style name="RPBase.CardView" parent="android:Widget">
-        <item name="RPcardCornerRadius">@dimen/rp_cardview_default_radius</item>
-        <item name="RPcardElevation">@dimen/rp_cardview_default_elevation</item>
-        <item name="RPcardMaxElevation">@dimen/rp_cardview_default_elevation</item>
-        <item name="RPcardUseCompatPadding">false</item>
-        <item name="RPcardPreventCornerOverlap">true</item>
-    </style>
-
-    <!-- On older platforms we do not explicitly set a background color and let CardView compute
-         one based on the theme. -->
-    <style name="RPCardView" parent="RPBase.CardView">
-    </style>
-
-    <style name="RPCardView.Light">
-        <item name="RPcardBackgroundColor">@color/rp_cardview_light_background</item>
-    </style>
-
-    <style name="RPCardView.Dark">
-        <item name="RPcardBackgroundColor">@color/rp_cardview_dark_background</item>
-    </style>
 </resources>

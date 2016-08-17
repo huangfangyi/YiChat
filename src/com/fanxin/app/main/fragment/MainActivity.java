@@ -27,7 +27,7 @@ import com.fanxin.app.main.activity.ScanCaptureActivity;
 import com.fanxin.app.main.widget.FXPopWindow;
 import com.fanxin.app.runtimepermissions.PermissionsResultAction;
 import com.fanxin.app.ui.BaseActivity;
-import com.fanxin.app.ui.ChatActivity;
+import com.fanxin.app.main.activity.ChatActivity;
 import com.fanxin.app.ui.GroupsActivity;
 import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.EMCallBack;
@@ -293,15 +293,19 @@ import android.widget.Toast;
 
         @Override
         public void onCmdMessageReceived(List<EMMessage> messages) {
+            //red packet code : 处理红包回执透传消息
             for (EMMessage message : messages) {
                 EMCmdMessageBody cmdMsgBody = (EMCmdMessageBody) message.getBody();
-                final String action = cmdMsgBody.action();//get the action user defined in command message
-                if (action.equals(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION) && message.getChatType() == EMMessage.ChatType.GroupChat) {
+                final String action = cmdMsgBody.action();//获取自定义action
+                if (action.equals(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION)) {
                     RedPacketUtil.receiveRedPacketAckMessage(message);
                 }
             }
+            //end of red packet code
             refreshUIWithMessage();
         }
+
+
 
         @Override
         public void onMessageReadAckReceived(List<EMMessage> messages) {

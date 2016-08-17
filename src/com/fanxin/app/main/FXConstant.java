@@ -29,6 +29,8 @@ public class FXConstant {
     public static final String URL_SOCIAL_DELETE = HOST + "social_delete.php";
     public static final String URL_SOCIAL_FRIEND = HOST + "social_friend.php";
     public static final String URL_GROUP_MEMBERS = HOST + "groupMembers.php";
+    public static final String URL_GROUP_ADD_MEMBERS = HOST + "addMembers.php";
+    public static final String URL_GROUP_CREATE = HOST + "groupCreate.php";
 
     public static final String JSON_KEY_NICK ="nick";
     public static final String JSON_KEY_HXID ="hxid";
@@ -39,6 +41,17 @@ public class FXConstant {
     public static final String JSON_KEY_PROVINCE ="province";
     public static final String JSON_KEY_TEL ="tel";
     public static final String JSON_KEY_SIGN ="sign";
+
+   //
+   public static final String JSON_QA_QUESTION ="question";
+    public static final String JSON_QA_A ="A";
+    public static final String JSON_QA_B ="B";
+    public static final String JSON_QA_C ="C";
+    public static final String JSON_QA_D ="D";
+    public static final String JSON_QA_ANSWER ="answer";
+
+
+
 
 
     public static final String DIR_AVATAR ="/sdcard/fanxin/";
@@ -54,7 +67,11 @@ public class FXConstant {
 
     public static final String FXLIVE_CHATROOM_ID="218352836658856384";
 
+
     public static final String RTEM_URL="rtmp://live.hkstv.hk.lxdns.com/live/hks";
     public static final String RTEM_URL_LIVE= "rtmp://publish3.cdn.ucloud.com.cn/ucloud/";
+    //云账户红包群id
+    public static final String REDPACKET_GROUP_ID="230584771716055476";
+
 
 }

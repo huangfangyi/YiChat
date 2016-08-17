@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +32,6 @@ import com.fanxin.app.main.adapter.PickContactAdapter;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
-import com.fanxin.app.ui.ChatActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
@@ -63,7 +63,7 @@ public class GroupAddMembersActivity extends BaseActivity {
     private LinearLayout menuLinerLayout;
 
     // 选中用户总数,右上角显示
-    int total = 0;
+
     private String userId = null;
     private String groupId = null;
 
@@ -92,7 +92,7 @@ public class GroupAddMembersActivity extends BaseActivity {
         } else if (userId != null) {
             isCreatingNewGroup = true;
             exitingMembers.add(userId);
-            total = 1;
+
             addList.add(userId);
         } else {
             isCreatingNewGroup = true;
@@ -130,26 +130,28 @@ public class GroupAddMembersActivity extends BaseActivity {
                 .findViewById(R.id.linearLayoutMenu);
         //设置监听
         setTextChangedListener((EditText) this.findViewById(R.id.et_search));
-        listView.setOnItemClickListener(new OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                if (position > 0) {
-                    EaseUser user = contactAdapter.getItem(position - 1);
-                    if (exitingMembers.contains(user.getUsername())) {
-                        return;
-                    }
-                    CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkbox);
-                    checkBox.toggle();
-                    if (checkBox.isChecked()) {
-                        showCheckImage(contactAdapter.getBitmap(position - 1), user);
-                    } else {
-                        deleteImage(user);
-                    }
-                }
-            }
-        });
+//        listView.setOnItemClickListener(new OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,
+//                                    int position, long id) {
+//                if (position > 0) {
+//                    EaseUser user = contactAdapter.getItem(position - 1);
+//                    if (exitingMembers.contains(user.getUsername())) {
+//                        return;
+//                    }
+//
+//
+////                    CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkbox);
+////                    checkBox.toggle();
+////                    if (checkBox.isChecked()) {
+////
+////                    } else {
+////
+////                    }
+//                }
+//            }
+//        });
         tv_checked.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -195,7 +197,7 @@ public class GroupAddMembersActivity extends BaseActivity {
     }
 
     // 即时显示被选中用户的头像和昵称。
-    private void showCheckImage(Bitmap bitmap, EaseUser user) {
+    public void showCheckImage(Bitmap bitmap, EaseUser user) {
 
         if (exitingMembers.contains(user.getUsername()) && groupId != null) {
             return;
@@ -203,7 +205,7 @@ public class GroupAddMembersActivity extends BaseActivity {
         if (addList.contains(user.getUsername())) {
             return;
         }
-        total++;
+
         // 包含TextView的LinearLayout
         // 参数设置
         LinearLayout.LayoutParams menuLinerLayoutParames = new LinearLayout.LayoutParams(
@@ -220,22 +222,24 @@ public class GroupAddMembersActivity extends BaseActivity {
             images.setImageBitmap(bitmap);
         }
         menuLinerLayout.addView(view, menuLinerLayoutParames);
-        tv_checked.setText("确定(" + total + ")");
-        if (total > 0) {
+
+        if (addList.size() > 0) {
             if (iv_search.getVisibility() == View.VISIBLE) {
                 iv_search.setVisibility(View.GONE);
             }
         }
         addList.add(user.getUsername());
+        tv_checked.setText("确定(" + addList.size() + ")");
     }
 
-    private void deleteImage(EaseUser user) {
+    public void deleteImage(EaseUser user) {
         View view = menuLinerLayout.findViewWithTag(user);
         menuLinerLayout.removeView(view);
-        total--;
-        tv_checked.setText("确定(" + total + ")");
+
+
         addList.remove(user.getUsername());
-        if (total < 1) {
+        tv_checked.setText("确定(" + addList.size() + ")");
+        if (addList.size()  < 1) {
             if (iv_search.getVisibility() == View.GONE) {
                 iv_search.setVisibility(View.VISIBLE);
             }
@@ -303,37 +307,93 @@ public class GroupAddMembersActivity extends BaseActivity {
     }
 
     private void creatEMGroup(final String jsonInfo, final List<String> members) {
+//        final ProgressDialog progressDialog = new ProgressDialog(this);
+//        progressDialog.setMessage("正在创建群组");
+//        progressDialog.setCanceledOnTouchOutside(false);
+//        progressDialog.show();
+
+        String membersString = "";
+        for (int i = 0; i < members.size(); i++) {
+            if (i == 0) {
+                membersString = members.get(i);
+            } else {
+
+                membersString =membersString+ "#" + members.get(i);
+            }
+        }
+        creatGroupInServer(jsonInfo,  "temp", membersString, "false");
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//                try {
+//                    EMGroupManager.EMGroupOptions option = new EMGroupManager.EMGroupOptions();
+//                    option.maxUsers = 200;
+//                    option.style = EMGroupManager.EMGroupStyle.EMGroupStylePrivateMemberCanInvite;
+//                    EMClient.getInstance().groupManager().createGroup(jsonInfo, "temp", members.toArray(new String[0]), "nothing", option);
+//                    runOnUiThread(new Runnable() {
+//                        public void run() {
+//                            progressDialog.dismiss();
+//                            setResult(Activity.RESULT_OK);
+//                            finish();
+//                        }
+//                    });
+//                } catch (final HyphenateException e) {
+//                    runOnUiThread(new Runnable() {
+//                        public void run() {
+//                            progressDialog.dismiss();
+//                            Toast.makeText(GroupAddMembersActivity.this, "创建群聊失败:" + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//                }
+//
+//            }
+//        }).start();
+    }
+    private void creatGroupInServer(String groupName, String desc, String members, String isPublic) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("正在创建群组");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
+        List<Param> params = new ArrayList<>();
+        params.add(new Param("owner", DemoHelper.getInstance().getCurrentUsernName()));
+        params.add(new Param("members", members));
+        params.add(new Param("groupName", groupName));
+        params.add(new Param("desc", desc));
+        params.add(new Param("public", isPublic));
 
-                try {
-                    EMGroupManager.EMGroupOptions option = new EMGroupManager.EMGroupOptions();
-                    option.maxUsers = 200;
-                    option.style = EMGroupManager.EMGroupStyle.EMGroupStylePrivateMemberCanInvite;
-                    EMClient.getInstance().groupManager().createGroup(jsonInfo, "temp", members.toArray(new String[0]), "nothing", option);
-                    runOnUiThread(new Runnable() {
-                        public void run() {
+        OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_CREATE, new OkHttpManager.HttpCallBack() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                int code = jsonObject.getIntValue("code");
+                if (code == 1000) {
+                    JSONObject data = jsonObject.getJSONObject("data");
+                    if (data.containsKey("data")) {
+                        JSONObject jsonGroupId = data.getJSONObject("data");
+                        String groupId = jsonGroupId.getString("groupid");
+                        if (!TextUtils.isEmpty(groupId)) {
                             progressDialog.dismiss();
                             setResult(Activity.RESULT_OK);
                             finish();
+                            return;
+
                         }
-                    });
-                } catch (final HyphenateException e) {
-                    runOnUiThread(new Runnable() {
-                        public void run() {
-                            progressDialog.dismiss();
-                            Toast.makeText(GroupAddMembersActivity.this, "创建群聊失败:" + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    }
                 }
 
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "创建失败...", Toast.LENGTH_SHORT).show();
+
             }
-        }).start();
+
+            @Override
+            public void onFailure(String errorMsg) {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "创建失败...", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
 

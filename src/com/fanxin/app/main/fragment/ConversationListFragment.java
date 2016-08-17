@@ -27,7 +27,7 @@ import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.main.adapter.ConversationAdapter;
-import com.fanxin.app.ui.ChatActivity;
+import com.fanxin.app.main.activity.ChatActivity;
 import com.fanxin.easeui.widget.EaseConversationList;
 import com.hyphenate.EMConnectionListener;
 import com.hyphenate.EMConversationListener;

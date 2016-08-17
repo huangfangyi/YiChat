@@ -21,6 +21,7 @@ import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.easeui.domain.EaseUser;
@@ -107,8 +108,16 @@ public class ConversationAdapter extends ArrayAdapter<EMConversation> {
                 } catch (JSONException e) {
                 }
             }
+            int num=jsonarray.size();
+            if(num==0){
+                num=1;
 
-            return jsonarray.size() == 0 ? 1 : jsonarray.size();
+            }else if(num>9){
+
+                num=9;
+            }
+
+            return num;
 
         } else {
             return 0;

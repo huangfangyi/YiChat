@@ -1,11 +1,13 @@
 package com.fanxin.app.main.adapter;
 
 import android.graphics.Bitmap;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +20,9 @@ import com.fanxin.app.main.activity.GroupAddMembersActivity;
 import com.fanxin.easeui.domain.EaseUser;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by huangfangyi on 2016/7/9.\
@@ -66,8 +70,9 @@ public class PickContactAdapter extends BaseAdapter {
                     .findViewById(R.id.checkbox);
             holder.tvHeader = (TextView) convertView
                     .findViewById(R.id.header);
+            convertView.setTag(holder);
         }
-        EaseUser user = list.get(position);
+        final EaseUser user = list.get(position);
         String avatar = user.getAvatar();
         String nick = user.getNick();
         String header = user.getInitialLetter();
@@ -85,7 +90,7 @@ public class PickContactAdapter extends BaseAdapter {
         }); //方法中设置asBitmap可以设置回调类型
 
         if (position == 0 || header != null
-                && !header.equals(getItem(position - 1))) {
+                && !header.equals(getItem(position - 1).getInitialLetter())) {
             if ("".equals(header)) {
                 holder.tvHeader.setVisibility(View.GONE);
             } else {
@@ -95,23 +100,66 @@ public class PickContactAdapter extends BaseAdapter {
         } else {
             holder.tvHeader.setVisibility(View.GONE);
         }
+//        final CheckBox checkBox=holder.checkBox;
+//        checkBox.setTag(position);
         if (exitedMembers != null && exitedMembers.contains(hxid)) {
             holder.checkBox.setButtonDrawable(R.drawable.fx_bg_checkbox);
         } else {
             holder.checkBox.setButtonDrawable(R.drawable.fx_bg_checkbox_blue);
+         }
+
+
+        holder.checkBox.setOnCheckedChangeListener(new MyOnCheckedChangeListener(position,user));
+
+
+        Log.d("position--->>",position+"");
+
+        if (exitedMembers != null && exitedMembers.contains(hxid)) {
+         } else {
+            holder.checkBox.setChecked(isCheckedArray[position]);
         }
         return convertView;
     }
 
+    class MyOnCheckedChangeListener implements CompoundButton.OnCheckedChangeListener {
+        private  int positon;
+        private  EaseUser user;
+        public MyOnCheckedChangeListener(int positon,EaseUser user){
+
+            this.positon=positon;
+            this. user=user;
+        }
+
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+            if (exitedMembers.contains(user.getUsername())) {
+                return;
+            }
+            if (isChecked) {
+                activity.showCheckImage(getBitmap(positon), user);
+                Log.d("positon2--->",positon+"");
+                isCheckedArray[positon]=true;
+            } else {
+                activity.deleteImage(user);
+                Log.d("positon1--->",positon+"");
+                isCheckedArray[positon]=false;
+            }
+
+
+        }
+    }
+
     @Override
     public int getCount() {
-         return list.size();
+        return list.size();
     }
 
     @Override
     public EaseUser getItem(int position) {
 
-        return  list.get(position);
+        return list.get(position);
     }
 
     @Override

@@ -43,7 +43,7 @@ RecyclerView's bounds.-->
     <dimen name="font69px">23sp</dimen>
     <dimen name="font78px">26sp</dimen>
     <dimen name="size21px">7dp</dimen>
-    <dimen name="font90px">30dp</dimen>
+    <dimen name="font90px">30sp</dimen>
     <dimen name="size51px">17dp</dimen>
     <dimen name="font33px">11sp</dimen>
     <dimen name="size66px">23dp</dimen>
@@ -75,14 +75,4 @@ RecyclerView's bounds.-->
     <dimen name="size201px">67dp</dimen>
     <dimen name="size204px">68dp</dimen>
     <dimen name="size225px">75dp</dimen>
-
-    <!--CardView-->
-    <!-- Default radius for CardView corners. -->
-    <dimen name="rp_cardview_default_radius">2dp</dimen>
-    <!-- Elevation value to use for CardViews. Pre-L, it is equal to shadow size. -->
-    <dimen name="rp_cardview_default_elevation">2dp</dimen>
-    <!-- Inset shadow for RoundRectDrawableWithShadow. It is used to avoid gaps between the card
-     and the shadow. -->
-    <dimen name="rp_cardview_compat_inset_shadow">1dp</dimen>
-
 </resources>
