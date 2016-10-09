@@ -199,11 +199,9 @@ public class ConversationListFragment extends Fragment {
                     if((conversation.getType() == EMConversation.EMConversationType.Chat && !DemoHelper.getInstance().getContactList().containsKey(conversation.getUserName()))){
 
                     }else{
-
                         try {
                             sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
                         } catch (NullPointerException e) {
-
 
                         }
                     }
