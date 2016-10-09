@@ -38,6 +38,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     private TextView tv_fxid;
     private TextView tv_sex;
     private TextView tv_sign;
+    private TextView tv_region;
     private String imageName;
     private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
     private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
@@ -45,6 +46,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     private static final int UPDATE_FXID = 4;
     private static final int UPDATE_NICK = 5;
     private static final int UPDATE_SIGN = 6;
+    private static final int UPDATE_REGION=7;
     private JSONObject userJson;
     //头像，昵称，凡信号是否发生变化
     private boolean hasChange=false;
@@ -63,6 +65,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         tv_fxid = (TextView) this.findViewById(R.id.tv_fxid);
         tv_sex = (TextView) this.findViewById(R.id.tv_sex);
         tv_sign = (TextView) this.findViewById(R.id.tv_sign);
+        tv_region = (TextView) this.findViewById(R.id.tv_region);
         String nick = userJson.getString(FXConstant.JSON_KEY_NICK);
         String fxid = userJson.getString(FXConstant.JSON_KEY_FXID);
         String sex = userJson.getString(FXConstant.JSON_KEY_SEX);
@@ -70,6 +73,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         String avatarUrl = FXConstant.URL_AVATAR + userJson.getString(FXConstant.JSON_KEY_AVATAR);
         Glide.with(ProfileActivity.this).load(avatarUrl).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(iv_avatar);
         tv_name.setText(nick);
+        tv_region.setText(userJson.getString(FXConstant.JSON_KEY_PROVINCE)+" "+userJson.getString(FXConstant.JSON_KEY_CITY));
         if (TextUtils.isEmpty(fxid)) {
             tv_fxid.setText("未设置");
 
@@ -113,6 +117,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                 showSexDialog();
                 break;
             case R.id.re_region:
+                setRegion();
                 break;
             case R.id.re_sign:
                 startActivityForResult(new Intent(ProfileActivity.this,
@@ -169,13 +174,13 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                     case 0:
                         if (!userJson.getString(FXConstant.JSON_KEY_SEX).equals("男")) {
 
-                            updateInServer(FXConstant.JSON_KEY_SEX, "男");
+                            updateInServer(FXConstant.JSON_KEY_SEX, "男",false);
                         }
                         break;
                     case 1:
                         if (!userJson.getString(FXConstant.JSON_KEY_SEX).equals("女")) {
 
-                            updateInServer(FXConstant.JSON_KEY_SEX, "女");
+                            updateInServer(FXConstant.JSON_KEY_SEX, "女",false);
                         }
                         break;
                 }
@@ -201,7 +206,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                     break;
 
                 case PHOTO_REQUEST_CUT:
-                    updateInServer(FXConstant.JSON_KEY_AVATAR, imageName);
+                    updateInServer(FXConstant.JSON_KEY_AVATAR, imageName,false);
                     break;
                 case UPDATE_FXID:
                     String fxid = data.getStringExtra("value");
@@ -223,6 +228,15 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                     if (sign != null) {
                         tv_sign.setText(sign);
 
+                    }
+                    break;
+                case UPDATE_REGION:
+                    if (data != null) {
+                        String province = data.getStringExtra("province");
+                        String   city = data.getStringExtra("city");
+                        boolean isRegion=true;
+                        tv_region.setText(province+" "+city);
+                        updateInServer(province,city,isRegion);
                     }
                     break;
             }
@@ -258,8 +272,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         return dateFormat.format(date);
     }
 
-
-    private void updateInServer(final String key, final String value) {
+    private void updateInServer(final String key, final String value, final boolean isRegion) {
         if (TextUtils.isEmpty(key) || TextUtils.isEmpty(value)) {
             return;
         }
@@ -269,11 +282,23 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.show();
         List<Param> params = new ArrayList<Param>();
-        params.add(new Param("key", key));
-        params.add(new Param("value", value));
-        params.add(new Param("hxid", userJson.getString(FXConstant.JSON_KEY_HXID)));
+
+        if(!isRegion){
+
+            params.add(new Param("key", key));
+            params.add(new Param("value", value));
+            params.add(new Param("hxid", userJson.getString(FXConstant.JSON_KEY_HXID)));
+
+        }else {
+            params.add(new Param("key", "province"));
+            params.add(new Param("value", key));
+            params.add(new Param("key2", "city"));
+            params.add(new Param("value2", value));
+            params.add(new Param("hxid", userJson.getString(FXConstant.JSON_KEY_HXID)));
+        }
+
         List<File> files = new ArrayList<File>();
-         File file=null;
+        File file=null;
         if (key == FXConstant.JSON_KEY_AVATAR) {
             file= new File( PathUtil.getInstance().getImagePath(), value);
             if (file.exists()) {
@@ -297,12 +322,15 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                         }
 
                     }  else if (key.equals(FXConstant.JSON_KEY_SEX)) {
-
                         tv_sex.setText(value);
                     }
-
                     //
-                    userJson.put(key, value);
+                    if(!isRegion){
+                        userJson.put(key, value);
+                    }else {
+                        userJson.put(FXConstant.JSON_KEY_PROVINCE,key);
+                        userJson.put(FXConstant.JSON_KEY_CITY,value);
+                    }
                     DemoApplication.getInstance().setUserJson(userJson);
                 } else {
 
@@ -343,5 +371,12 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
             setResult(RESULT_OK);
         }
         finish();
+    }
+
+
+    private void setRegion(){
+        startActivityForResult(new Intent(ProfileActivity.this,
+                RegionActivity.class), UPDATE_REGION);
+
     }
 }

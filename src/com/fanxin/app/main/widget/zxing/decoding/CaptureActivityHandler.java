@@ -24,7 +24,6 @@ import com.fanxin.app.main.widget.zxing.camera.CameraManager;
 import com.fanxin.app.main.widget.zxing.view.ViewfinderResultPointCallback;
 import com.google.zxing.BarcodeFormat;
 
-
 import java.util.Vector;
 
 /**

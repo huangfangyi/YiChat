@@ -1,7 +1,5 @@
 package com.fanxin.app.main.activity;
 
-import java.util.List;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +18,8 @@ import com.fanxin.easeui.EaseConstant;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.exceptions.HyphenateException;
+
+import java.util.List;
 
 
 public class GroupListActivity extends BaseActivity {
@@ -101,10 +101,30 @@ public class GroupListActivity extends BaseActivity {
     }
 
     private void refresh() {
-        grouplist = EMClient.getInstance().groupManager().getAllGroups();
-        groupAdapter = new GroupsAdapter(this, grouplist);
-        groupListView.setAdapter(groupAdapter);
-        groupAdapter.notifyDataSetChanged();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    EMClient.getInstance().groupManager().getJoinedGroupsFromServer();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            grouplist = EMClient.getInstance().groupManager().getAllGroups();
+                            groupAdapter = new GroupsAdapter(GroupListActivity.this, grouplist);
+                            groupListView.setAdapter(groupAdapter);
+                            groupAdapter.notifyDataSetChanged();
+                        }
+                    });
+
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }).start();
+
+
     }
 
 

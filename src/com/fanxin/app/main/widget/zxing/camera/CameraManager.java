@@ -26,7 +26,6 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
-
 import com.fanxin.app.main.widget.zxing.activity.DensityUtil;
 
 import java.io.IOException;

@@ -27,6 +27,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.InviteMessgeDao;
@@ -37,12 +38,18 @@ import com.fanxin.app.main.activity.NewFriendsActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
 import com.fanxin.app.main.activity.LiveActivity;
 import com.fanxin.app.main.activity.LivesActivity;
+import com.fanxin.app.main.utils.OkHttpManager;
+import com.fanxin.app.main.utils.Param;
 import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.ui.EaseContactListFragment;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMCmdMessageBody;
+import com.hyphenate.chat.EMMessage;
 import com.hyphenate.util.NetUtils;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -153,78 +160,120 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
         }
     }
 
-	@Override
-	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
-		super.onCreateContextMenu(menu, v, menuInfo);
-	    toBeProcessUser = (EaseUser) listView.getItemAtPosition(((AdapterContextMenuInfo) menuInfo).position);
-	    toBeProcessUsername = toBeProcessUser.getUsername();
-		getActivity().getMenuInflater().inflate(R.menu.em_context_contact_list, menu);
-	}
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        toBeProcessUser = (EaseUser) listView.getItemAtPosition(((AdapterContextMenuInfo) menuInfo).position);
+        toBeProcessUsername = toBeProcessUser.getUsername();
+        getActivity().getMenuInflater().inflate(R.menu.em_context_contact_list, menu);
+    }
 
-	@Override
-	public boolean onContextItemSelected(MenuItem item) {
-		if (item.getItemId() == R.id.delete_contact) {
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.delete_contact) {
             //TODO 此接口需要调用后端接口
-            Toast.makeText(getContext(),"此接口改调凡信后端接口，待更新...",Toast.LENGTH_LONG).show();
-//			try {
-//                // delete contact
-//                deleteContact(toBeProcessUser);
-//                // remove invitation message
-//                InviteMessgeDao dao = new InviteMessgeDao(getActivity());
-//                dao.deleteMessage(toBeProcessUser.getUsername());
-//            } catch (Exception e) {
-//                e.printStackTrace();
+            //    Toast.makeText(getContext(),"此接口改调凡信后端接口，待更新...",Toast.LENGTH_LONG).show();
+
+            deleteContact(toBeProcessUser);
+
+
+            return true;
+        }
+//        else if (item.getItemId() == R.id.add_to_blacklist) {
+//            //TODO 此接口需要调用后端接口
+//            Toast.makeText(getContext(), "此接口改调凡信后端接口，待更新...", Toast.LENGTH_LONG).show();
+//            //moveToBlacklist(toBeProcessUsername);
+//            return true;
+//        }
+        return super.onContextItemSelected(item);
+    }
+
+    /**
+     * delete contact
+     *
+     * @param
+     */
+    public void deleteContact(final EaseUser tobeDeleteUser) {
+        final String st1 = getResources().getString(R.string.deleting);
+        final String st2 = getResources().getString(R.string.Delete_failed);
+        final ProgressDialog pd = new ProgressDialog(getActivity());
+        pd.setMessage(st1);
+        pd.setCanceledOnTouchOutside(false);
+        pd.show();
+        List<Param> paramList = new ArrayList<>();
+        paramList.add(new Param("hxid_from", tobeDeleteUser.getUsername()));
+        paramList.add(new Param("hxid_to", DemoHelper.getInstance().getCurrentUsernName()));
+        OkHttpManager.getInstance().post(paramList, FXConstant.URL_DELETE_FRIEND, new OkHttpManager.HttpCallBack() {
+
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                pd.dismiss();
+                int code = jsonObject.getInteger("code");
+                if (code == 1000) {
+                    InviteMessgeDao dao = new InviteMessgeDao(getActivity());
+                    dao.deleteMessage(toBeProcessUser.getUsername());
+                    UserDao userDao = new UserDao(getActivity());
+                    userDao.deleteContact(tobeDeleteUser.getUsername());
+                    DemoHelper.getInstance().getContactList().remove(tobeDeleteUser.getUsername());
+                    contactList.remove(tobeDeleteUser);
+                    contactListLayout.refresh();
+                    sendCmdDeleteMsg(toBeProcessUser.getUsername());
+                    Toast.makeText(getContext(), st1, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getContext(), st2, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(String errorMsg) {
+                pd.dismiss();
+                Toast.makeText(getContext(), st2, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+//        new Thread(new Runnable() {
+//            public void run() {
+//                try {
+//                    EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getUsername());
+//                    // remove user from memory and database
+//                    UserDao dao = new UserDao(getActivity());
+//                    dao.deleteContact(tobeDeleteUser.getUsername());
+//                    DemoHelper.getInstance().getContactList().remove(tobeDeleteUser.getUsername());
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        public void run() {
+//                            pd.dismiss();
+//                            contactList.remove(tobeDeleteUser);
+//                            contactListLayout.refresh();
+//
+//                        }
+//                    });
+//                } catch (final Exception e) {
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        public void run() {
+//                            pd.dismiss();
+//                            Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//
+//                }
 //            }
-			return true;
-		}else if(item.getItemId() == R.id.add_to_blacklist){
-            //TODO 此接口需要调用后端接口
-            Toast.makeText(getContext(),"此接口改调凡信后端接口，待更新...",Toast.LENGTH_LONG).show();
-			//moveToBlacklist(toBeProcessUsername);
-			return true;
-		}
-		return super.onContextItemSelected(item);
-	}
-	/**
-	 * delete contact
-	 * 
-	 * @param
-	 */
-	public void deleteContact(final EaseUser tobeDeleteUser) {
-		String st1 = getResources().getString(R.string.deleting);
-		final String st2 = getResources().getString(R.string.Delete_failed);
-		final ProgressDialog pd = new ProgressDialog(getActivity());
-		pd.setMessage(st1);
-		pd.setCanceledOnTouchOutside(false);
-		pd.show();
-		new Thread(new Runnable() {
-			public void run() {
-				try {
-					EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getUsername());
-					// remove user from memory and database
-					UserDao dao = new UserDao(getActivity());
-					dao.deleteContact(tobeDeleteUser.getUsername());
-					DemoHelper.getInstance().getContactList().remove(tobeDeleteUser.getUsername());
-					getActivity().runOnUiThread(new Runnable() {
-						public void run() {
-							pd.dismiss();
-							contactList.remove(tobeDeleteUser);
-							contactListLayout.refresh();
+//        }).start();
 
-						}
-					});
-				} catch (final Exception e) {
-					getActivity().runOnUiThread(new Runnable() {
-						public void run() {
-							pd.dismiss();
-							Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_SHORT).show();
-						}
-					});
+    }
 
-				}
-			}
-		}).start();
+    private void sendCmdDeleteMsg(String hxid) {
+        EMMessage cmdMsg = EMMessage.createSendMessage(EMMessage.Type.CMD);
+        //支持单聊和群聊，默认单聊，
+        cmdMsg.setChatType(EMMessage.ChatType.Chat);
+        //action可以自定义
+        EMCmdMessageBody cmdBody = new EMCmdMessageBody(FXConstant.CMD_DELETE_FRIEND);
+        cmdMsg.setReceipt(hxid);
+        cmdMsg.addBody(cmdBody);
+        EMClient.getInstance().chatManager().sendMessage(cmdMsg);
 
-	}
+    }
 	
 
 

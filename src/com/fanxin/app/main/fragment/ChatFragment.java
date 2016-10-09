@@ -2,13 +2,15 @@ package com.fanxin.app.main.fragment;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.media.ThumbnailUtils;
@@ -27,21 +29,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.easemob.redpacketui.widget.ChatRowRedPacket;
 import com.easemob.redpacketui.widget.ChatRowRedPacketAck;
 import com.fanxin.app.DemoApplication;
-import com.fanxin.app.main.activity.AnswerCardActivity;
 import com.fanxin.app.main.activity.ChatSettingGroupActivity;
 import com.fanxin.app.main.activity.ChatSettingSingleActivity;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.activity.QuestionCardActivity;
 import com.fanxin.app.main.activity.UserDetailsActivity;
 import com.fanxin.app.main.db.ACache;
-import com.fanxin.app.main.utils.OkHttpManager;
-import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.ChatRoomDetailsActivity;
 import com.fanxin.app.ui.ContextMenuActivity;
 import com.fanxin.app.ui.ForwardMessageActivity;
@@ -79,8 +76,6 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     private static final int ITEM_FILE = 12;
     private static final int ITEM_VOICE_CALL = 13;
     private static final int ITEM_VIDEO_CALL = 14;
-
-
     private static final int REQUEST_CODE_SELECT_VIDEO = 11;
     private static final int REQUEST_CODE_SELECT_FILE = 12;
     private static final int REQUEST_CODE_GROUP_DETAIL = 13;
@@ -89,8 +84,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 
     private static final int REQUEST_CODE_SEND_MONEY = 16;
 
-    private static final int REQUEST_CODE_ANSWER = 17;
-    private static final int MESSAGE_TYPE_SENT_VOICE_CALL = 1;
+     private static final int MESSAGE_TYPE_SENT_VOICE_CALL = 1;
     private static final int MESSAGE_TYPE_RECV_VOICE_CALL = 2;
     private static final int MESSAGE_TYPE_SENT_VIDEO_CALL = 3;
     private static final int MESSAGE_TYPE_RECV_VIDEO_CALL = 4;
@@ -111,7 +105,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 
 
     private TextView tvName;
-
+    private  MyBroadcastReceiver broadcastReceiver;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fx_fragment_chat, container, false);
@@ -191,6 +185,22 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             }
 
             tvName.setText("群聊");
+
+        }
+
+        broadcastReceiver = new MyBroadcastReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(EaseConstant.ACTION_DELETE_MSG);
+        getActivity().registerReceiver(broadcastReceiver, filter);
+    }
+
+    class MyBroadcastReceiver extends BroadcastReceiver {
+
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d("receive-->", "broadcast");
+            messageList.refresh();
 
         }
     }
@@ -275,12 +285,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                         sendMessage(RedPacketUtil.createRPMessage(getActivity(), data, toChatUsername));
                     }
                     break;
-                case REQUEST_CODE_ANSWER:
-                    //open red packet if the message is red packet
-                    if (rpMessage.getBooleanAttribute(RedPacketConstant.MESSAGE_ATTR_IS_RED_PACKET_MESSAGE, false)) {
-                        RedPacketUtil.openRedPacket(getActivity(), chatType, rpMessage, toChatUsername, messageList);
-                    }
-                    break;
+
                 default:
                     break;
             }
@@ -336,21 +341,15 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 
     @Override
     public boolean onMessageBubbleClick(EMMessage message) {
-        try {
-            String cardData = message.getStringAttribute("cardData");
-
-            if (cardData != null) {
-                rpMessage = message;
-                startActivityForResult(new Intent(this.getContext(), AnswerCardActivity.class).putExtra("cardData", cardData), REQUEST_CODE_ANSWER);
-                return true;
-            }
-        } catch (HyphenateException e) {
-            e.printStackTrace();
+        //red packet code : 拆红包页面
+        if (message.getBooleanAttribute(RedPacketConstant.MESSAGE_ATTR_IS_RED_PACKET_MESSAGE, false)){
+            RedPacketUtil.openRedPacket(getActivity(), chatType, message, toChatUsername, messageList);
+            return true;
         }
-
-
+        //end of red packet code
         return false;
-    }
+
+     }
 
 
     @Override
@@ -382,20 +381,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                 if (chatType == EaseConstant.CHATTYPE_GROUP) {
                     jsonArray = ACache.get(getActivity()).getAsJSONArray(toChatUsername);
                 }
-                Intent intent1 = new Intent(getContext(), QuestionCardActivity.class);
-                intent1.putExtra("chatType", chatType);
-                intent1.putExtra("toChatUsername", toChatUsername);
-                if (jsonArray != null) {
-                    intent1.putExtra("jsonArray", jsonArray.toJSONString());
-
-                } else {
-
-                    intent1.putExtra("jsonArray", "");
-                }
-
-                startActivityForResult(intent1, REQUEST_CODE_SEND_MONEY);
-                //    RedPacketUtil.startRedPacketActivityForResult(this, chatType, toChatUsername, REQUEST_CODE_SEND_MONEY,jsonArray);
-                break;
+                RedPacketUtil.startRedPacketActivityForResult(this, chatType, toChatUsername, REQUEST_CODE_SEND_MONEY,jsonArray);
+                 break;
             default:
                 break;
         }
@@ -536,8 +523,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                 EMCmdMessageBody cmdMsgBody = (EMCmdMessageBody) message.getBody();
                 String action = cmdMsgBody.action();//get user defined action
                 if (action.equals(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION)) {
-                    Log.d("ack_redpacket-->","222222");
-                    RedPacketUtil.receiveRedPacketAckMessage(message);
+                     RedPacketUtil.receiveRedPacketAckMessage(message);
                     messageList.refresh();
                 }
             }

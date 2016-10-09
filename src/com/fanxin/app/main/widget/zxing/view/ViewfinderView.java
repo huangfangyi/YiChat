@@ -28,7 +28,6 @@ import android.view.View;
 import com.fanxin.app.main.widget.zxing.camera.CameraManager;
 import com.google.zxing.ResultPoint;
 
-
 import java.util.Collection;
 import java.util.HashSet;
 

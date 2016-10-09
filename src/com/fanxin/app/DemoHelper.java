@@ -1,24 +1,42 @@
 package com.fanxin.app;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import com.alibaba.fastjson.JSONObject;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.fanxin.app.db.DemoDBManager;
+import com.fanxin.app.db.InviteMessgeDao;
 import com.fanxin.app.db.UserDao;
+import com.fanxin.app.domain.EmojiconExampleGroupData;
 import com.fanxin.app.domain.InviteMessage;
+import com.fanxin.app.domain.RobotUser;
 import com.fanxin.app.main.FXConstant;
+import com.fanxin.app.main.activity.ChatActivity;
+import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.service.GroupService;
 import com.fanxin.app.main.utils.JSONUtil;
 import com.fanxin.app.receiver.CallReceiver;
+import com.fanxin.app.ui.VideoCallActivity;
 import com.fanxin.app.ui.VoiceCallActivity;
+import com.fanxin.app.utils.PreferenceManager;
+import com.fanxin.easeui.EaseConstant;
+import com.fanxin.easeui.controller.EaseUI;
+import com.fanxin.easeui.controller.EaseUI.EaseEmojiconInfoProvider;
+import com.fanxin.easeui.controller.EaseUI.EaseSettingsProvider;
+import com.fanxin.easeui.controller.EaseUI.EaseUserProfileProvider;
 import com.fanxin.easeui.domain.EaseEmojicon;
+import com.fanxin.easeui.domain.EaseEmojiconGroupEntity;
+import com.fanxin.easeui.domain.EaseUser;
 import com.fanxin.easeui.model.EaseAtMessageHelper;
+import com.fanxin.easeui.model.EaseNotifier;
+import com.fanxin.easeui.model.EaseNotifier.EaseNotificationInfoProvider;
 import com.fanxin.easeui.utils.EaseCommonUtils;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.EMConnectionListener;
@@ -28,35 +46,21 @@ import com.hyphenate.EMGroupChangeListener;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMCmdMessageBody;
+import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMMessage.ChatType;
 import com.hyphenate.chat.EMMessage.Type;
 import com.hyphenate.chat.EMOptions;
-import com.fanxin.app.db.InviteMessgeDao;
-import com.fanxin.app.domain.EmojiconExampleGroupData;
-import com.fanxin.app.domain.RobotUser;
-import com.fanxin.app.main.activity.ChatActivity;
-import com.fanxin.app.main.fragment.MainActivity;
-import com.fanxin.app.ui.VideoCallActivity;
-import com.fanxin.app.utils.PreferenceManager;
-import com.fanxin.easeui.controller.EaseUI;
-import com.fanxin.easeui.controller.EaseUI.EaseEmojiconInfoProvider;
-import com.fanxin.easeui.controller.EaseUI.EaseSettingsProvider;
-import com.fanxin.easeui.controller.EaseUI.EaseUserProfileProvider;
-import com.fanxin.easeui.domain.EaseEmojiconGroupEntity;
-import com.fanxin.easeui.domain.EaseUser;
-import com.fanxin.easeui.model.EaseNotifier;
-import com.fanxin.easeui.model.EaseNotifier.EaseNotificationInfoProvider;
+import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
 
-import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class DemoHelper {
     /**
@@ -85,7 +89,6 @@ public class DemoHelper {
     private Map<String, RobotUser> robotList;
 
 
-
     private static DemoHelper instance = null;
 
     private DemoModel demoModel = null;
@@ -97,7 +100,7 @@ public class DemoHelper {
 
 
     private boolean isSyncingGroupsWithServer = false;
-     private boolean isGroupsSyncedWithServer = false;
+    private boolean isGroupsSyncedWithServer = false;
 
     public boolean isVoiceCalling;
     public boolean isVideoCalling;
@@ -401,8 +404,8 @@ public class DemoHelper {
 
         @Override
         public void onInvitationReceived(String groupId, String groupName, String inviter, String reason) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-//            new InviteMessgeDao(appContext).deleteMessage(groupId);
+            appContext.startService(new Intent(appContext, GroupService.class).putExtra("groupId", groupId).putExtra("groupName",groupName));
+            //            new InviteMessgeDao(appContext).deleteMessage(groupId);
 //
 //            // user invite you to join group
 //            InviteMessage msg = new InviteMessage();
@@ -420,8 +423,7 @@ public class DemoHelper {
 
         @Override
         public void onInvitationAccpted(String groupId, String invitee, String reason) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-//            new InviteMessgeDao(appContext).deleteMessage(groupId);
+ //            new InviteMessgeDao(appContext).deleteMessage(groupId);
 //
 //            //user accept your invitation
 //            boolean hasGroup = false;
@@ -451,9 +453,7 @@ public class DemoHelper {
 
         @Override
         public void onInvitationDeclined(String groupId, String invitee, String reason) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-//            new InviteMessgeDao(appContext).deleteMessage(groupId);
-//
+ //
 //            //user declined your invitation
 //            boolean hasGroup = false;
 //            EMGroup group = null;
@@ -482,22 +482,19 @@ public class DemoHelper {
 
         @Override
         public void onUserRemoved(String groupId, String groupName) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-            //user is removed from group
+            appContext.startService(new Intent(appContext, GroupService.class).putExtra("groupId", groupId).putExtra("groupName",groupName));            //user is removed from group
 //            broadcastManager.sendBroadcast(new Intent(Constant.ACTION_GROUP_CHANAGED));
         }
 
         @Override
         public void onGroupDestroy(String groupId, String groupName) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-//            // group is dismissed,
+            appContext.startService(new Intent(appContext, GroupService.class).putExtra("groupId", groupId).putExtra("groupName",groupName));//            // group is dismissed,
 //            broadcastManager.sendBroadcast(new Intent(Constant.ACTION_GROUP_CHANAGED));
         }
 
         @Override
         public void onApplicationReceived(String groupId, String groupName, String applyer, String reason) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-//
+            appContext.startService(new Intent(appContext, GroupService.class).putExtra("groupId", groupId).putExtra("groupName",groupName));//
 //            // user apply to join group
 //            InviteMessage msg = new InviteMessage();
 //            msg.setFrom(applyer);
@@ -513,7 +510,7 @@ public class DemoHelper {
 
         @Override
         public void onApplicationAccept(String groupId, String groupName, String accepter) {
-            appContext.startService(new Intent(appContext, GroupService.class));
+            appContext.startService(new Intent(appContext, GroupService.class).putExtra("groupId", groupId).putExtra("groupName",groupName));
 
 //            String st4 = appContext.getString(R.string.Agreed_to_your_group_chat_application);
 //            // your application was accepted
@@ -534,15 +531,12 @@ public class DemoHelper {
 
         @Override
         public void onApplicationDeclined(String groupId, String groupName, String decliner, String reason) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-            // your application was declined, we do nothing here in demo
+            appContext.startService(new Intent(appContext, GroupService.class).putExtra("groupId", groupId).putExtra("groupName",groupName));            // your application was declined, we do nothing here in demo
         }
 
         @Override
         public void onAutoAcceptInvitationFromGroup(String groupId, String inviter, String inviteMessage) {
-            appContext.startService(new Intent(appContext, GroupService.class));
-//            // got an invitation
-//            String st3 = appContext.getString(R.string.Invite_you_to_join_a_group_chat);
+ //            String st3 = appContext.getString(R.string.Invite_you_to_join_a_group_chat);
 //            EMMessage msg = EMMessage.createReceiveMessage(Type.TXT);
 //            msg.setChatType(ChatType.GroupChat);
 //            msg.setFrom(inviter);
@@ -705,9 +699,14 @@ public class DemoHelper {
                 for (EMMessage message : messages) {
                     EMLog.d(TAG, "onMessageReceived id : " + message.getMsgId());
                     // in background, do not refresh UI, notify it in notification bar
-                    if (!easeUI.hasForegroundActivies()&&message.getChatType()!=ChatType.ChatRoom) {
+                    if (!easeUI.hasForegroundActivies() && message.getChatType() != ChatType.ChatRoom) {
+                        if (message.getChatType() == ChatType.Chat && !DemoHelper.getInstance().getContactList().containsKey(message.getUserName())) {
+                            return;
+                        }
                         getNotifier().onNewMsg(message);
                     }
+
+
                 }
             }
 
@@ -722,7 +721,7 @@ public class DemoHelper {
                         if (action.equals(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION)) {
                             RedPacketUtil.receiveRedPacketAckMessage(message);
                             broadcastManager.sendBroadcast(new Intent(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION));
-                            Log.d("ack_redpacket-->","11111");
+                            Log.d("ack_redpacket-->", "11111");
                         }
                     }
                     if (action.equals(FXConstant.CMD_ADD_FRIEND)) {
@@ -758,7 +757,8 @@ public class DemoHelper {
                             List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
                             for (InviteMessage inviteMessage : msgs) {
                                 if (inviteMessage.getFrom().equals(message.getFrom())) {
-                                    return;
+                                    inviteMessgeDao.deleteMessage(message.getFrom());
+
                                 }
                             }
                             // save invitation as message
@@ -769,13 +769,127 @@ public class DemoHelper {
                             Log.d(TAG, message.getFrom() + "accept your request");
                             msg.setStatus(InviteMessage.InviteMesageStatus.BEAGREED);
                             notifyNewInviteMessage(msg);
-                            EaseUser user=JSONUtil.Json2User(JSONObject.parseObject(userInfo));
-                            getContactList().put(user.getUsername(),user);
+                            EaseUser user = JSONUtil.Json2User(JSONObject.parseObject(userInfo));
+                            getContactList().put(user.getUsername(), user);
                             userDao.saveContact(user);
                             broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
                         } catch (HyphenateException e) {
                             e.printStackTrace();
                         }
+                    } else if (action.equals(FXConstant.FX_REVOKE_MESSAGE)) {
+                        if (message.getChatType() == ChatType.GroupChat) {
+
+
+                            String groupId = message.getTo();
+
+                            try {
+                                String msgId = message.getStringAttribute(FXConstant.REVOKE_MESSAGE_ID);
+                                EMConversation emConversation = EMClient.getInstance().chatManager().getConversation(groupId);
+                                emConversation.removeMessage(msgId);
+                            } catch (HyphenateException e) {
+                                e.printStackTrace();
+                            }
+
+                            try {
+                                String content = appContext.getString(R.string.revoke_content_ed);
+                                try {
+                                    String revokeNick = message.getStringAttribute(FXConstant.KEY_USER_INFO);
+                                    JSONObject jsonObject = JSONObject.parseObject(revokeNick);
+                                    String nick = jsonObject.getString("nick");
+                                    if (!DemoHelper.getInstance().getCurrentUsernName().equals(message.getFrom())) {
+
+                                        content = String.format(appContext.getString(R.string.revoke_content_someone), nick);
+                                    }
+                                } catch (HyphenateException e) {
+                                    e.printStackTrace();
+                                }
+
+                                Log.d("content--->", content);
+
+                                EMMessage msg = EMMessage.createReceiveMessage(EMMessage.Type.TXT);
+                                msg.setChatType(ChatType.GroupChat);
+                                msg.setFrom(DemoHelper.getInstance().getCurrentUsernName());
+                                msg.setTo(groupId);
+                                msg.setMsgId(UUID.randomUUID().toString());
+                                try {
+                                    msg.addBody(new EMTextMessageBody( content));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                msg.setStatus(EMMessage.Status.SUCCESS);
+                                msg.setAttribute(FXConstant.IS_MESSAGE_REVOKE, true);
+                                msg.setAttribute(FXConstant.IS_MESSAGE_REVOKE_SEND, false);
+                                // save invitation as messages
+                                EMClient.getInstance().chatManager().saveMessage(msg);
+                            } catch (NullPointerException e) {
+                                e.printStackTrace();
+                            }
+
+                        } else {
+                            String userName = message.getFrom();
+                            try {
+                                String msgId = message.getStringAttribute(FXConstant.REVOKE_MESSAGE_ID);
+                                EMConversation emConversation = EMClient.getInstance().chatManager().getConversation(userName);
+                                emConversation.removeMessage(msgId);
+                            } catch (HyphenateException e) {
+                                e.printStackTrace();
+                            }
+
+                            try {
+                                String content = appContext.getString(R.string.revoke_content_ed);
+                                Log.d("content--->", content);
+                                EMMessage msg = EMMessage.createReceiveMessage(EMMessage.Type.TXT);
+                                msg.setChatType(EMMessage.ChatType.Chat);
+                                msg.setFrom(userName);
+                                msg.setTo(DemoHelper.getInstance().getCurrentUsernName());
+                                msg.setMsgId(UUID.randomUUID().toString());
+                                try {
+                                    msg.addBody(new EMTextMessageBody( content));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                msg.setStatus(EMMessage.Status.SUCCESS);
+                                msg.setAttribute(FXConstant.IS_MESSAGE_REVOKE, true);
+                                msg.setAttribute(FXConstant.IS_MESSAGE_REVOKE_SEND, false);
+                                // save invitation as messages
+                                EMClient.getInstance().chatManager().saveMessage(msg);
+                            } catch (NullPointerException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                        appContext.sendBroadcast(new Intent().setAction(EaseConstant.ACTION_DELETE_MSG));
+
+                    } else if (action.equals(FXConstant.CMD_DELETE_FRIEND)) {
+
+                        Map<String, EaseUser> localUsers = DemoHelper.getInstance().getContactList();
+                        localUsers.remove(message.getFrom());
+                        userDao.deleteContact(message.getFrom());
+                        inviteMessgeDao.deleteMessage(message.getFrom());
+                        broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+                    }else if(action.equals(FXConstant.CMD_REFUSE_FRIEND)){
+                        try {
+                            String userInfo = message.getStringAttribute(FXConstant.KEY_USER_INFO);
+                            List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
+                            for (InviteMessage inviteMessage : msgs) {
+                                if (inviteMessage.getFrom().equals(message.getFrom())) {
+                                    inviteMessgeDao.deleteMessage(message.getFrom());
+
+                                }
+                            }
+                            // save invitation as message
+                            InviteMessage msg = new InviteMessage();
+                            msg.setFrom(message.getFrom());
+                            msg.setReason(userInfo);
+                            msg.setTime(System.currentTimeMillis());
+                            Log.d(TAG, message.getFrom() + "refused your request");
+                            msg.setStatus(InviteMessage.InviteMesageStatus.BEREFUSED);
+                            notifyNewInviteMessage(msg);
+                            broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+                        } catch (HyphenateException e) {
+                            e.printStackTrace();
+                        }
+
                     }
 
                     //maybe you need get extension of your message
@@ -786,6 +900,7 @@ public class DemoHelper {
 
             @Override
             public void onMessageReadAckReceived(List<EMMessage> messages) {
+
             }
 
             @Override
@@ -950,7 +1065,6 @@ public class DemoHelper {
     }
 
 
-
     void endCall() {
         try {
             EMClient.getInstance().callManager().endCall();
@@ -976,6 +1090,7 @@ public class DemoHelper {
             syncGroupsListeners.remove(listener);
         }
     }
+
     /**
      * Get group list from server
      * This method will save the sync state
@@ -1035,18 +1150,13 @@ public class DemoHelper {
     }
 
 
-
-
-
-
-
     public boolean isSyncingGroupsWithServer() {
         return isSyncingGroupsWithServer;
     }
+
     public boolean isGroupsSyncedWithServer() {
         return isGroupsSyncedWithServer;
     }
-
 
 
     synchronized void reset() {
@@ -1069,9 +1179,6 @@ public class DemoHelper {
     public void popActivity(Activity activity) {
         easeUI.popActivity(activity);
     }
-
-
-
 
 
 }

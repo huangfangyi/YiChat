@@ -48,7 +48,7 @@ public class ChatSettingSingleActivity extends BaseActivity implements
     private  Map<String, TopUser> topMap = new HashMap<String, TopUser>();
     private ProgressDialog progressDialog;
     public static ChatSettingSingleActivity instance;
-    private  EaseUser user;
+    private EaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

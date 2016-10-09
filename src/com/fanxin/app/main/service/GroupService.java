@@ -2,20 +2,24 @@ package com.fanxin.app.main.service;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.db.ACache;
+import com.fanxin.app.main.utils.GroupUitls;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
+import com.hyphenate.chat.EMMessage;
 import com.hyphenate.exceptions.HyphenateException;
 
 import java.util.ArrayList;
@@ -32,9 +36,10 @@ public class GroupService extends Service{
             super.handleMessage(msg);
             if(msg.what==1000){
                 //JSONArray jsonArray= (JSONArray) msg.obj;
-                String groupId= (String) msg.obj;
-                getGroupMembersInServer(groupId);
-
+                Bundle bundle=msg.getData();
+                String groupId= bundle.getString("groupId");
+                String groupName=bundle.getString("groupName");
+                GroupUitls.getInstance(). getGroupMembersInServer(groupId,groupName,null);
             }
 
         }
@@ -49,64 +54,56 @@ public class GroupService extends Service{
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        refreshGroupInfo();
+        String groupId=intent.getStringExtra("groupId");
+        String groupName=intent.getStringExtra("groupName");
+        refreshGroupInfo(groupId,groupName);
+
         return super.onStartCommand(intent, flags, startId);
     }
 
-    private  void  refreshGroupInfo(){
+    private  void  refreshGroupInfo(String groupId,String groupName){
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //从服务器获取自己加入的和创建的群组列表，此api获取的群组sdk会自动保存到内存和db。
-                try {
-                    List<EMGroup> grouplist = EMClient.getInstance().groupManager().getJoinedGroupsFromServer();//需异步处理
-                    for(   EMGroup emGroup:   grouplist){
-                        EMGroup group = EMClient.getInstance().groupManager().getGroupFromServer(emGroup.getGroupId());
-                        if(group!=null&&group.getGroupId()!=null){
-                            Message msg=handler.obtainMessage();
-                            msg.what=1000;
-                            msg.obj=group.getGroupId();
-                            msg.sendToTarget();
+        if(TextUtils.isEmpty(groupId)){
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    //从服务器获取自己加入的和创建的群组列表，此api获取的群组sdk会自动保存到内存和db。
+                    try {
+                        List<EMGroup> grouplist = EMClient.getInstance().groupManager().getJoinedGroupsFromServer();//需异步处理
+                        for(   EMGroup emGroup:   grouplist){
+                            EMGroup group = EMClient.getInstance().groupManager().getGroupFromServer(emGroup.getGroupId());
+                            if(group!=null&&group.getGroupId()!=null){
+                                Bundle bundle=new Bundle();
+                                bundle.putString("groupId",group.getGroupId());
+                                bundle.putString("groupName",group.getGroupName());
+                                Message msg=handler.obtainMessage();
+                                msg.what=1000;
+                                msg.setData(bundle);
+                                msg.sendToTarget();
+                            }
                         }
+                    } catch (HyphenateException e) {
+                        e.printStackTrace();
                     }
-                } catch (HyphenateException e) {
-                    e.printStackTrace();
                 }
-            }
-        }).start();
+            }).start();
+
+        }else {
+
+            GroupUitls.getInstance().getGroupMembersInServer(groupId,groupName, new GroupUitls.MembersCallBack() {
+                @Override
+                public void onSuccess(JSONArray jsonArray) {
+
+                }
+
+                @Override
+                public void onFailure() {
+
+                }
+            });
+        }
 
     }
 
-
-    private  void   getGroupMembersInServer(final String groupId){
-
-        List<Param> params = new ArrayList<>();
-        params.add(new Param("groupId", groupId));
-        OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
-            @Override
-            public void onResponse(JSONObject jsonObject) {
-
-                if(jsonObject.containsKey("code")){
-                    int code =Integer.parseInt(jsonObject.getString("code")) ;
-                    if (code == 1000) {
-                        if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
-                             JSONArray jsonArray = jsonObject.getJSONArray("data");
-                              ACache.get(getApplicationContext()).put(groupId,jsonArray);
-
-                        }
-                    }
-
-                }
-            }
-
-            @Override
-            public void onFailure(String errorMsg) {
-
-            }
-        });
-
-
-    }
 
 }

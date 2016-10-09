@@ -66,82 +66,10 @@ public class FragmentFind extends Fragment {
             }
 
         });
-        getView().findViewById(R.id.re_rp_group).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-
-
-                List<EMGroup> groupList= EMClient.getInstance().groupManager().getAllGroups();
-                 boolean isJoined=false;
-
-                for(EMGroup group:groupList){
-                    if(group.getGroupId().equals(FXConstant.REDPACKET_GROUP_ID)){
-                        isJoined=true;
-                    }
-
-                }
-                if(isJoined){
-
-                    intoRPGroupChat();
-                }else{
-
-                    joinGroupInServer();
-                }
-
-            }
-
-        });
-    }
-
-    private void intoRPGroupChat(){
-              startActivity(new Intent(getContext(), ChatActivity.class).putExtra("chatType", EaseConstant.CHATTYPE_GROUP).putExtra("userId",FXConstant.REDPACKET_GROUP_ID));
-    }
-
-    private  void  joinGroupInServer(){
-        final ProgressDialog progressDialog=new ProgressDialog(getContext());
-        progressDialog.setMessage("正在加入红包群");
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.show();
-        List<Param> params=new ArrayList<>();
-        params.add(new Param("groupId",FXConstant.REDPACKET_GROUP_ID));
-        params.add(new Param("members",DemoHelper.getInstance().getCurrentUsernName()));
-        OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_ADD_MEMBERS, new OkHttpManager.HttpCallBack() {
-            @Override
-            public void onResponse(JSONObject jsonObject) {
-                progressDialog.dismiss();
-                int code=jsonObject.getIntValue("code");
-                if(code==1000){
-                    JSONObject data=jsonObject.getJSONObject("data");
-                    if(data.containsKey("data")&&data.get("data") instanceof JSONObject&&data.getJSONObject("data").containsKey("newmembers")&&data.getJSONObject("data").get("newmembers") instanceof JSONArray){
-
-                        JSONArray jsonArray=data.getJSONObject("data").getJSONArray("newmembers");
-                        if(jsonArray!=null&&jsonArray.size()!=0){
-
-                            Toast.makeText(getContext(),"加群成功",Toast.LENGTH_SHORT).show();
-                            intoRPGroupChat();
-
-                            getActivity().startService(new Intent(getContext(), GroupService.class));
-                            return;
-
-                        }
-                    }
-
-                }
-                Toast.makeText(getContext(),"加群失败 ...",Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(String errorMsg) {
-                progressDialog.dismiss();
-                Toast.makeText(getContext(),"加群失败 ...",Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
     }
+
+
 
 
 }

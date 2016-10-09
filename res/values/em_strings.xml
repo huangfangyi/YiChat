@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="app_name">FanXin3.0</string>
+    <string name="app_name">FanXin3.1</string>
     <string name="app_slogon">IM as a service</string>
     <string name="text_ack_msg">Read</string>
     <string name="text_delivered_msg">Delivered</string>
     <string name="back">Back</string>
     <string name="save">Save</string>
+    <string name="userNumber">userNumber</string>
+    <string name="region">Region</string>
+    <string name="psw_reset">Password Reset</string>
     <string name="button_pushtotalk">Hold to talk</string>
     <string name="button_send">Send</string>
     <string name="attach_smile">Emoticon</string>
@@ -330,4 +333,10 @@
     
     <string name="network_unstable">Network unstable</string>
     <string name="no_call_data">No call data</string>
+
+    <string name="revoke">REVOKE</string>
+    <string name="revoke_content">you have revoked a msg</string>
+    <string name="revoke_content_ed">your friend has revoked a msg </string>
+    <string name="revoke_content_someone">%s has revoked a msg</string>
+
 </resources>

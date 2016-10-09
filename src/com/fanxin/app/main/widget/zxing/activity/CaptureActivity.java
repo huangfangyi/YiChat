@@ -22,7 +22,6 @@ import com.fanxin.app.main.widget.zxing.view.ViewfinderView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 
-
 import java.io.IOException;
 import java.util.Vector;
 

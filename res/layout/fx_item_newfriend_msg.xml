@@ -25,11 +25,28 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="14dp"
+            android:maxWidth="80dp"
+            android:text="SDGFSDGDGSDG"
+            android:singleLine="true"
             android:layout_toRightOf="@id/iv_avatar"
             android:textColor="#353535"
             android:textSize="16sp" />
 
         <TextView
+            android:singleLine="true"
+            android:maxWidth="160dp"
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="15dp"
+            android:text="已拒绝你的好友申请"
+            android:layout_toRightOf="@id/tv_name"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_marginTop="5dp"
             android:id="@+id/tv_reason"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +54,7 @@
             android:layout_marginBottom="14dp"
             android:layout_marginLeft="12dp"
             android:layout_toRightOf="@id/iv_avatar"
-            android:text="请求加你为好友"
+            android:text="申请理由："
             android:textColor="#aaaaaa"
             android:textSize="14sp" />
 
@@ -58,7 +75,15 @@
                 android:text="已添加"
                 android:textColor="#AAAAAA"
                 android:textSize="12sp" />
-
+            <Button
+                android:id="@+id/btn_refused"
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:background="@drawable/fx_bg_btn_gray"
+                android:text="拒绝"
+                android:layout_marginRight="10dp"
+                android:textColor="#000"
+                android:textSize="12sp" />
             <Button
                 android:id="@+id/btn_add"
                 android:layout_width="48dp"

@@ -139,7 +139,7 @@ public class EaseChatRowVideo extends EaseChatRowFile{
                 @Override
                 protected Bitmap doInBackground(Void... params) {
                     if (new File(localThumb).exists()) {
-                        return ImageUtils.decodeScaleImage(localThumb, 160, 160);
+                        return ImageUtils.decodeScaleImage(localThumb, 320, 320);
                     } else {
                         return null;
                     }

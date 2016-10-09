@@ -8,16 +8,15 @@ import android.support.multidex.MultiDex;
 import android.util.DisplayMetrics;
 
 import com.alibaba.fastjson.JSONObject;
-
 import com.easemob.redpacketsdk.RedPacket;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.fanxin.app.main.db.TopUser;
 import com.fanxin.app.main.db.TopUserDao;
-import com.fanxin.app.main.utils.LocalUserUtil;
+import com.fanxin.app.main.utils.GroupUitls;
+import com.fanxin.app.main.utils.LocalDataUtils;
 import com.fanxin.app.main.utils.OkHttpManager;
-import com.tencent.bugly.crashreport.CrashReport;
+ import com.tencent.bugly.crashreport.CrashReport;
 import com.ucloud.live.UEasyStreaming;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +59,7 @@ public class DemoApplication extends Application {
         applicationContext = this;
         instance = this;
 		OkHttpManager.init(instance);
-		LocalUserUtil.init(instance);
+		LocalDataUtils.init(instance);
         DemoHelper.getInstance().init(applicationContext);
 		//red packet code : 初始化红包上下文，开启日志输出开关
 		RedPacket.getInstance().initContext(applicationContext);
@@ -69,7 +68,7 @@ public class DemoApplication extends Application {
 		UEasyStreaming.initStreaming("publish3-key");
 		UEasyStreaming.syncMobileConfig(this, 3600 * 24);
 		CrashReport.initCrashReport(getApplicationContext(), "900047205", false);
-
+		GroupUitls.init(instance);
 	}
 
 	public static DemoApplication getInstance() {
@@ -85,12 +84,12 @@ public class DemoApplication extends Application {
 	public  void setUserJson( JSONObject userJson){
 
 		this.userJson=userJson;
-		LocalUserUtil.getInstance().setUserJson(userJson);
+		LocalDataUtils.getInstance().setUserJson(userJson);
 
 	}
-	public  JSONObject getUserJson(){
+	public JSONObject getUserJson(){
 		if(userJson==null){
-			userJson=LocalUserUtil.getInstance().getUserJson();
+			userJson= LocalDataUtils.getInstance().getUserJson();
 		}
 		return  userJson;
 	}

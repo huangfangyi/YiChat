@@ -3,9 +3,11 @@ package com.fanxin.app.main.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONException;
@@ -32,11 +34,9 @@ import java.util.List;
  */
 public class UserDetailsActivity extends BaseActivity {
     /**
-     *
      * 用户详情页接收两种传值
      * 1：用户完整资料的JSON字符串-userInfo-这种情况如果是好友进行刷新
      * 2：只传用户的hxid，这种情况直接从网络取数据显示-如果是好友，刷新资料
-     *
      */
 
     @Override
@@ -74,11 +74,50 @@ public class UserDetailsActivity extends BaseActivity {
         ImageView iv_avatar = (ImageView) this.findViewById(R.id.iv_avatar);
         ImageView iv_sex = (ImageView) this.findViewById(R.id.iv_sex);
         TextView tv_name = (TextView) this.findViewById(R.id.tv_name);
+        TextView tv_mobile = (TextView) this.findViewById(R.id.tv_mobile);
+        TextView tv_sign = (TextView) this.findViewById(R.id.tv_sign);
+        TextView tv_region = (TextView) this.findViewById(R.id.tv_region);
+        TextView tv_mixin = (TextView) this.findViewById(R.id.tv_mixin);
+
+        RelativeLayout re_mobile = (RelativeLayout) this.findViewById(R.id.re_mobile);
         String hxid = jsonObject.getString(FXConstant.JSON_KEY_HXID);
         String nick = jsonObject.getString(FXConstant.JSON_KEY_NICK);
         String avatar = FXConstant.URL_AVATAR + jsonObject.getString(FXConstant.JSON_KEY_AVATAR);
+        String sign = jsonObject.getString(FXConstant.JSON_KEY_SIGN);
+        String fxid = jsonObject.getString(FXConstant.JSON_KEY_FXID);
+        String tel = jsonObject.getString(FXConstant.JSON_KEY_TEL);
         Glide.with(this).load(avatar).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(iv_avatar);
         tv_name.setText(nick);
+        tv_sign.setText(sign);
+        String province = jsonObject.getString(FXConstant.JSON_KEY_PROVINCE);
+        String city = jsonObject.getString(FXConstant.JSON_KEY_CITY);
+        if (!TextUtils.isEmpty(province) && !TextUtils.isEmpty(city)) {
+            tv_region.setText(province + " " + city);
+            if (province.equals(city)) {
+                tv_region.setText(city);
+            }
+        } else {
+
+            tv_region.setText("未设置");
+        }
+
+//        String is_show_tel=jsonObject.getString(FXConstant.JSON_KEY_EN_SHOW_TEL);
+//        if("1".equals(is_show_tel)){
+
+        tv_mobile.setText(tel);
+//        }else {
+//
+//            re_mobile.setVisibility(View.GONE);
+//        }
+
+        if (!TextUtils.isEmpty(fxid)) {
+
+            tv_mixin.setText("凡信号： " + fxid);
+        } else {
+            tv_mixin.setText("凡信号： " + "未设置");
+
+        }
+
         if ("男".equals(jsonObject.getString(FXConstant.JSON_KEY_SEX))) {
             iv_sex.setImageResource(R.drawable.fx_icon_male);
         } else {
@@ -100,7 +139,6 @@ public class UserDetailsActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(UserDetailsActivity.this, AddFriendsFinalActivity.class).putExtra(FXConstant.KEY_USER_INFO, jsonObject.toJSONString()));
-
                 }
             });
             return;
@@ -108,7 +146,7 @@ public class UserDetailsActivity extends BaseActivity {
         btnMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserDetailsActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID,jsonObject.getString(FXConstant.JSON_KEY_HXID)));
+                startActivity(new Intent(UserDetailsActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID, jsonObject.getString(FXConstant.JSON_KEY_HXID)));
             }
         });
     }

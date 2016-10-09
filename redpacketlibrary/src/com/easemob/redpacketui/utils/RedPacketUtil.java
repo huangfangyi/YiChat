@@ -51,7 +51,7 @@ public class RedPacketUtil {
      * @param toChatUsername
      * @param requestCode
      */
-    public static void startRedPacketActivityForResult(FragmentActivity fragment, int chatType, final String toChatUsername, int requestCode, final JSONArray membersJA) {
+    public static void startRedPacketActivityForResult(Fragment  fragment, int chatType, final String toChatUsername, int requestCode, final JSONArray membersJA) {
         //发送者头像url
         String fromAvatarUrl = "none";
         //发送者昵称 设置了昵称就传昵称 否则传id
@@ -136,7 +136,7 @@ public class RedPacketUtil {
             redPacketInfo.groupMemberCount = group.getAffiliationsCount();
             redPacketInfo.chatType = RPConstant.CHATTYPE_GROUP;
         }
-        Intent intent = new Intent(fragment, RPRedPacketActivity.class);
+        Intent intent = new Intent(fragment.getContext(), RPRedPacketActivity.class);
         intent.putExtra(RPConstant.EXTRA_RED_PACKET_INFO, redPacketInfo);
         intent.putExtra(RPConstant.EXTRA_TOKEN_DATA, getTokenData());
         fragment.startActivityForResult(intent, requestCode);

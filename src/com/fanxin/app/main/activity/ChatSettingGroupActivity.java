@@ -2,6 +2,7 @@ package com.fanxin.app.main.activity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MotionEvent;
@@ -24,14 +25,15 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
-import com.fanxin.app.main.adapter.GridAdapter;
+import com.fanxin.app.main.adapter.GroupSetingsGridApdater;
+import com.fanxin.app.main.db.ACache;
 import com.fanxin.app.main.db.TopUser;
 import com.fanxin.app.main.db.TopUserDao;
+import com.fanxin.app.main.utils.GroupUitls;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.widget.ExpandGridView;
 import com.fanxin.app.ui.BaseActivity;
-import com.fanxin.easeui.domain.EaseUser;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMGroup;
@@ -70,16 +72,19 @@ public class ChatSettingGroupActivity extends BaseActivity implements
     private String group_name;
     //头像相关用户封装
     private JSONArray jsonArray;
-    private String groupId;
+    public String groupId;
 
-    private EMGroup group;
-    private GridAdapter adapter;
+    public EMGroup group;
+    private GroupSetingsGridApdater adapter;
     public static ChatSettingGroupActivity instance;
-    public static final int RESULT_FINISH = 100;
-
+     private static final int REQUEST_CODE_ADD_USER = 0;
+    private static final int REQUEST_CODE_EXIT = 1;
+    private static final int REQUEST_CODE_EXIT_DELETE = 2;
     // 置顶列表
     private Map<String, TopUser> topMap = new HashMap<String, TopUser>();
 
+    private List<JSONObject> membersJSONArray = new ArrayList<>();
+    private ExpandGridView userGridview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +110,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
         iv_switch_unchattotop = (ImageView) findViewById(R.id.iv_switch_unchattotop);
         iv_switch_block_groupmsg = (ImageView) findViewById(R.id.iv_switch_block_groupmsg);
         iv_switch_unblock_groupmsg = (ImageView) findViewById(R.id.iv_switch_unblock_groupmsg);
+        userGridview = (ExpandGridView) findViewById(R.id.gridview);
         exitBtn = (Button) findViewById(R.id.btn_exit_grp);
 
     }
@@ -124,17 +130,19 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                 if (group == null) {
                     Toast.makeText(ChatSettingGroupActivity.this, "该群已经被解散...",
                             Toast.LENGTH_SHORT).show();
-                    setResult(RESULT_FINISH);
+                    setResult(RESULT_OK);
                     finish();
                     return;
                 }
             } catch (HyphenateException e) {
-                setResult(RESULT_FINISH);
+                setResult(RESULT_OK);
                 finish();
                 return;
             }
 
         }
+
+
         initGroupInfo();
         tv_m_total.setText("(" + String.valueOf(group.getAffiliationsCount()) + ")");
         re_change_groupname.setOnClickListener(this);
@@ -147,6 +155,14 @@ public class ChatSettingGroupActivity extends BaseActivity implements
 
     //群名称相关
     private void initGroupInfo() {
+
+        if(group.getOwner().equals(DemoHelper.getInstance().getCurrentUsernName())){
+            exitBtn.setText("删除群组");
+
+        }else{
+            exitBtn.setText("退出群组");
+        }
+
         try {
             // 转化成json，然后解析
             JSONObject jsonObject = JSONObject.parseObject(group.getGroupName());
@@ -157,36 +173,38 @@ public class ChatSettingGroupActivity extends BaseActivity implements
             if (!TextUtils.isEmpty(group_name)) {
                 tv_groupname.setText(group_name);
             }
+            JSONArray jsonArrayCache= ACache.get(getApplicationContext()).getAsJSONArray(groupId);
+            arrayToList(jsonArrayCache);
+            adapter = new GroupSetingsGridApdater(this,membersJSONArray,group.getOwner().equals(DemoHelper.getInstance().getCurrentUsernName()));
+            userGridview.setAdapter(adapter);
+            getGroupMembersInserver();
+
+            // 保证每次进详情看到的都是最新的group
+            updateGroup();
+
+            // 设置OnTouchListener
+            userGridview.setOnTouchListener(new OnTouchListener() {
+
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+                            if (adapter.isInDeleteMode) {
+                                adapter.isInDeleteMode = false;
+                                adapter.notifyDataSetChanged();
+                                return true;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    return false;
+                }
+            });
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-
-    }
-
-
-    // 显示群成员头像昵称的gridview
-    private void showMembers(List<EaseUser> members) {
-        adapter = new GridAdapter(this, members, hxid.equals(group.getOwner()) ? true : false,groupId);
-        gridview.setAdapter(adapter);
-        // 设置OnTouchListener,为了让群主方便地推出删除模》
-        gridview.setOnTouchListener(new OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        if (adapter.isInDeleteMode) {
-                            adapter.isInDeleteMode = false;
-                            adapter.notifyDataSetChanged();
-                            return true;
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                return false;
-            }
-        });
 
     }
 
@@ -195,8 +213,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
         switch (v.getId()) {
             case R.id.rl_switch_block_groupmsg: // 屏蔽群组
                 if (iv_switch_block_groupmsg.getVisibility() == View.VISIBLE) {
-                    System.out.println("change to unblock group msg");
-                    try {
+                     try {
                         EMClient.getInstance().groupManager().unblockGroupMessage(groupId);
                         iv_switch_block_groupmsg.setVisibility(View.INVISIBLE);
                         iv_switch_unblock_groupmsg.setVisibility(View.VISIBLE);
@@ -204,8 +221,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                         e.printStackTrace();
                     }
                 } else {
-                    System.out.println("change to block group msg");
-                    try {
+                     try {
                         EMClient.getInstance().groupManager().blockGroupMessage(groupId);
                         iv_switch_block_groupmsg.setVisibility(View.VISIBLE);
                         iv_switch_unblock_groupmsg.setVisibility(View.INVISIBLE);
@@ -219,12 +235,10 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                 clearGroupHistory();
                 break;
             case R.id.re_change_groupname:
-                if(FXConstant.REDPACKET_GROUP_ID.equals(group.getGroupId())){
-
-                    Toast.makeText(getApplicationContext(),"活动群不允许改名",Toast.LENGTH_SHORT).show();
+                if (FXConstant.REDPACKET_GROUP_ID.equals(group.getGroupId())) {
+                    Toast.makeText(getApplicationContext(), "活动群不允许改名", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 showNameAlert();
                 break;
             case R.id.rl_switch_chattotop:
@@ -232,7 +246,6 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                 if (iv_switch_chattotop.getVisibility() == View.VISIBLE) {
                     iv_switch_chattotop.setVisibility(View.INVISIBLE);
                     iv_switch_unchattotop.setVisibility(View.VISIBLE);
-
                     if (topMap.containsKey(group.getGroupId())) {
                         topMap.remove(group.getGroupId());
                         TopUserDao topUserDao = new TopUserDao(
@@ -433,68 +446,21 @@ public class ChatSettingGroupActivity extends BaseActivity implements
      * 删除群成员
      * 当删除的是自己，则就是退群或者解散群
      */
-    protected void exitGroup( ) {
+    protected void exitGroup() {
         final ProgressDialog deleteDialog = new ProgressDialog(
                 ChatSettingGroupActivity.this);
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setCanceledOnTouchOutside(false);
-        if ( hxid.equals(group.getOwner())) {
+
+
+        if (hxid.equals(group.getOwner())) {
             //自己是群主，解散群
-            destroyGroup( progressDialog);
-         }else{
-            leaveGroup( progressDialog);
+            destroyGroup(progressDialog);
+        } else {
+            leaveGroup(progressDialog);
 
         }
-
-
-//
-//        deleteDialog.setMessage("正在移除...");
-//        deleteDialog.setCanceledOnTouchOutside(false);
-//        deleteDialog.show();
-//        try {
-//            EMClient.getInstance().groupManager().removeUserFromGroup(groupId,
-//                    username);
-//            for (int i = 0; i < members.size(); i++) {
-//                EaseUser user = members.get(i);
-//                if (user.getUsername().equals(username)) {
-//                    // 移除被删成员信息
-//                    members.remove(user);
-//                    adapter.notifyDataSetChanged();
-//                    m_total = members.size();
-//                    tv_m_total.setText("(" + String.valueOf(m_total) + ")");
-//                    JSONObject newJSON = new JSONObject();
-//                    newJSON.put("groupname", group_name);
-//                    // 在封装数据里面取出删除成员，并且更新
-//                    for (int n = 0; n < jsonarray.size(); n++) {
-//
-//                        JSONObject jsontemp = (JSONObject) jsonarray.get(n);
-//                        if (jsontemp.getString("hxid").equals(username)) {
-//                            jsonarray.remove(jsontemp);
-//                        }
-//                    }
-//
-//                    newJSON.put("jsonArray", jsonarray);
-//                    String updateStr = newJSON.toJSONString();
-//                    Log.e("updateStr------>>>>>0", updateStr);
-//
-//                    EMClient.getInstance().groupManager().changeGroupName(groupId,
-//                            updateStr);
-//
-//                }
-//
-//            }
-//
-//            deleteDialog.dismiss();
-//            Toast.makeText(ChatSettingGroupActivity.this, "移除成功",
-//                    Toast.LENGTH_LONG).show();
-//        } catch (HyphenateException e) {
-//            deleteDialog.dismiss();
-//            Toast.makeText(ChatSettingGroupActivity.this, "移除失败",
-//                    Toast.LENGTH_LONG).show();
-//            e.printStackTrace();
-//        }
-
     }
 
 
@@ -508,8 +474,8 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                 if (progressDialog != null && progressDialog.isShowing()) {
                     progressDialog.dismiss();
                 }
-                int code=jsonObject.getIntValue("code");
-                if(code==1){
+                int code = jsonObject.getIntValue("code");
+                if (code == 1) {
                     if (newGroupName != null) {
                         updateLocalData(newGroupName);
                     }
@@ -529,7 +495,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
     }
 
     //解散群组
-    private void destroyGroup( final ProgressDialog progressDialog) {
+    private void destroyGroup(final ProgressDialog progressDialog) {
         progressDialog.setMessage("正在解散群...");
         progressDialog.show();
         new Thread(new Runnable() {
@@ -543,7 +509,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                             progressDialog.dismiss();
                             Toast.makeText(ChatSettingGroupActivity.this, "解散成功",
                                     Toast.LENGTH_LONG).show();
-                            setResult(RESULT_FINISH);
+                            setResult(RESULT_OK);
                             finish();
 
                         }
@@ -564,7 +530,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
     }
 
     //推出群组
-    private void leaveGroup( final ProgressDialog progressDialog) {
+    private void leaveGroup(final ProgressDialog progressDialog) {
         progressDialog.setMessage("正在退出群组...");
         progressDialog.show();
 
@@ -572,7 +538,11 @@ public class ChatSettingGroupActivity extends BaseActivity implements
             @Override
             public void run() {
                 try {
+                     String  groupName=group.getGroupName();
+
                     EMClient.getInstance().groupManager().leaveGroup(groupId);
+                    GroupUitls.getInstance().checkGroupNameWhenDetele(groupName,groupId, DemoHelper.getInstance().getCurrentUsernName());
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -596,7 +566,7 @@ public class ChatSettingGroupActivity extends BaseActivity implements
                             progressDialog.dismiss();
                             Toast.makeText(ChatSettingGroupActivity.this, "退出成功",
                                     Toast.LENGTH_LONG).show();
-                            setResult(RESULT_FINISH);
+                            setResult(RESULT_OK);
                             finish();
 
                         }
@@ -616,22 +586,116 @@ public class ChatSettingGroupActivity extends BaseActivity implements
 
     }
 
-
-    public void back(View view) {
-        setResult(RESULT_OK);
-        finish();
-    }
-
-    @Override
-    public void onBackPressed() {
-        setResult(RESULT_OK);
-        finish();
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         instance = null;
     }
 
+
+
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            switch (requestCode) {
+                case REQUEST_CODE_ADD_USER:// 添加群成员
+                    refreshMembers();
+                    break;
+
+            }
+        }
+    }
+
+    public void refreshMembers() {
+        getGroupMembersInserver();
+    }
+
+    private void getGroupMembersInserver() {
+        GroupUitls.getInstance().getGroupMembersInServer(groupId, group.getGroupName(), new GroupUitls.MembersCallBack() {
+            @Override
+            public void onSuccess(JSONArray jsonArray) {
+                membersJSONArray.clear();
+                if (jsonArray != null) {
+                    ACache.get(getApplicationContext()).put(groupId,jsonArray);
+                    arrayToList(jsonArray);
+                }
+                adapter = new GroupSetingsGridApdater(ChatSettingGroupActivity.this, membersJSONArray,group.getOwner().equals(DemoHelper.getInstance().getCurrentUsernName()));
+                userGridview.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure() {
+
+            }
+        });
+
+//
+//        List<Param> params = new ArrayList<>();
+//        params.add(new Param("groupId", groupId));
+//        OkHttpManager.getInstance().post(params, FXConstant.URL_GROUP_MEMBERS, new OkHttpManager.HttpCallBack() {
+//            @Override
+//            public void onResponse(JSONObject jsonObject) {
+//                int code = jsonObject.getIntValue("code");
+//                if (code == 1000) {
+//                    if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
+//
+//                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+//                        membersJSONArray.clear();
+//                        if (jsonArray != null) {
+//                            ACache.get(getApplicationContext()).put(groupId,jsonArray);
+//
+//                            arrayToList(jsonArray);
+//                        }
+//                        adapter = new GroupSetingsGridApdater(ChatSettingGroupActivity.this, membersJSONArray,group.getOwner().equals(DemoHelper.getInstance().getCurrentUsernName()));
+//                        userGridview.setAdapter(adapter);
+//                    }
+//
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(String errorMsg) {
+//
+//            }
+//        });
+
+
+    }
+
+    public void startAddMembers() {
+        // 进入选人页面
+        startActivityForResult((new Intent(ChatSettingGroupActivity.this, GroupAddMembersActivity.class).putExtra("groupId", groupId)),
+                REQUEST_CODE_ADD_USER);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        updateGroup();
+    }
+
+
+    private void arrayToList(JSONArray jsonArray){
+        if(jsonArray==null){
+
+            return;
+        }
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JSONObject jsonObjectTemp=jsonArray.getJSONObject(i);
+            if(jsonObjectTemp.getString(FXConstant.JSON_KEY_HXID).equals(group.getOwner())){
+
+                membersJSONArray.add(0,jsonObjectTemp);
+            }else {
+                membersJSONArray.add(jsonObjectTemp);
+            }
+
+        }
+    }
 }

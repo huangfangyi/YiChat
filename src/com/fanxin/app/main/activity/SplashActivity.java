@@ -6,22 +6,19 @@ import android.view.animation.AlphaAnimation;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
 import com.fanxin.app.DemoHelper;
+import com.fanxin.app.R;
 import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.service.ContactsService;
 import com.fanxin.app.main.service.GroupService;
-import com.fanxin.app.ui.*;
+import com.fanxin.app.ui.BaseActivity;
 import com.hyphenate.chat.EMClient;
-import com.fanxin.app.R;
-
-import java.security.acl.Group;
 
 /**
  * 开屏页
  *
  */
-public class SplashActivity extends   BaseActivity {
+public class SplashActivity extends BaseActivity {
 	private RelativeLayout rootLayout;
 	private TextView versionText;
 	
@@ -60,8 +57,7 @@ public class SplashActivity extends   BaseActivity {
 						}
 					}
 					startService(new Intent(SplashActivity.this, ContactsService.class));
-					startService(new Intent(SplashActivity.this, GroupService.class));
-					//enter main screen
+ 					//enter main screen
 					startActivity(new Intent(SplashActivity.this, MainActivity.class));
 					//获取下群组信息
  					startService(new Intent(SplashActivity.this, GroupService.class));

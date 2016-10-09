@@ -80,7 +80,7 @@
     <string name="now_refresh_list">正在刷新联系人</string>
     <string name="Application_and_notify">申请与通知</string>
     <string name="save_new_nickname">保存</string>
-    <string name="nickname_description">设置此昵称以后，在与iOS客户端demo聊天过程中，iOS一侧会显示此昵称而不是环信ID，如果对方使用安卓客户端则此设置不生效</string>
+    <string name="nickname_description">设置此昵称以后，在与iOS客户端demo聊天过程中，iOS一侧会显示此昵称而不是凡信ID，如果对方使用安卓客户端则此设置不生效</string>
     <string name="group_chat">群聊</string>
     <string name="chat_room">聊天室</string>
     <string name="add_friend">添加好友</string>
@@ -289,7 +289,7 @@
     <string name="searching">正在搜索..</string>
     <string name="hanging_up">正在挂断..</string>
     <string name="illegal_user_name">用户名不合法</string>
-    <string name="robot_chat">环信小助手</string>
+    <string name="robot_chat">凡信小助手</string>
     <string name="title_user_profile">个人资料</string>
     <string name="nickname">昵称</string>
     <string name="dl_title_upload_photo">上传头像</string>

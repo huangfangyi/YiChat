@@ -13,8 +13,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-
- 
+import com.fanxin.app.Constant;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
@@ -23,9 +22,8 @@ import com.fanxin.app.db.UserDao;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.fragment.MainActivity;
 import com.fanxin.app.main.utils.JSONUtil;
-import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.main.utils.OkHttpManager;
-
+import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.hyphenate.EMCallBack;
@@ -54,7 +52,6 @@ public class LoginActivity extends BaseActivity {
         if (DemoHelper.getInstance().isLoggedIn()) {
             autoLogin = true;
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
             return;
         }
         setContentView(R.layout.fx_activity_login);
@@ -102,6 +99,13 @@ public class LoginActivity extends BaseActivity {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
+
+//        this.findViewById(R.id.tv_wenti).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(LoginActivity.this, PasswordResetActivity.class));
+//            }
+//        });
     }
 
     private void loginInSever(String tel, String password) {
@@ -118,23 +122,7 @@ public class LoginActivity extends BaseActivity {
                 int code = jsonObject.getInteger("code");
                 if (code == 1000) {
                     JSONObject json = jsonObject.getJSONObject("user");
-                    JSONArray friends=json.getJSONArray("friends");
-                    Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
-                    if (friends != null) {
-                        for (int i = 0; i < friends.size(); i++) {
-                            JSONObject friend = friends.getJSONObject(i);
-                            EaseUser easeUser = JSONUtil.Json2User(friend);
-                            userlist.put(easeUser.getUsername(), easeUser);
-                        }
-                        // save the contact list to cache
-                        DemoHelper.getInstance().getContactList().clear();
-                        DemoHelper.getInstance().getContactList().putAll(userlist);
-                        // save the contact list to database
-                        UserDao dao = new UserDao(getApplicationContext());
-                        List<EaseUser> users = new ArrayList<EaseUser>(userlist.values());
-                        dao.saveContactList(users);
-
-                    }
+                     saveFriends(json);
 
                     loginHuanXin(json, pd);
                 } else if (code == 2001) {
@@ -185,6 +173,7 @@ public class LoginActivity extends BaseActivity {
                 }
                 // get user's info (this should be get from App's server or 3rd party service)
                 // DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
+                jsonObject.remove("friends");
                 DemoApplication.getInstance().setUserJson(jsonObject);
                 // enter main activity
                 Intent intent = new Intent(LoginActivity.this,
@@ -245,6 +234,34 @@ public class LoginActivity extends BaseActivity {
                 btn_login.setEnabled(false);
             }
         }
+
+    }
+
+    private void saveFriends(final JSONObject jsonObject){
+       new Thread(new Runnable() {
+           @Override
+           public void run() {
+                JSONArray friends=jsonObject.getJSONArray("friends");
+               Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
+               if (friends != null) {
+                   for (int i = 0; i < friends.size(); i++) {
+                       JSONObject friend = friends.getJSONObject(i);
+                       EaseUser easeUser = JSONUtil.Json2User(friend);
+                       userlist.put(easeUser.getUsername(), easeUser);
+                   }
+                   // save the contact list to cache
+                   DemoHelper.getInstance().getContactList().clear();
+                   DemoHelper.getInstance().getContactList().putAll(userlist);
+                   // save the contact list to database
+                   UserDao dao = new UserDao(getApplicationContext());
+                   List<EaseUser> users = new ArrayList<EaseUser>(userlist.values());
+                   dao.saveContactList(users);
+
+               }
+               sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+
+           }
+       }).start();
 
     }
 

@@ -33,4 +33,9 @@ public class EaseConstant {
 
     public static final String HOST = "http://120.24.211.126/fanxin3/";
     public static final String URL_AVATAR= HOST + "upload/";
+
+    public static final String MESSAGE_ACK_TIME="MESSAGE_ACK_TIME";
+    public static final String ACTION_DELETE_MSG="ACTION_DELETE_MSG";
+
+    public static final String DELETE_MESSAGE_TIME="DELETE_MESSAGE_TIME";
 }

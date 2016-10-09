@@ -29,6 +29,7 @@
 
         <RelativeLayout
             android:id="@+id/bubble"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_chat_activity"
@@ -36,6 +37,9 @@
             android:layout_toLeftOf="@id/iv_userhead" >
 
             <ImageView
+                android:maxWidth="80dp"
+                android:maxHeight="160dp"
+                android:adjustViewBounds="true"
                 android:id="@+id/image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

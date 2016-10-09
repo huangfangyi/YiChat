@@ -199,6 +199,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/re_address"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -279,6 +280,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/tv_region"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

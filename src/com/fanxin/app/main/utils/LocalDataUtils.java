@@ -19,25 +19,25 @@ import android.content.SharedPreferences;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 
-public class LocalUserUtil {
+public class LocalDataUtils {
     /**
      * 保存Preference的name
      */
     public static final String PREFERENCE_NAME = "userInfo";
     private static SharedPreferences mSharedPreferences;
-    private static LocalUserUtil mPreferencemManager;
+    private static LocalDataUtils mPreferencemManager;
     private static SharedPreferences.Editor editor;
     private String SHARED_KEY_USER_INFO = "shared_key_user_info";
 
 
-    private LocalUserUtil(Context cxt) {
+    private LocalDataUtils(Context cxt) {
         mSharedPreferences = cxt.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
         editor = mSharedPreferences.edit();
     }
 
     public static synchronized void init(Context cxt) {
         if (mPreferencemManager == null) {
-            mPreferencemManager = new LocalUserUtil(cxt);
+            mPreferencemManager = new LocalDataUtils(cxt);
         }
     }
 
@@ -47,7 +47,7 @@ public class LocalUserUtil {
      * @param
      * @return
      */
-    public synchronized static LocalUserUtil getInstance() {
+    public synchronized static LocalDataUtils getInstance() {
         if (mPreferencemManager == null) {
             throw new RuntimeException("please init first!");
         }

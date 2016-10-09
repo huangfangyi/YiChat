@@ -75,6 +75,18 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
+        <activity
+            android:name=".main.activity.PasswordResetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <activity
+            android:name=".main.activity.RegionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
+
         <!-- 注册 -->
         <activity
             android:name=".main.activity.RegisterActivity"
@@ -416,16 +428,6 @@
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".main.moments.SocialMainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".main.activity.AnswerCardActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".main.activity.QuestionCardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>

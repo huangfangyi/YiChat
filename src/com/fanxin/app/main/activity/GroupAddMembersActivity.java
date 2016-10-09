@@ -11,9 +11,6 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,22 +19,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
 import com.fanxin.app.main.adapter.PickContactAdapter;
+import com.fanxin.app.main.utils.GroupUitls;
 import com.fanxin.app.main.utils.OkHttpManager;
 import com.fanxin.app.main.utils.Param;
 import com.fanxin.app.ui.BaseActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
-import com.hyphenate.chat.EMGroupManager;
-import com.hyphenate.chat.EMMessage;
-import com.hyphenate.exceptions.HyphenateException;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,28 +43,18 @@ public class GroupAddMembersActivity extends BaseActivity {
     private ImageView iv_search;
     private TextView tv_checked;
     private ListView listView;
-    /**
-     * 是否为一个新建的群组
-     */
+   //是否新建群
     protected boolean isCreatingNewGroup;
-
     private PickContactAdapter contactAdapter;
-    /**
-     * group中一开始就有的成员
-     */
     private List<String> exitingMembers = new ArrayList<String>();
     // 可滑动的显示选中用户的View
     private LinearLayout menuLinerLayout;
-
     // 选中用户总数,右上角显示
-
     private String userId = null;
     private String groupId = null;
-
     private String groupname;
     // 添加的列表
     private List<String> addList = new ArrayList<String>();
-
     private List<EaseUser> friendList;
     private EMGroup group;
 
@@ -88,16 +72,13 @@ public class GroupAddMembersActivity extends BaseActivity {
                 exitingMembers = group.getMembers();
                 groupname = group.getGroupName();
             }
-
         } else if (userId != null) {
             isCreatingNewGroup = true;
             exitingMembers.add(userId);
-
             addList.add(userId);
         } else {
             isCreatingNewGroup = true;
         }
-
         // 获取好友列表
         friendList = new ArrayList<EaseUser>(DemoHelper.getInstance().getContactList().values());
         // 对list进行排序
@@ -113,45 +94,23 @@ public class GroupAddMembersActivity extends BaseActivity {
         listView = (ListView) findViewById(R.id.list);
         iv_search = (ImageView) this.findViewById(R.id.iv_search);
         LayoutInflater layoutInflater = LayoutInflater.from(this);
-        View headerView = layoutInflater.inflate(R.layout.fx_item_group_create_header,
-                null);
-        headerView.findViewById(R.id.tv_header).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(GroupAddMembersActivity.this,
-                        GroupListActivity.class));
-                finish();
-            }
-
-        });
-        listView.addHeaderView(headerView);
+//        View headerView = layoutInflater.inflate(R.layout.fx_item_group_create_header,
+//                null);
+//        headerView.findViewById(R.id.tv_header).setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(GroupAddMembersActivity.this,
+//                        GroupListActivity.class));
+//                finish();
+//            }
+//
+//        });
+//        listView.addHeaderView(headerView);
         menuLinerLayout = (LinearLayout) this
                 .findViewById(R.id.linearLayoutMenu);
         //设置监听
         setTextChangedListener((EditText) this.findViewById(R.id.et_search));
-//        listView.setOnItemClickListener(new OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view,
-//                                    int position, long id) {
-//                if (position > 0) {
-//                    EaseUser user = contactAdapter.getItem(position - 1);
-//                    if (exitingMembers.contains(user.getUsername())) {
-//                        return;
-//                    }
-//
-//
-////                    CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkbox);
-////                    checkBox.toggle();
-////                    if (checkBox.isChecked()) {
-////
-////                    } else {
-////
-////                    }
-//                }
-//            }
-//        });
         tv_checked.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -209,7 +168,7 @@ public class GroupAddMembersActivity extends BaseActivity {
         // 包含TextView的LinearLayout
         // 参数设置
         LinearLayout.LayoutParams menuLinerLayoutParames = new LinearLayout.LayoutParams(
-                108, 108, 1);
+                128, 128, 1);
         View view = LayoutInflater.from(this).inflate(
                 R.layout.fx_item_avatar, null);
         ImageView images = (ImageView) view.findViewById(R.id.iv_avatar);
@@ -235,8 +194,6 @@ public class GroupAddMembersActivity extends BaseActivity {
     public void deleteImage(EaseUser user) {
         View view = menuLinerLayout.findViewWithTag(user);
         menuLinerLayout.removeView(view);
-
-
         addList.remove(user.getUsername());
         tv_checked.setText("确定(" + addList.size() + ")");
         if (addList.size()  < 1) {
@@ -281,7 +238,6 @@ public class GroupAddMembersActivity extends BaseActivity {
         myJson.put(FXConstant.JSON_KEY_AVATAR, DemoApplication.getInstance().getUserJson().getString(FXConstant.JSON_KEY_AVATAR));
         JSONArray jsonArray = new JSONArray();
         jsonArray.add(myJson);
-
         for (int i = 0; i < members.size(); i++) {
             EaseUser user = DemoHelper.getInstance().getContactList()
                     .get(members.get(i));
@@ -305,13 +261,7 @@ public class GroupAddMembersActivity extends BaseActivity {
         //调用SDK方法
         creatEMGroup(finalJson.toJSONString(), members);
     }
-
     private void creatEMGroup(final String jsonInfo, final List<String> members) {
-//        final ProgressDialog progressDialog = new ProgressDialog(this);
-//        progressDialog.setMessage("正在创建群组");
-//        progressDialog.setCanceledOnTouchOutside(false);
-//        progressDialog.show();
-
         String membersString = "";
         for (int i = 0; i < members.size(); i++) {
             if (i == 0) {
@@ -322,33 +272,6 @@ public class GroupAddMembersActivity extends BaseActivity {
             }
         }
         creatGroupInServer(jsonInfo,  "temp", membersString, "false");
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                try {
-//                    EMGroupManager.EMGroupOptions option = new EMGroupManager.EMGroupOptions();
-//                    option.maxUsers = 200;
-//                    option.style = EMGroupManager.EMGroupStyle.EMGroupStylePrivateMemberCanInvite;
-//                    EMClient.getInstance().groupManager().createGroup(jsonInfo, "temp", members.toArray(new String[0]), "nothing", option);
-//                    runOnUiThread(new Runnable() {
-//                        public void run() {
-//                            progressDialog.dismiss();
-//                            setResult(Activity.RESULT_OK);
-//                            finish();
-//                        }
-//                    });
-//                } catch (final HyphenateException e) {
-//                    runOnUiThread(new Runnable() {
-//                        public void run() {
-//                            progressDialog.dismiss();
-//                            Toast.makeText(GroupAddMembersActivity.this, "创建群聊失败:" + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-//                        }
-//                    });
-//                }
-//
-//            }
-//        }).start();
     }
     private void creatGroupInServer(String groupName, String desc, String members, String isPublic) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -399,129 +322,26 @@ public class GroupAddMembersActivity extends BaseActivity {
 
     private void existsGroupAddMembers(final List<String> members) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("正在处理...");
+        progressDialog.setMessage("正在加人...");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
-        //如果是管理员-加人
-        if (DemoHelper.getInstance().getCurrentUsernName().equals(group.getOwner())) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        EMClient.getInstance().groupManager().addUsersToGroup(groupId, members.toArray(new String[0]));//需异步处理
-                        updateGroupInfo(members, progressDialog);
-                    } catch (HyphenateException e) {
-                        runOnUiThread(new Runnable() {
-                            public void run() {
-                                progressDialog.dismiss();
-                                Toast.makeText(getApplicationContext(), "群主加人失败...", Toast.LENGTH_LONG).show();
-
-                            }
-                        });
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        } else {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        EMClient.getInstance().groupManager().inviteUser(groupId, members.toArray(new String[0]), null);//需异步处理
-                        updateGroupInfo(members, progressDialog);
-                    } catch (HyphenateException e) {
-                        runOnUiThread(new Runnable() {
-                            public void run() {
-                                progressDialog.dismiss();
-                                Toast.makeText(getApplicationContext(), "群成员加人失败...", Toast.LENGTH_LONG).show();
-                            }
-                        });
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }
-    }
-
-    private void updateGroupInfo(List<String> members, final ProgressDialog progressDialog) throws HyphenateException {
-        try {
-            JSONObject oldjson = JSONObject.parseObject(groupname);
-            JSONArray oldjsonArray = oldjson.getJSONArray("jsonArray");
-            final String groupName = oldjson.getString("groupname");
-
-            for (int i = 0; i < members.size(); i++) {
-                EaseUser user = DemoHelper.getInstance().getContactList()
-                        .get(members.get(i));
-                if (user != null) {
-                    JSONObject json_member = new JSONObject();
-                    json_member.put("hxid", user.getUsername());
-                    json_member.put("nick", user.getNick());
-                    json_member.put("avatar", user.getAvatar());
-                    oldjsonArray.add(json_member);
-                }
-                if (oldjsonArray.size() + i > 8) {
-                    break;
-                }
-            }
-            JSONObject finalJson = new JSONObject();
-            finalJson.put("jsonArray", oldjsonArray);
-            finalJson.put("groupname", groupName);
-            final String groupJSON = finalJson.toJSONString();
-            if (DemoHelper.getInstance().getCurrentUsernName().equals(group.getOwner())) {
-                EMClient.getInstance().groupManager().changeGroupName(groupId, groupJSON);
-                startActivity(new Intent(getApplicationContext(),
-                        ChatActivity.class).putExtra("userId", groupId)
-                        .putExtra("chatType", EMMessage.ChatType.GroupChat)
-                );
+        GroupUitls.getInstance().addMembersToGroup(groupId, members, exitingMembers, new GroupUitls.CallBack() {
+            @Override
+            public void onSuccess() {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(),"加人成功",Toast.LENGTH_SHORT).show();
+                setResult(RESULT_OK);
                 finish();
-            } else {
-                //非群主只能通过后端rest api进行修改群资料
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateGroupName(groupId, groupJSON, groupName, progressDialog);
-                    }
-                });
 
-            }
-        } catch (JSONException e) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "群资料处理失败..", Toast.LENGTH_LONG).show();
-                }
-            });
-        }
-    }
-
-
-    private void updateGroupName(final String groupId, String groupJSON, final String groupName, final ProgressDialog progressDialog) {
-        List<Param> params = new ArrayList<>();
-        params.add(new Param("groupId", groupId));
-        params.add(new Param("groupName", groupJSON));
-        OkHttpManager.getInstance().post(params, FXConstant.URL_UPDATE_Groupnanme, new OkHttpManager.HttpCallBack() {
-            @Override
-            public void onResponse(JSONObject jsonObject) {
-                progressDialog.dismiss();
-                int code = jsonObject.getInteger("code");
-                if (code == 1) {
-                    startActivity(new Intent(getApplicationContext(),
-                            ChatActivity.class).putExtra("userId", groupId)
-                            .putExtra("chatType", EMMessage.ChatType.GroupChat)
-                    );
-                    finish();
-                } else {
-                    Toast.makeText(getApplicationContext(), "群成员更新群资料失败,code:" + code, Toast.LENGTH_LONG).show();
-                }
-            }
+             }
 
             @Override
-            public void onFailure(String errorMsg) {
+            public void onError() {
                 progressDialog.dismiss();
-                Toast.makeText(getApplicationContext(), "群成员更新群资料失败...", Toast.LENGTH_LONG).show();
+                 Toast.makeText(getApplicationContext(),"加人失败 ...",Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
 

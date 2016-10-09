@@ -26,6 +26,7 @@
             android:src="@drawable/fx_top_bar_back" />
 
         <TextView
+
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,9 +37,10 @@
     </RelativeLayout>
 
     <ImageView
+        android:src="@drawable/fx_bg_btn_gray"
         android:id="@+id/code_image"
         android:layout_centerInParent="true"
-        android:layout_width="200dp"         
-        android:layout_height="200dp" />
+        android:layout_width="240dp"
+        android:layout_height="240dp" />
 
 </RelativeLayout>
