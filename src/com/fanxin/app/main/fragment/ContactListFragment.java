@@ -218,7 +218,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                     contactList.remove(tobeDeleteUser);
                     contactListLayout.refresh();
                     sendCmdDeleteMsg(toBeProcessUser.getUsername());
-                    Toast.makeText(getContext(), st1, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "删除成功", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getContext(), st2, Toast.LENGTH_SHORT).show();
                 }
