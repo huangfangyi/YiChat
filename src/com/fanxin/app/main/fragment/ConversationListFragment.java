@@ -1,6 +1,9 @@
 package com.fanxin.app.main.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -26,8 +29,9 @@ import com.fanxin.app.Constant;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.db.InviteMessgeDao;
-import com.fanxin.app.main.adapter.ConversationAdapter;
 import com.fanxin.app.main.activity.ChatActivity;
+import com.fanxin.app.main.adapter.ConversationAdapter;
+import com.fanxin.easeui.EaseConstant;
 import com.fanxin.easeui.widget.EaseConversationList;
 import com.hyphenate.EMConnectionListener;
 import com.hyphenate.EMConversationListener;
@@ -66,7 +70,7 @@ public class ConversationListFragment extends Fragment {
         }
 
     };
-
+    private  MyBroadcastReceiver broadcastReceiver;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fx_fragment_conversation, container, false);
@@ -79,6 +83,11 @@ public class ConversationListFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         initView();
         setUpView();
+        broadcastReceiver=new MyBroadcastReceiver();
+        IntentFilter filter=new IntentFilter();
+        filter.addAction(EaseConstant.ACTION_DELETE_MSG);
+        getActivity().registerReceiver(broadcastReceiver,filter);
+
     }
 
     protected void initView() {
@@ -185,13 +194,20 @@ public class ConversationListFragment extends Fragment {
          */
         synchronized (conversations) {
             for (EMConversation conversation : conversations.values()) {
-                if (conversation.getAllMessages().size() != 0 && conversation.getType() != EMConversation.EMConversationType.ChatRoom || (conversation.getType() == EMConversation.EMConversationType.Chat && DemoHelper.getInstance().getContactList().containsKey(conversation.getUserName()))) {
-                    try {
-                        sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
-                    } catch (NullPointerException e) {
+                if (conversation.getAllMessages().size() != 0 && conversation.getType() != EMConversation.EMConversationType.ChatRoom ) {
+
+                    if((conversation.getType() == EMConversation.EMConversationType.Chat && !DemoHelper.getInstance().getContactList().containsKey(conversation.getUserName()))){
+
+                    }else{
+
+                        try {
+                            sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
+                        } catch (NullPointerException e) {
 
 
+                        }
                     }
+
 
                 }
             }
@@ -345,6 +361,7 @@ public class ConversationListFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         EMClient.getInstance().removeConnectionListener(connectionListener);
+        getActivity().unregisterReceiver(broadcastReceiver);
     }
 
     @Override
@@ -373,5 +390,14 @@ public class ConversationListFragment extends Fragment {
         this.listItemClickListener = listItemClickListener;
     }
 
+    class MyBroadcastReceiver extends BroadcastReceiver {
 
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d("receive-->","broadcast");
+             refresh();
+
+        }
+    }
 }
