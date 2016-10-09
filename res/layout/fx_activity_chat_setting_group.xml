@@ -116,6 +116,8 @@
                 android:background="#dadada" />
 
             <RelativeLayout
+                android:visibility="gone"
+
                 android:id="@+id/rl_switch_chattotop"
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
