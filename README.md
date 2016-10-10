@@ -1,10 +1,22 @@
 <p>
+    <span style="box-sizing: border-box; font-weight: 700; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);"><span style="color: rgb(102, 102, 102); font-family: &#39;Helvetica Neue&#39;, STHeiti, 微软雅黑, &#39;Microsoft YaHei&#39;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">APK体验地址：</span><a href="http://fir.im/wy79" target="_blank" style="font-family: &#39;Helvetica Neue&#39;, STHeiti, 微软雅黑, &#39;Microsoft YaHei&#39;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; white-space: normal; background-color: rgb(255, 255, 255);">http://fir.im/wy79</a></span>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
     <span style="box-sizing: border-box; font-weight: 700; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">凡信3.0 更新介绍</span><br/><br/><span style="color: rgb(102, 102, 102); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">&nbsp;对于凡信项目的背景在此不再赘述，不了解的前往：</span><a href="https://github.com/huangfangyi/FanXin2.0_IM" target="_blank">https://github.com/huangfangyi/FanXin2.0_IM</a><br/><span style="color: rgb(102, 102, 102); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">或者:</span><a href="http://www.imgeek.org/article/825307627">http://www.imgeek.org/article/825307627</a><br/><br/><span style="box-sizing: border-box; font-weight: 700; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">前言:</span><br/><span style="color: rgb(102, 102, 102); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">&nbsp; &nbsp;由于凡信的1.0和2.0都是基于环信SDK 2.x系列开发，而当前环信官方力推的是3.x的系列SDK，在此背景下，作者决定将凡信迁移至3.x的demo上。迁移的同时，对存储机制和网络接口做了一定的优化。与此同时，针对时下火热的直播APP，结合环信的聊天室功能和ucloud，做了两个模块-观看直播和进行直播;针对IM场景中常见的发红包/抢红包，集成了由云账户提供的红包SDK（</span><a href="https://www.yunzhanghu.com/" target="_blank">https://www.yunzhanghu.com</a><span style="color: rgb(102, 102, 102); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">）,对于想做红包以及账户管理的开发者，是一种非常值得推荐的解决方案，一是开发者不用头疼于安全问题，以及开发中逻辑不严谨导致的资金转移丢包的问题。</span><br/><span style="box-sizing: border-box; font-weight: 700; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">资源相关：</span><br/>
 </p>
 <ul style="box-sizing: border-box; padding: 0px 40px; color: rgb(102, 102, 102); font-family: &quot;Helvetica Neue&quot;, STHeiti, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22.4px; white-space: normal; background-color: rgb(255, 255, 255);" class=" list-paddingleft-2">
     <li>
         <p>
-            APK体验地址：<a href="http://fir.im/wy79" target="_blank">http://fir.im/wy79</a>
+            <br/>
         </p>
     </li>
     <li>
