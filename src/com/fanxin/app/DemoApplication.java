@@ -67,7 +67,7 @@ public class DemoApplication extends Application {
 		Fresco.initialize(this);
 		UEasyStreaming.initStreaming("publish3-key");
 		UEasyStreaming.syncMobileConfig(this, 3600 * 24);
-		CrashReport.initCrashReport(getApplicationContext(), "900047205", false);
+		CrashReport.initCrashReport(getApplicationContext(), "900056274", false);
 		GroupUitls.init(instance);
 	}
 
