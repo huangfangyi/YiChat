@@ -100,7 +100,8 @@ public class PasswordResetActivity extends BaseActivity {
                 progressDialog.dismiss();
                 int code = jsonObject.getIntValue("code");
                 if (code == 1000) {
-                    Toast.makeText(getApplicationContext(), "密码重置成功！" + code, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "密码重置成功！", Toast.LENGTH_SHORT).show();
+                    finish();
                 } else {
 
                     Toast.makeText(getApplicationContext(), "密码重置失败,code:" + code, Toast.LENGTH_SHORT).show();

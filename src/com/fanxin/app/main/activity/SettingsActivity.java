@@ -1,6 +1,8 @@
 package com.fanxin.app.main.activity;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -295,7 +297,7 @@ public class SettingsActivity extends BaseActivity  implements View.OnClickListe
                 }
                 break;
             case R.id.btn_logout:
-                logout();
+                showDialog();
                 break;
             case R.id.ll_black_list:
                 startActivity(new Intent(SettingsActivity.this, BlacklistActivity.class));
@@ -356,6 +358,37 @@ public class SettingsActivity extends BaseActivity  implements View.OnClickListe
                 });
             }
         });
+    }
+
+    /**
+     * 这是兼容的 AlertDialog
+     */
+    private void showDialog() {
+  /*
+  这里使用了 android.support.v7.app.AlertDialog.Builder
+  可以直接在头部写 import android.support.v7.app.AlertDialog
+  那么下面就可以写成 AlertDialog.Builder
+
+  */
+
+        AlertDialog.Builder builder = new   AlertDialog.Builder(SettingsActivity.this);
+        builder.setTitle("是否选择退出？");
+        builder.setMessage("退出后不会删除任何历史数据，下次登录依然可以使用本账号");
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                logout();
+            }
+        });
+
+        AlertDialog alertDialog=  builder.create();
+        alertDialog.show();
     }
 
 

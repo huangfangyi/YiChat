@@ -103,7 +103,7 @@ public class SocialMainAdapter extends BaseAdapter {
             View  view = inflater.inflate(R.layout.fx_item_moments_header, null,
                     false);
             ImageView iv_avatar = (ImageView) view.findViewById(R.id.iv_avatar);
-            Glide.with(context).load(FXConstant.URL_AVATAR + myAvatar).diskCacheStrategy(DiskCacheStrategy.ALL).into(iv_avatar);
+            Glide.with(context).load(FXConstant.URL_AVATAR + myAvatar).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.fx_default_useravatar).into(iv_avatar);
             return view;
         } else {
 

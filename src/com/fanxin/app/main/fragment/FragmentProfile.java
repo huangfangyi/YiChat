@@ -21,6 +21,7 @@ import com.fanxin.app.DemoApplication;
 import com.fanxin.app.DemoHelper;
 import com.fanxin.app.R;
 import com.fanxin.app.main.FXConstant;
+import com.fanxin.app.main.activity.PasswordResetActivity;
 import com.fanxin.app.main.activity.ProfileActivity;
 import com.fanxin.app.main.activity.SettingsActivity;
 import com.fanxin.app.main.moments.SocialFriendActivity;
@@ -63,6 +64,8 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
         getView().findViewById(R.id.re_fanxin).setOnClickListener(this);
         getView().findViewById(R.id.re_xiangce).setOnClickListener(this);
         getView().findViewById(R.id.re_yunzhanghu).setOnClickListener(this);
+        getView().findViewById(R.id.re_find_password).setOnClickListener(this);
+
      }
 
     @Override
@@ -101,6 +104,9 @@ public class FragmentProfile extends Fragment implements View.OnClickListener{
                 break;
             case R.id.re_fanxin:
                 joinQQGroup("5QH7bwWtFt5dCwIlIp__y4nuVF1rggp1");
+                break;
+            case R.id.re_find_password:
+                startActivity(new Intent(getActivity(), PasswordResetActivity.class).putExtra("isReset",true));
                 break;
 
         }
