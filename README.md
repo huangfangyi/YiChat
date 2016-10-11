@@ -5,6 +5,9 @@
     <br/>
 </p>
 <p>
+    <strong>凡信IOS版体验包</strong><br/><img src="http://ueditor.baidu.com/ueditor/themes/default/images/spacer.gif"/>https://www.pgyer.com/fanxinios&nbsp;密码&nbsp;：123456fx<br/>
+</p>
+<p>
     <br/>
 </p>
 <p>
