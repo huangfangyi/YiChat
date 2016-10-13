@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.fanxin.app.main.uvod.ui.UBottomView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.fanxin.huangfangyi.main.uvod.ui.UBottomView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/bottomview"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_150"
@@ -146,4 +146,4 @@
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
-</com.fanxin.app.main.uvod.ui.UBottomView>
+</com.fanxin.huangfangyi.main.uvod.ui.UBottomView>

@@ -53,7 +53,7 @@
             android:src="@drawable/fx_icon_camera_moments" />
     </RelativeLayout>
 
-    <com.fanxin.app.main.widget.MomentsView
+    <com.fanxin.huangfangyi.main.widget.MomentsView
         android:id="@+id/mementsView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

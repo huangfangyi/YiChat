@@ -37,7 +37,7 @@
                 android:textSize="22sp"
                 android:visibility="visible" />
 
-            <com.fanxin.app.widget.MyChronometer
+            <com.fanxin.huangfangyi.widget.MyChronometer
                 android:id="@+id/chronometer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

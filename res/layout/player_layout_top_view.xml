@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.fanxin.app.main.uvod.ui.UTopView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.fanxin.huangfangyi.main.uvod.ui.UTopView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/topview"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_100"
@@ -35,4 +35,4 @@
         android:layout_marginRight="@dimen/dp_15"
         android:background="@drawable/player_selecter_topview_right_button" />
 
-</com.fanxin.app.main.uvod.ui.UTopView>
+</com.fanxin.huangfangyi.main.uvod.ui.UTopView>

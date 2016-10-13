@@ -6,28 +6,28 @@
     android:orientation="vertical" >
 
 
-    <com.fanxin.app.widget.ContactItemView
+    <com.fanxin.huangfangyi.widget.ContactItemView
         android:id="@+id/application_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contactItemImage="@drawable/em_new_friends_icon"
         app:contactItemName="@string/Application_and_notify" />
 
-    <com.fanxin.app.widget.ContactItemView
+    <com.fanxin.huangfangyi.widget.ContactItemView
         android:id="@+id/group_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contactItemImage="@drawable/em_groups_icon"
         app:contactItemName="@string/group_chat" />
 
-    <com.fanxin.app.widget.ContactItemView
+    <com.fanxin.huangfangyi.widget.ContactItemView
         android:id="@+id/chat_room_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contactItemImage="@drawable/em_groups_icon"
         app:contactItemName="@string/chat_room" />
 
-    <com.fanxin.app.widget.ContactItemView
+    <com.fanxin.huangfangyi.widget.ContactItemView
         android:id="@+id/robot_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

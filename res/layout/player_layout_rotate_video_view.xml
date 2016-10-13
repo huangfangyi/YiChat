@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.fanxin.app.main.uvod.ui.widget.URotateVideoView
+<com.fanxin.huangfangyi.main.uvod.ui.widget.URotateVideoView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/videoview"
     android:layout_width="wrap_content"

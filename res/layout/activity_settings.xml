@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fanxin.app.main.uvod.preference.SettingsActivity">
+    tools:context="com.fanxin.huangfangyi.main.uvod.preference.SettingsActivity">
 
     <include layout="@layout/widget_toolbar"/>
     <FrameLayout

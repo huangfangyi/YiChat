@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.fanxin.app"
+    package="com.fanxin.huangfangyi"
     android:versionCode="36"
     android:versionName="3.1">
 
@@ -34,23 +34,23 @@
     <!-- GCM required, remember replace "com.fanxin.app" to your own package-->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <permission
-        android:name="com.fanxin.app.permission.C2D_MESSAGE"
+        android:name="com.fanxin.huangfangyi.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
     <uses-permission android:name="com.fanxin.app.permission.C2D_MESSAGE" />
 
     <permission
-        android:name="com.fanxin.app.permission.MIPUSH_RECEIVE"
+        android:name="com.fanxin.huangfangyi.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.fanxin.app.permission.MIPUSH_RECEIVE" />
 
     <application
-        android:name="DemoApplication"
+        android:name="com.fanxin.huangfangyi.DemoApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name">
         <activity
-            android:name=".main.fragment.MainActivity"
+            android:name="com.fanxin.huangfangyi.main.fragment.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -58,7 +58,7 @@
 
         <!-- 开屏页 -->
         <activity
-            android:name=".main.activity.SplashActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide">
             <intent-filter>
@@ -70,32 +70,32 @@
 
         <!-- 登陆 -->
         <activity
-            android:name=".main.activity.LoginActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
         <activity
-            android:name=".main.activity.PasswordResetActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.PasswordResetActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
         <activity
-            android:name=".main.activity.RegionActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.RegionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
         <!-- 注册 -->
         <activity
-            android:name=".main.activity.RegisterActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <!-- 聊天页面 -->
         <activity
-            android:name=".main.activity.ChatActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.ChatActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -103,48 +103,48 @@
 
         <!-- 添加好友 -->
         <activity
-            android:name=".ui.AddContactActivity"
+            android:name="com.fanxin.huangfangyi.ui.AddContactActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateVisible"></activity>
         <!-- 群组详情 -->
         <activity
-            android:name=".ui.GroupDetailsActivity"
+            android:name="com.fanxin.huangfangyi.ui.GroupDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <!-- 群组列表 -->
         <activity
-            android:name=".ui.GroupsActivity"
+            android:name="com.fanxin.huangfangyi.ui.GroupsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
         <!-- 聊天室详情 -->
         <activity
-            android:name=".ui.ChatRoomDetailsActivity"
+            android:name="com.fanxin.huangfangyi.ui.ChatRoomDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
 
         <!-- 新建群组 -->
         <activity
-            android:name=".ui.NewGroupActivity"
+            android:name="com.fanxin.huangfangyi.ui.NewGroupActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
         <!-- 退出群组提示框 -->
         <activity
-            android:name=".ui.ExitGroupDialog"
+            android:name="com.fanxin.huangfangyi.ui.ExitGroupDialog"
             android:screenOrientation="portrait"
             android:theme="@style/MyDialogStyleBottom"></activity>
         <!-- 群组选人 -->
         <activity
-            android:name=".ui.GroupPickContactsActivity"
+            android:name="com.fanxin.huangfangyi.ui.GroupPickContactsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
         <activity
-            android:name=".ui.PickAtUserActivity"
+            android:name="com.fanxin.huangfangyi.ui.PickAtUserActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <!-- 地图 -->
@@ -155,18 +155,18 @@
 
         <!-- 新的朋友邀请消息页面 -->
         <activity
-            android:name=".ui.NewFriendsMsgActivity"
+            android:name="com.fanxin.huangfangyi.ui.NewFriendsMsgActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <!-- 转发消息用户列表页面 -->
         <activity
-            android:name=".ui.ForwardMessageActivity"
+            android:name="com.fanxin.huangfangyi.ui.ForwardMessageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
         <!-- 自定义的contextmenu -->
         <activity
-            android:name=".ui.ContextMenuActivity"
+            android:name="com.fanxin.huangfangyi.ui.ContextMenuActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyDialogStyle"></activity>
         <!-- 显示下载大图页面 -->
@@ -181,58 +181,58 @@
             android:theme="@style/horizontal_slide"></activity>
         <!-- 黑名单 -->
         <activity
-            android:name=".ui.BlacklistActivity"
+            android:name="com.fanxin.huangfangyi.ui.BlacklistActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
 
         <!-- 公开的群聊列表 -->
         <activity
-            android:name=".ui.PublicGroupsActivity"
+            android:name="com.fanxin.huangfangyi.ui.PublicGroupsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
         <activity
-            android:name=".ui.PublicChatRoomsActivity"
+            android:name="com.fanxin.huangfangyi.ui.PublicChatRoomsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
         <!-- 语音通话 -->
         <activity
-            android:name=".ui.VoiceCallActivity"
+            android:name="com.fanxin.huangfangyi.ui.VoiceCallActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/nornal_style"></activity>
         <!-- 视频通话 -->
         <activity
-            android:name=".ui.VideoCallActivity"
+            android:name="com.fanxin.huangfangyi.ui.VideoCallActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <!-- 群聊简单信息 -->
         <activity
-            android:name=".ui.GroupSimpleDetailActivity"
+            android:name="com.fanxin.huangfangyi.ui.GroupSimpleDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <!-- 群组黑名单用户列表 -->
         <activity
-            android:name=".ui.GroupBlacklistActivity"
+            android:name="com.fanxin.huangfangyi.ui.GroupBlacklistActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <activity
-            android:name=".ui.GroupSearchMessageActivity"
+            android:name="com.fanxin.huangfangyi.ui.GroupSearchMessageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateVisible"></activity>
 
         <activity
-            android:name=".ui.PublicGroupsSeachActivity"
+            android:name="com.fanxin.huangfangyi.ui.PublicGroupsSeachActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
         <activity
-            android:name=".ui.EditActivity"
+            android:name="com.fanxin.huangfangyi.ui.EditActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateVisible"></activity>
@@ -243,18 +243,18 @@
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <!-- choose video -->
         <activity
-            android:name=".ui.ImageGridActivity"
+            android:name="com.fanxin.huangfangyi.ui.ImageGridActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
-            android:name=".ui.RecorderVideoActivity"
+            android:name="com.fanxin.huangfangyi.ui.RecorderVideoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <!-- upload error log -->
         <activity
-            android:name=".ui.DiagnoseActivity"
+            android:name="com.fanxin.huangfangyi.ui.DiagnoseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
@@ -262,7 +262,7 @@
         <!-- iOS offline push nick -->
         <!-- robots list -->
         <activity
-            android:name=".ui.RobotsActivity"
+            android:name="com.fanxin.huangfangyi.ui.RobotsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
@@ -329,112 +329,112 @@
         <!--红包相关Activity end-->
         <!-- 用户信息页面 -->
         <activity
-            android:name=".main.activity.ProfileActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.ProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
         <!-- 用户信息更新页面 -->
         <activity
-            android:name=".main.activity.ProfileUpdateActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.ProfileUpdateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.SettingsActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.AddFriendsPreActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.AddFriendsPreActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.AddFriendsNextActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.AddFriendsNextActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.AddFriendsFinalActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.AddFriendsFinalActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
         <activity
-            android:name=".main.activity.UserDetailsActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.UserDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.NewFriendsActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.NewFriendsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.GroupListActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.GroupListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.GroupAddMembersActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.GroupAddMembersActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.ChatSettingGroupActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.ChatSettingGroupActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.ChatSettingSingleActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.ChatSettingSingleActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.ScanCaptureActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.ScanCaptureActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.activity.MyQrActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.MyQrActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.moments.MomentsPublishActivity"
+            android:name="com.fanxin.huangfangyi.main.moments.MomentsPublishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.moments.BigImageActivity"
+            android:name="com.fanxin.huangfangyi.main.moments.BigImageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.moments.SocialFriendActivity"
+            android:name="com.fanxin.huangfangyi.main.moments.SocialFriendActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.moments.SocialDetailActivity"
+            android:name="com.fanxin.huangfangyi.main.moments.SocialDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.moments.MyWebViewActivity"
+            android:name="com.fanxin.huangfangyi.main.moments.MyWebViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name=".main.moments.SocialMainActivity"
+            android:name="com.fanxin.huangfangyi.main.moments.SocialMainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize"></activity>
 
         <!--  UCLOUD-->
         <activity
-            android:name=".main.activity.LivesActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.LivesActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:theme="@style/PlayAppTheme"
@@ -443,7 +443,7 @@
         </activity>
 
         <activity
-            android:name=".main.activity.LiveWatchActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.LiveWatchActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -456,7 +456,7 @@
 
         </activity>
         <activity
-            android:name=".main.uvod.preference.SettingsActivity"
+            android:name="com.fanxin.huangfangyi.main.uvod.preference.SettingsActivity"
             android:theme="@style/PlayAppTheme"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -465,13 +465,13 @@
 
 
         <activity
-            android:name=".main.ulive.preference.SettingsActivity"
+            android:name="com.fanxin.huangfangyi.main.ulive.preference.SettingsActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/SettingTheme"></activity>
 
         <activity
-            android:name=".main.activity.LiveActivity"
+            android:name="com.fanxin.huangfangyi.main.activity.LiveActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             android:launchMode="singleTask"
@@ -479,7 +479,7 @@
         </activity>
 
         <activity
-            android:name=".main.ulive.upload.PublishDemo4MediaCodec"
+            android:name="com.fanxin.huangfangyi.main.ulive.upload.PublishDemo4MediaCodec"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -487,7 +487,7 @@
         </activity>
 
         <activity
-            android:name=".main.ulive.upload.PublishDemo4X264"
+            android:name="com.fanxin.huangfangyi.main.ulive.upload.PublishDemo4X264"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -495,7 +495,7 @@
         </activity>
 
         <activity
-            android:name=".main.ulive.play.VideoActivity"
+            android:name="com.fanxin.huangfangyi.main.ulive.play.VideoActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
@@ -504,7 +504,7 @@
 
 
         <!-- 开机自启动服务 -->
-        <receiver android:name=".receiver.StartServiceReceiver">
+        <receiver android:name="com.fanxin.huangfangyi.receiver.StartServiceReceiver">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -528,15 +528,15 @@
             android:name="com.hyphenate.chat.EMGCMListenerService"
             android:exported="false"></service>
         <service
-            android:name="com.fanxin.app.main.service.ContactsService"
+            android:name="com.fanxin.huangfangyi.main.service.ContactsService"
             android:exported="false"></service>
         <service
-            android:name="com.fanxin.app.main.service.GroupService"
+            android:name="com.fanxin.huangfangyi.main.service.GroupService"
             android:exported="false"></service>
 
 
         <receiver
-            android:name=".receiver.GCMPushBroadCast"
+            android:name="com.fanxin.huangfangyi.receiver.GCMPushBroadCast"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.hyphenate.sdk.push" />

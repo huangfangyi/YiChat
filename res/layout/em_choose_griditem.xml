@@ -9,7 +9,7 @@
         android:layout_height="fill_parent"
         android:background="#fff"
         >
-         <com.fanxin.app.widget.RecyclingImageView
+         <com.fanxin.huangfangyi.widget.RecyclingImageView
         android:id="@+id/imageView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

@@ -175,7 +175,7 @@ public final class EaseUI {
     public EaseNotifier getNotifier(){
         return notifier;
     }
-    
+
     public boolean hasForegroundActivies(){
         return activityList.size() != 0;
     }

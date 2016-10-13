@@ -1,4 +1,4 @@
-<com.fanxin.app.main.uvod.ui.UVideoMainView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.fanxin.huangfangyi.main.uvod.ui.UVideoMainView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/video_main_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,4 +24,4 @@
 
     <include layout="@layout/player_layout_loading_view" />
 
-</com.fanxin.app.main.uvod.ui.UVideoMainView>
+</com.fanxin.huangfangyi.main.uvod.ui.UVideoMainView>

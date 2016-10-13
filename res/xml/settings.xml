@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/pref_category_general">
-        <com.fanxin.app.main.uvod.preference.UListPreference
+        <com.fanxin.huangfangyi.main.uvod.preference.UListPreference
             android:defaultValue="@string/pref_default_decoder"
             android:dialogTitle="@string/pref_decoder_type"
             android:entries="@array/pref_decoder_names"
@@ -11,7 +11,7 @@
             android:title="@string/pref_decoder_type"
             app:entrySummaries="@array/pref_decoder_values" />
 
-        <com.fanxin.app.main.uvod.preference.UListPreference
+        <com.fanxin.huangfangyi.main.uvod.preference.UListPreference
             android:defaultValue="@string/pref_default_screen_ratio"
             android:dialogTitle="@string/pref_screen_ratio"
             android:entries="@array/pref_screen_ratio_names"
