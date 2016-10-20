@@ -45,11 +45,15 @@ public class GroupService extends Service{
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        try{
+
 
         String groupId=intent.getStringExtra("groupId");
         String groupName=intent.getStringExtra("groupName");
         refreshGroupInfo(groupId,groupName);
-
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
         return super.onStartCommand(intent, flags, startId);
     }
 
