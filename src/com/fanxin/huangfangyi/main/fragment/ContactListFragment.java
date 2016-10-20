@@ -1,10 +1,10 @@
 /**
  * Copyright (C) 2016 Hyphenate Inc. All rights reserved.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -55,10 +55,10 @@ import java.util.Map;
 /**
 
  * contact list
- * 
+ *
  */
-public class ContactListFragment extends EaseContactListFragment implements  View.OnClickListener {
-	
+public class ContactListFragment extends EaseContactListFragment implements View.OnClickListener {
+
     private static final String TAG = ContactListFragment.class.getSimpleName();
     private TextView tvUnread;
     private InviteMessgeDao inviteMessgeDao;
@@ -72,46 +72,46 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
         headerView.findViewById(R.id.re_chatroom).setOnClickListener(this);
         headerView.findViewById(R.id.re_tag).setOnClickListener(this);
         headerView.findViewById(R.id.re_public).setOnClickListener(this);
-        tvUnread= (TextView) headerView.findViewById(R.id.tv_unread);
+        tvUnread = (TextView) headerView.findViewById(R.id.tv_unread);
         listView.addHeaderView(headerView);
         this.titleBar.setVisibility(View.GONE);
         getView().findViewById(R.id.search_bar_view).setVisibility(View.GONE);
         registerForContextMenu(listView);
     }
-    
+
     @Override
     public void refresh() {
         Map<String, EaseUser> m = DemoHelper.getInstance().getContactList();
         if (m instanceof Hashtable<?, ?>) {
-            m = (Map<String, EaseUser>) ((Hashtable<String, EaseUser>)m).clone();
+            m = (Map<String, EaseUser>) ((Hashtable<String, EaseUser>) m).clone();
         }
         setContactsMap(m);
         super.refresh();
-        if(inviteMessgeDao == null){
+        if (inviteMessgeDao == null) {
             inviteMessgeDao = new InviteMessgeDao(getActivity());
         }
-        if(inviteMessgeDao.getUnreadMessagesCount() > 0){
+        if (inviteMessgeDao.getUnreadMessagesCount() > 0) {
             tvUnread.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             tvUnread.setVisibility(View.GONE);
         }
     }
-    
-    
-     @Override
+
+
+    @Override
     protected void setUpView() {
         titleBar.setRightImageResource(R.drawable.em_add);
         titleBar.setRightLayoutClickListener(new OnClickListener() {
-            
+
             @Override
             public void onClick(View v) {
-                 NetUtils.hasDataConnection(getActivity());
+                NetUtils.hasDataConnection(getActivity());
             }
         });
         //设置联系人数据
         Map<String, EaseUser> m = DemoHelper.getInstance().getContactList();
         if (m instanceof Hashtable<?, ?>) {
-            m = (Map<String, EaseUser>) ((Hashtable<String, EaseUser>)m).clone();
+            m = (Map<String, EaseUser>) ((Hashtable<String, EaseUser>) m).clone();
         }
         setContactsMap(m);
         super.setUpView();
@@ -119,14 +119,23 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                EaseUser user = ((EaseUser)listView.getItemAtPosition(position));
-                // demo中直接进入聊天页面，实际一般是进入用户详情页
-                startActivity(new Intent(getActivity(), UserDetailsActivity.class).putExtra(FXConstant.KEY_USER_INFO, user.getUserInfo()));
+                try {
+                    EaseUser user = ((EaseUser) listView.getItemAtPosition(position));
+                    if (user != null && user.getUserInfo() != null) {
+                        startActivity(new Intent(getActivity(), UserDetailsActivity.class).putExtra(FXConstant.KEY_USER_INFO, user.getUserInfo()));
+                    }
+
+
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
+
+                }
+
             }
         });
 
     }
-    
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -152,7 +161,7 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
                 break;
             case R.id.re_public:
                 //进入Robot列表页面
-               startActivity(new Intent(getActivity(), LiveActivity.class));
+                startActivity(new Intent(getActivity(), LiveActivity.class));
                 break;
 
             default:
@@ -274,9 +283,6 @@ public class ContactListFragment extends EaseContactListFragment implements  Vie
         EMClient.getInstance().chatManager().sendMessage(cmdMsg);
 
     }
-	
 
 
-
-	
 }
