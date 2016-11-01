@@ -44,6 +44,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,7 +62,7 @@ public class SocialMainAdapter extends BaseAdapter {
     private String myuserID;
     private String myAvatar;
     private String myNick;
-
+    private EditText et_comment;
     public SocialMainAdapter(Activity context1, List<JSONObject> jsonArray) {
         this.context = context1;
 
@@ -778,13 +779,17 @@ public class SocialMainAdapter extends BaseAdapter {
 
     public void showCommentEditText(final String sID, final TextView tv_comment,
                                     final JSONArray jsons, final View view, final int goodSize) {
+
         if (re_edittext == null
                 || re_edittext.getVisibility() != View.VISIBLE) {
             re_edittext = (RelativeLayout) context
                     .findViewById(R.id.re_edittext);
             re_edittext.setVisibility(View.VISIBLE);
-            final EditText et_comment = (EditText) re_edittext
+            et_comment = (EditText) re_edittext
                     .findViewById(R.id.et_comment);
+            et_comment.requestFocus();
+            InputMethodManager manager = (InputMethodManager) et_comment.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.toggleSoftInput(0,InputMethodManager.SHOW_FORCED);
             Button btn_send = (Button) re_edittext.findViewById(R.id.btn_send);
             btn_send.setOnClickListener(new OnClickListener() {
 
@@ -796,7 +801,6 @@ public class SocialMainAdapter extends BaseAdapter {
                                 .show();
                         return;
                     }
-
                     submitComment(sID, comment, tv_comment, jsons, view,
                             goodSize);
                     et_comment.setText("");
@@ -805,7 +809,6 @@ public class SocialMainAdapter extends BaseAdapter {
 
             });
         }
-
     }
 
     /**
@@ -814,6 +817,9 @@ public class SocialMainAdapter extends BaseAdapter {
     public void hideCommentEditText() {
         if (re_edittext != null && re_edittext.getVisibility() == View.VISIBLE)
             re_edittext.setVisibility(View.GONE);
+            et_comment.clearFocus();
+            InputMethodManager manager = (InputMethodManager) et_comment.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(et_comment.getWindowToken(),0);
     }
 
     /**
@@ -974,7 +980,6 @@ public class SocialMainAdapter extends BaseAdapter {
         if (scID == null) {
             scID = "LOCAL";
         }
-        ;
         String tag = cjsons.getJSONObject(postion).getString("tag");
         if (tag == null) {
             tag = String.valueOf(System.currentTimeMillis());

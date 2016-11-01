@@ -150,7 +150,6 @@ public class SocialMainActivity extends BaseActivity {
 		tv_paizhao.setText("拍照");
 		tv_paizhao.setOnClickListener(new OnClickListener() {
  			public void onClick(View v) {
-
 				imageName = getNowTime() + ".jpg";
 				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 				// 指定调用相机拍照后照片的储存路径
@@ -279,8 +278,6 @@ public class SocialMainActivity extends BaseActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-
 		getData(0);
 	}
-
 }

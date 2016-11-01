@@ -1,20 +1,54 @@
 package com.fanxin.huangfangyi.main.utils;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ContentUris;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
+import java.io.File;
+
 /**
- * Created by user on 2016/11/1.
+ * Created by slj on 2016/11/1.
  */
 
 public class PathUtils {
+
+    /**
+     * 调用系统裁剪图片
+     * @param activity
+     * @param uri1 uri 图片uri
+     * @param file 保存文件名字
+     * @param size 裁剪大小
+     * @param requestCode 请求码
+     */
+    public static void startPhotoZoom(Activity activity, Uri uri1, File file, int size, int requestCode) {
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        intent.setDataAndType(uri1, "image/*");
+        // crop为true是设置在开启的intent中设置显示的view可以剪裁
+        intent.putExtra("crop", "true");
+        // aspectX aspectY 是宽高的比例
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+
+        // outputX,outputY 是剪裁图片的宽高
+        intent.putExtra("outputX", size);
+        intent.putExtra("outputY", size);
+        intent.putExtra("return-data", false);
+
+        intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                Uri.fromFile(file));
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
+        intent.putExtra("noFaceDetection", true); // no face detection
+        activity.startActivityForResult(intent, requestCode);
+    }
     /**
      * 获取相册图片路径
      *
