@@ -79,6 +79,7 @@
             android:layout_below="@id/btn_record_video"
             />
         <SeekBar
+            android:visibility="gone"
             android:id="@+id/seekbar_y_detal"
             android:layout_width="200dp"
             android:layout_height="wrap_content"

@@ -7,13 +7,21 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.ContentUris;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +39,7 @@ import com.fanxin.huangfangyi.R;
 import com.fanxin.huangfangyi.main.FXConstant;
 import com.fanxin.huangfangyi.main.utils.OkHttpManager;
 import com.fanxin.huangfangyi.main.utils.Param;
+import com.fanxin.huangfangyi.main.utils.PathUtils;
 import com.fanxin.huangfangyi.ui.BaseActivity;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
@@ -41,7 +50,7 @@ public class SocialMainActivity extends BaseActivity {
 
 	private static final int PHOTO_REQUEST_TAKEPHOTO = 1;// 拍照
 	private static final int PHOTO_REQUEST_GALLERY = 2;// 从相册中选择
-
+	private String TAG = SocialMainActivity.class.getSimpleName();
 
 	private String imageName;
 	private PullToRefreshListView pull_refresh_list;
@@ -65,9 +74,7 @@ public class SocialMainActivity extends BaseActivity {
 	}
 
  	public void initFile() {
-
-		File dir = new File("/sdcard/bizchat");
-
+		File dir = new File(Environment.getExternalStorageDirectory().toString()+"/bizchat/");
 		if (!dir.exists()) {
 			dir.mkdirs();
 		}
@@ -148,7 +155,7 @@ public class SocialMainActivity extends BaseActivity {
 				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 				// 指定调用相机拍照后照片的储存路径
 				intent.putExtra(MediaStore.EXTRA_OUTPUT,
-						Uri.fromFile(new File("/sdcard/bizchat/", imageName)));
+						Uri.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/bizchat/", imageName)));
 				startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
 				dlg.cancel();
 			}
@@ -177,6 +184,7 @@ public class SocialMainActivity extends BaseActivity {
 		return dateFormat.format(date);
 	}
 
+	@SuppressLint("SdCardPath")
  	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK) {
@@ -186,33 +194,22 @@ public class SocialMainActivity extends BaseActivity {
 			switch (requestCode) {
 
 			case PHOTO_REQUEST_TAKEPHOTO:
-				path = "/sdcard/bizchat/" + imageName;
+				path = Environment.getExternalStorageDirectory().toString()+"/bizchat/" + imageName;
+
+				 
 				break;
+				case PHOTO_REQUEST_GALLERY:
 
-			case PHOTO_REQUEST_GALLERY:
-
-				if (data != null) {
-					Uri imageFilePath = data.getData();
-
-					String[] proj = { MediaStore.Images.Media.DATA };
-					Cursor cursor = getContentResolver().query(imageFilePath,
-							proj, null, null, null);
-					int column_index = cursor
-							.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-					cursor.moveToFirst();
-					// 获取图片真实地址
-					path = cursor.getString(column_index);
-					System.out.println(path);
-
-				}
-
-				break;
-
+					if (data != null) {
+						path =PathUtils.getPath(SocialMainActivity.this,data.getData());
+						System.out.println(path);
+						Log.d(TAG,"imageFilePath:"+path);
+					}
+					break;
 			}
 
 			Intent intent = new Intent();
 			intent.putExtra("imagePath", path);
-
 			intent.setClass(SocialMainActivity.this,
 					MomentsPublishActivity.class);
 			startActivity(intent);

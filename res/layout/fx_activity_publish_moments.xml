@@ -91,7 +91,9 @@
                 android:gravity="center_vertical"
                 android:text="所在位置"
                 android:textColor="#353535"
-
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxLength="15"
                 android:textSize="16sp" />
 
             <TextView

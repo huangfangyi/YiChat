@@ -20,6 +20,7 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
@@ -51,6 +52,7 @@ import com.fanxin.huangfangyi.R;
 import com.fanxin.huangfangyi.main.FXConstant;
 import com.fanxin.huangfangyi.main.utils.OkHttpManager;
 import com.fanxin.huangfangyi.main.utils.Param;
+import com.fanxin.huangfangyi.main.utils.PathUtils;
 import com.fanxin.huangfangyi.ui.BaseActivity;
 
 
@@ -268,7 +270,7 @@ public class MomentsPublishActivity extends BaseActivity {
 				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 				// 指定调用相机拍照后照片的储存路径
 				intent.putExtra(MediaStore.EXTRA_OUTPUT,
-						Uri.fromFile(new File("/sdcard/bizchat/", imageName)));
+						Uri.fromFile(new File( Environment.getExternalStorageDirectory().toString()+"/bizchat/" , imageName)));
 				startActivityForResult(intent, PHOTO_REQUEST_TAKEPHOTO);
 				dlg.cancel();
 			}
@@ -308,27 +310,15 @@ public class MomentsPublishActivity extends BaseActivity {
 			switch (requestCode) {
 
 			case PHOTO_REQUEST_TAKEPHOTO:
-
-				path = "/sdcard/bizchat/" + imageName;
+				path = Environment.getExternalStorageDirectory().toString()+"/bizchat/" + imageName;
 				System.out.println(path);
-
 				break;
 
 			case PHOTO_REQUEST_GALLERY:
 
 				if (data != null) {
-					Uri imageFilePath = data.getData();
-
-					String[] proj = { MediaStore.Images.Media.DATA };
-					Cursor cursor = getContentResolver().query(imageFilePath,
-							proj, null, null, null);
-					int column_index = cursor
-							.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-					cursor.moveToFirst();
-					// 获取图片真实地址
-					path = cursor.getString(column_index);
+					path = PathUtils.getPath(MomentsPublishActivity.this,data.getData());
 					System.out.println(path);
-
 				}
 
 				break;
@@ -360,8 +350,8 @@ public class MomentsPublishActivity extends BaseActivity {
 		Log.e("imageUrl---->>>>", imageUrl);
 		Log.e("imageName_temp---->>>>", imageName_temp);
 
-		if ((new File("/sdcard/bizchat/" + imageName_temp)).exists()
-				&& (new File("/sdcard/bizchat/" + "big_" + imageName_temp))
+		if ((new File( Environment.getExternalStorageDirectory().toString()+"/bizchat/"  + imageName_temp)).exists()
+				&& (new File( Environment.getExternalStorageDirectory().toString()+"/bizchat/"  + "big_" + imageName_temp))
 						.exists()) {
 			if (!is_first) {
 				lists.add(uri);
