@@ -306,5 +306,5 @@ public class SocialFriendActivity extends BaseActivity {
 
         getData(0);
     }
-
+    
 }
