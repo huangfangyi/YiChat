@@ -127,7 +127,7 @@ public class SocialDetailActivity extends BaseActivity {
         LinearLayout ll_three = (LinearLayout) this.findViewById(R.id.ll_three);
 
         TextView tv_content = (TextView) this.findViewById(R.id.tv_content);
-        TextView tv_location = (TextView) this.findViewById(R.id.tv_location);
+        final TextView tv_location = (TextView) this.findViewById(R.id.tv_location);
         ImageView iv_pop = (ImageView) this.findViewById(R.id.iv_pop);
 
         TextView tv_goodmembers = (TextView) this
@@ -370,7 +370,8 @@ public class SocialDetailActivity extends BaseActivity {
                             }
 
                         });
-                addPopWindow.showPopupWindow(iv_temp);
+                 addPopWindow.showAtLocation(tv_location, Gravity.CENTER,70,-180);
+//                 addPopWindow.showPopupWindow(iv_temp);
 
             }
         });
