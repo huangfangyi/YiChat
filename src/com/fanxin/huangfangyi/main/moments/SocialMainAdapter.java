@@ -817,6 +817,7 @@ public class SocialMainAdapter extends BaseAdapter {
     public void hideCommentEditText() {
         if (re_edittext != null && re_edittext.getVisibility() == View.VISIBLE)
             re_edittext.setVisibility(View.GONE);
+            et_comment = (EditText) re_edittext.findViewById(R.id.et_comment);
             et_comment.clearFocus();
             InputMethodManager manager = (InputMethodManager) et_comment.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             manager.hideSoftInputFromWindow(et_comment.getWindowToken(),0);
