@@ -52,7 +52,7 @@ public class SocialFriendActivity extends BaseActivity {
     private SocialFriendAdapter adapter;
     private ListView actualListView;
     private int page = 0;
-
+    
     String userID;
     List<String> sIDs = new ArrayList<String>();
     String friendID;
