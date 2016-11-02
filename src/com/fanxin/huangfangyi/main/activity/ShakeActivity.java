@@ -257,7 +257,7 @@ public class ShakeActivity extends BaseActivity implements View.OnClickListener,
                     // 展示上下两种图片回来的效果
                     mActivity.startAnimation(true);
 //                    iv_center_image.setVisibility(View.INVISIBLE);
-                    //TODO 动画结束 做一个数据请求,然后获取同一时间摇一摇的人
+                    //TODO 动画结束 做一个数据请求,然后获取同一时间摇一摇的人 获取结束后展示出来再隐藏网络请求状态显示栏
 //                    ll_show_progress.setVisibility(View.VISIBLE);
                     //ShowDiago();
                     break;
