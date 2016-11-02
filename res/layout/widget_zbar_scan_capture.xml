@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
     <RelativeLayout
         android:id="@+id/capture_container"
         android:layout_width="match_parent"
@@ -103,5 +102,5 @@
         android:textColor="@android:color/white"
         android:textSize="14sp"
          />
-
+    <include layout="@layout/layout_title_bar"></include>
 </RelativeLayout>

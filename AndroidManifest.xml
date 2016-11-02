@@ -477,6 +477,14 @@
             android:launchMode="singleTask"
             android:theme="@style/SettingTheme">
         </activity>
+        <!--摇一摇-->
+        <activity
+            android:name="com.fanxin.huangfangyi.main.activity.ShakeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/horizontal_slide">
+        </activity>
 
         <activity
             android:name="com.fanxin.huangfangyi.main.ulive.upload.PublishDemo4MediaCodec"

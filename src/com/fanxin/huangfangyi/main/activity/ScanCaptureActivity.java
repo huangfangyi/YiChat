@@ -38,7 +38,7 @@ import net.sourceforge.zbar.SymbolSet;
 import java.io.IOException;
 import java.lang.reflect.Field;
 
-public class ScanCaptureActivity extends Activity {
+public class ScanCaptureActivity extends Activity implements OnClickListener{
 	private Camera mCamera;
 	private CameraPreview mPreview;
 	private Handler autoFocusHandler;
@@ -55,6 +55,10 @@ public class ScanCaptureActivity extends Activity {
 	private boolean barcodeScanned = false;
 	private boolean previewing = true;
 	private ImageScanner mImageScanner = null;
+	private ImageView iv_back,iv_camera;
+	private TextView tv_title;
+	private RelativeLayout titleBar;
+
 	private String cursor;
 	static {
 		System.loadLibrary("iconv");
@@ -62,12 +66,18 @@ public class ScanCaptureActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.widget_zbar_scan_capture);
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		setTitle("二维码/条码 扫描");
+		setContentView(R.layout.widget_zbar_scan_capture);
 		findViewById();
+		iniData();
 		addEvents();
 		initViews();
+	}
+
+	private void iniData() {
+		//标题上面的操作
+		iv_camera.setVisibility(View.GONE);
+		tv_title.setText("二维码/条码 扫描");
 	}
 
 	private void findViewById() {
@@ -77,21 +87,17 @@ public class ScanCaptureActivity extends Activity {
 		scanContainer = (RelativeLayout) findViewById(R.id.capture_container);
 		scanCropView = (RelativeLayout) findViewById(R.id.capture_crop_view);
 		scanLine = (ImageView) findViewById(R.id.capture_scan_line);
+
+		iv_back = (ImageView) findViewById(R.id.iv_back);
+		iv_camera = (ImageView) findViewById(R.id.iv_camera);
+		tv_title = (TextView) findViewById(R.id.tv_title);
+		titleBar = (RelativeLayout) findViewById(R.id.title);
+
 	}
 
 	private void addEvents() {
-		scanRestart.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				if (barcodeScanned) {
-					barcodeScanned = false;
-					scanResult.setText("Scanning...");
-					mCamera.setPreviewCallback(previewCb);
-					mCamera.startPreview();
-					previewing = true;
-					mCamera.autoFocus(autoFocusCB);
-				}
-			}
-		});
+		iv_back.setOnClickListener(this);
+		scanRestart.setOnClickListener(this);
 	}
 
 	private void initViews() {
@@ -292,4 +298,23 @@ public class ScanCaptureActivity extends Activity {
 	}
 
 
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+			case R.id.iv_back:
+				releaseCamera();
+				finish();
+				break;
+			case R.id.capture_restart_scan:
+				if (barcodeScanned) {
+					barcodeScanned = false;
+					scanResult.setText("Scanning...");
+					mCamera.setPreviewCallback(previewCb);
+					mCamera.startPreview();
+					previewing = true;
+					mCamera.autoFocus(autoFocusCB);
+				}
+				break;
+		}
+	}
 }
