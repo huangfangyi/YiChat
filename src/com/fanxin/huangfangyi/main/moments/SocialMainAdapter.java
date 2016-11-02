@@ -22,8 +22,6 @@ import com.fanxin.huangfangyi.main.activity.UserDetailsActivity;
 import com.fanxin.huangfangyi.main.utils.OkHttpManager;
 import com.fanxin.huangfangyi.main.utils.Param;
 import com.fanxin.easeui.domain.EaseUser;
-
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
