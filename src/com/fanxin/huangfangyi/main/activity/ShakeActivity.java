@@ -81,10 +81,10 @@ public class ShakeActivity extends BaseActivity implements View.OnClickListener,
     private boolean isShake = false;
     private RelativeLayout mTopLayout;
     private RelativeLayout mBottomLayout;
-    private ImageView mTopLine;
+    private ImageView mTopLine,iv_people,iv_song,iv_tv;
     private ImageView mBottomLine,iv_center_image;
     private ImageView iv_back,iv_camera;
-    private TextView tv_title;
+    private TextView tv_title,tv_people,tv_song,tv_tv;
     private RelativeLayout titleBar;
     private MyHandler mHandler;
     private int mWeiChatAudio;
@@ -123,6 +123,16 @@ public class ShakeActivity extends BaseActivity implements View.OnClickListener,
         iv_camera = (ImageView) findViewById(R.id.iv_camera);
         tv_title = (TextView) findViewById(R.id.tv_title);
         titleBar = (RelativeLayout) findViewById(R.id.title);
+
+        iv_people = (ImageView) findViewById(R.id.iv_people);
+        tv_people = (TextView) findViewById(R.id.tv_people);
+        iv_song = (ImageView) findViewById(R.id.iv_song);
+        tv_song = (TextView) findViewById(R.id.tv_song);
+        iv_tv = (ImageView) findViewById(R.id.iv_tv);
+        tv_tv = (TextView) findViewById(R.id.tv_tv);
+
+        iv_people.setBackgroundResource(R.drawable.peoplepress);
+        tv_people.setTextColor(getResources().getColor(R.color.btn_green_pressed));
     }
 
     private void initData() {
@@ -134,11 +144,18 @@ public class ShakeActivity extends BaseActivity implements View.OnClickListener,
         iv_camera.setVisibility(View.GONE);
         tv_title.setText("摇一摇");
         //设置中心图片
-        iv_center_image.setImageResource(R.drawable.app_logo);
+        iv_center_image.setBackgroundResource(R.drawable.shakebg);
     }
 
     private void setOnClick() {
         iv_back.setOnClickListener(this);
+
+        iv_people.setOnClickListener(this);
+        tv_people.setOnClickListener(this);
+        iv_song.setOnClickListener(this);
+        tv_song.setOnClickListener(this);
+        iv_tv.setOnClickListener(this);
+        tv_tv.setOnClickListener(this);
     }
 
     @Override
@@ -146,6 +163,33 @@ public class ShakeActivity extends BaseActivity implements View.OnClickListener,
         switch(v.getId()){
             case R.id.iv_back:
                 back(v);
+                break;
+            case R.id.iv_people:
+            case R.id.tv_people:
+                iv_tv.setBackgroundResource(R.drawable.tvnum);
+                iv_song.setBackgroundResource(R.drawable.musicnum);
+                iv_people.setBackgroundResource(R.drawable.peoplepress);
+                tv_tv.setTextColor(getResources().getColor(R.color.white));
+                tv_song.setTextColor(getResources().getColor(R.color.white));
+                tv_people.setTextColor(getResources().getColor(R.color.btn_green_pressed));
+                break;
+            case R.id.iv_song:
+            case R.id.tv_song:
+                iv_tv.setBackgroundResource(R.drawable.tvnum);
+                iv_song.setBackgroundResource(R.drawable.musicpress);
+                iv_people.setBackgroundResource(R.drawable.peoplenum);
+                tv_people.setTextColor(getResources().getColor(R.color.white));
+                tv_tv.setTextColor(getResources().getColor(R.color.white));
+                tv_song.setTextColor(getResources().getColor(R.color.btn_green_pressed));
+                break;
+            case R.id.iv_tv:
+            case R.id.tv_tv:
+                iv_tv.setBackgroundResource(R.drawable.tvpress);
+                iv_song.setBackgroundResource(R.drawable.musicnum);
+                iv_people.setBackgroundResource(R.drawable.peoplenum);
+                tv_people.setTextColor(getResources().getColor(R.color.white));
+                tv_song.setTextColor(getResources().getColor(R.color.white));
+                tv_tv.setTextColor(getResources().getColor(R.color.btn_green_pressed));
                 break;
         }
     }
