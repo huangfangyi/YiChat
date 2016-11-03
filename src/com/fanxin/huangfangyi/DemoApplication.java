@@ -12,6 +12,7 @@ import com.easemob.redpacketsdk.RedPacket;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.fanxin.huangfangyi.main.db.TopUser;
 import com.fanxin.huangfangyi.main.db.TopUserDao;
+import com.fanxin.huangfangyi.main.utils.CrashHandler;
 import com.fanxin.huangfangyi.main.utils.GroupUitls;
 import com.fanxin.huangfangyi.main.utils.LocalDataUtils;
 import com.fanxin.huangfangyi.main.utils.OkHttpManager;
@@ -69,8 +70,13 @@ public class DemoApplication extends Application {
 		UEasyStreaming.syncMobileConfig(this, 3600 * 24);
 		CrashReport.initCrashReport(getApplicationContext(), "", false);
 		GroupUitls.init(instance);
+		getCrashHandler(applicationContext);
 	}
-
+	public static CrashHandler getCrashHandler(Context context) {
+		CrashHandler crashHandler = CrashHandler.getInstance();
+		crashHandler.init(context);
+		return crashHandler;
+	}
 	public static DemoApplication getInstance() {
 		return instance;
 	}
