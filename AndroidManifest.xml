@@ -493,6 +493,23 @@
             android:launchMode="singleTask"
             android:theme="@style/horizontal_slide">
         </activity>
+        <!--雷达扫描界面-->
+        <activity
+            android:name="com.fanxin.huangfangyi.main.activity.RadarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/horizontal_slide">
+        </activity>
+        <!--附近的界面-->
+        <activity
+            android:name="com.fanxin.huangfangyi.main.activity.NearPeopleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/horizontal_slide">
+        </activity>
+
         <activity
             android:name="com.fanxin.huangfangyi.main.ulive.upload.PublishDemo4MediaCodec"
             android:launchMode="singleTask"

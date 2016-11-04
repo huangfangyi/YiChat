@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 
 import com.fanxin.huangfangyi.DemoHelper;
 import com.fanxin.huangfangyi.R;
+import com.fanxin.huangfangyi.main.activity.NearPeopleActivity;
 import com.fanxin.huangfangyi.main.activity.ScanCaptureActivity;
 import com.fanxin.huangfangyi.main.activity.ShakeActivity;
 import com.fanxin.huangfangyi.main.moments.SocialMainActivity;
@@ -68,7 +69,7 @@ public class FragmentFind extends Fragment implements OnClickListener{
                 }
                 break;
             case R.id.re_fujin:
-//                startActivity(new Intent(getActivity(), ScanCaptureActivity.class));
+                startActivity(new Intent(getActivity(), NearPeopleActivity.class));
                 break;
             case R.id.re_piaoliuping:
                 break;

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <com.fanxin.huangfangyi.main.widget.custom.RadarViewGroup
+            android:id="@+id/radar"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <com.fanxin.huangfangyi.main.widget.custom.RadarView
+                android:id="@id/id_scan_circle"
+                android:layout_width="280dp"
+                android:layout_height="280dp" />
+        </com.fanxin.huangfangyi.main.widget.custom.RadarViewGroup>
+
+        <RelativeLayout
+            android:id="@+id/ry_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:clipChildren="false">
+            <com.fanxin.huangfangyi.main.widget.custom.CustomViewPager
+                android:id="@+id/vp"
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

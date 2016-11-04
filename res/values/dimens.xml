@@ -365,4 +365,6 @@
 
     <!-- camera -->
     <dimen name="wp_sample_corner">6dp</dimen>
+    <!--翻页图的间距-->
+    <dimen name="viewpager_margin">2dp</dimen>
 </resources>

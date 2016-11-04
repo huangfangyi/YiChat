@@ -12,7 +12,6 @@ public class Param {
     public Param(String key, String value) {
         this.key = key;
         this.value = value;
-
     }
 
     public String getKey() {

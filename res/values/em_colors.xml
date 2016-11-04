@@ -42,4 +42,11 @@
 	<color name="holo_green_light">#ff99cc00</color>
 	<color name="holo_orange_light">#ffffbb33</color>
 	<color name="holo_red_light">#ffff4444</color>
+
+    <color name="line_color_blue">#3C8EAE</color>
+    <color name="bg_color_pink">#FF90A2</color>
+    <color name="bg_color_blue">#43D5FF</color>
+    <color name="bg_color_blue_light">#84B5CA</color>
+
 </resources>
+

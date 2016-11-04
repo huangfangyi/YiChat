@@ -48,7 +48,7 @@ public class AddFriendsPreActivity extends BaseActivity implements OnClickListen
                 startActivity(new Intent(AddFriendsPreActivity.this,AddFriendsNextActivity.class));
             break;
             case R.id.rl_leida:
-
+                startActivity(new Intent(AddFriendsPreActivity.this,RadarActivity.class));
                 break;
             case R.id.rl_jianqun:
 
