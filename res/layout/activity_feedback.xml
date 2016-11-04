@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+   <include layout="@layout/layout_title_bar"></include>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:text="@string/fb_type" />
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_pressed" />
+
+            <RadioGroup
+                android:id="@+id/radioTypeId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioTypeId1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/fb_crash"/>
+
+                <RadioButton
+                    android:id="@+id/radioTypeId2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fb_message"/>
+
+                <RadioButton
+                    android:id="@+id/radioTypeId3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fb_other"/>
+            </RadioGroup>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray_pressed"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/fb_tv_content" />
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray_pressed"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <EditText
+                android:id="@+id/fb_et_content"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_margin="10.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:autoLink="all"
+                android:background="@drawable/register_phone_bg"
+                android:enabled="true"
+                android:gravity="top"
+                android:hint="@string/fb_et_content"
+                android:inputType="textMultiLine"
+                android:maxLength="100"
+                android:maxLines="16"
+                android:minLines="8"
+                android:padding="5.0dip"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:layout_margin="10.0dip"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/fb_submit"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
