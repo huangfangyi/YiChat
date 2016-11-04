@@ -17,7 +17,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,20 +26,12 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.alibaba.fastjson.JSONObject;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
-import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.BaiduMapOptions;
-import com.baidu.mapapi.map.MapStatusUpdate;
-import com.baidu.mapapi.map.MapStatusUpdateFactory;
-import com.baidu.mapapi.map.MapView;
-import com.baidu.mapapi.map.MyLocationConfiguration;
-import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
 import com.fanxin.huangfangyi.DemoApplication;
 import com.fanxin.huangfangyi.R;
 import com.fanxin.huangfangyi.main.FXConstant;
@@ -48,7 +39,6 @@ import com.fanxin.huangfangyi.main.utils.OKHttpUtils;
 import com.fanxin.huangfangyi.main.utils.Param;
 import com.fanxin.huangfangyi.main.widget.pull.SwipyRefreshLayout;
 import com.fanxin.huangfangyi.ui.BaseActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -185,7 +175,7 @@ public class NearPeopleActivity extends BaseActivity implements View.OnClickList
 			}
 			if (lastLocation != null) {
 				if (lastLocation.getLatitude() == location.getLatitude() && lastLocation.getLongitude() == location.getLongitude()) {
-					Log.d("map", "same location, skip refresh");
+					Log.d(TAG, "same location, skip refresh");
 					// mMapView.refresh(); //need this refresh?
 					return;
 				}
