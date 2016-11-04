@@ -20,7 +20,9 @@ import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.fanxin.huangfangyi.Constant;
 import com.fanxin.huangfangyi.DemoHelper;
 import com.fanxin.huangfangyi.db.UserDao;
+import com.fanxin.huangfangyi.main.activity.AddFriendsNextActivity;
 import com.fanxin.huangfangyi.main.activity.AddFriendsPreActivity;
+import com.fanxin.huangfangyi.main.activity.FeedBackActivity;
 import com.fanxin.huangfangyi.main.activity.GroupAddMembersActivity;
 import com.fanxin.huangfangyi.main.activity.LoginActivity;
 import com.fanxin.huangfangyi.main.activity.ScanCaptureActivity;
@@ -209,8 +211,15 @@ import android.widget.Toast;
         mTabs[3] = (Button) findViewById(R.id.btn_profile);
         // select first tab
         mTabs[0].setSelected(true);
-
         final ImageView ivAdd= (ImageView) findViewById(R.id.iv_add);
+        final ImageView iv_search= (ImageView) findViewById(R.id.iv_search);
+        //搜索按钮跳转添加好友下一步的操作
+        iv_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddFriendsNextActivity.class));
+            }
+        });
         final FXPopWindow fxPopWindow=new FXPopWindow(this,R.layout.fx_popupwindow_add,new FXPopWindow.OnItemClickListener(){
             @Override
             public void onClick(int position) {
@@ -229,6 +238,7 @@ import android.widget.Toast;
                         break;
                     //帮助及反馈
                     case 3:
+                        startActivity(new Intent(MainActivity.this, FeedBackActivity.class));
                         break;
                 }
             }

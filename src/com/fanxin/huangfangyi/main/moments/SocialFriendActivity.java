@@ -34,6 +34,7 @@ import com.fanxin.huangfangyi.R;
 import com.fanxin.huangfangyi.main.FXConstant;
 import com.fanxin.huangfangyi.main.utils.OkHttpManager;
 import com.fanxin.huangfangyi.main.utils.Param;
+import com.fanxin.huangfangyi.main.utils.PathUtils;
 import com.fanxin.huangfangyi.ui.BaseActivity;
 import com.fanxin.easeui.domain.EaseUser;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -52,7 +53,7 @@ public class SocialFriendActivity extends BaseActivity {
     private SocialFriendAdapter adapter;
     private ListView actualListView;
     private int page = 0;
-
+    
     String userID;
     List<String> sIDs = new ArrayList<String>();
     String friendID;
@@ -220,18 +221,8 @@ public class SocialFriendActivity extends BaseActivity {
                 case PHOTO_REQUEST_GALLERY:
 
                     if (data != null) {
-                        Uri imageFilePath = data.getData();
-
-                        String[] proj = {MediaStore.Images.Media.DATA};
-                        Cursor cursor = getContentResolver().query(imageFilePath,
-                                proj, null, null, null);
-                        int column_index = cursor
-                                .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-                        cursor.moveToFirst();
-                        // 获取图片真实地址
-                        path = cursor.getString(column_index);
+                        path = PathUtils.getPath(SocialFriendActivity.this,data.getData());
                         System.out.println(path);
-
                     }
 
                     break;
@@ -316,5 +307,5 @@ public class SocialFriendActivity extends BaseActivity {
 
         getData(0);
     }
-
+    
 }

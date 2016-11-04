@@ -485,7 +485,14 @@
             android:launchMode="singleTask"
             android:theme="@style/horizontal_slide">
         </activity>
-
+        <!--反馈界面-->
+        <activity
+            android:name="com.fanxin.huangfangyi.main.activity.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/horizontal_slide">
+        </activity>
         <activity
             android:name="com.fanxin.huangfangyi.main.ulive.upload.PublishDemo4MediaCodec"
             android:launchMode="singleTask"

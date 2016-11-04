@@ -19,6 +19,7 @@ import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -68,7 +69,7 @@ public class SocialDetailActivity extends BaseActivity {
         setContentView(R.layout.fx_activity_moments_details);
         myuserID = DemoHelper.getInstance().getCurrentUsernName();
         myNick = DemoApplication.getInstance().getUserJson().getString(FXConstant.JSON_KEY_NICK);
-        myAvatar =  DemoApplication.getInstance().getUserJson().getString(FXConstant.JSON_KEY_AVATAR);
+        myAvatar = DemoApplication.getInstance().getUserJson().getString(FXConstant.JSON_KEY_AVATAR);
         String jsonStr = this.getIntent().getStringExtra("json");
         if (jsonStr == null) {
 
@@ -89,7 +90,7 @@ public class SocialDetailActivity extends BaseActivity {
             public void onClick(View v) {
                 String comment = et_comment.getText().toString().trim();
                 if (TextUtils.isEmpty(comment)) {
-                    Toast.makeText(SocialDetailActivity.this, "请输入评论",
+                    Toast.makeText(SocialDetailActivity.this, getString(R.string.input_talks),
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -101,7 +102,7 @@ public class SocialDetailActivity extends BaseActivity {
             }
 
         });
-         // 底部评论输入框
+        // 底部评论输入框
         re_edittext = (RelativeLayout) findViewById(R.id.re_edittext);
         TextView tv_nick = (TextView) findViewById(R.id.tv_nick);
         TextView tv_time = (TextView) findViewById(R.id.tv_time);
@@ -127,7 +128,7 @@ public class SocialDetailActivity extends BaseActivity {
         LinearLayout ll_three = (LinearLayout) this.findViewById(R.id.ll_three);
 
         TextView tv_content = (TextView) this.findViewById(R.id.tv_content);
-        TextView tv_location = (TextView) this.findViewById(R.id.tv_location);
+        final TextView tv_location = (TextView) this.findViewById(R.id.tv_location);
         ImageView iv_pop = (ImageView) this.findViewById(R.id.iv_pop);
 
         TextView tv_goodmembers = (TextView) this
@@ -326,9 +327,9 @@ public class SocialDetailActivity extends BaseActivity {
         }
 
         final boolean is_good = is_good_temp;
-        String goodStr = "赞";
+        String goodStr = getString(R.string.good);
         if (!is_good) {
-            goodStr = "取消";
+            goodStr = getString(R.string.cancel);
 
         }
         iv_temp.setTag(goodStr);
@@ -347,17 +348,17 @@ public class SocialDetailActivity extends BaseActivity {
                             public void clicked(int type) {
                                 // 点击取消
                                 if (type == 1) {
-                                    if (((String) iv_temp.getTag()).equals("赞")) {
+                                    if (((String) iv_temp.getTag()).equals(getString(R.string.good))) {
                                         setGood(sID, tv_good_temp, goodArray,
                                                 ll_goodmembers_temp, view_pop,
                                                 commentArray.size());
-                                        iv_temp.setTag("取消");
+                                        iv_temp.setTag(getString(R.string.cancel));
 
                                     } else {
                                         cancelGood(sID, tv_good_temp,
                                                 goodArray, ll_goodmembers_temp,
                                                 view_pop, commentArray.size());
-                                        iv_temp.setTag("赞");
+                                        iv_temp.setTag(getString(R.string.good));
                                     }
 
                                 } else {
@@ -370,7 +371,8 @@ public class SocialDetailActivity extends BaseActivity {
                             }
 
                         });
-                addPopWindow.showPopupWindow(iv_temp);
+                addPopWindow.showAtLocation(tv_location, Gravity.CENTER, 70, -180);
+//                 addPopWindow.showPopupWindow(iv_temp);
 
             }
         });
@@ -381,16 +383,12 @@ public class SocialDetailActivity extends BaseActivity {
     }
 
     /**
-     * 
      * 显示发表评论的输入框
-     * 
-     * 
-     * 
      */
 
     public void showCommentEditText(final String sID,
-            final TextView tv_comment, final JSONArray jsons, final View view,
-            final int goodSize) {
+                                    final TextView tv_comment, final JSONArray jsons, final View view,
+                                    final int goodSize) {
 
         openInputMethod(re_edittext);
 
@@ -404,7 +402,7 @@ public class SocialDetailActivity extends BaseActivity {
         window.setContentView(R.layout.fx_dialog_social_delete);
         TextView tv_cancel = (TextView) window.findViewById(R.id.tv_cancel);
         tv_cancel.setOnClickListener(new OnClickListener() {
-             public void onClick(View v) {
+            public void onClick(View v) {
                 dlg.cancel();
             }
         });
@@ -414,22 +412,22 @@ public class SocialDetailActivity extends BaseActivity {
 
                 // 更新服务器
 
-                List<Param> paramList=new ArrayList<>();
+                List<Param> paramList = new ArrayList<>();
                 paramList.add(new Param("sID", sID));
 
                 OkHttpManager.getInstance().post(paramList, FXConstant.URL_SOCIAL_DELETE, new OkHttpManager.HttpCallBack() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         int code = jsonObject.getInteger("code");
-                        if(code != 1000){
+                        if (code != 1000) {
 
-                            Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(String errorMsg) {
-                        Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -446,13 +444,13 @@ public class SocialDetailActivity extends BaseActivity {
 
         if ((test_temp != null)
                 && (test_temp.contains("http://")
-                        || test_temp.contains("https://") || test_temp
-                            .contains("www."))) {
+                || test_temp.contains("https://") || test_temp
+                .contains("www."))) {
             int start = 0;
             while (test != null
                     && !(test.startsWith("http://")
-                            || test.startsWith("https://") || test
-                                .startsWith("www."))) {
+                    || test.startsWith("https://") || test
+                    .startsWith("www."))) {
 
                 test = test.substring(1);
                 start++;
@@ -550,7 +548,7 @@ public class SocialDetailActivity extends BaseActivity {
 
     // 设置点赞的
     private void setGoodTextClick(TextView mTextView2, JSONArray data,
-            LinearLayout ll_goodmembers, View view, int cSize) {
+                                  LinearLayout ll_goodmembers, View view, int cSize) {
         if (data == null || data.size() == 0) {
             ll_goodmembers.setVisibility(View.GONE);
         } else {
@@ -577,7 +575,7 @@ public class SocialDetailActivity extends BaseActivity {
 
             } else {
 
-                    EaseUser user = DemoHelper.getInstance().getContactList()
+                EaseUser user = DemoHelper.getInstance().getContactList()
                         .get(userID_temp);
                 if (user != null) {
 
@@ -620,8 +618,8 @@ public class SocialDetailActivity extends BaseActivity {
         private int postion;
 
         public TextViewURLSpan(String nick, String userID, int postion,
-                String scID, int type, TextView ctextView, JSONArray cjsons,
-                View view, int goodSize) {
+                               String scID, int type, TextView ctextView, JSONArray cjsons,
+                               View view, int goodSize) {
             this.userID = userID;
             this.type = type;
             this.ctextView = ctextView;
@@ -681,18 +679,18 @@ public class SocialDetailActivity extends BaseActivity {
     }
 
     private void showDeleteDialog(final String userID, final int postion,
-            final String scID, final int type, final TextView ctextView,
-            final JSONArray cjsons, final View view, final int goodSize) {
+                                  final String scID, final int type, final TextView ctextView,
+                                  final JSONArray cjsons, final View view, final int goodSize) {
         final AlertDialog dlg = new AlertDialog.Builder(
                 SocialDetailActivity.this).create();
         dlg.show();
         Window window = dlg.getWindow();
         window.setContentView(R.layout.fx_dialog_social_main);
         TextView tv_paizhao = (TextView) window.findViewById(R.id.tv_content1);
-        tv_paizhao.setText("复制");
+        tv_paizhao.setText(getString(R.string.copy));
         tv_paizhao.setOnClickListener(new OnClickListener() {
 
-             public void onClick(View v) {
+            public void onClick(View v) {
                 ClipboardManager cmb = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 cmb.setText(cjsons.getJSONObject(postion).getString("content")
                         .trim());
@@ -703,7 +701,7 @@ public class SocialDetailActivity extends BaseActivity {
             }
         });
         TextView tv_xiangce = (TextView) window.findViewById(R.id.tv_content2);
-        tv_xiangce.setText("删除");
+        tv_xiangce.setText(getString(R.string.delete));
         tv_xiangce.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 deleteComment(userID, postion, scID, type, ctextView, cjsons,
@@ -717,8 +715,8 @@ public class SocialDetailActivity extends BaseActivity {
 
     // 删除评论
     private void deleteComment(String userID, final int postion, String scID,
-            int type, TextView ctextView, final JSONArray cjsons, View view,
-            int goodSize) {
+                               int type, TextView ctextView, final JSONArray cjsons, View view,
+                               int goodSize) {
 
         if (scID == null) {
             scID = "LOCAL";
@@ -733,7 +731,7 @@ public class SocialDetailActivity extends BaseActivity {
         setCommentTextClick(ctextView, cjsons, view, goodSize);
 
 
-        List<Param> paramList=new ArrayList<>();
+        List<Param> paramList = new ArrayList<>();
         paramList.add(new Param("scID", scID));
         paramList.add(new Param("userID", myuserID));
         paramList.add(new Param("tag", tag));
@@ -741,15 +739,15 @@ public class SocialDetailActivity extends BaseActivity {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 int code = jsonObject.getInteger("code");
-                if(code != 1000){
+                if (code != 1000) {
 
-                    Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(String errorMsg) {
-                Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -757,7 +755,7 @@ public class SocialDetailActivity extends BaseActivity {
 
     // 设置点赞的
     private void setCommentTextClick(TextView mTextView2, JSONArray data,
-            View view, int goodSize) {
+                                     View view, int goodSize) {
         if (goodSize > 0 && data.size() > 0) {
             view.setVisibility(View.VISIBLE);
         } else {
@@ -813,7 +811,7 @@ public class SocialDetailActivity extends BaseActivity {
             if (userID_temp.equals(myuserID)) {
 
                 ssb.setSpan(new TextViewURLSpan(nick, userID_temp, i, scID, 2,
-                        mTextView2, data, view, goodSize), start,
+                                mTextView2, data, view, goodSize), start,
                         start + nick.length() + content_0.length(),
                         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
@@ -826,12 +824,10 @@ public class SocialDetailActivity extends BaseActivity {
     }
 
     /**
-     * 
      * 点赞
-     * 
      */
     public void setGood(String sID, TextView tv_good, JSONArray jsons,
-            LinearLayout ll_goodmembers_temp, View view, int cSize) {
+                        LinearLayout ll_goodmembers_temp, View view, int cSize) {
         // 即时改变当前UI
         JSONObject json = new JSONObject();
         json.put("userID", myuserID);
@@ -839,22 +835,22 @@ public class SocialDetailActivity extends BaseActivity {
         setGoodTextClick(tv_good, jsons, ll_goodmembers_temp, view, cSize);
         // 更新后台
 
-        List<Param> paramList=new ArrayList<>();
+        List<Param> paramList = new ArrayList<>();
         paramList.add(new Param("sID", sID));
         paramList.add(new Param("userID", myuserID));
         OkHttpManager.getInstance().post(paramList, FXConstant.URL_SOCIAL_GOOD, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 int code = jsonObject.getInteger("code");
-                if(code != 1000){
+                if (code != 1000) {
 
-                    Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(String errorMsg) {
-                Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -862,12 +858,10 @@ public class SocialDetailActivity extends BaseActivity {
     }
 
     /**
-     * 
      * 取消点赞
-     * 
      */
     public void cancelGood(String sID, TextView tv_good, JSONArray jsons,
-            LinearLayout ll_goodmembers_temp, View view, int cSize) {
+                           LinearLayout ll_goodmembers_temp, View view, int cSize) {
 
         // 即时改变当前UI
         for (int i = 0; i < jsons.size(); i++) {
@@ -877,26 +871,24 @@ public class SocialDetailActivity extends BaseActivity {
             }
         }
         setGoodTextClick(tv_good, jsons, ll_goodmembers_temp, view, cSize);
-        List<Param> paramList=new ArrayList<>();
+        List<Param> paramList = new ArrayList<>();
         paramList.add(new Param("sID", sID));
         paramList.add(new Param("userID", myuserID));
         OkHttpManager.getInstance().post(paramList, FXConstant.URL_SOCIAL_GOOD_CANCEL, new OkHttpManager.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 int code = jsonObject.getInteger("code");
-                if(code != 1000){
+                if (code != 1000) {
 
-                    Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(String errorMsg) {
-                Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
 
     }
@@ -922,27 +914,27 @@ public class SocialDetailActivity extends BaseActivity {
             if (diffDays != 0) {
                 if (diffDays < 30) {
                     if (1 < diffDays && diffDays < 2) {
-                        backStr = "昨天";
+                        backStr = getString(R.string.yesterday);
                     } else if (1 < diffDays && diffDays < 2) {
-                        backStr = "前天";
+                        backStr = getString(R.string.The_day_before_yesterday);
 
                     } else {
 
-                        backStr = String.valueOf(diffDays) + "天前";
+                        backStr = String.valueOf(diffDays) + getString(R.string.Days_ago);
                     }
                 } else {
-                    backStr = "很久以前";
+                    backStr = getString(R.string.long_long_ago);
                 }
 
             } else if (diffHours != 0) {
-                backStr = String.valueOf(diffHours) + "小时前";
+                backStr = String.valueOf(diffHours) + getString(R.string.An_hour_ago);
 
             } else if (diffMinutes != 0) {
-                backStr = String.valueOf(diffMinutes) + "分钟前";
+                backStr = String.valueOf(diffMinutes) + getString(R.string.minutes_ago);
 
             } else {
 
-                backStr = "刚刚";
+                backStr = getString(R.string.just);
 
             }
 
@@ -978,9 +970,7 @@ public class SocialDetailActivity extends BaseActivity {
     }
 
     /**
-     * 
      * 提交评论
-     * 
      */
 
     private void submitComment() {
@@ -996,7 +986,7 @@ public class SocialDetailActivity extends BaseActivity {
         setCommentTextClick(tv_comment_tag, jsons_tag, view_tag, goodSize_tag);
 
 
-        List<Param> paramList=new ArrayList<>();
+        List<Param> paramList = new ArrayList<>();
         paramList.add(new Param("sID", sID_tag));
         paramList.add(new Param("content", comment));
         paramList.add(new Param("userID", myuserID));
@@ -1005,34 +995,33 @@ public class SocialDetailActivity extends BaseActivity {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 int code = jsonObject.getInteger("code");
-                if(code != 1000){
+                if (code != 1000) {
 
-                    Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(String errorMsg) {
-                Toast.makeText(getApplicationContext(),"服务端响应失败...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.service_not_response), Toast.LENGTH_SHORT).show();
             }
         });
-
 
 
     }
 
     /**
      * 显示键盘
-     * 
-     * @param view
+     *
+     * @param editText
      */
     public void openInputMethod(final View editText) {
 
         InputMethodManager inputManager = (InputMethodManager) editText
 
-        .getContext().getSystemService(
+                .getContext().getSystemService(
 
-        Context.INPUT_METHOD_SERVICE);
+                        Context.INPUT_METHOD_SERVICE);
 
         inputManager.showSoftInput(editText, 0);
 
@@ -1040,8 +1029,6 @@ public class SocialDetailActivity extends BaseActivity {
 
     /**
      * 关闭
-     * 
-     * @param view
      */
 
     public void closeInputMethod() {
@@ -1050,9 +1037,9 @@ public class SocialDetailActivity extends BaseActivity {
 
             ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
 
-            .hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                    .hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
 
-            InputMethodManager.HIDE_NOT_ALWAYS);
+                            InputMethodManager.HIDE_NOT_ALWAYS);
 
         } catch (Exception e) {
         } finally {

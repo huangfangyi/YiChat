@@ -339,4 +339,34 @@
     <string name="revoke_content_ed">your friend has revoked a msg </string>
     <string name="revoke_content_someone">%s has revoked a msg</string>
 
+    <string name="peoples">People</string>
+    <string name="musics">Song</string>
+    <string name="tvs">TV</string>
+
+    <string name="service_not_response">Server response failure ...</string>
+    <string name="input_talks">Please enter a comment ...</string>
+    <string name="good">Thumbs up</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="The_day_before_yesterday">The day before yesterday</string>
+    <string name="Days_ago">days ago</string>
+    <string name="long_long_ago">long long ago</string>
+    <string name="An_hour_ago">hours ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="just">just a moment ago</string>
+    <string name="shake_people">Searching for people shaking their phone at the same time ...</string>
+    <string name="shake_music">Recognizing the sound you hear ...</string>
+    <string name="shake_tv">Hearing TV Show ...</string>
+    <string name="shake_shake">Shake</string>
+
+    <string name="feeBack">反馈</string>
+    <string name="fb_tv_content">反馈内容</string>
+    <string name="fb_et_content">请输入反馈信息</string>
+    <string name="fb_type">反馈类型</string>
+    <string name="fb_crash">异常反馈</string>
+    <string name="fb_message">意见和建议</string>
+    <string name="fb_other">其他</string>
+    <string name="fb_submit">提交反馈</string>
+    <string name="fb_message_not_be_null">意见反馈不能为空</string>
+    <string name="fb_success">意见反馈已成功</string>
+
 </resources>

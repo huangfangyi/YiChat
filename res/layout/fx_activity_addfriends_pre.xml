@@ -2,18 +2,18 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb" >
+    android:background="#ebebeb">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_top_bar"
-            android:background="@color/common_top_bar_blue" >
+            android:background="@color/common_top_bar_blue">
 
             <ImageView
                 android:id="@+id/iv_back"
@@ -48,14 +48,14 @@
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
 
-             
+
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="20dp"
-            android:background="#fff" >
+            android:background="#fff">
 
             <TextView
                 android:id="@+id/tv_search"
@@ -88,7 +88,7 @@
             android:layout_height="48dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,10 +109,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
- 
+                android:id="@+id/rl_leida"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:background="@drawable/fx_btn_list_item_bg"
@@ -120,7 +120,7 @@
                 android:paddingBottom="14dp"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:paddingTop="14dp" >
+                android:paddingTop="14dp">
 
                 <ImageView
                     android:id="@+id/iv_leida"
@@ -158,10 +158,10 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="#DBDBDB" />
-           
+
 
             <RelativeLayout
-     
+                android:id="@+id/rl_jianqun"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:background="@drawable/fx_btn_list_item_bg"
@@ -169,10 +169,10 @@
                 android:paddingBottom="14dp"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:paddingTop="14dp" >
+                android:paddingTop="14dp">
 
                 <ImageView
-                   android:id="@+id/iv_jianqun"
+                    android:id="@+id/iv_jianqun"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_alignParentLeft="true"
@@ -199,15 +199,17 @@
                     android:textColor="#BBBBBB"
                     android:textSize="12sp" />
             </RelativeLayout>
-              <View
+
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="#DBDBDB" />
-              <RelativeLayout
-     
+
+            <RelativeLayout
+                android:id="@+id/rl_sacn"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:background="@drawable/fx_btn_list_item_bg"
@@ -215,10 +217,10 @@
                 android:paddingBottom="14dp"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:paddingTop="14dp" >
+                android:paddingTop="14dp">
 
                 <ImageView
-                   android:id="@+id/iv_saoyisao"
+                    android:id="@+id/iv_saoyisao"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_alignParentLeft="true"
@@ -245,15 +247,17 @@
                     android:textColor="#BBBBBB"
                     android:textSize="12sp" />
             </RelativeLayout>
-                 <View
+
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="#DBDBDB" />
-              <RelativeLayout
-     
+
+            <RelativeLayout
+                android:id="@+id/rl_lianxiren"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:background="@drawable/fx_btn_list_item_bg"
@@ -261,10 +265,10 @@
                 android:paddingBottom="14dp"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:paddingTop="14dp" >
+                android:paddingTop="14dp">
 
                 <ImageView
-                   android:id="@+id/iv_lianxiren"
+                    android:id="@+id/iv_lianxiren"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_alignParentLeft="true"
@@ -291,15 +295,17 @@
                     android:textColor="#BBBBBB"
                     android:textSize="12sp" />
             </RelativeLayout>
-                 <View
+
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="#DBDBDB" />
-              <RelativeLayout
-     
+
+            <RelativeLayout
+                android:id="@+id/rl_ggh"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:background="@drawable/fx_btn_list_item_bg"
@@ -307,10 +313,10 @@
                 android:paddingBottom="14dp"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:paddingTop="14dp" >
+                android:paddingTop="14dp">
 
                 <ImageView
-                   android:id="@+id/iv_ggh"
+                    android:id="@+id/iv_ggh"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_alignParentLeft="true"
