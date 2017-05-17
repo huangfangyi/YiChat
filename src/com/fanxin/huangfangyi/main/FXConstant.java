@@ -7,7 +7,7 @@ import android.os.Environment;
  */
 public class FXConstant {
     //服务器端
-    public static final String HOST = "http://120.76.100.121/";
+    public static final String HOST = "http://120.24.211.126/fanxin3/";
     public static final String URL_REGISTER = HOST + "register.php";
     public static final String URL_LOGIN = HOST + "login.php";
     public static final String URL_FriendList = HOST + "getMyFriends.php";
