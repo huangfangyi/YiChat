@@ -5,7 +5,7 @@
     <br/>
 </p>
 <p>
-    <strong>凡信IOS版体验包</strong><br/>https://www.pgyer.com/fanxinios
+    <strong>凡信IOS版体验包</strong><br/>https://www.pgyer.com/Y5mp
 
 <br/>
 </p>
