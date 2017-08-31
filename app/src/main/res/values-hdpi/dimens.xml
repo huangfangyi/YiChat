@@ -1,0 +1,6 @@
+<resources>
+
+    <dimen name="sider_bar_textsize">14sp</dimen>
+    <dimen name="emoji_size">19sp</dimen>
+
+</resources>

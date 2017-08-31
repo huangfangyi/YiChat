@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@drawable/list_item_bg_white"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/default_avatar" />
+
+        <ImageView
+            android:id="@+id/iv_moments"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/default_image" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:text="名字"
+            android:textColor="#576b95"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="11dp"
+            android:layout_toLeftOf="@id/iv_moments"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:maxLines="1"
+            android:text="内容"
+            android:textColor="#353535"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_content"
+            android:layout_marginLeft="11dp"
+             android:layout_toRightOf="@+id/iv_avatar"
+
+            android:text="17:08"
+            android:textColor="#353535"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

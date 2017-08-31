@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <RelativeLayout
+        android:id="@+id/rl_rtc_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_hangup"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/btn_audio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:onClick="OnBtnClicked"
+            android:src="@drawable/icon_mute_nomal_selector"
+            android:text="@string/str_close_audio" />
+
+
+        <ImageButton
+            android:id="@+id/btn_speaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:onClick="OnBtnClicked"
+            android:src="@drawable/icon_speaker_normal_selector"
+            android:text="@string/str_speaker" />
+
+
+        <ImageButton
+            android:id="@+id/btn_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:onClick="OnBtnClicked"
+            android:src="@drawable/open_cmaera_numal"
+            android:text="@string/str_close_camera" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:text="@string/accept"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_check_people"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:onClick="OnBtnClicked"
+        android:padding="5dp"
+        android:text="@string/check_again"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_hangup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_check_people"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:drawableTop="@drawable/hang_up"
+        android:onClick="OnBtnClicked"
+        android:text="@string/str_hangup" />
+
+    <ImageButton
+        android:id="@+id/btn_swtich_camera"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/switch_camera"
+        android:onClick="OnBtnClicked"
+        android:text="@string/str_switch_camera"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -4,7 +4,7 @@
     android:versionCode="2110"
     android:versionName="2.1.1" >
 
-    <uses-sdk android:minSdkVersion="4" />
+    <uses-sdk android:minSdkVersion="14" />
 
     <application />
 

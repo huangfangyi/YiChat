@@ -1,0 +1,55 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_input_soft"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@null"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/check_barrage"
+            android:button="@null"
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:layout_height="35dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@string/str_barrage"
+            android:textColor="@color/btn_gray_pressed"
+            android:layout_centerInParent="true"
+            android:background="@drawable/selector_switch_button"
+            android:checked="false"/>
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:hint="@string/say_some_to_people"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_send_message"
+            android:background="@drawable/send_message_selector"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:onClick="OnBtnClicked"
+            android:text="@string/str_send" />
+    </LinearLayout>
+</merge>

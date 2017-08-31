@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_margin="5dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/re_avatar"
+        android:src="@drawable/default_group"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginLeft="18dp"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/re_avatar"
+        android:text="@string/forward"
+        android:textColor="#353535"
+        android:textSize="16sp" />
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_marginRight="20dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_toLeftOf="@+id/tv_name"
+        android:focusableInTouchMode="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:button="@null"
+        android:textColor="@color/black_deep"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/item_pre_videocall_selector"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+</RelativeLayout>

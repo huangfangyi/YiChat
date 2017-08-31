@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_rtc_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <ImageButton
+            android:id="@+id/btn_audio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:onClick="OnBtnClicked"
+            android:src="@drawable/icon_mute_nomal_selector"
+            android:text="@string/str_close_audio"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_hangup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/hang_up"
+            android:onClick="OnBtnClicked"
+            android:text="@string/str_hangup" />
+
+        <ImageButton
+            android:id="@+id/btn_speaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:onClick="OnBtnClicked"
+            android:src="@drawable/icon_speaker_normal_selector"
+            android:text="@string/str_speaker"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/hang_in"
+            android:onClick="OnBtnClicked"
+            android:text="@string/str_answer" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/voice_call"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

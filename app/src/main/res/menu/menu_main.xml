@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:visible="false"
+        android:id="@+id/item_search"
+        android:icon="@drawable/icon_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/item_add_group"
+        android:icon="@drawable/icon_add_group"
+        android:title="@string/Initiate_group_chat"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_add_friend"
+        android:icon="@drawable/icon_add_friend"
+        android:title="@string/add_friend"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_scan"
+        android:icon="@drawable/icon_menu_scan"
+
+        android:title="@string/scanning"
+        app:showAsAction="never" />
+</menu>

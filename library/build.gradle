@@ -6,8 +6,11 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    lintOptions {
+        abortOnError false
+    }
 
     sourceSets {
         main {
@@ -19,6 +22,7 @@ android {
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
         }
+
 
         // Move the tests to tests/java, tests/res, etc...
         instrumentTest.setRoot('tests')

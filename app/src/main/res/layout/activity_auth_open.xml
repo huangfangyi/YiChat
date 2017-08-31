@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/layout_title_bar" android:visibility="gone"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_height="250dp">
+        <ImageView
+            android:id="@+id/iv_appicon"
+            android:src="@drawable/default_avatar"
+            android:layout_centerInParent="true"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+        <TextView
+            android:id="@+id/tv_appname"
+            android:text="@string/accept"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/iv_appicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/divider_list"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+    <TextView
+        android:text="@string/auth_check"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:checked="true"
+        android:enabled="false"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="@string/auth_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_config_login"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/send_message_selector"
+        android:layout_marginRight="40dp"
+        android:text="@string/confim_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

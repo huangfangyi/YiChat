@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_title_bar"/>
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:padding="2dp" >
+
+        <EditText
+            android:id="@+id/country_et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/register_phone_bg"
+            android:drawableLeft="@drawable/icon_search_gray"
+            android:drawablePadding="4dp"
+            android:hint="@string/search"
+            android:paddingLeft="10dp"
+            android:paddingRight="40dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/country_iv_cleartext"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:padding="6dp"
+            android:src="@drawable/clear"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/country_lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#000000"
+            android:divider="#e3e3e3"
+            android:dividerHeight="1.0dp"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:visibility="visible" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/country_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@color/holo_green_light"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip" />
+
+        <com.htmessage.fanxinht.acitivity.login.country.SideBar
+            android:id="@+id/country_sidebar"
+            android:layout_width="30dp"
+            android:paddingBottom="5dp"
+            android:background="@color/transparent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

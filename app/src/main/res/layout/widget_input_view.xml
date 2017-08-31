@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d4d4d4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <LinearLayout
+            android:id="@+id/ll_press_to_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+             android:orientation="horizontal">
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="bottom"
+                 android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_set_mode_voice"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/chatting_setmode_voice_btn" />
+             </LinearLayout>
+            <EditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/bg_et"
+                android:maxLines="4"
+                android:minHeight="34dp"
+                android:paddingLeft="3dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_press_to_speak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/btn_set_mode_keyboard"
+                android:layout_width="34dp"
+                android:layout_gravity="center"
+                android:layout_height="34dp"
+                android:background="@drawable/chatting_setmode_keyboard_btn" />
+            <Button
+                android:id="@+id/tv_recording"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="34dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/chat_press_speak_btn"
+                android:text="@string/button_pushtotalk"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_emoticons_normal"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/chatting_biaoqing_btn_normal"
+                android:scaleType="fitCenter"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_emoticons_checked"
+
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/chatting_setmode_keyboard_btn"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/btn_more_type_msg" />
+
+            <Button
+                android:id="@+id/btn_send"
+
+                android:layout_width="42dp"
+                android:layout_height="34dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_btn_green"
+                android:text="@string/button_send"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/ll_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+             >
+            <!-- 表情图片 -->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/emoji_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <android.support.design.widget.TabLayout
+
+                android:id="@+id/tl_face_container"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                app:tabBackground="@drawable/emoji_bottom_bg"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="scrollable" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_extend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:visibility="gone">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4"
+                />
+
+            <!-- 图片，表情，名片等按钮 -->
+            <android.support.v4.view.ViewPager
+                android:padding="12dp"
+                android:id="@+id/extend_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablelayout_extend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:tabGravity="fill" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

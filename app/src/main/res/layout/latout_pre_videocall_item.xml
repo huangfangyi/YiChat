@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_game_avatar"
+        android:src="@drawable/default_avatar"
+        android:layout_margin="10dp"
+        android:layout_width="40dp"
+        android:layout_centerVertical="true"
+        android:layout_height="40dp" />
+        <TextView
+            android:layout_toRightOf="@+id/iv_game_avatar"
+            android:layout_centerVertical="true"
+            android:text="@string/accept"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_username"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_marginRight="20dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:button="@null"
+        android:textColor="@color/black_deep"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/item_pre_videocall_selector"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+</RelativeLayout>

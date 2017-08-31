@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="country_code_list_en" translatable="false">
+        <item>Angola                     *+244  </item>
+        <item>Afghanistan                *+93   </item>
+        <item>Albania                    *+355  </item>
+        <item>Algeria                    *+213  </item>
+        <item>Andorra                    *+376  </item>
+        <item>Anguilla                   *+1264 </item>
+        <item>Antigua and Barbuda        *+1268 </item>
+        <item>Argentina                  *+54   </item>
+        <item>Armenia                    *+374  </item>
+        <item>Ascension                  *+247  </item>
+        <item>Australia                  *+61   </item>
+        <item>Austria                    *+43   </item>
+        <item>Azerbaijan                 *+994  </item>
+        <item>Bahamas                    *+1242 </item>
+        <item>Bahrain                    *+973  </item>
+        <item>Bangladesh                 *+880  </item>
+        <item>Barbados                   *+1246 </item>
+        <item>Belarus                    *+375  </item>
+        <item>Belgium                    *+32   </item>
+        <item>Belize                     *+501  </item>
+        <item>Benin                      *+229  </item>
+        <item>BermudaIs.                 *+1441 </item>
+        <item>Bolivia                    *+591  </item>
+        <item>Botswana                   *+267  </item>
+        <item>Brazil                     *+55   </item>
+        <item>Brunei                     *+673  </item>
+        <item>Bulgaria                   *+359  </item>
+        <item>Burkina-faso               *+226  </item>
+        <item>Burma                      *+95   </item>
+        <item>Burundi                    *+257  </item>
+        <item>Cameroon                   *+237  </item>
+        <item>Canada                     *+1    </item>
+        <item>Cayman Is.                 *+1345 </item>
+        <item>Central African Republic   *+236  </item>
+        <item>Chad                       *+235  </item>
+        <item>Chile                      *+56   </item>
+        <item>China                      *+86   </item>
+        <item>Colombia                   *+57   </item>
+        <item>Congo                      *+242  </item>
+        <item>Cook Is.                   *+682  </item>
+        <item>Costa Rica                 *+506  </item>
+        <item>Cuba                       *+53   </item>
+        <item>Cyprus                     *+357  </item>
+        <item>Czech Republic             *+420  </item>
+        <item>Denmark                    *+45   </item>
+        <item>Djibouti                   *+253  </item>
+        <item>Dominica Rep.              *+1890 </item>
+        <item>Ecuador                    *+593  </item>
+        <item>Egypt                      *+20   </item>
+        <item>EISalvador                 *+503  </item>
+        <item>Estonia                    *+372  </item>
+        <item>Ethiopia                   *+251  </item>
+        <item>Fiji                       *+679  </item>
+        <item>Finland                    *+358  </item>
+        <item>France                     *+33   </item>
+        <item>French Guiana              *+594  </item>
+        <item>Gabon                      *+241  </item>
+        <item>Gambia                     *+220  </item>
+        <item>Georgia                    *+995  </item>
+        <item>Germany                    *+49   </item>
+        <item>Ghana                      *+233  </item>
+        <item>Gibraltar                  *+350  </item>
+        <item>Greece                     *+30   </item>
+        <item>Grenada                    *+1809 </item>
+        <item>Guam                       *+1671 </item>
+        <item>Guatemala                  *+502  </item>
+        <item>Guinea                     *+224  </item>
+        <item>Guyana                     *+592  </item>
+        <item>Haiti                      *+509  </item>
+        <item>Honduras                   *+504  </item>
+        <item>Hongkong                   *+852  </item>
+        <item>Hungary                    *+36   </item>
+        <item>Iceland                    *+354  </item>
+        <item>India                      *+91   </item>
+        <item>Indonesia                  *+62   </item>
+        <item>Iran                       *+98   </item>
+        <item>Iraq                       *+964  </item>
+        <item>Ireland                    *+353  </item>
+        <item>Israel                     *+972  </item>
+        <item>Italy                      *+39   </item>
+        <item>IvoryCoast                 *+225  </item>
+        <item>Jamaica                    *+1876 </item>
+        <item>Japan                      *+81   </item>
+        <item>Jordan                     *+962  </item>
+        <item>Kampuchea (Cambodia )      *+855  </item>
+        <item>Kazakstan                  *+327  </item>
+        <item>Kenya                      *+254  </item>
+        <item>Korea                      *+82   </item>
+        <item>Kuwait                     *+965  </item>
+        <item>Kyrgyzstan                 *+331  </item>
+        <item>Laos                       *+856  </item>
+        <item>Latvia                     *+371  </item>
+        <item>Lebanon                    *+961  </item>
+        <item>Lesotho                    *+266  </item>
+        <item>Liberia                    *+231  </item>
+        <item>Libya                      *+218  </item>
+        <item>Liechtenstein              *+423  </item>
+        <item>Lithuania                  *+370  </item>
+        <item>Luxembourg                 *+352  </item>
+        <item>Macao                      *+853  </item>
+        <item>Madagascar                 *+261  </item>
+        <item>Malawi                     *+265  </item>
+        <item>Malaysia                   *+60   </item>
+        <item>Maldives                   *+960  </item>
+        <item>Mali                       *+223  </item>
+        <item>Malta                      *+356  </item>
+        <item>Mariana Is                 *+1670 </item>
+        <item>Martinique                 *+596  </item>
+        <item>Mauritius                  *+230  </item>
+        <item>Mexico                     *+52   </item>
+        <item>Moldova, Republic of       *+373  </item>
+        <item>Monaco                     *+377  </item>
+        <item>Mongolia                   *+976  </item>
+        <item>Montserrat Is              *+1664 </item>
+        <item>Morocco                    *+212  </item>
+        <item>Mozambique                 *+258  </item>
+        <item>Namibia                    *+264  </item>
+        <item>Nauru                      *+674  </item>
+        <item>Nepal                      *+977  </item>
+        <item>Netheriands Antilles       *+599  </item>
+        <item>Netherlands                *+31   </item>
+        <item>NewZealand                 *+64   </item>
+        <item>Nicaragua                  *+505  </item>
+        <item>Niger                      *+227  </item>
+        <item>Nigeria                    *+234  </item>
+        <item>North Korea                *+850  </item>
+        <item>Norway                     *+47   </item>
+        <item>Oman                       *+968  </item>
+        <item>Pakistan                   *+92   </item>
+        <item>Panama                     *+507  </item>
+        <item>Papua New Cuinea           *+675  </item>
+        <item>Paraguay                   *+595  </item>
+        <item>Peru                       *+51   </item>
+        <item>Philippines                *+63   </item>
+        <item>Poland                     *+48   </item>
+        <item>French Polynesia           *+689  </item>
+        <item>Portugal                   *+351  </item>
+        <item>PuertoRico                 *+1787 </item>
+        <item>Qatar                      *+974  </item>
+        <item>Reunion                    *+262  </item>
+        <item>Romania                    *+40   </item>
+        <item>Russia                     *+7    </item>
+        <item>Saint Lueia                *+1758 </item>
+        <item>Saint Vincent              *+1784 </item>
+        <item>Samoa Eastern              *+684  </item>
+        <item>Samoa Western              *+685  </item>
+        <item>San Marino                 *+378  </item>
+        <item>Sao Tome and Principe      *+239  </item>
+        <item>Saudi Arabia               *+966  </item>
+        <item>Senegal                    *+221  </item>
+        <item>Seychelles                 *+248  </item>
+        <item>Sierra Leone               *+232  </item>
+        <item>Singapore                  *+65   </item>
+        <item>Slovakia                   *+421  </item>
+        <item>Slovenia                   *+386  </item>
+        <item>Solomon Is                 *+677  </item>
+        <item>Somali                     *+252  </item>
+        <item>South Africa               *+27   </item>
+        <item>Spain                      *+34   </item>
+        <item>Sri Lanka                  *+94   </item>
+        <item>St.Lucia                   *+1758 </item>
+        <item>St.Vincent                 *+1784 </item>
+        <item>Sudan                      *+249  </item>
+        <item>Suriname                   *+597  </item>
+        <item>Swaziland                  *+268  </item>
+        <item>Sweden                     *+46   </item>
+        <item>Switzerland                *+41   </item>
+        <item>Syriaw                     *+963  </item>
+        <item>Taiwan                     *+886  </item>
+        <item>Tajikstan                  *+992  </item>
+        <item>Tanzania                   *+255  </item>
+        <item>Thailand                   *+66   </item>
+        <item>Togo                       *+228  </item>
+        <item>Tonga                      *+676  </item>
+        <item>Trinidad and Tobago        *+1809 </item>
+        <item>Tunisia                    *+216  </item>
+        <item>Turkey                     *+90   </item>
+        <item>Turkmenistan               *+993  </item>
+        <item>Uganda                     *+256  </item>
+        <item>Ukraine                    *+380  </item>
+        <item>United Arab Emirates       *+971  </item>
+        <item>United Kiongdom            *+44   </item>
+        <item>United States of America   *+1    </item>
+        <item>Uruguay                    *+598  </item>
+        <item>Uzbekistan                 *+233  </item>
+        <item>Venezuela                  *+58   </item>
+        <item>Vietnam                    *+84   </item>
+        <item>Yemen                      *+967  </item>
+        <item>Yugoslavia                 *+381  </item>
+        <item>South Africa               *+27   </item>
+        <item>Zimbabwe                   *+263  </item>
+        <item>Zaire                      *+243  </item>
+        <item>Zambia                     *+260  </item>
+    </string-array>
+    <string-array name="country_code_list_ch" translatable="false" >
+        <item>安哥拉             *+244  </item>
+        <item>阿富汗             *+93   </item>
+        <item>阿尔巴尼亚         *+355  </item>
+        <item>阿尔及利亚         *+213  </item>
+        <item>安道尔共和国       *+376  </item>
+        <item>安圭拉岛           *+1264 </item>
+        <item>安提瓜和巴布达     *+1268 </item>
+        <item>阿根廷             *+54   </item>
+        <item>亚美尼亚           *+374  </item>
+        <item>阿森松             *+247  </item>
+        <item>澳大利亚           *+61   </item>
+        <item>奥地利             *+43   </item>
+        <item>阿塞拜疆           *+994  </item>
+        <item>巴哈马             *+1242 </item>
+        <item>巴林               *+973  </item>
+        <item>孟加拉国           *+880  </item>
+        <item>巴巴多斯           *+1246 </item>
+        <item>白俄罗斯           *+375  </item>
+        <item>比利时             *+32   </item>
+        <item>伯利兹             *+501  </item>
+        <item>贝宁               *+229  </item>
+        <item>百慕大群岛         *+1441 </item>
+        <item>玻利维亚           *+591  </item>
+        <item>博茨瓦纳           *+267  </item>
+        <item>巴西               *+55   </item>
+        <item>文莱               *+673  </item>
+        <item>保加利亚           *+359  </item>
+        <item>布基纳法索         *+226  </item>
+        <item>缅甸               *+95   </item>
+        <item>布隆迪             *+257  </item>
+        <item>喀麦隆             *+237  </item>
+        <item>加拿大             *+1    </item>
+        <item>开曼群岛           *+1345 </item>
+        <item>中非共和国         *+236  </item>
+        <item>乍得               *+235  </item>
+        <item>智利               *+56   </item>
+        <item>中国               *+86   </item>
+        <item>哥伦比亚           *+57   </item>
+        <item>刚果               *+242  </item>
+        <item>库克群岛           *+682  </item>
+        <item>哥斯达黎加         *+506  </item>
+        <item>古巴               *+53   </item>
+        <item>塞浦路斯           *+357  </item>
+        <item>捷克               *+420  </item>
+        <item>丹麦               *+45   </item>
+        <item>吉布提             *+253  </item>
+        <item>多米尼加共和国     *+1890 </item>
+        <item>厄瓜多尔           *+593  </item>
+        <item>埃及               *+20   </item>
+        <item>萨尔瓦多           *+503  </item>
+        <item>爱沙尼亚           *+372  </item>
+        <item>埃塞俄比亚         *+251  </item>
+        <item>斐济               *+679  </item>
+        <item>芬兰               *+358  </item>
+        <item>法国               *+33   </item>
+        <item>法属圭亚那         *+594  </item>
+        <item>加蓬               *+241  </item>
+        <item>冈比亚             *+220  </item>
+        <item>格鲁吉亚           *+995  </item>
+        <item>德国               *+49   </item>
+        <item>加纳               *+233  </item>
+        <item>直布罗陀           *+350  </item>
+        <item>希腊               *+30   </item>
+        <item>格林纳达           *+1809 </item>
+        <item>关岛               *+1671 </item>
+        <item>危地马拉           *+502  </item>
+        <item>几内亚             *+224  </item>
+        <item>圭亚那             *+592  </item>
+        <item>海地               *+509  </item>
+        <item>洪都拉斯           *+504  </item>
+        <item>香港               *+852  </item>
+        <item>匈牙利             *+36   </item>
+        <item>冰岛               *+354  </item>
+        <item>印度               *+91   </item>
+        <item>印度尼西亚         *+62   </item>
+        <item>伊朗               *+98   </item>
+        <item>伊拉克             *+964  </item>
+        <item>爱尔兰             *+353  </item>
+        <item>以色列             *+972  </item>
+        <item>意大利             *+39   </item>
+        <item>科特迪瓦           *+225  </item>
+        <item>牙买加             *+1876 </item>
+        <item>日本               *+81   </item>
+        <item>约旦               *+962  </item>
+        <item>柬埔寨             *+855  </item>
+        <item>哈萨克斯坦         *+327  </item>
+        <item>肯尼亚             *+254  </item>
+        <item>韩国               *+82   </item>
+        <item>科威特             *+965  </item>
+        <item>吉尔吉斯坦         *+331  </item>
+        <item>老挝               *+856  </item>
+        <item>拉脱维亚           *+371  </item>
+        <item>黎巴嫩             *+961  </item>
+        <item>莱索托             *+266  </item>
+        <item>利比里亚           *+231  </item>
+        <item>利比亚             *+218  </item>
+        <item>列支敦士登         *+423  </item>
+        <item>立陶宛             *+370  </item>
+        <item>卢森堡             *+352  </item>
+        <item>澳门               *+853  </item>
+        <item>马达加斯加         *+261  </item>
+        <item>马拉维             *+265  </item>
+        <item>马来西亚           *+60   </item>
+        <item>马尔代夫           *+960  </item>
+        <item>马里               *+223  </item>
+        <item>马耳他             *+356  </item>
+        <item>马里亚那群岛       *+1670 </item>
+        <item>马提尼克           *+596  </item>
+        <item>毛里求斯           *+230  </item>
+        <item>墨西哥             *+52   </item>
+        <item>摩尔多瓦           *+373  </item>
+        <item>摩纳哥             *+377  </item>
+        <item>蒙古               *+976  </item>
+        <item>蒙特塞拉特岛       *+1664 </item>
+        <item>摩洛哥             *+212  </item>
+        <item>莫桑比克           *+258  </item>
+        <item>纳米比亚           *+264  </item>
+        <item>瑙鲁               *+674  </item>
+        <item>尼泊尔             *+977  </item>
+        <item>荷属安的列斯       *+599  </item>
+        <item>荷兰               *+31   </item>
+        <item>新西兰             *+64   </item>
+        <item>尼加拉瓜           *+505  </item>
+        <item>尼日尔             *+227  </item>
+        <item>尼日利亚           *+234  </item>
+        <item>朝鲜               *+850  </item>
+        <item>挪威               *+47   </item>
+        <item>阿曼               *+968  </item>
+        <item>巴基斯坦           *+92   </item>
+        <item>巴拿马             *+507  </item>
+        <item>巴布亚新几内亚     *+675  </item>
+        <item>巴拉圭             *+595  </item>
+        <item>秘鲁               *+51   </item>
+        <item>菲律宾             *+63   </item>
+        <item>波兰               *+48   </item>
+        <item>法属玻利尼西亚     *+689  </item>
+        <item>葡萄牙             *+351  </item>
+        <item>波多黎各           *+1787 </item>
+        <item>卡塔尔             *+974  </item>
+        <item>留尼旺             *+262  </item>
+        <item>罗马尼亚           *+40   </item>
+        <item>俄罗斯             *+7    </item>
+        <item>圣卢西亚           *+1758 </item>
+        <item>圣文森特岛         *+1784 </item>
+        <item>东萨摩亚(美)       *+684  </item>
+        <item>西萨摩亚           *+685  </item>
+        <item>圣马力诺           *+378  </item>
+        <item>圣多美和普林西比   *+239  </item>
+        <item>沙特阿拉伯         *+966  </item>
+        <item>塞内加尔           *+221  </item>
+        <item>塞舌尔             *+248  </item>
+        <item>塞拉利昂           *+232  </item>
+        <item>新加坡             *+65   </item>
+        <item>斯洛伐克           *+421  </item>
+        <item>斯洛文尼亚         *+386  </item>
+        <item>所罗门群岛         *+677  </item>
+        <item>索马里             *+252  </item>
+        <item>南非               *+27   </item>
+        <item>西班牙             *+34   </item>
+        <item>斯里兰卡           *+94   </item>
+        <item>圣卢西亚           *+1758 </item>
+        <item>圣文森特           *+1784 </item>
+        <item>苏丹               *+249  </item>
+        <item>苏里南             *+597  </item>
+        <item>斯威士兰           *+268  </item>
+        <item>瑞典               *+46   </item>
+        <item>瑞士               *+41   </item>
+        <item>叙利亚             *+963  </item>
+        <item>台湾省             *+886  </item>
+        <item>塔吉克斯坦         *+992  </item>
+        <item>坦桑尼亚           *+255  </item>
+        <item>泰国               *+66   </item>
+        <item>多哥               *+228  </item>
+        <item>汤加               *+676  </item>
+        <item>特立尼达和多巴哥   *+1809 </item>
+        <item>突尼斯             *+216  </item>
+        <item>土耳其             *+90   </item>
+        <item>土库曼斯坦         *+993  </item>
+        <item>乌干达             *+256  </item>
+        <item>乌克兰             *+380  </item>
+        <item>阿拉伯联合酋长国   *+971  </item>
+        <item>英国               *+44   </item>
+        <item>美国               *+1    </item>
+        <item>乌拉圭             *+598  </item>
+        <item>乌兹别克斯坦       *+233  </item>
+        <item>委内瑞拉           *+58   </item>
+        <item>越南               *+84   </item>
+        <item>也门               *+967  </item>
+        <item>南斯拉夫           *+381  </item>
+        <item>南非               *+27   </item>
+        <item>津巴布韦           *+263  </item>
+        <item>扎伊尔             *+243  </item>
+        <item>赞比亚             *+260  </item>
+        ></string-array>
+    <!-- 省、自治区、直辖市、特别行政区 -->
+    <string-array name="province_item">
+        <item value="479">北京</item>
+        <item value="480">河北</item>
+        <item value="481">山东</item>
+        <item value="482">上海</item>
+        <item value="483">广东</item>
+        <item value="484">安徽</item>
+        <item value="485">福建</item>
+        <item value="486">甘肃</item>
+        <item value="487">广西</item>
+        <item value="488">贵州</item>
+        <item value="489">海南</item>
+        <item value="490">河南</item>
+        <item value="491">黑龙江</item>
+        <item value="492">湖北</item>
+        <item value="493">湖南</item>
+        <item value="494">吉林</item>
+        <item value="495">江苏</item>
+        <item value="496">江西</item>
+        <item value="497">辽宁</item>
+        <item value="498">内蒙古</item>
+        <item value="499">宁夏</item>
+        <item value="500">青海</item>
+        <item value="501">山西</item>
+        <item value="502">陕西</item>
+        <item value="503">四川</item>
+        <item value="504">天津</item>
+        <item value="505">西藏</item>
+        <item value="506">新疆</item>
+        <item value="507">云南</item>
+        <item value="508">浙江</item>
+        <item value="509">重庆</item>
+        <item value="510">台湾</item>
+        <item value="511">香港</item>
+        <item value="512">澳门</item>
+    </string-array>
+
+    <!-- 个地级市 -->
+    <string-array name="beijin_province_item">
+        <item value="513">西城区</item>
+        <item value="514">东城区</item>
+        <item value="515">昌平区</item>
+        <item value="516">海淀区</item>
+        <item value="517">崇文区</item>
+        <item value="518">宣武区</item>
+        <item value="519">顺义区</item>
+        <item value="520">大兴区</item>
+        <item value="521">怀柔区</item>
+        <item value="524">延庆县</item>
+        <item value="525">朝阳区</item>
+        <item value="526">丰台区</item>
+        <item value="527">石景山区</item>
+        <item value="528">门头沟区</item>
+        <item value="529">房山区</item>
+        <item value="530">通州区</item>
+        <item value="1022">平谷区</item>
+        <item value="1023">密云县</item>
+    </string-array>
+    <string-array name="heibei_province_item">
+        <item value="531">保定</item>
+        <item value="532">邯郸</item>
+        <item value="533">沧州</item>
+        <item value="534">邢台</item>
+        <item value="535">廊坊</item>
+        <item value="536">承德</item>
+        <item value="537">张家口</item>
+        <item value="538">衡水</item>
+        <item value="539">秦皇岛</item>
+        <item value="540">石家庄</item>
+        <item value="541">唐山</item>
+    </string-array>
+    <string-array name="shandong_province_item">
+        <item value="542">邹城</item>
+        <item value="543">济南</item>
+        <item value="544">青岛</item>
+        <item value="545">烟台</item>
+        <item value="546">淄博</item>
+        <item value="547">枣庄</item>
+        <item value="548">滨州</item>
+        <item value="549">德州</item>
+        <item value="550">聊城</item>
+        <item value="551">临沂</item>
+        <item value="552">菏泽</item>
+        <item value="553">莱芜</item>
+        <item value="554">东营</item>
+        <item value="555">潍坊</item>
+        <item value="556">济宁</item>
+        <item value="557">泰安</item>
+        <item value="558">威海</item>
+        <item value="559">日照</item>
+    </string-array>
+    <string-array name="shanghai_province_item">
+        <item value="560">黄浦区</item>
+        <item value="561">浦东新区</item>
+        <item value="562">徐汇区</item>
+        <item value="563">长宁区</item>
+        <item value="564">静安区</item>
+        <item value="565">卢湾区</item>
+        <item value="566">嘉定区</item>
+        <item value="567">金山区</item>
+        <item value="568">松江区</item>
+        <item value="569">青浦区</item>
+        <item value="570">奉贤区</item>
+        <item value="571">崇明县</item>
+        <item value="572">普陀区</item>
+        <item value="573">闸北区</item>
+        <item value="574">虹口区</item>
+        <item value="575">杨浦区</item>
+        <item value="576">闵行区</item>
+        <item value="577">宝山区</item>
+    </string-array>
+    <string-array name="guangdong_province_item">
+        <item value="578">深圳</item>
+        <item value="579">广州</item>
+        <item value="580">东莞</item>
+        <item value="581">珠海</item>
+        <item value="582">汕头</item>
+        <item value="583">佛山</item>
+        <item value="584">潮州</item>
+        <item value="585">揭阳</item>
+        <item value="586">云浮</item>
+        <item value="587">梅州</item>
+        <item value="588">汕尾</item>
+        <item value="589">河源</item>
+        <item value="590">阳江</item>
+        <item value="591">清远</item>
+        <item value="592">中山</item>
+        <item value="593">韶关</item>
+        <item value="594">湛江</item>
+        <item value="595">肇庆</item>
+        <item value="596">江门</item>
+        <item value="597">茂名</item>
+        <item value="598">惠州</item>
+    </string-array>
+    <string-array name="anhui_province_item">
+        <item value="599">合肥</item>
+        <item value="600">芜湖</item>
+        <item value="601">蚌埠</item>
+        <item value="602">淮南</item>
+        <item value="603">安庆</item>
+        <item value="604">阜阳</item>
+        <item value="605">亳州</item>
+        <item value="606">巢湖</item>
+        <item value="607">六安</item>
+        <item value="608">铜陵</item>
+        <item value="609">马鞍山</item>
+        <item value="610">滁州</item>
+        <item value="611">黄山</item>
+        <item value="612">宿州</item>
+        <item value="613">淮北</item>
+    </string-array>
+    <string-array name="fujian_province_item">
+        <item value="614">福安</item>
+        <item value="615">福清</item>
+        <item value="616">晋江</item>
+        <item value="617">石狮</item>
+        <item value="618">福州</item>
+        <item value="619">长乐</item>
+        <item value="620">龙岩</item>
+        <item value="621">宁德</item>
+        <item value="622">厦门</item>
+        <item value="623">莆田</item>
+        <item value="624">三明</item>
+        <item value="625">泉州</item>
+        <item value="626">漳州</item>
+        <item value="627">南平</item>
+    </string-array>
+    <string-array name="gansu_province_item">
+        <item value="628">庆阳</item>
+        <item value="629">张掖</item>
+        <item value="630">兰州</item>
+        <item value="631">金昌</item>
+        <item value="632">白银</item>
+        <item value="633">天水</item>
+        <item value="634">酒泉</item>
+    </string-array>
+    <string-array name="guangxi_province_item">
+        <item value="635">柳州</item>
+        <item value="636">桂林</item>
+        <item value="637">梧州</item>
+        <item value="638">北海</item>
+        <item value="639">防城港</item>
+        <item value="640">钦州</item>
+        <item value="641">崇左</item>
+        <item value="642">南宁</item>
+        <item value="643">贵港</item>
+        <item value="644">玉林</item>
+        <item value="645">百色</item>
+        <item value="646">贺州</item>
+        <item value="647">河池</item>
+        <item value="648">来宾</item>
+    </string-array>
+    <string-array name="guizhou_province_item">
+        <item value="649">六盘水</item>
+        <item value="650">遵义</item>
+        <item value="651">安顺</item>
+        <item value="652">铜仁</item>
+        <item value="653">毕节</item>
+        <item value="654">贵阳</item>
+    </string-array>
+    <string-array name="hainan_province_item">
+        <item value="655">海口</item>
+        <item value="656">三亚</item>
+    </string-array>
+    <string-array name="henan_province_item">
+        <item value="657">郑州</item>
+        <item value="659">平顶山</item>
+        <item value="660">洛阳</item>
+        <item value="661">商丘</item>
+        <item value="662">安阳</item>
+        <item value="663">三门峡</item>
+        <item value="664">周口</item>
+        <item value="665">驻马店</item>
+        <item value="666">南阳</item>
+        <item value="667">信阳</item>
+        <item value="668">灵宝</item>
+        <item value="669">新乡</item>
+        <item value="670">许昌</item>
+        <item value="671">鹤壁</item>
+        <item value="672">焦作</item>
+        <item value="673">濮阳</item>
+        <item value="674">漯河</item>
+    </string-array>
+    <string-array name="heilongjiang_province_item">
+        <item value="675">齐齐哈尔</item>
+        <item value="676">牡丹江</item>
+        <item value="677">佳木斯</item>
+        <item value="678">大庆</item>
+        <item value="679">鸡西</item>
+        <item value="680">双鸭山</item>
+        <item value="681">伊春</item>
+        <item value="682">七台河</item>
+        <item value="683">鹤岗</item>
+        <item value="684">黑河</item>
+        <item value="685">绥化</item>
+        <item value="686">哈尔滨</item>
+    </string-array>
+    <string-array name="hubei_province_item">
+        <item value="687">武汉</item>
+        <item value="688">黄石</item>
+        <item value="689">十堰</item>
+        <item value="690">荆州</item>
+        <item value="691">宜昌</item>
+        <item value="692">襄阳</item>
+        <item value="693">汉口</item>
+        <item value="694">襄樊</item>
+        <item value="695">鄂州</item>
+        <item value="696">荆门</item>
+        <item value="697">孝感</item>
+        <item value="698">黄冈</item>
+        <item value="699">咸宁</item>
+        <item value="700">随州</item>
+    </string-array>
+    <string-array name="hunan_province_item">
+        <item value="701">长沙</item>
+        <item value="702">株洲</item>
+        <item value="703">湘潭</item>
+        <item value="704">衡阳</item>
+        <item value="705">邵阳</item>
+        <item value="706">永州</item>
+        <item value="707">怀化</item>
+        <item value="708">岳阳</item>
+        <item value="709">张家界</item>
+        <item value="710">益阳</item>
+        <item value="711">常德</item>
+        <item value="712">娄底</item>
+        <item value="713">郴州</item>
+    </string-array>
+    <string-array name="jilin_province_item">
+        <item value="714">吉林</item>
+        <item value="715">四平</item>
+        <item value="716">辽源</item>
+        <item value="717">通化</item>
+        <item value="718">白山</item>
+        <item value="719">延边</item>
+        <item value="720">延吉</item>
+        <item value="721">长春</item>
+        <item value="722">松原</item>
+        <item value="723">白城</item>
+    </string-array>
+    <string-array name="jiangsu_province_item">
+        <item value="724">南京</item>
+        <item value="725">苏州</item>
+        <item value="726">常州</item>
+        <item value="727">无锡</item>
+        <item value="728">徐州</item>
+        <item value="729">南通</item>
+        <item value="730">吴江</item>
+        <item value="731">宜兴</item>
+        <item value="732">张家港</item>
+        <item value="733">宿迁</item>
+        <item value="734">常熟</item>
+        <item value="735">江阴</item>
+        <item value="736">靖江</item>
+        <item value="737">昆山</item>
+        <item value="738">太仓</item>
+        <item value="739">连云港</item>
+        <item value="740">淮安</item>
+        <item value="741">盐城</item>
+        <item value="742">扬州</item>
+        <item value="743">镇江</item>
+        <item value="744">泰州</item>
+    </string-array>
+    <string-array name="jiangxi_province_item">
+        <item value="745">南昌</item>
+        <item value="746">上饶</item>
+        <item value="747">九江</item>
+        <item value="748">萍乡</item>
+        <item value="749">新余</item>
+        <item value="750">鹰潭</item>
+        <item value="751">赣州</item>
+        <item value="752">宜春</item>
+        <item value="753">景德镇</item>
+        <item value="754">吉安</item>
+        <item value="755">抚州</item>
+    </string-array>
+    <string-array name="liaoning_province_item">
+        <item value="756">沈阳</item>
+        <item value="757">大连</item>
+        <item value="758">鞍山</item>
+        <item value="759">抚顺</item>
+        <item value="760">本溪</item>
+        <item value="761">丹东</item>
+        <item value="762">朝阳</item>
+        <item value="763">葫芦岛</item>
+        <item value="764">锦州</item>
+        <item value="765">营口</item>
+        <item value="766">阜新</item>
+        <item value="767">辽阳</item>
+        <item value="768">盘锦</item>
+        <item value="769">铁岭</item>
+    </string-array>
+    <string-array name="neimenggu_province_item">
+        <item value="770">包头</item>
+        <item value="771">乌海</item>
+        <item value="772">赤峰</item>
+        <item value="773">通辽</item>
+        <item value="774">鄂尔多斯</item>
+        <item value="775">呼伦贝尔</item>
+        <item value="776">巴彦淖尔</item>
+        <item value="777">乌兰察布</item>
+        <item value="778">兴安盟 </item>
+        <item value="779">锡林郭勒盟 </item>
+        <item value="780">阿拉善盟 </item>
+        <item value="781">呼和浩特</item>
+    </string-array>
+    <string-array name="ningxia_province_item">
+        <item value="782">银川</item>
+        <item value="783">石嘴山</item>
+        <item value="784">吴忠</item>
+        <item value="785">固原</item>
+        <item value="786">中卫</item>
+    </string-array>
+    <string-array name="qinghai_province_item">
+        <item value="787">西宁</item>
+        <item value="788">玉树藏族自...</item>
+        <item value="789">海西蒙古族...</item>
+        <item value="790">海北藏族自...</item>
+        <item value="791">黄南藏族自...</item>
+        <item value="792">海南藏族自... </item>
+        <item value="793">果洛藏族自...</item>
+    </string-array>
+    <string-array name="shanxi1_province_item">
+        <item value="794">太原</item>
+        <item value="795">大同</item>
+        <item value="796">阳泉</item>
+        <item value="797">长治</item>
+        <item value="798">晋城</item>
+        <item value="799">朔州</item>
+        <item value="800">晋中</item>
+        <item value="801">运城</item>
+        <item value="802">忻州</item>
+        <item value="803">临汾</item>
+        <item value="804">吕梁</item>
+    </string-array>
+    <string-array name="shanxi2_province_item">
+        <item value="805">西安</item>
+        <item value="806">宝鸡</item>
+        <item value="807">咸阳</item>
+        <item value="808">渭南</item>
+        <item value="809">铜川</item>
+        <item value="810">延安</item>
+        <item value="811">榆林</item>
+        <item value="812">汉中</item>
+        <item value="813">安康</item>
+        <item value="814">商洛</item>
+    </string-array>
+    <string-array name="sichuan_province_item">
+        <item value="815">成都</item>
+        <item value="816">自贡</item>
+        <item value="817">攀枝花</item>
+        <item value="818">泸州</item>
+        <item value="819">德阳</item>
+        <item value="820">绵阳</item>
+        <item value="821">阿坝藏族羌... </item>
+        <item value="822">甘孜藏族自...</item>
+        <item value="823">凉山彝族自... </item>
+        <item value="824">眉山</item>
+        <item value="825">广安</item>
+        <item value="826">达州</item>
+        <item value="827">雅安</item>
+        <item value="828">巴中</item>
+        <item value="829">资阳</item>
+        <item value="830">广元</item>
+        <item value="831">遂宁</item>
+        <item value="832">内江</item>
+        <item value="833">乐山</item>
+        <item value="834">南充</item>
+        <item value="835">宜宾</item>
+    </string-array>
+    <string-array name="tianjin_province_item">
+        <item value="836">和平区</item>
+        <item value="837">河东区</item>
+        <item value="838">河西区</item>
+        <item value="839">南开区</item>
+        <item value="840">河北区</item>
+        <item value="841">红桥区</item>
+        <item value="842">静海县</item>
+        <item value="843">蓟县</item>
+        <item value="844">东丽区</item>
+        <item value="845">西青区</item>
+        <item value="846">北辰区</item>
+        <item value="847">武清区</item>
+        <item value="848">宝坻区</item>
+        <item value="849">宁河县</item>
+    </string-array>
+    <string-array name="xizang_province_item">
+        <item value="850">昌都地区</item>
+        <item value="851">林芝地区 </item>
+        <item value="852">山南地区 </item>
+        <item value="853">日喀则地区 </item>
+        <item value="854">那曲地区</item>
+        <item value="855">阿里地区 </item>
+        <item value="856">拉萨</item>
+    </string-array>
+    <string-array name="xinjiang_province_item">
+        <item value="857">克拉玛依</item>
+        <item value="858">吐鲁番地区</item>
+        <item value="859">哈密地区</item>
+        <item value="860">阿克苏地区</item>
+        <item value="861">喀什地区 </item>
+        <item value="862">和田地区</item>
+        <item value="863">巴州</item>
+        <item value="864">昌吉</item>
+        <item value="865">奎屯</item>
+        <item value="866">石河子</item>
+        <item value="867">伊犁</item>
+        <item value="868">乌鲁木齐</item>
+        <item value="869">阿勒泰地区</item>
+        <item value="870">昌吉回族自...</item>
+        <item value="871">博尔塔拉蒙...</item>
+        <item value="872">巴音郭楞蒙...</item>
+        <item value="873">克孜勒苏柯...</item>
+        <item value="874">伊犁哈萨克...</item>
+    </string-array>
+    <string-array name="yunnan_province_item">
+        <item value="875">昆明</item>
+        <item value="876">曲靖</item>
+        <item value="877">玉溪</item>
+        <item value="878">保山</item>
+        <item value="879">昭通</item>
+        <item value="880">丽江</item>
+        <item value="881">西双版纳</item>
+        <item value="882">德宏</item>
+        <item value="883">怒江</item>
+        <item value="884">迪庆</item>
+        <item value="885">普洱</item>
+        <item value="886">临沧</item>
+        <item value="887">楚雄</item>
+        <item value="888">大理</item>
+        <item value="889">红河</item>
+        <item value="890">文山</item>
+    </string-array>
+    <string-array name="zhejiang_province_item">
+        <item value="891">杭州</item>
+        <item value="892">宁波</item>
+        <item value="893">温州</item>
+        <item value="894">嘉兴</item>
+        <item value="895">湖州</item>
+        <item value="896">绍兴</item>
+        <item value="897">嵊州</item>
+        <item value="898">温岭</item>
+        <item value="899">萧山</item>
+        <item value="900">义乌</item>
+        <item value="901">永康</item>
+        <item value="902">诸暨</item>
+        <item value="903">富阳</item>
+        <item value="904">海宁</item>
+        <item value="905">乐清</item>
+        <item value="906">临海</item>
+        <item value="907">瑞安</item>
+        <item value="908">上虞</item>
+        <item value="909">金华</item>
+        <item value="910">衢州</item>
+        <item value="911">舟山</item>
+        <item value="912">台州</item>
+        <item value="913">丽水</item>
+        <item value="914">东阳</item>
+    </string-array>
+    <string-array name="chongqing_province_item">
+        <item value="915">渝中区</item>
+        <item value="916">大渡口区</item>
+        <item value="917">江北区</item>
+        <item value="918">沙坪坝区</item>
+        <item value="919">合川区</item>
+        <item value="920">渝北区</item>
+        <item value="921">秀山县</item>
+        <item value="922">巫溪县</item>
+        <item value="923">巫山县</item>
+        <item value="924">奉节县</item>
+        <item value="925">武隆县</item>
+        <item value="926">云阳县</item>
+        <item value="927">石柱县</item>
+        <item value="928">城口县</item>
+        <item value="929">彭水县</item>
+        <item value="930">梁平县</item>
+        <item value="931">酉阳县</item>
+        <item value="932">开县</item>
+        <item value="933">大足区</item>
+        <item value="934">荣昌县</item>
+        <item value="935">璧山县</item>
+        <item value="936">垫江县</item>
+        <item value="937">丰都县</item>
+        <item value="938">忠县</item>
+        <item value="939">南岸区</item>
+        <item value="940">长寿区</item>
+        <item value="941">江津区</item>
+        <item value="942">綦江区</item>
+        <item value="943">潼南县</item>
+        <item value="944">铜梁县</item>
+        <item value="945">永川区</item>
+        <item value="946">南川区</item>
+        <item value="947">九龙坡区</item>
+        <item value="948">万州区</item>
+        <item value="949">涪陵区</item>
+        <item value="950">黔江区</item>
+    </string-array>
+    <string-array name="taiwan_province_item">
+        <item value="951">台北</item>
+        <item value="952">台南</item>
+        <item value="953">高雄</item>
+        <item value="954">台湾</item>
+    </string-array>
+    <string-array name="hongkong_province_item">
+        <item value="955">香港</item>
+    </string-array>
+    <string-array name="aomen_province_item">
+        <item value="956">澳门</item>
+    </string-array>
+</resources>

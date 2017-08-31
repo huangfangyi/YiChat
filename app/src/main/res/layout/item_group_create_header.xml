@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#dadada" />
+
+    <EditText
+        android:id="@+id/et_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/list_item_bg_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:hint="设置群聊名称"
+        android:textColor="#353535"
+        android:textSize="16sp" />
+
+</LinearLayout>

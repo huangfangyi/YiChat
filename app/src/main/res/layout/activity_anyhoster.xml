@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_rtmpc_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+        <include layout="@layout/layout_title_bar"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_watcher_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:id="@+id/space_chat_list_right"
+            android:layout_width="72dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:background="#FFB5C5" />
+
+        <FrameLayout
+            android:id="@+id/fl_chat_list"
+            android:layout_width="fill_parent"
+            android:layout_height="300.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_toLeftOf="@id/space_chat_list_right"
+            android:gravity="bottom">
+
+            <include layout="@layout/layout_chatlist" />
+        </FrameLayout>
+
+        <ViewAnimator
+            android:id="@+id/va_bottom_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="6.0dip">
+
+            <ViewAnimator
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:measureAllChildren="false"
+                android:padding="5.0dip">
+                <com.htmessage.fanxinht.anyrtc.weight.BottomControl
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:baselineAligned="false"
+                    android:gravity="bottom"
+                    android:paddingBottom="5.0dip">
+                    <ImageView
+                        android:id="@+id/iv_host_text"
+                        style="@style/style_live_ibtn_controls"
+                        android:onClick="OnBtnClicked"
+                        android:src="@drawable/selector_btn_chat" />
+                </com.htmessage.fanxinht.anyrtc.weight.BottomControl>
+
+            </ViewAnimator>
+
+            <include layout="@layout/layout_live_input" />
+
+        </ViewAnimator>
+    </RelativeLayout>
+
+
+</RelativeLayout>

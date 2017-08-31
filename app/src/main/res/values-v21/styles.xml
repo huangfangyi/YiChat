@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="horizontal_slide" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#303135</item>
+        <item name="android:windowAnimationStyle">@style/AnimFade2</item>
+    </style>
+</resources>
