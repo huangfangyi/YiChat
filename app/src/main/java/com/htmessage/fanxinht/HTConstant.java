@@ -93,11 +93,13 @@ public class HTConstant {
     public static final String URL_AUTH_URL = HOST + "authorize";//修改授权状态
     public static final String KEY_AUTH_SUCCESS = "1";//修改授权状态 1成功
     public static final String KEY_AUTH_FAILED = "2";//修改授权状态 2 取消
-    //音视频相关
-    public static final String DEVELOPERID = "80508559";
-    public static final String APPID = "anyrtcMq19X3DVXCuH";
-    public static final String APPKEY = "+2WxaXlriSg37DjZU7joh59BsBvmAl/8NaYxWJxWXDg";
-    public static final String APPTOKEN = "e872ee764560bc65df2d6a80f9e6c49e";
+
+    //TODO 此处替换所有东西
+    //anyRtc音视频相关
+    public static final String DEVELOPERID = "";
+    public static final String APPID = "";
+    public static final String APPKEY = "";
+    public static final String APPTOKEN = "";
 
     public final static String gHttpLiveListUrl = "http://%s/anyapi/V1/livelist?AppID=%s&DeveloperID=%s";
     public final static String gHttpRecordUrl = "http://%s/anyapi/V1/recordrtmp?AppID=%s&DeveloperID=%s&AnyrtcID=%s&Url=%s&ResID=%s";
@@ -106,28 +108,28 @@ public class HTConstant {
      * rtmp 推流地址
      */
 //    rtmp://live.hkstv.hk.lxdns.com:1935/live/
-    public static final String RTMP_PUSH_URL = "rtmp://publish.teameeting.cn/live/%s";
+    public static final String RTMP_PUSH_URL = "rtmp://xxxxxx/live/%s";
     /**
      * rtmp 拉流地址
      */
-    public static final String RTMP_PULL_URL = "rtmp://rtmp.teameeting.cn/live/%s";
+    public static final String RTMP_PULL_URL = "rtmp://xxxxxx/live/%s";
     /**
      * hls 地址
      */
-    public static final String HLS_URL = "http://hls.teameeting.cn/live/%s.m3u8";
+    public static final String HLS_URL = "http://xxxxxx/%s.m3u8";
 
     //关于第三方登录
     // APP_ID 替换为你的应用从官方网站申请到的合法appId
-    public static final String QQ_APP_ID = "1105972460";
+    public static final String QQ_APP_ID = "";
     //申请的开发appid
-    public static final String WX_APP_ID = "wxdd57786f839d2747";
-    public static final String WX_APP_SECRET = "1a51717381fe7330feb15eb31cc96082";
+    public static final String WX_APP_ID = "";
+    public static final String WX_APP_SECRET = "";
     //关于微信的信息授权地址
     public static final String WX_APP_OAUTH2_URL = "https://api.weixin.qq.com/sns/oauth2/access_token";
     //关于微信的获取用户地址
     public static final String WX_APP_USERINFO_URL = "https://api.weixin.qq.com/sns/userinfo";
     //微博的APP验证权限
-    public static final String SINA_APP_KEY = "456549743";
+    public static final String SINA_APP_KEY = "";
     public static final String REDIRECT_URL = "https://api.weibo.com/oauth2/default.html"; //返回地址 使用微博默认的
     public static final String SCOPE = "all";// QQ 微博申请的权限
     public static final String NEW_FRIENDS_USERNAME = "item_new_friends";
