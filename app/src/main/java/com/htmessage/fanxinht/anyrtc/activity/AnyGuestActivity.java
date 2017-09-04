@@ -44,6 +44,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.webrtc.RendererCommon;
 import org.webrtc.VideoRenderer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,7 +55,7 @@ import java.util.List;
  * 创建时间：2016/11/10 11:51
  * 邮箱:814326663@qq.com
  */
-public class AnyGuestActivity extends BaseActivity implements View.OnClickListener,ScrollRecycerView.ScrollPosation {
+public class AnyGuestActivity extends BaseActivity implements View.OnClickListener, ScrollRecycerView.ScrollPosation {
 
     private String TAG = AnyGuestActivity.class.getSimpleName();
     private static final int CLOSED = 0;
@@ -96,12 +97,12 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
             super.handleMessage(msg);
             switch (msg.what) {
                 case CLOSED: {
-                    try{
+                    try {
                         mGuestKit.HangupRTCLine();
                         mVideoView.OnRtcRemoveRemoteRender("LocalCameraRender");
                         mStartLine = false;
                         finish();
-                    }catch (RuntimeException e){
+                    } catch (RuntimeException e) {
                         e.printStackTrace();
                     }
                 }
@@ -125,6 +126,9 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
         object = HTApp.getInstance().getUserJson();
         mChatMessageList = new ArrayList<ChatMessageBean>();
         mNickname = object.getString(HTConstant.JSON_KEY_NICK);
+        if (TextUtils.isEmpty(mNickname)) {
+            mNickname = HTApp.getInstance().getUsername();
+        }
         headerUrl = object.getString(HTConstant.JSON_KEY_AVATAR);
         mRtmpPullUrl = getIntent().getExtras().getString("rtmp_url");
         mAnyrtcId = getIntent().getExtras().getString("anyrtcId");
@@ -152,12 +156,12 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void iniData() {
-        if (!TextUtils.isEmpty(headerUrl)){
-            if (!headerUrl.contains("http:")){
-                headerUrl = HTConstant.URL_AVATAR+headerUrl;
+        if (!TextUtils.isEmpty(headerUrl)) {
+            if (!headerUrl.contains("http:")) {
+                headerUrl = HTConstant.URL_AVATAR + headerUrl;
             }
-        }else{
-            headerUrl=HTApp.getInstance().getUsername();
+        } else {
+            headerUrl = HTApp.getInstance().getUsername();
         }
         tv_title.setText(mTopic);
         iv_camera.setBackgroundResource(R.drawable.link_mic_numal);
@@ -174,7 +178,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
     private void setStream() {
         //设置横屏模式，也可sdk初始化时进行设置
         //RTMPCHybird.Inst().SetScreenToLandscape();
-        mVideoView = new RTMPCVideoView(rl_rtmpc_videos, RTMPCHybird.Inst().Egl(), false,false);
+        mVideoView = new RTMPCVideoView(rl_rtmpc_videos, RTMPCHybird.Inst().Egl(), false, false);
 
         mVideoView.setBtnCloseEvent(mBtnVideoCloseEvent);
 
@@ -198,7 +202,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
         mUserData = new JSONObject();
         try {
             mUserData.put("nickName", mNickname);
-            mUserData.put("headUrl",headerUrl);
+            mUserData.put("headUrl", headerUrl);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -316,11 +320,11 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
             }
             if (mCheckBarrage.isChecked()) {
                 mGuestKit.SendBarrage(mNickname, headerUrl, message);
-                IDanmakuItem item = new DanmakuItem(AnyGuestActivity.this, new SpannableString(mNickname+":"+message), mDanmakuView.getWidth(), 0, R.color.icon_press, 18, 1);
+                IDanmakuItem item = new DanmakuItem(AnyGuestActivity.this, new SpannableString(mNickname + ":" + message), mDanmakuView.getWidth(), 0, R.color.icon_press, 18, 1);
                 mDanmakuView.addItemToHead(item);
             } else {
                 mGuestKit.SendUserMsg(mNickname, headerUrl, message);
-                addChatMessageList(new ChatMessageBean(mNickname, mNickname,headerUrl, message));//TODO 此处弹幕开关未开启时,消息在消息列表显示
+                addChatMessageList(new ChatMessageBean(mNickname, mNickname, headerUrl, message));//TODO 此处弹幕开关未开启时,消息在消息列表显示
             }
 //            addChatMessageList(new ChatMessageBean(mNickname, mNickname,headerUrl, message));//TODO 此处是把发送的消息都添加到消息列表中 不论是弹幕还是消息
         } else if (btn.getId() == R.id.iv_host_text) {
@@ -496,7 +500,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
          */
         @Override
         public void OnRTCApplyLineResultCallback(final int code) {
-            Log.d(TAG,"-----code:"+code);
+            Log.d(TAG, "-----code:" + code);
             AnyGuestActivity.this.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -545,6 +549,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
                 }
             });
         }
+
         /**
          * 连线接通后回调
          * @param s
@@ -559,6 +564,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
                 }
             });
         }
+
         /**
          * 连线关闭后图像回调
          * @param s
@@ -624,7 +630,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
                 @Override
                 public void run() {
 //                    addChatMessageList(new ChatMessageBean(strCustomID, strCustomName,strCustomHeader, strBarrage));//TODO 把获取到的弹幕消息添加到消息列表
-                    IDanmakuItem item = new DanmakuItem(AnyGuestActivity.this, new SpannableString(strCustomName+":"+strBarrage), mDanmakuView.getWidth(), 0, R.color.icon_press, 18, 1);
+                    IDanmakuItem item = new DanmakuItem(AnyGuestActivity.this, new SpannableString(strCustomName + ":" + strBarrage), mDanmakuView.getWidth(), 0, R.color.icon_press, 18, 1);
                     mDanmakuView.addItemToHead(item);
                 }
             });
@@ -656,7 +662,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
                 public void run() {
                     try {
                         JSONObject userData = new JSONObject(strUserData);
-                        Log.d("slj","人员上下:"+strUserData +"----strCustomID:"+ strCustomID);
+                        Log.d("slj", "人员上下:" + strUserData + "----strCustomID:" + strCustomID);
                         addChatMessageList(new ChatMessageBean(userData.getString("nickName"), "", userData.getString("headUrl"), ""));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -673,13 +679,14 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
 
         }
     };
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.iv_back:
                 if (mStartLine) {
                     ShowExitDialog();
-                }else{
+                } else {
                     back(v);
                 }
                 break;
@@ -688,7 +695,7 @@ public class AnyGuestActivity extends BaseActivity implements View.OnClickListen
                     JSONObject json = new JSONObject();
                     try {
                         json.put("guestId", mNickname);
-                        json.put("headUrl",headerUrl);
+                        json.put("headUrl", headerUrl);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

@@ -88,14 +88,13 @@ public class HTConstant {
     public static final String JSON_KEY_PACKAGENAME = "packagename";
     public static final String JSON_KEY_THIRDAPPICON = "appicon";
     public static final String JSON_KEY_ISWEB = "isWeb";
-
+    //Buglykey
+    public  static final String BUGLY_KEY = "";
     //授权接口相关
     public static final String URL_AUTH_URL = HOST + "authorize";//修改授权状态
     public static final String KEY_AUTH_SUCCESS = "1";//修改授权状态 1成功
     public static final String KEY_AUTH_FAILED = "2";//修改授权状态 2 取消
-
-    //TODO 此处替换所有东西
-    //anyRtc音视频相关
+    //音视频相关
     public static final String DEVELOPERID = "";
     public static final String APPID = "";
     public static final String APPKEY = "";
@@ -107,16 +106,15 @@ public class HTConstant {
     /**
      * rtmp 推流地址
      */
-//    rtmp://live.hkstv.hk.lxdns.com:1935/live/
-    public static final String RTMP_PUSH_URL = "rtmp://xxxxxx/live/%s";
+    public static final String RTMP_PUSH_URL = "";
     /**
      * rtmp 拉流地址
      */
-    public static final String RTMP_PULL_URL = "rtmp://xxxxxx/live/%s";
+    public static final String RTMP_PULL_URL = "";
     /**
      * hls 地址
      */
-    public static final String HLS_URL = "http://xxxxxx/%s.m3u8";
+    public static final String HLS_URL = "";
 
     //关于第三方登录
     // APP_ID 替换为你的应用从官方网站申请到的合法appId

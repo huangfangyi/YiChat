@@ -63,7 +63,7 @@ public class HTApp extends Application {
         ContactsManager.init(applicationContext);
         SettingsManager.init(applicationContext);
         NotifierManager.init(applicationContext);        //异常上报
-        CrashReport.initCrashReport(applicationContext, "a7b4566fd9", false);
+        CrashReport.initCrashReport(applicationContext, HTConstant.BUGLY_KEY, false);
         HTClientHelper.init(applicationContext);
         //2. 创建主handler
         handler = new Handler(Looper.getMainLooper());
