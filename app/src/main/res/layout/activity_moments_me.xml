@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <RelativeLayout
 
@@ -57,21 +58,22 @@
             android:src="@drawable/icon_moments_notice" />
     </RelativeLayout>
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
+    <com.htmessage.fanxinht.widget.swipyrefresh.SwipyRefreshLayout
         android:id="@+id/pull_refresh_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/title"
-        android:background="#f8f8f8"
-        android:cacheColorHint="#00000000"
-        android:divider="@null"
-        android:fadingEdge="none"
-        android:fastScrollEnabled="false"
-        android:footerDividersEnabled="false"
-        android:headerDividersEnabled="false"
-        android:listSelector="#f0f0f0"
-        android:smoothScrollbar="true" />
-
+        app:direction="both"
+        android:layout_height="0dp"
+        android:layout_below="@+id/title"
+        android:layout_weight="1">
+        <ListView
+            android:background="#f8f8f8"
+            android:smoothScrollbar="true"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:id="@+id/refresh_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.htmessage.fanxinht.widget.swipyrefresh.SwipyRefreshLayout>
 
 
 </RelativeLayout>

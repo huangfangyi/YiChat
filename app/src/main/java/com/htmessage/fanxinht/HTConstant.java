@@ -137,5 +137,4 @@ public class HTConstant {
     public static final int SINGLE_CHAT = 1;
     public static final int GROUP_CHAT = 2;
 
-
 }

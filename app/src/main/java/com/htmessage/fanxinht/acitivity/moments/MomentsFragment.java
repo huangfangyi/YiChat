@@ -11,7 +11,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,14 +22,13 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.alibaba.fastjson.JSONArray;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.htmessage.fanxinht.IMAction;
 import com.htmessage.fanxinht.R;
 import com.htmessage.fanxinht.acitivity.main.details.UserDetailsActivity;
 import com.htmessage.fanxinht.acitivity.moments.widget.MomentsItemView;
 import com.htmessage.fanxinht.utils.CommonUtils;
 import com.htmessage.fanxinht.widget.HTAlertDialog;
+import com.htmessage.fanxinht.widget.swipyrefresh.SwipyRefreshLayout;
 
 import java.util.ArrayList;
 
@@ -39,12 +37,10 @@ import java.util.ArrayList;
  * qq 84543217
  */
 
-public class MomentsFragment extends Fragment implements MomentsContract.View {
-    private PullToRefreshListView pullToRefreshListView;
+public class MomentsFragment extends Fragment implements MomentsContract.View, SwipyRefreshLayout.OnRefreshListener {
+    private SwipyRefreshLayout pullToRefreshListView;
     private ListView actualListView;
     private MomentsAdapter adapter;
-
-    private int pageIndex = 1;
     private MomentsContract.Presenter presenter;
     private AdapterListener adapterListener;
     private RelativeLayout reEdittext;
@@ -105,45 +101,30 @@ public class MomentsFragment extends Fragment implements MomentsContract.View {
 
             @Override
             public void onMomentTopBackGroundClock() {
-                showPicDialog(2,getString(R.string.change_moment_bg));
+                showPicDialog(2, getString(R.string.change_moment_bg));
             }
         };
         adapter.setListener(adapterListener);
 
         actualListView.setAdapter(adapter);
-//        actualListView.setSC(new View.OnTouchListener() {
-//
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                hideInputMenu();
-//                return false;
-//            }
-//
-//        });
-        pullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
-        pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
-            @Override
-            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-                String label = DateUtils.formatDateTime(getContext(), System.currentTimeMillis(), DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-
-                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
-
-                if (pullToRefreshListView.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_START) {
-                    pageIndex = 1;
-
-                } else if (pullToRefreshListView.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_END) {
-                    pageIndex++;
-                }
-                presenter.loadeData(pageIndex);
-            }
-        });
-
-        presenter.loadeData(pageIndex);
+        presenter.loadeData(1);
         myBroadCastReceiver = new MyBroadCastReceiver();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(IMAction.ACTION_MOMENTS);
         intentFilter.addAction(IMAction.ACTION_MOMENTS_READ);
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(myBroadCastReceiver, intentFilter);
+    }
+
+    @Override
+    public void onRefresh(int index) {
+        index = 1;
+        presenter.loadeData(index);
+    }
+
+    @Override
+    public void onLoad(int index) {
+        index++;
+        presenter.loadeData(index);
     }
 
     private class MyBroadCastReceiver extends BroadcastReceiver {
@@ -178,10 +159,9 @@ public class MomentsFragment extends Fragment implements MomentsContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.activity_moments, container, false);
-        pullToRefreshListView = (PullToRefreshListView) root.findViewById(R.id.pull_refresh_list);
-        actualListView = pullToRefreshListView.getRefreshableView();
-
-        // pullToRefreshListView.setRefreshing(false);//进入即UI下拉效果
+        pullToRefreshListView = (SwipyRefreshLayout) root.findViewById(R.id.pull_refresh_list);
+        actualListView = (ListView) root.findViewById(R.id.refresh_list);
+        pullToRefreshListView.setOnRefreshListener(this);
         reEdittext = (RelativeLayout) root.findViewById(R.id.re_edittext);
         etComment = (EditText) reEdittext.findViewById(R.id.et_comment);
         buttonSend = (Button) reEdittext.findViewById(R.id.btn_send);
@@ -300,7 +280,7 @@ public class MomentsFragment extends Fragment implements MomentsContract.View {
 
     @Override
     public void onRefreshComplete() {
-        pullToRefreshListView.onRefreshComplete();
+        pullToRefreshListView.setRefreshing(false);
     }
 
     @Override

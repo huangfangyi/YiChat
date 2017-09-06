@@ -3,17 +3,13 @@ package com.htmessage.fanxinht.acitivity.moments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.fanxinht.R;
@@ -22,17 +18,16 @@ import com.htmessage.fanxinht.utils.ACache;
 import com.htmessage.fanxinht.utils.CommonUtils;
 import com.htmessage.fanxinht.utils.OkHttpUtils;
 import com.htmessage.fanxinht.utils.Param;
-
+import com.htmessage.fanxinht.widget.swipyrefresh.SwipyRefreshLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MomentsFriendActivity extends BaseActivity {
+public class MomentsFriendActivity extends BaseActivity implements SwipyRefreshLayout.OnRefreshListener {
 
-    private PullToRefreshListView pull_refresh_list;
+    private SwipyRefreshLayout pull_refresh_list;
     private List<JSONObject> articles = new ArrayList<JSONObject>();
     private MomentsFriendAdapter adapter;
     private ListView actualListView;
-    private int pageIndex = 1;
     private String isFriend = "0";//默认不经过是否是好友判断
     private String userId;
     private String avatar;
@@ -87,30 +82,15 @@ public class MomentsFriendActivity extends BaseActivity {
     }
 
     private void initView() {
-        pull_refresh_list = (PullToRefreshListView) findViewById(R.id.pull_refresh_list);
-        pull_refresh_list.setMode(PullToRefreshBase.Mode.BOTH);
-        pull_refresh_list.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
-            @Override
-            public void onRefresh(
-                    PullToRefreshBase<ListView> refreshView) {
-                String label = DateUtils.formatDateTime(MomentsFriendActivity.this, System.currentTimeMillis(), DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
-                if (pull_refresh_list.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_START) {
-                    pageIndex = 1;
-                } else if (pull_refresh_list.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_END) {
-                    pageIndex++;
-                }
-                getData(userId);
-            }
-        });
-
-        actualListView = pull_refresh_list.getRefreshableView();
+        pull_refresh_list = (SwipyRefreshLayout) findViewById(R.id.pull_refresh_list);
+        actualListView = (ListView) findViewById(R.id.refresh_list);
+        pull_refresh_list.setOnRefreshListener(this);
         adapter = new MomentsFriendAdapter(MomentsFriendActivity.this, articles, avatar, backgroundMoment, serviceTimes);
         actualListView.setAdapter(adapter);
-        getData(userId);
+        getData(userId, 1);
     }
 
-    private void getData(String friendID) {
+    private void getData(String friendID, final int pageIndex) {
         List<Param> params = new ArrayList<>();
         params.add(new Param("currentPage", pageIndex + ""));
         params.add(new Param("pageSize", 20 + ""));
@@ -119,7 +99,6 @@ public class MomentsFriendActivity extends BaseActivity {
         new OkHttpUtils(MomentsFriendActivity.this).post(params, HTConstant.URL_SOCIAL_FRIEND, new OkHttpUtils.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {
-                pull_refresh_list.onRefreshComplete();
                 int code = jsonObject.getInteger("code");
                 switch (code) {
                     case 1:
@@ -141,7 +120,7 @@ public class MomentsFriendActivity extends BaseActivity {
                         }
                         break;
                     case -1:
-                        if (pageIndex == 1){
+                        if (pageIndex == 1) {
                             ACache.get(MomentsFriendActivity.this).put(cacheKey, "");
                             articles.clear();
                             serviceTimes.clear();
@@ -149,7 +128,7 @@ public class MomentsFriendActivity extends BaseActivity {
                         CommonUtils.showToastShort(MomentsFriendActivity.this, R.string.has_nothing);
                         break;
                     default:
-                        if (pageIndex == 1){
+                        if (pageIndex == 1) {
                             ACache.get(MomentsFriendActivity.this).put(cacheKey, "");
                             ACache.get(MomentsFriendActivity.this).put(cacheKeyBg, "");
                             ACache.get(MomentsFriendActivity.this).put(cacheKeyTime, "");
@@ -166,7 +145,7 @@ public class MomentsFriendActivity extends BaseActivity {
             @Override
             public void onFailure(String errorMsg) {
                 CommonUtils.showToastShort(MomentsFriendActivity.this, getString(R.string.request_failed_msg) + errorMsg);
-                if (pageIndex == 1){
+                if (pageIndex == 1) {
                     ACache.get(MomentsFriendActivity.this).put(cacheKey, "");
                     ACache.get(MomentsFriendActivity.this).put(cacheKeyBg, "");
                     ACache.get(MomentsFriendActivity.this).put(cacheKeyTime, "");
@@ -177,6 +156,7 @@ public class MomentsFriendActivity extends BaseActivity {
                 adapter.notifyDataSetChanged();
             }
         });
+        pull_refresh_list.setRefreshing(false);
     }
 
     private List<String> getBackgroundMoment() {
@@ -215,4 +195,15 @@ public class MomentsFriendActivity extends BaseActivity {
     }
 
 
+    @Override
+    public void onRefresh(int index) {
+        index = 1;
+        getData(userId, index);
+    }
+
+    @Override
+    public void onLoad(int index) {
+        index++;
+        getData(userId, index);
+    }
 }

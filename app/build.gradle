@@ -47,7 +47,6 @@ ext {
 }
 dependencies {
     compile 'com.android.support:multidex:1.0.1'
-    compile project(':library')
     compile fileTree(include: '*.jar', dir: 'libs')
     //短信
 //    compile files('libs/dom4j-1.6.1.jar')
