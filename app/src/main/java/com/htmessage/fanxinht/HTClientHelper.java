@@ -87,7 +87,7 @@ public class HTClientHelper {
         @Override
         public void onConflict() {
             // Toast.makeText(applicationContext,"被踢啦",Toast.LENGTH_SHORT).show();
-            notifyConflict();
+            notifyConflict(applicationContext);
         }
     };
     private HTClient.MessageLisenter messageLisenter = new HTClient.MessageLisenter() {
@@ -363,11 +363,11 @@ public class HTClientHelper {
     /**
      * user has logged into another device
      */
-    protected void notifyConflict() {
+    public void notifyConflict(Context context) {
         Intent intent = new Intent(applicationContext, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(IMAction.ACTION_CONFLICT, true);
-        applicationContext.startActivity(intent);
+        context.startActivity(intent);
     }
 
     /**
@@ -402,7 +402,4 @@ public class HTClientHelper {
             }
         }).start();
     }
-
-
-
 }

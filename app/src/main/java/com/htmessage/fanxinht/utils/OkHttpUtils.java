@@ -9,6 +9,7 @@ import android.util.Log;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.htmessage.fanxinht.HTApp;
+import com.htmessage.fanxinht.HTClientHelper;
 import com.htmessage.fanxinht.R;
 import com.htmessage.fanxinht.HTConstant;
 import java.io.File;
@@ -60,6 +61,11 @@ public class OkHttpUtils {
                     try {
                         JSONObject jsonObject = JSONObject.parseObject(result);
                         httpCallBack.onResponse(jsonObject);
+                        if (jsonObject != null && jsonObject.containsKey("code") && jsonObject.containsKey("message")) {
+                            if (jsonObject.getInteger("code") == 0 && jsonObject.getString("message").contains("session")) {
+                                HTClientHelper.getInstance().notifyConflict(context);
+                            }
+                        }
                     } catch (JSONException e) {
                         httpCallBack.onFailure((String) msg.obj);
                     }
