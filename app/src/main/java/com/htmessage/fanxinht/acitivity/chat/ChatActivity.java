@@ -4,6 +4,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 
 import com.htmessage.sdk.client.HTClient;
@@ -38,7 +39,11 @@ public class ChatActivity extends BaseActivity {
         chatType = getIntent().getExtras().getInt("chatType", MessageUtils.CHAT_SINGLE);
         if (chatType == MessageUtils.CHAT_SINGLE) {
             User user = ContactsManager.getInstance().getContactList().get(toChatUsername);
-            setTitle(user.getNick());
+            String userNick = user.getNick();
+            if (TextUtils.isEmpty(userNick)) {
+                userNick = user.getUsername();
+            }
+            setTitle(userNick);
             showRightView(R.drawable.icon_setting_single, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -48,7 +53,11 @@ public class ChatActivity extends BaseActivity {
 
         } else if (chatType == MessageUtils.CHAT_GROUP) {
             HTGroup htGroup = HTClient.getInstance().groupManager().getGroup(toChatUsername);
-            setTitle(htGroup.getGroupName());
+            String groupName = htGroup.getGroupName();
+            if (TextUtils.isEmpty(groupName)) {
+                groupName = htGroup.getGroupId();
+            }
+            setTitle(groupName);
             showRightView(R.drawable.icon_setting_group, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -57,13 +66,13 @@ public class ChatActivity extends BaseActivity {
             });
         }
 
-         chatFragment= (ChatFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
-        if(chatFragment==null){
+        chatFragment = (ChatFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        if (chatFragment == null) {
             chatFragment = new ChatFragment();
             getSupportFragmentManager().beginTransaction().add(R.id.contentFrame, chatFragment).commit();
         }
         chatFragment.setArguments(getIntent().getExtras());
-        chatPresenter =new ChatPresenter(chatFragment,toChatUsername,chatType);
+        chatPresenter = new ChatPresenter(chatFragment, toChatUsername, chatType);
     }
 
     @Override
@@ -98,13 +107,12 @@ public class ChatActivity extends BaseActivity {
 
     }
 
-    private void toMainActivity(){
+    private void toMainActivity() {
         if (isSingleActivity(this)) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
     }
-
 
 
     public boolean isSingleActivity(Context context) {

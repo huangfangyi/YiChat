@@ -299,10 +299,10 @@ public class ChatAdapter extends BaseAdapter {
             holder.ivMsgStatus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(onResendViewClick!=null){
+                    if (onResendViewClick != null) {
                         onResendViewClick.resendMessage(message);
                     }
-                 }
+                }
             });
         }
         HTMessageBody htMessageBody = message.getBody();
@@ -350,7 +350,9 @@ public class ChatAdapter extends BaseAdapter {
                     user.setAvatar(avatar);
                     users.add(user);
                     contactList.put(message.getFrom(), user);
-                    ContactsManager.getInstance().saveContactList(users);
+                    ContactsManager.getInstance().saveContact(user);
+                    ArrayList<User> users1 = new ArrayList<>(contactList.values());
+                    ContactsManager.getInstance().saveContactList(users1);
                 }
             }
         }
@@ -723,7 +725,7 @@ public class ChatAdapter extends BaseAdapter {
         }
 
         if (htMessage.getDirect() == HTMessage.Direct.RECEIVE) {
-            if (htMessage.getStatus() == HTMessage.Status.SUCCESS||htMessage.getStatus() == HTMessage.Status.ACKED) {
+            if (htMessage.getStatus() == HTMessage.Status.SUCCESS || htMessage.getStatus() == HTMessage.Status.ACKED) {
                 holder.ivUnread.setVisibility(View.INVISIBLE);
             } else {
                 holder.ivUnread.setVisibility(View.VISIBLE);
@@ -809,13 +811,15 @@ public class ChatAdapter extends BaseAdapter {
             }
         });
     }
+
     private OnResendViewClick onResendViewClick;
-    public void  setOnResendViewClick(OnResendViewClick onResendViewClick){
-        this.onResendViewClick=onResendViewClick;
+
+    public void setOnResendViewClick(OnResendViewClick onResendViewClick) {
+        this.onResendViewClick = onResendViewClick;
     }
 
-    interface OnResendViewClick{
-      void  resendMessage(HTMessage htMessage);
+    interface OnResendViewClick {
+        void resendMessage(HTMessage htMessage);
     }
 
 }

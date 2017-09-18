@@ -4,7 +4,7 @@
     <!--<string name="has_more_msg"> %1个联系人发来%2条消息</string>-->
     <string name="zhongkuohao">[</string>
     <string name="zhongkuohao_msg">条]</string>
-    <string name="app_name">YiChat</string>
+    <string name="app_name">凡信</string>
     <string name="app_chat">会话</string>
     <string name="text_ack_msg">已读</string>
     <string name="text_delivered_msg">送达</string>
@@ -139,7 +139,7 @@
     <string name="i_am">我是</string>
     <string name="press_top">点击上面的</string>
     <string name="btn_means_agree">按钮,即表示你同意</string>
-    <string name="Secret_agreement">《YiChat软件许可及服务协议》</string>
+    <string name="Secret_agreement">《凡信软件许可及服务协议》</string>
     <string name="login">登录</string>
     <string name="password">密码</string>
     <string name="register">用户注册</string>
@@ -424,7 +424,7 @@
     <string name="contacts_friends">通讯录好友</string>
     <string name="add">添加</string>
     <string name="already_add">已添加</string>
-    <string name="invite_msg">诚邀您使用【YiChat】APP,下载地址(苹果手机)http://www.pgyer.com/yichatsystem，(安卓手机)https://fir.im/fanxin4。</string>
+    <string name="invite_msg">诚邀您使用【凡信】APP,下载地址(苹果手机)http://www.pgyer.com/yichatsystem，(安卓手机)https://fir.im/fanxin4。</string>
 
 </resources>
 
