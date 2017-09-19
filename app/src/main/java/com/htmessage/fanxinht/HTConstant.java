@@ -37,7 +37,7 @@ public class HTConstant {
     public static final String URL_SOCIAL_GET_DETAIL = HOST + "dynamicInfo";//获取评论列表
 
     //群相关接口
-    public static final String GROUP_HOST = "http://xxxxxxxx/group/";
+    public static final String GROUP_HOST = "http://xxxxxxxxxx/group/";
     public static final String URL_GROUP_CREATE = GROUP_HOST + "groupCreate.php";
     public static final String URL_GROUP_MEMBERS = GROUP_HOST + "mucMembers.php";
     public static final String URL_CHECK_UPDATE = HOST + "version.php";    //查询更新
