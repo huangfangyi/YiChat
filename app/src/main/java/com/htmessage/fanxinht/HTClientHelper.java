@@ -38,7 +38,7 @@ import java.util.List;
  */
 
 public class HTClientHelper {
-     private static Context applicationContext;
+    private static Context applicationContext;
 
     private static HTClientHelper htClientHelper;
 
@@ -54,13 +54,13 @@ public class HTClientHelper {
 //        options.setSinglePointUrl(HTConstant.DEVICE_URL_UPDATE,HTConstant.DEVICE_URL_GET);
 //        options.setDebug(false);
 //        options.setKeepAlive(false);
-        HTOptions htOptions=new HTOptions();
+        HTOptions htOptions = new HTOptions();
         htOptions.setDualProcess(true);
         htOptions.setDebug(true);
-         HTClient.init(applicationContext,htOptions);
+        HTClient.init(applicationContext, htOptions);
         HTClient.getInstance().setMessageLisenter(messageLisenter);
         HTClient.getInstance().addConnectionListener(htConnectionListener);
-     }
+    }
 
     public static HTClientHelper getInstance() {
 
@@ -93,7 +93,7 @@ public class HTClientHelper {
     private HTClient.MessageLisenter messageLisenter = new HTClient.MessageLisenter() {
         @Override
         public void onHTMessage(HTMessage htMessage) {
-            Log.d("htMessage---->",htMessage.toXmppMessageBody());
+            Log.d("htMessage---->", htMessage.toXmppMessageBody());
             handleHTMessage(htMessage);
 
         }
@@ -168,7 +168,6 @@ public class HTClientHelper {
                     //   Log.d(TAG, message.getFrom() + "accept your request");
                     msg.setStatus(InviteMessage.Status.BEAGREED);
                     notifyNewInviteMessage(msg, dataJSON.getJSONObject("data"));
-                    Log.d("slj", "透传:" + cmdMessage.toXmppMessage());
                 } else if (action == 1002) {
                     //收到好友拒绝的透传消息
                     List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
@@ -187,7 +186,7 @@ public class HTClientHelper {
                 } else if (action == 1003) {
                     //收到删除好友的透传消息
                     //发送广播
-                    if (HTApp.getInstance().getUsername().equals(cmdMessage.getTo())) {
+                    if (HTApp.getInstance().getUsername().equals(cmdMessage.getTo()) || HTApp.getInstance().getUsername().equals(cmdMessage.getFrom())) {
                         LocalBroadcastManager.getInstance(applicationContext).sendBroadcast(new Intent(IMAction.CMD_DELETE_FRIEND).putExtra(HTConstant.JSON_KEY_HXID, cmdMessage.getFrom()));
                     }
                 } else if (action == 2004) {
@@ -208,7 +207,7 @@ public class HTClientHelper {
                         HTMessageUtils.creatWithDrowMsg(htMessage);
                         LocalBroadcastManager.getInstance(applicationContext).sendBroadcast(new Intent(IMAction.ACTION_MESSAGE_WITHDROW).putExtra("msgId", msgId));
                     }
-                }else if (action == 7000) {//收到朋友圈点赞或者评论的消息
+                } else if (action == 7000) {//收到朋友圈点赞或者评论的消息
                     JSONObject momentsData = dataJSON.getJSONObject("data");
                     int typeInt = momentsData.getInteger("type");
 

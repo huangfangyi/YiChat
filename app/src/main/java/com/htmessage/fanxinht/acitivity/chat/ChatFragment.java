@@ -24,6 +24,8 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.htmessage.fanxinht.HTConstant;
+import com.htmessage.fanxinht.utils.CommonUtils;
 import com.htmessage.sdk.model.HTMessage;
 import com.htmessage.sdk.utils.MessageUtils;
 import com.htmessage.fanxinht.IMAction;
@@ -86,12 +88,13 @@ public class ChatFragment extends Fragment implements ChatContract.View {
         chatType = fragmentArgs.getInt("chatType", MessageUtils.CHAT_SINGLE);
         toChatUsername = fragmentArgs.getString("userId");
         initView();
-        myBroadcastReciver=new MyBroadcastReciver();
+        myBroadcastReciver = new MyBroadcastReciver();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(IMAction.ACTION_MESSAGE_WITHDROW);
         intentFilter.addAction(IMAction.ACTION_MESSAGE_FORWORD);
         intentFilter.addAction(IMAction.ACTION_NEW_MESSAGE);
         intentFilter.addAction(IMAction.ACTION_MESSAGE_EMPTY);
+        intentFilter.addAction(IMAction.CMD_DELETE_FRIEND);
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(myBroadcastReciver, intentFilter);
     }
 
@@ -368,6 +371,7 @@ public class ChatFragment extends Fragment implements ChatContract.View {
             getActivity().finish();
         }
     }
+
     private class MyBroadcastReciver extends BroadcastReceiver {
 
         @Override
@@ -383,8 +387,16 @@ public class ChatFragment extends Fragment implements ChatContract.View {
                 presenter.onNewMessage(message);
             } else if (IMAction.ACTION_MESSAGE_EMPTY.equals(intent.getAction())) {
                 String id = intent.getStringExtra("id");
-                if (toChatUsername.equals(id)){
+                if (toChatUsername.equals(id)) {
                     presenter.onMessageClear();
+                }
+            } else if (IMAction.CMD_DELETE_FRIEND.equals(intent.getAction())) {
+                String userId = intent.getStringExtra(HTConstant.JSON_KEY_HXID);
+                if (getActivity() != null) {
+                    if (userId.equals(toChatUsername)) {
+                        CommonUtils.showToastShort(getActivity(), getString(R.string.just_delete_friend));
+                        getActivity().finish();
+                    }
                 }
             }
         }

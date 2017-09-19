@@ -17,7 +17,9 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.sdk.ChatType;
+import com.htmessage.sdk.client.HTClient;
 import com.htmessage.sdk.model.HTConversation;
 import com.htmessage.sdk.utils.MessageUtils;
 import com.htmessage.fanxinht.R;
@@ -34,7 +36,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
 
     public RelativeLayout errorItem;
     public TextView errorText;
-     public NewMeesageListener mListener;
+    public NewMeesageListener mListener;
     private ConversationPresenter conPresenter;
 
     @Override
@@ -49,7 +51,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
 
     @Override
     public void setPresenter(ConversationPresenter presenter) {
-      //  conPresenter = presenter;
+        //  conPresenter = presenter;
     }
 
     @Override
@@ -74,7 +76,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
             @Override
             public void onClick(int position) {
                 if (position == 0) {
-                     conPresenter.deleteConversation(htConversation);
+                    conPresenter.deleteConversation(htConversation);
                 } else if (position == 1) {
                     if (htConversation.getTopTimestamp() != 0) {//如果是置顶过的 就取消置顶
                         conPresenter.cancelTopConversation(htConversation);
@@ -101,7 +103,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        conPresenter=new ConversationPresenter(this);
+        conPresenter = new ConversationPresenter(this);
         if (context instanceof NewMeesageListener) {
             mListener = ((NewMeesageListener) context);
             onUnreadMsgChange();
@@ -122,12 +124,12 @@ public class ConversationFragment extends Fragment implements ConversationView {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 HTConversation htConversation = adapter.getItem(position);
-                 conPresenter.markAllMessageRead(htConversation);
+                conPresenter.markAllMessageRead(htConversation);
                 Intent intent = new Intent(getActivity(), ChatActivity.class).putExtra("userId", htConversation.getUserId());
                 if (htConversation.getChatType() == ChatType.groupChat) {
                     intent.putExtra("chatType", MessageUtils.CHAT_GROUP);
                 }
-                startActivity (intent);
+                startActivity(intent);
             }
         });
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -158,15 +160,20 @@ public class ConversationFragment extends Fragment implements ConversationView {
                     }
                 }
 
-            } else if (IMAction.ACTION_NEW_MESSAGE.equals(intent.getAction())|| IMAction.ACTION_MESSAGE_WITHDROW.equals(intent.getAction())
+            } else if (IMAction.ACTION_NEW_MESSAGE.equals(intent.getAction()) || IMAction.ACTION_MESSAGE_WITHDROW.equals(intent.getAction())
                     || IMAction.ACTION_REMOVED_FROM_GROUP.equals(intent.getAction())) {
                 //   收到新消息,收到撤回消息,收到群相关消息-被提出群聊
-                   refresh();
+                refresh();
 
+            } else if (IMAction.CMD_DELETE_FRIEND.equals(intent.getAction())) {
+                String userId = intent.getStringExtra(HTConstant.JSON_KEY_HXID);
+                HTConversation conversation = HTClient.getInstance().conversationManager().getConversation(userId);
+                if (conversation != null) {
+                    conPresenter.deleteConversation(conversation);
+                }
             }
         }
     };
-
 
 
     private void registerConnectionBroadCast() {
@@ -175,6 +182,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
         intentFilter.addAction(IMAction.ACTION_CONNECTION_CHANAGED);
         intentFilter.addAction(IMAction.ACTION_NEW_MESSAGE);
         intentFilter.addAction(IMAction.ACTION_MESSAGE_WITHDROW);
+        intentFilter.addAction(IMAction.CMD_DELETE_FRIEND);
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(broadcastReceiver, intentFilter);
 
     }
