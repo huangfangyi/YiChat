@@ -734,4 +734,66 @@ public class Util {
         }
         return null;
     }
+    private static Toast toast;
+
+
+    /**
+     * 短吐司
+     *
+     * @param context
+     * @param msg
+     */
+    public static void showToastShort(Context context, String msg) {
+        if (toast == null) {
+            toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
+        } else {
+            toast.setText(msg);
+        }
+        toast.show();
+    }
+
+    /**
+     * 短吐司
+     *
+     * @param context
+     * @param msg
+     */
+    public static void showToastShort(Context context, int msg) {
+        if (toast == null) {
+            toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
+        } else {
+            toast.setText(msg);
+        }
+        toast.show();
+    }
+
+    /**
+     * 长吐司
+     *
+     * @param context
+     * @param msg
+     */
+    public static void showToastLong(Context context, String msg) {
+        if (toast == null) {
+            toast = Toast.makeText(context, msg, Toast.LENGTH_LONG);
+        } else {
+            toast.setText(msg);
+        }
+        toast.show();
+    }
+
+    /**
+     * 长吐司
+     *
+     * @param context
+     * @param msg
+     */
+    public static void showToastLong(Context context, int msg) {
+        if (toast == null) {
+            toast = Toast.makeText(context, msg, Toast.LENGTH_LONG);
+        } else {
+            toast.setText(msg);
+        }
+        toast.show();
+    }
 }

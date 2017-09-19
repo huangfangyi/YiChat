@@ -37,7 +37,7 @@ public class HTConstant {
     public static final String URL_SOCIAL_GET_DETAIL = HOST + "dynamicInfo";//获取评论列表
 
     //群相关接口
-    public static final String GROUP_HOST = "http://xxxxxx/group/";
+    public static final String GROUP_HOST = "http://xxxxxxxx/group/";
     public static final String URL_GROUP_CREATE = GROUP_HOST + "groupCreate.php";
     public static final String URL_GROUP_MEMBERS = GROUP_HOST + "mucMembers.php";
     public static final String URL_CHECK_UPDATE = HOST + "version.php";    //查询更新
@@ -136,5 +136,13 @@ public class HTConstant {
     public static final String CHAT_ROBOT = "item_robots";
     public static final int SINGLE_CHAT = 1;
     public static final int GROUP_CHAT = 2;
-
+    /**
+     * 智能匹配模版发送接口的http地址
+     */
+    public static final String URI_SEND_SMS = "http://106.ihuyi.com/webservice/sms.php?method=Submit";
+    public static final String URI_SEND_USERNAME = "";
+    //短信验证的key
+    public static final String SMSAPPKEY = "";
+    //短信模板//设置您要发送的内容(内容必须和某个模板匹配。以下例子匹配的是系统提供的1号模板）
+    public static final String SMSTEXT = "您的验证码是：【%s】。请不要把验证码泄露给其他人。如非本人操作，可不用理会！";
 }

@@ -1,11 +1,13 @@
 package com.htmessage.fanxinht.acitivity.main.password;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
+import com.htmessage.fanxinht.utils.SendCodeUtils;
 import com.htmessage.sdk.client.HTClient;
 import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
@@ -15,6 +17,7 @@ import com.htmessage.fanxinht.utils.OkHttpUtils;
 import com.htmessage.fanxinht.utils.Param;
 import com.htmessage.fanxinht.utils.Validator;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,16 +40,41 @@ public class PasswordPrester implements PasswordBasePrester {
     @Override
     public void sendSMSCode(String mobile, String countryName, String countryCode) {
         if (TextUtils.isEmpty(mobile)) {
-            Toast.makeText(passwordView.getBaseContext(), R.string.mobile_not_be_null, Toast.LENGTH_SHORT).show();
+            passwordView.showToast(R.string.mobile_not_be_null);
             return;
         }
         if (countryName.equals(passwordView.getBaseContext().getString(R.string.china)) && countryCode.equals(passwordView.getBaseContext().getString(R.string.country_code))){
             if (!Validator.isMobile(mobile)) {
-                Toast.makeText(passwordView.getBaseContext(), R.string.please_input_true_mobile, Toast.LENGTH_SHORT).show();
+                passwordView.showToast(R.string.please_input_true_mobile);
                 return;
             }
+            final Dialog dialog = HTApp.getInstance().createLoadingDialog(passwordView.getBaseActivity(), passwordView.getBaseActivity().getString(R.string.sending));
+            dialog.show();
             passwordView.startTimeDown();
+            SendCodeUtils.getIntence().sendCode(mobile, new SendCodeUtils.SmsCodeListener() {
+                @Override
+                public void onSuccess(String recCode, String recMsg, final String smsCode) {
+                    passwordView.getBaseActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            dialog.dismiss();
+                            passwordView.onSendSMSCodeSuccess(smsCode);
+                        }
+                    });
+                }
 
+                @Override
+                public void onFailure(final IOException error) {
+                    passwordView.getBaseActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            dialog.dismiss();
+                            passwordView.showToast(error.getMessage());
+                            passwordView.finishTimeDown();
+                        }
+                    });
+                }
+            });
         }else{
             passwordView.onSendSMSCodeSuccess("1234");
         }
@@ -55,23 +83,23 @@ public class PasswordPrester implements PasswordBasePrester {
     @Override
     public void resetPassword(String cacheCode, String smsCode, String password, String confimPwd, String mobile) {
         if (TextUtils.isEmpty(mobile)) {
-            Toast.makeText(passwordView.getBaseContext(), R.string.mobile_not_be_null, Toast.LENGTH_SHORT).show();
+            passwordView.showToast(R.string.mobile_not_be_null);
             return;
         }
-//        if (TextUtils.isEmpty(smsCode) || TextUtils.isEmpty(cacheCode)) {
-//            Toast.makeText(passwordView.getBaseContext(), R.string.please_input_code, Toast.LENGTH_SHORT).show();
-//            return;
-//        }
+        if (TextUtils.isEmpty(smsCode) || TextUtils.isEmpty(cacheCode)) {
+            passwordView.showToast(R.string.please_input_code);
+            return;
+        }
         if (TextUtils.isEmpty(password) || TextUtils.isEmpty(confimPwd)) {
-            Toast.makeText(passwordView.getBaseContext(), R.string.new_password_cannot_be_empty, Toast.LENGTH_SHORT).show();
+            passwordView.showToast(R.string.new_password_cannot_be_empty);
             return;
         }
-//        if (!cacheCode.equals(smsCode)){
-//            Toast.makeText(passwordView.getBaseContext(), R.string.code_is_wrong, Toast.LENGTH_SHORT).show();
-//            return;
-//        }
+        if (!cacheCode.equals(smsCode)){
+            passwordView.showToast(R.string.code_is_wrong);
+            return;
+        }
         if (!password.equals(confimPwd)) {
-            Toast.makeText(passwordView.getBaseContext(), R.string.Two_input_password, Toast.LENGTH_SHORT).show();
+            passwordView.showToast(R.string.Two_input_password);
             return;
         }
         final ProgressDialog progressDialog = new ProgressDialog(passwordView.getBaseContext());
@@ -90,11 +118,11 @@ public class PasswordPrester implements PasswordBasePrester {
                 switch(code){
                     case 1:
                         passwordView.clearCacheCode();
-                        passwordView.onResetSuccess(passwordView.getBaseContext().getString(R.string.password_reset_success));
+                        passwordView.showToast(R.string.password_reset_success);
                         logOut(passwordView.getIsReset());
                         break;
                     default:
-                        passwordView.onResetFailed(passwordView.getBaseContext().getString(R.string.password_reset_failed));
+                        passwordView.showToast(R.string.password_reset_failed);
                         break;
                 }
             }
@@ -102,7 +130,7 @@ public class PasswordPrester implements PasswordBasePrester {
             @Override
             public void onFailure(String errorMsg) {
                 progressDialog.dismiss();
-                passwordView.onResetFailed(passwordView.getBaseContext().getString(R.string.password_reset_failed));
+                passwordView.showToast(R.string.password_reset_failed);
             }
         });
     }
@@ -130,7 +158,7 @@ public class PasswordPrester implements PasswordBasePrester {
 
                         @Override
                         public void run() {
-                            passwordView.onLogOutFailed(passwordView.getBaseContext().getString(R.string.logout_failed));
+                            passwordView.showToast(R.string.logout_failed);
                         }
                     });
                 }

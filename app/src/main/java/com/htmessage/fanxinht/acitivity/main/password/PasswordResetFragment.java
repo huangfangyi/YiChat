@@ -18,8 +18,10 @@ import android.widget.Toast;
 import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.fanxinht.R;
+import com.htmessage.fanxinht.acitivity.login.thirdLogin.qqapi.Util;
 import com.htmessage.fanxinht.utils.ACache;
 import com.htmessage.fanxinht.utils.CityCodeAndTimePickUtils;
+import com.htmessage.fanxinht.widget.SetTelCountTimer;
 
 /**
  * 项目名称：HTOpen
@@ -37,7 +39,7 @@ public class PasswordResetFragment extends Fragment implements PasswordView ,OnC
     private TextView tv_country,tv_country_code;
     private RelativeLayout rl_country,rl_smscode;
     private PasswordPrester prester;
-
+    private SetTelCountTimer telCountTimer;
 
     @Nullable
     @Override
@@ -59,7 +61,6 @@ public class PasswordResetFragment extends Fragment implements PasswordView ,OnC
     }
 
     private void initData() {
-        rl_smscode.setVisibility(View.GONE);
          if (getIsReset()) {
             tv_title.setText(R.string.resetPassword);
             btn_ok.setText(R.string.resetPassword);
@@ -89,6 +90,7 @@ public class PasswordResetFragment extends Fragment implements PasswordView ,OnC
         btn_ok = (Button) pswView.findViewById(R.id.btn_ok);
         btn_code = (Button) pswView.findViewById(R.id.btn_code);
         tv_title= (TextView) pswView.findViewById(R.id.tv_title);
+        telCountTimer = new SetTelCountTimer(btn_code);
     }
 
     private void getData() {
@@ -98,9 +100,8 @@ public class PasswordResetFragment extends Fragment implements PasswordView ,OnC
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-
             case R.id.rl_country:
-                    CityCodeAndTimePickUtils.showPup(getBaseActivity(),tv_country,tv_country_code);
+                CityCodeAndTimePickUtils.showPup(getBaseActivity(),tv_country,tv_country_code);
                 break;
             case R.id.btn_code:
                 prester.sendSMSCode(getMobile(),getCountryName(),getCountryCode());
@@ -162,38 +163,29 @@ public class PasswordResetFragment extends Fragment implements PasswordView ,OnC
             et_code.setText(msg);
         }
         aCache.put("code",msg);
-        Toast.makeText(getBaseContext(), R.string.code_is_send, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onSendSMSCodeFailed(String error) {
-        Toast.makeText(getBaseContext(), error, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onResetSuccess(String msg) {
-        Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onResetFailed(String error) {
-        Toast.makeText(getBaseContext(), error, Toast.LENGTH_SHORT).show();
+        showToast(R.string.code_is_send);
     }
 
     @Override
     public void startTimeDown() {
-
+        if(telCountTimer!=null){
+            telCountTimer.start();
+        }
     }
 
     @Override
     public void finishTimeDown() {
-
+        if(telCountTimer!=null){
+            telCountTimer.onFinish();
+        }
     }
-
-
     @Override
-    public void onLogOutFailed(String msg) {
-        Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();
+    public void showToast(Object text){
+        if (text instanceof Integer){
+            Util.showToastShort(getBaseContext(),(int)text);
+        } else if (text instanceof String){
+            Util.showToastShort(getBaseContext(),(String)text);
+        }
     }
 
     @Override

@@ -25,7 +25,6 @@ import com.htmessage.fanxinht.R;
  */
 public class ShowBigImageActivity extends BaseActivity {
 
-//	private PhotoView image;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

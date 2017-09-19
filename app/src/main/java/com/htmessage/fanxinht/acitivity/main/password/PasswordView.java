@@ -21,10 +21,7 @@ public interface PasswordView extends BaseView<PasswordPrester> {
     String getConfimPwd();
     void clearCacheCode();
     void onSendSMSCodeSuccess(String msg);
-    void onSendSMSCodeFailed(String error);
-    void onResetSuccess(String msg);
-    void onResetFailed(String error);
     void startTimeDown();
     void finishTimeDown();
-    void onLogOutFailed(String msg);
+    void showToast(Object text);
 }

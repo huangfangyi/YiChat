@@ -23,18 +23,23 @@ public interface RegisterContract {
         void hidePassword();
         void enableButton();
         void disableButton();
-        void showToast(int msgRes);
+        void showToast(Object msgRes);
         String getOriginImagePath();
         Activity getBaseActivity();
+        void showSmsCode(String code);
 
+        void clearCacheCode();
 
+        void startTimeDown();
+
+        void finishTimeDown();
     }
 
     public interface Presenter extends BasePresenter{
 
         void registerInServer(String nickName,String mobile,String password);
          void result(int requsetCode, int resultCode, Intent intent);
-
+        void sendSmsCode(String mobile);
     }
 
 }

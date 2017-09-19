@@ -426,6 +426,11 @@
     <string name="already_add">已添加</string>
     <string name="invite_msg">诚邀您使用【凡信】APP,下载地址(苹果手机)http://www.pgyer.com/yichatsystem，(安卓手机)https://fir.im/fanxin4。</string>
     <string name="just_delete_friend">您已被对方移除好友!</string>
+    <string name="please_input_code">请输入验证码!</string>
+    <string name="code_is_wrong">验证码不正确!</string>
+    <string name="sending">发送中...</string>
+    <string name="sending_success">发送成功!</string>
+    <string name="sending_failed">发送失败!</string>
 
 </resources>
 

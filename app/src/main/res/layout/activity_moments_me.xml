@@ -48,6 +48,7 @@
             android:textSize="18sp" />
 
         <ImageView
+            android:visibility="invisible"
             android:id="@+id/iv_notice"
             android:layout_width="48dp"
             android:layout_height="48dp"

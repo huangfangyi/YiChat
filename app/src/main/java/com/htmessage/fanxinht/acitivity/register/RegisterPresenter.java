@@ -1,6 +1,7 @@
 package com.htmessage.fanxinht.acitivity.register;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -11,6 +12,7 @@ import com.alibaba.sdk.android.oss.ClientException;
 import com.alibaba.sdk.android.oss.ServiceException;
 import com.alibaba.sdk.android.oss.model.PutObjectRequest;
 import com.alibaba.sdk.android.oss.model.PutObjectResult;
+import com.htmessage.fanxinht.utils.SendCodeUtils;
 import com.htmessage.sdk.utils.UploadFileUtils;
 import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
@@ -20,6 +22,7 @@ import com.htmessage.fanxinht.utils.Param;
 import com.soundcloud.android.crop.Crop;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +36,8 @@ public class RegisterPresenter implements RegisterContract.Presenter {
     private String cropImagePath = null;
 
     public RegisterPresenter(RegisterContract.View view) {
-        registerView = view;
-        registerView.setPresenter(this);
+        this.registerView = view;
+        this.registerView.setPresenter(this);
     }
 
     @Override
@@ -54,7 +57,6 @@ public class RegisterPresenter implements RegisterContract.Presenter {
 
 
     private void register(String usernick, String password, String usertel, String imageName) {
-        registerView.showDialog();
         List<Param> params = new ArrayList<Param>();
         params.add(new Param("usertel", usertel));
         params.add(new Param("password", password));
@@ -74,30 +76,11 @@ public class RegisterPresenter implements RegisterContract.Presenter {
                                 @Override
                                 public void run() {
                                     registerView.cancelDialog();
+                                    registerView.clearCacheCode();
                                     registerView.showToast(R.string.Registered_successfully);
                                     registerView.getBaseActivity().finish();
                                 }
                             });
-
-//                            HTClient.getInstance().register(user.getString(HTConstant.JSON_KEY_HXID), user.getString(HTConstant.JSON_KEY_PASSWORD), new HTClient.HTCallBack() {
-//                                @Override
-//                                public void onSuccess() {
-//
-//                                }
-//
-//                                @Override
-//                                public void onError() {
-//                                    registerView.getBaseActivity().runOnUiThread(new Runnable() {
-//                                        @Override
-//                                        public void run() {
-//                                            registerView.cancelDialog();
-//                                            registerView.showToast(R.string.Registration_failed);
-//
-//                                        }
-//                                    });
-//
-//                                }
-//                            });
                         }
                         break;
                     case -1:
@@ -167,18 +150,12 @@ public class RegisterPresenter implements RegisterContract.Presenter {
                 case RegisterContract.PHOTO_REQUEST_GALLERY:
                     if (intent != null)
                         beginCrop(intent.getData());
-
                     break;
-
-
-
                 case RegisterContract.PHOTO_REQUEST_TAKEPHOTO:
                     beginCrop(Uri.fromFile(new File(registerView.getOriginImagePath())));
                     break;
-
                 case RegisterContract.PHOTO_REQUEST_CUT:
                     Uri output = Crop.getOutput(intent);
-                    Log.d("output---->",output.getPath());
                     registerView.showAvatar(output.getPath());
                     break;
 
@@ -191,6 +168,37 @@ public class RegisterPresenter implements RegisterContract.Presenter {
             }
 
         }
+    }
+
+    @Override
+    public void sendSmsCode(String mobile) {
+        final Dialog dialog = HTApp.getInstance().createLoadingDialog(registerView.getBaseActivity(), registerView.getBaseActivity().getString(R.string.sending));
+        dialog.show();
+        registerView.startTimeDown();
+       SendCodeUtils.getIntence().sendCode(mobile, new SendCodeUtils.SmsCodeListener() {
+            @Override
+            public void onSuccess(String recCode, String recMsg,final String smsCode) {
+                registerView.getBaseActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.dismiss();
+                        registerView.showSmsCode(smsCode);
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(final IOException error) {
+                registerView.getBaseActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.dismiss();
+                        registerView.showToast(error.getMessage());
+                        registerView.finishTimeDown();
+                    }
+                });
+            }
+        });
     }
 
     private void beginCrop(Uri inputUri) {

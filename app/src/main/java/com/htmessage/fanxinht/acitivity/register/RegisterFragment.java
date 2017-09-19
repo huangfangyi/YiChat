@@ -34,9 +34,12 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.R;
+import com.htmessage.fanxinht.acitivity.login.thirdLogin.qqapi.Util;
+import com.htmessage.fanxinht.utils.ACache;
 import com.htmessage.fanxinht.utils.CityCodeAndTimePickUtils;
 import com.htmessage.fanxinht.utils.Validator;
 import com.htmessage.fanxinht.widget.HTAlertDialog;
+import com.htmessage.fanxinht.widget.SetTelCountTimer;
 import com.soundcloud.android.crop.Crop;
 
 import java.io.File;
@@ -48,8 +51,8 @@ import java.io.File;
 
 public class RegisterFragment extends Fragment implements View.OnClickListener, RegisterContract.View {
 
-    private EditText et_usernick, et_usertel, et_password;
-    private Button btn_register;
+    private EditText et_usernick, et_usertel, et_password,et_code;
+    private Button btn_register,btn_code;
     private ImageView iv_hide, iv_show, iv_photo;
     private TextView tv_xieyi, tv_country, tv_country_code;
     private RelativeLayout rl_country;
@@ -58,17 +61,35 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     //选取的原始图片
     private String imagePathOrigin = null;
     private Dialog dialog;
+    private SetTelCountTimer telCountTimer;
+    private ACache aCache;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dialog = HTApp.getInstance().createLoadingDialog(getActivity(), getString(R.string.Is_the_registered));
+        aCache = ACache.get(getActivity());
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_register, container, false);
+        initView(root);
+        initData();
+        setLisenter();
+        return root;
+    }
+
+    private void initData() {
+        String xieyi = "<font color=" + "\"" + "#AAAAAA" + "\">" + getString(R.string.press_top)
+                + "&nbsp;" + "\"" + getString(R.string.register) + "\"" + "&nbsp;" + getString(R.string.btn_means_agree) + "</font>" + "<u>"
+                + "<font color=" + "\"" + "#576B95" + "\">" + getString(R.string.Secret_agreement)
+                + "</font>" + "</u>";
+        tv_xieyi.setText(Html.fromHtml(xieyi));
+    }
+
+    private void initView(View root) {
         et_usernick = (EditText) root.findViewById(R.id.et_usernick);
         et_usertel = (EditText) root.findViewById(R.id.et_usertel);
         et_password = (EditText) root.findViewById(R.id.et_password);
@@ -81,19 +102,10 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
         iv_hide = (ImageView) root.findViewById(R.id.iv_hide);
         iv_show = (ImageView) root.findViewById(R.id.iv_show);
         iv_photo = (ImageView) root.findViewById(R.id.iv_photo);
-        initView();
-        setLisenter();
-        return root;
+        btn_code = (Button) root.findViewById(R.id.btn_code);
+        et_code = (EditText) root.findViewById(R.id.et_code);
+        telCountTimer = new SetTelCountTimer(btn_code);
     }
-
-    private void initView() {
-        String xieyi = "<font color=" + "\"" + "#AAAAAA" + "\">" + getString(R.string.press_top)
-                + "&nbsp;" + "\"" + getString(R.string.register) + "\"" + "&nbsp;" + getString(R.string.btn_means_agree) + "</font>" + "<u>"
-                + "<font color=" + "\"" + "#576B95" + "\">" + getString(R.string.Secret_agreement)
-                + "</font>" + "</u>";
-        tv_xieyi.setText(Html.fromHtml(xieyi));
-    }
-
     private void setLisenter() {
         // 监听多个输入框
         TextChange textChange = new TextChange();
@@ -108,6 +120,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
         iv_show.setOnClickListener(this);
         iv_photo.setOnClickListener(this);
         btn_register.setOnClickListener(this);
+        btn_code.setOnClickListener(this);
     }
 
     @Override
@@ -178,10 +191,23 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     }
 
     @Override
-    public void showToast(int msgRes) {
-        Toast.makeText(getActivity(), msgRes, Toast.LENGTH_SHORT).show();
+    public void showToast(Object msgRes) {
+        if (msgRes instanceof Integer){
+            Util.showToastShort(getActivity(),(int)msgRes);
+        }else if (msgRes instanceof String){
+            Util.showToastShort(getActivity(),(String) msgRes);
+        }
+    }
+    @Override
+    public void showSmsCode(String code) {
+        aCache.put("registerCode", code);
+        showToast(R.string.code_is_send);
     }
 
+    @Override
+    public void clearCacheCode() {
+        aCache.put("registerCode", "");
+    }
     @Override
     public String getOriginImagePath() {
         return imagePathOrigin;
@@ -191,7 +217,19 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     public Activity getBaseActivity() {
         return getActivity();
     }
+    @Override
+    public void startTimeDown() {
+        if (telCountTimer != null) {
+            telCountTimer.start();
+        }
+    }
 
+    @Override
+    public void finishTimeDown() {
+        if (telCountTimer != null) {
+            telCountTimer.onFinish();
+        }
+    }
 
     // EditText监听器
     class TextChange implements TextWatcher {
@@ -243,6 +281,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
                 String usertel = et_usertel.getText().toString().trim();
                 String country = tv_country.getText().toString().trim();
                 String countryCode = tv_country_code.getText().toString().trim();
+                String code = et_code.getText().toString().trim();
+                String registerCode = aCache.getAsString("registerCode");
 
                 if (TextUtils.isEmpty(usertel)) {
                     showToast(R.string.mobile_not_be_null);
@@ -254,7 +294,14 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
                         return;
                     }
                 }
-
+                if (TextUtils.isEmpty(registerCode) || TextUtils.isEmpty(code)){
+                    showToast(R.string.please_input_code);
+                    return;
+                }
+                if (!code.equals(registerCode)){
+                    showToast(R.string.code_is_wrong);
+                    return;
+                }
                 if (TextUtils.isEmpty(password)) {
                     showToast(R.string.pwd_is_not_allow_null);
                     return;
@@ -269,7 +316,23 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
             case R.id.iv_photo:
                 showCamera();
                 break;
+            case R.id.btn_code:
+                String usertel2 = et_usertel.getText().toString().trim();
+                String country2 = tv_country.getText().toString().trim();
+                String countryCode2 = tv_country_code.getText().toString().trim();
 
+                if (TextUtils.isEmpty(usertel2)) {
+                    showToast(R.string.mobile_not_be_null);
+                    return;
+                }
+                if (country2.equals(getString(R.string.china)) && countryCode2.equals(getString(R.string.country_code))) {
+                    if (!Validator.isMobile(usertel2)) {
+                        showToast(R.string.please_input_true_mobile);
+                        return;
+                    }
+                }
+                mPresenter.sendSmsCode(usertel2);
+                break;
 
         }
     }

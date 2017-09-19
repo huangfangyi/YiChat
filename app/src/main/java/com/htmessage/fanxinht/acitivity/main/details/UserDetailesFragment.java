@@ -26,6 +26,7 @@ import com.htmessage.fanxinht.R;
 import com.htmessage.fanxinht.acitivity.addfriends.add.end.AddFriendsFinalActivity;
 import com.htmessage.fanxinht.acitivity.chat.ChatActivity;
 import com.htmessage.fanxinht.acitivity.moments.MomentsFriendActivity;
+import com.htmessage.fanxinht.acitivity.showbigimage.ShowBigImageActivity;
 
 /**
  * 项目名称：yichat0504
@@ -42,6 +43,7 @@ public class UserDetailesFragment extends Fragment implements UserDetailsView ,V
     private RelativeLayout rl_region,rl_yichat_id,re_mobile,re_moments;
     private Dialog dialog;
     private JSONObject userJson;
+    private String avatarUrl;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,6 +84,7 @@ public class UserDetailesFragment extends Fragment implements UserDetailsView ,V
         btnAdd.setOnClickListener(this);
         btnMsg.setOnClickListener(this);
         re_moments.setOnClickListener(this);
+        iv_avatar.setOnClickListener(this);
     }
 
     private void initView(View infoView) {
@@ -170,7 +173,7 @@ public class UserDetailesFragment extends Fragment implements UserDetailsView ,V
             tv_region.setText(R.string.not_set);
         }
         String nick = object.getString(HTConstant.JSON_KEY_NICK);
-        String avatarUrl =object.getString(HTConstant.JSON_KEY_AVATAR);
+        avatarUrl =object.getString(HTConstant.JSON_KEY_AVATAR);
         if(!TextUtils.isEmpty(avatarUrl)){
             if (!avatarUrl.contains("http:")){
                 avatarUrl = HTConstant.URL_AVATAR+avatarUrl;
@@ -233,6 +236,9 @@ public class UserDetailesFragment extends Fragment implements UserDetailsView ,V
                 intent.putExtra("userNick",userJson.getString(HTConstant.JSON_KEY_NICK));
                 intent.putExtra("avatar",userJson.getString(HTConstant.JSON_KEY_AVATAR));
                 startActivity(intent);
+                break;
+            case R.id.iv_avatar:
+                startActivity(new Intent(getActivity(), ShowBigImageActivity.class).putExtra("localPath", avatarUrl));
                 break;
         }
     }

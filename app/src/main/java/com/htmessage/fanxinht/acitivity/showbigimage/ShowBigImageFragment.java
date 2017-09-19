@@ -1,5 +1,6 @@
 package com.htmessage.fanxinht.acitivity.showbigimage;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.RelativeLayout;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.htmessage.fanxinht.R;
+
+import java.io.File;
 
 import uk.co.senab.photoview.PhotoView;
 
@@ -26,7 +29,7 @@ public class ShowBigImageFragment extends Fragment {
     private RelativeLayout title;
     private PhotoView image;
     private String localPath;
-
+    private String path = null;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,11 +47,7 @@ public class ShowBigImageFragment extends Fragment {
 
     private void initData() {
 //        title.setVisibility(View.GONE);
-        if (TextUtils.isEmpty(localPath)){
-            getActivity().finish();
-            return;
-        }
-        Glide.with(getContext()).load(localPath).diskCacheStrategy(DiskCacheStrategy.ALL).error(R.drawable.default_image).into(image);
+        Glide.with(getContext()).load(path).asBitmap().diskCacheStrategy(DiskCacheStrategy.ALL).error(R.drawable.default_image).into(image);
     }
 
     private void initView() {
@@ -58,5 +57,19 @@ public class ShowBigImageFragment extends Fragment {
 
     private void getData() {
         localPath = getArguments().getString("localPath");
+        if (TextUtils.isEmpty(localPath)) {
+            getActivity().finish();
+            return;
+        }
+        if (localPath.equals("false")) {
+            getActivity().finish();
+            return;
+        }
+        if (localPath.contains("http://") || localPath.startsWith("http") || localPath.contains("https://")) {
+            path = localPath;
+        } else {
+            Uri uri = Uri.fromFile(new File(localPath));
+            path = uri.getPath();
+        }
     }
 }

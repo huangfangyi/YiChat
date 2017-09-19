@@ -24,6 +24,7 @@ import com.htmessage.fanxinht.manager.LocalUserManager;
 import com.htmessage.fanxinht.manager.NotifierManager;
 import com.htmessage.fanxinht.manager.PreferenceManager;
 import com.htmessage.fanxinht.manager.SettingsManager;
+import com.htmessage.fanxinht.utils.SendCodeUtils;
 import com.tencent.bugly.crashreport.CrashReport;
 
 import org.anyrtc.rtmpc_hybrid.RTMPCHybird;
@@ -74,6 +75,8 @@ public class HTApp extends Application {
 ////         */
         RTMPCHybird.Inst().Init(applicationContext);
         RTMPCHybird.Inst().InitEngineWithAnyrtcInfo(HTConstant.DEVELOPERID, HTConstant.APPID, HTConstant.APPKEY, HTConstant.APPTOKEN);
+        //初始化短信发送工具类
+        SendCodeUtils.init(applicationContext);
 
     }
 
