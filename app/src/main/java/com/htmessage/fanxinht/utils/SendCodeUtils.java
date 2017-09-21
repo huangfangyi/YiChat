@@ -118,7 +118,17 @@ public class SendCodeUtils {
             }
         });
     }
-
+    /**
+     * 发送验证码
+     *
+     * @param mobile
+     * @param listener
+     */
+    public void sendCodeNoNet(String mobile, final SmsCodeListener listener) {
+        //发送验证码
+        final int smsCode = (int) (Math.random() * 900000 + 100000);
+        listener.onSuccess(String.valueOf(smsCode),String.valueOf(smsCode),String.valueOf(smsCode));
+    }
     public  interface  SmsCodeListener{
        void onSuccess(String recCode, String recMsg, String smsCode);
         void onFailure(IOException e);

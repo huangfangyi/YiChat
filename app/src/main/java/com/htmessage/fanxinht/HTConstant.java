@@ -7,7 +7,7 @@ import android.os.Environment;
  */
 public class HTConstant {
     //服务器端
-    public static final String HOST = "http://xxxxxxxxxx/api/";
+    public static final String HOST = "http://120.55.182.220/api/"; //116.62.180.69
     public static final String URL_AVATAR = HOST + "upload/";
     public static final String URL_REGISTER = HOST + "register";//注册
     public static final String URL_LOGIN = HOST + "login";//登录
@@ -37,7 +37,7 @@ public class HTConstant {
     public static final String URL_SOCIAL_GET_DETAIL = HOST + "dynamicInfo";//获取评论列表
 
     //群相关接口
-    public static final String GROUP_HOST = "http://xxxxxxxxxx/group/";  //116.62.180.69
+    public static final String GROUP_HOST = "http://120.55.182.220/group/";  //116.62.180.69
     public static final String URL_GROUP_CREATE = GROUP_HOST + "groupCreate.php";
     public static final String URL_GROUP_MEMBERS = GROUP_HOST + "mucMembers.php";
     public static final String URL_CHECK_UPDATE = HOST + "version.php";    //查询更新

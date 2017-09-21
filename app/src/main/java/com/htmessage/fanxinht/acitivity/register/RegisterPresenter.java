@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -171,34 +172,52 @@ public class RegisterPresenter implements RegisterContract.Presenter {
     }
 
     @Override
-    public void sendSmsCode(String mobile) {
+    public void sendSmsCode(final String mobile) {
         final Dialog dialog = HTApp.getInstance().createLoadingDialog(registerView.getBaseActivity(), registerView.getBaseActivity().getString(R.string.sending));
         dialog.show();
         registerView.startTimeDown();
-       SendCodeUtils.getIntence().sendCode(mobile, new SendCodeUtils.SmsCodeListener() {
-            @Override
-            public void onSuccess(String recCode, String recMsg,final String smsCode) {
-                registerView.getBaseActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        dialog.dismiss();
-                        registerView.showSmsCode(smsCode);
-                    }
-                });
-            }
+       new Handler().postDelayed(new Runnable() {
+           @Override
+           public void run() {
+               SendCodeUtils.getIntence().sendCodeNoNet(mobile, new SendCodeUtils.SmsCodeListener() {
+                   @Override
+                   public void onSuccess(String recCode, String recMsg, String smsCode) {
+                       dialog.dismiss();
+                       registerView.showSmsCode(smsCode);
+                   }
 
-            @Override
-            public void onFailure(final IOException error) {
-                registerView.getBaseActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        dialog.dismiss();
-                        registerView.showToast(error.getMessage());
-                        registerView.finishTimeDown();
-                    }
-                });
-            }
-        });
+                   @Override
+                   public void onFailure(IOException e) {
+
+                   }
+               });
+           }
+       } ,2000);
+
+//       SendCodeUtils.getIntence().sendCode(mobile, new SendCodeUtils.SmsCodeListener() {
+//            @Override
+//            public void onSuccess(String recCode, String recMsg,final String smsCode) {
+//                registerView.getBaseActivity().runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        dialog.dismiss();
+//                        registerView.showSmsCode(smsCode);
+//                    }
+//                });
+//            }
+//
+//            @Override
+//            public void onFailure(final IOException error) {
+//                registerView.getBaseActivity().runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        dialog.dismiss();
+//                        registerView.showToast(error.getMessage());
+//                        registerView.finishTimeDown();
+//                    }
+//                });
+//            }
+//        });
     }
 
     private void beginCrop(Uri inputUri) {

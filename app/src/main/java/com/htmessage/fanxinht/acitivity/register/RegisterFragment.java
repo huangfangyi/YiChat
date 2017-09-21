@@ -201,6 +201,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     @Override
     public void showSmsCode(String code) {
         aCache.put("registerCode", code);
+        et_code.setText(code);
         showToast(R.string.code_is_send);
     }
 

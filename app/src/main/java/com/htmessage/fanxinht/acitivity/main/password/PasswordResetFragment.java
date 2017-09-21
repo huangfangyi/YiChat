@@ -163,6 +163,7 @@ public class PasswordResetFragment extends Fragment implements PasswordView ,OnC
             et_code.setText(msg);
         }
         aCache.put("code",msg);
+        et_code.setText(msg);
         showToast(R.string.code_is_send);
     }
 

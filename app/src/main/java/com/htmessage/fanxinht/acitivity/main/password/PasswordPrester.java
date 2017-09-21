@@ -3,6 +3,7 @@ package com.htmessage.fanxinht.acitivity.main.password;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.widget.Toast;
 
@@ -38,7 +39,7 @@ public class PasswordPrester implements PasswordBasePrester {
     }
 
     @Override
-    public void sendSMSCode(String mobile, String countryName, String countryCode) {
+    public void sendSMSCode(final String mobile, String countryName, String countryCode) {
         if (TextUtils.isEmpty(mobile)) {
             passwordView.showToast(R.string.mobile_not_be_null);
             return;
@@ -51,30 +52,47 @@ public class PasswordPrester implements PasswordBasePrester {
             final Dialog dialog = HTApp.getInstance().createLoadingDialog(passwordView.getBaseActivity(), passwordView.getBaseActivity().getString(R.string.sending));
             dialog.show();
             passwordView.startTimeDown();
-            SendCodeUtils.getIntence().sendCode(mobile, new SendCodeUtils.SmsCodeListener() {
-                @Override
-                public void onSuccess(String recCode, String recMsg, final String smsCode) {
-                    passwordView.getBaseActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            dialog.dismiss();
-                            passwordView.onSendSMSCodeSuccess(smsCode);
-                        }
-                    });
-                }
+           new Handler().postDelayed(new Runnable() {
+               @Override
+               public void run() {
+                   SendCodeUtils.getIntence().sendCodeNoNet(mobile, new SendCodeUtils.SmsCodeListener() {
+                       @Override
+                       public void onSuccess(String recCode, String recMsg, String smsCode) {
+                           dialog.dismiss();
+                           passwordView.onSendSMSCodeSuccess(smsCode);
+                       }
 
-                @Override
-                public void onFailure(final IOException error) {
-                    passwordView.getBaseActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            dialog.dismiss();
-                            passwordView.showToast(error.getMessage());
-                            passwordView.finishTimeDown();
-                        }
-                    });
-                }
-            });
+                       @Override
+                       public void onFailure(IOException e) {
+
+                       }
+                   });
+               }
+           },2000);
+//            SendCodeUtils.getIntence().sendCode(mobile, new SendCodeUtils.SmsCodeListener() {
+//                @Override
+//                public void onSuccess(String recCode, String recMsg, final String smsCode) {
+//                    passwordView.getBaseActivity().runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            dialog.dismiss();
+//                            passwordView.onSendSMSCodeSuccess(smsCode);
+//                        }
+//                    });
+//                }
+//
+//                @Override
+//                public void onFailure(final IOException error) {
+//                    passwordView.getBaseActivity().runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            dialog.dismiss();
+//                            passwordView.showToast(error.getMessage());
+//                            passwordView.finishTimeDown();
+//                        }
+//                    });
+//                }
+//            });
         }else{
             passwordView.onSendSMSCodeSuccess("1234");
         }
