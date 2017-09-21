@@ -4,7 +4,7 @@
     <!--<string name="has_more_msg"> %1个联系人发来%2条消息</string>-->
     <string name="zhongkuohao">[</string>
     <string name="zhongkuohao_msg">条]</string>
-    <string name="app_name">凡信</string>
+    <string name="app_name">YiChat</string>
     <string name="app_chat">会话</string>
     <string name="text_ack_msg">已读</string>
     <string name="text_delivered_msg">送达</string>
@@ -139,7 +139,7 @@
     <string name="i_am">我是</string>
     <string name="press_top">点击上面的</string>
     <string name="btn_means_agree">按钮,即表示你同意</string>
-    <string name="Secret_agreement">《凡信软件许可及服务协议》</string>
+    <string name="Secret_agreement">《YiChat软件许可及服务协议》</string>
     <string name="login">登录</string>
     <string name="password">密码</string>
     <string name="register">用户注册</string>
@@ -368,7 +368,7 @@
     <string name="people_time">找一找</string>
     <string name="load_failed">加载失败,请重试!</string>
     <string name="load_more_failed">暂无更多数据!</string>
-    <string name="close_app">关闭凡信</string>
+    <string name="close_app">关闭YiChat</string>
     <string name="exit_this_user">退出当前账号</string>
     <string name="just_15">15分钟前</string>
     <string name="just_30">30分钟前</string>
@@ -399,7 +399,7 @@
     <string name="sent_a_video">发来一个视频</string>
     <string name="sent_a_file">发来一个文件</string>
     <string name="contacts_messages">%1$s个联系人发来%2$i条消息</string>
-    <string name="yichat_login">凡信登录</string>
+    <string name="yichat_login">YiChat登录</string>
     <string name="auth_success">授权成功</string>
     <string name="auth_failed">授权失败</string>
     <string name="auth_failed_1">已经授权</string>
@@ -424,7 +424,7 @@
     <string name="contacts_friends">通讯录好友</string>
     <string name="add">添加</string>
     <string name="already_add">已添加</string>
-    <string name="invite_msg">诚邀您使用【凡信】APP,下载地址(苹果手机)http://www.pgyer.com/yichatsystem，(安卓手机)https://fir.im/fanxin4。</string>
+    <string name="invite_msg">诚邀您使用【YiChat】APP,下载地址(苹果手机)http://www.pgyer.com/yichatsystem，(安卓手机)https://fir.im/YiChatOpen。</string>
     <string name="just_delete_friend">您已被对方移除好友!</string>
     <string name="please_input_code">请输入验证码!</string>
     <string name="code_is_wrong">验证码不正确!</string>

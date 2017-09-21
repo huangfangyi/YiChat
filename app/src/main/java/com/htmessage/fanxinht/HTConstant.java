@@ -7,7 +7,7 @@ import android.os.Environment;
  */
 public class HTConstant {
     //服务器端
-    public static final String HOST = "http://xxxxxxx/api/";
+    public static final String HOST = "http://xxxxxxxxxx/api/";
     public static final String URL_AVATAR = HOST + "upload/";
     public static final String URL_REGISTER = HOST + "register";//注册
     public static final String URL_LOGIN = HOST + "login";//登录
@@ -37,7 +37,7 @@ public class HTConstant {
     public static final String URL_SOCIAL_GET_DETAIL = HOST + "dynamicInfo";//获取评论列表
 
     //群相关接口
-    public static final String GROUP_HOST = "http://xxxxxxxx/group/";
+    public static final String GROUP_HOST = "http://xxxxxxxxxx/group/";  //116.62.180.69
     public static final String URL_GROUP_CREATE = GROUP_HOST + "groupCreate.php";
     public static final String URL_GROUP_MEMBERS = GROUP_HOST + "mucMembers.php";
     public static final String URL_CHECK_UPDATE = HOST + "version.php";    //查询更新
@@ -106,15 +106,15 @@ public class HTConstant {
     /**
      * rtmp 推流地址
      */
-    public static final String RTMP_PUSH_URL = "";
+    public static final String RTMP_PUSH_URL = "rtmp://publish.teameeting.cn/live/%s";
     /**
      * rtmp 拉流地址
      */
-    public static final String RTMP_PULL_URL = "";
+    public static final String RTMP_PULL_URL = "rtmp://rtmp.teameeting.cn/live/%s";
     /**
      * hls 地址
      */
-    public static final String HLS_URL = "";
+    public static final String HLS_URL = "http://hls.teameeting.cn/live/%s.m3u8";
 
     //关于第三方登录
     // APP_ID 替换为你的应用从官方网站申请到的合法appId
