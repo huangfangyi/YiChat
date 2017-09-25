@@ -115,15 +115,15 @@ public class HTConstant {
     /**
      * rtmp 推流地址
      */
-    public static final String RTMP_PUSH_URL = "rtmp://publish.teameeting.cn/live/%s";
+    public static final String RTMP_PUSH_URL = "";
     /**
      * rtmp 拉流地址
      */
-    public static final String RTMP_PULL_URL = "rtmp://rtmp.teameeting.cn/live/%s";
+    public static final String RTMP_PULL_URL = "";
     /**
      * hls 地址
      */
-    public static final String HLS_URL = "http://hls.teameeting.cn/live/%s.m3u8";
+    public static final String HLS_URL = "";
 
     //关于第三方登录
     // APP_ID 替换为你的应用从官方网站申请到的合法appId
