@@ -21,6 +21,8 @@ import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.fanxinht.IMAction;
 import com.htmessage.fanxinht.R;
+import com.htmessage.fanxinht.acitivity.main.about.AboutUsActivity;
+import com.htmessage.fanxinht.acitivity.main.feedback.FeedBackActivity;
 import com.htmessage.fanxinht.acitivity.main.qrcode.MyQrActivity;
 import com.htmessage.fanxinht.acitivity.SettingsActivity;
 import com.htmessage.fanxinht.acitivity.moments.MomentsFriendActivity;
@@ -75,7 +77,8 @@ public class FragmentProfile extends Fragment implements View.OnClickListener {
         getView().findViewById(R.id.re_setting).setOnClickListener(this);
         getView().findViewById(R.id.re_xiangce).setOnClickListener(this);
         getView().findViewById(R.id.rl_qrcode).setOnClickListener(this);
-
+        getView().findViewById(R.id.rl_call_us).setOnClickListener(this);
+        getView().findViewById(R.id.rl_feedback).setOnClickListener(this);
     }
 
     @Override
@@ -96,7 +99,12 @@ public class FragmentProfile extends Fragment implements View.OnClickListener {
             case R.id.rl_qrcode: //我的二维码
                 startActivity(new Intent(getActivity(), MyQrActivity.class));
                 break;
-
+            case R.id.rl_call_us: //联系我们
+                startActivity(new Intent(getActivity(), AboutUsActivity.class));
+                break;
+            case R.id.rl_feedback: //意见反馈
+                startActivity(new Intent(getActivity(), FeedBackActivity.class));
+                break;
         }
     }
 

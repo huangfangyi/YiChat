@@ -9,7 +9,10 @@
         android:id="@+id/rl_error_item"
         android:visibility="gone"
         layout="@layout/chat_neterror_item" />
-
+    <include
+        android:id="@+id/rl_chat_notice_item"
+        android:visibility="gone"
+        layout="@layout/chat_notice_item" />
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"

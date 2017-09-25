@@ -431,6 +431,35 @@
     <string name="sending">发送中...</string>
     <string name="sending_success">发送成功!</string>
     <string name="sending_failed">发送失败!</string>
+    <string name="call_us">联系我们</string>
+    <string name="feeback_call">联系方式</string>
+    <string name="feebak_phone">联系电话:</string>
+    <string name="phone">15375355202</string>
+    <string name="feebak_qq">联系QQ:</string>
+    <string name="qq">84543217</string>
+    <string name="feebak_email">联系邮箱:</string>
+    <string name="email">84543217@qq.com</string>
+    <string name="promit_notice">提示:电话点击可直接拨打,QQ可点击联系,邮箱长按可复制.</string>
+    <string name="open_qq">打开QQ成功!</string>
+    <string name="open_qq_failed">请检查是否安装QQ!</string>
+    <string name="start_call_failed">请检查是否支持通话!</string>
+    <string name="feedback">意见反馈</string>
+    <string name="fb_tv_content">反馈内容</string>
+    <string name="fb_et_content">请输入反馈信息</string>
+    <string name="fb_content_dont_empty">意见反馈不能为空!</string>
+    <string name="fb_content_success">意见反馈成功!</string>
+    <string name="fb_content_failed">意见反馈失败,请重试!</string>
+    <string name="feedbacking">反馈中...</string>
+    <string name="feedback_excetion">异常反馈</string>
+    <string name="opinions_and_suggestions">意见和建议</string>
+    <string name="other">其他</string>
+    <string name="submit">提交</string>
+    <string name="feedback_type">反馈类型</string>
+    <string name="service_online">在线客服</string>
+    <string name="do_not_talk_self">不能跟自己聊天!</string>
+    <string name="notice">公告</string>
+    <string name="look_userinfo">查看资料</string>
+    <string name="notice_detail">公告详情</string>
 
 </resources>
 

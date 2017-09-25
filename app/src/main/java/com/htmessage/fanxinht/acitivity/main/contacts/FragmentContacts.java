@@ -35,6 +35,7 @@ import com.htmessage.fanxinht.R;
 import com.htmessage.fanxinht.acitivity.addfriends.newfriend.NewFriendsActivity;
 import com.htmessage.fanxinht.acitivity.main.details.UserDetailsActivity;
 import com.htmessage.fanxinht.acitivity.chat.group.GroupListActivity;
+import com.htmessage.fanxinht.acitivity.main.servicecontacts.ServiceContactsActivity;
 import com.htmessage.fanxinht.anyrtc.activity.AnyLiveStartActivity;
 import com.htmessage.fanxinht.anyrtc.activity.AnyLiveWatchActivity;
 import com.htmessage.fanxinht.domain.User;
@@ -88,6 +89,7 @@ public class FragmentContacts extends Fragment implements View.OnClickListener, 
         headView.findViewById(R.id.re_chatroom).setOnClickListener(this);
         headView.findViewById(R.id.re_tag).setOnClickListener(this);
         headView.findViewById(R.id.re_public).setOnClickListener(this);
+        headView.findViewById(R.id.re_sevice).setOnClickListener(this);
         return root;
     }
 
@@ -127,7 +129,7 @@ public class FragmentContacts extends Fragment implements View.OnClickListener, 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.re_newfriends:
-                startActivityForResult(new Intent(getActivity(), NewFriendsActivity.class),10086);
+                startActivityForResult(new Intent(getActivity(), NewFriendsActivity.class), 10086);
                 contactsPresenter.clearInvitionCount();
                 break;
             case R.id.re_chatroom:
@@ -138,6 +140,9 @@ public class FragmentContacts extends Fragment implements View.OnClickListener, 
                 break;
             case R.id.re_public://进行直播
                 startActivity(new Intent(getActivity(), AnyLiveStartActivity.class));
+                break;
+            case R.id.re_sevice:
+                startActivity(new Intent(getActivity(), ServiceContactsActivity.class));
                 break;
         }
 
@@ -248,7 +253,7 @@ public class FragmentContacts extends Fragment implements View.OnClickListener, 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == Activity.RESULT_OK){
+        if (resultCode == Activity.RESULT_OK) {
             showInvitionCount(0);
         }
         super.onActivityResult(requestCode, resultCode, data);

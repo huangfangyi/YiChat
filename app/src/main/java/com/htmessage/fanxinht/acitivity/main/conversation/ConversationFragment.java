@@ -9,15 +9,19 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.htmessage.fanxinht.HTConstant;
+import com.htmessage.fanxinht.acitivity.main.notice.AllNoticeActivity;
 import com.htmessage.sdk.ChatType;
 import com.htmessage.sdk.client.HTClient;
 import com.htmessage.sdk.model.HTConversation;
@@ -38,14 +42,25 @@ public class ConversationFragment extends Fragment implements ConversationView {
     public TextView errorText;
     public NewMeesageListener mListener;
     private ConversationPresenter conPresenter;
+    private LinearLayout rl_chat_notice_item;
+    private TextView notice_content;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         errorItem = (RelativeLayout) root.findViewById(R.id.rl_error_item);
+        rl_chat_notice_item = (LinearLayout) root.findViewById(R.id.rl_chat_notice_item);
         errorText = (TextView) errorItem.findViewById(R.id.tv_connect_errormsg);
+        notice_content = (TextView) rl_chat_notice_item.findViewById(R.id.notice_content);
         listView = (ListView) root.findViewById(R.id.list);
+        rl_chat_notice_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().startActivity(new Intent(getActivity(), AllNoticeActivity.class));
+            }
+        });
         return root;
     }
 
@@ -117,6 +132,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        conPresenter.getNoticeList();
         adapter = new ConversationAdapter(getActivity(), conPresenter.getAllConversations());
         // 设置adapter
         listView.setAdapter(adapter);
@@ -171,6 +187,8 @@ public class ConversationFragment extends Fragment implements ConversationView {
                 if (conversation != null) {
                     conPresenter.deleteConversation(conversation);
                 }
+            } else if (IMAction.ACTION_REFRESH_ALL_LIST.equals(intent.getAction())) {
+                conPresenter.getShowNotice();
             }
         }
     };
@@ -183,6 +201,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
         intentFilter.addAction(IMAction.ACTION_NEW_MESSAGE);
         intentFilter.addAction(IMAction.ACTION_MESSAGE_WITHDROW);
         intentFilter.addAction(IMAction.CMD_DELETE_FRIEND);
+        intentFilter.addAction(IMAction.ACTION_REFRESH_ALL_LIST);
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(broadcastReceiver, intentFilter);
 
     }
@@ -196,6 +215,18 @@ public class ConversationFragment extends Fragment implements ConversationView {
     @Override
     public void onResume() {
         super.onResume();
+        if (conPresenter.getShowNotice().size() > 0 && conPresenter.getShowNotice() != null) {
+            if (rl_chat_notice_item != null) {
+                rl_chat_notice_item.setVisibility(View.VISIBLE);
+                JSONObject jsonObject = conPresenter.getShowNotice().get(0);
+                String title = jsonObject.getString("title");
+                notice_content.setText(title);
+            }
+        } else {
+            if (rl_chat_notice_item != null) {
+                rl_chat_notice_item.setVisibility(View.GONE);
+            }
+        }
         refresh();
     }
 }

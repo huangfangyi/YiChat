@@ -6,7 +6,6 @@
     android:orientation="vertical">
 
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -62,15 +61,14 @@
                     android:textColor="#AAAAAA"
                     android:textSize="14sp" />
 
-                
+
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="32dp"
-                    android:src="@drawable/icon_qrcode"
-                      />
+                    android:src="@drawable/icon_qrcode" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -101,12 +99,12 @@
                     android:textSize="16sp" />
 
                 <View
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="0.1dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginRight="12dp"
-                    android:background="#dadada" />
+                    android:background="#dadada"
+                    android:visibility="gone" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -146,8 +144,78 @@
                     android:visibility="gone" />
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/rl_call_us"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_item_bg_white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
 
+                <ImageView
+                    android:id="@+id/iv_call_us"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/call_us_icon" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_call_us"
+                    android:text="@string/call_us"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="12dp"
+                    android:background="#dadada"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_item_bg_white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <ImageView
+                    android:id="@+id/iv_feedback"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/feedback_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_feedback"
+                    android:text="@string/feedback"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="12dp"
+                    android:background="#dadada"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/re_setting"

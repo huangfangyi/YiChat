@@ -45,6 +45,15 @@ public class HTConstant {
     public static final String URL_GET_RECENTLY_PEOPLE = HOST + "getRecentlyUser";//获取最近上线的人
     public static final String URL_SEND_LOCAL_LOGIN_TIME = HOST + "updateLocalTimestamp";//获取最近上线的人
     public static final String URL_SEND_CONTANCTS = HOST + "filteruser";//上传联系人到服务器
+    //意见反馈接口
+    public static final String URL_FEEDBACK = HOST + "sendFaceback";//意见反馈
+    //获取客服人员列表
+    public static final String URL_GET_SERVICER_LIST = HOST + "getServiceList";//获取客服列表
+    //获取需要显示的公告栏列表
+    public static final String URL_GET_SHOW_NOTICE_LIST = HOST + "getShowNoticeList";//获取显示的公告列表
+    //获取所有的公告
+    public static final String URL_GET_ALL_NOTICE_LIST = HOST + "getAllNoticeList";//获取所有公告列表
+
     //文件/及图片上传接口
     public static final String baseImgUrl = "http://fanxin-file-server.oss-cn-shanghai.aliyuncs.com/";
     //?x-oss-process=image/resize,m_fill,h_100,w_100
@@ -89,7 +98,7 @@ public class HTConstant {
     public static final String JSON_KEY_THIRDAPPICON = "appicon";
     public static final String JSON_KEY_ISWEB = "isWeb";
     //Buglykey
-    public  static final String BUGLY_KEY = "";
+    public static final String BUGLY_KEY = "a7b4566fd9";
     //授权接口相关
     public static final String URL_AUTH_URL = HOST + "authorize";//修改授权状态
     public static final String KEY_AUTH_SUCCESS = "1";//修改授权状态 1成功
