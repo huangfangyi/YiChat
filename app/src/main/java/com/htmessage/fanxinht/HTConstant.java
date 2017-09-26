@@ -98,7 +98,7 @@ public class HTConstant {
     public static final String JSON_KEY_THIRDAPPICON = "appicon";
     public static final String JSON_KEY_ISWEB = "isWeb";
     //Buglykey
-    public static final String BUGLY_KEY = "a7b4566fd9";
+    public static final String BUGLY_KEY = "";
     //授权接口相关
     public static final String URL_AUTH_URL = HOST + "authorize";//修改授权状态
     public static final String KEY_AUTH_SUCCESS = "1";//修改授权状态 1成功

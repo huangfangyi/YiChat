@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -26,6 +27,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.fanxinht.utils.CommonUtils;
+import com.htmessage.fanxinht.widget.swipyrefresh.SwipyRefreshLayout;
 import com.htmessage.sdk.model.HTMessage;
 import com.htmessage.sdk.utils.MessageUtils;
 import com.htmessage.fanxinht.IMAction;
@@ -42,12 +44,12 @@ import com.htmessage.fanxinht.widget.VoiceRecorderView;
  * qq 84543217
  */
 
-public class ChatFragment extends Fragment implements ChatContract.View {
+public class ChatFragment extends Fragment implements ChatContract.View ,SwipyRefreshLayout.OnRefreshListener{
     private ChatContract.Presenter presenter;
     private ChatAdapter adapter;
-    private PullToLoadMoreListView pullToLoadMoreListView;
     private ChatInputView chatInputView;
     private VoiceRecorderView voiceRecorderView;
+    private SwipyRefreshLayout refreshlayout;
     private ListView listView;
     private int chatType;
     private String toChatUsername;
@@ -59,23 +61,9 @@ public class ChatFragment extends Fragment implements ChatContract.View {
 
         View root = inflater.inflate(R.layout.fragment_chat, container, false);
         voiceRecorderView = (VoiceRecorderView) root.findViewById(R.id.voice_recorder);
-        pullToLoadMoreListView = (PullToLoadMoreListView) root.findViewById(R.id.list);
-        pullToLoadMoreListView.setOnRefreshListener(new PullToLoadMoreListView.OnRefreshListener() {
-
-            @Override
-            public void onPullDownLoadMore() {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        presenter.loadMoreMessages();
-                        pullToLoadMoreListView.onRefreshComplete();
-
-                    }
-                }, 500);
-            }
-        });
-
-        listView = pullToLoadMoreListView.getListView();
+        refreshlayout = (SwipyRefreshLayout) root.findViewById(R.id.refreshlayout);
+        refreshlayout.setOnRefreshListener(this);
+        listView = (ListView) root.findViewById(R.id.list);
         chatInputView = (ChatInputView) root.findViewById(R.id.inputView);
         return root;
 
@@ -99,7 +87,7 @@ public class ChatFragment extends Fragment implements ChatContract.View {
     }
 
     private void initView() {
-        chatInputView.initView(getActivity(), pullToLoadMoreListView);
+        chatInputView.initView(getActivity(), refreshlayout);
         chatInputView.setInputViewLisenter(new MyInputViewLisenter());
         listView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -132,6 +120,24 @@ public class ChatFragment extends Fragment implements ChatContract.View {
                 showReSendDialog(htMessage);
             }
         });
+    }
+
+
+    @Override
+    public void onRefresh(int index) {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                presenter.loadMoreMessages();
+
+            }
+        }, 500);
+        refreshlayout.setRefreshing(false);
+    }
+
+    @Override
+    public void onLoad(int index) {
+
     }
 
     private class MyInputViewLisenter implements ChatInputView.InputViewLisenter {
