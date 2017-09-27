@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="certificate_type">
+        <item>统一社会信用代码</item>
+        <item>三证合一编号</item>
+    </string-array>
+</resources>

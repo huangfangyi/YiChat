@@ -45,7 +45,8 @@
     <color name="splash_bg">#D3B548</color>
     <color name="main_bottom_bg">#fcfcfc</color>
     <color name="main_bottom_split">#D4D4D4</color>
-
+    <color name="orange">#FF7E00</color>
+    <color name="orange2">#F68714</color>
     <!--photopicker-->
 
 </resources>

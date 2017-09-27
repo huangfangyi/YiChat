@@ -103,4 +103,7 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
 
     //compile 'com.github.chrisbanes:PhotoView:2.1.2'
+    compile project(':jrmfwalletlib')
+    compile project(':jrmfrplib')
+    compile project(':jrmfwalletpaylib')
 }

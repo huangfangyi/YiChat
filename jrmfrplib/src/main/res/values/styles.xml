@@ -1,0 +1,79 @@
+<resources>
+
+    <style name="Jrmf_Rp_AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/jrmf_rp_slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/jrmf_rp_slide_right_out</item>
+    </style>
+
+    <style name="jrmf_rp_commondialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/jrmf_rp_transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@color/jrmf_rp_transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="text_black_12">
+        <item name="android:textColor">@color/jrmf_rp_black</item>
+        <item name="android:textSize">12dip</item>
+    </style>
+
+    <style name="text_black_16">
+        <item name="android:textColor">@color/jrmf_rp_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_black_28">
+        <item name="android:textColor">@color/jrmf_rp_black</item>
+        <item name="android:textSize">28dip</item>
+    </style>
+
+    <style name="text_blue_12">
+        <item name="android:textColor">@color/jrmf_b_blue</item>
+        <item name="android:textSize">12dip</item>
+    </style>
+
+    <style name="text_blue_16">
+        <item name="android:textColor">@color/jrmf_b_blue</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+
+    <style name="text_gray_12">
+        <item name="android:textColor">@color/jrmf_rp_gray</item>
+        <item name="android:textSize">12dip</item>
+    </style>
+
+    <style name="text_gray_16">
+        <item name="android:textColor">@color/jrmf_rp_gray</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+
+    <style name="text_red_12">
+        <item name="android:textColor">@color/jrmf_rp_red</item>
+        <item name="android:textSize">12dip</item>
+    </style>
+
+    <style name="text_red_16">
+        <item name="android:textColor">@color/jrmf_rp_red</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+
+    <style name="text_red_28">
+        <item name="android:textColor">@color/jrmf_rp_red</item>
+        <item name="android:textSize">28dip</item>
+    </style>
+
+    <style name="text_white_16">
+        <item name="android:textColor">@color/jrmf_b_white</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+
+    <style name="text_white_28">
+        <item name="android:textColor">@color/jrmf_b_white</item>
+        <item name="android:textSize">28dip</item>
+    </style>
+
+</resources>

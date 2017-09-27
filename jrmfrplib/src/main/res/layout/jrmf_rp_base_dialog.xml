@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jrmf_b_white"
+    android:paddingBottom="@dimen/dimen_16">
+
+
+    <TextView
+        android:id="@+id/tv_mess"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_below="@+id/line"
+        android:layout_margin="@dimen/dimen_16"
+        android:gravity="center"
+        android:text="您尚未绑定银行卡，发红包的累计限额为100元，请绑定银行卡后再发红包"
+        android:textColor="@color/jrmf_rp_black"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mess"
+        android:background="@color/jrmf_b_white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:layout_marginRight="7dip"
+            android:layout_weight="1"
+            android:background="@drawable/jrmf_rp_btn_white"
+            android:paddingBottom="7dip"
+            android:paddingTop="7dip"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="@color/jrmf_rp_red" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dip"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:layout_weight="1"
+            android:background="@drawable/jrmf_rp_btn_red"
+            android:paddingBottom="7dip"
+            android:paddingTop="7dip"
+            android:text="去绑卡"
+            android:textSize="14sp"
+            android:textColor="@color/jrmf_b_white" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

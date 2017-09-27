@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--titleBar属性-->
+    <declare-styleable name="Jrmf_Wp_TitleBar">
+        <attr name="wp_backgroud" format="color|reference" />
+        <attr name="wp_title_size" format="dimension" />
+        <attr name="wp_title_color" format="color|reference" />
+
+    </declare-styleable>
+
+</resources>

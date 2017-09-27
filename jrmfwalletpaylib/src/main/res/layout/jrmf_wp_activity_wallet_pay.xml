@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_wp_background"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/jrmf_wp_layout_titlebar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/jrmf_wp_color_e5e5e5"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/jrmf_b_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="付款金额"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_payMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="2295.00"
+                android:textColor="@color/jrmf_wp_color_ff5722"
+                android:textSize="22sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="元"
+                android:textColor="@color/jrmf_wp_color_333333"
+                android:textSize="11sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/jrmf_wp_color_e5e5e5"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_receiptPerson"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/jrmf_b_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收款方"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_receiptPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="刘洪林"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/jrmf_wp_color_e5e5e5"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_goods"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/jrmf_b_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="水杯"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/jrmf_wp_color_e5e5e5"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_orderNum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/jrmf_b_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单号"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_orderNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="刘洪林"
+            android:textColor="@color/jrmf_wp_color_333333"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/jrmf_wp_color_e5e5e5"
+        />
+
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/jrmf_wp_selector_btn_pay"
+        android:text="立即支付"
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="16sp"
+        />
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+

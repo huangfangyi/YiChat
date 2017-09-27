@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+//apply from: 'maven-center-aar.gradle'
+
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 12
+        targetSdkVersion 20
+        versionCode 20170711
+        versionName "1.3.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':jrmfbaselib')
+
+}
+
+task clearJar(type: Delete) {
+    delete 'build/libs/'
+}
+
+task makeWalletJar(type: org.gradle.api.tasks.bundling.Jar, dependsOn: "build") {
+    //指定生成的jar名
+    baseName 'JrmfWallet'
+    //从哪里打包class文件
+    from('build/intermediates/classes/debug/com/jrmf360/walletlib')
+    //打包到jar后的目录结构
+    into('com/jrmf360/walletlib')
+    //去掉不需要打包的目录和文件
+    exclude('test/', 'BuildConfig.class', 'R.class')
+    //去掉R$开头的文件
+    exclude { it.name.startsWith('R$'); }
+}
+
+makeWalletJar.dependsOn(clearJar, build)
+
+task makeWalletProguardJar(type: proguard.gradle.ProGuardTask, dependsOn: "build") {
+
+//    delete 'src/main/jar/jrmfry.jar'//删除之前编译混淆jar包  
+//    injars 'src/main/jar/JrmfWallet.jar'//项目编译但未混淆的jar  
+    injars 'build/libs/JrmfWallet.jar'//项目编译但未混淆的jar  
+    outjars 'libs/JrmfWallet-1.3.0.jar'//混淆后的jar路径  
+    configuration 'proguard-rules.pro'// 混淆配置文件  
+}

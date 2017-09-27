@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- 发红包 -->
+    <string name="_bribery_message">恭喜发财，大吉大利！</string>
+    <string name="btn_pay">立即支付</string>
+    <string name="btn_put">塞钱进红包</string>
+    <string name="network_error">当前网络不佳，请稍后再试</string>
+
+    <!-- 绑定银行卡 -->
+    <string name="name_tip">请输入姓名</string>
+    <string name="idcard_tip">请输入正确的身份证号</string>
+    <string name="phone_tip">请输入正确的手机号</string>
+    <string name="card_num_empty">银行卡号不能为空</string>
+    <string name="card_num_error">请输入正确银行卡号</string>
+    <!-- 支付方式 -->
+    <string name="input_pwd">请输入支付密码</string>
+    <string name="forget_pwd">重置支付密码</string>
+    <string name="please_pay">请支付</string>
+    <string name="input_verify_code">请输入您{phonenum}手机号收到的验证码</string>
+    <string name="send_code">发送验证码</string>
+    <string name="input_verify_code_title">请输入短信验证码</string>
+    <string name="add_card_pay">添加银行卡支付</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="verify_code_suss">验证码发送成功</string>
+    <string name="res_pwd_succ">重置密码成功</string>
+    <string name="pay_waiting">支付结果确认中</string>
+    <string name="pay_failure">支付失败</string>
+    <string name="re_send_code">重新发送验证码</string>
+
+    <!--红包显示-->
+    <string name="no_rp">手慢了, 红包派完了</string>
+    <string name="no_rp_normal">该红包已被领取</string>
+    <string name="rp_expire">该红包已超过24小时。如已领取,可在"我的红包"中查看</string>
+
+    <!--红包详情-->
+    <string name="self_rp_has_left">已领取%1$d/%2$d，共%3$s/%4$s元</string>
+
+    <string name="who_rp">%1$s的红包</string>
+    <string name="single_rp_done">%1$d个红包共%2$s元</string>
+    <string name="single_rp">红包金额%1$s元,等待对方领取</string>
+    <string name="pin_rp_done">%1$d个红包共%2$s元，%3$s被抢光</string>
+    <string name="pin_rp_other_done">%1$d个红包，%2$s被抢光</string>
+    <string name="pin_rp_other">领取%1$d/%2$d个</string>
+    <string name="rp_no_grab_tip">未领取的红包，将于24小时后发起退款</string>
+    <string name="w_rp_no_grab_tip">未领取的红包过期后会退回零钱</string>
+    <string name="rp_receive_grab_tip1">收到的钱可用来发红包</string>
+    <string name="rp_receive_grab_tip2">收到的钱可直接提现</string>
+
+    <string name="luck_rp">拼手气红包</string>
+    <string name="normal_rp">普通红包</string>
+
+    <string name="to_buttom">到底了噢～</string>
+    <string name="loading">加载中...</string>
+
+    <!--重置密码-->
+    <string name="pwd_not_same">两次密码输入不一致，请重新输入</string>
+
+
+    <!--转账-->
+    <string name="add_trans_tip">添加转账说明</string>
+    <string name="trans_little_tip">转账最低金额不能小于0.01元</string>
+    <string name="trans_repeat_tip">你有%1d笔相同的转账对方未确认收款,你是否要继续转账</string>
+    <string name="continue_trans">继续转账</string>
+    <string name="jrmf_quit">取消</string>
+    <string name="jrmf_confirm">确定</string>
+    <string name="jrmf_pay_succ">支付成功</string>
+    <string name="jrmf_trans_to_who">待%1$s确认收钱</string>
+    <string name="jrmf_reback_tip">一天内未确认，将退还给对方。立即退还</string>
+    <string name="jrmf_reback_dialog">是否退还%1$s的转账</string>
+    <string name="jrmf_trans_to">向%1$s转账</string>
+    <string name="jrmf_trans_wait">待%1$s确认收钱</string>
+    <string name="jrmf_trans_succ">%1$s已收钱</string>
+    <string name="jrmf_trans_raback">%1$s已退还</string>
+
+    <!--转账-->
+    <string name="jrmf_rp_detail_title">余额账户</string>
+    <string name="jrmf_rp_detail_title_freeze">冻结账户</string>
+
+
+    <string name="name_error">请输入姓名</string>
+    <string name="id_card_error">请输入正确的身份证号</string>
+    <string name="jrmf_rp_identity_table">您尚未进行实名认证，账户可能存在安全风险，请实名认证后尝试。</string>
+    <string name="jrmf_rp_identity_right">实名认证</string>
+    <string name="jrmf_rp_identity_left">取消</string>
+    <string name="jrmf_rp_identity_actionbar_sm">实名认证</string>
+    <string name="jrmf_rp_identity_actionbar_mm">支付密码</string>
+    <string name="jrmf_rp_identity_bt_next">下一步</string>
+    <string name="jrmf_rp_identity_bt_ok">确定</string>
+    <string name="jrmf_rp_identity_psd_text">请设置支付密码，用户支付验证</string>
+    <string name="net_error_l">当前网络不佳,请稍后再试</string>
+</resources>

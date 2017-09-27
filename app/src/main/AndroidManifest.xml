@@ -6,7 +6,7 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="25"
-        tools:overrideLibrary="com.htmessage.sdk" />
+        tools:overrideLibrary="com.htmessage.sdk|com.jrmf360.walletpaylib" />
 
     <!--AnyRTC相关-->
     <uses-feature android:name="android.hardware.camera" />
@@ -576,7 +576,14 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
-
+        <!--金融魔方配置-->
+        <meta-data
+            android:name="JRMF_PARTNER_ID"
+            android:value="" />
+        <meta-data
+            android:name="JRMF_PARTNER_NAME"
+            android:value="@string/app_red_message" />
+        <!--金融魔方配置结束-->
 
     </application>
 

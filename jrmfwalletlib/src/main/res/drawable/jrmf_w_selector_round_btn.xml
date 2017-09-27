@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true" android:drawable="@drawable/jrmf_w_shape_click_round_btn_bg"/>
+    <item android:drawable="@drawable/jrmf_w_shape_normal_round_btn_bg"/>
+
+</selector>

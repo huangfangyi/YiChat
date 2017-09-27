@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/jrmf_w_color_bg">
+
+    <com.jrmf360.tools.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        app:backgroud="@color/jrmf_w_red_dark"
+        app:title_size="@dimen/jrmf_b_title_bar_text_size"
+        app:title_color="@color/jrmf_b_white"
+        />
+
+    <TextView
+        android:id="@+id/tv_look_rp_history"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        tools:text="查看我的红包记录"
+        android:visibility="visible"
+        android:textColor="@color/jrmf_w_color_46a2fa"
+        android:textSize="14sp"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_look_rp_history"
+        android:layout_below="@id/titleBar"
+        android:divider="@null"
+        android:scrollbars="none">
+    </ListView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

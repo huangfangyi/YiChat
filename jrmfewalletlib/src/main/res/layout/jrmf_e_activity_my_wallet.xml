@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jrmf_e_color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/jrmf_e_layout_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/jrmf_b_title_bar_color"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_my_change"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="150dp"
+            android:background="@color/jrmf_b_title_bar_color"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/jrmf_e_balance"
+                android:gravity="center"
+                android:text="账户余额"
+                android:textColor="@color/jrmf_b_white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥ 0.00"
+                android:textColor="@color/jrmf_b_white"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_my_freeze"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:drawableLeft="@drawable/jrmf_e_freeze"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="冻结账户"
+                android:textColor="@color/jrmf_b_white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_freeze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥ 0.00"
+                android:textColor="@color/jrmf_b_white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="@dimen/dimen_8"
+        android:background="@color/jrmf_e_title_bar_dark_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_wallet_recharge"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/jrmf_e_selector_forget_pwd"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/jrmf_e_recharge"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@color/jrmf_b_white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/jrmf_b_white" />
+
+        <LinearLayout
+            android:id="@+id/ll_getDeposit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/jrmf_e_selector_forget_pwd"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_getDeposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/jrmf_e_get_deposit"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="提现"
+                android:textColor="@color/jrmf_b_white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_accountInfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/jrmf_e_selector_item"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8">
+
+        <ImageView
+            android:id="@+id/iv_accountInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_account_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_toRightOf="@id/iv_accountInfo"
+            android:text="账户信息"
+            android:textColor="@color/color_535353"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tradeDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/jrmf_e_selector_item"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8">
+
+        <ImageView
+            android:id="@+id/iv_tradeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_trade_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_toRightOf="@id/iv_tradeDetail"
+            android:text="交易记录"
+            android:textColor="@color/color_535353"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_secureSetting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/jrmf_e_selector_item"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8">
+
+        <ImageView
+            android:id="@+id/iv_secureSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_secure_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_toRightOf="@id/iv_secureSetting"
+            android:text="安全设置"
+            android:textColor="@color/color_535353"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_arrow_right" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_mybank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/jrmf_e_selector_item"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8">
+
+        <ImageView
+            android:id="@+id/iv_mybank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_bank_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_toRightOf="@id/iv_mybank"
+            android:text="企业账户设置"
+            android:textColor="@color/color_535353"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_mycard_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jrmf_e_arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_cardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_mycard_arrow"
+            android:text=""
+            android:textColor="@color/color_b5b5b5"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>
+

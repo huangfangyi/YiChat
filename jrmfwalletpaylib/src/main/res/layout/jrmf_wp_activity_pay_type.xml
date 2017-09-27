@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/rootLayout"
+              android:layout_width="300dip"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginLeft="26dip"
+              android:layout_marginRight="26dip"
+              android:background="@drawable/jrmf_wp_dialog_paytype_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="请支付"
+            android:textColor="@color/jrmf_wp_color_323232"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/jrmf_wp_btn_exit"/>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/jrmf_wp_color_80c9c9c9"/>
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="云红包"
+        android:textColor="@color/jrmf_wp_color_535353"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/jrmf_wp_rmb"/>
+
+            <TextView
+                android:id="@+id/tv_pay_amount"
+                style="@style/text_black_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/actionbar_height"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="0.01"
+                android:textSize="35sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/dimen_8"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:background="@color/jrmf_wp_color_80c9c9c9"/>
+
+    <LinearLayout
+        android:id="@+id/layout_paytype"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_8">
+
+        <ImageView
+            android:id="@+id/iv_paytype_icon"
+            android:layout_width="22dip"
+            android:layout_height="22dip"/>
+
+        <TextView
+            android:id="@+id/tv_paytype_name"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_8"
+            android:text="微信支付"
+            android:textColor="@color/jrmf_wp_color_323232"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jrmf_wp_ic_arrow"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/dimen_8"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:background="@color/jrmf_wp_color_80c9c9c9"/>
+
+    <TextView
+        android:id="@+id/tv_pswd_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="@dimen/dimen_8"
+        android:text="请输入支付密码"
+        android:textColor="@color/jrmf_wp_color_b7b7b7"
+        android:textSize="10sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8">
+
+        <Button
+            android:id="@+id/btn_pay"
+            style="@style/text_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="@drawable/jrmf_wp_selector_btn_pay"
+            android:text="@string/jrmf_wp_btn_pay"
+            android:visibility="gone"/>
+
+        <com.jrmf360.tools.view.passwordview.GridPasswordView
+            android:id="@+id/gpv_pswd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            app:gpvLineColor="#2196F3"
+            app:gpvPasswordType="numberPassword"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimen_8"
+        android:padding="3dip"
+        android:text="忘记支付密码"
+        android:textColor="@color/jrmf_wp_color_00b7ee"
+        android:textSize="10sp"/>
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_w_color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/jrmf_w_layout_titlebar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_16"
+        android:text="支付密码设置"
+        android:textColor="@color/jrmf_w_color_535353"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_update_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:background="@drawable/jrmf_w_selector_item"
+        android:paddingLeft="@dimen/dimen_16"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:src="@drawable/jrmf_w_arrow_right"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_arrow"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="修改支付密码"
+            android:textColor="@color/jrmf_w_color_959595"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/jrmf_w_color_bg"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_get_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:background="@drawable/jrmf_w_selector_item"
+        android:paddingLeft="@dimen/dimen_16"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_get_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:src="@drawable/jrmf_w_arrow_right"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_get_arrow"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="找回支付密码"
+            android:textColor="@color/jrmf_w_color_959595"
+            android:textSize="14sp"/>
+
+        <View
+            android:id="@+id/line_get"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/jrmf_w_color_bg"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:background="@drawable/jrmf_w_selector_item"
+        android:paddingLeft="@dimen/dimen_16"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_set_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:src="@drawable/jrmf_w_arrow_right"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_set_arrow"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="设置支付密码"
+            android:textColor="@color/jrmf_w_color_959595"
+            android:textSize="14sp"/>
+
+        <View
+            android:id="@+id/line_set"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/jrmf_w_color_bg"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

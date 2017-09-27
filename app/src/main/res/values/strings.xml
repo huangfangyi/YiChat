@@ -461,5 +461,23 @@
     <string name="look_userinfo">查看资料</string>
     <string name="notice_detail">公告详情</string>
 
+    <string name="wallet">钱包</string>
+    <string name="attach_red">红包</string>
+    <string name="attach_transfer">转账</string>
+    <string name="red_content">YiChat红包</string>
+    <string name="transfer_content">YiChat转账</string>
+    <string name="transfer_content_to">向你转账</string>
+    <string name="transfer_content_me">你向</string>
+    <string name="transfer_content_me_to">转账</string>
+    <string name="get_red">领取红包</string>
+    <string name="red_message">[红包消息]</string>
+    <string name="app_red_message">YiChat红包</string>
+    <string name="Ok_transfer">确认收款</string>
+    <string name="get_transfer">待对方收款</string>
+    <string name="transfer_message">[转账消息]</string>
+    <string name="has_get">领取了</string>
+    <string name="has_get_red">的红包</string>
+    <string name="you">你</string>
+
 </resources>
 

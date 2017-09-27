@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.htmessage.fanxinht.utils.CommonUtils;
 import com.htmessage.sdk.client.HTClient;
 import com.htmessage.fanxinht.IMAction;
 import com.htmessage.fanxinht.HTApp;
@@ -112,10 +113,12 @@ public class MainActivity extends BaseActivity implements MainView {
         }
 
         initViews();
-
         requestPermissions();
+        updateRed();
 
-
+    }
+    private void updateRed() {
+        CommonUtils.upDateRedAvatarUrl(MainActivity.this,HTApp.getInstance().getUserNick(), HTApp.getInstance().getUserAvatar());
     }
 
     @Override

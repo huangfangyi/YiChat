@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--状态栏-->
+    <color name="jrmf_wp_status_bar_color">#0665d6</color>
+    <!--钱包付款  -->
+    <color name="jrmf_wp_title_bar_color">#157efb</color>
+    <color name="jrmf_wp_trans_title_bar_color">#88157efb</color>
+
+    <color name="jrmf_wp_color_e5e5e5">#e5e5e5</color>
+    <color name="jrmf_wp_color_333333">#333333</color>
+    <color name="jrmf_wp_color_ff5722">#ff5722</color>
+    <color name="jrmf_wp_color_323232">#323232</color>
+    <color name="jrmf_wp_color_80c9c9c9">#80c9c9c9</color>
+    <color name="jrmf_wp_color_b7b7b7">#b7b7b7</color>
+    <color name="jrmf_wp_color_535353">#535353</color>
+    <color name="jrmf_wp_color_00b7ee">#00b7ee</color>
+    <color name="jrmf_wp_background">#f1f1f3</color>
+    <color name="jrmf_wp_black">#3e3a39</color>
+    <color name="jrmf_wp_gray">#ababab</color>
+    <color name="jrmf_wp_color_c9c9c9">#c9c9c9</color>
+    <color name="jrmf_wp_color_959595">#959595</color>
+</resources>

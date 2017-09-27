@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题栏高度-->
+    <dimen name="actionbar_height">56dp</dimen>
+
+    <dimen name="btn_height">44dp</dimen>
+
+    <!--titleBar-->
+    <dimen name="title_bar_text_size">17sp</dimen>
+</resources>

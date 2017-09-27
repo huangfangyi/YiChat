@@ -39,12 +39,16 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
+import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.fanxinht.R;
 import com.htmessage.fanxinht.acitivity.addfriends.invitefriend.ContactInfo;
 import com.htmessage.fanxinht.acitivity.main.servicecontacts.ServiceUser;
 import com.htmessage.fanxinht.domain.User;
 import com.github.promeg.pinyinhelper.Pinyin;
+import com.jrmf360.rplib.JrmfRpClient;
+import com.jrmf360.rplib.http.model.BaseModel;
+import com.jrmf360.tools.http.OkHttpModelCallBack;
 
 public class CommonUtils {
     private static final String TAG = "CommonUtils";
@@ -514,5 +518,42 @@ public class CommonUtils {
         if (dialog != null) {
             dialog.dismiss();
         }
+    }
+
+    /**
+     * 更新魔方的后台信息
+     * @param activity
+     * @param nick
+     * @param avatar
+     */
+    public static void upDateRedAvatarUrl(Activity activity,String nick, String avatar) {
+        if (TextUtils.isEmpty(nick)) {
+            nick = HTApp.getInstance().getUsername();
+        }
+        if (TextUtils.isEmpty(avatar)) {
+            avatar = HTApp.getInstance().getUserAvatar();
+        }
+        JrmfRpClient.updateUserInfo(activity,HTApp.getInstance().getUsername(), HTApp.getInstance().getThirdToken(), nick, avatar, new OkHttpModelCallBack<BaseModel>() {
+            @Override
+            public void onSuccess(BaseModel baseModel) {
+                boolean success = baseModel.isSuccess();
+                if (success) {
+                    Log.d(TAG, "----更新魔方红包信息成功");
+                } else {
+                    Log.d(TAG, "----更新魔方红包信息失败");
+                }
+            }
+
+            @Override
+            public void onFail(String s) {
+                Log.d(TAG, "----更新魔方红包信息失败");
+            }
+        });
+    }
+
+    public interface onUpdateListener {
+        void success();
+
+        void failed();
     }
 }

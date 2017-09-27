@@ -143,7 +143,42 @@
                     android:background="#dadada"
                     android:visibility="gone" />
             </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_item_bg_white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
 
+                <ImageView
+                    android:id="@+id/iv_wallet"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/wallet_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_wallet"
+                    android:text="@string/wallet"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="12dp"
+                    android:background="#dadada"
+                    android:visibility="gone" />
+            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_call_us"
                 android:layout_width="match_parent"

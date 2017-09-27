@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="410dp"
+    android:background="@drawable/jrmf_rp_open_rp_bg">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/jrmf_rp_open_rp_close"/>
+
+
+    <com.jrmf360.rplib.widget.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/iv_close"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/jrmf_rp_ic_pin"
+        android:gravity="center_vertical"
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="14sp"
+        tools:text="刘洪林"/>
+
+
+    <TextView
+        android:id="@+id/tv_send_rp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="发了一个红包"
+        android:textColor="@color/color_ff9893"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/tv_no_rp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_send_rp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        tools:text="恭喜发财,大吉大利"
+        />
+
+    <ImageView
+        android:id="@+id/iv_open_rp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/jrmf_rp_open_rp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"/>
+
+        <!--android:src="@drawable/jrmf_rp_open_rp_anim"-->
+
+    <TextView
+        android:id="@+id/tv_look_others"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_open_rp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/jrmf_rp_open_rp_arrow"
+        android:layout_centerHorizontal="true"
+        android:text="看看大家的手气"
+        android:textSize="14sp"
+        android:textColor="@color/jrmf_b_white"/>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+

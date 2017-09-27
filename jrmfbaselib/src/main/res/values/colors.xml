@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="jrmf_b_title_bar_color">#157efb</color>
+    <color name="jrmf_b_trans_title_bar_color">#88157efb</color>
+
+
+    <color name="jrmf_b_white">#FFFFFF</color>
+    <color name="jrmf_b_color_b7b7b7">#b7b7b7</color>
+    <color name="jrmf_b_blue">#3b93e9</color>
+    <color name="jrmf_b_transparent">#00000000</color>
+
+    <color name="jrmf_b_black">#3e3a39</color>
+    <color name="jrmf_b_gray">#ababab</color>
+    <color name="jrmf_b_red">#fe5c5c</color>
+
+
+</resources>

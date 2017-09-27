@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/bank_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/jrmf_rp_white"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <ImageView
+            android:id="@+id/iv_bank_icon"
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:background="@drawable/jrmf_rp_ic_card"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                style="@style/text_black_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_16"
+                android:text="零钱支付 ( 余额 "
+                android:textColor="@color/color_434343"/>
+            <ImageView
+                android:id="@+id/iv_paytype_rmb"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/jrmf_rp_rmb"
+                />
+
+            <TextView
+                android:id="@+id/tv_paytype_balance"
+                style="@style/text_black_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:gravity="center_vertical"
+                android:text=" 0.07 )"
+                android:textColor="@color/color_434343"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/jrmf_rp_background"/>
+</LinearLayout>

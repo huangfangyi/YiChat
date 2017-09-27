@@ -14,14 +14,21 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.htmessage.fanxinht.domain.User;
+import com.htmessage.fanxinht.manager.ContactsManager;
+import com.htmessage.fanxinht.utils.OkHttpUtils;
+import com.htmessage.fanxinht.utils.Param;
 import com.htmessage.sdk.ChatType;
 import com.htmessage.sdk.client.HTClient;
 import com.htmessage.sdk.manager.HTChatManager;
 import com.htmessage.sdk.model.CmdMessage;
+import com.htmessage.sdk.model.HTGroup;
 import com.htmessage.sdk.model.HTMessage;
 import com.htmessage.sdk.model.HTMessageFileBody;
 import com.htmessage.sdk.model.HTMessageImageBody;
@@ -44,6 +51,9 @@ import com.htmessage.fanxinht.utils.HTMessageUtils;
 import com.htmessage.fanxinht.utils.HTPathUtils;
 import com.htmessage.fanxinht.utils.ImageUtils;
 import com.htmessage.fanxinht.widget.HTAlertDialog;
+import com.jrmf360.rplib.JrmfRpClient;
+import com.jrmf360.rplib.bean.EnvelopeBean;
+import com.jrmf360.rplib.bean.TransAccountBean;
 
 import org.anyrtc.meet_kit.RTMeetKit;
 
@@ -74,6 +84,9 @@ public class ChatPresenter implements ChatContract.Presenter {
     private static final int REQUEST_CODE_LOCAL = 3;
     private static final int REQUEST_CODE_SELECT_VIDEO = 4;
     private static final int REQUEST_CODE_SELECT_FILE = 5;
+    private static final int REQUEST_CODE_SELECT_RP = 6;
+    private static final int REQUEST_CODE_SELECT_TRANSFER = 7;
+    private List<JSONObject> jsonObjects = new ArrayList<>();
     private File cameraFile;
     private int chatType = 1;
     private Handler mainHandler = new Handler() {
@@ -115,7 +128,10 @@ public class ChatPresenter implements ChatContract.Presenter {
 
     @Override
     public void start() {
-
+        if (chatType == MessageUtils.CHAT_GROUP) {
+            HTGroup htGroup = HTClient.getInstance().groupManager().getGroup(chatTo);
+            refreshGroupMembersInserver(htGroup.getGroupId());
+        }
     }
 
     public List<HTMessage> getMessageList() {
@@ -250,6 +266,43 @@ public class ChatPresenter implements ChatContract.Presenter {
     public void onMessageClear() {
         htMessageList.clear();
         chatView.refreshListView();
+    }
+
+    @Override
+    public void sendRedPackage() {
+        if (chatType == MessageUtils.CHAT_GROUP) {
+            JrmfRpClient.sendGroupEnvelopeForResult(getActivity(), chatTo, HTApp.getInstance().getUsername(), HTApp.getInstance().getThirdToken(), getCacheJsonList(chatTo).size(), HTApp.getInstance().getUserNick(), HTApp.getInstance().getUserAvatar(), REQUEST_CODE_SELECT_RP);
+        } else {
+            JrmfRpClient.sendSingleEnvelopeForResult(getActivity(), chatTo, HTApp.getInstance().getUsername(), HTApp.getInstance().getThirdToken(), HTApp.getInstance().getUserNick(), HTApp.getInstance().getUserAvatar(), REQUEST_CODE_SELECT_RP);
+        }
+    }
+
+    @Override
+    public void sendTransferMessage() {
+        String recUsername = null;
+        String recUseravatar = null;
+        User user = ContactsManager.getInstance().getContactList().get(chatTo);
+        if (user != null) {
+            recUsername = user.getNick();
+            if (TextUtils.isEmpty(recUsername)) {
+                recUsername = user.getUsername();
+            }
+            recUseravatar = user.getAvatar();
+        }
+        JrmfRpClient.transAccountForResult(getActivity(), chatTo, HTApp.getInstance().getUsername(), HTApp.getInstance().getThirdToken(), HTApp.getInstance().getUserNick(), HTApp.getInstance().getUserAvatar(), recUsername, recUseravatar, REQUEST_CODE_SELECT_TRANSFER);
+    }
+
+    @Override
+    public void sendRedCmdMessage(JSONObject jsonObject) {
+        String nick = jsonObject.getString("nick");
+        final String userId = jsonObject.getString("userId");
+        if (TextUtils.isEmpty(nick)){
+            nick = userId;
+        }
+        String content = HTApp.getInstance().getUserNick()+ getActivity().getString(R.string.has_get)+nick+getActivity().getString(R.string.has_get_red);
+        extJSON.put("action",10004);
+        HTMessage htMessage = HTMessage.createTextSendMessage(chatTo, content);
+        sendMessage(htMessage);
     }
 
     @Override
@@ -487,9 +540,20 @@ public class ChatPresenter implements ChatContract.Presenter {
                     if (locationAddress != null && !locationAddress.equals("") & new File(thumbailPath).exists()) {
                         sendLocationMessage(latitude, longitude, locationAddress, thumbailPath);
                     } else {
-                        Toast.makeText(getContext(), R.string.unable_to_get_loaction, Toast.LENGTH_SHORT).show();
+                        CommonUtils.showToastShort(getContext(), R.string.unable_to_get_loaction);
                     }
                     break;
+                case REQUEST_CODE_SELECT_RP:
+                    if (data != null) {
+                        EnvelopeBean singleRpbean = JrmfRpClient.getEnvelopeInfo(data);
+                        sendRedMessage(singleRpbean);
+                    }
+                    break;
+                case REQUEST_CODE_SELECT_TRANSFER:
+                    if (data != null) {
+                        TransAccountBean transAccountBean = JrmfRpClient.getTransAccountBean(data);
+                        sendTransferAccountsMessage(transAccountBean);
+                    }
                 default:
                     break;
             }
@@ -738,10 +802,69 @@ public class ChatPresenter implements ChatContract.Presenter {
 
 
     }
+    public void sendRedMessage(EnvelopeBean singleRpbean) {
+        extJSON.put("action", 10001); //@{@"action":@"10001",@"envId":envId,@"envName":envName,@"envMsg":envMsg}
+        extJSON.put("envId", singleRpbean.getEnvelopesID());
+        extJSON.put("envName", chatView.getBaseActivity().getString(R.string.red_content));
+        extJSON.put("envMsg", singleRpbean.getEnvelopeMessage());
+        HTMessage htMessage = HTMessage.createTextSendMessage(chatTo, chatView.getBaseActivity().getString(R.string.red_message));
+        sendMessage(htMessage);
+    }
 
 
+    public void sendTransferAccountsMessage(TransAccountBean singleRpbean) {
+        extJSON.put("action", 10002);//@"action":@"10002",@"transferId":transferId,@"amountStr":amountStr,@"msg":msg
+        extJSON.put("transferId", singleRpbean.getTransferOrder());
+        extJSON.put("amountStr", singleRpbean.getTransferAmount());
+        extJSON.put("msg", singleRpbean.getTransferDesc());
+        HTMessage htMessage = HTMessage.createTextSendMessage(chatTo, chatView.getBaseActivity().getString(R.string.transfer_message));
+        sendMessage(htMessage);
+    }
 
+    public void refreshGroupMembersInserver(final String groupId) {
+        List<Param> params = new ArrayList<>();
+        params.add(new Param("gid", groupId));
+        params.add(new Param("uid", chatTo));
+        new OkHttpUtils(getActivity()).post(params, HTConstant.URL_GROUP_MEMBERS, new OkHttpUtils.HttpCallBack() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                if (jsonObject.containsKey("code")) {
+                    int code = Integer.parseInt(jsonObject.getString("code"));
+                    if (code == 1000) {
+                        if (jsonObject.containsKey("data") && jsonObject.get("data") instanceof JSONArray) {
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            if (jsonArray != null && jsonArray.size() != 0) {
+                                ACache.get(getActivity()).put(HTApp.getInstance().getUsername() + groupId, jsonArray);
+                                arrayToList(jsonArray, jsonObjects);
+                            }
+                        }
+                    }
+                }
+            }
 
+            @Override
+            public void onFailure(String errorMsg) {
 
+            }
+        });
+    }
 
+    private void arrayToList(JSONArray array, List<JSONObject> objectList) {
+        if (array == null || array.size() == 0) {
+            return;
+        }
+        objectList.clear();
+        for (int i = 0; i < array.size(); i++) {
+            JSONObject jsonObject = array.getJSONObject(i);
+            if (!objectList.contains(jsonObject)) {
+                objectList.add(jsonObject);
+            }
+        }
+    }
+
+    private List<JSONObject> getCacheJsonList(String groupId) {
+        JSONArray jsonArrayCache = ACache.get(getActivity()).getAsJSONArray(HTApp.getInstance().getUsername() + groupId);
+        arrayToList(jsonArrayCache, jsonObjects);
+        return jsonObjects;
+    }
 }

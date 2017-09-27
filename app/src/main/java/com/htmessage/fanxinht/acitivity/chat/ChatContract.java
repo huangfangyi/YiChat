@@ -3,6 +3,7 @@ package com.htmessage.fanxinht.acitivity.chat;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
+import com.alibaba.fastjson.JSONObject;
 import com.htmessage.sdk.model.HTMessage;
 import com.htmessage.fanxinht.acitivity.BasePresenter;
 import com.htmessage.fanxinht.acitivity.BaseView;
@@ -63,5 +64,8 @@ public interface ChatContract {
         void onNewMessage(HTMessage htMessage);
         void onMeesageForward(HTMessage htMessage);
         void onMessageClear();
+        void sendRedPackage();
+        void sendTransferMessage();
+        void sendRedCmdMessage(JSONObject jsonObject);
     }
 }

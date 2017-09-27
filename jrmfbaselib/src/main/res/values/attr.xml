@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--密码输入框-->
+    <declare-styleable name="Jrmf_b_GridPasswordView">
+        <attr name="gpvTextColor" format="color|reference" />
+        <attr name="gpvTextSize" format="dimension" />
+        <attr name="gpvLineColor" format="color" />
+        <attr name="gpvGridColor" format="color" />
+        <attr name="gpvLineWidth" format="dimension" />
+        <attr name="gpvPasswordLength" format="integer" />
+        <attr name="gpvPasswordTransformation" format="string" />
+        <attr name="gpvPasswordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <!--titleBar属性-->
+    <declare-styleable name="Jrmf_b_TitleBar">
+        <attr name="backgroud" format="color|reference" />
+        <attr name="title_size" format="dimension" />
+        <attr name="title_color" format="color|reference"/>
+    </declare-styleable>
+
+    <!--带清空的EditText-->
+    <declare-styleable name="Jrmf_b_FloatingLabelTextView">
+        <attr name="validationMessage" format="string" />
+        <attr name="hintText" format="string" />
+        <attr name="allowEmpty" format="boolean" />
+        <attr name="validatorType" format="enum">
+            <enum name="alpha" value="0" />
+            <enum name="numeric" value="1" />
+            <enum name="alphaNumeric" value="2" />
+            <enum name="email" value="3" />
+            <enum name="phone" value="4" />
+        </attr>
+        <attr name="textSize" format="integer" />
+    </declare-styleable>
+
+
+    <!--CircleImageView属性-->
+    <declare-styleable name="Jrmf_b_CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+
+    <!--RoundImageView-->
+    <attr name="jrmf_borderRadius" format="dimension"/>
+    <attr name="jrmf_type">
+        <enum name="circle" value="0"/>
+        <enum name="round" value="1"/>
+    </attr>
+
+    <declare-styleable name="Jrmf_RoundImageView">
+        <attr name="jrmf_borderRadius"/>
+        <attr name="jrmf_type"/>
+    </declare-styleable>
+
+
+
+</resources>

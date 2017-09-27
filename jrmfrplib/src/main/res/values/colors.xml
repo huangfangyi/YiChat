@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--状态栏-->
+    <color name="jrmf_rp_status_bar">#fe5c5c</color>
+    <!--转账页面状态栏-->
+    <color name="jrmf_rp_trans_status_bar">#0665d6</color>
+
+    <!--标题栏-->
+    <color name="jrmf_rp_title_bar">#E54141</color>
+
+    <color name="jrmf_rp_red">#fe5c5c</color>
+    <color name="jrmf_rp_red_trans">#88fe5c5c</color>
+
+    <!--背景色-->
+    <color name="jrmf_rp_background">#f1f1f3</color>
+
+    <color name="jrmf_rp_black">#000000</color>
+    <color name="jrmf_rp_transparent">#00000000</color>
+    <color name="jrmf_rp_white">#FFFFFF</color>
+
+    <color name="jrmf_rp_gray">#ababab</color>
+    <color name="color_a0a0a0">#a0a0a0</color>
+    <color name="color_535353">#535353</color>
+    <color name="color_c9c9c9">#c9c9c9</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_040000">#040000</color>
+    <color name="color_b7b7b7">#b7b7b7</color>
+    <color name="color_80c9c9c9">#80c9c9c9</color>
+    <color name="color_323232">#323232</color>
+    <color name="color_ff9893">#ff9893</color>
+    <color name="color_fed55a">#fed55a</color>
+    <color name="color_959595">#959595</color>
+    <color name="color_1bfd00">#1bfd00</color>
+    <color name="color_ededed">#ededed</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_fbfbfb">#fbfbfb</color>
+    <color name="color_7c7c7c">#7c7c7c</color>
+    <color name="color_5b6a91">#5b6a91</color>
+    <color name="color_434343">#434343</color>
+    <color name="color_80b5b5b5">#80b5b5b5</color>
+    <color name="color_22ac38">#22ac38</color>
+    <color name="color_818181">#818181</color>
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+

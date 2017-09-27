@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--我的钱包  -->
+    <color name="jrmf_w_status_bar_color">#0665d6</color>
+    <!--标题栏-->
+     <color name="jrmf_w_title_bar_color">#157efb</color>
+     <color name="jrmf_w_trans_title_bar_color">#88157efb</color>
+
+    <!--充值提现的选择器颜色-->
+     <color name="jrmf_w_title_bar_dark_color">#0665d6</color>
+     <color name="jrmf_w_color_087efb">#0865fb</color>
+
+
+     <color name="jrmf_w_color_bg">#f1f1f3</color>
+
+    <color name="jrmf_w_color_b7b7b7">#b7b7b7</color>
+    <color name="jrmf_w_color_959595">#959595</color>
+    <color name="jrmf_w_color_c9c9c9">#c9c9c9</color>
+    <color name="jrmf_w_color_a0a0a0">#a0a0a0</color>
+    <color name="jrmf_w_color_b5b5b5">#b5b5b5</color>
+    <color name="jrmf_w_gray">#ababab</color>
+    <color name="jrmf_w_color_ededed">#ededed</color>
+    <color name="jrmf_w_black">#3e3a39</color>
+    <color name="jrmf_w_color_535353">#535353</color>
+    <color name="jrmf_w_color_03a9f4">#03a9f4</color>
+    <color name="jrmf_w_color_323232">#323232</color>
+    <color name="jrmf_w_color_1bfd00">#1bfd00</color>
+    <color name="jrmf_w_jrmf_w_red">#fe5c5c</color>
+    <color name="jrmf_w_red_dark">#e54141</color>
+    <color name="jrmf_w_color_fed55a">#fed55a</color>
+    <color name="jrmf_w_color_46a2fa">#46a2fa</color>
+    <color name="jrmf_w_color_040000">#040000</color>
+    <color name="jrmf_w_color_aaaaaa">#aaaaaa</color>
+    <color name="jrmf_w_color_80c9c9c9">#80c9c9c9</color>
+</resources>

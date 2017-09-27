@@ -10,6 +10,7 @@ import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
 import com.htmessage.fanxinht.IMAction;
 import com.htmessage.fanxinht.R;
+import com.htmessage.fanxinht.utils.CommonUtils;
 import com.htmessage.fanxinht.utils.OkHttpUtils;
 import com.htmessage.fanxinht.utils.Param;
 import com.htmessage.fanxinht.utils.Validator;
@@ -69,6 +70,9 @@ public class UpdateProfilePrestener implements UpdateProfileBasePrester {
                 if (code == 1) {
                     userJson.put(key, value);
                     HTApp.getInstance().setUserJson(userJson);
+                    if (HTConstant.JSON_KEY_NICK.equals(key)) {
+                        CommonUtils.upDateRedAvatarUrl(updateProfileView.getBaseActivity(),value, HTApp.getInstance().getUserAvatar());
+                    }
                     LocalBroadcastManager.getInstance(updateProfileView.getBaseActivity()).sendBroadcast(new Intent(IMAction.ACTION_UPDATE_INFO).putExtra(HTConstant.KEY_CHANGE_TYPE,key).putExtra(key,value));
                     updateProfileView.onUpdateSuccess(updateProfileView.getBaseActivity().getString(R.string.update_success));
                 } else {

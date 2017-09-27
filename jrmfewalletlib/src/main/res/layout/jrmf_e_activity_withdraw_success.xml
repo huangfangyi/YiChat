@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jrmf_e_color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/jrmf_e_layout_titlebar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/jrmf_e_withdraw_success" />
+
+    <TextView
+        android:id="@+id/tv_wit_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="申请提现成功"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_wit_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="如账户信息有误，会导致提现失败"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/jrmf_e_selector_round_btn"
+        android:text="确定"
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="16sp" />
+
+</LinearLayout>

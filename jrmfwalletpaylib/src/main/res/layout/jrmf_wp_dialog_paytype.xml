@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jrmf_wp_dialog_paytype_bg"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginBottom="@dimen/dimen_8"
+        android:background="@color/jrmf_b_white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_exit"
+                style="@style/text_blue_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:text="取消" />
+
+            <TextView
+                style="@style/text_black_16"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:gravity="center|center_vertical"
+                android:text="选择付款方式" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/jrmf_wp_color_c9c9c9" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/layout_paytype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

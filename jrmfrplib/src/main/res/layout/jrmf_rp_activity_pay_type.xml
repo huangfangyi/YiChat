@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="300dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="26dip"
+    android:layout_marginRight="26dip"
+    android:background="@drawable/jrmf_rp_dialog_paytype_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height" >
+
+        <TextView
+            android:id="@+id/tv_pay_title"
+            style="@style/text_black_16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jrmf_rp_btn_exit" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_redenvelope_name"
+        style="@style/text_black_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center"
+        android:text="云红包" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/jrmf_rp_rmb" />
+
+            <TextView
+                android:id="@+id/tv_redenvelope_amount"
+                style="@style/text_black_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/actionbar_height"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="0.01"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:background="@color/color_c9c9c9" />
+
+    <LinearLayout
+        android:id="@+id/layout_paytype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16" >
+
+        <ImageView
+            android:id="@+id/iv_paytype_icon"
+            android:layout_width="22dip"
+            android:layout_height="22dip" />
+
+        <TextView
+            android:id="@+id/tv_paytype_name"
+            style="@style/text_gray_16"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_16"
+            android:text="微信支付" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jrmf_rp_ic_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:background="@color/color_c9c9c9" />
+
+    <TextView
+        android:id="@+id/tv_pswd_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:paddingLeft="@dimen/dimen_16"
+        android:text="请输入支付密码"
+        android:textSize="14sp"
+        android:textColor="@color/jrmf_rp_black" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btn_pay"
+            style="@style/text_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/jrmf_rp_selector_common_btn"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_pay"
+            android:visibility="gone" />
+
+        <com.jrmf360.tools.view.passwordview.GridPasswordView
+            android:id="@+id/gpv_pswd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            app:gpvLineColor="#2196F3"
+            app:gpvPasswordType="numberPassword" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dip"
+        android:padding="3dip"
+        android:text="忘记支付密码？"
+        android:textSize="14sp"
+        android:textColor="@color/jrmf_b_blue" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jrmf360.tools.view.TitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/titleBar"
+    android:layout_height="@dimen/titlebar_height"
+    app:backgroud="@color/jrmf_b_title_bar_color"
+    app:title_color="@color/jrmf_b_white"
+    app:title_size="@dimen/jrmf_b_title_bar_text_size">
+
+    <TextView
+        android:id="@+id/titleBar_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical|end"
+        android:layout_marginRight="15dp"
+        android:text="编辑"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/jrmf_b_white"
+        android:visibility="gone"
+        android:textSize="16sp" />
+</com.jrmf360.tools.view.TitleBar>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/jrmf_b_white" />
+    <corners android:radius="@dimen/round_radius" />
+    <!-- android:shape="rectangle"	shape的形状，默认为矩形，可以设置为矩形（rectangle）、椭圆形(oval)、线性形状(line)、环形(ring)-->
+    <!--http://jingyan.baidu.com/article/86112f13513f4127379787b0.html-->
+    <!--http://www.tuicool.com/articles/AzInuuJ-->
+</shape>

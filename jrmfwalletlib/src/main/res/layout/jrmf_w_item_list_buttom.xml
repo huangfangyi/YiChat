@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewAnim"
+    android:background="@color/jrmf_w_color_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll_cooperation_loading"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageview_progress_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="center"
+            android:src="@drawable/jrmf_b_round_spinner_fade" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="加载中..."
+            android:textColor="@color/jrmf_w_color_959595"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="到底了噢"
+        android:textColor="@color/jrmf_w_color_959595"
+        android:textSize="12sp" />
+</ViewAnimator>

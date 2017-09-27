@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/jrmf_b_shape_round_white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_same_trans_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/color_323232"
+        android:text="@string/trans_repeat_tip"
+        />
+
+
+    <View
+        android:layout_below="@id/et_trans_money"
+        android:layout_width="match_parent"
+        android:background="@color/jrmf_rp_background"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/tv_continue_trans"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/jrmf_b_title_bar_color"
+        android:text="@string/continue_trans"/>
+
+    <View
+        android:layout_below="@id/et_trans_money"
+        android:layout_width="match_parent"
+        android:background="@color/jrmf_rp_background"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/tv_quit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/jrmf_b_title_bar_color"
+        android:text="@string/jrmf_quit"/>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jrmf360.walletpaylib">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application>
+
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.WalletPayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+
+
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.AddCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.AddCardSecondActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.BankCardListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.EnBrowserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent">
+        </activity>
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.PayTypeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/jrmf_b_dialog">
+        </activity>
+
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.CertificationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+
+        </activity>
+        <activity
+            android:name="com.jrmf360.walletpaylib.ui.SetPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+
+        </activity>
+
+
+        <!-- 支付宝 配置开始 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity android:name=".ui.GetPwdActivity"/>
+        <!--支付宝 配置结束  -->
+    </application>
+
+</manifest>

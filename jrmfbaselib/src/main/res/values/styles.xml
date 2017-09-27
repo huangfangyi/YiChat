@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Jrmf_b_GridPasswordView" />
+    <style name="Jrmf_b_GridPasswordView.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="GridPasswordView.EditText" parent="Jrmf_b_GridPasswordView.TextView">
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+    <style name="Jrmf_b_GridPasswordView.Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+
+
+    <style name="jrmf_b_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 窗口背景色 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 窗口是否半透明——是（与第一条配合使用） -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 这个不设置的话，可能会出现边框黑线 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- 窗口弹出效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 是否允许背景模糊 -->
+    </style>
+
+    <style name="Jrmf_b_DialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/jrmf_b_dialog_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+
+
+    <style name="text_black_16">
+        <item name="android:textColor">@color/jrmf_b_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_black_12">
+        <item name="android:textColor">@color/jrmf_b_black</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="text_black_28">
+        <item name="android:textColor">@color/jrmf_b_black</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="text_gray_16">
+        <item name="android:textColor">@color/jrmf_b_gray</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="text_red_16">
+        <item name="android:textColor">@color/jrmf_b_red</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="text_red_12">
+        <item name="android:textColor">@color/jrmf_b_red</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="text_blue_16">
+        <item name="android:textColor">@color/jrmf_b_blue</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="text_white_16">
+        <item name="android:textColor">@color/jrmf_b_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_white_28">
+        <item name="android:textColor">@color/jrmf_b_white</item>
+        <item name="android:textSize">28dp</item>
+    </style>
+
+    <style name="text_red_28">
+        <item name="android:textColor">@color/jrmf_b_red</item>
+        <item name="android:textSize">28dp</item>
+    </style>
+
+    <style name="text_gray_12">
+        <item name="android:textColor">@color/jrmf_b_gray</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="text_blue_12">
+        <item name="android:textColor">@color/jrmf_b_blue</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+</resources>

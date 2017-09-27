@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_new_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_mywallet_height"
+    android:background="@drawable/jrmf_w_selector_item"
+    android:orientation="horizontal" >
+    
+    <ImageView
+        android:id="@+id/iv_bankCardLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/jrmf_w_ic_card"
+        android:layout_marginLeft="@dimen/dimen_16" />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/iv_bankCardLogo"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:text="添加新银行卡"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="@color/jrmf_b_black"
+        />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/jrmf_w_arrow_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_16"
+        />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/jrmf_w_color_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen_16"
+        />
+
+</RelativeLayout>

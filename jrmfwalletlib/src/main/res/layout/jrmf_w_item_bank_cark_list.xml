@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_mywallet_height"
+    android:background="@color/jrmf_b_white" >
+
+    <ImageView
+        android:id="@+id/iv_bankCardLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:src="@drawable/jrmf_w_ic_card" />
+    <TextView 
+        android:id="@+id/tv_cardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:text="中国工商银行"
+        android:textSize="14sp"
+        android:textColor="@color/jrmf_w_gray"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_bankCardLogo"
+        />
+</RelativeLayout>

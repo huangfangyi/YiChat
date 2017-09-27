@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/jrmf_b_shape_round_white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:gravity="center"
+        android:textColor="@color/jrmf_b_black"
+        tools:text="支付密码错误支付密码错误支付密码错误支付密码错误"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        >
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="重试"
+            android:textSize="15sp"
+            android:textColor="@color/jrmf_b_title_bar_color"
+            />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="忘记密码"
+            android:textColor="@color/jrmf_b_title_bar_color"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

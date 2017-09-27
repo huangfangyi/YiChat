@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_rp_background"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true">
+
+
+    <com.jrmf360.rplib.widget.ActionBarView
+        android:id="@+id/actionbar"
+        android:background="@color/jrmf_rp_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:content="认证账户信息"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:paddingLeft="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:background="@color/jrmf_b_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_black_16"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="姓名"/>
+
+        <com.jrmf360.tools.view.ClearEditText
+            android:id="@+id/et_username"
+            style="@style/text_black_16"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请填写完整姓名"
+            android:paddingRight="@dimen/dimen_16"
+            android:textColorHint="@color/jrmf_b_color_b7b7b7"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:background="@color/jrmf_b_white"
+        android:layout_marginTop="0.5dp"
+        android:paddingLeft="@dimen/dimen_16"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/text_black_16"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="身份证" />
+
+        <com.jrmf360.tools.view.ClearEditText
+            android:id="@+id/et_identity"
+            style="@style/text_black_16"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@null"
+            android:digits="0123456789xyzXYZ"
+            android:gravity="center_vertical"
+            android:hint="请输入身份证号"
+            android:inputType="number"
+            android:paddingRight="@dimen/dimen_16"
+            android:textColorHint="@color/jrmf_b_color_b7b7b7" />
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/btn_height"
+        android:background="@drawable/jrmf_rp_bg_gray_round"
+        android:text="下一步"
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="16sp" />
+
+</LinearLayout>

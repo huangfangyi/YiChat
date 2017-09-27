@@ -1,0 +1,17 @@
+<resources>
+    <style name="jrmf_wp_commondialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/jrmf_b_transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@color/jrmf_b_transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Jrmf_Wp_AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/jrmf_wp_slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/jrmf_wp_slide_right_out</item>
+    </style>
+
+</resources>

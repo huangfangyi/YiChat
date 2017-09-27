@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/jrmf_b_title_bar_color"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+    
+    <ImageView 
+        android:id="@+id/iv_bankCardLogo"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:src="@drawable/jrmf_w_ic_card"
+        />
+    
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+        <TextView 
+            android:id="@+id/tv_bankCardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/jrmf_b_white"
+            android:textSize="14sp"
+            android:text=""
+            />
+        <TextView 
+            android:id="@+id/tv_bankCardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/jrmf_b_white"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:text=""
+            />
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/tv_unbind"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:textColor="@color/jrmf_b_white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:background="@drawable/jrmf_w_shape_unbind"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:text="解绑"
+        />
+    
+
+</LinearLayout>
+
+
+
+
+
+
+
+

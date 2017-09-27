@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/jrmf_b_white"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/jrmf_w_color_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_8"
+            android:text="2016年7月"
+            android:textColor="@color/jrmf_w_color_959595"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_trade_detail_height"
+        android:background="@color/jrmf_b_white">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_8"
+            android:paddingRight="@dimen/dimen_8"
+            >
+
+            <TextView
+                android:id="@+id/tv_tradeMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="-2500"
+                android:textColor="@color/jrmf_w_color_1bfd00"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_tradeType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_tradeMoney"
+                android:singleLine="true"
+                tools:text="小规模企业代理结账小规模企业代理结账"
+                android:textColor="@color/jrmf_w_color_535353"
+                android:textSize="15sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_8"
+            android:paddingRight="@dimen/dimen_8"
+            >
+
+            <TextView
+                android:id="@+id/tv_tradeState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="-2500"
+                android:textColor="@color/jrmf_w_color_a0a0a0"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_tradeTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_tradeState"
+                android:singleLine="true"
+                tools:text="nihao"
+                android:textColor="@color/jrmf_w_color_a0a0a0"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+
+
+
+

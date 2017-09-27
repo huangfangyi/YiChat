@@ -17,6 +17,7 @@ import com.alibaba.sdk.android.oss.ClientException;
 import com.alibaba.sdk.android.oss.ServiceException;
 import com.alibaba.sdk.android.oss.model.PutObjectRequest;
 import com.alibaba.sdk.android.oss.model.PutObjectResult;
+import com.htmessage.fanxinht.utils.CommonUtils;
 import com.htmessage.sdk.utils.UploadFileUtils;
 import com.htmessage.fanxinht.HTApp;
 import com.htmessage.fanxinht.HTConstant;
@@ -191,6 +192,7 @@ public class ProfilePrester implements ProfileBasePrester {
                         if (key.equals(HTConstant.JSON_KEY_AVATAR)) {
                             userJson.put(HTConstant.JSON_KEY_AVATAR, value);
                             HTApp.getInstance().setUserJson(userJson);
+                            CommonUtils.upDateRedAvatarUrl(profileView.getBaseActivity(), HTApp.getInstance().getUserNick(), value);
                             profileView.onAvatarUpdate(filePath,true);
                             LocalBroadcastManager.getInstance(profileView.getBaseContext()).sendBroadcast(new Intent(IMAction.ACTION_UPDATE_INFO).putExtra(HTConstant.JSON_KEY_AVATAR, value).putExtra(HTConstant.KEY_CHANGE_TYPE, HTConstant.JSON_KEY_AVATAR));
                         }

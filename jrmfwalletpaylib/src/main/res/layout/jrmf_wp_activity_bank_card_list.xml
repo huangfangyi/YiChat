@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_wp_background"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/jrmf_wp_layout_titlebar"/>
+
+    <ListView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/jrmf_wp_color_80c9c9c9"
+        android:dividerHeight="0.5dp"
+
+        />
+
+    <TextView
+        android:id="@+id/refresh"
+        style="@style/text_gray_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="加载失败，点击重试"/>
+
+</LinearLayout>

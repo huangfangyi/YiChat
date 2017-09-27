@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 12
+        targetSdkVersion 20
+        versionCode 20170214
+        versionName "2.1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+        lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':jrmfbaselib')
+}
+
+
+task clearJar(type: Delete) {
+    delete 'build/libs/'
+}
+
+task makeRpJar(type: org.gradle.api.tasks.bundling.Jar, dependsOn: "build") {
+    //指定生成的jar名
+    baseName 'jrmfrp'
+    //从哪里打包class文件
+    from('build/intermediates/classes/debug/com/jrmf360/rplib')
+    //打包到jar后的目录结构
+    into('com/jrmf360/rplib')
+    //去掉不需要打包的目录和文件
+    exclude('test/', 'BuildConfig.class', 'R.class')
+    //去掉R$开头的文件
+    exclude { it.name.startsWith('R$'); }
+}
+
+makeRpJar.dependsOn(clearJar, build)
+
+task makeRpProguardJar(type: proguard.gradle.ProGuardTask, dependsOn: "build") {
+
+//    delete 'src/main/jar/jrmfry.jar'//删除之前编译混淆jar包  
+//    injars 'src/main/jar/jrmfrp.jar'//项目编译但未混淆的jar  
+    injars 'build/libs/jrmfrp.jar'//项目编译但未混淆的jar  
+    outjars 'libs/jrmfrp-2.1.0.jar'//混淆后的jar路径  
+    configuration 'proguard-rules.pro'// 混淆配置文件  
+}
+
+
+
+
+
+
+
+

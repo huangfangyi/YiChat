@@ -114,8 +114,12 @@ public class ChatInputView extends LinearLayout implements View.OnClickListener 
 
     }
 
+    int[] itemNames ;
+    int[] itemIcons ;
+    public void initView(Activity activity, View aboveView,int[] itemNames,int[] itemIcons) {
+        this.itemNames=itemNames;
+        this.itemIcons=itemIcons;
 
-    public void initView(Activity activity, View aboveView) {
 
         mContentView = aboveView;
         //切换到语音输入按钮
@@ -598,6 +602,9 @@ public class ChatInputView extends LinearLayout implements View.OnClickListener 
 
         void onFileItemClicked();
 
+        void onRedPackageItemClicked();
+
+        void onTransferItemClicked();
     }
 
 
@@ -641,7 +648,16 @@ public class ChatInputView extends LinearLayout implements View.OnClickListener 
                     }
 
                     break;
-
+                case 6:
+                    if (inputViewLisenter != null) {
+                        inputViewLisenter.onRedPackageItemClicked();
+                    }
+                    break;
+                case 7:
+                    if (inputViewLisenter != null) {
+                        inputViewLisenter.onTransferItemClicked();
+                    }
+                    break;
                 default:
                     break;
             }
@@ -653,8 +669,7 @@ public class ChatInputView extends LinearLayout implements View.OnClickListener 
     private void ininExtendView() {
 
         MyItemClickListener chatExtendMenuItemClickListener = new MyItemClickListener();
-        int[] itemNames = {R.string.attach_take_pic, R.string.attach_picture, R.string.attach_location, R.string.attach_video, R.string.attach_video_call, R.string.attach_file};
-        int[] itemIcons = {R.drawable.chat_takepic_selector, R.drawable.chat_image_selector, R.drawable.chat_location_selector, R.drawable.chat_video_selector, R.drawable.chat_video_call_selector, R.drawable.chat_file_selector};
+
         ChatExtendMenu chatExtendMenu = new ChatExtendMenu(getContext());
         for (int i = 0; i < itemNames.length; i++) {
             chatExtendMenu.registerMenuItem(itemNames[i], itemIcons[i], i, chatExtendMenuItemClickListener);

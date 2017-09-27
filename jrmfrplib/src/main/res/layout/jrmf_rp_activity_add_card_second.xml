@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_rp_background"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true"
+    >
+
+    <com.jrmf360.rplib.widget.ActionBarView
+        android:id="@+id/actionbar"
+        android:background="@color/jrmf_rp_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:content="添加银行卡"/>
+
+    <LinearLayout
+        android:id="@+id/layout_step2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:background="@color/jrmf_b_white"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/text_black_16"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="username"
+                />
+
+            <TextView
+                android:id="@+id/tv_identityno"
+                style="@style/text_black_16"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:text="identityno"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cardname"
+            style="@style/text_black_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:gravity="center_vertical"
+            android:text="cardname"/>
+
+        <com.jrmf360.tools.view.floattextview.FloatingLabelTextView
+            android:id="@+id/ftv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            app:allowEmpty="false"
+            app:hintText="银行预留手机号"
+            app:validatorType="phone"/>
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dip"
+            android:paddingBottom="3dip"
+            android:paddingTop="3dip"
+            android:text="点击下一步视为您同意《金融魔方用户协议》"
+            android:textSize="14sp"
+            android:textColor="@color/jrmf_b_color_b7b7b7"/>
+
+        <Button
+            android:id="@+id/btn_next_step2"
+            style="@style/text_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="@drawable/jrmf_rp_selector_common_btn"
+            android:text="下一步"/>
+
+    </LinearLayout>
+</LinearLayout>

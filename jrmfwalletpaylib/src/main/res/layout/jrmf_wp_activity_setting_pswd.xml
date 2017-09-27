@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_wp_background"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              tools:context=".ui.SetPwdActivity">
+
+    <include layout="@layout/jrmf_wp_layout_titlebar"/>
+
+    <!--手机号-->
+    <LinearLayout
+        android:id="@+id/ll_phoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginTop="1dp"
+        android:background="@color/jrmf_b_white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="手机号"
+            android:textColor="@color/jrmf_wp_color_959595"
+            android:textSize="14sp"/>
+
+        <com.jrmf360.tools.view.ClearEditText
+            android:id="@+id/cet_bind_phone"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:paddingRight="@dimen/dimen_8"
+            android:textColor="@color/jrmf_wp_color_535353"
+            android:textColorHint="@color/jrmf_wp_color_c9c9c9"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!--验证码-->
+    <LinearLayout
+        android:id="@+id/ll_verifyCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:layout_marginTop="1dp"
+        android:background="@color/jrmf_b_white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="验证码"
+            android:textColor="@color/jrmf_wp_color_959595"
+            android:textSize="14sp"/>
+
+        <com.jrmf360.tools.view.ClearEditText
+            android:id="@+id/cet_bind_code"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingRight="@dimen/dimen_8"
+            android:textColor="@color/jrmf_wp_color_535353"
+            android:textColorHint="@color/jrmf_wp_color_c9c9c9"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_send_code"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:background="@drawable/jrmf_wp_shape_code_bg"
+            android:gravity="center"
+            android:text="发送验证码"
+            android:textColor="@color/jrmf_wp_color_535353"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:background="@color/jrmf_b_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="支付密码"
+            android:textColor="@color/jrmf_wp_color_959595"
+            android:textSize="14sp"/>
+
+        <com.jrmf360.tools.view.ClearEditText
+            android:id="@+id/cet_pwd"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="密码为6位数字"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:paddingRight="@dimen/dimen_8"
+            android:textColor="@color/jrmf_b_black"
+            android:textColorHint="@color/jrmf_wp_color_b7b7b7"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginTop="1dp"
+        android:background="@color/jrmf_b_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="确认支付密码"
+            android:textColor="@color/jrmf_wp_color_959595"
+            android:textSize="14sp"/>
+
+        <com.jrmf360.tools.view.ClearEditText
+            android:id="@+id/cet_confirm_pwd"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请再次输入支付密码"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:paddingRight="@dimen/dimen_8"
+            android:textColor="@color/jrmf_b_black"
+            android:textColorHint="@color/jrmf_wp_color_b7b7b7"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:background="@color/jrmf_wp_background">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="@drawable/jrmf_wp_selector_btn_pay"
+            android:text="确认提交"
+            android:textColor="@color/jrmf_b_white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

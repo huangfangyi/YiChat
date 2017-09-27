@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jrmf360.rplib">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 要检查用户权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+
+    <application>
+        <activity
+            android:name="com.jrmf360.rplib.ui.AddCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.AddCardFirsstActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.AddCardSecondActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.BankCardListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+
+        <activity
+            android:name="com.jrmf360.rplib.ui.OpenRpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Jrmf_b_DialogTheme"/>
+
+        <activity
+            android:name="com.jrmf360.rplib.ui.EnBrowserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.PayTypeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/jrmf_b_dialog"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.TransPayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/jrmf_b_dialog"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.CertificationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.CheckUserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.SendGroupEnvelopesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.SendSingleEnvelopesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.SettingPswdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.RpDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.jrmf360.rplib.ui.MyRpActivity"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.TradeHistoryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.TradeDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.CheckAuthActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.ResetPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.TransAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.TransSuccActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.jrmf360.rplib.ui.TransDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <!-- 支付宝 配置开始 -->
+
+        <!-- 支付宝h5支付页面 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!-- 支付宝 配置结束 -->
+
+    </application>
+
+</manifest>

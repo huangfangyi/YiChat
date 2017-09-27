@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/jrmf_w_color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/jrmf_w_layout_titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/jrmf_b_white"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tradeState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="交易成功"
+            android:textColor="@color/jrmf_w_color_323232"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_tradeMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="2500"
+            android:textColor="@color/jrmf_w_color_1bfd00"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/jrmf_b_white"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_tradeType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_tradeType"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="类型"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_transferType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/jrmf_b_white"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_transferType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_transferTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_transferType"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            tools:text="退款方式/交易方式"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_transferCharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/jrmf_b_white"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_transferCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_transferCharge"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="手续费"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/jrmf_b_white"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_tradeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_tradeTime"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="时间"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tradeNo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/jrmf_b_white"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_tradeNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_tradeNo"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="交易单号"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_remark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_mywallet_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/jrmf_b_white"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_remark"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="备注"
+            android:textColor="@color/jrmf_w_color_535353"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+

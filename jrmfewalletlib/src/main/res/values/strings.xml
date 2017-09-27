@@ -1,0 +1,125 @@
+<resources>
+
+    <!-- 我的钱包 -->
+    <string name="my_wallet_title">我的钱包</string>
+
+
+    <!-- 银行卡 -->
+    <string name="my_bank_title">企业账户设置</string>
+    <string name="look_banks">查看支持银行</string>
+    <string name="card_num_error">请输入正确的银行卡号</string>
+    <string name="name_error">请输入姓名</string>
+    <string name="id_card_error">请输入正确的身份证号</string>
+    <string name="phone_num_error">请输入正确的手机号</string>
+    <string name="card_id_error">银行卡编号错误</string>
+    <string name="send_code_suc">验证码发送成功</string>
+    <string name="req_code">请先获得验证码</string>
+    <string name="get_code">重新获取验证码</string>
+    <string name="input_code">请输入短信验证码</string>
+    <string name="input_code_error">请输入正确的验证码</string>
+
+    <!--收支明细 -->
+    <string name="jrmf_e_trade_detail_title">余额账户</string>
+    <string name="jrmf_e_trade_detail_title_freeze">冻结账户</string>
+
+
+    <!-- 提现 -->
+
+    <string name="card_limit">该卡本次最多可提现%1$s元</string>
+    <string name="deposit_money">提现%1$s元</string>
+    <string name="select_bank_card">选择银行卡</string>
+    <string name="charge">手续费%1$s元</string>
+    <string name="charge_tip_dialog">本次提现将从您所提金额内扣除%1$s元手续费</string>
+    <string name="get_deposit_over">提现金额超限</string>
+    <string name="get_deposit_low">您的金额不足以支付手续费</string>
+
+    <!-- 充值 -->
+    <string name="recharge_money">充值%1$s元</string>
+    <string name="no_card_bind">您还没有绑定银行卡，请先添加银行卡</string>
+    <string name="input_recharge_amount">请输入充值金额</string>
+    <string name="recharge_fail">充值失败</string>
+    <string name="recharge_suc">充值成功</string>
+    <string name="card_des">尾号(%1$s)</string>
+    <string name="card_recharge_limit">该卡本次最多可充值%1$s元</string>
+    <string name="cardname_card_des">%1$s(%2$s)</string>
+
+    <!--银行卡设置  -->
+    <string name="del_card_des">删除尾号为%1$s的银行卡</string>
+    <string name="unbind_suc">解绑成功</string>
+    <string name="no_input_amount">请输入提现金额</string>
+    <string name="input_amount_error">请输入正确的提现金额</string>
+
+    <!--账户信息-->
+
+    <string name="account_info_title">账户信息</string>
+    <string name="update_user_info">修改账户信息</string>
+    <string name="set_user_info">设置账户信息</string>
+    <string name="account_net_error">当前网络不佳，获取账户信息失败</string>
+
+    <!--找回支付密码-->
+    <string name="get_pwd_title">找回支付密码</string>
+
+    <!--身份认证-->
+    <string name="update_userinfo_suc">修改成功</string>
+
+    <!--密码校验-->
+    <string name="pwd_error">支付密码错误</string>
+    <string name="find_pwd_error">找回密码异常</string>
+
+    <!--找回支付密码-->
+    <string name="set_pwd_error">请输入6位支付密码</string>
+    <string name="pwd_not_same">两次密码输入不一致</string>
+    <string name="set_pwd_suc">支付密码设置成功</string>
+
+    <!--网络-->
+    <string name="net_error">当前网络不佳</string>
+    <string name="net_error_l">当前网络不佳,请稍后再试</string>
+
+
+    <string name="to_buttom">到底了噢～</string>
+    <string name="jrmf_e_loading">加载中...</string>
+
+    <string name="bind_phone">绑定手机号</string>
+    <string name="revise_phone">修改手机号</string>
+    <string name="modify_password">修改支付密码</string>
+    <string name="set_password">设置支付密码</string>
+    <string name="getback_password">找回支付密码</string>
+    <string name="new_password_prompt">新支付密码</string>
+    <string name="new_confirm_password">确认新支付密码</string>
+    <string name="password_prompt">支付密码</string>
+    <string name="confirm_password">确认支付密码</string>
+    <string name="select_bank">请选择所属银行</string>
+    <string name="add_account">添加账户</string>
+    <string name="add_account_ok">添加账户成功</string>
+    <string name="account_details">账户详情</string>
+    <string name="please_phone_num">请输入手机号</string>
+    <string name="please_code_num">请输入验证码</string>
+    <string name="withdraw_ok">提现成功</string>
+    <string name="code_num_error">请输入验证码</string>
+    <string name="get_code_error">请获取验证码</string>
+    <string name="revise_phone_point">请填写验证码以验证身份</string>
+    <string name="bind_phone_point">绑定的手机号用做支付或修改账户信息，请认真填写</string>
+    <string name="bind_new_phone">请绑定新手机号</string>
+    <string name="unbounded">未绑定</string>
+    <string name="original_phone_num">原手机号</string>
+    <string name="phone_num">手机号</string>
+    <string name="new_phone_num">新手机号</string>
+    <string name="please_psw">请输入支付密码，以验证身份</string>
+    <string name="not_set_psw">您还未设置支付密码</string>
+    <string name="please_bind_phone">请先绑定手机号以用做支付或修改账户信息</string>
+    <string name="feature_is_not_yet_available">该功能暂未开通</string>
+
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+

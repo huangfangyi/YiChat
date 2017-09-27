@@ -36,6 +36,7 @@ import com.htmessage.fanxinht.utils.ACache;
 import com.htmessage.fanxinht.utils.OkHttpUtils;
 import com.htmessage.fanxinht.utils.DateUtils;
 import com.htmessage.fanxinht.utils.OpenFileUtils;
+import com.htmessage.sdk.ChatType;
 import com.htmessage.sdk.client.HTClient;
 import com.htmessage.sdk.model.HTMessageBody;
 import com.htmessage.sdk.model.HTMessageFileBody;
@@ -79,6 +80,11 @@ public class ChatAdapter extends BaseAdapter {
     private static final int MESSAGE_LOCATION_SEND = 11;
     private static final int MESSAGE_ACTIVTTY_RECEIVED = 12;
     private static final int MESSAGE_ACTIVTTY_SEND = 13;
+
+    private static final int MESSAGE_RED_RECEIVED = 14;
+    private static final int MESSAGE_RED_SEND = 15;
+    private static final int MESSAGE_TRANSFER_RECEIVED = 16;
+    private static final int MESSAGE_TRANSFER_SEND = 17;
 
     private String chatTo;
     private int chatType;
@@ -166,8 +172,13 @@ public class ChatAdapter extends BaseAdapter {
     private int getItemViewType(HTMessage htMessage) {
         HTMessage.Type type = htMessage.getType();
         if (type == HTMessage.Type.TEXT) {
-            if (htMessage.getIntAttribute("action", 0) == 3000) {
+            int action = htMessage.getIntAttribute("action", 0);
+            if (action == 3000) {
                 return htMessage.getDirect() == HTMessage.Direct.RECEIVE ? MESSAGE_ACTIVTTY_RECEIVED : MESSAGE_ACTIVTTY_SEND;
+            } else if (action == 10001) {
+                return htMessage.getDirect() == HTMessage.Direct.RECEIVE ? MESSAGE_RED_RECEIVED : MESSAGE_RED_SEND;
+            } else if (action == 10002) {
+                return htMessage.getDirect() == HTMessage.Direct.RECEIVE ? MESSAGE_TRANSFER_RECEIVED : MESSAGE_TRANSFER_SEND;
             } else {
                 return htMessage.getDirect() == HTMessage.Direct.RECEIVE ? MESSAGE_TEXT_RECEIVED : MESSAGE_TEXT_SEND;
             }
@@ -216,6 +227,14 @@ public class ChatAdapter extends BaseAdapter {
                 return inflater.inflate(R.layout.row_sent_activity, parent, false);
             case MESSAGE_ACTIVTTY_RECEIVED:
                 return inflater.inflate(R.layout.row_received_activity, parent, false);
+            case MESSAGE_RED_SEND: //红包
+                return inflater.inflate(R.layout.row_send_red, parent, false);
+            case MESSAGE_RED_RECEIVED:
+                return inflater.inflate(R.layout.row_receive_red, parent, false);
+            case MESSAGE_TRANSFER_SEND: //转账
+                return inflater.inflate(R.layout.row_send_transfer, parent, false);
+            case MESSAGE_TRANSFER_RECEIVED:
+                return inflater.inflate(R.layout.row_receive_transfer, parent, false);
             default:
                 return inflater.inflate(R.layout.row_sent_message, parent, false);
         }
@@ -275,10 +294,24 @@ public class ChatAdapter extends BaseAdapter {
             holder.tvPlace = (TextView) convertView.findViewById(R.id.tv_place);
             holder.tvTitle = (TextView) convertView.findViewById(R.id.tv_title);
         }
+        if (viewType == MESSAGE_RED_SEND || viewType == MESSAGE_RED_RECEIVED) {
+            holder.tv_red_name = (TextView) convertView.findViewById(R.id.tv_red_name);
+            holder.tv_red_content = (TextView) convertView.findViewById(R.id.tv_red_content);
+            holder.tvContent = (TextView) convertView.findViewById(R.id.tv_content);
+        }
+        if (viewType == MESSAGE_TRANSFER_SEND || viewType == MESSAGE_TRANSFER_RECEIVED) {
+            holder.tv_red_name = (TextView) convertView.findViewById(R.id.tv_red_name);
+            holder.tv_red_content = (TextView) convertView.findViewById(R.id.tv_red_content);
+            holder.tvContent = (TextView) convertView.findViewById(R.id.tv_content);
+        }
+
         if (htMessage.getType() == HTMessage.Type.FILE) {
             holder.tvFileSize = (TextView) convertView.findViewById(R.id.tv_file_size);
             holder.tvContent = (TextView) convertView.findViewById(R.id.tv_chatcontent);
         }
+
+
+
         holder.ivAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -418,7 +451,17 @@ public class ChatAdapter extends BaseAdapter {
                 holder.timeStamp.setVisibility(View.VISIBLE);
                 holder.reMain.setVisibility(View.GONE);
                 holder.timeStamp.setText(((HTMessageTextBody) htMessageBody).getContent());
-            } else {
+            } else if (action == 10001) {
+                holder.reMain.setVisibility(View.VISIBLE);
+                showRedView(message, holder);
+            } else if (action == 10002) {
+                holder.reMain.setVisibility(View.VISIBLE);
+                showTransferView(message, holder);
+            } else if (action == 10004){
+                holder.timeStamp.setVisibility(View.VISIBLE);
+                holder.reMain.setVisibility(View.GONE);
+                holder.timeStamp.setText(((HTMessageTextBody) htMessageBody).getContent());
+            }else {
                 holder.reMain.setVisibility(View.VISIBLE);
                 holder.tvContent.setText(SmileUtils.getSmiledText(context, ((HTMessageTextBody) htMessageBody).getContent()),
                         TextView.BufferType.SPANNABLE);
@@ -438,6 +481,74 @@ public class ChatAdapter extends BaseAdapter {
             showFileView(message, holder);
         }
     }
+
+
+    /**
+     * 转账
+     *
+     * @param message
+     * @param holder
+     */
+    private void showTransferView(final HTMessage message, ChatViewHolder holder) {
+        final JSONObject jsonObject = message.getAttributes();
+        final String transferId = jsonObject.getString("transferId");
+        String amountStr = jsonObject.getString("amountStr");
+        String msg = jsonObject.getString("msg");
+        final String userId = jsonObject.getString("userId");
+        String nick = jsonObject.getString("nick");
+        if (TextUtils.isEmpty(nick)) {
+            nick = userId;
+        }
+        final String avatar = jsonObject.getString("avatar");
+        if (!TextUtils.isEmpty(msg)) {
+            holder.tv_red_content.setVisibility(View.VISIBLE);
+            holder.tv_red_content.setText(msg);
+        } else {
+            holder.tv_red_content.setVisibility(View.INVISIBLE);
+            holder.tv_red_content.setText(msg);
+        }
+        holder.tvContent.setText(context.getString(R.string.transfer_content));
+        holder.tv_red_name.setText(amountStr);
+        holder.reBubble.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (message.getChatType() == ChatType.groupChat) {
+                    return;
+                } else {
+                    if (onResendViewClick !=null){
+                        onResendViewClick.onTransferMessageClicked(jsonObject,transferId);
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * 红包
+     *
+     * @param htMessage
+     * @param holder
+     */
+    private void showRedView(final HTMessage htMessage, ChatViewHolder holder) {
+        final JSONObject jsonObject = htMessage.getAttributes();
+        String envMsg = jsonObject.getString("envMsg");
+        String envName = jsonObject.getString("envName");
+        final String envId = jsonObject.getString("envId");
+        holder.tvContent.setText(envName);
+        holder.tv_red_name.setText(envMsg);
+        holder.tv_red_content.setText(context.getString(R.string.get_red));
+        holder.reBubble.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onResendViewClick !=null){
+                    onResendViewClick.onRedMessageClicked(jsonObject,envId);
+                }
+            }
+        });
+    }
+
+
+
 
     private void showFileView(final HTMessage htMessage, ChatViewHolder holder) {
         final HTMessageFileBody htMessageFileBody = (HTMessageFileBody) htMessage.getBody();
@@ -710,9 +821,9 @@ public class ChatAdapter extends BaseAdapter {
                 && VoicePlayClickListener.playMsgId.equals(htMessage.getMsgId()) && VoicePlayClickListener.isPlaying) {
             AnimationDrawable voiceAnimation;
             if (htMessage.getDirect() == HTMessage.Direct.RECEIVE) {
-                holder.ivVoice.setImageResource(R.anim.voice_from_icon);
+                holder.ivVoice.setImageResource(+R.anim.voice_from_icon);
             } else {
-                holder.ivVoice.setImageResource(R.anim.voice_to_icon);
+                holder.ivVoice.setImageResource(+R.anim.voice_to_icon);
             }
             voiceAnimation = (AnimationDrawable) holder.ivVoice.getDrawable();
             voiceAnimation.start();
@@ -784,6 +895,9 @@ public class ChatAdapter extends BaseAdapter {
         public TextView tvDay;
         public TextView tvTitle;
         public TextView tvPlace;
+        //红包消息
+        public TextView tv_red_name;
+        public TextView tv_red_content;
         //发送消息
         public ProgressBar progressBar;
 
@@ -820,6 +934,8 @@ public class ChatAdapter extends BaseAdapter {
 
     interface OnResendViewClick {
         void resendMessage(HTMessage htMessage);
+        void onRedMessageClicked(JSONObject jsonObject,String evnId);
+        void onTransferMessageClicked(JSONObject jsonObject,String evnId);
     }
 
 }

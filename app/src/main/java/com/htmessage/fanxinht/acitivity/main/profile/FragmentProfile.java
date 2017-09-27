@@ -27,6 +27,7 @@ import com.htmessage.fanxinht.acitivity.main.qrcode.MyQrActivity;
 import com.htmessage.fanxinht.acitivity.SettingsActivity;
 import com.htmessage.fanxinht.acitivity.moments.MomentsFriendActivity;
 import com.htmessage.fanxinht.acitivity.main.profile.info.profile.ProfileActivity;
+import com.jrmf360.walletlib.JrmfWalletClient;
 
 public class FragmentProfile extends Fragment implements View.OnClickListener {
     private InfoChangedListener listener;
@@ -79,6 +80,7 @@ public class FragmentProfile extends Fragment implements View.OnClickListener {
         getView().findViewById(R.id.rl_qrcode).setOnClickListener(this);
         getView().findViewById(R.id.rl_call_us).setOnClickListener(this);
         getView().findViewById(R.id.rl_feedback).setOnClickListener(this);
+        getView().findViewById(R.id.rl_wallet).setOnClickListener(this);
     }
 
     @Override
@@ -104,6 +106,9 @@ public class FragmentProfile extends Fragment implements View.OnClickListener {
                 break;
             case R.id.rl_feedback: //意见反馈
                 startActivity(new Intent(getActivity(), FeedBackActivity.class));
+                break;
+            case R.id.rl_wallet:
+                JrmfWalletClient.intentWallet(getActivity(), HTApp.getInstance().getUsername(), HTApp.getInstance().getThirdToken(), HTApp.getInstance().getUserJson().getString(HTConstant.JSON_KEY_NICK), HTApp.getInstance().getUserJson().getString(HTConstant.JSON_KEY_AVATAR));
                 break;
         }
     }

@@ -98,7 +98,7 @@ public class HTConstant {
     public static final String JSON_KEY_THIRDAPPICON = "appicon";
     public static final String JSON_KEY_ISWEB = "isWeb";
     //Buglykey
-    public static final String BUGLY_KEY = "";
+    public static final String BUGLY_KEY = "a7b4566fd9";
     //授权接口相关
     public static final String URL_AUTH_URL = HOST + "authorize";//修改授权状态
     public static final String KEY_AUTH_SUCCESS = "1";//修改授权状态 1成功
@@ -154,4 +154,7 @@ public class HTConstant {
     public static final String SMSAPPKEY = "";
     //短信模板//设置您要发送的内容(内容必须和某个模板匹配。以下例子匹配的是系统提供的1号模板）
     public static final String SMSTEXT = "您的验证码是：【%s】。请不要把验证码泄露给其他人。如非本人操作，可不用理会！";
+    //魔方互动的SDK的SECRET
+    public static final String MOFANG_SECRET = "";
+
 }

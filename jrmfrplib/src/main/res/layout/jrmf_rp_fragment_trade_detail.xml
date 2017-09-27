@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewAnim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView 
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/jrmf_rp_not_trade"
+            />
+        <TextView 
+            android:id="@+id/tv_no_trade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无数据"
+            android:textSize="14sp"
+            android:textColor="@color/color_959595"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/iv_icon"
+            />
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:listSelector="@drawable/jrmf_rp_selector_item"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/jrmf_rp_background"
+        />
+</ViewAnimator>

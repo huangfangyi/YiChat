@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.multidex.MultiDex;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
@@ -25,9 +26,11 @@ import com.htmessage.fanxinht.manager.NotifierManager;
 import com.htmessage.fanxinht.manager.PreferenceManager;
 import com.htmessage.fanxinht.manager.SettingsManager;
 import com.htmessage.fanxinht.utils.SendCodeUtils;
+import com.jrmf360.tools.JrmfClient;
 import com.tencent.bugly.crashreport.CrashReport;
 
 import org.anyrtc.rtmpc_hybrid.RTMPCHybird;
+import org.jivesoftware.smack.util.MD5;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -46,7 +49,7 @@ public class HTApp extends Application {
     private JSONObject userJson = null;
      private List<Activity> activities = new ArrayList<>();
     public static boolean isCalling = false;
-
+    private String thirdToken = "";
     @Override
     public void onCreate() {
         //sdk采用双进程守护,因此不要在守护进程中初始Application
@@ -77,9 +80,40 @@ public class HTApp extends Application {
         RTMPCHybird.Inst().InitEngineWithAnyrtcInfo(HTConstant.DEVELOPERID, HTConstant.APPID, HTConstant.APPKEY, HTConstant.APPTOKEN);
         //初始化短信发送工具类
         SendCodeUtils.init(applicationContext);
+        //红包
 
+        JrmfClient.isDebug(true);
+        //初始化项目
+        JrmfClient.init(this);
+        //设置微信的appid，如果不使用微信支付可以不调用此方法
+        JrmfClient.setWxAppid(HTConstant.WX_APP_ID);
     }
 
+    public String getThirdToken() {
+        if (TextUtils.isEmpty(thirdToken)) {
+            thirdToken = MD5.hex(getUsername() + HTConstant.MOFANG_SECRET);
+        }
+
+        return thirdToken;
+    }
+    public String getUserNick() {
+        String username = null;
+        if (getUserJson() != null) {
+            username = getUserJson().getString(HTConstant.JSON_KEY_NICK);
+            if (TextUtils.isEmpty(username)) {
+                username = getUsername();
+            }
+        }
+        return username;
+    }
+
+    public String getUserAvatar() {
+        String username = null;
+        if (getUserJson() != null) {
+            username = getUserJson().getString(HTConstant.JSON_KEY_AVATAR);
+        }
+        return username;
+    }
 
 
 

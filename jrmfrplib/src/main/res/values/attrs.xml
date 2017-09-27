@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Jrmf_Rp_ActionBarView">
+        <attr name="content" format="string"/>
+        <attr name="bankground" format="color"/>
+        <attr name="isBackFinish" format="boolean"/>
+        <attr name="leftIcon" format="reference"/>
+    </declare-styleable>
+
+</resources>
