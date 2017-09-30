@@ -64,7 +64,7 @@ dependencies {
     compile 'com.facebook.fresco:fresco:0.11.0'
     compile 'com.github.promeg:tinypinyin:1.0.0'
     compile 'com.anupcowkur:reservoir:3.1.0'
-    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+//    compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile "org.igniterealtime.smack:smack-android-extensions:$smackVersion"
     compile "org.igniterealtime.smack:smack-experimental:$smackVersion"
     compile "org.igniterealtime.smack:smack-tcp:$smackVersion"
