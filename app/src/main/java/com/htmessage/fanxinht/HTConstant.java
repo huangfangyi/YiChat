@@ -115,15 +115,15 @@ public class HTConstant {
     /**
      * rtmp 推流地址
      */
-    public static final String RTMP_PUSH_URL = "rtmp://publish.teameeting.cn/live/%s";
+    public static final String RTMP_PUSH_URL = "";
     /**
      * rtmp 拉流地址
      */
-    public static final String RTMP_PULL_URL = "rtmp://rtmp.teameeting.cn/live/%s";
+    public static final String RTMP_PULL_URL = "";
     /**
      * hls 地址
      */
-    public static final String HLS_URL = "http://hls.teameeting.cn/live/%s.m3u8";
+    public static final String HLS_URL = "";
 
     //关于第三方登录
     // APP_ID 替换为你的应用从官方网站申请到的合法appId
@@ -155,6 +155,6 @@ public class HTConstant {
     //短信模板//设置您要发送的内容(内容必须和某个模板匹配。以下例子匹配的是系统提供的1号模板）
     public static final String SMSTEXT = "您的验证码是：【%s】。请不要把验证码泄露给其他人。如非本人操作，可不用理会！";
     //魔方互动的SDK的SECRET
-    public static final String MOFANG_SECRET = "";
+    public static final String MOFANG_SECRET = "";    //81be0c5c-2e51-4303-9c6d-422208a696f5
 
 }

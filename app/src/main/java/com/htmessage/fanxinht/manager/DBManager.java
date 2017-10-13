@@ -321,6 +321,7 @@ public class DBManager {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         if (db.isOpen()) {
             ContentValues values = new ContentValues();
+            boolean notice = checkMomentsNotice(db,momentsMessage);
             values.put(MomentsMessageDao.COLUMN_NAME_USERID, momentsMessage.getUserId());
             values.put(MomentsMessageDao.COLUMN_NAME_USERNICK, momentsMessage.getUserNick());
             values.put(MomentsMessageDao.COLUMN_NAME_AVATAR, momentsMessage.getUserAvatar());
@@ -330,9 +331,12 @@ public class DBManager {
             values.put(MomentsMessageDao.COLUMN_NAME_TYPE, momentsMessage.getType().ordinal());
             values.put(MomentsMessageDao.COLUMN_NAME_STATUS, momentsMessage.getStatus().ordinal());
             values.put(MomentsMessageDao.COLUMN_NAME_MOMENTS_ID, momentsMessage.getMid());
-            db.insert(MomentsMessageDao.TABLE_NAME, null, values);
+            if (notice){
+                db.update(MomentsMessageDao.TABLE_NAME,values,MomentsMessageDao.COLUMN_NAME_TIME +" = ?",new String[]{momentsMessage.getTime()+""});
+            }else{
+                db.insert(MomentsMessageDao.TABLE_NAME, null, values);
+            }
         }
-
     }
 
 
@@ -340,7 +344,7 @@ public class DBManager {
         List<MomentsMessage> momentsMessages = new ArrayList<>();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         if (db.isOpen()) {
-            Cursor cursor = db.rawQuery("select * from " + MomentsMessageDao.TABLE_NAME + " desc", null);
+            Cursor cursor = db.rawQuery("select * from " + MomentsMessageDao.TABLE_NAME + " order by "+MomentsMessageDao.COLUMN_NAME_TIME+" desc", null);
             while (cursor.moveToNext()) {
                 MomentsMessage momentsMessage = new MomentsMessage();
                 int id = cursor.getInt(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_ID));
@@ -351,7 +355,7 @@ public class DBManager {
                 long time = cursor.getLong(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_TIME));
                 int status = cursor.getInt(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_STATUS));
                 int type = cursor.getInt(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_TYPE));
-                String content = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_MOMENTS_ID));
+                String content = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_CONTENT));
                 String imageUrl = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_IMAGEURL));
                 momentsMessage.setContent(content);
                 momentsMessage.setId(id);
@@ -411,7 +415,7 @@ public class DBManager {
                 long time = cursor.getLong(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_TIME));
                 int status = cursor.getInt(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_STATUS));
                 int type = cursor.getInt(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_TYPE));
-                String content = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_MOMENTS_ID));
+                String content = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_CONTENT));
                 String imageUrl = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_IMAGEURL));
                 momentsMessage.setContent(content);
                 momentsMessage.setId(id);
@@ -467,6 +471,24 @@ public class DBManager {
         return count;
     }
 
+
+    public synchronized boolean checkMomentsNotice(SQLiteDatabase db,MomentsMessage momentsMessage) {
+        String id = momentsMessage.getUserId();
+        String mid = momentsMessage.getMid();
+        String sql = "select * from "+MomentsMessageDao.TABLE_NAME+" where "+MomentsMessageDao.COLUMN_NAME_USERID+" = "+id
+                + " and "+MomentsMessageDao.COLUMN_NAME_TYPE+" = "+ MomentsMessage.Type.GOOD.ordinal()+" and "+MomentsMessageDao.COLUMN_NAME_MOMENTS_ID+" = " +mid;
+        Cursor cursor = db.rawQuery(sql, null);
+        while (cursor.moveToNext()){
+            String userId = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_USERID));
+            String momentsId = cursor.getString(cursor.getColumnIndex(MomentsMessageDao.COLUMN_NAME_MOMENTS_ID));
+            if (id.equals(userId) && mid.equals(momentsId) && momentsMessage.getType().ordinal() ==MomentsMessage.Type.GOOD.ordinal()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
+    }
 
 
 

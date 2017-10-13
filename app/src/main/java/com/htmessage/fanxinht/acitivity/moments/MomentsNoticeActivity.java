@@ -127,7 +127,7 @@ public class MomentsNoticeActivity extends BaseActivity {
 
             } else {
                 holder.tvContent.setText(momentsMessage.getContent());
-
+                holder.tvContent.setCompoundDrawablesWithIntrinsicBounds(null,null,null,null);
             }
 
 

@@ -579,7 +579,7 @@
         <!--金融魔方配置-->
         <meta-data
             android:name="JRMF_PARTNER_ID"
-            android:value="saikuntest0918" />
+            android:value="" />
         <meta-data
             android:name="JRMF_PARTNER_NAME"
             android:value="@string/app_red_message" />
