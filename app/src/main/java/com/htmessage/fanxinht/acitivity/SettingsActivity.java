@@ -455,6 +455,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         final String version = getVersionCode();
         List<Param> params = new ArrayList<>();
         params.add(new Param("system", "0"));
+        params.add(new Param("vid", version));
         new OkHttpUtils(SettingsActivity.this).post(params, HTConstant.URL_CHECK_UPDATE, new OkHttpUtils.HttpCallBack() {
             @Override
             public void onResponse(JSONObject jsonObject) {

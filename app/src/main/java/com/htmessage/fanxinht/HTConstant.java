@@ -40,7 +40,7 @@ public class HTConstant {
     public static final String GROUP_HOST = "http://120.55.182.220/group/";  //116.62.180.69
     public static final String URL_GROUP_CREATE = GROUP_HOST + "groupCreate.php";
     public static final String URL_GROUP_MEMBERS = GROUP_HOST + "mucMembers.php";
-    public static final String URL_CHECK_UPDATE = HOST + "version.php";    //查询更新
+    public static final String URL_CHECK_UPDATE = HOST + "getVersion";    //查询更新
     public static final String URL_UPLOAD_MOMENT_BACKGROUND = HOST + "uploadpic";//上传朋友圈背景图片
     public static final String URL_GET_RECENTLY_PEOPLE = HOST + "getRecentlyUser";//获取最近上线的人
     public static final String URL_SEND_LOCAL_LOGIN_TIME = HOST + "updateLocalTimestamp";//获取最近上线的人

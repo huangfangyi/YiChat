@@ -78,6 +78,7 @@ public class MainPrestener implements MainBasePrester {
             final String version = getVersionCode();
             List<Param> params = new ArrayList<>();
             params.add(new Param("system", "0"));
+            params.add(new Param("vid", version));
             new OkHttpUtils(context).post(params, HTConstant.URL_CHECK_UPDATE, new OkHttpUtils.HttpCallBack() {
                 @Override
                 public void onResponse(JSONObject jsonObject) {

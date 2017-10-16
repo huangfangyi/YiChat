@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.htmessage.fanxinht.IMAction;
 import com.htmessage.fanxinht.R;
+import com.htmessage.fanxinht.acitivity.main.notice.AllNoticeActivity;
 import com.htmessage.fanxinht.acitivity.moments.MomentsActivity;
 import com.htmessage.fanxinht.acitivity.main.find.recentlypeople.PeopleRecentlyActivity;
 import com.htmessage.fanxinht.domain.MomentsMessageDao;
@@ -22,7 +23,7 @@ import com.htmessage.fanxinht.widget.zxing.activity.CaptureActivity;
 
 
 public class FragmentFind extends Fragment implements View.OnClickListener {
-    private RelativeLayout rl_friends, re_qrcode, rl_near;
+    private RelativeLayout rl_friends, re_qrcode, rl_near,rl_notice;
     private MyBroadcastReceiver myBroadcastReceiver;
     private MomentsMessageDao momentsMessageDao;
     private OnMomentsMessageLisenter onMomentsMessageLisenter;
@@ -70,7 +71,7 @@ public class FragmentFind extends Fragment implements View.OnClickListener {
         rl_friends.setOnClickListener(this);
         re_qrcode.setOnClickListener(this);
         rl_near.setOnClickListener(this);
-
+        rl_notice.setOnClickListener(this);
     }
 
     private void initData() {
@@ -82,7 +83,7 @@ public class FragmentFind extends Fragment implements View.OnClickListener {
         re_qrcode = (RelativeLayout) getView().findViewById(R.id.re_qrcode);
         tvUnredCount = (TextView) getView().findViewById(R.id.unread_msg_count);
         rl_near = (RelativeLayout) getView().findViewById(R.id.rl_near);
-
+        rl_notice = (RelativeLayout) getView().findViewById(R.id.rl_notice);
     }
 
 
@@ -98,6 +99,9 @@ public class FragmentFind extends Fragment implements View.OnClickListener {
 
             case R.id.rl_near://最近在线
                 startActivity(new Intent(getActivity(), PeopleRecentlyActivity.class));
+                break;
+            case R.id.rl_notice:
+                startActivity(new Intent(getActivity(), AllNoticeActivity.class));
                 break;
         }
     }

@@ -366,6 +366,7 @@
     <string name="permission_error">获取权限失败</string>
     <string name="no_permission_camera">未授权的权限</string>
     <string name="people_time">找一找</string>
+    <string name="notice_str">通知公告</string>
     <string name="load_failed">加载失败,请重试!</string>
     <string name="load_more_failed">暂无更多数据!</string>
     <string name="close_app">关闭YiChat</string>

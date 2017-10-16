@@ -43,7 +43,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
     public NewMeesageListener mListener;
     private ConversationPresenter conPresenter;
     private LinearLayout rl_chat_notice_item;
-    private TextView notice_content;
+//    private TextView notice_content;
 
 
     @Override
@@ -53,7 +53,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
         errorItem = (RelativeLayout) root.findViewById(R.id.rl_error_item);
         rl_chat_notice_item = (LinearLayout) root.findViewById(R.id.rl_chat_notice_item);
         errorText = (TextView) errorItem.findViewById(R.id.tv_connect_errormsg);
-        notice_content = (TextView) rl_chat_notice_item.findViewById(R.id.notice_content);
+//        notice_content = (TextView) rl_chat_notice_item.findViewById(R.id.notice_content);
         listView = (ListView) root.findViewById(R.id.list);
         rl_chat_notice_item.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,7 +188,7 @@ public class ConversationFragment extends Fragment implements ConversationView {
                     conPresenter.deleteConversation(conversation);
                 }
             } else if (IMAction.ACTION_REFRESH_ALL_LIST.equals(intent.getAction())) {
-                conPresenter.getShowNotice();
+//                conPresenter.getShowNotice();
             }
         }
     };
@@ -215,18 +215,18 @@ public class ConversationFragment extends Fragment implements ConversationView {
     @Override
     public void onResume() {
         super.onResume();
-        if (conPresenter.getShowNotice().size() > 0 && conPresenter.getShowNotice() != null) {
-            if (rl_chat_notice_item != null) {
-                rl_chat_notice_item.setVisibility(View.VISIBLE);
-                JSONObject jsonObject = conPresenter.getShowNotice().get(0);
-                String title = jsonObject.getString("title");
-                notice_content.setText(title);
-            }
-        } else {
-            if (rl_chat_notice_item != null) {
-                rl_chat_notice_item.setVisibility(View.GONE);
-            }
-        }
+//        if (conPresenter.getShowNotice().size() > 0 && conPresenter.getShowNotice() != null) {
+//            if (rl_chat_notice_item != null) {
+//                rl_chat_notice_item.setVisibility(View.VISIBLE);
+//                JSONObject jsonObject = conPresenter.getShowNotice().get(0);
+//                String title = jsonObject.getString("title");
+//                notice_content.setText(title);
+//            }
+//        } else {
+//            if (rl_chat_notice_item != null) {
+//                rl_chat_notice_item.setVisibility(View.GONE);
+//            }
+//        }
         refresh();
     }
 }
