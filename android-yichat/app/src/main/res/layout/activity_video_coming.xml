@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_bg_zhen">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/default_avatar"
+
+        />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/iv_avatar"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/tv_groupname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nick"
+        android:layout_marginTop="10dp"
+         android:textColor="#fff"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_groupname"
+        android:layout_marginTop="10dp"
+         android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_avatar1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/default_avatar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_nick1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_hulue"
+        android:clickable="true"
+        android:layout_margin="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:src="@drawable/icon_hulue"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:text="忽略"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_join"
+        android:clickable="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_margin="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:src="@drawable/default_group"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:text="进群"
+
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

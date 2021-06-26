@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wight_grey"
+    android:descendantFocusability="afterDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/common_top_bar"
+            android:gravity="center_vertical">
+
+            <include layout="@layout/commom_back_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/location_message"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_location_send"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/common_tab_bg"
+                android:enabled="false"
+                android:onClick="sendLocation"
+                android:text="@string/button_send"
+                android:textColor="#fff"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/height_top_bar"
+                android:layout_height="@dimen/height_top_bar"
+                android:layout_toLeftOf="@id/btn_location_send"
+                android:padding="8dp"
+                android:src="@drawable/search_white" />
+        </RelativeLayout>
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/amapView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ListView
+            android:id="@+id/lv_poi"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:descendantFocusability="afterDescendants" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/common_top_bar"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/back_2"
+                android:layout_width="@dimen/height_top_bar"
+                android:layout_height="@dimen/height_top_bar"
+                android:layout_gravity="center_vertical"
+                android:onClick="back2"
+                android:scaleType="centerInside"
+                android:src="@drawable/top_bar_back" />
+
+            <ImageView
+                android:id="@+id/iv_search2"
+                android:layout_width="@dimen/height_top_bar"
+                android:layout_height="@dimen/height_top_bar"
+                android:layout_toRightOf="@id/back_2"
+                android:padding="8dp"
+                android:src="@drawable/search_white" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/iv_search2"
+                android:background="@drawable/bg_et"
+                android:hint=""
+                android:textColorHint="@color/wight_grey" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lw_keywords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/back_2"
+            android:background="#fff"
+            android:descendantFocusability="afterDescendants" />
+
+    </LinearLayout>
+
+</RelativeLayout>

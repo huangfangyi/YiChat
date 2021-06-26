@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="24dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp" >
+
+        <RelativeLayout
+            android:id="@+id/re_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="bottom"
+                android:textStyle="bold"
+                 android:textColor="#353535"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_day"
+                android:gravity="bottom"
+                android:paddingBottom="2dp"
+                 android:textStyle="bold"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_day"
+                android:paddingTop="5dp"
+                android:text="@string/location_message"
+                android:textColor="#576B95"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/re_time" >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                fresco:placeholderImage="@drawable/default_image" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_videoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/rl_video_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image_video"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginRight="5dp"
+                    fresco:placeholderImage="@drawable/default_image" />
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    fresco:placeholderImage="@drawable/playing" />
+                </RelativeLayout>
+                <TextView
+                    android:gravity="top|left"
+                    android:id="@+id/tv_content_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/rl_video_show"
+                    android:layout_toRightOf="@id/rl_video_show"
+                    android:ellipsize="end"
+                    android:text="@string/no_more_messages"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_alignBottom="@id/image_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/image_1"
+                android:text="@string/not_set"
+                android:textColor="#dddddd"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_alignTop="@id/image_1"
+                android:gravity="top|left"
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_num"
+                android:layout_toRightOf="@id/image_1"
+                android:ellipsize="end"
+                android:text="@string/no_more_messages"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

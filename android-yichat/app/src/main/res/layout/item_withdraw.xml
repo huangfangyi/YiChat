@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="94dp">
+
+        <ImageView
+            android:id="@+id/iv_wd"
+            android:layout_width="48dp"
+
+            android:layout_height="48dp"
+            android:src="@drawable/icon_withdraw"
+            android:layout_marginLeft="13dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+        android:layout_toRightOf="@+id/iv_wd"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="零钱提现-到银行卡（3086）"
+        android:textSize="14sp"
+        android:textColor="#353535"
+
+        />
+
+        <TextView
+            android:layout_below="@+id/tv_title"
+            android:layout_toRightOf="@+id/iv_wd"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="零钱提现-到银行卡（3086）"
+            android:textSize="12sp"
+            android:textColor="#999999"
+
+            />
+
+        <TextView
+            android:layout_below="@+id/tv_time"
+            android:layout_toRightOf="@+id/iv_wd"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号不正确"
+            android:textSize="12sp"
+            android:textColor="#999999"
+
+            />
+
+
+        <TextView
+            android:layout_alignParentEnd="true"
+             android:layout_marginRight="13dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥200"
+            android:textSize="12sp"
+            android:textColor="@color/red"
+
+            />
+        <TextView
+            android:layout_below="@+id/tv_money"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待处理"
+            android:textSize="12sp"
+            android:textColor="#999999"
+
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

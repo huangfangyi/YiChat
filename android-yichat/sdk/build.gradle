@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+ext {
+    smackVersion = '4.1.9'
+}
+dependencies {
+    implementation 'com.tencent:mmkv:1.0.13'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation "org.igniterealtime.smack:smack-android-extensions:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-experimental:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-tcp:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-legacy:$smackVersion"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.17'
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.8.5'
+    implementation 'com.alibaba:fastjson:1.2.51'
+    implementation 'com.alibaba:fastjson:1.2.51.android'
+}
+configurations {
+    all*.exclude group: 'xpp3', module: 'xpp3'
+}
+
+
+task makeJar(type: Copy) {
+    //删除存在的
+    delete 'build/libs/htmessage.jar'
+    //设置拷贝的文件
+    from('build/intermediates/intermediate-jars/release')
+    //打进jar包后的文件目录
+    into('build/libs/')
+    //将classes.jar放入build/libs/目录下
+    //include ,exclude参数来设置过滤
+    //（我们只关心classes.jar这个文件）
+    include('classes.jar')
+    //重命名
+    rename('classes.jar', 'qingliao_1227.jar')
+}
+task showMeCache << {
+    configurations.compile.each { println it }
+}
+//
+//task makeJar(type: Copy) {
+//    //删除存在的
+//    delete 'build/libs/htmessage_dj.jar'
+//    //设置拷贝的文件
+//    from('build/intermediates/bundles/release/')
+//    //打进jar包后的文件目录
+//    into('build/libs/')
+//    //将classes.jar放入build/libs/目录下
+//    //include ,exclude参数来设置过滤
+//    //（我们只关心classes.jar这个文件）
+//    include('classes.jar')
+//    //重命名
+//    rename ('classes.jar', 'htmessage_dj.jar')
+//}
+
+
+makeJar.dependsOn(build)
+
+
+

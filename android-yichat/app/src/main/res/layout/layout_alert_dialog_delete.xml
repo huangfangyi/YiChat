@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/red_input_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_delete_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+       style="@style/text_blue_16"
+        android:gravity="center"
+        android:text="@string/prompt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_delete_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/Delete_the_contact"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="10dp"
+        android:background="@color/wight_grey" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize">
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:text="@string/cancel"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/blue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_height="match_parent" />
+        <View
+            android:id="@+id/view_line_dialog"
+            android:layout_width="2px"
+            android:background="@color/wight_grey"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_ok"
+            android:text="@string/ok"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

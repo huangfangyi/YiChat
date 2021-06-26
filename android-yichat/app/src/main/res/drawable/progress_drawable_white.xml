@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_01"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_02"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_03"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_04"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_05"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_06"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_07"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_08"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_09"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_10"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_11"
+            android:gravity="center" >
+        </clip>
+    </item>
+    <item android:duration="83" >
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/ic_loading_white_12"
+            android:gravity="center" >
+        </clip>
+    </item>
+</animation-list>

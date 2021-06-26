@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="13dp">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/re_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <ImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:background="@drawable/default_avatar"
+              />
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/chat_nick_margin_left"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:visibility="gone"
+
+                android:id="@+id/tv_userid"
+                style="@style/chat_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="张三啊"
+                android:textSize="@dimen/chat_nick_text_size" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_margin="12dp"
+
+            android:id="@+id/bubble"
+            android:layout_below="@+id/ll_header"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iv_userhead"
+            android:layout_toRightOf="@+id/iv_userhead"
+            android:background="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/orange2">
+
+                    <ImageView
+                        android:id="@+id/iv_red_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/transfer" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/iv_red_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_red_name"
+                            style="@style/text_white_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|left"
+                            android:maxLines="2"
+                            android:minHeight="30dp"
+                            android:text="@string/accept" />
+
+                        <TextView
+                            android:id="@+id/tv_red_content"
+                            style="@style/text_white_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_red_name"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/iv_red_bg"
+                            android:gravity="center|left"
+                            android:minHeight="30dp"
+                            android:text="@string/Ok_transfer" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    style="@style/text_weight_gray_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/transfer_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

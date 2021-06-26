@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#f0f0f0">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="到账银行卡"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/tv_temp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="选取提现银行卡"
+            android:textColor="#3151b6"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="添加银行卡"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="#999999"
+            android:text="提现金额"
+            android:textSize="14sp"
+            android:layout_margin="20dp"
+
+
+            />
+
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/et_money"
+             android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="10dp"
+            android:textColor="#353535"
+            android:hint="￥请输入提现金额"
+            android:background="@drawable/bg_corner_black"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/yu_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:text="余额："
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:id="@+id/et_memo"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:textColor="#999999"
+            android:hint="备注信息："
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:gravity="top"
+            android:background="@drawable/bg_corner_black"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+             android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+             android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:gravity="top"
+             android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+
+            />
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="提现"
+            android:background="@drawable/bg_btn_green"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+</LinearLayout>

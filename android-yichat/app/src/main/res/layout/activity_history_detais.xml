@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_bar_back" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_search"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="查找"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="13dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_btn_green"
+            />
+
+        <EditText
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/bg_et"
+            android:gravity="bottom"
+            android:textColor="#fff"
+             android:paddingBottom="10dp"
+            android:paddingLeft="46dp"
+            android:singleLine="true"
+            android:textColorHint="#484c4c"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignBottom="@id/et_search"
+            android:layout_alignLeft="@id/et_search"
+            android:layout_margin="8dp"
+            android:src="@drawable/search_white" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ListView>
+
+</LinearLayout>

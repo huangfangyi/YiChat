@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/bg_corner"
+        android:padding="13dp">
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="转账说明"
+            android:textColor="#353535"
+            android:textSize="16sp"
+
+            />
+
+        <EditText
+            android:id="@+id/et_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_temp"
+            android:layout_marginTop="18dp"
+            android:hint="转账说明"
+            android:maxLength="10"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_temp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_remarks"
+            android:layout_marginTop="10dp"
+            android:text="最多输入10个字"
+            android:textColor="#999999"
+            android:textSize="16sp"
+
+            />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_temp2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:text="确定"
+            android:textColor="#157EFB"
+            android:textSize="14sp"
+
+            />
+
+        <Button
+
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_temp2"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_ok"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="#999999"
+            android:textSize="16sp"
+
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

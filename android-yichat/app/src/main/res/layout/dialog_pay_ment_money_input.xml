@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_input_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        style="@style/text_black_trasp_16"
+        android:text="@string/pay_ment_message"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_remarks"
+        style="@style/layout_margin"
+        android:hint="@string/pay_ment_message_hint"
+        android:layout_width="match_parent"
+        android:background="@drawable/input_bg"
+        android:layout_height="@dimen/input_edt_hight"
+        android:paddingLeft="2dp"
+        android:textColor="@color/black_transp"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/wight_grey"></View>
+
+    <LinearLayout
+        style="@style/layout_margin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel"
+            style="@style/text_blue_16"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/wight_grey"></View>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ok"
+            style="@style/text_blue_16"/>
+
+    </LinearLayout>
+
+</LinearLayout>

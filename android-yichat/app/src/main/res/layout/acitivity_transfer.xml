@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2"
+    android:orientation="vertical">
+   <include layout="@layout/activity_header" />
+
+    <LinearLayout
+        android:background="@drawable/bg_corner"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="#f0f0f0"
+             android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+             android:id="@+id/iv_avatar"
+            android:src="@drawable/default_avatar"
+            />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:textColor="#353535"
+              android:textSize="16sp"
+              android:text="昵称"
+              android:id="@+id/tv_nick"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginBottom="20dp"
+
+
+
+              />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转账金额"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="#353535"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="26dp"
+             android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="￥"
+                android:gravity="top"
+                android:textSize="36sp"
+                android:textColor="#353535"
+                />
+            <EditText
+                android:layout_marginRight="26dp"
+                android:id="@+id/et_money"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="34sp"
+                android:background="@null"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+             android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+             android:background="#f0f0f0"
+
+            />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="26dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:textSize="14sp"
+                android:textColor="#999999"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                />
+            <TextView
+                 android:id="@+id/tv_set_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加转账说明"
+                android:textSize="14sp"
+                android:textColor="#157EFB"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:background="@drawable/bg_btn_green"
+            android:layout_margin="26sp"
+            android:text="转账"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

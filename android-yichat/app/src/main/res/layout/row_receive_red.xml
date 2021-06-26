@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:paddingTop="10dp"
+        android:id="@+id/iv_userhead"
+        android:layout_width="@dimen/size_avatar"
+        android:layout_height="@dimen/size_avatar_height"
+        android:layout_marginStart="@dimen/margin_chat_activity"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timestamp" />
+
+    <TextView
+        android:id="@+id/tv_userid"
+        style="@style/chat_text_name_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:text="张三啊"
+        android:textSize="@dimen/chat_nick_text_size"
+        app:layout_constraintLeft_toRightOf="@id/iv_userhead"
+        app:layout_constraintTop_toTopOf="@id/iv_userhead" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con_redpacket"
+        android:layout_width="240dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="13dp"
+        android:background="@drawable/bg_redpacket_received"
+        app:layout_constraintLeft_toRightOf="@id/iv_userhead"
+        app:layout_constraintTop_toBottomOf="@id/tv_userid">
+
+
+        <ImageView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/iv_red_bg"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+
+            android:src="@drawable/red" />
+
+
+        <TextView
+            app:layout_constraintLeft_toRightOf="@id/iv_red_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_red_bg"
+            android:id="@+id/tv_red_name"
+            style="@style/text_white_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:maxLines="2"
+             android:text="@string/accept" />
+
+        <TextView
+            app:layout_constraintLeft_toRightOf="@id/iv_red_bg"
+            app:layout_constraintTop_toBottomOf="@id/tv_red_name"
+            android:id="@+id/tv_red_content"
+            style="@style/text_white_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_red_name"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_red_bg"
+            android:gravity="center|left"
+            android:minHeight="30dp"
+            android:text="@string/get_red" />
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+             android:id="@+id/tv_content"
+            android:paddingBottom="3dp"
+            style="@style/text_weight_gray_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:paddingLeft="10dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2"
+    android:orientation="vertical">
+
+    <include  layout="@layout/activity_header"/>
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:padding="10dp"
+        android:hint="请输入公告标题"
+        />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="10dp"
+        android:hint="请输入公告内容"
+        android:gravity="left|top"
+        android:background="@drawable/bg_corner"
+        />
+
+
+
+    <Button
+        android:id="@+id/btn_summit"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="30dp"
+        android:text="提交"
+        android:textSize="18sp"
+        android:background="@drawable/bg_btn_green"
+        />
+
+
+</LinearLayout>

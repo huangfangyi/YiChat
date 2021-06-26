@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color">#576B95</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="common_top_bar">#596DAA</color>
+    <color name="buttom_unenable">#B2BFE2</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="bottom_bar_normal_bg">#fcfcfc</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="gray_normal">#D4D4D4</color>
+    <color name="icon_press">#68C270</color>
+    <color name="icon_numal">#6FCD78</color>
+
+    <color name="divider_list">#d4d4d4</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="holo_green_light">#ff99cc00</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="black_transp">#99000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray">#666666</color>
+    <!-- [begin]crop -->
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <!-- [end]crop -->
+
+    <!--Theme-->
+    <color name="accent_red">#FF5722</color>
+    <!--Theme-->
+    <color name="blue">#2196F3</color>
+    <color name="light_grey">#ffbebebe</color>
+
+    <color name="main_bottom_bg">#fcfcfc</color>
+    <color name="main_bottom_split">#D4D4D4</color>
+    <color name="orange2">#F68714</color>
+    <color name="wight_grey">#f1f1f1</color>
+    <!--red-->
+    <color name="red">#FF5722</color>
+    <color name="red_99">#99FF5722</color>
+    <color name="red_notice_bg">#cf6043</color>
+    <color name="red_notice_text">#ebcc9a</color>
+    <color name="color_a0a0a0">#a0a0a0</color>
+    <color name="color_c9c9c9">#c9c9c9</color>
+    <color name="color_b7b7b7">#b7b7b7</color>
+    <color name="color_ff9893">#ff9893</color>
+    <color name="title_bar_color">#157efb</color>
+    <color name="trans_title_bar_color">#88157efb</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_157efb">#157efb</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_AAAAAA">#AAAAAA</color>
+    <color name="alpha_60_black">#99000000</color>
+    <color name="alpha_30_white">#4DFFFFFF</color>
+    <color name="main_red">#D4333C</color>
+</resources>

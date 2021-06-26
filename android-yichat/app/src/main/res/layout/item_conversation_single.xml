@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/re_main"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/list_item_bg_white"
+    android:gravity="center_vertical">
+
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="13dp"
+         android:padding="4dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/unread_msg_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/unread_dot"
+        android:gravity="center"
+        android:text="7"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/avatar" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#353535"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/avatar" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_marginTop="3dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#AAAAAA"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/avatar" />
+
+    <ImageView
+        android:id="@+id/msg_state"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+
+        android:src="@drawable/msg_state_fail_resend"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        app:layout_constraintLeft_toRightOf="@+id/avatar" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/mentioned"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/were_mentioned"
+        android:textColor="#e84e40"
+        android:layout_marginBottom="3dp"
+        android:textSize="13sp"
+         app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        app:layout_constraintLeft_toRightOf="@+id/msg_state" />
+
+    <TextView
+        android:layout_marginBottom="3dp"
+        android:id="@+id/message"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+         android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"
+        app:layout_constraintRight_toLeftOf="@+id/time"
+         app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        app:layout_constraintLeft_toRightOf="@+id/mentioned" />
+
+</android.support.constraint.ConstraintLayout>

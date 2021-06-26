@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:paddingTop="10dp"
+        android:id="@+id/iv_userhead"
+        android:layout_width="@dimen/size_avatar"
+        android:layout_height="@dimen/size_avatar_height"
+        android:layout_marginStart="@dimen/margin_chat_activity"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timestamp" />
+
+    <TextView
+        android:id="@+id/tv_userid"
+        style="@style/chat_text_name_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:text="张三啊"
+        android:textSize="@dimen/chat_nick_text_size"
+        app:layout_constraintLeft_toRightOf="@id/iv_userhead"
+        app:layout_constraintTop_toTopOf="@id/iv_userhead" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="3dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="240dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toRightOf="@id/iv_userhead"
+        app:layout_constraintTop_toBottomOf="@id/tv_userid"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

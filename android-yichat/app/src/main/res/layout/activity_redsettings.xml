@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="中奖数字:"
+            android:textColor="#353535"
+            android:textSize="16sp"
+
+            />
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="#ffffff"
+            android:hint="请输入中奖数字"
+            android:padding="3dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:text="你输入的数字必将在群内下一个红包中出现"
+        android:textColor="@color/red"
+        android:textSize="12sp" />
+
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_margin="60dp"
+        android:textColor="#fff"
+        android:text="确定"
+        android:textSize="16sp"
+        android:background="@drawable/bg_btn_green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_header" />
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/jrmf_rp_ic_trans_wait" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        android:text="等待收款"
+        android:textColor="#353535"
+        android:textSize="18sp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="￥20.00"
+        android:textColor="#353535"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_money"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="一天内朋友未确认，将退还给你"
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tv_money"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_btn_green"
+        android:text="确认收钱"
+        android:textColor="#fff"
+        android:textSize="16sp"
+
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/btn_sure"
+         android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:text="一天内未确认，将退还给对方"
+            />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="立即退还"
+            android:textColor="#157EFB"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_time_send"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="20dp"
+    android:gravity="bottom|center_horizontal"
+    android:text="转账时间:20190601 16:19:23"
+
+    />
+
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_time_back"
+          android:layout_above="@+id/tv_time_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="bottom|center_horizontal"
+        android:text="转账时间:20190601 16:19:23"
+
+        />
+</RelativeLayout>

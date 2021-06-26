@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/wight_grey"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_search"></include>
+        <TextView
+            android:text="@string/chat_history_notice"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/listview"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

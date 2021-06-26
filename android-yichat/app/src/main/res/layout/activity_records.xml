@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_header"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:tabBackground="@color/main_bottom_bg"
+        app:tabGravity="fill"
+
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabTextColor="#353535"
+        app:tabSelectedTextColor="#e40707"
+        app:tabIndicatorColor="#30e407"
+        />
+
+
+    <com.htmessage.yichat.acitivity.main.NoAnimViewPager
+        android:layout_marginTop="1dp"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/main_bottom_split"
+        android:paddingBottom="0.1dp"
+        android:scrollbars="none"></com.htmessage.yichat.acitivity.main.NoAnimViewPager>
+
+
+
+</LinearLayout>

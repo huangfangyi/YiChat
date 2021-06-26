@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#E2E2E2"
+    android:layout_height="match_parent">
+    <include layout="@layout/activity_header"/>
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        style="@style/text_black_28"
+        android:layout_centerHorizontal="true"
+        android:text="我的钱包"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+
+        android:background="@color/common_top_bar"
+        android:id="@+id/ll_temp"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_marginTop="40dp"
+             android:text="账户余额"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+
+            android:id="@+id/tv_adavance"
+            android:layout_marginTop="40dp"
+            style="@style/text_black_28"
+              android:text="@string/pay_money"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+             android:background="#555A9E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_recharge"
+                android:layout_width="0dp"
+                android:focusable="true"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                style="@style/text_white_18"
+                android:text="@string/recharge"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="1dp"
+                android:background="#fff"
+                android:layout_margin="5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                />
+            <Button
+
+                android:id="@+id/btn_withdraw"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:focusable="true"
+                android:layout_weight="1"
+                style="@style/text_white_18"
+                android:text="@string/receive_money"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:background="#fff"
+        android:layout_below="@+id/ll_temp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_redpacket"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+          
+            android:background="@drawable/list_item_bg_white"
+            android:clickable="true"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/iv_redpacket"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/jrmf_w_ic_rp" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_redpacket"
+                android:text="我的红包"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="12dp"
+                android:background="#dadada"
+        />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_record"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:background="@drawable/list_item_bg_white"
+            android:clickable="true"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/iv_record"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/jrmf_w_trade_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="14dp"
+                android:layout_toRightOf="@id/iv_record"
+                android:text="交易记录"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="12dp"
+                android:background="#dadada"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_safe"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:background="@drawable/list_item_bg_white"
+            android:clickable="true"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/iv_safe"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/jrmf_w_secure_setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_safe"
+                android:text="安全设置"
+                android:textColor="#353535"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="12dp"
+                android:background="#dadada"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_bank"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:background="@drawable/list_item_bg_white"
+            android:clickable="true"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/iv_bank"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/jrmf_w_bank_setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_bank"
+                android:text="银行卡设置"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_next" />
+
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="12dp"
+                android:background="#dadada"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <!--<ListView-->
+        <!--android:background="#fff"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_below="@+id/ll_temp"-->
+
+        <!--android:id="@+id/listView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"></ListView>-->
+
+
+    <!--<Button-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/btn_set_pay_password"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/ll_temp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:focusable="true"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--style="@style/text_white_18"-->
+        <!--android:text="@string/set_pay_password"-->
+        <!--android:background="@drawable/bg_btn_green"-->
+        <!--android:layout_height="wrap_content" />-->
+</RelativeLayout>

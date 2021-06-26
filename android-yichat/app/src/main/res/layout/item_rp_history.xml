@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_rp_name"
+        style="@style/text_black_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_margin="13dp"
+        android:text="@string/red_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_group"
+        app:layout_constraintLeft_toRightOf="@+id/tv_rp_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_rp_name"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_rp_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rp_ic_pin"
+        />
+
+    <TextView
+        android:id="@+id/tv_rp_money"
+        style="@style/text_black_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+
+        android:gravity="right"
+        android:text="@string/rp_money_yuan"
+        app:layout_constraintLeft_toRightOf="@+id/tv_rp_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:paddingBottom="13dp"
+        android:layout_marginLeft="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rp_name"
+        android:id="@+id/tv_rp_time"
+        style="@style/text_white_gray_14"
+        android:layout_width="wrap_content"
+        android:text="03-23"
+        android:layout_height="wrap_content"
+          />
+
+
+
+    <TextView
+        android:layout_marginRight="13dp"
+        android:paddingBottom="13dp"
+         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rp_money"
+        android:id="@+id/tv_rp_status"
+        style="@style/text_white_gray_14"
+        android:layout_width="wrap_content"
+        android:text="03-23"
+        android:layout_height="wrap_content"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通知-->
+    <!--<string name="has_more_msg"> %1个联系人发来%2条消息</string>-->
+    <string name="zhongkuohao">[</string>
+    <string name="zhongkuohao_msg">条]</string>
+    <string name="app_name">众聊</string>
+    <string name="app_chat">消息</string>
+    <string name="text_ack_msg">已读</string>
+    <string name="text_delivered_msg">送达</string>
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="button_send">发送</string>
+    <string name="attach_picture">相册</string>
+    <string name="attach_take_pic">拍摄</string>
+    <string name="address_book">通讯录</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="button_logout">退出登录</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="prompt">提示</string>
+    <string name="location_message">位置信息</string>
+    <string name="recording_video">录制视频</string>
+    <string name="search_header">搜</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="connect_conflict">登录过期，请重新登录</string>
+    <string name="set">设置</string>
+    <string name="notify">新消息提醒</string>
+    <string name="newnotify">开启新消息通知</string>
+    <string name="notify_set">新消息设置</string>
+    <string name="voice">声音</string>
+    <string name="shake">震动</string>
+
+    <string name="Making_sure_your_location">正在确定你的位置...</string>
+    <string name="Send_voice_need_sdcard_support">发送语音需要sdcard支持</string>
+    <string name="Recording_without_permission">无录音权限</string>
+    <string name="The_recording_time_is_too_short">录音时间太短</string>
+    <string name="send_failure_please">发送失败，请检测服务器是否连接</string>
+    <string name="Logoff_notification">下线通知</string>
+    <string name="The_video_to_start">录像开始</string>
+    <string name="Whether_to_send">是否发送？</string>
+    <string name="Open_the_equipment_failure">打开设备失败!</string>
+    <string name="Are_logged_out">正在退出登录..</string>
+    <string name="were_mentioned">[有人@我]</string>
+
+    <string name="title_user_profile">个人资料</string>
+
+    <string name="Days_ago">天前</string>
+    <string name="An_hour_ago">小时前</string>
+    <string name="just">刚刚</string>
+    <string name="copy">复制</string>
+    <string name="delete">删除</string>
+    <string name="the_current_network">当前网络不可用，请检查网络设置</string>
+
+
+    <string name="tel_is_not_allow_null">手机号不能为空</string>
+    <string name="pwd_is_not_allow_null">密码不能为空</string>
+    <string name="please_input_true_mobile">请输入正确的手机号码!</string>
+    <!--注册-->
+    <string name="i_am">我是</string>
+    <string name="press_top">点击上面的</string>
+    <string name="btn_means_agree">按钮,即表示你同意</string>
+    <string name="Secret_agreement">《众聊软件许可及服务协议》</string>
+    <string name="login">登录</string>
+    <string name="password">密码</string>
+    <string name="register">用户注册</string>
+    <string name="confirmpassword">确认密码</string>
+    <string name="nickname">昵称</string>
+    <string name="has_code">获取验证码</string>
+    <string name="Two_input_password">两次输入的密码不一致，请重新输入!</string>
+    <string name="Is_the_registered">正在注册...</string>
+    <string name="country_code">+86</string>
+    <string name="are_reset_password">正在重置...</string>
+    <string name="password_reset_success">密码重置成功！</string>
+    <string name="password_reset_failed">密码重置失败!</string>
+    <string name="new_password_cannot_be_empty">新密码不能为空!</string>
+    <string name="mobile_not_be_null">手机号不能为空</string>
+    <string name="image_manager">相册</string>
+    <string name="Initiate_group_chat">发起群聊</string>
+    <string name="zero_group">0个群聊</string>
+    <string name="group_size">个群聊</string>
+    <string name="scanning">扫一扫</string>
+    <string name="new_friend">新的朋友</string>
+    <string name="add_friend">添加好友</string>
+    <string name="me">我</string>
+    <string name="countries_and_regions">国家</string>
+    <string name="china">中国</string>
+    <string name="you_mobile">你的手机号码</string>
+    <string name="input_pwd">填写密码</string>
+    <string name="find_pwd">找回密码</string>
+    <string name="login_by_mobile">登录</string>
+    <string name="Verification_Code">验证码</string>
+    <string name="new_password">新密码</string>
+    <string name="Head_portrait">头像</string>
+    <string name="sex">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="modify_name">更改名字</string>
+    <string name="send_msg">发送消息</string>
+    <string name="add_to_contacts">添加到通讯录</string>
+    <string name="pass_or_no_by_send">你需要发送验证申请，等对方通过</string>
+
+    <string name="downwaiting">正在下载...</string>
+    <string name="group_chat">群聊</string>
+
+    <string name="deleting">正在删除...</string>
+    <string name="Delete_failed">删除失败</string>
+    <string name="change_groupName">修改群名称</string>
+    <string name="change_group_desc">修改群描述</string>
+    <string name="Modify_the_group_name_successful">修改群名称成功</string>
+    <string name="group_groupname_dot_18">群名称不能超过18个字符</string>
+    <string name="group_groupdesc_dot_100">群描述不能超过100个字符</string>
+    <string name="can_not_connect_chat_server_connection">连接不到聊天服务器</string>
+    <string name="Is_to_create_a_group_chat">正在创建群聊...</string>
+    <string name="Failed_to_create_groups">创建群组失败!</string>
+    <string name="success_to_create_groups">创建群组成功!</string>
+    <string name="Failed_to_download_file">下载文件失败:</string>
+
+    <string name="Delete_the_contact">删除联系人</string>
+
+     <string name="update_groups_failed">更新群聊失败!</string>
+    <string name="update_groups_success">更新群聊成功!</string>
+
+    <string name="revoke_content">你撤回了一条消息</string>
+    <string name="revoke_content_someone">%s撤回了一条消息</string>
+
+    <string name="delete_group">解散群组</string>
+    <string name="exit_group">退出群组</string>
+
+
+    <string name="check_friend">请选择好友</string>
+    <string name="check_max_members">群最大人数为1000</string>
+    <string name="search">搜索</string>
+    <string name="are_uploading">正在更新...</string>
+    <string name="upload_failed">更新失败,code:</string>
+    <string name="change_nick">修改昵称</string>
+    <string name="change_appId">修改众聊号</string>
+    <string name="change_personalized_signature">修改个人签名</string>
+    <string name="mixin_can_not_has_chinese">众聊号不能包含中文</string>
+    <string name="string_not_30">不能超过30个字符</string>
+    <string name="me_qrcode">我的身份二维码</string>
+    <string name="request_add_friend">请求加为好友</string>
+
+    <string name="Already_added">已添加</string>
+    <string name="accept">接受</string>
+    <string name="save">保存</string>
+    <string name="good_name">好名字可以让你的好朋友更容易记得你</string>
+    <string name="logout_failed">退出登录失败!</string>
+    <!--自动更新-->
+    <string name="check_update">检查更新</string>
+    <string name="are_checking_update">正在查询更新...</string>
+    <string name="has_update">有新版本</string>
+    <string name="just_new_version">已经是最新版本了!</string>
+    <string name="update_now">现在升级</string>
+    <string name="update_later">以后再说</string>
+    <!--好友圈-->
+    <string name="resetPassword">重置密码</string>
+    <string name="input_bind_mobile">请输入登录手机号</string>
+
+    <!--关于活动-->
+
+
+    <string name="loading">正在加载...</string>
+    <string name="delete_sucess">删除成功!</string>
+    <string name="delete_failed">删除失败!</string>
+    <string name="exting_group">正在退出...</string>
+    <string name="exting_group_success">退出群组成功!</string>
+    <string name="exting_group_failed">退出群组失败!</string>
+    <string name="joining_group">正在加入群聊...</string>
+    <string name="joining_group_success">加入成功!</string>
+    <string name="joining_group_failed">加入失败!</string>
+    <string name="ok_xiaokuohao">确定(</string>
+    <string name="xiaokuohao">)</string>
+    <string name="chat_msg">聊天信息</string>
+    <string name="xiaokuohao_left">(</string>
+    <string name="change_groupName_failed">更新群名称失败!</string>
+    <string name="are_doing">正在处理...</string>
+
+    <string name="file">文件</string>
+    <string name="no_pression">没有权限!</string>
+
+    <string name="keep_live_setting">后台保活设置</string>
+    <string name="bd_map">百度地图</string>
+    <string name="gd_map">高德地图</string>
+    <string name="gg_map">谷歌地图</string>
+    <string name="tc_map">腾讯地图</string>
+
+    <string name="login_cancle">登录取消</string>
+    <string name="update_has">现在升级(强制更新)</string>
+    <string name="forward">转发</string>
+    <string name="reback">撤回</string>
+    <string name="copy_success">复制成功!</string>
+    <string name="copy_failed">复制失败!</string>
+    <string name="please_check_contant">请选择联系人!</string>
+    <string name="forword_people">确定转发给%s人吗?</string>
+    <string name="forword_group">确定转发到%s个群组吗?</string>
+    <string name="please_check_group">请选择群组!</string>
+    <string name="forword_always">确定转发这条消息?</string>
+    <string name="resend_text">重新发送这条消息吗?</string>
+    <string name="stick_conversation">置顶会话</string>
+    <string name="cancle_stick_conversation">取消置顶</string>
+    <string name="close_app">关闭APP</string>
+    <string name="exit_this_user">退出当前账号</string>
+    <string name="just_15">15分钟前</string>
+    <string name="just_30">30分钟前</string>
+    <string name="just_1hour">1小时前</string>
+    <string name="more_people">%s个联系人</string>
+    <!--photopicker-->
+    <!--private final static String[] msg_eng = {"sent a message", "sent a picture", "sent a voice",-->
+    <!--"sent location message", "sent a video", "sent a file", "%1 contacts sent %2 messages"-->
+    <!--};-->
+    <!--private final static String[] msg_ch = {"发来一条消息", "发来一张图片", "发来一段语音", "发来位置信息", "发来一个视频", "发来一个文件",-->
+    <!--"%1个联系人发来%2条消息"-->
+    <!--};-->
+    <string name="sent_a_message">发来一条消息</string>
+    <string name="sent_a_picture">发来一张图片</string>
+    <string name="sent_a_voice">发来一段语音</string>
+    <string name="sent_a_location">发来位置信息</string>
+    <string name="sent_a_video">发来一个视频</string>
+    <string name="sent_a_file">发来一个文件</string>
+    <string name="contacts_messages">%1$s个联系人发来%2$i条消息</string>
+    <string name="watch_live">进行直播</string>
+
+    <string name="clear_history">清空聊天记录</string>
+    <string name="just_delete_friend">您已被对方移除好友!</string>
+     <string name="please_input_code">请输入验证码!</string>
+    <string name="code_is_wrong">验证码不正确!</string>
+    <string name="sending">发送中...</string>
+    <string name="call_us">联系我们</string>
+
+    <string name="wallet">钱包</string>
+    <string name="attach_red">红包</string>
+    <string name="attach_card">名片</string>
+    <string name="red_content">众聊红包</string>
+    <string name="transfer_content">众聊转账</string>
+    <string name="get_red">领取红包</string>
+    <string name="app_red_message">众聊红包</string>
+    <string name="app_transfer_message">众聊转账</string>
+
+    <string name="Ok_transfer">确认收款</string>
+    <string name="get_transfer">待对方收款</string>
+    <string name="send_card_or_no">是否发送该名片?</string>
+    <string name="you">你</string>
+    <string name="navigation">导航</string>
+    <string name="has_no_map">您尚未安装该地图软件,请下载后再开启导航!</string>
+    <string name="location_failed">定位失败!</string>
+    <string name="not_delete_self">群创建者或管理者不能被移除!请取消管理员身份</string>
+    <string name="Select_the_contact">选择联系人</string>
+    <string name="all_members">全体成员</string>
+    <string name="transfer_money_to">转账给%s</string>
+    <string name="has_get_qrpay_from">已收到%s的付款!</string>
+    <string name="self_card">个人名片</string>
+    <string name="has_cancle_no_talk">管理员已解除全员禁言!</string>
+    <string name="all_no_talk">全员禁言</string>
+    <string name="search_chat_history">查询聊天内容</string>
+    <string name="chat_history_notice">以下是搜索到的聊天内容</string>
+    <string name="scan_qrcode_to_add_friend">扫一扫上面的二维码,加我为好友</string>
+
+
+    <string name="remarke_friend">设置备注</string>
+    <string name="remark_input">请输入备注</string>
+
+    <string name="set_successful">设置成功</string>
+    <string name="set_failed">设置失败</string>
+
+    <string name="Click_again">点击重新获取</string>
+    <string name="Remaining_seconds">剩余%s秒</string>
+    <string name="Make_sure_that_the_short_video_is_used">确定使用该小视频?</string>
+
+    <string name="saving">保存中...</string>
+    <string name="saving_successful">保存成功</string>
+    <string name="saving_failed">保存失败</string>
+     <string name="clear">正在清空...</string>
+    <string name="group_name">群名称</string>
+    <string name="group_desc">群描述</string>
+    <string name="group_avatar">群头像</string>
+    <string name="exit_and_delete">删除并退出</string>
+    <string name="miss_permission_storage">无相册权限</string>
+    <string name="miss_permission_camera">无拍照权限</string>
+
+    <string name="are_authing">申请中...</string>
+    <string name="pay_sending_error">请求支付失败,请重试!</string>
+
+    <string name="money">金额</string>
+    <string name="money_size">元</string>
+    <string name="money_numal">0.00</string>
+    <string name="words">留言</string>
+    <string name="send_red">发红包</string>
+    <string name="words_numal">恭喜发财,大吉大利!</string>
+    <string name="insert_money">塞钱进红包</string>
+    <string name="red_notice_content_signle">单个红包金额不可超过200元</string>
+    <string name="red_content_bottom">可直接使用收到的零钱发红包</string>
+    <string name="red_more">红包个数</string>
+    <string name="ge">个</string>
+    <string name="total_money">总金额</string>
+    <string name="notice_title">提示信息</string>
+    <string name="group_total_people">本群共%s人</string>
+    <!-- 绑定银行卡 -->
+    <!-- 支付方式 -->
+    <string name="input_pay_pwd">请输入支付密码</string>
+    <string name="forget_pay_pwd">忘记支付密码？</string>
+    <string name="please_pay">请支付</string>
+
+    <!--红包显示-->
+    <string name="no_rp">手慢了, 红包派完了</string>
+    <string name="no_rp_timeover">红包已过期</string>
+    <string name="no_rp_normal">该红包已被领取</string>
+
+    <!--红包详情-->
+    <string name="single_rp_done_has_left">%1$d个红包共%2$s元,已领取%3$d/%4$d个</string>
+    <string name="who_rp">%1$s的红包</string>
+    <string name="single_rp_done">%1$d个红包共%2$s元</string>
+    <string name="single_rp">红包金额%1$s元,等待对方领取</string>
+    <string name="rp_no_grab_tip">未领取的红包，将于24小时后发起退款</string>
+
+    <!--重置密码-->
+    <!--转账-->
+    <string name="trans_little_tip">转账最低金额不能小于0.01元</string>
+    <string name="city_pay_succ">支付成功</string>
+
+    <!--转账-->
+    <string name="city_rp_identity_bt_next">下一步</string>
+    <string name="send_a_rp">发了一个红包</string>
+    <string name="look_for_luck">看看大家的手气</string>
+    <string name="money_is_no_0">红包金额不能为0</string>
+    <string name="one_rp_not_1">单个红包金额不可低于0.01元</string>
+    <string name="one_rp_max">单个红包金额不可超过%s元</string>
+    <string name="total_rp_max">红包总金额不可超过%s元</string>
+    <string name="one_rp_right">请输入正确金额</string>
+    <string name="rp_just_one">至少需要设置1个红包</string>
+    <string name="rp_max_one">一次最多可发%s个红包</string>
+    <string name="rp_input_right_cumt">请输入正确个数</string>
+    <string name="pay_now">立即支付</string>
+    <string name="pay_money">¥%s</string>
+    <string name="pay_ways">选择付款方式</string>
+    <string name="pay_ways_change">零钱支付(余额 ¥%s)</string>
+    <string name="pay_ways_alipay">支付宝支付</string>
+    <string name="pay_ways_unionpay">银联支付</string>
+    <string name="pay_ways_wechatpay">微信支付</string>
+    <string name="pay_failed">支付失败!</string>
+    <string name="pay_cancle">支付取消!</string>
+
+    <string name="watch_rp_history">查看红包记录</string>
+    <string name="my_rp">我的红包</string>
+    <string name="my_rp_receiver">收到的红包</string>
+    <string name="my_rp_send">发出的红包</string>
+    <string name="total_rec">共收到</string>
+    <string name="total_send">共发出</string>
+    <string name="rp_luck">手气最佳</string>
+    <string name="zero">0</string>
+    <string name="send_rp_size">发出红包</string>
+    <string name="rp_money_yuan">%s元</string>
+    <string name="recharge">充值</string>
+    <string name="recharge_doing">正在充值...</string>
+    <string name="recharge_success">充值成功</string>
+    <string name="recharge_failed">充值失败</string>
+    <string name="set_pay_success">设置成功</string>
+    <string name="set_pay_failed">设置失败</string>
+    <string name="do_setting">正在设置...</string>
+    <string name="pay_pwd_is_wrong">支付密码不正确!</string>
+    <string name="pay_pwd_is_empty">您暂未设置支付密码,请去"我" - "钱包"页面设置支付密码!</string>
+    <string name="scan_pay_to_me">扫二维码向我付款</string>
+    <string name="rmb">￥</string>
+    <string name="set_pay_money">设置金额</string>
+    <string name="save_pay_ment_code">保存收款码</string>
+    <string name="pay_ment_history">收款记录</string>
+
+    <string name="pay_ment_money">收款金额</string>
+    <string name="pay_ment_message">添加收钱备注</string>
+    <string name="pay_ment_message_hint">请输入备注信息</string>
+    <string name="change_msg">修改</string>
+    <string name="input_money">请输入金额</string>
+    <string name="transfer_to_user">向用户转账</string>
+    <string name="input_transfer_msg">添加留言</string>
+    <string name="transfer">转账</string>
+    <string name="transfer_qrcode">二维码付款</string>
+    <string name="qrcode_pay_dot_self">收付款不可以是同一个人</string>
+    <string name="input_pay_ment_hint">请输入金额</string>
+    <string name="pay_list_history">交易记录</string>
+    <string name="from_pay_log">来源:%s</string>
+    <string name="from_pay_log_scan">来源:扫码转账</string>
+    <string name="money_is_not_enought">账户余额不足</string>
+    <string name="param_wrong">参数错误</string>
+    <string name="send_rp_failed">发送红包失败</string>
+    <string name="payment_failed">付款失败</string>
+    <string name="paying">支付中...</string>
+
+    <string name="receive_money">提现</string>
+    <string name="withdraw_money">提现金额</string>
+    <string name="real_name">真实姓名:</string>
+    <string name="alipay_name">支付宝账号:</string>
+    <string name="please_input_alipay_name">请输入支付宝账号</string>
+    <string name="please_input_real_name">请输入真实姓名</string>
+    <string name="apply_withdraw">申请提现</string>
+    <string name="applying">申请中...</string>
+    <string name="apply_failed">申请失败</string>
+    <string name="blance_withdraw">零钱提现</string>
+    <string name="unkonw_error">未知错误,请重试!</string>
+    <string name="amount_greater_than_wallet_amount">提现金额大于钱包金额</string>
+    <string name="modify_id_tips">确认后将无法更改众聊号</string>
+    <string name="withdraw_wechat">提现到微信</string>
+    <string name="withdraw_alipay">提现到支付宝</string>
+    <string name="withdraw_not_1">提现金额不可低于1元</string>
+
+    <string name="just_delete_group">您已被移除该群组!</string>
+
+    <string name="check_delete_group_member">请选择移除的成员</string>
+    <string name="just_delete_one">每次最多移除10个人</string>
+    <string name="see_all_group_number">查看全部成员</string>
+    <string name="group_qrcode">群二维码</string>
+    <string name="group_qrcode_tips">扫一扫上面的二维码,加入该群</string>
+
+    <string name="sd_not_found">SD卡不存在</string>
+    <string name="change_group_info_just_owner">群资料只有群主或管理员可以修改</string>
+
+    <string name="need_sdcard_permission">该功能需要SD卡权限,请打开SD卡权限</string>
+    <string name="notalk_group_just_owner">该功能需要管理员权限</string>
+    <string name="manager_list">管理员列表</string>
+    <string name="look_info">查看资料</string>
+    <string name="set_manager">设置管理员</string>
+    <string name="cancle_manager">取消管理员</string>
+    <string name="being_cancle">取消中...</string>
+    <string name="cancle_successful">取消成功</string>
+    <string name="cancle_failed">取消失败</string>
+    <string name="owner_cancle_manager">群主已取消你的管理员</string>
+    <string name="owner_set_manager">群主已设置你为管理员</string>
+    <string name="can_not_remove_self">不能移除自己</string>
+    <string name="string_not_10">昵称不能超过10个字符</string>
+    <string name="pwd_tips">密码必须为6~20位字母、数字</string>
+    <string name="input_nick">请输入昵称</string>
+    <string name="open_camera_permission">请打开相机权限</string>
+    <string name="open_sd_permission">请打开SD卡读写权限</string>
+    <string name="revoke_content_owner">%1$s撤回了%2$s的一条消息</string>
+    <string name="group_owner">群主</string>
+    <string name="payment_more">支付金额不能超过1000元</string>
+
+
+    <string name="error_gif">长宽不小于 %1$dpx，且大小不超过 %2$sM。</string>
+    <string name="im_error_1">登录聊天服务器失败</string>
+    <string name="api_error_1">服务器无响应</string>
+    <string name="api_error_2">网络错误</string>
+    <string name="api_error_3">服务器返回数据格式错误</string>
+    <string name="api_error_4">接口数据加密失败</string>
+    <string name="api_error_5">请求失败</string>
+    <string name="api_error_10">该用户被封禁</string>
+    <string name="api_error_11">该用户账户异常</string>
+    <string name="api_error_16">账号不存在</string>
+    <string name="api_error_17">登录密码错误</string>
+    <string name="api_error_0">未知错误</string>
+    <string name="api_error_18">获取微信授权的Token失败</string>
+    <string name="api_error_19">微信授权用户资料失败</string>
+    <string name="api_error_20">第三方登录失败</string>
+    <string name="api_error_21">返回参数解密失败</string>
+    <string name="api_error_22">文件远程地址错误</string>
+    <string name="api_error_23">获取QQ unionid失败</string>
+
+    <string name="logining">登录中...</string>
+    <string name="has_no_wechat">您没有安装微信,请下载安装微信后再试!</string>
+    <string name="login_success">登录成功</string>
+    <string name="send_sms_succ">发送短信验证码成功</string>
+    <string name="register_succ">注册成功</string>
+    <string name="register_fail">注册失败</string>
+    <string name="register_duplicate">手机号已经注册</string>
+    <string name="user_not_exit">用户不存在</string>
+    <string name="has_applied">已经是好友了</string>
+    <string name="cannot_add_myself">不能添加自己</string>
+    <string name="apply_fail">申请好友失败</string>
+    <string name="apply_fail_2">申请成功，但通知对方失败</string>
+    <string name="handing">正在处理</string>
+    <string name="apply_success">申请成功</string>
+    <string name="agree_fail">同意失败</string>
+    <string name="has_agreed">已同意</string>
+    <string name="is_not_friend">好友关系未同步</string>
+    <string name="group_cannotfind">群信息未同步</string>
+    <string name="no_more_msg">无更多消息</string>
+    <string name="no_permission">无拍摄权限</string>
+    <string name="video_path_error">视频文件路劲获取错误</string>
+    <string name="str_send">发送</string>
+    <string name="not_set">未设置</string>
+    <string name="not_support_qr">不支持的二维码</string>
+    <string name="title_group_details">群组详情</string>
+    <string name="has_contro">已同意</string>
+    <string name="apply_ok">已通过</string>
+    <string name="vertify_bankcard_error">银行卡信息验证失败</string>
+    <string name="update_fail">更新失败</string>
+    <string name="update_success">更新成功</string>
+    <string name="mixin_number">众聊号:</string>
+    <string name="settings">设置</string>
+    <string name="being_setting">设置中...</string>
+    <string name="has_no_talk">已被禁言,暂不能聊天!</string>
+    <string name="has_no_friend">对方已经不是好友!</string>
+    <string name="size_10M">视频文件不能大于10M</string>
+    <string name="money_isNull">账户余额不足,请去"我" - "钱包"页面进行充值.</string>
+
+    <string name="pay_psw_error">支付密码错误</string>
+    <string name="send_rp_error">发送红包失败</string>
+    <string name="withdraw_succ">提现申请提交成功</string>
+    <string name="withdraw_fail">提现申请提交失败</string>
+    <string name="search_hint">手机号/众聊号</string>
+    <string name="app_id">众聊号</string>
+    <string name="bind_mobile_fail">该手机已经绑定其他账号</string>
+    <string name="transfer_message">[转账消息]</string>
+    <string name="red_message">[红包消息]</string>
+
+    <!--领取红包的错误类型-->
+    <string name="receive_rp_error221">领取失败</string>
+    <string name="receive_rp_error222">红包过期</string>
+    <string name="receive_rp_error223">红包已抢完</string>
+    <string name="receive_rp_error224">已抢过红包</string>
+    <string name="receive_rp_error225">不能领取自己创建的单聊红包</string>
+
+
+
+    <!--好友圈-->
+    <string name="moments">好友圈</string>
+    <string name="moments_detail">详情</string>
+    <string name="just_nothing">暂无数据</string>
+    <string name="request_failed_msg">请求失败,原因:</string>
+    <string name="praise_failed">点赞失败!</string>
+    <string name="praise_failed_msg">点赞失败,原因:</string>
+    <string name="praise_cancle_fail">取消失败!</string>
+    <string name="praise_cancle_fail_msg">取消失败,原因:</string>
+    <string name="delete_comment_success">删除评论成功!</string>
+    <string name="delete_comment_failed">删除评论失败!</string>
+    <string name="delete_comment_failed_msg">删除评论失败,原因:</string>
+    <string name="delete_dynamic_success">删除动态成功!</string>
+    <string name="delete_dynamic_failed">删除动态失败!</string>
+    <string name="delete_dynamic_failed_msg">删除动态失败,原因:</string>
+    <string name="response">评论</string>
+    <string name="total">共</string>
+    <string name="pieces">张</string>
+    <string name="Moth">月</string>
+    <string name="theme_input">主题:</string>
+    <string name="peoples">人数:</string>
+
+    <string name="service_not_response">评论失败</string>
+     <string name="good">赞</string>
+    <string name="input_talks">请输入评论</string>
+
+    <string name="Open">展开</string>
+    <string name="Close">收起</string>
+    <string name="input_text">请输入文字内容</string>
+    <string name="publishing">正在发布...</string>
+    <string name="update_failed">上传失败</string>
+    <string name="push_moment">发布朋友圈</string>
+    <string name="change_moment_bg">更换背景</string>
+
+    <string name="location_info_here">所在位置</string>
+    <string name="look_big_image">看大图</string>
+    <string name="now_think">这一刻的想法</string>
+    <string name="cancle_edit">确定放弃编辑吗?</string>
+    <string name="sd_card_does_not_exist">SD卡不存在，不能拍照</string>
+    <string name="small_video">小视频</string>
+    <string name="my_image_manager">我的相册</string>
+    <string name="say_some_to_people">和大家说点什么</string>
+    <string name="no_more_messages">没有更多的消息了</string>
+
+    <string name="attach_zhen">震</string>
+    <string name="red_notice_1">单个红包金额不能超过200.00元</string>
+    <string name="red_notice_2">单个红包金额不能少于0.01元</string>
+    <string name="red_notice_3">红包总金额不能超过6000.00元</string>
+    <string name="send_too_much">发言频率太快！</string>
+    <string name="update_mobile_used">该手机号已经绑定其他账号，请使用未注册的手机号</string>
+
+</resources>
+

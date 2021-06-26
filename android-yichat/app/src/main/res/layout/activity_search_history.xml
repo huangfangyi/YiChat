@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_bar_back" />
+
+        <TextView
+
+            android:id="@+id/tv_search"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/bg_btn_green"
+            android:gravity="center"
+            android:text="查找"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/bg_et"
+            android:gravity="bottom"
+            android:hint="请输入需要查找聊天内容"
+            android:paddingLeft="46dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignLeft="@id/et_search"
+            android:layout_alignBottom="@id/et_search"
+            android:layout_margin="8dp"
+            android:src="@drawable/search_white" />
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listview_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_record"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:text="聊天记录"
+        android:layout_height="22dp"
+        android:background="#ebebeb"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </ListView>
+</LinearLayout>

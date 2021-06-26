@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="300dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="26dip"
+    android:layout_marginRight="26dip"
+    android:background="@drawable/red_input_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height">
+
+        <TextView
+            android:id="@+id/tv_pay_title"
+            style="@style/text_black_16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/please_pay" />
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rp_btn_exit" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_redenvelope_name"
+        style="@style/text_black_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center"
+        android:text="@string/red_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_redenvelope_amount"
+                style="@style/text_black_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/actionbar_height"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="¥0.00"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:background="@color/color_c9c9c9" />
+
+    <LinearLayout
+        android:id="@+id/layout_paytype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <ImageView
+            android:id="@+id/iv_paytype_icon"
+            android:layout_width="22dip"
+            android:layout_height="22dip" />
+
+        <TextView
+            android:id="@+id/tv_paytype_name"
+            style="@style/text_gray_16"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_16"
+            android:text="@string/pay_ways_wechatpay" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rp_ic_arrow" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:background="@color/color_c9c9c9" />
+
+    <TextView
+        android:id="@+id/tv_pswd_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:paddingLeft="@dimen/dimen_16"
+        android:text="@string/input_pay_pwd"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingTop="8dp"
+        android:paddingRight="@dimen/dimen_16"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btn_pay"
+            style="@style/text_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/red_send_button_bg"
+            android:text="@string/pay_now"
+            android:visibility="gone" />
+
+        <com.htmessage.yichat.acitivity.chat.weight.PswInputView
+            android:id="@+id/pswinputview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pay_ways"
+            app:border_color="@color/blue"
+            app:dot_color="@color/gray" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:padding="3dip"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dip"
+        android:text="@string/forget_pay_pwd"
+        android:textColor="@color/blue"
+        android:textSize="14sp" />
+
+</LinearLayout>

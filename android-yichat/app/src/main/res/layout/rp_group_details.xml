@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="64dp">
+    <ImageView
+
+        android:id="@+id/iv_avatar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:src="@drawable/default_avatar" />
+
+
+    <TextView
+        android:id="@+id/tv_rp_name"
+        style="@style/text_black_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_rp_time"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:layout_weight="1"
+        android:text="@string/red_content" />
+
+    <TextView
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="7dp"
+
+        android:layout_alignParentEnd="true"
+        android:id="@+id/tv_rp_money"
+        style="@style/text_black_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:text="@string/rp_money_yuan" />
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/tv_rp_time"
+        style="@style/text_white_gray_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_avatar"
+         android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_rp_money"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="-29dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_zuijia"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_shouqizuijia" />
+
+        <TextView
+            android:id="@+id/tv_rp_end"
+            style="@style/text_white_gray_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/accept"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divider_list" />
+</RelativeLayout>
+</LinearLayout>

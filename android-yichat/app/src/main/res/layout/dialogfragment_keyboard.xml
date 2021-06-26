@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--输入模块一-->
+    <LinearLayout
+        android:id="@+id/ll_input_h"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/alpha_60_black"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+            <EditText
+                android:id="@+id/edit_send_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/say_some_to_people"
+                android:imeOptions="flagNoExtractUi"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:maxLength="256"
+                android:textColor="@color/white"
+                android:textColorHint="@color/alpha_30_white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0.7dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="#20ffffff"/>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="@string/str_send"
+                android:textColor="@color/wight_grey"
+                android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

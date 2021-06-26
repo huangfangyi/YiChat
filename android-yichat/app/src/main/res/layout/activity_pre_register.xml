@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_header"   />
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize">
+
+        <EditText
+            android:id="@+id/et_usertel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/you_mobile"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingLeft="90dp"
+            android:singleLine="true"
+            android:textColorHint="#DDDDDD"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/tv_country_code"
+            android:layout_width="wrap_content"
+            android:src="@drawable/icon_tel"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/et_usertel"
+            android:layout_centerVertical="true"
+
+            />
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f0f0f0"
+
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rl_smscode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize">
+
+        <Button
+            android:id="@+id/btn_code"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/has_code"
+            android:textColor="@color/common_top_bar"
+            android:textSize="14sp" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_temp"
+            android:padding="10dp"
+             android:layout_width="wrap_content"
+            android:src="@drawable/icon_sms"
+            android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+
+            />
+
+        <EditText
+            android:layout_toRightOf="@+id/iv_temp"
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+             android:layout_toLeftOf="@+id/btn_code"
+            android:background="@null"
+            android:hint="@string/Verification_Code"
+            android:inputType="number"
+
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColorHint="#DDDDDD"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f0f0f0"
+
+        />
+
+    <Button
+        android:layout_marginLeft ="24dp"
+        android:layout_marginRight="24dp"
+         android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_btn_green"
+         android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

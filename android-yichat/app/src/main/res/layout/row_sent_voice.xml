@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_userhead"
+        android:layout_width="@dimen/size_avatar"
+        android:layout_height="@dimen/size_avatar"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="@dimen/margin_chat_activity"
+        android:background="@drawable/default_avatar"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timestamp" />
+
+    <ImageView
+        android:id="@+id/iv_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_avatar"
+        android:background="@drawable/chatto_bg"
+        android:paddingLeft="18dp"
+        android:paddingTop="5dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/adj"
+        app:layout_constraintRight_toLeftOf="@id/iv_userhead"
+        app:layout_constraintTop_toTopOf="@id/iv_userhead" />
+
+
+    <TextView
+        android:id="@+id/tv_length"
+        style="@style/chat_text_name_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        app:layout_constraintRight_toLeftOf="@id/iv_voice"
+        app:layout_constraintTop_toTopOf="@id/iv_voice" />
+
+    <ImageView
+
+        android:id="@+id/msg_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/msg_state_failed_resend"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_voice"
+        app:layout_constraintRight_toLeftOf="@id/iv_voice"
+        app:layout_constraintTop_toTopOf="@id/iv_voice" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/mProgress_circle"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/msg_status"
+        app:layout_constraintRight_toLeftOf="@id/msg_status"
+        app:layout_constraintTop_toTopOf="@id/msg_status" />
+
+
+</android.support.constraint.ConstraintLayout>

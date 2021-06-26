@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2E65A5"
+    android:layout_height="80dp">
+
+    <TextView
+        android:id="@+id/tv_bankname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="建设银行"
+        android:textSize="16sp"
+         android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#fff"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_bankNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* * * *   * * * *   * * * *   3086"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_bankname"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#fff"
+
+        />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <HorizontalScrollView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E5E5E5"
+            android:paddingBottom="3dp"
+            android:paddingTop="4dp">
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/wight_grey" />
+    <include
+        android:id="@+id/rl_error_item"
+        android:visibility="gone"
+        layout="@layout/chat_neterror_item" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+         android:dividerHeight="0.1dp"
+        android:divider="#d4d4d4" />
+</LinearLayout>

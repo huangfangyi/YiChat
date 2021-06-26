@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+        <RelativeLayout
+            android:id="@+id/re_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionBarSize"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="46dp"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/bg_btn_green"
+                android:text="@string/str_send"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/temp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="6dp"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@drawable/bg_btn_green" />
+
+            <EditText
+                android:id="@+id/edit_send_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/temp"
+                android:layout_marginLeft="6dp"
+                android:hint="@string/input_talks"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@null"
+                android:gravity="bottom|left"
+                android:textSize="15sp" />
+        </RelativeLayout>
+</LinearLayout>

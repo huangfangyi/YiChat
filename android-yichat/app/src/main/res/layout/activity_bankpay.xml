@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+     
+    <include layout="@layout/activity_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:text="付款人信息"
+        android:textColor="#353535"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#fff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="银行名称:"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_bank_name"
+            android:padding="3dp"
+            android:layout_margin="5dp"
+
+            android:background="@drawable/round_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#fff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="卡  号:"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+        <EditText
+            android:inputType="number"
+            android:id="@+id/et_card_num"
+            android:padding="3dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#fff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:inputType="number"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="金  额:"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_money"
+            android:padding="3dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#fff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="姓  名:"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_name"
+            android:padding="3dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_margin="40dp"
+        android:background="@drawable/bg_btn_green"
+        android:text="已完成付款，提交订单"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_height="48dp" />
+</LinearLayout>

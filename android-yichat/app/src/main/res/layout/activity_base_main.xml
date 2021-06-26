@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     <android.support.v7.widget.Toolbar
+         android:id="@+id/toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/height_top_bar"
+         android:background="@color/common_top_bar"
+         android:theme="@style/Theme.ToolBar.Menu"
+         app:titleTextColor="@color/white"
+          >
+
+         <TextView
+             android:id="@+id/top_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:textSize="20sp"
+             android:text="标题"/>
+
+
+     </android.support.v7.widget.Toolbar>
+
+     <com.htmessage.yichat.acitivity.main.NoAnimViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/main_bottom_split"
+         android:paddingBottom="0.1dp"
+        android:scrollbars="none"></com.htmessage.yichat.acitivity.main.NoAnimViewPager>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:tabBackground="@color/main_bottom_bg"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+         app:tabMode="fixed"
+       >
+
+    </android.support.design.widget.TabLayout>
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/re_newfriends"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_bg_white"
+        android:clickable="true">
+
+        <ImageView
+            android:padding="4dp"
+            android:id="@+id/iv_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_new_friend" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:text="@string/new_friend"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/unread_count_bg"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#d9d9d9" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/re_sevice"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_bg_white"
+        android:clickable="true">
+
+        <ImageView
+            android:padding="4dp"
+
+            android:id="@+id/iv_sevice"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_add_friend_con" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_sevice"
+            android:text="添加好友"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <View
+             android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#d9d9d9" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/re_chatroom"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_bg_white"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_avatar2"
+            android:padding="5dp"
+
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="14dp"
+             android:src="@drawable/icon_my_group" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_avatar2"
+            android:text="我的群聊"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <View
+             android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#d9d9d9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+          android:id="@+id/re_tag"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_bg_white"
+        android:clickable="true">
+
+        <ImageView
+            android:padding="4dp"
+
+            android:id="@+id/iv_avatar3"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_group_send" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_avatar3"
+            android:text="群发消息"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#d9d9d9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/re_public"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_bg_white"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_avatar4"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/fx_icon_item_pub" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_avatar4"
+            android:text="@string/watch_live"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

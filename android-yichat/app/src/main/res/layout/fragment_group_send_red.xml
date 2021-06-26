@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wight_grey"
+    android:paddingLeft="@dimen/dimen_16"
+    android:paddingRight="@dimen/dimen_16"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/pop_message"
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="3dip"
+        android:background="@color/red_notice_bg"
+        android:gravity="center"
+        android:text="@string/notice_title"
+        android:visibility="invisible"
+        android:textSize="14sp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/red_notice_text"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:background="@drawable/red_input_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:gravity="center"
+            style="@style/text_black_16"
+            android:text="@string/red_more"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/et_peak_num"
+            style="@style/text_black_16"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/input_height"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:textColorHint="@color/color_b7b7b7" />
+
+        <TextView
+            style="@style/text_black_16"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="@string/ge"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_group_member_num"
+        style="@style/text_gray_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginTop="7dip"
+        android:text="@string/group_total_people"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:background="@drawable/red_input_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_black_16"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:gravity="center_vertical"
+            android:text="@string/total_money"/>
+        <EditText
+            android:id="@+id/et_peak_amount"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/input_height"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/money_numal"
+            android:gravity="right|center"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/text_black_16"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_16"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="@string/money_size"/>
+    </LinearLayout>
+
+    <TextView
+        android:visibility="invisible"
+        style="@style/text_gray_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_marginTop="7dip"
+        android:text="红包类型切换"/>
+
+    <EditText
+        android:id="@+id/et_peak_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:background="@drawable/red_input_bg"
+        android:gravity="left"
+        android:hint="@string/words_numal"
+        android:maxLength="25"
+        android:minHeight="48dp"
+        android:padding="@dimen/dimen_16"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16"
+        android:textColorHint="@color/light_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rp_rmb"/>
+
+        <TextView
+            android:id="@+id/tv_amount_for_show"
+            style="@style/text_black_28"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionbar_height"
+            android:gravity="center"
+            android:text="@string/money_numal"
+            android:textStyle="normal"
+            android:typeface="serif"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_putin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:background="@drawable/red_send_button_bg"
+        android:text="@string/insert_money"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

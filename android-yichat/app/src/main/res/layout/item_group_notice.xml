@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_title"
+            android:textSize="16sp"
+            android:text="标题"
+            android:textColor="#353535"
+
+            />
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_user"
+            android:textSize="16sp"
+            android:text="发布者"
+            android:textColor="#353535"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_content"
+            android:textSize="15sp"
+            android:text=""
+            android:textColor="#999999"
+
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:id="@+id/tv_time"
+        android:textSize="13sp"
+        android:text=""
+        android:textColor="#999999"
+
+        />
+</LinearLayout>

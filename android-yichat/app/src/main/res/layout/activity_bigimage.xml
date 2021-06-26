@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_title_bar"></include>
+    <com.htmessage.yichat.widget.PhotoViewPager
+        android:layout_below="@+id/title"
+        android:id="@+id/viewpager_image"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.htmessage.yichat.widget.PhotoViewPager>
+    <TextView
+        android:id="@+id/tv_show_items"
+        android:layout_below="@+id/title"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        style="@style/text_white_16"
+        android:layout_centerVertical="true"
+        android:background="@drawable/show_tips_black_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
