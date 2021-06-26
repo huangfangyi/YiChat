@@ -1,0 +1,20 @@
+platform:ios,'9.0'
+target 'YiChat_iOS' do
+
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'MJRefresh'
+    pod 'Masonry'
+    pod 'MBProgressHUD'
+    pod 'MJExtension'
+    pod 'JPush'
+    pod 'AMapSearch'
+    pod 'AMapNavi'
+    pod 'AMapLocation'
+    pod 'TZImagePickerController'   #照片选择器
+    pod 'SDWebImage'
+    pod 'YYImage'
+    pod 'JSONModel','~> 1.7.0'
+    pod 'KLCPopup'
+    pod 'XMPPFramework','~> 3.7.0' 
+end
+

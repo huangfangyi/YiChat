@@ -1,0 +1,90 @@
+//
+//  LocalizedString.strings
+//  YiChat_iOS
+//
+//  Created by 你是我的小呀小苹果 on 2019/5/22.
+//  Copyright © 2019年 ZhangFengTechnology. All rights reserved.
+//
+
+//系统
+"appName" = "YiChat";
+
+//common
+"selectePerson" = "SelectePerson";
+
+//登录注册
+"register" = "Register";
+"registerInfo" = "RegisterInfo";
+"login" = "Login";
+
+"advertisementMain" = "AdvertisementMain";
+
+//会话
+"conversationMain" = "Conversation";
+"conversationMainSearchPlaceHolder" = "conversationMainSearchPlaceHolder";
+
+"messageInfo" = "messageInfo";
+
+//群
+"createGroup" = "CreateGroup";
+"groupDetail" = "GroupDetail";
+"savedGroup" = "SavedGroup";
+"changeGroupNickName" = "ChangeGroupNickName";
+"changeGroupDes" = "ChangeGroupDes";
+"groupManagerList" = "GroupManagerList";
+"groupShutUpList" = "GroupShutUpList";
+"groupMemberList" = "GroupMemberList";
+"GroupAnnouncement" = "GroupAnnouncement";
+"SetGroupNotice" = "SetGroupNotice";
+//通讯录
+"connectionMain" = "Connection";
+"connectionMainSearchPlaceHolder" = "connectionMainSearchPlaceHolder";
+"friendCard" = "FriendCard";
+"addFriends" = "AddFriends";
+"newFriends" = "NewFriends";
+"addFriendsSearchPlaceHolder" = "addFriendsSearchPlaceHolder";
+"setFriendsRemarkName" = "RemarkName";
+
+"invitePhoneContact" = "InvitePhoneContact";
+"phoneContactSearchPlaceHolderInvite" = "phoneContactSearchPlaceHolderInvite";
+
+"matchPhoneContact" = "MatchPhoneContact";
+
+//发现
+"discoverMain" = "Discover";
+"discoverMain.sendDynamic" = "SendDynamic";
+"discoverMain.dynamicList" = "Dynamic";
+
+//我的
+"meMain" = "Me";
+"userInfo" = "UserInfo";
+"changePhoneNum" = "ChangePhoneNum";
+"bingdingPhoneNum" = "BingdingPhoneNum";
+
+"changeNickName" = "ChangeNickName";
+"changeUserNum" = "ChangeUserName";
+"changeSex" = "ChangeSex";
+"myQRCode" = "MyQRCode";
+"scanComplete" = "ScanComplete";
+
+"collectionList" = "CollectionList";
+"helpList" = "HelpList";
+"helpDetail" = "HelpDetail";
+"setting" = "Setting";
+
+"resetPassword" = "ResetPassword";
+"getbackPassword" = "GetbackPassword";
+
+//钱包
+"WalletVC" = "Wallet";
+"Recharge" = "Recharge";
+"Withdrawal" = "Withdrawal";
+"BankCardList" = "BankCardList";
+"WithdrawalList" = "WithdrawalList";
+"AddBankCard" = "AddBankCard";
+"ModifyPay" = "ModifyPay";
+"RecordsList" = "RecordsList";
+"RedPacketInfo" = "RedPacketInfo";
+"SignIn" = "SignIn";
+"SendRedPacket" = "SendRedPacket";
+"RedPacketDetail" = "RedPacketDetail";

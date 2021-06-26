@@ -1,0 +1,119 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AMap3DMap (6.7.0):
+    - AMapFoundation (~> 1.5)
+  - AMapFoundation (1.5.6)
+  - AMapLocation (2.6.1):
+    - AMapFoundation (~> 1.4)
+  - AMapNavi (6.7.0):
+    - AMap3DMap (~> 6.7)
+    - AMapFoundation (~> 1.5)
+  - AMapSearch (6.6.0):
+    - AMapFoundation (~> 1.4)
+  - CocoaAsyncSocket (7.6.3)
+  - CocoaLumberjack (3.5.2):
+    - CocoaLumberjack/Core (= 3.5.2)
+  - CocoaLumberjack/Core (3.5.2)
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
+  - JSONModel (1.7.0)
+  - KissXML (5.2.3)
+  - KLCPopup (1.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.16)
+  - MJRefresh (3.1.16)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - TZImagePickerController (3.2.0)
+  - XMPPFramework (3.7.0):
+    - CocoaAsyncSocket (~> 7.6.0)
+    - CocoaLumberjack
+    - KissXML (~> 5.2.0)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - AMapLocation
+  - AMapNavi
+  - AMapSearch
+  - JPush
+  - JSONModel (~> 1.7.0)
+  - KLCPopup
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - SDWebImage
+  - TZImagePickerController
+  - XMPPFramework (~> 3.7.0)
+  - YYImage
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AMap3DMap
+    - AMapFoundation
+    - AMapLocation
+    - AMapNavi
+    - AMapSearch
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+    - JCore
+    - JPush
+    - JSONModel
+    - KissXML
+    - KLCPopup
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - SDWebImage
+    - TZImagePickerController
+    - XMPPFramework
+    - YYImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap3DMap: 7bb992e6bfb99e34e6c7a368958dde9d743a23f1
+  AMapFoundation: 20fce2a12cd152e1092afdd04379cdac21932185
+  AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
+  AMapNavi: 89e30fee35c01a00e45e846fa272f60724d06d0c
+  AMapSearch: def5983c8ca1a6d7430970046dc814f6e337621d
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
+  KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  TZImagePickerController: 7850b158d025065b162a1a963d445040b828abc9
+  XMPPFramework: 6f99ad1afcdb0cdbec7192a8e4c542c3fc3de6f8
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+
+PODFILE CHECKSUM: aec8a2f6ba656c2c059bc08ee181ce8a138ca6f4
+
+COCOAPODS: 1.5.0

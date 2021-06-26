@@ -1,0 +1,29 @@
+//
+//  RedPackage.pch
+//  YiChat_iOS
+//
+//  Created by mac on 2019/7/23.
+//  Copyright © 2019 ZhangFengTechnology. All rights reserved.
+//
+
+#ifndef RedPackage_pch
+#define RedPackage_pch
+
+#define RedPacketNum 100
+#define RedPacketMoney 20000
+
+#ifdef __OBJC__
+#import <Masonry/Masonry.h>
+#import "ServiceGlobalDef.h"
+#import <MJExtension.h>
+#import <UIImageView+WebCache.h>
+#import "ProjectRequestHelper.h"
+#import "YiChatUserManager.h"
+#import "YiChatRedPacketHelper.h"
+#import <MJRefresh.h>
+#import "NavProjectVC.h"
+#endif
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* RedPackage_pch */

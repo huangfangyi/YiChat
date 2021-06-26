@@ -1,0 +1,89 @@
+//
+//  LocalizedString.strings
+//  YiChat_iOS
+//
+//  Created by 你是我的小呀小苹果 on 2019/5/22.
+//  Copyright © 2019年 ZhangFengTechnology. All rights reserved.
+//
+
+//系统
+"appName" = "YiChat";
+
+//common
+"selectePerson" = "选择联系人";
+
+//登录注册
+"register" = "注册";
+"registerInfo" = "个人资料";
+"login" = "登录";
+
+"advertisementMain" = "首页";
+
+//会话
+"conversationMain" = "会话";
+"conversationMainSearchPlaceHolder" = "搜索";
+"messageInfo" = "聊天详情";
+//群
+"savedGroup" = "已保存的群聊";
+"createGroup" = "创建群聊";
+"groupDetail" = "群详情";
+"changeGroupNickName" = "修改群名称";
+"changeGroupDes" = "群详情";
+"groupManagerList" = "管理员列表";
+"groupShutUpList" = "群禁言列表";
+"groupMemberList" = "群成员列表";
+"GroupAnnouncement" = "群公告";
+"GroupAnnouncement" = "群公告";
+"SetGroupNotice" = "发布群公告";
+//通讯录
+"connectionMain" = "通讯录";
+"connectionMainSearchPlaceHolder" = "搜索";
+"friendCard" = "详细资料";
+
+"addFriends" = "添加好友";
+"newFriends" = "新的朋友";
+"addFriendsSearchPlaceHolder" = "请输入好友ID/手机号";
+"setFriendsRemarkName" = "设置备注";
+
+"invitePhoneContact" = "邀请手机联系人";
+"phoneContactSearchPlaceHolderInvite" = "搜索好友";
+
+"matchPhoneContact" = "手机通讯录匹配";
+
+//发现
+"discoverMain" = "发现";
+"discoverMain.sendDynamic" = "发布动态";
+"discoverMain.dynamicList" = "朋友圈";
+
+//我的
+"meMain" = "我";
+"userInfo" = "个人信息";
+"changePhoneNum" = "更换手机号";
+"bingdingPhoneNum" = "绑定手机号";
+"changeNickName" = "昵称";
+"changeUserNum" = "聊聊号";
+"changeSex" = "性别";
+"myQRCode" = "我的二维码";
+"scanComplete" = "扫描结果";
+
+"collectionList" = "收藏列表";
+"helpList" = "帮助";
+"helpDetail" = "详情";
+"setting" = "设置";
+
+"resetPassword" = "重置密码";
+"getbackPassword" = "找回密码";
+
+//钱包 SignIn
+"WalletVC" = "钱包";
+"Recharge" = "充值";
+"Withdrawal" = "提现";
+"WithdrawalList" = "提现记录";
+"BankCardList" = "银行卡设置";
+"AddBankCard" = "添加银行卡";
+"ModifyPay" = "支付密码设置";
+"RecordsList" = "交易记录";
+"RedPacketInfo" = "我的红包";
+"SignIn" = "签到";
+"SendRedPacket" = "红包";
+"RedPacketDetail" = "红包详情";
