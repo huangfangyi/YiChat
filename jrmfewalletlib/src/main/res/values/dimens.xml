@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!--<dimen name="titlebar_height">56dp</dimen>-->
-    <dimen name="text_size">16sp</dimen>
-    <dimen name="spinner_spacing32">32dip</dimen>
-    <dimen name="spinner_spacing8">1dip</dimen>
-
-
-</resources>

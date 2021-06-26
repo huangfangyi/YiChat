@@ -1,57 +1,0 @@
-apply plugin: 'com.android.library'
-
-android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
-
-    defaultConfig {
-        minSdkVersion 12
-        targetSdkVersion 20
-        versionCode 20161215
-        versionName "1.3.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    android {
-        lintOptions {
-            abortOnError false
-        }
-    }
-}
-
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:support-v4:21.0.3'
-}
-
-task clearJar(type: Delete) {
-    delete 'build/libs/'
-}
-
-task makeToolJar(type: org.gradle.api.tasks.bundling.Jar, dependsOn: "build") {
-    //指定生成的jar名
-    baseName 'jrmfbase-1.3.0'
-    //从哪里打包class文件
-    from('build/intermediates/classes/debug/com/jrmf360/tools')
-    //打包到jar后的目录结构
-    into('com/jrmf360/tools')
-    //去掉不需要打包的目录和文件
-    exclude('test/', 'BuildConfig.class', 'R.class')
-    //去掉R$开头的文件
-    exclude { it.name.startsWith('R$'); }
-}
-
-makeToolJar.dependsOn(clearJar, build)
-
-task makeBaseProguardJar(type: proguard.gradle.ProGuardTask, dependsOn: "build") {
-
-//    delete 'src/main/jar/jrmfry.jar'//删除之前编译混淆jar包  
-    injars 'src/main/jar/jrmfbase-1.3.0.jar'//项目编译但未混淆的jar  
-    outjars 'libs/jrmfbase-1.3.0.jar'//混淆后的jar路径  
-    configuration 'proguard-rules.pro'// 混淆配置文件  
-}
-
