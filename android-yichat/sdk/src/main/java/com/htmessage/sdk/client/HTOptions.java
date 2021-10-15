@@ -28,10 +28,10 @@ public class HTOptions {
 //    private String host;
 //    private String deviceUpdate;
 //    private String deviceGet;
-//    private String endpoint = "oss-cn-shanghai.aliyuncs.com";
-//    private String accessKeyId = "LTAIBUjHs9ZYoo3t";
-//    private String accessKeySecret = "93OfZok7hnT2b3ecXVndKAua35vVC9";
-//    private String bucket = "fanxin-file-server";
+//    private String endpoint = " ";
+//    private String accessKeyId = " ";
+//    private String accessKeySecret = " ";
+//    private String bucket = " ";
 //    private String baseOssUrl = "http://" + bucket + "." + endpoint + "/";
 //    private boolean isKeepAlive;
 //
